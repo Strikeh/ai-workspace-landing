@@ -3,7 +3,12 @@ import React from "react";
 import Image from "next/image";
 
 // Local PNG logos in /public/images/company-logo
-const LOGOS: Array<{ src: string; alt: string; width?: number; height?: number }> = [
+const LOGOS: Array<{
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+}> = [
   { src: "/images/company-logo/amazon.png", alt: "Amazon" },
   { src: "/images/company-logo/AMD.png", alt: "AMD" },
   { src: "/images/company-logo/google.png", alt: "Google" },
@@ -25,9 +30,15 @@ export default function LogoCarousel() {
   const logos = [...LOGOS, ...LOGOS];
 
   return (
-  <section className="py-12 overflow-visible" style={{ background: "var(--color-bg-secondary)" }}>
+    <section
+      className="py-12 overflow-visible"
+      style={{ background: "var(--color-bg-secondary)" }}
+    >
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
-        <p className="text-center text-sm font-medium tracking-wide mb-6" style={{ color: "var(--color-text-secondary)" }}>
+        <p
+          className="text-center text-sm font-medium tracking-wide mb-6"
+          style={{ color: "var(--color-text-secondary)" }}
+        >
           Our users work at these companies
         </p>
       </div>
@@ -45,7 +56,11 @@ export default function LogoCarousel() {
                     width={logo.width ?? 200}
                     height={logo.height ?? 64}
                     className="h-auto"
-                    style={{ height: "clamp(32px, 5.5vw, 64px)", width: "auto", objectFit: "contain" }}
+                    style={{
+                      height: "clamp(32px, 5.5vw, 64px)",
+                      width: "auto",
+                      objectFit: "contain",
+                    }}
                     priority={i < 6}
                   />
                 </div>

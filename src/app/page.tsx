@@ -83,61 +83,98 @@ const features = [
 
 const showcases = [
   {
-    title: "Image Gallery for creative sprints",
+    title: "Prompt Vault for instant recall",
     description:
-      "Organize AI-generated visuals by campaign, client, or team. Instant compare view, reversible edits, and local AI upscaling keep your gallery production-ready.",
+      "Keep every ChatGPT prompt at your fingertips with a structured, searchable vault. Organize prompts into categories, mark favorites, or pin them for quick access — all locally stored and fully private.",
     highlights: [
-      "Color-coded collections with usage rights tracking",
-      "One-click export packs for social, deck, and print specs",
-      "Audit log stays on-device for compliance reviews",
+      "Bulk actions to edit, archive, or link prompts in seconds",
+      "Advanced search with filters and real-time results",
+      "Favorites & pins for faster workflows across projects",
     ],
-    image: "/images/gallery-preview.svg",
-    imageAlt: "AI Workspace gallery preview",
+    image: "/images/prompts-overview.png",
+    imageAlt: "AI Workspace Prompt Vault overview",
   },
   {
-    title: "Notes Manager built for flow",
+    title: "Image Gallery for all your AI visuals",
     description:
-      "Capture voice memos, transcripts, and daily standups with instant AI summaries that never leave your laptop. Link notes to prompts, tasks, and files.",
+      "Browse every image used or generated in your conversations — all in one secure gallery. Jump back into the original chat with one click, download files instantly, or organize them into folders for later use.",
     highlights: [
-      "Markdown-first editor with slash commands",
-      "Smart tags, folders, and auto-linking across vaults",
-      "Multilingual UI and transcript translation out of the box",
+      "Unified view of local and generated images",
+      "Direct links back to the source conversation",
+      "Quick download, export, and organization tools",
     ],
-    image: "/images/notes-manager.svg",
-    imageAlt: "AI Workspace notes manager preview",
+    image: "/images/image-gallery.png",
+    imageAlt: "AI Workspace image gallery overview",
   },
   {
-    title: "GPT Store discovery hub",
+    title: "Discover and launch custom GPTs",
+    badge: "New",
     description:
-      "Discover vetted, privacy-safe GPTs for marketing, ops, and research. Featured and trending shelves update daily, all cached locally.",
+      "Browse a curated store of GPTs across categories like writing, productivity, research, and more. Open any GPT to view details, explore its capabilities, and start a conversation instantly — all directly inside AI Workspace.",
     highlights: [
-      "Curated collections for growth, product, and support teams",
-      "Team favorites with usage limits and approval workflows",
-      "Stripe-powered PRO billing with cancel-anytime controls",
+      "Filter by featured, trending, or category-specific GPTs",
+      "Quick detail view with direct launch into a new chat",
+      "Deep links keep every GPT accessible in one secure hub",
     ],
-    image: "/images/gpt-store.svg",
-    imageAlt: "AI Workspace GPT Store preview",
+    image: "/images/gpt-store.png",
+    imageAlt: "AI Workspace GPT Store overview",
+  },
+  {
+    title: "Analytics Dashboard (beta)",
+    badge: "Beta",
+    description:
+      "Get insights into how you work with prompts, vaults, and AI platforms. Track usage trends, export activity, and performance metrics — all processed locally for full privacy. This dashboard is still a work in progress, but already gives a preview of upcoming features like platform distribution, export statistics, and system health monitoring.",
+    highlights: [
+      "Local-first analytics, no external tracking",
+      "Usage breakdown by prompts, vaults, and exports",
+      "Early preview of performance & reliability stats",
+    ],
+    image: "/images/dashboard.png",
+    imageAlt: "AI Workspace Analytics Dashboard (beta)",
+  },
+  {
+    title: "Enhanced experience inside ChatGPT",
+    badge: "Live",
+    description:
+      "AI Workspace extends ChatGPT with a powerful overlay that adds structure, shortcuts, and insights — without disrupting your flow. Organize conversations, track stats, and access tools directly where you work.",
+    highlights: [
+      "Sidebar with custom categories and vaults",
+      "Floating action menu for instant access to core tools",
+      "One-click print, message stats, and advanced export options",
+    ],
+    image: "/images/chatgpt.png",
+    imageAlt: "AI Workspace features injected into chatgpt.com UI",
   },
 ];
 
 const testimonials = [
   {
     quote:
-      "We replaced three cloud tools with AI Workspace and finally keep sensitive client prompts in-house. Our legal team signed off within a day.",
+      "AI Workspace finally gave us a way to manage sensitive prompts without sending anything to external servers. Our compliance team was immediately on board.",
     name: "Leah Park",
     role: "Head of Innovation, Northwind Consulting",
+    variant: "legal",
   },
   {
     quote:
-      "The local vault plus GPT Store gives us a compliant sandbox for experimenting with new models. Productivity is up and security sleeps at night.",
+      "The local vault plus multi-platform support lets us switch between ChatGPT and Claude without losing context. Productivity is up, and our data never leaves the office.",
     name: "Jonas Müller",
     role: "CTO, Helix Labs",
+    variant: "engineering",
   },
   {
     quote:
-      "Batch exports and automation recipes save the content team at least 12 hours every week. Zero cloud copies means zero red tape.",
+      "Bulk exports and automation save our content team 10+ hours weekly. Everything stays local, which means no contracts, no approvals, no delays.",
     name: "Carmen Rivera",
     role: "Director of Content, Orbit Media",
+    variant: "creative",
+  },
+  {
+    quote:
+      "We keep everything on-device and still collaborate smoothly across teams. The export presets are a hit with our clients.",
+    name: "Sofia Martins",
+    role: "Operations Lead, Brightline Studio",
+    variant: "operations",
   },
 ];
 
@@ -174,6 +211,8 @@ export default function Home() {
       style={{ background: "var(--color-bg-primary)" }}
       className="text-slate-100"
     >
+      {/* Ripple handler for primary CTA */}
+      <ScriptHandler />
       {/* Navigation Header */}
       <nav
         className="relative z-50 border-b"
@@ -281,30 +320,46 @@ export default function Home() {
                   freedom without sacrificing control.
                 </p>
                 <div className="space-y-6">
-                  <div className="flex flex-wrap items-center gap-4">
+                  <div className="flex flex-wrap items-center gap-4 relative">
+                    {/* ambient glow behind CTAs */}
+                    <div className="ambient-glow" aria-hidden />
                     <a
                       href="#pricing"
-                      className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition"
-                      style={{
-                        background: "var(--premium-primary-gradient)",
-                        color: "var(--color-text)",
-                      }}
+                      className="cta-btn cta-btn--primary px-6 py-3 text-sm"
                     >
+                      <span className="btn-icon">
+                        <ArrowRightIcon className="h-4 w-4" />
+                      </span>
                       Get started free
-                      <ArrowRightIcon className="h-4 w-4" />
                     </a>
                     <a
                       href="#demo"
-                      className="inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-semibold transition hover:opacity-80"
+                      className="cta-btn px-6 py-3 text-sm"
                       style={{
-                        borderColor: "var(--color-border-light)",
+                        background: "var(--color-card-bg)",
                         color: "var(--color-text)",
                       }}
                     >
+                      <span className="btn-icon">
+                        <PlayIcon className="h-4 w-4" />
+                      </span>
                       Watch product tour
-                      <PlayIcon className="h-4 w-4" />
                     </a>
                   </div>
+                  {/* Helper line under hero CTAs */}
+                  <div
+                    className="flex items-center gap-2 text-xs"
+                    style={{ color: "var(--color-text-muted)" }}
+                  >
+                    <CheckIcon
+                      className="h-3.5 w-3.5"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>No credit card needed</span>
+                  </div>
+
+                  {/* Gradient separator above install row */}
+                  <div className="hr-gradient mt-4" aria-hidden />
 
                   {/* Browser Installation Buttons */}
                   <div className="space-y-3">
@@ -314,24 +369,22 @@ export default function Home() {
                     >
                       Install AI Workspace extension:
                     </p>
-                    <div className="flex flex-wrap items-center gap-3">
+                    <div className="install-buttons flex flex-wrap items-center gap-3">
                       {browserInstallButtons.map((browser) => (
                         <a
                           key={browser.name}
                           href={browser.url}
-                          className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition hover:opacity-90 ${
-                            browser.primary ? "shadow-lg" : ""
+                          aria-label={`Add AI Workspace to ${browser.name}`}
+                          className={`cta-btn install-btn ${
+                            browser.primary ? "cta-btn--primary" : ""
                           }`}
                           style={{
                             background: browser.primary
-                              ? "var(--premium-primary-gradient)"
+                              ? undefined
                               : "var(--color-card-bg)",
                             color: browser.primary
-                              ? "var(--color-text)"
+                              ? undefined
                               : "var(--color-text-secondary)",
-                            border: browser.primary
-                              ? "none"
-                              : `1px solid var(--color-border)`,
                           }}
                         >
                           <Image
@@ -339,9 +392,9 @@ export default function Home() {
                             alt={`${browser.name} icon`}
                             width={16}
                             height={16}
-                            className="h-4 w-4"
+                            className="btn-icon h-4 w-4"
                           />
-                          Add to {browser.name}
+                          <span className="ml-2">Add to {browser.name}</span>
                         </a>
                       ))}
                     </div>
@@ -350,7 +403,7 @@ export default function Home() {
                       style={{ color: "var(--color-text-muted)" }}
                     >
                       <span
-                        className="inline-flex h-2 w-2 rounded-full"
+                        className="dot-pulse inline-flex h-2 w-2 rounded-full"
                         style={{ background: "var(--color-accent)" }}
                       />
                       <span>4,689+ happy customers</span>
@@ -360,14 +413,7 @@ export default function Home() {
                 </div>
                 <div className="grid gap-6 sm:grid-cols-2 lg:max-w-xl">
                   {stats.map((stat) => (
-                    <div
-                      key={stat.label}
-                      className="rounded-2xl border p-5"
-                      style={{
-                        borderColor: "var(--color-card-border)",
-                        background: "var(--color-card-bg)",
-                      }}
-                    >
+                    <div key={stat.label} className="feature-card p-5">
                       <div
                         className="text-2xl font-semibold"
                         style={{ color: "var(--color-accent)" }}
@@ -379,6 +425,12 @@ export default function Home() {
                         style={{ color: "var(--color-text-muted)" }}
                       >
                         {stat.label}
+                      </div>
+                      <div
+                        className="mt-1 text-xs"
+                        style={{ color: "var(--color-text-muted)" }}
+                      >
+                        past 30 days
                       </div>
                     </div>
                   ))}
@@ -403,21 +455,28 @@ export default function Home() {
                     style={{ borderColor: "var(--color-border)" }}
                   >
                     <div
-                      className="flex items-center gap-2 text-xs uppercase tracking-wider"
+                      className="flex items-start gap-2 text-xs uppercase tracking-wider"
                       style={{ color: "var(--color-text-muted)" }}
                     >
                       <span
                         className="inline-flex h-2 w-2 rounded-full"
-                        style={{ background: "var(--color-accent)" }}
+                        style={{
+                          background: "var(--color-accent)",
+                          marginTop: 4,
+                        }}
                       />
-                      Local sync active
+                      <span>
+                        Your Complete AI Workspace —<br />
+                        <span
+                          style={{
+                            color: "var(--color-accent)",
+                            fontWeight: 700,
+                          }}
+                        >
+                          100% Local, 0% Cloud
+                        </span>
+                      </span>
                     </div>
-                    <span
-                      className="text-xs"
-                      style={{ color: "var(--color-text-muted)" }}
-                    >
-                      Dark · Light · Auto
-                    </span>
                   </div>
                   <div className="space-y-6 px-6 py-6">
                     <div className="space-y-2">
@@ -425,15 +484,16 @@ export default function Home() {
                         className="text-sm font-semibold"
                         style={{ color: "var(--color-text)" }}
                       >
-                        Prompt vault
+                        All-in-One AI Productivity Hub
                       </p>
                       <p
                         className="text-sm"
                         style={{ color: "var(--color-text-secondary)" }}
                       >
-                        Reusable blueprints, conversation resumes, and
-                        automation triggers all live inside encrypted vaults
-                        with role-based access.
+                        AI Workspace centralizes prompts, conversations, notes,
+                        images, and GPTs into one secure productivity hub.
+                        Everything you need to manage your AI workflow without
+                        switching tabs.
                       </p>
                     </div>
                     <div className="space-y-2">
@@ -441,14 +501,16 @@ export default function Home() {
                         className="text-sm font-semibold"
                         style={{ color: "var(--color-text)" }}
                       >
-                        Automation recipe
+                        Privacy-First, Multi-Platform Freedom
                       </p>
                       <p
                         className="text-sm"
                         style={{ color: "var(--color-text-secondary)" }}
                       >
-                        Deploy scheduled exports, drive summaries into Notion,
-                        or sync daily briefs to your secure share folder.
+                        Unlike other tools, nothing is sent to the cloud. Your
+                        data stays encrypted on your own device, while you still
+                        enjoy seamless integrations with ChatGPT, Claude, and
+                        Grok. Work faster, safer, and with full control.
                       </p>
                     </div>
                     <div
@@ -463,7 +525,7 @@ export default function Home() {
                         style={{ color: "var(--color-accent)" }}
                       >
                         <SparklesIcon className="h-4 w-4" />
-                        Multi-platform handoff
+                        Why Privacy Matters in AI Workspace
                       </div>
                       <ul
                         className="space-y-1 text-sm"
@@ -474,21 +536,24 @@ export default function Home() {
                             className="h-4 w-4"
                             style={{ color: "var(--color-accent)" }}
                           />
-                          Launch ChatGPT, Claude, and Grok from one command bar
+                          All prompts, conversations, and notes stay on your
+                          device — never uploaded.
                         </li>
                         <li className="flex items-center gap-2">
                           <CheckIcon
                             className="h-4 w-4"
                             style={{ color: "var(--color-accent)" }}
                           />
-                          Auto-fill context with vault-safe snippets
+                          Encrypted vaults with end-to-end protection for
+                          sensitive work.
                         </li>
                         <li className="flex items-center gap-2">
                           <CheckIcon
                             className="h-4 w-4"
                             style={{ color: "var(--color-accent)" }}
                           />
-                          Log results without cloud storage
+                          No telemetry, no hidden tracking, no third-party
+                          access.
                         </li>
                       </ul>
                     </div>
@@ -538,22 +603,13 @@ export default function Home() {
               {features.map((feature) => (
                 <div
                   key={feature.title}
-                  className="flex h-full flex-col gap-6 rounded-3xl border p-8 transition-all hover:shadow-xl"
-                  style={{
-                    borderColor: "var(--color-card-border)",
-                    background: "var(--color-card-bg)",
-                    boxShadow: "var(--color-card-shadow)",
-                  }}
+                  className="feature-card flex h-full flex-col gap-6 p-8 transition-all"
                 >
                   <div className="flex items-center gap-3">
-                    <feature.icon
-                      className="h-10 w-10"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <h3
-                      className="text-xl font-semibold"
-                      style={{ color: "var(--color-text)" }}
-                    >
+                    <span className="feature-icon">
+                      <feature.icon className="h-5 w-5" />
+                    </span>
+                    <h3 className="feature-title text-xl font-semibold">
                       {feature.title}
                     </h3>
                   </div>
@@ -564,7 +620,7 @@ export default function Home() {
                     {feature.description}
                   </p>
                   <ul
-                    className="space-y-2 text-sm"
+                    className="feature-bullets space-y-2 text-sm"
                     style={{ color: "var(--color-text-secondary)" }}
                   >
                     {feature.bullets.map((item) => (
@@ -629,21 +685,19 @@ export default function Home() {
               {showcases.map((showcase, index) => (
                 <div
                   key={showcase.title}
-                  className={`flex flex-col gap-10 overflow-hidden rounded-3xl border p-8 lg:flex-row ${
+                  className={`showcase-card flex flex-col gap-10 rounded-3xl p-8 lg:flex-row ${
                     index % 2 === 1 ? "lg:flex-row-reverse" : ""
                   }`}
-                  style={{
-                    borderColor: "var(--color-card-border)",
-                    background: "var(--color-card-bg)",
-                  }}
                 >
                   <div className="flex-1 space-y-5">
-                    <h3
-                      className="text-2xl font-semibold"
-                      style={{ color: "var(--color-text)" }}
-                    >
-                      {showcase.title}
-                    </h3>
+                    <div className="flex flex-wrap items-center gap-3">
+                      <h3 className="showcase-title text-2xl font-semibold">
+                        {showcase.title}
+                      </h3>
+                      {showcase.badge ? (
+                        <span className="pill-badge">{showcase.badge}</span>
+                      ) : null}
+                    </div>
                     <p
                       className="text-sm"
                       style={{ color: "var(--color-text-secondary)" }}
@@ -665,69 +719,138 @@ export default function Home() {
                       ))}
                     </ul>
                   </div>
-                  <div className="flex-1">
-                    <div
-                      className="relative mx-auto w-full max-w-xl overflow-hidden rounded-2xl border"
-                      style={{
-                        borderColor: "var(--color-card-border)",
-                        background: "var(--color-surface)",
-                      }}
-                    >
-                      <Image
-                        src={showcase.image}
-                        alt={showcase.imageAlt}
-                        width={640}
-                        height={400}
-                        className="h-auto w-full"
-                        priority={index === 0}
-                      />
+                  <div className="flex-1" id={`sc-${index}`}>
+                    <div className="showcase-media relative mx-auto w-full max-w-xl">
+                      <a
+                        href={`#lightbox-${index}`}
+                        aria-label={`Open ${showcase.title} image`}
+                      >
+                        <Image
+                          src={showcase.image}
+                          alt={showcase.imageAlt}
+                          width={640}
+                          height={400}
+                          className="h-auto w-full"
+                          priority={index === 0}
+                        />
+                      </a>
                     </div>
+                    {/* Lightbox overlay moved outside card to avoid clipping */}
                   </div>
                 </div>
               ))}
-              <div className="flex flex-col gap-10 overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/60 p-8 lg:flex-row">
+              <div className="showcase-card flex flex-col gap-10 rounded-3xl p-8 lg:flex-row">
                 <div className="flex-1 space-y-5">
-                  <h3 className="text-2xl font-semibold text-slate-100">
-                    Analytics dashboard transparency
-                  </h3>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <h3 className="showcase-title text-2xl font-semibold">
+                      Print & export conversations your way
+                    </h3>
+                    <span className="pill-badge">Print-ready</span>
+                  </div>
                   <p className="text-sm text-slate-300">
-                    Opt in when you are ready. Usage metrics are processed
-                    locally, summarized for you, and never transmitted
-                    externally. Toggle once, and you will always know exactly
-                    what is tracked.
+                    Turn any conversation into a polished document with one
+                    click. Choose from over 30 customizable themes to match your
+                    preferred style, whether for personal archives, client
+                    handovers, or team reports.
                   </p>
                   <ul className="space-y-2 text-sm text-slate-300">
                     <li className="flex items-start gap-2">
                       <SparkIcon className="mt-0.5 h-4 w-4 flex-none text-cyan-300" />
-                      Beta label stays visible until full release with full
-                      export controls.
+                      Flexible layout options: light, dark, and custom themes
                     </li>
                     <li className="flex items-start gap-2">
                       <SparkIcon className="mt-0.5 h-4 w-4 flex-none text-cyan-300" />
-                      Opt-in data lives in a sandboxed database you own.
+                      Include or exclude headers, roles, and metadata
                     </li>
                     <li className="flex items-start gap-2">
                       <SparkIcon className="mt-0.5 h-4 w-4 flex-none text-cyan-300" />
-                      Disable analytics any time without losing historical
-                      workspace data.
+                      Export-ready formatting for print or digital sharing
                     </li>
                   </ul>
                 </div>
-                <div className="flex-1">
-                  <div className="relative mx-auto w-full max-w-xl overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/70">
-                    <Image
-                      src="/images/analytics-beta.svg"
-                      alt="AI Workspace analytics dashboard beta preview"
-                      width={560}
-                      height={280}
-                      className="h-auto w-full"
-                    />
+                <div className="flex-1" id="sc-print">
+                  <div className="showcase-media relative mx-auto w-full max-w-xl">
+                    <a
+                      href="#lightbox-print"
+                      aria-label="Open Print & export image"
+                    >
+                      <Image
+                        src="/images/print.png"
+                        alt="AI Workspace print & export preview"
+                        width={560}
+                        height={280}
+                        className="h-auto w-full"
+                      />
+                    </a>
                   </div>
+                  {/* Lightbox overlay moved outside card to avoid clipping */}
                 </div>
               </div>
             </div>
           </div>
         </section>
+        {/* Lightbox overlays for showcases (rendered outside the cards to prevent clipping) */}
+        <div aria-hidden>
+          {showcases.map((showcase, index) => (
+            <a
+              key={`lightbox-${index}`}
+              id={`lightbox-${index}`}
+              className="lightbox-overlay"
+              href={`#sc-${index}`}
+              aria-label="Close image"
+            >
+              <div className="lightbox-content">
+                <Image
+                  src={showcase.image}
+                  alt={showcase.imageAlt}
+                  width={1600}
+                  height={900}
+                  sizes="(max-width: 1600px) 96vw, 1600px"
+                  priority={index === 0}
+                  style={{
+                    maxWidth: "min(1600px, 96vw)",
+                    maxHeight: "88vh",
+                    width: "auto",
+                    height: "auto",
+                    objectFit: "contain",
+                  }}
+                  className="lightbox-img"
+                />
+                <span className="lightbox-close" aria-hidden>
+                  ×
+                </span>
+              </div>
+            </a>
+          ))}
+          {/* Print showcase overlay */}
+          <a
+            id="lightbox-print"
+            className="lightbox-overlay"
+            href="#sc-print"
+            aria-label="Close image"
+          >
+            <div className="lightbox-content">
+              <Image
+                src="/images/print.png"
+                alt="AI Workspace print & export preview"
+                width={1600}
+                height={900}
+                sizes="(max-width: 1600px) 96vw, 1600px"
+                style={{
+                  maxWidth: "min(1600px, 96vw)",
+                  maxHeight: "88vh",
+                  width: "auto",
+                  height: "auto",
+                  objectFit: "contain",
+                }}
+                className="lightbox-img"
+              />
+              <span className="lightbox-close" aria-hidden>
+                ×
+              </span>
+            </div>
+          </a>
+        </div>
         <section
           id="demo"
           className="border-t border-slate-900 bg-slate-950/60 py-24"
@@ -739,28 +862,42 @@ export default function Home() {
                   Testimonials
                 </p>
                 <h2 className="text-3xl font-semibold sm:text-4xl">
-                  Trusted by privacy-first teams moving fast.
+                  Trusted by teams who put privacy first
                 </h2>
                 <p className="text-lg text-slate-300">
-                  Hear how operations, research, and creative leads ship faster
-                  with AI Workspace while keeping regulated data inside
-                  company-controlled hardware.
+                  From legal firms to creative studios, professionals rely on AI
+                  Workspace to manage prompts, notes, and media without risking
+                  their data in the cloud. Discover how users save hours each
+                  week while staying fully in control of their information.
                 </p>
                 <div className="grid gap-6 sm:grid-cols-2">
                   {testimonials.map((testimonial) => (
                     <div
                       key={testimonial.name}
-                      className="rounded-3xl border border-slate-800 bg-slate-900/70 p-6"
+                      className="testimonial-card rounded-3xl p-6"
                     >
-                      <p className="text-sm text-slate-200">
+                      <div className="testimonial-header mb-3">
+                        <div>
+                          <div className="testimonial-name text-xs font-semibold uppercase tracking-[0.2em]">
+                            {testimonial.name}
+                          </div>
+                          <div className="testimonial-role text-xs">
+                            {testimonial.role}
+                          </div>
+                        </div>
+                        <span
+                          className={`company-chip ${
+                            testimonial.variant ?? ""
+                          }`}
+                        >
+                          {testimonial.variant
+                            ? testimonial.variant
+                            : "Verified"}
+                        </span>
+                      </div>
+                      <p className="testimonial-quote text-sm">
                         “{testimonial.quote}”
                       </p>
-                      <div className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">
-                        {testimonial.name}
-                      </div>
-                      <div className="text-xs text-slate-400">
-                        {testimonial.role}
-                      </div>
                     </div>
                   ))}
                 </div>
@@ -984,6 +1121,36 @@ export default function Home() {
       </main>
     </div>
   );
+}
+
+function ScriptHandler() {
+  // Attach a click ripple to the primary CTA when the component is mounted
+  if (typeof window !== "undefined") {
+    requestAnimationFrame(() => {
+      const btn = document.querySelector<HTMLAnchorElement>(
+        ".install-buttons .cta-btn--primary"
+      );
+      if (btn && !btn.dataset.rippleInit) {
+        btn.dataset.rippleInit = "true";
+        btn.addEventListener("click", (e) => {
+          const rect = btn.getBoundingClientRect();
+          const x = (e as MouseEvent).clientX - rect.left;
+          const y = (e as MouseEvent).clientY - rect.top;
+          const ripple = document.createElement("span");
+          ripple.className = "ripple";
+          ripple.style.width = ripple.style.height = `${Math.max(
+            rect.width,
+            rect.height
+          )}px`;
+          ripple.style.left = `${x}px`;
+          ripple.style.top = `${y}px`;
+          btn.appendChild(ripple);
+          ripple.addEventListener("animationend", () => ripple.remove());
+        });
+      }
+    });
+  }
+  return null;
 }
 function Badge({
   icon: Icon,

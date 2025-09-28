@@ -1181,6 +1181,14 @@ function ScriptHandler() {
   // Attach a click ripple to the primary CTA when the component is mounted
   if (typeof window !== "undefined") {
     requestAnimationFrame(() => {
+      // lightweight scroll variable for parallax
+      const setScrollVar = () => {
+        const y = window.scrollY || window.pageYOffset || 0;
+        document.documentElement.style.setProperty("--scroll-y", `${y}px`);
+      };
+      setScrollVar();
+      window.addEventListener("scroll", setScrollVar, { passive: true });
+
       const btn = document.querySelector<HTMLAnchorElement>(
         ".install-buttons .cta-btn--primary"
       );

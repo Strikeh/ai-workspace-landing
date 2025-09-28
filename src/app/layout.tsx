@@ -41,6 +41,8 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Subtle scroll-driven aurora parallax layer */}
+        <div className="aurora-parallax" aria-hidden />
         {children}
       </body>
     </html>

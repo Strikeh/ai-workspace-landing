@@ -122,6 +122,27 @@ body::after {
   z-index: 0; /* behind page content */
 }
 
+/* Optional scroll-driven aurora parallax layer (sits above ::before aurora, below content) */
+.aurora-parallax {
+  position: fixed;
+  inset: -10% -10% -10% -10%;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(
+      60% 80% at 20% 30%,
+      rgba(20, 184, 166, 0.08),
+      transparent 60%
+    ),
+    radial-gradient(
+      50% 70% at 80% 20%,
+      rgba(6, 182, 212, 0.07),
+      transparent 60%
+    );
+  filter: blur(24px) saturate(106%);
+  transform: translate3d(0, calc(var(--scroll-y, 0) * 0.04), 0);
+  will-change: transform;
+}
+
 /* Aurora layer */
 body::before {
   background: radial-gradient(

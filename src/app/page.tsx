@@ -13,19 +13,15 @@ const browserInstallButtons = [
     name: "Edge",
     icon: "/images/browsers/edge.svg",
     url: "#",
-    primary: false,
   },
   {
     name: "Firefox",
     icon: "/images/browsers/firefox.svg",
     url: "#",
-    primary: false,
   },
 ];
 
 const stats = [
-  { label: "Active users", value: "2,847+" },
-  { label: "Average rating", value: "4.9 / 5" },
   { label: "Weekly hours saved", value: "10+" },
   { label: "Uptime", value: "99.9%" },
 ];
@@ -443,15 +439,23 @@ export default function Home() {
                     background: "var(--premium-orb-blue-gradient)",
                   }}
                 />
-                <div
-                  className="relative overflow-hidden rounded-3xl border shadow-2xl backdrop-blur"
-                  style={{
-                    borderColor: "var(--color-card-border)",
-                    background: "var(--color-card-bg)",
-                  }}
-                >
+                <div className="premium-info-card relative overflow-hidden rounded-3xl border shadow-2xl backdrop-blur">
+                  {/* animated background blobs */}
                   <div
-                    className="flex items-center justify-between border-b px-6 py-4"
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 z-0"
+                  >
+                    <div
+                      className="card-blob blob-1 absolute -left-10 -top-12 h-40 w-56 blur-3xl"
+                      style={{ background: "var(--premium-orb-teal-gradient)" }}
+                    />
+                    <div
+                      className="card-blob blob-2 absolute -right-14 -bottom-12 h-36 w-52 blur-3xl"
+                      style={{ background: "var(--premium-orb-cyan-gradient)" }}
+                    />
+                  </div>
+                  <div
+                    className="relative z-10 flex items-center justify-between border-b px-6 py-4"
                     style={{ borderColor: "var(--color-border)" }}
                   >
                     <div
@@ -477,13 +481,11 @@ export default function Home() {
                         </span>
                       </span>
                     </div>
+                    <span className="pill-badge">Private</span>
                   </div>
-                  <div className="space-y-6 px-6 py-6">
+                  <div className="relative z-10 space-y-6 px-6 py-6">
                     <div className="space-y-2">
-                      <p
-                        className="text-sm font-semibold"
-                        style={{ color: "var(--color-text)" }}
-                      >
+                      <p className="info-title text-sm font-semibold">
                         All-in-One AI Productivity Hub
                       </p>
                       <p
@@ -497,10 +499,7 @@ export default function Home() {
                       </p>
                     </div>
                     <div className="space-y-2">
-                      <p
-                        className="text-sm font-semibold"
-                        style={{ color: "var(--color-text)" }}
-                      >
+                      <p className="info-title text-sm font-semibold">
                         Privacy-First, Multi-Platform Freedom
                       </p>
                       <p
@@ -513,13 +512,7 @@ export default function Home() {
                         Grok. Work faster, safer, and with full control.
                       </p>
                     </div>
-                    <div
-                      className="rounded-2xl border p-4"
-                      style={{
-                        borderColor: "var(--color-card-border)",
-                        background: "var(--color-surface)",
-                      }}
-                    >
+                    <div className="info-subpanel relative rounded-2xl border p-4">
                       <div
                         className="mb-2 flex items-center gap-2 text-xs"
                         style={{ color: "var(--color-accent)" }}
@@ -853,18 +846,50 @@ export default function Home() {
         </div>
         <section
           id="demo"
-          className="border-t border-slate-900 bg-slate-950/60 py-24"
+          className="relative border-t py-24"
+          style={{
+            borderColor: "var(--color-border)",
+            background: "var(--color-bg-primary)",
+          }}
         >
-          <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
+          {/* subtle background orbs for depth */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 z-0 opacity-50"
+          >
+            <div
+              className="absolute left-[-10%] top-[-10%] h-[360px] w-[520px] blur-3xl"
+              style={{ background: "var(--premium-orb-teal-gradient)" }}
+            />
+            <div
+              className="absolute right-[-12%] bottom-[-10%] h-[300px] w-[480px] blur-3xl"
+              style={{ background: "var(--premium-orb-cyan-gradient)" }}
+            />
+          </div>
+          <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
             <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
               <div className="space-y-6">
-                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">
+                <p
+                  className="text-sm font-semibold uppercase tracking-[0.3em]"
+                  style={{ color: "var(--color-accent)" }}
+                >
                   Testimonials
                 </p>
-                <h2 className="text-3xl font-semibold sm:text-4xl">
+                <h2
+                  className="text-3xl font-semibold sm:text-4xl"
+                  style={{
+                    background: "var(--premium-title-gradient)",
+                    WebkitBackgroundClip: "text",
+                    backgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
                   Trusted by teams who put privacy first
                 </h2>
-                <p className="text-lg text-slate-300">
+                <p
+                  className="text-lg"
+                  style={{ color: "var(--color-text-secondary)" }}
+                >
                   From legal firms to creative studios, professionals rely on AI
                   Workspace to manage prompts, notes, and media without risking
                   their data in the cloud. Discover how users save hours each
@@ -881,7 +906,10 @@ export default function Home() {
                           <div className="testimonial-name text-xs font-semibold uppercase tracking-[0.2em]">
                             {testimonial.name}
                           </div>
-                          <div className="testimonial-role text-xs">
+                          <div
+                            className="testimonial-role text-xs"
+                            style={{ color: "var(--color-text-muted)" }}
+                          >
                             {testimonial.role}
                           </div>
                         </div>
@@ -902,15 +930,30 @@ export default function Home() {
                   ))}
                 </div>
               </div>
-              <div className="flex flex-col justify-between gap-6 rounded-3xl border border-slate-800 bg-slate-900/70 p-8">
+              <div
+                className="flex flex-col justify-between gap-6 rounded-3xl p-8"
+                style={{
+                  border: "1px solid var(--color-card-border)",
+                  background: "var(--color-card-bg)",
+                }}
+              >
                 <div className="space-y-3">
-                  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">
+                  <p
+                    className="text-sm font-semibold uppercase tracking-[0.3em]"
+                    style={{ color: "var(--color-accent)" }}
+                  >
                     Experience the workflow
                   </p>
-                  <h3 className="text-2xl font-semibold text-slate-100">
+                  <h3
+                    className="text-2xl font-semibold"
+                    style={{ color: "var(--color-text)" }}
+                  >
                     See AI Workspace in action
                   </h3>
-                  <p className="text-sm text-slate-300">
+                  <p
+                    className="text-sm"
+                    style={{ color: "var(--color-text-secondary)" }}
+                  >
                     Watch a five-minute tour that covers the prompt vault,
                     multi-platform handoff, and the creative gallery. No email
                     required.
@@ -918,18 +961,29 @@ export default function Home() {
                 </div>
                 <a
                   href="#pricing"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-100 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-200"
+                  className="cta-btn cta-btn--primary px-6 py-3 text-sm"
                 >
+                  <span className="btn-icon">
+                    <ArrowDownIcon className="h-4 w-4" />
+                  </span>
                   Download tour video
-                  <ArrowDownIcon className="h-4 w-4" />
                 </a>
-                <div className="rounded-2xl border border-slate-800 bg-slate-950/80 p-4 text-xs text-slate-400">
-                  <div className="mb-2 inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-3 py-1 text-emerald-300">
+                <div
+                  className="rounded-2xl p-4 text-xs"
+                  style={{
+                    border: "1px solid var(--color-card-border)",
+                    background: "var(--color-card-bg)",
+                    color: "var(--color-text-muted)",
+                  }}
+                >
+                  <span className="pill-badge mb-2 inline-flex">
                     <CheckIcon className="h-3.5 w-3.5" />
                     No account required
+                  </span>
+                  <div>
+                    Video is stored locally on your machine and can be deleted
+                    any time.
                   </div>
-                  Video is stored locally on your machine and can be deleted any
-                  time.
                 </div>
               </div>
             </div>

@@ -1,0 +1,5 @@
+﻿<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M40 8H8v24h32V8z" fill="#1877F2"/>
+  <path d="M32 8v24h8V20h8v-4h-8v-4h8v-4H32z" fill="#1877F2"/>
+  <text x="60" y="26" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1877F2">Facebook</text>
+</svg>

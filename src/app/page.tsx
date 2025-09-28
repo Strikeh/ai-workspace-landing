@@ -210,13 +210,7 @@ export default function Home() {
       {/* Ripple handler for primary CTA */}
       <ScriptHandler />
       {/* Navigation Header */}
-      <nav
-        className="relative z-50 border-b"
-        style={{
-          borderColor: "var(--color-border)",
-          background: "var(--color-surface)",
-        }}
-      >
+      <nav className="site-nav relative z-50">
         <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center gap-3">
@@ -235,35 +229,16 @@ export default function Home() {
               </span>
             </div>
             <div className="hidden items-center gap-8 md:flex">
-              <a
-                href="#features"
-                className="text-sm font-medium transition hover:opacity-80"
-                style={{ color: "var(--color-text-secondary)" }}
-              >
+              <a href="#features" className="nav-link">
                 Features
               </a>
-              <a
-                href="#showcase"
-                className="text-sm font-medium transition hover:opacity-80"
-                style={{ color: "var(--color-text-secondary)" }}
-              >
+              <a href="#showcase" className="nav-link">
                 Showcase
               </a>
-              <a
-                href="#pricing"
-                className="text-sm font-medium transition hover:opacity-80"
-                style={{ color: "var(--color-text-secondary)" }}
-              >
+              <a href="#pricing" className="nav-link">
                 Pricing
               </a>
-              <a
-                href="#pricing"
-                className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition"
-                style={{
-                  background: "var(--premium-primary-gradient)",
-                  color: "var(--color-text)",
-                }}
-              >
+              <a href="#pricing" className="nav-cta">
                 Get started free
               </a>
             </div>

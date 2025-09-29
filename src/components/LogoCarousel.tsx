@@ -37,7 +37,7 @@ export default function LogoCarousel() {
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
         <p
           className="text-center text-sm font-medium tracking-wide mb-6"
-          style={{ color: "var(--color-text-secondary)" }}
+          style={{ color: "var(--color-text-blue-accent)" }}
         >
           Our users work at these companies
         </p>

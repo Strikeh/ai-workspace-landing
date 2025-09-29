@@ -174,33 +174,6 @@ const testimonials = [
   },
 ];
 
-const faqs = [
-  {
-    question: "Is my data ever synced to the cloud?",
-    answer:
-      "No. AI Workspace encrypts all content on-device. Nothing leaves your hardware unless you trigger an export, and exports are stored exactly where you point them.",
-  },
-  {
-    question: "How is security handled?",
-    answer:
-      "We use end-to-end AES-256 encryption with optional hardware key support. Vault access can be scoped per workspace, and every action is logged locally for compliance.",
-  },
-  {
-    question: "What does pricing look like?",
-    answer:
-      "Start on the Free plan with core prompts, notes, and gallery features. Upgrade to PRO for EUR 10/mo via Stripe for unlimited storage, automation recipes, and GPT Store teams.",
-  },
-  {
-    question: "Which AI models are supported?",
-    answer:
-      "ChatGPT, Claude, and Grok ship with native integrations. You can also connect local models via OpenAI-compatible endpoints and reuse the same workflows.",
-  },
-  {
-    question: "Does AI Workspace support teams in multiple languages?",
-    answer:
-      "Yes. The interface adapts to 14 languages today, and content translation happens locally so sensitive material never leaves your workspace.",
-  },
-];
 export default function Home() {
   return (
     <div
@@ -537,11 +510,8 @@ export default function Home() {
 
         <section
           id="features"
-          className="border-t py-24"
-          style={{
-            borderColor: "var(--color-border)",
-            background: "var(--color-bg-secondary)",
-          }}
+          className="border-t py-24 section section-secondary-blue"
+          style={{ borderColor: "var(--color-border)" }}
         >
           <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
             <div className="max-w-3xl space-y-4">
@@ -608,11 +578,8 @@ export default function Home() {
         </section>
         <section
           id="showcase"
-          className="border-t py-24"
-          style={{
-            borderColor: "var(--color-border)",
-            background: "var(--color-bg-primary)",
-          }}
+          className="border-t py-24 section section-primary-teal"
+          style={{ borderColor: "var(--color-border)" }}
         >
           <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
             <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
@@ -821,11 +788,8 @@ export default function Home() {
         </div>
         <section
           id="demo"
-          className="relative border-t py-24"
-          style={{
-            borderColor: "var(--color-border)",
-            background: "var(--color-bg-primary)",
-          }}
+          className="relative border-t py-24 section section-primary-blue"
+          style={{ borderColor: "var(--color-border)" }}
         >
           {/* subtle background orbs for depth */}
           <div
@@ -966,187 +930,531 @@ export default function Home() {
         </section>
         <section
           id="faq"
-          className="border-t border-slate-900 bg-slate-950 py-24"
+          className="border-t py-24 section section-primary-teal"
+          style={{ borderColor: "var(--color-border)" }}
         >
           <div className="mx-auto max-w-5xl px-6 md:px-10 lg:px-16">
             <div className="text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">
+              <p
+                className="text-sm font-semibold uppercase tracking-[0.3em]"
+                style={{ color: "var(--color-accent)" }}
+              >
                 FAQ
               </p>
-              <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">
-                Answering your biggest privacy questions.
+              <h2
+                className="mt-4 text-3xl font-semibold sm:text-4xl"
+                style={{
+                  background: "var(--premium-title-gradient)",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Everything you want to know
               </h2>
             </div>
             <div className="mt-12 space-y-6">
-              {faqs.map((faq) => (
-                <div
-                  key={faq.question}
-                  className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6"
-                >
-                  <h3 className="text-lg font-semibold text-slate-100">
-                    {faq.question}
-                  </h3>
-                  <p className="mt-2 text-sm text-slate-300">{faq.answer}</p>
+              <details className="faq-card faq-accordion">
+                <summary className="faq-summary">
+                  <span className="faq-caret" aria-hidden />
+                  <span className="faq-question text-lg font-semibold">
+                    Is my data stored securely?
+                  </span>
+                </summary>
+                <div className="faq-content">
+                  <div className="faq-panel">
+                    <div className="faq-answer mt-2 text-sm">
+                      <p>
+                        Yes. All prompts, notes, and chats are saved locally in
+                        vaults. Private vaults are protected with AES-256
+                        encryption, optional passwords, and auto-lock when
+                        inactive. Nothing is sent to external servers unless you
+                        manually export.
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              ))}
+              </details>
+
+              <details className="faq-card faq-accordion">
+                <summary className="faq-summary">
+                  <span className="faq-caret" aria-hidden />
+                  <span className="faq-question text-lg font-semibold">
+                    Can I organize my prompts and chats?
+                  </span>
+                </summary>
+                <div className="faq-content">
+                  <div className="faq-panel">
+                    <div className="faq-answer mt-2 text-sm">
+                      <p>
+                        Absolutely. The Prompt Manager lets you save, tag, and
+                        categorize prompts with a nested tree structure. Chats
+                        and notes can be linked, favorited, pinned, or searched
+                        with advanced filters for quick recall.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </details>
+
+              <details className="faq-card faq-accordion">
+                <summary className="faq-summary">
+                  <span className="faq-caret" aria-hidden />
+                  <span className="faq-question text-lg font-semibold">
+                    What’s the difference between Free and Pro?
+                  </span>
+                </summary>
+                <div className="faq-content">
+                  <div className="faq-panel">
+                    <div className="faq-answer mt-2 text-sm">
+                      <p>
+                        <strong>Free:</strong> limited prompts and notes, 1
+                        vault, no encryption.
+                      </p>
+                      <p>
+                        <strong>Pro (€10/month):</strong> unlimited prompts,
+                        vaults, and notes, encrypted storage, full Image
+                        Gallery, GPT Manager, multi-platform support, and
+                        version history.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </details>
+
+              <details className="faq-card faq-accordion">
+                <summary className="faq-summary">
+                  <span className="faq-caret" aria-hidden />
+                  <span className="faq-question text-lg font-semibold">
+                    Which AI platforms are supported?
+                  </span>
+                </summary>
+                <div className="faq-content">
+                  <div className="faq-panel">
+                    <div className="faq-answer mt-2 text-sm">
+                      <p>
+                        AI Workspace integrates with ChatGPT, Claude, and Grok
+                        out of the box. You can run the same prompts across
+                        platforms, switch with one click, and in the future
+                        chain steps across multiple AIs.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </details>
+
+              <details className="faq-card faq-accordion">
+                <summary className="faq-summary">
+                  <span className="faq-caret" aria-hidden />
+                  <span className="faq-question text-lg font-semibold">
+                    Does it support images and GPTs too?
+                  </span>
+                </summary>
+                <div className="faq-content">
+                  <div className="faq-panel">
+                    <div className="faq-answer mt-2 text-sm">
+                      <p>
+                        Yes. The Image Gallery collects both uploaded and
+                        AI-generated visuals, so you can browse, download, and
+                        manage them. The GPT Manager lets you search, filter,
+                        and launch GPTs instantly from one central hub.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </details>
+
+              <details className="faq-card faq-accordion">
+                <summary className="faq-summary">
+                  <span className="faq-caret" aria-hidden />
+                  <span className="faq-question text-lg font-semibold">
+                    How do I access everything quickly?
+                  </span>
+                </summary>
+                <div className="faq-content">
+                  <div className="faq-panel">
+                    <div className="faq-answer mt-2 text-sm">
+                      <p>
+                        Use the floating menu for instant access to vaults,
+                        prompts, and settings. Themes (dark, light, mint green,
+                        retro) and multi-language support (EN/NL, with more to
+                        come) make the workspace customizable.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </details>
+
+              <details className="faq-card faq-accordion">
+                <summary className="faq-summary">
+                  <span className="faq-caret" aria-hidden />
+                  <span className="faq-question text-lg font-semibold">
+                    What about analytics and logging?
+                  </span>
+                </summary>
+                <div className="faq-content">
+                  <div className="faq-panel">
+                    <div className="faq-answer mt-2 text-sm">
+                      <p>
+                        Every prompt run is logged locally so you can retrace
+                        workflows, analyze usage, and review past activity. An
+                        expanded analytics dashboard is on the roadmap, with the
+                        same local-first, privacy-first approach.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </details>
             </div>
           </div>
         </section>
         <section
           id="pricing"
-          className="border-t border-slate-900 bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950 py-24"
+          className="border-t py-24 section section-secondary-blue"
+          style={{ borderColor: "var(--color-border)" }}
         >
           <div className="mx-auto max-w-6xl px-6 md:px-10 lg:px-16">
-            <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-              <div className="space-y-6">
-                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">
-                  Plans
+            <div className="text-center">
+              <p
+                className="text-sm font-semibold uppercase tracking-[0.3em]"
+                style={{ color: "var(--color-accent)" }}
+              >
+                Plans
+              </p>
+              <h2
+                className="mt-4 text-3xl font-semibold sm:text-4xl"
+                style={{
+                  background: "var(--premium-title-gradient)",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Start free. Go PRO when you’re ready.
+              </h2>
+            </div>
+            <div className="mt-12 grid gap-8 lg:grid-cols-2">
+              {/* Free plan */}
+              <div className="pricing-card p-8">
+                <div className="card-topline mb-5" aria-hidden />
+                <h3
+                  className="text-xl font-semibold"
+                  style={{ color: "var(--color-text)" }}
+                >
+                  Free
+                </h3>
+                <p
+                  className="mt-2 text-sm"
+                  style={{ color: "var(--color-text-secondary)" }}
+                >
+                  Best for individuals exploring local-first AI workflows.
                 </p>
-                <h2 className="text-3xl font-semibold sm:text-4xl">
-                  Start for free. Scale with PRO when you are ready.
-                </h2>
-                <p className="text-lg text-slate-200">
-                  Every workspace begins with full local encryption,
-                  multi-platform integrations, and flexible layouts. Upgrade to
-                  unlock unlimited storage and automation extras.
-                </p>
-                <ul className="space-y-3 text-sm text-slate-200">
+                <div className="mt-5">
+                  <div className="price-value">EUR 0</div>
+                  <div className="price-meta mt-1">per month</div>
+                </div>
+                <ul className="pricing-features mt-6 text-sm">
                   <li className="flex items-start gap-2">
-                    <CheckIcon className="mt-0.5 h-4 w-4 flex-none text-cyan-300" />
-                    Free plan includes local-first prompts, notes, image
-                    gallery, and GPT discovery essentials.
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    Save and organize prompts with categories & tags
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckIcon className="mt-0.5 h-4 w-4 flex-none text-cyan-300" />
-                    PRO adds unlimited storage, batch exports, automation
-                    recipes, and advanced role permissions.
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    1 Vault (no encryption)
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckIcon className="mt-0.5 h-4 w-4 flex-none text-cyan-300" />
-                    Billing handled by Stripe with cancel-anytime controls and
-                    transparent invoicing.
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    Notes Manager (basic)
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    Image Gallery (basic, limited items)
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    Community GPT Store (browse & launch GPTs)
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    Local logging & history of recent prompts
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    Dark/Light themes + EN/NL interface
+                  </li>
+                </ul>
+                <a
+                  href="#get-started"
+                  className="mt-8 inline-flex w-full items-center justify-center rounded-full border px-6 py-3 text-sm font-semibold transition"
+                  style={{
+                    borderColor: "var(--color-card-border)",
+                    color: "var(--color-text)",
+                  }}
+                >
+                  Create free workspace
+                </a>
+              </div>
+
+              {/* PRO plan */}
+              <div className="pricing-card pricing-card--pro p-8">
+                <div className="card-topline mb-5" aria-hidden />
+                <div
+                  className="mb-3 inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em]"
+                  style={{
+                    background: "var(--color-accent-light)",
+                    color: "var(--color-accent)",
+                  }}
+                >
+                  <SparkIcon className="h-3.5 w-3.5" />
+                  Most popular
+                </div>
+                <h3
+                  className="text-xl font-semibold"
+                  style={{ color: "var(--color-text)" }}
+                >
+                  PRO
+                </h3>
+                <p
+                  className="mt-2 text-sm"
+                  style={{ color: "var(--color-text-secondary)" }}
+                >
+                  For power users and teams who need unlimited everything.
+                </p>
+                <div className="mt-5">
+                  <div className="price-value">EUR 10</div>
+                  <div className="price-meta mt-1">
+                    per month – cancel anytime
+                  </div>
+                </div>
+                <ul className="pricing-features mt-6 text-sm">
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    Unlimited prompts, notes, and encrypted vaults
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    AES-256 encryption + autolock
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    Advanced Prompt Manager: variables, versioning, batch
+                    actions
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    Advanced search across prompts, notes & images
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    Full Image Gallery with downloads, exports, filters
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    Full Notes Manager with exports & conversation linking
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    GPT Store with advanced filters, trending & featured GPTs
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    Multi-platform support (ChatGPT, Claude, Grok)
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    Automation: auto-archive/delete, dry run flows, exports
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    Local analytics dashboard (beta)
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    Custom themes + floating action menu
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    Priority support
+                  </li>
+                </ul>
+                <a
+                  href="#get-started"
+                  className="mt-8 inline-flex w-full items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition"
+                  style={{
+                    background: "var(--color-accent)",
+                    color: "#0a0f13",
+                  }}
+                >
+                  Upgrade to PRO
+                  <ArrowRightIcon className="ml-2 h-4 w-4" />
+                </a>
+              </div>
+            </div>
+
+            {/* Billing note */}
+            <div
+              className="mt-10 pricing-billing p-4 text-sm"
+              style={{ color: "var(--color-text-secondary)" }}
+            >
+              Billing is handled via Stripe with transparent invoicing and
+              cancel-anytime flexibility.
+            </div>
+          </div>
+        </section>
+        <footer
+          id="footer"
+          className="border-t py-20 section section-primary-blue"
+          style={{ borderColor: "var(--color-border)" }}
+        >
+          <div className="mx-auto max-w-6xl px-6 md:px-10 lg:px-16">
+            <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
+              <div className="space-y-4">
+                <h3
+                  className="text-2xl font-semibold footer-heading"
+                  style={{
+                    background: "var(--premium-title-gradient)",
+                    WebkitBackgroundClip: "text",
+                    backgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  AI Workspace
+                </h3>
+                <p
+                  className="text-sm"
+                  style={{ color: "var(--color-text-secondary)" }}
+                >
+                  Your complete local-first AI productivity hub. Manage prompts,
+                  conversations, images, notes, and GPTs securely — without
+                  sending data to the cloud.
+                </p>
+                <p
+                  className="text-sm"
+                  style={{ color: "var(--color-text-muted)" }}
+                >
+                  Privacy-first · Multi-platform (ChatGPT, Claude, Grok) · Works
+                  on Chrome Extension (macOS, Windows, Linux)
+                </p>
+              </div>
+              <div>
+                <h4
+                  className="text-sm font-semibold uppercase tracking-[0.3em]"
+                  style={{ color: "var(--color-accent)" }}
+                >
+                  Quick Links
+                </h4>
+                <ul className="mt-4 space-y-2 text-sm">
+                  <li>
+                    <a className="footer-link" href="#features">
+                      Features
+                    </a>
+                  </li>
+                  <li>
+                    <a className="footer-link" href="#pricing">
+                      Pricing
+                    </a>
+                  </li>
+                  <li>
+                    <a className="footer-link" href="#faq">
+                      FAQ
+                    </a>
+                  </li>
+                  <li>
+                    <a className="footer-link" href="#">
+                      Download
+                    </a>
+                  </li>
+                  <li>
+                    <a className="footer-link" href="#">
+                      Contact
+                    </a>
                   </li>
                 </ul>
               </div>
-              <div className="flex flex-col gap-6">
-                <div className="rounded-3xl border border-slate-800 bg-slate-900/70 p-8">
-                  <h3 className="text-xl font-semibold text-slate-100">Free</h3>
-                  <p className="mt-2 text-sm text-slate-300">
-                    Best for individuals getting started with local-first AI
-                    workflows.
-                  </p>
-                  <p className="mt-6 text-4xl font-semibold text-cyan-300">
-                    EUR 0
-                  </p>
-                  <p className="text-xs uppercase tracking-[0.3em] text-slate-500">
-                    per month
-                  </p>
-                  <ul className="mt-6 space-y-3 text-sm text-slate-200">
-                    <li className="flex items-start gap-2">
-                      <CheckIcon className="mt-0.5 h-4 w-4 flex-none text-cyan-300" />
-                      Secure prompts, notes, and gallery with 10 GB local
-                      storage
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckIcon className="mt-0.5 h-4 w-4 flex-none text-cyan-300" />
-                      Manual backups and offline mode
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckIcon className="mt-0.5 h-4 w-4 flex-none text-cyan-300" />
-                      Community GPT Store access
-                    </li>
-                  </ul>
-                  <a
-                    href="#get-started"
-                    className="mt-8 inline-flex w-full items-center justify-center rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-slate-500"
-                  >
-                    Create free workspace
-                  </a>
-                </div>
-                <div className="rounded-3xl border border-cyan-500 bg-slate-900/80 p-8 shadow-2xl shadow-cyan-500/30">
-                  <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">
-                    <SparkIcon className="h-3.5 w-3.5" />
-                    Most popular
-                  </div>
-                  <h3 className="text-xl font-semibold text-slate-100">PRO</h3>
-                  <p className="mt-2 text-sm text-slate-300">
-                    Advanced automation and collaboration for teams who need
-                    unlimited everything.
-                  </p>
-                  <p className="mt-6 text-4xl font-semibold text-cyan-300">
-                    EUR 10
-                  </p>
-                  <p className="text-xs uppercase tracking-[0.3em] text-slate-500">
-                    per month · cancel anytime
-                  </p>
-                  <ul className="mt-6 space-y-3 text-sm text-slate-200">
-                    <li className="flex items-start gap-2">
-                      <CheckIcon className="mt-0.5 h-4 w-4 flex-none text-cyan-300" />
-                      Unlimited local storage for prompts, threads, images, and
-                      notes
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckIcon className="mt-0.5 h-4 w-4 flex-none text-cyan-300" />
-                      Automation recipes, batch exports, and webhook
-                      integrations
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckIcon className="mt-0.5 h-4 w-4 flex-none text-cyan-300" />
-                      Team vaults with granular roles, approvals, and audit
-                      history
-                    </li>
-                  </ul>
-                  <a
-                    href="#get-started"
-                    className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-cyan-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
-                  >
-                    Upgrade to PRO
-                    <ArrowRightIcon className="ml-2 h-4 w-4" />
-                  </a>
-                </div>
+              <div>
+                <h4
+                  className="text-sm font-semibold uppercase tracking-[0.3em]"
+                  style={{ color: "var(--color-accent)" }}
+                >
+                  Legal
+                </h4>
+                <ul className="mt-4 space-y-2 text-sm">
+                  <li>
+                    <a className="footer-link" href="#">
+                      Privacy Policy
+                    </a>
+                  </li>
+                  <li>
+                    <a className="footer-link" href="#">
+                      Terms of Service
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
-        </section>
-        <section
-          id="get-started"
-          className="border-t border-slate-900 bg-slate-950 py-24"
-        >
-          <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 px-6 text-center md:px-10 lg:px-16">
-            <p className="inline-flex items-center gap-2 rounded-full border border-cyan-500/50 bg-cyan-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">
-              <ShieldIcon className="h-4 w-4" />
-              Privacy-first AI workspace
-            </p>
-            <h2 className="text-3xl font-semibold sm:text-4xl">
-              Ready to ship faster without sending sensitive data to the cloud?
-            </h2>
-            <p className="max-w-2xl text-lg text-slate-300">
-              Download AI Workspace, connect your favorite models, and run your
-              entire AI workflow locally. Local encryption, seamless
-              integrations, and full creative control in minutes.
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
-              >
-                Download for desktop
-                <ArrowDownIcon className="h-4 w-4" />
-              </a>
-              <a
-                href="#demo"
-                className="inline-flex items-center gap-2 rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-slate-500"
-              >
-                Talk to us about enterprise
-                <ArrowRightIcon className="h-4 w-4" />
-              </a>
-            </div>
-            <p className="text-xs uppercase tracking-[0.3em] text-slate-500">
-              Works on macOS, Windows, Linux · Dark / light mode ·
-              Multi-language
+            <div className="hr-gradient my-8" aria-hidden />
+            <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
+              © 2025 AI Workspace. All rights reserved.
             </p>
           </div>
-        </section>
+        </footer>
       </main>
     </div>
   );

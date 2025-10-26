@@ -1,6 +1,8 @@
 ﻿import Image from "next/image";
 import type { ReactNode, SVGProps } from "react";
 import LogoCarousel from "@/components/LogoCarousel";
+import DemoModal from "@/components/DemoModal";
+import DemoHubButton from "@/components/DemoHubButton";
 
 const browserInstallButtons = [
   {
@@ -19,11 +21,6 @@ const browserInstallButtons = [
     icon: "/images/browsers/firefox.svg",
     url: "#",
   },
-];
-
-const stats = [
-  { label: "Weekly hours saved", value: "10+" },
-  { label: "Uptime", value: "99.9%" },
 ];
 
 const features = [
@@ -180,6 +177,8 @@ export default function Home() {
       style={{ background: "var(--color-bg-primary)" }}
       className="text-slate-100"
     >
+      {/* Demo Modal */}
+      <DemoModal />
       {/* Ripple handler for primary CTA */}
       <ScriptHandler />
       {/* Navigation Header */}
@@ -220,22 +219,30 @@ export default function Home() {
       </nav>
 
       <main>
-        <section className="relative isolate overflow-hidden">
+        <section className="hero-section relative isolate overflow-hidden">
+          {/* Enhanced gradient orbs */}
           <div
-            className="absolute inset-x-0 top-[-20%] z-0 h-[480px] opacity-60"
+            className="absolute inset-x-0 top-[-25%] z-0 h-[520px] opacity-50 blur-3xl"
             style={{
               background: "var(--premium-orb-cyan-gradient)",
             }}
           />
           <div
-            className="absolute inset-x-0 top-[-10%] z-0 h-[320px] opacity-50"
+            className="absolute inset-x-0 top-[-15%] z-0 h-[380px] opacity-40 blur-3xl"
             style={{
               background: "var(--premium-orb-teal-gradient)",
             }}
           />
-          <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-16 px-6 pb-24 pt-24 md:px-10 lg:px-16">
-            <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
-              <div className="max-w-2xl space-y-8">
+          {/* Accent gradient line at top */}
+          <div
+            className="absolute inset-x-0 top-0 z-0 h-px"
+            style={{
+              background: "linear-gradient(90deg, transparent, rgba(20, 184, 166, 0.3) 50%, transparent)",
+            }}
+          />
+          <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-16 px-6 pb-32 pt-20 md:px-10 lg:px-16">
+            <div className="flex flex-col gap-16 lg:flex-row lg:items-center lg:justify-between">
+              <div className="max-w-2xl space-y-10">
                 <div
                   className="flex flex-wrap items-center gap-3 text-sm"
                   style={{ color: "var(--color-text-secondary)" }}
@@ -244,69 +251,37 @@ export default function Home() {
                   <Badge icon={SparklesIcon}>ChatGPT · Claude · Grok</Badge>
                 </div>
                 <h1
-                  className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl"
+                  className="hero-title text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
                   style={{
                     background: "var(--premium-title-gradient)",
                     backgroundClip: "text",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
+                    lineHeight: "1.1",
                   }}
                 >
-                  The privacy-first AI workspace that keeps every insight on
-                  your device.
+                  The missing productivity layer for ChatGPT — folders, search, export, and privacy-first features.
                 </h1>
                 <p
-                  className="text-lg sm:text-xl"
+                  className="hero-subtitle text-lg leading-relaxed sm:text-xl"
                   style={{ color: "var(--color-text-secondary)" }}
                 >
                   AI Workspace unifies prompts, conversations, images, notes,
                   and GPT discovery in one encrypted hub. Reclaim cross-platform
                   freedom without sacrificing control.
                 </p>
-                <div className="space-y-6">
+                <div className="space-y-8">
                   <div className="flex flex-wrap items-center gap-4 relative">
                     {/* ambient glow behind CTAs */}
                     <div className="ambient-glow" aria-hidden />
-                    <a
-                      href="#pricing"
-                      className="cta-btn cta-btn--primary px-6 py-3 text-sm"
-                    >
-                      <span className="btn-icon">
-                        <ArrowRightIcon className="h-4 w-4" />
-                      </span>
-                      Get started free
-                    </a>
-                    <a
-                      href="#demo"
-                      className="cta-btn px-6 py-3 text-sm"
-                      style={{
-                        background: "var(--color-card-bg)",
-                        color: "var(--color-text)",
-                      }}
-                    >
-                      <span className="btn-icon">
-                        <PlayIcon className="h-4 w-4" />
-                      </span>
-                      Watch product tour
-                    </a>
-                  </div>
-                  {/* Helper line under hero CTAs */}
-                  <div
-                    className="flex items-center gap-2 text-xs"
-                    style={{ color: "var(--color-text-muted)" }}
-                  >
-                    <CheckIcon
-                      className="h-3.5 w-3.5"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>No credit card needed</span>
+                    <DemoHubButton />
                   </div>
 
                   {/* Gradient separator above install row */}
-                  <div className="hr-gradient mt-4" aria-hidden />
+                  <div className="hr-gradient" aria-hidden />
 
                   {/* Browser Installation Buttons */}
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     <p
                       className="text-sm font-medium"
                       style={{ color: "var(--color-text-secondary)" }}
@@ -319,26 +294,18 @@ export default function Home() {
                           key={browser.name}
                           href={browser.url}
                           aria-label={`Add AI Workspace to ${browser.name}`}
-                          className={`cta-btn install-btn ${
-                            browser.primary ? "cta-btn--primary" : ""
+                          className={`browser-install-btn ${
+                            browser.primary ? "browser-install-btn--primary" : ""
                           }`}
-                          style={{
-                            background: browser.primary
-                              ? undefined
-                              : "var(--color-card-bg)",
-                            color: browser.primary
-                              ? undefined
-                              : "var(--color-text-secondary)",
-                          }}
                         >
                           <Image
                             src={browser.icon}
                             alt={`${browser.name} icon`}
-                            width={16}
-                            height={16}
-                            className="btn-icon h-4 w-4"
+                            width={20}
+                            height={20}
+                            className="h-5 w-5"
                           />
-                          <span className="ml-2">Add to {browser.name}</span>
+                          <span>Add to {browser.name}</span>
                         </a>
                       ))}
                     </div>
@@ -354,30 +321,6 @@ export default function Home() {
                       <span>⭐⭐⭐⭐⭐ from 4,689+ reviews</span>
                     </div>
                   </div>
-                </div>
-                <div className="grid gap-6 sm:grid-cols-2 lg:max-w-xl">
-                  {stats.map((stat) => (
-                    <div key={stat.label} className="feature-card p-5">
-                      <div
-                        className="text-2xl font-semibold"
-                        style={{ color: "var(--color-accent)" }}
-                      >
-                        {stat.value}
-                      </div>
-                      <div
-                        className="text-sm"
-                        style={{ color: "var(--color-text-muted)" }}
-                      >
-                        {stat.label}
-                      </div>
-                      <div
-                        className="mt-1 text-xs"
-                        style={{ color: "var(--color-text-muted)" }}
-                      >
-                        past 30 days
-                      </div>
-                    </div>
-                  ))}
                 </div>
               </div>
               <div className="relative mx-auto w-full max-w-lg">
@@ -406,28 +349,35 @@ export default function Home() {
                     className="relative z-10 flex items-center justify-between border-b px-6 py-4"
                     style={{ borderColor: "var(--color-border)" }}
                   >
-                    <div
-                      className="flex items-start gap-2 text-xs uppercase tracking-wider"
-                      style={{ color: "var(--color-text-muted)" }}
-                    >
-                      <span
-                        className="inline-flex h-2 w-2 rounded-full"
+                    <div className="flex items-center gap-3">
+                      <div
+                        className="flex h-8 w-8 items-center justify-center rounded-lg"
                         style={{
-                          background: "var(--color-accent)",
-                          marginTop: 4,
+                          background: "linear-gradient(135deg, rgba(20, 184, 166, 0.15), rgba(20, 184, 166, 0.05))",
+                          border: "1px solid rgba(20, 184, 166, 0.2)",
                         }}
-                      />
-                      <span>
-                        Your Complete AI Workspace —<br />
-                        <span
+                      >
+                        <ShieldIcon 
+                          className="h-4 w-4"
+                          style={{ color: "var(--color-accent)" }}
+                        />
+                      </div>
+                      <div>
+                        <div
+                          className="text-xs font-semibold uppercase tracking-wider"
+                          style={{ color: "var(--color-text-secondary)" }}
+                        >
+                          Your Complete AI Workspace
+                        </div>
+                        <div
+                          className="text-xs font-bold"
                           style={{
                             color: "var(--color-accent)",
-                            fontWeight: 700,
                           }}
                         >
                           100% Local, 0% Cloud
-                        </span>
-                      </span>
+                        </div>
+                      </div>
                     </div>
                     <span className="pill-badge">Private</span>
                   </div>
@@ -1506,11 +1456,12 @@ function Badge({
 }) {
   return (
     <span
-      className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em]"
+      className="hero-badge inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.2em]"
       style={{
-        borderColor: "var(--color-card-border)",
-        background: "var(--color-card-bg)",
+        borderColor: "rgba(20, 184, 166, 0.25)",
+        background: "linear-gradient(135deg, rgba(20, 184, 166, 0.08), rgba(20, 184, 166, 0.04))",
         color: "var(--color-text-secondary)",
+        boxShadow: "0 0 20px rgba(20, 184, 166, 0.1)",
       }}
     >
       <Icon className="h-3.5 w-3.5" style={{ color: "var(--color-accent)" }} />
@@ -1549,22 +1500,6 @@ function ArrowDownIcon(props: SVGProps<SVGSVGElement>) {
     >
       <path d="M12 5v14" />
       <path d="M6 13l6 6 6-6" />
-    </svg>
-  );
-}
-
-function PlayIcon(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="M6 4v16l12-8z" fill="currentColor" />
     </svg>
   );
 }

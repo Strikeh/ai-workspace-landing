@@ -19,7 +19,6 @@ const LOGOS: Array<{
   { src: "/images/company-logo/Microsoft.png", alt: "Microsoft" },
   { src: "/images/company-logo/nike.png", alt: "Nike" },
   { src: "/images/company-logo/nvidia.png", alt: "NVIDIA" },
-  { src: "/images/company-logo/Opel.png", alt: "Opel" },
   { src: "/images/company-logo/totalEnergies.png", alt: "TotalEnergies" },
   { src: "/images/company-logo/X.png", alt: "X" },
   { src: "/images/company-logo/Youtube.png", alt: "YouTube" },
@@ -31,16 +30,28 @@ export default function LogoCarousel() {
 
   return (
     <section
-      className="py-12 overflow-visible"
-      style={{ background: "var(--color-bg-secondary)" }}
+      className="logo-carousel-section py-16 overflow-visible border-y"
+      style={{
+        background:
+          "linear-gradient(180deg, rgba(20, 184, 166, 0.02) 0%, transparent 50%, rgba(20, 184, 166, 0.02) 100%)",
+        borderColor: "rgba(20, 184, 166, 0.08)",
+      }}
     >
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
-        <p
-          className="text-center text-sm font-medium tracking-wide mb-6"
-          style={{ color: "var(--color-text-blue-accent)" }}
-        >
-          Our users work at these companies
-        </p>
+        <div className="text-center mb-8">
+          <p
+            className="text-xs font-semibold uppercase tracking-[0.3em] mb-2"
+            style={{ color: "var(--color-accent)" }}
+          >
+            Trusted Globally
+          </p>
+          <p
+            className="text-sm font-medium"
+            style={{ color: "var(--color-text-secondary)" }}
+          >
+            Our users work at these companies
+          </p>
+        </div>
       </div>
       {/* Full-bleed band */}
       <div className="full-bleed">
@@ -55,7 +66,7 @@ export default function LogoCarousel() {
                     alt={logo.alt}
                     width={logo.width ?? 200}
                     height={logo.height ?? 64}
-                    className="h-auto"
+                    className="h-auto logo-image"
                     style={{
                       height: "clamp(32px, 5.5vw, 64px)",
                       width: "auto",

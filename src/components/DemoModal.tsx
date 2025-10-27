@@ -13,17 +13,32 @@ const demoCategories = [
 // Placeholder demo videos - replace videoId with actual YouTube IDs when ready
 const demoVideos = {
   workspace: [
-    { id: 1, title: "Workspace Overview", videoId: "dQw4w9WgXcQ", thumbnail: "" },
+    {
+      id: 1,
+      title: "Workspace Overview",
+      videoId: "dQw4w9WgXcQ",
+      thumbnail: "",
+    },
     { id: 2, title: "Managing Prompts", videoId: "dQw4w9WgXcQ", thumbnail: "" },
     { id: 3, title: "Vault Features", videoId: "dQw4w9WgXcQ", thumbnail: "" },
     { id: 4, title: "Image Gallery", videoId: "dQw4w9WgXcQ", thumbnail: "" },
   ],
   "action-bar": [
-    { id: 5, title: "Action Bar Basics", videoId: "dQw4w9WgXcQ", thumbnail: "" },
+    {
+      id: 5,
+      title: "Action Bar Basics",
+      videoId: "dQw4w9WgXcQ",
+      thumbnail: "",
+    },
     { id: 6, title: "Quick Actions", videoId: "dQw4w9WgXcQ", thumbnail: "" },
   ],
   "workspace-overlay": [
-    { id: 7, title: "ChatGPT Integration", videoId: "dQw4w9WgXcQ", thumbnail: "" },
+    {
+      id: 7,
+      title: "ChatGPT Integration",
+      videoId: "dQw4w9WgXcQ",
+      thumbnail: "",
+    },
     { id: 8, title: "Overlay Features", videoId: "dQw4w9WgXcQ", thumbnail: "" },
     { id: 9, title: "Custom Shortcuts", videoId: "dQw4w9WgXcQ", thumbnail: "" },
   ],
@@ -170,7 +185,6 @@ export default function DemoModal() {
             </div>
           )}
         </div>
-
       </div>
     </div>
   );
@@ -211,12 +225,7 @@ function SearchIcon(props: SVGProps<SVGSVGElement>) {
 
 function PlayIcon(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      stroke="none"
-      {...props}
-    >
+    <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" {...props}>
       <path d="M8 5v14l11-7z" />
     </svg>
   );

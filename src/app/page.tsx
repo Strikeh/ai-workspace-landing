@@ -237,7 +237,8 @@ export default function Home() {
           <div
             className="absolute inset-x-0 top-0 z-0 h-px"
             style={{
-              background: "linear-gradient(90deg, transparent, rgba(20, 184, 166, 0.3) 50%, transparent)",
+              background:
+                "linear-gradient(90deg, transparent, rgba(20, 184, 166, 0.3) 50%, transparent)",
             }}
           />
           <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-16 px-6 pb-32 pt-20 md:px-10 lg:px-16">
@@ -260,7 +261,8 @@ export default function Home() {
                     lineHeight: "1.1",
                   }}
                 >
-                  The missing productivity layer for ChatGPT — folders, search, export, and privacy-first features.
+                  The missing productivity layer for ChatGPT — folders, search,
+                  export, and privacy-first features.
                 </h1>
                 <p
                   className="hero-subtitle text-lg leading-relaxed sm:text-xl"
@@ -295,7 +297,9 @@ export default function Home() {
                           href={browser.url}
                           aria-label={`Add AI Workspace to ${browser.name}`}
                           className={`browser-install-btn ${
-                            browser.primary ? "browser-install-btn--primary" : ""
+                            browser.primary
+                              ? "browser-install-btn--primary"
+                              : ""
                           }`}
                         >
                           <Image
@@ -353,11 +357,12 @@ export default function Home() {
                       <div
                         className="flex h-8 w-8 items-center justify-center rounded-lg"
                         style={{
-                          background: "linear-gradient(135deg, rgba(20, 184, 166, 0.15), rgba(20, 184, 166, 0.05))",
+                          background:
+                            "linear-gradient(135deg, rgba(20, 184, 166, 0.15), rgba(20, 184, 166, 0.05))",
                           border: "1px solid rgba(20, 184, 166, 0.2)",
                         }}
                       >
-                        <ShieldIcon 
+                        <ShieldIcon
                           className="h-4 w-4"
                           style={{ color: "var(--color-accent)" }}
                         />
@@ -1459,7 +1464,8 @@ function Badge({
       className="hero-badge inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.2em]"
       style={{
         borderColor: "rgba(20, 184, 166, 0.25)",
-        background: "linear-gradient(135deg, rgba(20, 184, 166, 0.08), rgba(20, 184, 166, 0.04))",
+        background:
+          "linear-gradient(135deg, rgba(20, 184, 166, 0.08), rgba(20, 184, 166, 0.04))",
         color: "var(--color-text-secondary)",
         boxShadow: "0 0 20px rgba(20, 184, 166, 0.1)",
       }}

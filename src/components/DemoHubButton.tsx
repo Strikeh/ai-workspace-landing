@@ -4,7 +4,7 @@ import type { SVGProps } from "react";
 
 export default function DemoHubButton() {
   const handleClick = () => {
-    const event = new CustomEvent('openDemoModal');
+    const event = new CustomEvent("openDemoModal");
     window.dispatchEvent(event);
   };
 

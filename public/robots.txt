@@ -1,0 +1,6 @@
+﻿# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://aiworkspace.pro/sitemap.xml

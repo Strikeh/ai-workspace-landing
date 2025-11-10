@@ -220,25 +220,27 @@ export default function Home() {
 
       <main>
         <section className="hero-section relative isolate overflow-hidden">
-          {/* Enhanced gradient orbs */}
+          {/* Lighter, more subtle gradient orbs */}
           <div
-            className="absolute inset-x-0 top-[-25%] z-0 h-[520px] opacity-50 blur-3xl"
+            className="absolute inset-x-0 top-[-20%] z-0 h-[420px] opacity-30 blur-3xl"
             style={{
-              background: "var(--premium-orb-cyan-gradient)",
+              background:
+                "radial-gradient(circle, rgba(6, 182, 212, 0.25) 0%, transparent 70%)",
             }}
           />
           <div
-            className="absolute inset-x-0 top-[-15%] z-0 h-[380px] opacity-40 blur-3xl"
+            className="absolute inset-x-0 top-[-10%] z-0 h-[320px] opacity-25 blur-3xl"
             style={{
-              background: "var(--premium-orb-teal-gradient)",
+              background:
+                "radial-gradient(circle, rgba(20, 184, 166, 0.2) 0%, transparent 70%)",
             }}
           />
-          {/* Accent gradient line at top */}
+          {/* Subtle accent line */}
           <div
             className="absolute inset-x-0 top-0 z-0 h-px"
             style={{
               background:
-                "linear-gradient(90deg, transparent, rgba(20, 184, 166, 0.3) 50%, transparent)",
+                "linear-gradient(90deg, transparent, rgba(20, 184, 166, 0.2) 50%, transparent)",
             }}
           />
           <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-16 px-6 pb-32 pt-20 md:px-10 lg:px-16">
@@ -254,23 +256,62 @@ export default function Home() {
                 <h1
                   className="hero-title text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
                   style={{
-                    background: "var(--premium-title-gradient)",
-                    backgroundClip: "text",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    lineHeight: "1.1",
+                    color: "var(--color-text)",
+                    lineHeight: "1.2",
                   }}
                 >
-                  The missing productivity layer for ChatGPT — folders, search,
-                  export, and privacy-first features.
+                  The missing{" "}
+                  <span
+                    style={{
+                      background: "var(--premium-title-gradient)",
+                      backgroundClip: "text",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
+                    productivity layer
+                  </span>{" "}
+                  for ChatGPT —{" "}
+                  <span
+                    style={{
+                      background: "var(--premium-title-gradient)",
+                      backgroundClip: "text",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
+                    folders, search, export
+                  </span>
+                  , and{" "}
+                  <span
+                    style={{
+                      background: "var(--premium-title-gradient)",
+                      backgroundClip: "text",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
+                    privacy-first
+                  </span>{" "}
+                  features.
                 </h1>
                 <p
                   className="hero-subtitle text-lg leading-relaxed sm:text-xl"
                   style={{ color: "var(--color-text-secondary)" }}
                 >
-                  AI Workspace unifies prompts, conversations, images, notes,
-                  and GPT discovery in one encrypted hub. Reclaim cross-platform
-                  freedom without sacrificing control.
+                  AI Workspace unifies{" "}
+                  <span
+                    style={{ color: "var(--color-accent)", fontWeight: 600 }}
+                  >
+                    prompts, conversations, images, notes
+                  </span>
+                  , and GPT discovery in one{" "}
+                  <span
+                    style={{ color: "var(--color-accent)", fontWeight: 600 }}
+                  >
+                    encrypted hub
+                  </span>
+                  . Reclaim cross-platform freedom without sacrificing control.
                 </p>
                 <div className="space-y-8">
                   <div className="flex flex-wrap items-center gap-4 relative">
@@ -329,53 +370,60 @@ export default function Home() {
               </div>
               <div className="relative mx-auto w-full max-w-lg">
                 <div
-                  className="absolute inset-0 -translate-y-6 translate-x-4 rounded-3xl blur-3xl"
+                  className="absolute inset-0 -translate-y-6 translate-x-4 rounded-3xl blur-3xl opacity-40"
                   style={{
-                    background: "var(--premium-orb-blue-gradient)",
+                    background:
+                      "radial-gradient(circle, rgba(20, 184, 166, 0.2) 0%, transparent 70%)",
                   }}
                 />
                 <div className="premium-info-card relative overflow-hidden rounded-3xl border shadow-2xl backdrop-blur">
-                  {/* animated background blobs */}
+                  {/* Lighter animated background blobs */}
                   <div
                     aria-hidden
                     className="pointer-events-none absolute inset-0 z-0"
                   >
                     <div
-                      className="card-blob blob-1 absolute -left-10 -top-12 h-40 w-56 blur-3xl"
-                      style={{ background: "var(--premium-orb-teal-gradient)" }}
+                      className="card-blob blob-1 absolute -left-10 -top-12 h-40 w-56 blur-3xl opacity-50"
+                      style={{
+                        background:
+                          "radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, transparent 70%)",
+                      }}
                     />
                     <div
-                      className="card-blob blob-2 absolute -right-14 -bottom-12 h-36 w-52 blur-3xl"
-                      style={{ background: "var(--premium-orb-cyan-gradient)" }}
+                      className="card-blob blob-2 absolute -right-14 -bottom-12 h-36 w-52 blur-3xl opacity-50"
+                      style={{
+                        background:
+                          "radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%)",
+                      }}
                     />
                   </div>
                   <div
-                    className="relative z-10 flex items-center justify-between border-b px-6 py-4"
+                    className="relative z-10 flex items-center justify-between border-b px-6 py-5"
                     style={{ borderColor: "var(--color-border)" }}
                   >
                     <div className="flex items-center gap-3">
                       <div
-                        className="flex h-8 w-8 items-center justify-center rounded-lg"
+                        className="flex h-10 w-10 items-center justify-center rounded-xl"
                         style={{
                           background:
-                            "linear-gradient(135deg, rgba(20, 184, 166, 0.15), rgba(20, 184, 166, 0.05))",
+                            "linear-gradient(135deg, rgba(20, 184, 166, 0.12), rgba(20, 184, 166, 0.05))",
                           border: "1px solid rgba(20, 184, 166, 0.2)",
                         }}
                       >
                         <ShieldIcon
-                          className="h-4 w-4"
+                          className="h-5 w-5"
                           style={{ color: "var(--color-accent)" }}
                         />
                       </div>
                       <div>
                         <div
                           className="text-xs font-semibold uppercase tracking-wider"
-                          style={{ color: "var(--color-text-secondary)" }}
+                          style={{ color: "var(--color-text)" }}
                         >
                           Your Complete AI Workspace
                         </div>
                         <div
-                          className="text-xs font-bold"
+                          className="text-xs font-bold mt-0.5"
                           style={{
                             color: "var(--color-accent)",
                           }}
@@ -386,70 +434,125 @@ export default function Home() {
                     </div>
                     <span className="pill-badge">Private</span>
                   </div>
-                  <div className="relative z-10 space-y-6 px-6 py-6">
-                    <div className="space-y-2">
-                      <p className="info-title text-sm font-semibold">
+                  <div className="relative z-10 space-y-8 px-6 py-8">
+                    <div className="space-y-3">
+                      <h3
+                        className="info-title text-base font-semibold flex items-center gap-2"
+                        style={{
+                          background: "var(--premium-title-gradient)",
+                          backgroundClip: "text",
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent",
+                        }}
+                      >
+                        <LayersIcon
+                          className="h-5 w-5"
+                          style={{ color: "var(--color-accent)" }}
+                        />
                         All-in-One AI Productivity Hub
-                      </p>
+                      </h3>
                       <p
-                        className="text-sm"
+                        className="text-sm leading-relaxed"
                         style={{ color: "var(--color-text-secondary)" }}
                       >
-                        AI Workspace centralizes prompts, conversations, notes,
-                        images, and GPTs into one secure productivity hub.
-                        Everything you need to manage your AI workflow without
+                        Centralizes{" "}
+                        <span
+                          style={{
+                            color: "var(--color-text)",
+                            fontWeight: 500,
+                          }}
+                        >
+                          prompts, conversations, notes, images, and GPTs
+                        </span>{" "}
+                        into one secure hub. Everything you need without
                         switching tabs.
                       </p>
                     </div>
-                    <div className="space-y-2">
-                      <p className="info-title text-sm font-semibold">
+
+                    <div className="h-px bg-gradient-to-r from-transparent via-teal-500/20 to-transparent" />
+
+                    <div className="space-y-3">
+                      <h3
+                        className="info-title text-base font-semibold flex items-center gap-2"
+                        style={{
+                          background: "var(--premium-title-gradient)",
+                          backgroundClip: "text",
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent",
+                        }}
+                      >
+                        <ShieldIcon
+                          className="h-5 w-5"
+                          style={{ color: "var(--color-accent)" }}
+                        />
                         Privacy-First, Multi-Platform Freedom
-                      </p>
+                      </h3>
                       <p
-                        className="text-sm"
+                        className="text-sm leading-relaxed"
                         style={{ color: "var(--color-text-secondary)" }}
                       >
-                        Unlike other tools, nothing is sent to the cloud. Your
-                        data stays encrypted on your own device, while you still
-                        enjoy seamless integrations with ChatGPT, Claude, and
-                        Grok. Work faster, safer, and with full control.
+                        <span
+                          style={{
+                            color: "var(--color-text)",
+                            fontWeight: 500,
+                          }}
+                        >
+                          Nothing is sent to the cloud
+                        </span>
+                        . Your data stays encrypted on your device, while you
+                        enjoy seamless integrations with{" "}
+                        <span
+                          style={{
+                            color: "var(--color-accent)",
+                            fontWeight: 500,
+                          }}
+                        >
+                          ChatGPT, Claude, and Grok
+                        </span>
+                        .
                       </p>
                     </div>
-                    <div className="info-subpanel relative rounded-2xl border p-4">
+
+                    <div className="h-px bg-gradient-to-r from-transparent via-teal-500/20 to-transparent" />
+
+                    <div className="info-subpanel relative rounded-2xl border p-5 space-y-3">
                       <div
-                        className="mb-2 flex items-center gap-2 text-xs"
+                        className="flex items-center gap-2 text-sm font-semibold"
                         style={{ color: "var(--color-accent)" }}
                       >
                         <SparklesIcon className="h-4 w-4" />
-                        Why Privacy Matters in AI Workspace
+                        Why Privacy Matters
                       </div>
                       <ul
-                        className="space-y-1 text-sm"
+                        className="space-y-2.5 text-sm"
                         style={{ color: "var(--color-text-secondary)" }}
                       >
-                        <li className="flex items-center gap-2">
+                        <li className="flex items-start gap-3">
                           <CheckIcon
-                            className="h-4 w-4"
+                            className="h-4 w-4 flex-shrink-0 mt-0.5"
                             style={{ color: "var(--color-accent)" }}
                           />
-                          All prompts, conversations, and notes stay on your
-                          device — never uploaded.
+                          <span>
+                            All data stays on your device — never uploaded
+                          </span>
                         </li>
-                        <li className="flex items-center gap-2">
+                        <li className="flex items-start gap-3">
                           <CheckIcon
-                            className="h-4 w-4"
+                            className="h-4 w-4 flex-shrink-0 mt-0.5"
                             style={{ color: "var(--color-accent)" }}
                           />
-                          Encrypted vaults with end-to-end protection for
-                          sensitive work.
+                          <span>
+                            End-to-end encrypted vaults for sensitive work
+                          </span>
                         </li>
-                        <li className="flex items-center gap-2">
+                        <li className="flex items-start gap-3">
                           <CheckIcon
-                            className="h-4 w-4"
+                            className="h-4 w-4 flex-shrink-0 mt-0.5"
                             style={{ color: "var(--color-accent)" }}
                           />
-                          No telemetry, no hidden tracking, no third-party
-                          access.
+                          <span>
+                            No telemetry, no tracking, no third-party access
+                          </span>
                         </li>
                       </ul>
                     </div>
@@ -469,7 +572,7 @@ export default function Home() {
           style={{ borderColor: "var(--color-border)" }}
         >
           <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
-            <div className="max-w-3xl space-y-4">
+            <div className="max-w-3xl space-y-5">
               <p
                 className="text-sm font-semibold uppercase tracking-[0.3em]"
                 style={{ color: "var(--color-accent)" }}
@@ -480,18 +583,48 @@ export default function Home() {
                 className="text-3xl font-semibold tracking-tight sm:text-4xl"
                 style={{ color: "var(--color-text)" }}
               >
-                Security, integrations, and productivity co-designed for
-                privacy-first teams.
+                <span style={{ color: "var(--color-text)" }}>Security</span>,{" "}
+                <span
+                  style={{
+                    background: "var(--premium-title-gradient)",
+                    backgroundClip: "text",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  integrations
+                </span>
+                , and{" "}
+                <span
+                  style={{
+                    background: "var(--premium-title-gradient)",
+                    backgroundClip: "text",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  productivity
+                </span>{" "}
+                co-designed for privacy-first teams.
               </h2>
               <p
-                className="text-lg"
+                className="text-lg leading-relaxed"
                 style={{ color: "var(--color-text-secondary)" }}
               >
-                No more juggling disconnected AI tools. AI Workspace runs
-                locally, adapts to your stack, and scales from solo operators to
-                distributed teams.
+                No more juggling disconnected AI tools. AI Workspace{" "}
+                <span style={{ color: "var(--color-text)", fontWeight: 500 }}>
+                  runs locally
+                </span>
+                , adapts to your stack, and scales from{" "}
+                <span style={{ color: "var(--color-accent)", fontWeight: 500 }}>
+                  solo operators to distributed teams
+                </span>
+                .
               </p>
             </div>
+
+            <div className="mt-12 h-px bg-gradient-to-r from-transparent via-teal-500/30 to-transparent" />
+
             <div className="mt-16 grid gap-8 md:grid-cols-2">
               {features.map((feature) => (
                 <div
@@ -538,7 +671,7 @@ export default function Home() {
         >
           <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
             <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-              <div className="max-w-2xl space-y-4">
+              <div className="max-w-2xl space-y-5">
                 <p
                   className="text-sm font-semibold uppercase tracking-[0.3em]"
                   style={{ color: "var(--color-accent)" }}
@@ -549,15 +682,40 @@ export default function Home() {
                   className="text-3xl font-semibold sm:text-4xl"
                   style={{ color: "var(--color-text)" }}
                 >
-                  Designed for power-users who need control, privacy, and speed.
+                  Designed for{" "}
+                  <span
+                    style={{
+                      background: "var(--premium-title-gradient)",
+                      backgroundClip: "text",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
+                    power-users
+                  </span>{" "}
+                  who need{" "}
+                  <span
+                    style={{ color: "var(--color-accent)", fontWeight: 600 }}
+                  >
+                    control, privacy, and speed
+                  </span>
+                  .
                 </h2>
                 <p
-                  className="text-lg"
+                  className="text-lg leading-relaxed"
                   style={{ color: "var(--color-text-secondary)" }}
                 >
-                  AI Workspace brings prompts, conversations, images, notes, and
-                  custom GPTs together in one secure environment — all stored
-                  locally, with seamless support for ChatGPT, Claude, and Grok.
+                  AI Workspace brings{" "}
+                  <span style={{ color: "var(--color-text)", fontWeight: 500 }}>
+                    prompts, conversations, images, notes, and custom GPTs
+                  </span>{" "}
+                  together in one secure environment — all{" "}
+                  <span
+                    style={{ color: "var(--color-accent)", fontWeight: 500 }}
+                  >
+                    stored locally
+                  </span>
+                  , with seamless support for ChatGPT, Claude, and Grok.
                 </p>
               </div>
               <div
@@ -571,6 +729,9 @@ export default function Home() {
                 Analytics dashboard · beta / coming soon
               </div>
             </div>
+
+            <div className="mt-12 h-px bg-gradient-to-r from-transparent via-teal-500/30 to-transparent" />
+
             <div className="mt-16 grid gap-12">
               {showcases.map((showcase, index) => (
                 <div
@@ -749,15 +910,21 @@ export default function Home() {
           {/* subtle background orbs for depth */}
           <div
             aria-hidden
-            className="pointer-events-none absolute inset-0 z-0 opacity-50"
+            className="pointer-events-none absolute inset-0 z-0 opacity-40"
           >
             <div
-              className="absolute left-[-10%] top-[-10%] h-[360px] w-[520px] blur-3xl"
-              style={{ background: "var(--premium-orb-teal-gradient)" }}
+              className="absolute left-[-10%] top-[-10%] h-[320px] w-[450px] blur-3xl"
+              style={{
+                background:
+                  "radial-gradient(circle, rgba(20, 184, 166, 0.2) 0%, transparent 70%)",
+              }}
             />
             <div
-              className="absolute right-[-12%] bottom-[-10%] h-[300px] w-[480px] blur-3xl"
-              style={{ background: "var(--premium-orb-cyan-gradient)" }}
+              className="absolute right-[-12%] bottom-[-10%] h-[280px] w-[420px] blur-3xl"
+              style={{
+                background:
+                  "radial-gradient(circle, rgba(6, 182, 212, 0.18) 0%, transparent 70%)",
+              }}
             />
           </div>
           <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
@@ -778,17 +945,32 @@ export default function Home() {
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  Trusted by teams who put privacy first
+                  Trusted by teams who put{" "}
+                  <span style={{ color: "var(--color-accent)" }}>
+                    privacy first
+                  </span>
                 </h2>
                 <p
-                  className="text-lg"
+                  className="text-lg leading-relaxed"
                   style={{ color: "var(--color-text-secondary)" }}
                 >
-                  From legal firms to creative studios, professionals rely on AI
-                  Workspace to manage prompts, notes, and media without risking
-                  their data in the cloud. Discover how users save hours each
-                  week while staying fully in control of their information.
+                  From{" "}
+                  <span style={{ color: "var(--color-text)", fontWeight: 500 }}>
+                    legal firms to creative studios
+                  </span>
+                  , professionals rely on AI Workspace to manage prompts, notes,
+                  and media{" "}
+                  <span
+                    style={{ color: "var(--color-accent)", fontWeight: 500 }}
+                  >
+                    without risking their data in the cloud
+                  </span>
+                  . Discover how users save hours each week while staying fully
+                  in control.
                 </p>
+
+                <div className="h-px bg-gradient-to-r from-transparent via-teal-500/30 to-transparent" />
+
                 <div className="grid gap-6 sm:grid-cols-2">
                   {testimonials.map((testimonial) => (
                     <div
@@ -889,7 +1071,7 @@ export default function Home() {
           style={{ borderColor: "var(--color-border)" }}
         >
           <div className="mx-auto max-w-5xl px-6 md:px-10 lg:px-16">
-            <div className="text-center">
+            <div className="text-center space-y-4">
               <p
                 className="text-sm font-semibold uppercase tracking-[0.3em]"
                 style={{ color: "var(--color-accent)" }}
@@ -907,7 +1089,20 @@ export default function Home() {
               >
                 Everything you want to know
               </h2>
+              <p
+                className="text-lg max-w-2xl mx-auto"
+                style={{ color: "var(--color-text-secondary)" }}
+              >
+                Quick answers to common questions about{" "}
+                <span style={{ color: "var(--color-accent)", fontWeight: 500 }}>
+                  security, features, and pricing
+                </span>
+                .
+              </p>
             </div>
+
+            <div className="mt-10 h-px bg-gradient-to-r from-transparent via-teal-500/30 to-transparent" />
+
             <div className="mt-12 space-y-6">
               <details className="faq-card faq-accordion">
                 <summary className="faq-summary">

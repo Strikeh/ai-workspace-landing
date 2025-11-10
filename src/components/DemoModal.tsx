@@ -10,37 +10,53 @@ const demoCategories = [
   { id: "workspace-overlay", label: "Workspace Overlay (chatgpt.com)" },
 ];
 
-// Placeholder demo videos - replace videoId with actual YouTube IDs when ready
+// Demo videos with actual YouTube IDs
 const demoVideos = {
   workspace: [
     {
       id: 1,
+      title: "Organize Your Workspace With Categories",
+      videoId: "GN7Zu_jRL8U",
+      thumbnail: "",
+    },
+    {
+      id: 2,
+      title: "How to Create a New Vault in AI Workspace",
+      videoId: "D4xBchnUWcI",
+      thumbnail: "",
+    },
+    {
+      id: 3,
       title: "Workspace Overview",
       videoId: "dQw4w9WgXcQ",
       thumbnail: "",
     },
-    { id: 2, title: "Managing Prompts", videoId: "dQw4w9WgXcQ", thumbnail: "" },
-    { id: 3, title: "Vault Features", videoId: "dQw4w9WgXcQ", thumbnail: "" },
-    { id: 4, title: "Image Gallery", videoId: "dQw4w9WgXcQ", thumbnail: "" },
+    { id: 4, title: "Managing Prompts", videoId: "dQw4w9WgXcQ", thumbnail: "" },
+    { id: 5, title: "Image Gallery", videoId: "dQw4w9WgXcQ", thumbnail: "" },
   ],
   "action-bar": [
     {
-      id: 5,
+      id: 6,
       title: "Action Bar Basics",
       videoId: "dQw4w9WgXcQ",
       thumbnail: "",
     },
-    { id: 6, title: "Quick Actions", videoId: "dQw4w9WgXcQ", thumbnail: "" },
+    { id: 7, title: "Quick Actions", videoId: "dQw4w9WgXcQ", thumbnail: "" },
   ],
   "workspace-overlay": [
     {
-      id: 7,
+      id: 8,
       title: "ChatGPT Integration",
       videoId: "dQw4w9WgXcQ",
       thumbnail: "",
     },
-    { id: 8, title: "Overlay Features", videoId: "dQw4w9WgXcQ", thumbnail: "" },
-    { id: 9, title: "Custom Shortcuts", videoId: "dQw4w9WgXcQ", thumbnail: "" },
+    { id: 9, title: "Overlay Features", videoId: "dQw4w9WgXcQ", thumbnail: "" },
+    {
+      id: 10,
+      title: "Custom Shortcuts",
+      videoId: "dQw4w9WgXcQ",
+      thumbnail: "",
+    },
   ],
 };
 
@@ -83,7 +99,7 @@ export default function DemoModal() {
       >
         {/* Header */}
         <div className="demo-modal-header">
-          <h2 className="demo-modal-title">AIWorkspace</h2>
+          <h2 className="demo-modal-title">AI Workspace</h2>
           <button
             onClick={() => setIsOpen(false)}
             className="demo-modal-close"
@@ -95,7 +111,7 @@ export default function DemoModal() {
 
         {/* Search bar */}
         <div className="demo-modal-search">
-          <SearchIcon className="demo-search-icon h-5 w-5" />
+          <SearchIcon className="demo-search-icon" />
           <input
             type="text"
             placeholder="What are you looking for?"

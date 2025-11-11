@@ -44,7 +44,7 @@ const features = [
       "Native overlays & unified shortcuts for ChatGPT, Claude, and Grok",
       "One-click prompt → conversation linking across platforms",
       "Smart auto-archive and advanced search across all threads",
-      "Power tools: custom hotkeys, API-ready design",
+      "Power tools: custom hotkeys, keyboard-first navigation",
     ],
     icon: SparklesIcon,
   },
@@ -56,6 +56,7 @@ const features = [
       "Prompt Studio: rich editor, parameterized templates, batch actions, favorites, real-time search",
       "Conversation Manager: unlimited storage (PRO), rich notes, categories, multi-format export (PDF/TXT/MD/JSON)",
       "Image Gallery & Notes: filters/search, conversation-aware grouping, quick preview, JSON export per note",
+      "Tag System: organize prompts and chats with visual tags (max 3 per item)",
       "GPT Store: featured/trending, category filters, live search, deep links",
     ],
     icon: LayersIcon,
@@ -251,7 +252,7 @@ export default function Home() {
                   style={{ color: "var(--color-text-secondary)" }}
                 >
                   <Badge icon={ShieldIcon}>Local only. Zero telemetry.</Badge>
-                  <Badge icon={SparklesIcon}>ChatGPT · Claude · Grok</Badge>
+                  <Badge icon={SparklesIcon}>ChatGPT — Claude — Grok</Badge>
                 </div>
                 <h1
                   className="hero-title text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
@@ -354,16 +355,79 @@ export default function Home() {
                         </a>
                       ))}
                     </div>
+
+                    {/* Social Proof Badge */}
                     <div
-                      className="flex items-center gap-2 text-xs"
-                      style={{ color: "var(--color-text-muted)" }}
+                      className="inline-flex items-center gap-3 rounded-full px-4 py-2.5"
+                      style={{
+                        background: "rgba(6, 182, 212, 0.08)",
+                        border: "1px solid rgba(6, 182, 212, 0.2)",
+                      }}
                     >
-                      <span
-                        className="dot-pulse inline-flex h-2 w-2 rounded-full"
-                        style={{ background: "var(--color-accent)" }}
-                      />
-                      <span>4,689+ happy customers</span>
-                      <span>⭐⭐⭐⭐⭐ from 4,689+ reviews</span>
+                      {/* Avatar Stack */}
+                      <div className="flex -space-x-2">
+                        <div
+                          className="h-7 w-7 rounded-full border-2 border-white/20 flex items-center justify-center overflow-hidden"
+                          style={{
+                            background:
+                              "linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)",
+                          }}
+                        >
+                          <Image
+                            src="/images/people/person%201.png"
+                            alt="User avatar"
+                            width={28}
+                            height={28}
+                            className="h-full w-full object-cover"
+                          />
+                        </div>
+                        <div
+                          className="h-7 w-7 rounded-full border-2 border-white/20 flex items-center justify-center overflow-hidden"
+                          style={{
+                            background:
+                              "linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%)",
+                          }}
+                        >
+                          <Image
+                            src="/images/people/person%202.png"
+                            alt="User avatar"
+                            width={28}
+                            height={28}
+                            className="h-full w-full object-cover"
+                          />
+                        </div>
+                        <div
+                          className="h-7 w-7 rounded-full border-2 border-white/20 flex items-center justify-center overflow-hidden"
+                          style={{
+                            background:
+                              "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)",
+                          }}
+                        >
+                          <Image
+                            src="/images/people/person%203.png"
+                            alt="User avatar"
+                            width={28}
+                            height={28}
+                            className="h-full w-full object-cover"
+                          />
+                        </div>
+                      </div>
+
+                      {/* Text */}
+                      <div className="flex flex-col">
+                        <span
+                          className="text-xs font-semibold"
+                          style={{ color: "var(--color-text)" }}
+                        >
+                          Join thousands of professionals
+                        </span>
+                        <span
+                          className="text-[10px]"
+                          style={{ color: "var(--color-text-muted)" }}
+                        >
+                          using this resource
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -469,7 +533,7 @@ export default function Home() {
                       </p>
                     </div>
 
-                    <div className="h-px bg-gradient-to-r from-transparent via-teal-500/20 to-transparent" />
+                    <div className="h-px bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent" />
 
                     <div className="space-y-3">
                       <h3
@@ -513,7 +577,7 @@ export default function Home() {
                       </p>
                     </div>
 
-                    <div className="h-px bg-gradient-to-r from-transparent via-teal-500/20 to-transparent" />
+                    <div className="h-px bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent" />
 
                     <div className="info-subpanel relative rounded-2xl border p-5 space-y-3">
                       <div
@@ -623,7 +687,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="mt-12 h-px bg-gradient-to-r from-transparent via-teal-500/30 to-transparent" />
+            <div className="mt-12 h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
 
             <div className="mt-16 grid gap-8 md:grid-cols-2">
               {features.map((feature) => (
@@ -726,11 +790,11 @@ export default function Home() {
                   color: "var(--color-accent)",
                 }}
               >
-                Analytics dashboard · beta / coming soon
+                Analytics dashboard — beta / coming soon
               </div>
             </div>
 
-            <div className="mt-12 h-px bg-gradient-to-r from-transparent via-teal-500/30 to-transparent" />
+            <div className="mt-12 h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
 
             <div className="mt-16 grid gap-12">
               {showcases.map((showcase, index) => (
@@ -969,7 +1033,7 @@ export default function Home() {
                   in control.
                 </p>
 
-                <div className="h-px bg-gradient-to-r from-transparent via-teal-500/30 to-transparent" />
+                <div className="h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
 
                 <div className="grid gap-6 sm:grid-cols-2">
                   {testimonials.map((testimonial) => (
@@ -1000,7 +1064,7 @@ export default function Home() {
                         </span>
                       </div>
                       <p className="testimonial-quote text-sm">
-                        “{testimonial.quote}”
+                        &ldquo;{testimonial.quote}&rdquo;
                       </p>
                     </div>
                   ))}
@@ -1013,52 +1077,294 @@ export default function Home() {
                   background: "var(--color-card-bg)",
                 }}
               >
-                <div className="space-y-3">
+                <div className="space-y-4">
                   <p
                     className="text-sm font-semibold uppercase tracking-[0.3em]"
                     style={{ color: "var(--color-accent)" }}
                   >
-                    Experience the workflow
+                    Coming Soon
                   </p>
                   <h3
                     className="text-2xl font-semibold"
                     style={{ color: "var(--color-text)" }}
                   >
-                    See AI Workspace in action
+                    Future Features on the Roadmap
                   </h3>
                   <p
-                    className="text-sm"
+                    className="text-sm leading-relaxed"
                     style={{ color: "var(--color-text-secondary)" }}
                   >
-                    Watch a five-minute tour that covers the prompt vault,
-                    multi-platform handoff, and the creative gallery. No email
-                    required.
+                    We&apos;re constantly evolving AI Workspace with powerful
+                    new capabilities to enhance your productivity.
                   </p>
                 </div>
-                <a
-                  href="#pricing"
-                  className="cta-btn cta-btn--primary px-6 py-3 text-sm"
-                >
-                  <span className="btn-icon">
-                    <ArrowDownIcon className="h-4 w-4" />
-                  </span>
-                  Download tour video
-                </a>
+
+                <div className="space-y-3">
+                  <div
+                    className="flex items-start gap-3 rounded-xl p-3"
+                    style={{
+                      background: "rgba(6, 182, 212, 0.05)",
+                      border: "1px solid rgba(6, 182, 212, 0.15)",
+                    }}
+                  >
+                    <div
+                      className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full"
+                      style={{ background: "var(--color-accent)" }}
+                    >
+                      <SparkIcon className="h-3 w-3 text-white" />
+                    </div>
+                    <div>
+                      <p
+                        className="text-sm font-semibold"
+                        style={{ color: "var(--color-text)" }}
+                      >
+                        Prompt Chaining
+                      </p>
+                      <p
+                        className="text-xs"
+                        style={{ color: "var(--color-text-muted)" }}
+                      >
+                        Link multiple prompts together for complex automated
+                        workflows
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    className="flex items-start gap-3 rounded-xl p-3"
+                    style={{
+                      background: "rgba(6, 182, 212, 0.05)",
+                      border: "1px solid rgba(6, 182, 212, 0.15)",
+                    }}
+                  >
+                    <div
+                      className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full"
+                      style={{ background: "var(--color-accent)" }}
+                    >
+                      <SparkIcon className="h-3 w-3 text-white" />
+                    </div>
+                    <div>
+                      <p
+                        className="text-sm font-semibold"
+                        style={{ color: "var(--color-text)" }}
+                      >
+                        Advanced Analytics Dashboard
+                      </p>
+                      <p
+                        className="text-xs"
+                        style={{ color: "var(--color-text-muted)" }}
+                      >
+                        Deep insights into your AI usage patterns and
+                        productivity metrics
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    className="flex items-start gap-3 rounded-xl p-3"
+                    style={{
+                      background: "rgba(6, 182, 212, 0.05)",
+                      border: "1px solid rgba(6, 182, 212, 0.15)",
+                    }}
+                  >
+                    <div
+                      className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full"
+                      style={{ background: "var(--color-accent)" }}
+                    >
+                      <SparkIcon className="h-3 w-3 text-white" />
+                    </div>
+                    <div>
+                      <p
+                        className="text-sm font-semibold"
+                        style={{ color: "var(--color-text)" }}
+                      >
+                        Extended LLM Support
+                      </p>
+                      <p
+                        className="text-xs"
+                        style={{ color: "var(--color-text-muted)" }}
+                      >
+                        Native integrations for Gemini, Perplexity, Llama, and
+                        more AI platforms
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    className="flex items-start gap-3 rounded-xl p-3"
+                    style={{
+                      background: "rgba(6, 182, 212, 0.05)",
+                      border: "1px solid rgba(6, 182, 212, 0.15)",
+                    }}
+                  >
+                    <div
+                      className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full"
+                      style={{ background: "var(--color-accent)" }}
+                    >
+                      <SparkIcon className="h-3 w-3 text-white" />
+                    </div>
+                    <div>
+                      <p
+                        className="text-sm font-semibold"
+                        style={{ color: "var(--color-text)" }}
+                      >
+                        Multi-Language Support
+                      </p>
+                      <p
+                        className="text-xs"
+                        style={{ color: "var(--color-text-muted)" }}
+                      >
+                        Interface localization for Spanish, French, German,
+                        Japanese, and more
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    className="flex items-start gap-3 rounded-xl p-3"
+                    style={{
+                      background: "rgba(6, 182, 212, 0.05)",
+                      border: "1px solid rgba(6, 182, 212, 0.15)",
+                    }}
+                  >
+                    <div
+                      className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full"
+                      style={{ background: "var(--color-accent)" }}
+                    >
+                      <SparkIcon className="h-3 w-3 text-white" />
+                    </div>
+                    <div>
+                      <p
+                        className="text-sm font-semibold"
+                        style={{ color: "var(--color-text)" }}
+                      >
+                        Workflow Automation
+                      </p>
+                      <p
+                        className="text-xs"
+                        style={{ color: "var(--color-text-muted)" }}
+                      >
+                        Trigger actions based on events: auto-categorize,
+                        smart-archive, scheduled exports
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    className="flex items-start gap-3 rounded-xl p-3"
+                    style={{
+                      background: "rgba(6, 182, 212, 0.05)",
+                      border: "1px solid rgba(6, 182, 212, 0.15)",
+                    }}
+                  >
+                    <div
+                      className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full"
+                      style={{ background: "var(--color-accent)" }}
+                    >
+                      <SparkIcon className="h-3 w-3 text-white" />
+                    </div>
+                    <div>
+                      <p
+                        className="text-sm font-semibold"
+                        style={{ color: "var(--color-text)" }}
+                      >
+                        Team Collaboration Tools
+                      </p>
+                      <p
+                        className="text-xs"
+                        style={{ color: "var(--color-text-muted)" }}
+                      >
+                        Share prompt libraries and vault templates with your
+                        team (privacy-first)
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    className="flex items-start gap-3 rounded-xl p-3"
+                    style={{
+                      background: "rgba(6, 182, 212, 0.05)",
+                      border: "1px solid rgba(6, 182, 212, 0.15)",
+                    }}
+                  >
+                    <div
+                      className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full"
+                      style={{ background: "var(--color-accent)" }}
+                    >
+                      <SparkIcon className="h-3 w-3 text-white" />
+                    </div>
+                    <div>
+                      <p
+                        className="text-sm font-semibold"
+                        style={{ color: "var(--color-text)" }}
+                      >
+                        Voice & Audio Processing
+                      </p>
+                      <p
+                        className="text-xs"
+                        style={{ color: "var(--color-text-muted)" }}
+                      >
+                        Transcribe voice notes, organize audio conversations,
+                        voice-to-prompt
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    className="flex items-start gap-3 rounded-xl p-3"
+                    style={{
+                      background: "rgba(6, 182, 212, 0.05)",
+                      border: "1px solid rgba(6, 182, 212, 0.15)",
+                    }}
+                  >
+                    <div
+                      className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full"
+                      style={{ background: "var(--color-accent)" }}
+                    >
+                      <SparkIcon className="h-3 w-3 text-white" />
+                    </div>
+                    <div>
+                      <p
+                        className="text-sm font-semibold"
+                        style={{ color: "var(--color-text)" }}
+                      >
+                        Custom API Integrations
+                      </p>
+                      <p
+                        className="text-xs"
+                        style={{ color: "var(--color-text-muted)" }}
+                      >
+                        Connect your own AI models and third-party tools via
+                        REST API
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
                 <div
                   className="rounded-2xl p-4 text-xs"
                   style={{
-                    border: "1px solid var(--color-card-border)",
-                    background: "var(--color-card-bg)",
-                    color: "var(--color-text-muted)",
+                    border: "1px solid rgba(6, 182, 212, 0.2)",
+                    background: "rgba(6, 182, 212, 0.05)",
+                    color: "var(--color-text-secondary)",
                   }}
                 >
-                  <span className="pill-badge mb-2 inline-flex">
-                    <CheckIcon className="h-3.5 w-3.5" />
-                    No account required
-                  </span>
+                  <div className="flex items-center gap-2 mb-2">
+                    <div
+                      className="h-1.5 w-1.5 rounded-full animate-pulse"
+                      style={{ background: "var(--color-accent)" }}
+                    />
+                    <span
+                      className="font-semibold"
+                      style={{ color: "var(--color-text)" }}
+                    >
+                      Active Development
+                    </span>
+                  </div>
                   <div>
-                    Video is stored locally on your machine and can be deleted
-                    any time.
+                    These features are in various stages of development. Want to
+                    influence the roadmap? Join our community or reach out with
+                    feedback!
                   </div>
                 </div>
               </div>
@@ -1101,7 +1407,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="mt-10 h-px bg-gradient-to-r from-transparent via-teal-500/30 to-transparent" />
+            <div className="mt-10 h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
 
             <div className="mt-12 space-y-6">
               <details className="faq-card faq-accordion">
@@ -1151,7 +1457,7 @@ export default function Home() {
                 <summary className="faq-summary">
                   <span className="faq-caret" aria-hidden />
                   <span className="faq-question text-lg font-semibold">
-                    What’s the difference between Free and Pro?
+                    What&rsquo;s the difference between Free and Pro?
                   </span>
                 </summary>
                 <div className="faq-content">
@@ -1280,7 +1586,7 @@ export default function Home() {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                Start free. Go PRO when you’re ready.
+                Start free. Go PRO when you are ready.
               </h2>
             </div>
             <div className="mt-12 grid gap-8 lg:grid-cols-2">
@@ -1394,7 +1700,7 @@ export default function Home() {
                 <div className="mt-5">
                   <div className="price-value">EUR 10</div>
                   <div className="price-meta mt-1">
-                    per month – cancel anytime
+                    per month — cancel anytime
                   </div>
                 </div>
                 <ul className="pricing-features mt-6 text-sm">
@@ -1539,7 +1845,7 @@ export default function Home() {
                   className="text-sm"
                   style={{ color: "var(--color-text-muted)" }}
                 >
-                  Privacy-first · Multi-platform (ChatGPT, Claude, Grok) · Works
+                  Privacy-first ◆ Multi-platform (ChatGPT, Claude, Grok) ◆ Works
                   on Chrome Extension (macOS, Windows, Linux)
                 </p>
               </div>
@@ -1684,23 +1990,6 @@ function ArrowRightIcon(props: SVGProps<SVGSVGElement>) {
     >
       <path d="M5 12h14" />
       <path d="M13 6l6 6-6 6" />
-    </svg>
-  );
-}
-
-function ArrowDownIcon(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="M12 5v14" />
-      <path d="M6 13l6 6 6-6" />
     </svg>
   );
 }

@@ -1,7 +1,7 @@
 ﻿import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://aiworkspace.pro"; // Update met je echte URL
+  const baseUrl = "https://getaiworkspace.com";
 
   return [
     {

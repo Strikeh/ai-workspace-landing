@@ -18,8 +18,8 @@ const siteConfig = {
     "AI Workspace - Privacy-First AI Productivity Hub for ChatGPT, Claude & Grok",
   description:
     "AI Workspace is the ultimate privacy-first productivity hub for AI users. Organize prompts, conversations, images, and notes locally with encrypted vaults. Seamlessly connect ChatGPT, Claude, and Grok without cloud storage. Free Chrome extension for secure, local-first AI workflows.",
-  url: "https://aiworkspace.pro", // Update met je echte URL
-  ogImage: "https://aiworkspace.pro/og-image.png", // Update met je echte OG image
+  url: "https://getaiworkspace.com",
+  ogImage: "https://getaiworkspace.com/og-image.png",
   keywords: [
     "AI productivity",
     "ChatGPT extension",

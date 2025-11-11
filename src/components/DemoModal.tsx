@@ -25,39 +25,9 @@ const demoVideos = {
       videoId: "D4xBchnUWcI",
       thumbnail: "",
     },
-    {
-      id: 3,
-      title: "Workspace Overview",
-      videoId: "dQw4w9WgXcQ",
-      thumbnail: "",
-    },
-    { id: 4, title: "Managing Prompts", videoId: "dQw4w9WgXcQ", thumbnail: "" },
-    { id: 5, title: "Image Gallery", videoId: "dQw4w9WgXcQ", thumbnail: "" },
   ],
-  "action-bar": [
-    {
-      id: 6,
-      title: "Action Bar Basics",
-      videoId: "dQw4w9WgXcQ",
-      thumbnail: "",
-    },
-    { id: 7, title: "Quick Actions", videoId: "dQw4w9WgXcQ", thumbnail: "" },
-  ],
-  "workspace-overlay": [
-    {
-      id: 8,
-      title: "ChatGPT Integration",
-      videoId: "dQw4w9WgXcQ",
-      thumbnail: "",
-    },
-    { id: 9, title: "Overlay Features", videoId: "dQw4w9WgXcQ", thumbnail: "" },
-    {
-      id: 10,
-      title: "Custom Shortcuts",
-      videoId: "dQw4w9WgXcQ",
-      thumbnail: "",
-    },
-  ],
+  "action-bar": [],
+  "workspace-overlay": [],
 };
 
 export default function DemoModal() {
@@ -84,6 +54,24 @@ export default function DemoModal() {
     };
   }, [isOpen]);
 
+  // Close video player on orientation change to prevent crashes
+  useEffect(() => {
+    const handleOrientationChange = () => {
+      if (selectedVideo && window.innerHeight < 600) {
+        // Close video in landscape mode on small screens
+        setSelectedVideo(null);
+      }
+    };
+
+    window.addEventListener("orientationchange", handleOrientationChange);
+    window.addEventListener("resize", handleOrientationChange);
+
+    return () => {
+      window.removeEventListener("orientationchange", handleOrientationChange);
+      window.removeEventListener("resize", handleOrientationChange);
+    };
+  }, [selectedVideo]);
+
   if (!isOpen) return null;
 
   const currentVideos = demoVideos[activeTab as keyof typeof demoVideos] || [];
@@ -99,7 +87,7 @@ export default function DemoModal() {
       >
         {/* Header */}
         <div className="demo-modal-header">
-          <h2 className="demo-modal-title">AI Workspace</h2>
+          <h2 className="demo-modal-title">Video Tutorials</h2>
           <button
             onClick={() => setIsOpen(false)}
             className="demo-modal-close"

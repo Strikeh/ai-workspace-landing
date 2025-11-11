@@ -55,10 +55,21 @@ export default function DemoModal() {
   }, [isOpen]);
 
   // Close video player on orientation change to prevent crashes
+  // But don't close if video is in fullscreen mode
   useEffect(() => {
     const handleOrientationChange = () => {
-      if (selectedVideo && window.innerHeight < 600) {
-        // Close video in landscape mode on small screens
+      // Check if any element is in fullscreen
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const doc = document as any;
+      const isFullscreen = !!(
+        document.fullscreenElement ||
+        doc.webkitFullscreenElement ||
+        doc.mozFullScreenElement ||
+        doc.msFullscreenElement
+      );
+
+      // Only close video if not in fullscreen and screen is very small in landscape
+      if (selectedVideo && !isFullscreen && window.innerHeight < 500) {
         setSelectedVideo(null);
       }
     };

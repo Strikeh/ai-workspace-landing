@@ -1893,7 +1893,7 @@ export default function Home() {
                 </h4>
                 <ul className="mt-4 space-y-2 text-sm">
                   <li>
-                    <a className="footer-link" href="#">
+                    <a className="footer-link" href="/privacy">
                       Privacy Policy
                     </a>
                   </li>

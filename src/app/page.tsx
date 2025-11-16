@@ -1898,7 +1898,7 @@ export default function Home() {
                     </a>
                   </li>
                   <li>
-                    <a className="footer-link" href="#">
+                    <a className="footer-link" href="/terms">
                       Terms of Service
                     </a>
                   </li>

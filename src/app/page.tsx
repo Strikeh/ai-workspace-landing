@@ -14,7 +14,7 @@ const browserInstallButtons = [
   {
     name: "Edge",
     icon: "/images/browsers/edge.svg",
-    url: "#",
+    url: "https://microsoftedge.microsoft.com/addons/detail/kbdckiagphjeldfdfeobdhcajkpidong",
   },
   {
     name: "Firefox",

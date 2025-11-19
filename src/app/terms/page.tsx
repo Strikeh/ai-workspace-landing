@@ -128,7 +128,7 @@ export default function TermsPage() {
               4.2 Pro Version
             </h3>
             <p className="mb-3" style={{ color: "var(--color-text)" }}>
-              The Pro version (€10/month) includes:
+              The Pro version ($9.99/month or $79.99/year) includes:
             </p>
             <ul className="list-disc list-inside space-y-2" style={{ color: "var(--color-text-secondary)" }}>
               <li>Unlimited prompts, vaults, and notes</li>
@@ -144,11 +144,11 @@ export default function TermsPage() {
               4.3 Billing and Cancellation
             </h3>
             <ul className="list-disc list-inside space-y-2" style={{ color: "var(--color-text-secondary)" }}>
-              <li>Pro subscriptions are billed monthly</li>
+              <li>Pro subscriptions are billed monthly or annually</li>
               <li>You can cancel your subscription at any time</li>
               <li>Cancellations take effect at the end of the current billing period</li>
-              <li>No refunds for partial months</li>
-              <li>All fees are in Euros (EUR)</li>
+              <li>No refunds for partial billing periods</li>
+              <li>All fees are in US Dollars (USD)</li>
             </ul>
           </section>
 

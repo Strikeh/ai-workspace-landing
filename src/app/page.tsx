@@ -1468,7 +1468,7 @@ export default function Home() {
                         vault, no encryption.
                       </p>
                       <p>
-                        <strong>Pro (€10/month):</strong> unlimited prompts,
+                        <strong>Pro ($9.99/month or $79.99/year):</strong> unlimited prompts,
                         vaults, and notes, encrypted storage, full Image
                         Gallery, GPT Manager, multi-platform support, and
                         version history.
@@ -1698,9 +1698,9 @@ export default function Home() {
                   For power users and teams who need unlimited everything.
                 </p>
                 <div className="mt-5">
-                  <div className="price-value">EUR 10</div>
+                  <div className="price-value">$9.99</div>
                   <div className="price-meta mt-1">
-                    per month — cancel anytime
+                    per month — or $79.99/year (save 33%)
                   </div>
                 </div>
                 <ul className="pricing-features mt-6 text-sm">

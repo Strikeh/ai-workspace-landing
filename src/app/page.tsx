@@ -1246,8 +1246,9 @@ export default function Home() {
             </div>
           </a>
         </div>
+        {/* Testimonials Section */}
         <section
-          id="demo"
+          id="testimonials"
           className="relative border-t py-24 section section-primary-blue"
           style={{ borderColor: "var(--color-border)" }}
         >
@@ -1272,433 +1273,428 @@ export default function Home() {
             />
           </div>
           <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
-            <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
-              <div className="space-y-6">
-                <p
-                  className="text-sm font-semibold uppercase tracking-[0.3em]"
-                  style={{ color: "var(--color-accent)" }}
-                >
-                  User Reviews
-                </p>
-                <h2
-                  className="text-3xl font-semibold sm:text-4xl"
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <p
+                className="text-sm font-semibold uppercase tracking-[0.3em] mb-4"
+                style={{ color: "var(--color-accent)" }}
+              >
+                User Reviews
+              </p>
+              <h2
+                className="text-3xl font-semibold sm:text-4xl mb-6"
+                style={{
+                  background: "var(--premium-title-gradient)",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Loved by{" "}
+                <span style={{ color: "var(--color-accent)" }}>
+                  4,600+ users
+                </span>
+              </h2>
+              <p
+                className="text-lg leading-relaxed"
+                style={{ color: "var(--color-text-secondary)" }}
+              >
+                Join thousands of professionals who trust AI Workspace to
+                organize their ChatGPT conversations, save prompts, and boost
+                productivity.
+              </p>
+            </div>
+
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="group relative overflow-hidden rounded-3xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
                   style={{
-                    background: "var(--premium-title-gradient)",
-                    WebkitBackgroundClip: "text",
-                    backgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
+                    background:
+                      "linear-gradient(135deg, rgba(6, 182, 212, 0.04), rgba(14, 165, 233, 0.08), rgba(59, 130, 246, 0.04))",
+                    border: "1px solid rgba(6, 182, 212, 0.2)",
                   }}
                 >
-                  Loved by{" "}
-                  <span style={{ color: "var(--color-accent)" }}>
-                    4,600+ users
-                  </span>
-                </h2>
-                <p
-                  className="text-lg leading-relaxed"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  Join thousands of professionals who trust AI Workspace to
-                  organize their ChatGPT conversations, save prompts, and boost
-                  productivity.
-                </p>
+                  {/* Hover gradient overlay */}
+                  <div
+                    className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    style={{
+                      background:
+                        "linear-gradient(135deg, rgba(6, 182, 212, 0.06), rgba(14, 165, 233, 0.12), rgba(59, 130, 246, 0.06))",
+                    }}
+                  />
 
-                <div className="h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
+                  <div className="relative z-10 space-y-4">
+                    {/* Rating stars */}
+                    <div className="flex gap-1">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <svg
+                          key={i}
+                          className="h-5 w-5"
+                          fill="#fbbf24"
+                          viewBox="0 0 20 20"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      ))}
+                    </div>
 
-                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                  {testimonials.map((testimonial, index) => (
-                    <div
-                      key={index}
-                      className="group relative overflow-hidden rounded-3xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, rgba(6, 182, 212, 0.04), rgba(14, 165, 233, 0.08), rgba(59, 130, 246, 0.04))",
-                        border: "1px solid rgba(6, 182, 212, 0.2)",
-                      }}
+                    {/* Quote */}
+                    <p
+                      className="text-base leading-relaxed"
+                      style={{ color: "var(--color-text-secondary)" }}
                     >
-                      {/* Hover gradient overlay */}
+                      &ldquo;{testimonial.quote}&rdquo;
+                    </p>
+
+                    {/* Author info */}
+                    <div
+                      className="flex items-center gap-4 pt-4 border-t"
+                      style={{ borderColor: "rgba(6, 182, 212, 0.15)" }}
+                    >
                       <div
-                        className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        className="flex h-14 w-14 flex-none items-center justify-center rounded-full text-xl font-bold"
                         style={{
                           background:
-                            "linear-gradient(135deg, rgba(6, 182, 212, 0.06), rgba(14, 165, 233, 0.12), rgba(59, 130, 246, 0.06))",
+                            "linear-gradient(135deg, var(--color-accent), #0ea5e9)",
+                          color: "white",
                         }}
-                      />
-
-                      <div className="relative z-10 space-y-4">
-                        {/* Rating stars */}
-                        <div className="flex gap-1">
-                          {[...Array(testimonial.rating)].map((_, i) => (
+                      >
+                        {testimonial.name.charAt(0)}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-1">
+                          <div
+                            className="text-lg font-semibold"
+                            style={{ color: "var(--color-text)" }}
+                          >
+                            {testimonial.name}
+                          </div>
+                          {testimonial.verified && (
                             <svg
-                              key={i}
-                              className="h-5 w-5"
-                              fill="#fbbf24"
+                              className="h-5 w-5 flex-none"
+                              fill="var(--color-accent)"
                               viewBox="0 0 20 20"
                             >
-                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              <path
+                                fillRule="evenodd"
+                                d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clipRule="evenodd"
+                              />
                             </svg>
-                          ))}
+                          )}
                         </div>
-
-                        {/* Quote */}
-                        <p
-                          className="text-base leading-relaxed"
-                          style={{ color: "var(--color-text-secondary)" }}
-                        >
-                          &ldquo;{testimonial.quote}&rdquo;
-                        </p>
-
-                        {/* Author info */}
                         <div
-                          className="flex items-center gap-3 pt-4 border-t"
-                          style={{ borderColor: "rgba(6, 182, 212, 0.15)" }}
+                          className="text-base"
+                          style={{ color: "var(--color-text-muted)" }}
                         >
-                          <div
-                            className="flex h-12 w-12 flex-none items-center justify-center rounded-full text-lg font-bold"
-                            style={{
-                              background:
-                                "linear-gradient(135deg, var(--color-accent), #0ea5e9)",
-                              color: "white",
-                            }}
-                          >
-                            {testimonial.name.charAt(0)}
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <div className="flex items-center gap-2">
-                              <div
-                                className="text-base font-semibold truncate"
-                                style={{ color: "var(--color-text)" }}
-                              >
-                                {testimonial.name}
-                              </div>
-                              {testimonial.verified && (
-                                <svg
-                                  className="h-4 w-4 flex-none"
-                                  fill="var(--color-accent)"
-                                  viewBox="0 0 20 20"
-                                >
-                                  <path
-                                    fillRule="evenodd"
-                                    d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                    clipRule="evenodd"
-                                  />
-                                </svg>
-                              )}
-                            </div>
-                            <div
-                              className="text-sm truncate"
-                              style={{ color: "var(--color-text-muted)" }}
-                            >
-                              {testimonial.role}
-                            </div>
-                          </div>
+                          {testimonial.role}
                         </div>
                       </div>
                     </div>
-                  ))}
-                </div>
-              </div>
-              <div
-                className="flex flex-col justify-between gap-6 rounded-3xl p-8"
-                style={{
-                  border: "1px solid var(--color-card-border)",
-                  background: "var(--color-card-bg)",
-                }}
-              >
-                <div className="space-y-4">
-                  <p
-                    className="text-sm font-semibold uppercase tracking-[0.3em]"
-                    style={{ color: "var(--color-accent)" }}
-                  >
-                    Coming Soon
-                  </p>
-                  <h3
-                    className="text-2xl font-semibold"
-                    style={{ color: "var(--color-text)" }}
-                  >
-                    Future Features on the Roadmap
-                  </h3>
-                  <p
-                    className="text-sm leading-relaxed"
-                    style={{ color: "var(--color-text-secondary)" }}
-                  >
-                    We&apos;re constantly evolving AI Workspace with powerful
-                    new capabilities to enhance your productivity.
-                  </p>
-                </div>
-
-                <div className="space-y-3">
-                  <div
-                    className="flex items-start gap-3 rounded-xl p-3"
-                    style={{
-                      background: "rgba(6, 182, 212, 0.05)",
-                      border: "1px solid rgba(6, 182, 212, 0.15)",
-                    }}
-                  >
-                    <div
-                      className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full"
-                      style={{ background: "var(--color-accent)" }}
-                    >
-                      <SparkIcon className="h-3 w-3 text-white" />
-                    </div>
-                    <div>
-                      <p
-                        className="text-sm font-semibold"
-                        style={{ color: "var(--color-text)" }}
-                      >
-                        Prompt Chaining
-                      </p>
-                      <p
-                        className="text-xs"
-                        style={{ color: "var(--color-text-muted)" }}
-                      >
-                        Link multiple prompts together for complex automated
-                        workflows
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    className="flex items-start gap-3 rounded-xl p-3"
-                    style={{
-                      background: "rgba(6, 182, 212, 0.05)",
-                      border: "1px solid rgba(6, 182, 212, 0.15)",
-                    }}
-                  >
-                    <div
-                      className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full"
-                      style={{ background: "var(--color-accent)" }}
-                    >
-                      <SparkIcon className="h-3 w-3 text-white" />
-                    </div>
-                    <div>
-                      <p
-                        className="text-sm font-semibold"
-                        style={{ color: "var(--color-text)" }}
-                      >
-                        Advanced Analytics Dashboard
-                      </p>
-                      <p
-                        className="text-xs"
-                        style={{ color: "var(--color-text-muted)" }}
-                      >
-                        Deep insights into your AI usage patterns and
-                        productivity metrics
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    className="flex items-start gap-3 rounded-xl p-3"
-                    style={{
-                      background: "rgba(6, 182, 212, 0.05)",
-                      border: "1px solid rgba(6, 182, 212, 0.15)",
-                    }}
-                  >
-                    <div
-                      className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full"
-                      style={{ background: "var(--color-accent)" }}
-                    >
-                      <SparkIcon className="h-3 w-3 text-white" />
-                    </div>
-                    <div>
-                      <p
-                        className="text-sm font-semibold"
-                        style={{ color: "var(--color-text)" }}
-                      >
-                        Extended LLM Support
-                      </p>
-                      <p
-                        className="text-xs"
-                        style={{ color: "var(--color-text-muted)" }}
-                      >
-                        Native integrations for Gemini, Perplexity, Llama, and
-                        more AI platforms
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    className="flex items-start gap-3 rounded-xl p-3"
-                    style={{
-                      background: "rgba(6, 182, 212, 0.05)",
-                      border: "1px solid rgba(6, 182, 212, 0.15)",
-                    }}
-                  >
-                    <div
-                      className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full"
-                      style={{ background: "var(--color-accent)" }}
-                    >
-                      <SparkIcon className="h-3 w-3 text-white" />
-                    </div>
-                    <div>
-                      <p
-                        className="text-sm font-semibold"
-                        style={{ color: "var(--color-text)" }}
-                      >
-                        Multi-Language Support
-                      </p>
-                      <p
-                        className="text-xs"
-                        style={{ color: "var(--color-text-muted)" }}
-                      >
-                        Interface localization for Spanish, French, German,
-                        Japanese, and more
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    className="flex items-start gap-3 rounded-xl p-3"
-                    style={{
-                      background: "rgba(6, 182, 212, 0.05)",
-                      border: "1px solid rgba(6, 182, 212, 0.15)",
-                    }}
-                  >
-                    <div
-                      className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full"
-                      style={{ background: "var(--color-accent)" }}
-                    >
-                      <SparkIcon className="h-3 w-3 text-white" />
-                    </div>
-                    <div>
-                      <p
-                        className="text-sm font-semibold"
-                        style={{ color: "var(--color-text)" }}
-                      >
-                        Workflow Automation
-                      </p>
-                      <p
-                        className="text-xs"
-                        style={{ color: "var(--color-text-muted)" }}
-                      >
-                        Trigger actions based on events: auto-categorize,
-                        smart-archive, scheduled exports
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    className="flex items-start gap-3 rounded-xl p-3"
-                    style={{
-                      background: "rgba(6, 182, 212, 0.05)",
-                      border: "1px solid rgba(6, 182, 212, 0.15)",
-                    }}
-                  >
-                    <div
-                      className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full"
-                      style={{ background: "var(--color-accent)" }}
-                    >
-                      <SparkIcon className="h-3 w-3 text-white" />
-                    </div>
-                    <div>
-                      <p
-                        className="text-sm font-semibold"
-                        style={{ color: "var(--color-text)" }}
-                      >
-                        Team Collaboration Tools
-                      </p>
-                      <p
-                        className="text-xs"
-                        style={{ color: "var(--color-text-muted)" }}
-                      >
-                        Share prompt libraries and vault templates with your
-                        team (privacy-first)
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    className="flex items-start gap-3 rounded-xl p-3"
-                    style={{
-                      background: "rgba(6, 182, 212, 0.05)",
-                      border: "1px solid rgba(6, 182, 212, 0.15)",
-                    }}
-                  >
-                    <div
-                      className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full"
-                      style={{ background: "var(--color-accent)" }}
-                    >
-                      <SparkIcon className="h-3 w-3 text-white" />
-                    </div>
-                    <div>
-                      <p
-                        className="text-sm font-semibold"
-                        style={{ color: "var(--color-text)" }}
-                      >
-                        Voice & Audio Processing
-                      </p>
-                      <p
-                        className="text-xs"
-                        style={{ color: "var(--color-text-muted)" }}
-                      >
-                        Transcribe voice notes, organize audio conversations,
-                        voice-to-prompt
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    className="flex items-start gap-3 rounded-xl p-3"
-                    style={{
-                      background: "rgba(6, 182, 212, 0.05)",
-                      border: "1px solid rgba(6, 182, 212, 0.15)",
-                    }}
-                  >
-                    <div
-                      className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full"
-                      style={{ background: "var(--color-accent)" }}
-                    >
-                      <SparkIcon className="h-3 w-3 text-white" />
-                    </div>
-                    <div>
-                      <p
-                        className="text-sm font-semibold"
-                        style={{ color: "var(--color-text)" }}
-                      >
-                        Custom API Integrations
-                      </p>
-                      <p
-                        className="text-xs"
-                        style={{ color: "var(--color-text-muted)" }}
-                      >
-                        Connect your own AI models and third-party tools via
-                        REST API
-                      </p>
-                    </div>
                   </div>
                 </div>
-
-                <div
-                  className="rounded-2xl p-4 text-xs"
-                  style={{
-                    border: "1px solid rgba(6, 182, 212, 0.2)",
-                    background: "rgba(6, 182, 212, 0.05)",
-                    color: "var(--color-text-secondary)",
-                  }}
-                >
-                  <div className="flex items-center gap-2 mb-2">
-                    <div
-                      className="h-1.5 w-1.5 rounded-full animate-pulse"
-                      style={{ background: "var(--color-accent)" }}
-                    />
-                    <span
-                      className="font-semibold"
-                      style={{ color: "var(--color-text)" }}
-                    >
-                      Active Development
-                    </span>
-                  </div>
-                  <div>
-                    These features are in various stages of development. Want to
-                    influence the roadmap? Join our community or reach out with
-                    feedback!
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
+
+        {/* Coming Soon Section */}
+        <section
+          id="roadmap"
+          className="relative border-t py-24 section section-primary-blue"
+          style={{ borderColor: "var(--color-border)" }}
+        >
+          <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <p
+                className="text-sm font-semibold uppercase tracking-[0.3em] mb-4"
+                style={{ color: "var(--color-accent)" }}
+              >
+                Coming Soon
+              </p>
+              <h2
+                className="text-3xl font-semibold sm:text-4xl mb-6"
+                style={{
+                  background: "var(--premium-title-gradient)",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Future Features on the Roadmap
+              </h2>
+              <p
+                className="text-lg leading-relaxed"
+                style={{ color: "var(--color-text-secondary)" }}
+              >
+                We&apos;re constantly evolving AI Workspace with powerful new
+                capabilities to enhance your productivity.
+              </p>
+            </div>
+
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-8">
+              <div
+                className="flex items-start gap-4 rounded-2xl p-6"
+                style={{
+                  background: "rgba(6, 182, 212, 0.05)",
+                  border: "1px solid rgba(6, 182, 212, 0.2)",
+                }}
+              >
+                <div
+                  className="flex h-12 w-12 flex-none items-center justify-center rounded-xl"
+                  style={{ background: "var(--color-accent)" }}
+                >
+                  <SparkIcon className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <p
+                    className="text-base font-semibold mb-2"
+                    style={{ color: "var(--color-text)" }}
+                  >
+                    Prompt Chaining
+                  </p>
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: "var(--color-text-muted)" }}
+                  >
+                    Link multiple prompts together for complex automated workflows
+                  </p>
+                </div>
+              </div>
+
+              <div
+                className="flex items-start gap-4 rounded-2xl p-6"
+                style={{
+                  background: "rgba(6, 182, 212, 0.05)",
+                  border: "1px solid rgba(6, 182, 212, 0.2)",
+                }}
+              >
+                <div
+                  className="flex h-12 w-12 flex-none items-center justify-center rounded-xl"
+                  style={{ background: "var(--color-accent)" }}
+                >
+                  <SparkIcon className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <p
+                    className="text-base font-semibold mb-2"
+                    style={{ color: "var(--color-text)" }}
+                  >
+                    Advanced Analytics Dashboard
+                  </p>
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: "var(--color-text-muted)" }}
+                  >
+                    Deep insights into your AI usage patterns and productivity metrics
+                  </p>
+                </div>
+              </div>
+
+              <div
+                className="flex items-start gap-4 rounded-2xl p-6"
+                style={{
+                  background: "rgba(6, 182, 212, 0.05)",
+                  border: "1px solid rgba(6, 182, 212, 0.2)",
+                }}
+              >
+                <div
+                  className="flex h-12 w-12 flex-none items-center justify-center rounded-xl"
+                  style={{ background: "var(--color-accent)" }}
+                >
+                  <SparkIcon className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <p
+                    className="text-base font-semibold mb-2"
+                    style={{ color: "var(--color-text)" }}
+                  >
+                    Extended LLM Support
+                  </p>
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: "var(--color-text-muted)" }}
+                  >
+                    Native integrations for Gemini, Perplexity, Llama, and more AI platforms
+                  </p>
+                </div>
+              </div>
+
+              <div
+                className="flex items-start gap-4 rounded-2xl p-6"
+                style={{
+                  background: "rgba(6, 182, 212, 0.05)",
+                  border: "1px solid rgba(6, 182, 212, 0.2)",
+                }}
+              >
+                <div
+                  className="flex h-12 w-12 flex-none items-center justify-center rounded-xl"
+                  style={{ background: "var(--color-accent)" }}
+                >
+                  <SparkIcon className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <p
+                    className="text-base font-semibold mb-2"
+                    style={{ color: "var(--color-text)" }}
+                  >
+                    Multi-Language Support
+                  </p>
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: "var(--color-text-muted)" }}
+                  >
+                    Interface localization for Spanish, French, German, Japanese, and more
+                  </p>
+                </div>
+              </div>
+
+              <div
+                className="flex items-start gap-4 rounded-2xl p-6"
+                style={{
+                  background: "rgba(6, 182, 212, 0.05)",
+                  border: "1px solid rgba(6, 182, 212, 0.2)",
+                }}
+              >
+                <div
+                  className="flex h-12 w-12 flex-none items-center justify-center rounded-xl"
+                  style={{ background: "var(--color-accent)" }}
+                >
+                  <SparkIcon className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <p
+                    className="text-base font-semibold mb-2"
+                    style={{ color: "var(--color-text)" }}
+                  >
+                    Workflow Automation
+                  </p>
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: "var(--color-text-muted)" }}
+                  >
+                    Trigger actions based on events: auto-categorize, smart-archive, scheduled exports
+                  </p>
+                </div>
+              </div>
+
+              <div
+                className="flex items-start gap-4 rounded-2xl p-6"
+                style={{
+                  background: "rgba(6, 182, 212, 0.05)",
+                  border: "1px solid rgba(6, 182, 212, 0.2)",
+                }}
+              >
+                <div
+                  className="flex h-12 w-12 flex-none items-center justify-center rounded-xl"
+                  style={{ background: "var(--color-accent)" }}
+                >
+                  <SparkIcon className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <p
+                    className="text-base font-semibold mb-2"
+                    style={{ color: "var(--color-text)" }}
+                  >
+                    Team Collaboration Tools
+                  </p>
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: "var(--color-text-muted)" }}
+                  >
+                    Share prompt libraries and vault templates with your team (privacy-first)
+                  </p>
+                </div>
+              </div>
+
+              <div
+                className="flex items-start gap-4 rounded-2xl p-6"
+                style={{
+                  background: "rgba(6, 182, 212, 0.05)",
+                  border: "1px solid rgba(6, 182, 212, 0.2)",
+                }}
+              >
+                <div
+                  className="flex h-12 w-12 flex-none items-center justify-center rounded-xl"
+                  style={{ background: "var(--color-accent)" }}
+                >
+                  <SparkIcon className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <p
+                    className="text-base font-semibold mb-2"
+                    style={{ color: "var(--color-text)" }}
+                  >
+                    Voice & Audio Processing
+                  </p>
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: "var(--color-text-muted)" }}
+                  >
+                    Transcribe voice notes, organize audio conversations, voice-to-prompt
+                  </p>
+                </div>
+              </div>
+
+              <div
+                className="flex items-start gap-4 rounded-2xl p-6"
+                style={{
+                  background: "rgba(6, 182, 212, 0.05)",
+                  border: "1px solid rgba(6, 182, 212, 0.2)",
+                }}
+              >
+                <div
+                  className="flex h-12 w-12 flex-none items-center justify-center rounded-xl"
+                  style={{ background: "var(--color-accent)" }}
+                >
+                  <SparkIcon className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <p
+                    className="text-base font-semibold mb-2"
+                    style={{ color: "var(--color-text)" }}
+                  >
+                    Custom API Integrations
+                  </p>
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: "var(--color-text-muted)" }}
+                  >
+                    Connect your own AI models and third-party tools via REST API
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="rounded-2xl p-6 text-sm max-w-4xl mx-auto"
+              style={{
+                border: "1px solid rgba(6, 182, 212, 0.2)",
+                background: "rgba(6, 182, 212, 0.05)",
+                color: "var(--color-text-secondary)",
+              }}
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <div
+                  className="h-2 w-2 rounded-full animate-pulse"
+                  style={{ background: "var(--color-accent)" }}
+                />
+                <span
+                  className="font-semibold text-base"
+                  style={{ color: "var(--color-text)" }}
+                >
+                  Active Development
+                </span>
+              </div>
+              <p className="leading-relaxed">
+                These features are in various stages of development. Want to influence the roadmap? Join our community or reach out with feedback!
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section - Middle */}
 
         {/* CTA Section - Middle */}
         <section className="py-20 section section-primary-blue">

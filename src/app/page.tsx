@@ -606,86 +606,38 @@ export default function Home() {
           style={{ borderColor: "var(--color-border)" }}
         >
           <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
-            {/* Pain Points */}
-            <div className="max-w-3xl mx-auto text-center mb-16">
+            <div className="max-w-3xl space-y-5 mb-16">
               <p
-                className="text-sm font-semibold uppercase tracking-[0.3em] mb-4"
+                className="text-sm font-semibold uppercase tracking-[0.3em]"
                 style={{ color: "var(--color-accent)" }}
               >
-                Sound familiar?
+                Platform Features
               </p>
-              <div className="grid md:grid-cols-2 gap-4 text-left">
-                <div
-                  className="flex items-start gap-3 p-4 rounded-lg"
-                  style={{
-                    background: "rgba(239, 68, 68, 0.05)",
-                    border: "1px solid rgba(239, 68, 68, 0.2)",
-                  }}
-                >
-                  <span style={{ color: "#ef4444" }}>❌</span>
-                  <span style={{ color: "var(--color-text-secondary)" }}>
-                    &ldquo;Where was that perfect prompt again?&rdquo;
-                  </span>
-                </div>
-                <div
-                  className="flex items-start gap-3 p-4 rounded-lg"
-                  style={{
-                    background: "rgba(239, 68, 68, 0.05)",
-                    border: "1px solid rgba(239, 68, 68, 0.2)",
-                  }}
-                >
-                  <span style={{ color: "#ef4444" }}>❌</span>
-                  <span style={{ color: "var(--color-text-secondary)" }}>
-                    &ldquo;I&rsquo;ve explained this to ChatGPT 10 times
-                    already...&rdquo;
-                  </span>
-                </div>
-                <div
-                  className="flex items-start gap-3 p-4 rounded-lg"
-                  style={{
-                    background: "rgba(239, 68, 68, 0.05)",
-                    border: "1px solid rgba(239, 68, 68, 0.2)",
-                  }}
-                >
-                  <span style={{ color: "#ef4444" }}>❌</span>
-                  <span style={{ color: "var(--color-text-secondary)" }}>
-                    &ldquo;My chat history is a complete mess&rdquo;
-                  </span>
-                </div>
-                <div
-                  className="flex items-start gap-3 p-4 rounded-lg"
-                  style={{
-                    background: "rgba(239, 68, 68, 0.05)",
-                    border: "1px solid rgba(239, 68, 68, 0.2)",
-                  }}
-                >
-                  <span style={{ color: "#ef4444" }}>❌</span>
-                  <span style={{ color: "var(--color-text-secondary)" }}>
-                    &ldquo;I can&rsquo;t find what I did last week&rdquo;
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Solution */}
-            <div className="max-w-3xl mx-auto text-center mb-16">
               <h2
-                className="text-3xl font-semibold tracking-tight sm:text-4xl mb-6"
-                style={{
-                  background: "var(--premium-title-gradient)",
-                  backgroundClip: "text",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
+                className="text-3xl font-semibold tracking-tight sm:text-4xl"
+                style={{ color: "var(--color-text)" }}
               >
-                Why AI Workspace?
+                Everything you need to{" "}
+                <span
+                  style={{
+                    background: "var(--premium-title-gradient)",
+                    backgroundClip: "text",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  master AI workflows
+                </span>
               </h2>
               <p
-                className="text-xl leading-relaxed"
+                className="text-lg leading-relaxed"
                 style={{ color: "var(--color-text-secondary)" }}
               >
-                Stop wasting time searching and retyping. Start working smarter
-                with organized AI workflows.
+                From prompt management to conversation organization,{" "}
+                <span style={{ color: "var(--color-text)", fontWeight: 500 }}>
+                  AI Workspace provides powerful tools
+                </span>{" "}
+                to enhance your productivity with ChatGPT, Claude, and more.
               </p>
             </div>
 
@@ -693,290 +645,283 @@ export default function Home() {
 
             <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {/* Save Time & Boost Productivity */}
-              <div
-                className="feature-card group relative overflow-hidden rounded-3xl p-8 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-                style={{
-                  background:
-                    "linear-gradient(120deg, rgba(6, 182, 212, 0.03), rgba(14, 165, 233, 0.06))",
-                  border: "1px solid rgba(6, 182, 212, 0.12)",
-                }}
-              >
-                <div
-                  className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(6, 182, 212, 0.05), rgba(14, 165, 233, 0.1), rgba(59, 130, 246, 0.05))",
-                  }}
-                />
-                <div className="relative z-10">
-                  <div className="mb-5">
-                    <span className="text-4xl">⚡</span>
-                  </div>
-                  <h3
-                    className="mb-4 text-xl font-semibold"
-                    style={{ color: "var(--color-text)" }}
-                  >
+              <div className="feature-card flex h-full flex-col gap-6 p-8 transition-all">
+                <div className="flex items-center gap-3">
+                  <span className="feature-icon">
+                    <SparkIcon className="h-5 w-5" />
+                  </span>
+                  <h3 className="feature-title text-xl font-semibold">
                     Save Time & Boost Productivity
                   </h3>
-                  <ul
-                    className="space-y-3 text-sm"
-                    style={{ color: "var(--color-text-secondary)" }}
-                  >
-                    <li className="flex items-start gap-2">
-                      <span>⚡</span>
-                      <span>
-                        Never retype prompts again &mdash; save and reuse
-                        instantly
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span>🔍</span>
-                      <span>
-                        Find previous conversations in seconds with powerful
-                        search
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span>📁</span>
-                      <span>
-                        Organize hundreds of chats with custom folders and tags
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span>⏱️</span>
-                      <span>Spend less time searching, more time creating</span>
-                    </li>
-                  </ul>
                 </div>
+                <ul
+                  className="feature-bullets space-y-2 text-sm"
+                  style={{ color: "var(--color-text-secondary)" }}
+                >
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>
+                      Never retype prompts again &mdash; save and reuse
+                      instantly
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>
+                      Find previous conversations in seconds with powerful
+                      search
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>
+                      Organize hundreds of chats with custom folders and tags
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>Spend less time searching, more time creating</span>
+                  </li>
+                </ul>
               </div>
 
               {/* Better AI Results */}
-              <div
-                className="feature-card group relative overflow-hidden rounded-3xl p-8 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-                style={{
-                  background:
-                    "linear-gradient(120deg, rgba(6, 182, 212, 0.03), rgba(14, 165, 233, 0.06))",
-                  border: "1px solid rgba(6, 182, 212, 0.12)",
-                }}
-              >
-                <div
-                  className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(6, 182, 212, 0.05), rgba(14, 165, 233, 0.1), rgba(59, 130, 246, 0.05))",
-                  }}
-                />
-                <div className="relative z-10">
-                  <div className="mb-5">
-                    <span className="text-4xl">🎯</span>
-                  </div>
-                  <h3
-                    className="mb-4 text-xl font-semibold"
-                    style={{ color: "var(--color-text)" }}
-                  >
+              <div className="feature-card flex h-full flex-col gap-6 p-8 transition-all">
+                <div className="flex items-center gap-3">
+                  <span className="feature-icon">
+                    <SparklesIcon className="h-5 w-5" />
+                  </span>
+                  <h3 className="feature-title text-xl font-semibold">
                     Better AI Results
                   </h3>
-                  <ul
-                    className="space-y-3 text-sm"
-                    style={{ color: "var(--color-text-secondary)" }}
-                  >
-                    <li className="flex items-start gap-2">
-                      <span>💡</span>
-                      <span>
-                        Build a library of your best-performing prompts
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span>🔄</span>
-                      <span>
-                        Refine and iterate &mdash; save what works, improve what
-                        doesn&rsquo;t
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span>📊</span>
-                      <span>
-                        Track which prompts deliver the results you need
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span>✨</span>
-                      <span>
-                        Consistent quality across all your AI interactions
-                      </span>
-                    </li>
-                  </ul>
                 </div>
+                <ul
+                  className="feature-bullets space-y-2 text-sm"
+                  style={{ color: "var(--color-text-secondary)" }}
+                >
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>
+                      Build a library of your best-performing prompts
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>
+                      Refine and iterate &mdash; save what works, improve what
+                      doesn&rsquo;t
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>Track which prompts deliver the results you need</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>
+                      Consistent quality across all your AI interactions
+                    </span>
+                  </li>
+                </ul>
               </div>
 
               {/* Never Lose Work Again */}
-              <div
-                className="feature-card group relative overflow-hidden rounded-3xl p-8 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-                style={{
-                  background:
-                    "linear-gradient(120deg, rgba(6, 182, 212, 0.03), rgba(14, 165, 233, 0.06))",
-                  border: "1px solid rgba(6, 182, 212, 0.12)",
-                }}
-              >
-                <div
-                  className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(6, 182, 212, 0.05), rgba(14, 165, 233, 0.1), rgba(59, 130, 246, 0.05))",
-                  }}
-                />
-                <div className="relative z-10">
-                  <div className="mb-5">
-                    <span className="text-4xl">🛡️</span>
-                  </div>
-                  <h3
-                    className="mb-4 text-xl font-semibold"
-                    style={{ color: "var(--color-text)" }}
-                  >
+              <div className="feature-card flex h-full flex-col gap-6 p-8 transition-all">
+                <div className="flex items-center gap-3">
+                  <span className="feature-icon">
+                    <ShieldIcon className="h-5 w-5" />
+                  </span>
+                  <h3 className="feature-title text-xl font-semibold">
                     Never Lose Work Again
                   </h3>
-                  <ul
-                    className="space-y-3 text-sm"
-                    style={{ color: "var(--color-text-secondary)" }}
-                  >
-                    <li className="flex items-start gap-2">
-                      <span>💾</span>
-                      <span>
-                        Automatic backup of all your conversations and prompts
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span>🔐</span>
-                      <span>
-                        Everything stored locally &mdash; you own your data
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span>📥</span>
-                      <span>Export anytime in multiple formats</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span>🔄</span>
-                      <span>Sync across devices without cloud storage</span>
-                    </li>
-                  </ul>
                 </div>
+                <ul
+                  className="feature-bullets space-y-2 text-sm"
+                  style={{ color: "var(--color-text-secondary)" }}
+                >
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>
+                      Automatic backup of all your conversations and prompts
+                      <span
+                        className="ml-2 rounded-full px-2 py-0.5 text-xs font-semibold"
+                        style={{
+                          background: "rgba(251, 191, 36, 0.1)",
+                          color: "#fbbf24",
+                          border: "1px solid rgba(251, 191, 36, 0.2)",
+                        }}
+                      >
+                        WIP
+                      </span>
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>
+                      Everything stored locally &mdash; you own your data
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>Export anytime in multiple formats</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>
+                      Sync across devices without cloud storage
+                      <span
+                        className="ml-2 rounded-full px-2 py-0.5 text-xs font-semibold"
+                        style={{
+                          background: "rgba(251, 191, 36, 0.1)",
+                          color: "#fbbf24",
+                          border: "1px solid rgba(251, 191, 36, 0.2)",
+                        }}
+                      >
+                        WIP
+                      </span>
+                    </span>
+                  </li>
+                </ul>
               </div>
 
               {/* Work More Efficiently */}
-              <div
-                className="feature-card group relative overflow-hidden rounded-3xl p-8 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-                style={{
-                  background:
-                    "linear-gradient(120deg, rgba(6, 182, 212, 0.03), rgba(14, 165, 233, 0.06))",
-                  border: "1px solid rgba(6, 182, 212, 0.12)",
-                }}
-              >
-                <div
-                  className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(6, 182, 212, 0.05), rgba(14, 165, 233, 0.1), rgba(59, 130, 246, 0.05))",
-                  }}
-                />
-                <div className="relative z-10">
-                  <div className="mb-5">
-                    <span className="text-4xl">🚀</span>
-                  </div>
-                  <h3
-                    className="mb-4 text-xl font-semibold"
-                    style={{ color: "var(--color-text)" }}
-                  >
+              <div className="feature-card flex h-full flex-col gap-6 p-8 transition-all">
+                <div className="flex items-center gap-3">
+                  <span className="feature-icon">
+                    <LayersIcon className="h-5 w-5" />
+                  </span>
+                  <h3 className="feature-title text-xl font-semibold">
                     Work More Efficiently
                   </h3>
-                  <ul
-                    className="space-y-3 text-sm"
-                    style={{ color: "var(--color-text-secondary)" }}
-                  >
-                    <li className="flex items-start gap-2">
-                      <span>⌨️</span>
-                      <span>One-click access to your favorite prompts</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span>📋</span>
-                      <span>
-                        Templates for repetitive tasks &mdash; stop starting
-                        from scratch
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span>🎨</span>
-                      <span>
-                        Customize your workspace to match your workflow
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span>⚙️</span>
-                      <span>
-                        Keyboard shortcuts for everything you do regularly
-                      </span>
-                    </li>
-                  </ul>
                 </div>
+                <ul
+                  className="feature-bullets space-y-2 text-sm"
+                  style={{ color: "var(--color-text-secondary)" }}
+                >
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>One-click access to your favorite prompts</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>
+                      Templates for repetitive tasks &mdash; stop starting from
+                      scratch
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>
+                      Customize your workspace to match your workflow
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>
+                      Keyboard shortcuts for everything you do regularly
+                    </span>
+                  </li>
+                </ul>
               </div>
 
               {/* For Power Users */}
-              <div
-                className="feature-card group relative overflow-hidden rounded-3xl p-8 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-                style={{
-                  background:
-                    "linear-gradient(120deg, rgba(6, 182, 212, 0.03), rgba(14, 165, 233, 0.06))",
-                  border: "1px solid rgba(6, 182, 212, 0.12)",
-                }}
-              >
-                <div
-                  className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(6, 182, 212, 0.05), rgba(14, 165, 233, 0.1), rgba(59, 130, 246, 0.05))",
-                  }}
-                />
-                <div className="relative z-10">
-                  <div className="mb-5">
-                    <span className="text-4xl">⚡</span>
-                  </div>
-                  <h3
-                    className="mb-4 text-xl font-semibold"
-                    style={{ color: "var(--color-text)" }}
-                  >
+              <div className="feature-card flex h-full flex-col gap-6 p-8 transition-all">
+                <div className="flex items-center gap-3">
+                  <span className="feature-icon">
+                    <SparkIcon className="h-5 w-5" />
+                  </span>
+                  <h3 className="feature-title text-xl font-semibold">
                     For Power Users
                   </h3>
-                  <ul
-                    className="space-y-3 text-sm"
-                    style={{ color: "var(--color-text-secondary)" }}
-                  >
-                    <li className="flex items-start gap-2">
-                      <span>🔗</span>
-                      <span>
-                        Works with ChatGPT, Claude (work in progress for Gemini,
-                        and more)
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span>📊</span>
-                      <span>
-                        Advanced filtering and sorting for massive chat
-                        libraries
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span>🏷️</span>
-                      <span>
-                        Nested folders, tags, favorites &mdash; organize your
-                        way
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span>🌐</span>
-                      <span>Available on Chrome, Edge, and Firefox</span>
-                    </li>
-                  </ul>
                 </div>
+                <ul
+                  className="feature-bullets space-y-2 text-sm"
+                  style={{ color: "var(--color-text-secondary)" }}
+                >
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>
+                      Works with ChatGPT, Claude (work in progress for Gemini,
+                      and more)
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>
+                      Advanced filtering and sorting for massive chat libraries
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>
+                      Nested folders, tags, favorites &mdash; organize your way
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    <span>Available on Chrome, Edge, and Firefox</span>
+                  </li>
+                </ul>
               </div>
             </div>
 

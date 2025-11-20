@@ -2,49 +2,68 @@
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://getaiworkspace.com";
+  const currentDate = new Date();
 
   return [
     {
       url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/privacy`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/terms`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
+      lastModified: currentDate,
+      changeFrequency: "daily",
+      priority: 1.0,
     },
     {
       url: `${baseUrl}/#features`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#showcase`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#pricing`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
+      lastModified: currentDate,
+      changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/#faq`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
+      url: `${baseUrl}/#showcase`,
+      lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/#pricing`,
+      lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/#testimonials`,
+      lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/#roadmap`,
+      lastModified: currentDate,
+      changeFrequency: "weekly",
       priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/#faq`,
+      lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/#contact`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.65,
+    },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/terms`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.5,
     },
   ];
 }

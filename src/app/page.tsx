@@ -261,7 +261,7 @@ export default function Home() {
                     lineHeight: "1.2",
                   }}
                 >
-                  The missing{" "}
+                  Supercharge Your{" "}
                   <span
                     style={{
                       background: "var(--premium-title-gradient)",
@@ -270,9 +270,9 @@ export default function Home() {
                       WebkitTextFillColor: "transparent",
                     }}
                   >
-                    productivity layer
+                    ChatGPT Productivity
                   </span>{" "}
-                  for ChatGPT —{" "}
+                  with Powerful{" "}
                   <span
                     style={{
                       background: "var(--premium-title-gradient)",
@@ -281,38 +281,28 @@ export default function Home() {
                       WebkitTextFillColor: "transparent",
                     }}
                   >
-                    folders, search, export
+                    Organization Tools
                   </span>
-                  , and{" "}
-                  <span
-                    style={{
-                      background: "var(--premium-title-gradient)",
-                      backgroundClip: "text",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                    }}
-                  >
-                    privacy-first
-                  </span>{" "}
-                  features.
                 </h1>
                 <p
                   className="hero-subtitle text-lg leading-relaxed sm:text-xl"
                   style={{ color: "var(--color-text-secondary)" }}
                 >
-                  AI Workspace unifies{" "}
+                  Take complete control of your ChatGPT workflow. Organize conversations into folders, 
+                  save and reuse prompts instantly, search across all your chats, and export everything — 
+                  all with{" "}
                   <span
                     style={{ color: "var(--color-accent)", fontWeight: 600 }}
                   >
-                    prompts, conversations, images, notes
+                    local-first privacy
                   </span>
-                  , and GPT discovery in one{" "}
+                  . The browser extension that makes ChatGPT work the way{" "}
                   <span
                     style={{ color: "var(--color-accent)", fontWeight: 600 }}
                   >
-                    encrypted hub
-                  </span>
-                  . Reclaim cross-platform freedom without sacrificing control.
+                    you
+                  </span>{" "}
+                  do.
                 </p>
                 <div className="space-y-8">
                   <div className="flex flex-wrap items-center gap-4 relative">
@@ -1468,10 +1458,10 @@ export default function Home() {
                         vault, no encryption.
                       </p>
                       <p>
-                        <strong>Pro ($9.99/month or $79.99/year):</strong> unlimited prompts,
-                        vaults, and notes, encrypted storage, full Image
-                        Gallery, GPT Manager, multi-platform support, and
-                        version history.
+                        <strong>Pro ($9.99/month or $79.99/year):</strong>{" "}
+                        unlimited prompts, vaults, and notes, encrypted storage,
+                        full Image Gallery, GPT Manager, multi-platform support,
+                        and version history.
                       </p>
                     </div>
                   </div>
@@ -1606,7 +1596,7 @@ export default function Home() {
                   Best for individuals exploring local-first AI workflows.
                 </p>
                 <div className="mt-5">
-                  <div className="price-value">EUR 0</div>
+                  <div className="price-value">$0</div>
                   <div className="price-meta mt-1">per month</div>
                 </div>
                 <ul className="pricing-features mt-6 text-sm">
@@ -1661,14 +1651,16 @@ export default function Home() {
                   </li>
                 </ul>
                 <a
-                  href="#get-started"
-                  className="mt-8 inline-flex w-full items-center justify-center rounded-full border px-6 py-3 text-sm font-semibold transition"
+                  href="https://microsoftedge.microsoft.com/addons/detail/aiworkspace-pro/kbdckiagphjeldfdfeobdhcajkpidong"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 inline-flex w-full items-center justify-center rounded-full border px-6 py-3 text-sm font-semibold transition hover:scale-105"
                   style={{
                     borderColor: "var(--color-card-border)",
                     color: "var(--color-text)",
                   }}
                 >
-                  Create free workspace
+                  Try now for free
                 </a>
               </div>
 

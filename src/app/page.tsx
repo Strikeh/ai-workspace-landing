@@ -2,7 +2,6 @@
 import type { ReactNode, SVGProps } from "react";
 import LogoCarousel from "@/components/LogoCarousel";
 import DemoModal from "@/components/DemoModal";
-import DemoHubButton from "@/components/DemoHubButton";
 
 const browserInstallButtons = [
   {
@@ -305,34 +304,40 @@ export default function Home() {
                   do.
                 </p>
                 <div className="space-y-8">
+                  {/* Primary CTA */}
                   <div className="flex flex-wrap items-center gap-4 relative">
-                    {/* ambient glow behind CTAs */}
                     <div className="ambient-glow" aria-hidden />
-                    <DemoHubButton />
+                    <a
+                      href="https://microsoftedge.microsoft.com/addons/detail/aiworkspace-pro/kbdckiagphjeldfdfeobdhcajkpidong"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-lg px-8 py-4 text-lg font-bold transition-all hover:scale-105 shadow-xl"
+                      style={{
+                        background: "var(--color-accent)",
+                        color: "#ffffff",
+                      }}
+                    >
+                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+                      </svg>
+                      Install AI Workspace Free
+                    </a>
+                    <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
+                      For Chrome, Edge & Firefox
+                    </p>
                   </div>
 
-                  {/* Gradient separator above install row */}
-                  <div className="hr-gradient" aria-hidden />
-
-                  {/* Browser Installation Buttons */}
-                  <div className="space-y-4">
-                    <p
-                      className="text-sm font-medium"
-                      style={{ color: "var(--color-text-secondary)" }}
-                    >
-                      Install AI Workspace extension:
-                    </p>
+                  {/* Browser Installation Buttons - Secondary */}
+                  <div className="space-y-3">
                     <div className="install-buttons flex flex-wrap items-center gap-3">
                       {browserInstallButtons.map((browser) => (
                         <a
                           key={browser.name}
                           href={browser.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           aria-label={`Add AI Workspace to ${browser.name}`}
-                          className={`browser-install-btn ${
-                            browser.primary
-                              ? "browser-install-btn--primary"
-                              : ""
-                          }`}
+                          className="browser-install-btn"
                         >
                           <Image
                             src={browser.icon}
@@ -1361,6 +1366,45 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* CTA Section - Middle */}
+        <section className="py-20 section section-primary-blue">
+          <div className="mx-auto max-w-4xl px-6 text-center">
+            <h2
+              className="text-3xl font-bold mb-4"
+              style={{
+                background: "var(--premium-title-gradient)",
+                WebkitBackgroundClip: "text",
+                backgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Ready to boost your ChatGPT productivity?
+            </h2>
+            <p className="text-lg mb-8" style={{ color: "var(--color-text-secondary)" }}>
+              Join thousands of users organizing their AI workflows with AI Workspace.
+            </p>
+            <a
+              href="https://microsoftedge.microsoft.com/addons/detail/aiworkspace-pro/kbdckiagphjeldfdfeobdhcajkpidong"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg px-8 py-4 text-lg font-bold transition-all hover:scale-105 shadow-xl"
+              style={{
+                background: "var(--color-accent)",
+                color: "#ffffff",
+              }}
+            >
+              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+              </svg>
+              Install AI Workspace Free
+            </a>
+            <p className="mt-4 text-sm" style={{ color: "var(--color-text-muted)" }}>
+              Free forever • No credit card required • Install in seconds
+            </p>
+          </div>
+        </section>
+
         <section
           id="faq"
           className="border-t py-24 section section-primary-teal"
@@ -1806,6 +1850,63 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Final CTA Section - Before Footer */}
+        <section className="border-t py-24 section section-primary-teal" style={{ borderColor: "var(--color-border)" }}>
+          <div className="mx-auto max-w-4xl px-6 text-center">
+            <h2
+              className="text-4xl font-bold mb-4"
+              style={{
+                background: "var(--premium-title-gradient)",
+                WebkitBackgroundClip: "text",
+                backgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Start organizing your ChatGPT workflow today
+            </h2>
+            <p className="text-xl mb-10" style={{ color: "var(--color-text-secondary)" }}>
+              Free forever. No credit card required. Install in seconds.
+            </p>
+            <a
+              href="https://microsoftedge.microsoft.com/addons/detail/aiworkspace-pro/kbdckiagphjeldfdfeobdhcajkpidong"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg px-8 py-4 text-lg font-bold transition-all hover:scale-105 shadow-xl"
+              style={{
+                background: "var(--color-accent)",
+                color: "#ffffff",
+              }}
+            >
+              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+              </svg>
+              Install AI Workspace Free
+            </a>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              {browserInstallButtons.map((browser) => (
+                <a
+                  key={browser.name}
+                  href={browser.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm opacity-70 hover:opacity-100 transition-opacity"
+                  style={{ color: "var(--color-text-secondary)" }}
+                >
+                  <Image
+                    src={browser.icon}
+                    alt={`${browser.name} icon`}
+                    width={16}
+                    height={16}
+                    className="h-4 w-4"
+                  />
+                  {browser.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <footer
           id="footer"
           className="border-t py-20 section section-primary-blue"

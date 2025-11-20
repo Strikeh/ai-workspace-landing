@@ -2253,6 +2253,155 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Contact Section */}
+        <section id="contact" className="relative py-24">
+          <div className="mx-auto max-w-4xl px-6 lg:px-12">
+            <div
+              className="relative overflow-hidden rounded-3xl p-12 text-center"
+              style={{
+                border: "1px solid var(--color-card-border)",
+                background: "linear-gradient(135deg, rgba(6, 182, 212, 0.08), rgba(14, 165, 233, 0.12), rgba(59, 130, 246, 0.08))",
+              }}
+            >
+              {/* Background decoration */}
+              <div
+                className="absolute inset-0 opacity-30"
+                style={{
+                  background: "radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 70%)",
+                }}
+              />
+
+              <div className="relative z-10 space-y-6">
+                <div className="inline-flex items-center justify-center">
+                  <div
+                    className="flex h-16 w-16 items-center justify-center rounded-2xl shadow-lg"
+                    style={{
+                      background: "linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%)",
+                    }}
+                  >
+                    <svg
+                      className="h-8 w-8 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <div>
+                  <h2
+                    className="text-3xl font-bold sm:text-4xl"
+                    style={{ color: "var(--color-text)" }}
+                  >
+                    Questions or Suggestions?
+                  </h2>
+                  <p
+                    className="mt-4 text-lg"
+                    style={{ color: "var(--color-text-secondary)" }}
+                  >
+                    We&apos;d love to hear from you! Share your feedback, report issues, or suggest new features.
+                  </p>
+                </div>
+
+                <div className="flex flex-col items-center gap-4">
+                  <a
+                    href="mailto:ai.workspace.extension@gmail.com"
+                    className="group inline-flex items-center gap-3 rounded-2xl px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl"
+                    style={{
+                      background: "linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%)",
+                    }}
+                  >
+                    <svg
+                      className="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                    Contact Us
+                    <svg
+                      className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                  
+                  <p
+                    className="text-sm"
+                    style={{ color: "var(--color-text-muted)" }}
+                  >
+                    ai.workspace.extension@gmail.com
+                  </p>
+                </div>
+
+                <div className="mt-8 grid gap-4 sm:grid-cols-3">
+                  <div
+                    className="rounded-xl p-4"
+                    style={{
+                      background: "rgba(6, 182, 212, 0.05)",
+                      border: "1px solid rgba(6, 182, 212, 0.15)",
+                    }}
+                  >
+                    <div className="flex items-center justify-center gap-2 text-sm font-semibold" style={{ color: "var(--color-text)" }}>
+                      <svg className="h-5 w-5" style={{ color: "var(--color-accent)" }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                      </svg>
+                      Feature Requests
+                    </div>
+                  </div>
+                  
+                  <div
+                    className="rounded-xl p-4"
+                    style={{
+                      background: "rgba(6, 182, 212, 0.05)",
+                      border: "1px solid rgba(6, 182, 212, 0.15)",
+                    }}
+                  >
+                    <div className="flex items-center justify-center gap-2 text-sm font-semibold" style={{ color: "var(--color-text)" }}>
+                      <svg className="h-5 w-5" style={{ color: "var(--color-accent)" }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                      </svg>
+                      Bug Reports
+                    </div>
+                  </div>
+                  
+                  <div
+                    className="rounded-xl p-4"
+                    style={{
+                      background: "rgba(6, 182, 212, 0.05)",
+                      border: "1px solid rgba(6, 182, 212, 0.15)",
+                    }}
+                  >
+                    <div className="flex items-center justify-center gap-2 text-sm font-semibold" style={{ color: "var(--color-text)" }}>
+                      <svg className="h-5 w-5" style={{ color: "var(--color-accent)" }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                      </svg>
+                      General Feedback
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <footer
           id="footer"
           className="border-t py-20 section section-primary-blue"
@@ -2317,7 +2466,7 @@ export default function Home() {
                     </a>
                   </li>
                   <li>
-                    <a className="footer-link" href="#">
+                    <a className="footer-link" href="#contact">
                       Contact
                     </a>
                   </li>

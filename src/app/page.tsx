@@ -7,13 +7,13 @@ const browserInstallButtons = [
   {
     name: "Chrome",
     icon: "/images/browsers/chrome.svg",
-    url: "#",
+    url: "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg",
     primary: true,
   },
   {
     name: "Edge",
     icon: "/images/browsers/edge.svg",
-    url: "https://microsoftedge.microsoft.com/addons/detail/kbdckiagphjeldfdfeobdhcajkpidong",
+    url: "https://microsoftedge.microsoft.com/addons/detail/aiworkspace-pro/kbdckiagphjeldfdfeobdhcajkpidong",
   },
   {
     name: "Firefox",
@@ -282,7 +282,7 @@ export default function Home() {
                   <div className="flex flex-wrap items-center gap-4 relative">
                     <div className="ambient-glow" aria-hidden />
                     <a
-                      href="https://microsoftedge.microsoft.com/addons/detail/aiworkspace-pro/kbdckiagphjeldfdfeobdhcajkpidong"
+                      href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 rounded-lg px-8 py-4 text-lg font-bold transition-all hover:scale-105 shadow-xl"
@@ -1728,7 +1728,7 @@ export default function Home() {
               Workspace.
             </p>
             <a
-              href="https://microsoftedge.microsoft.com/addons/detail/aiworkspace-pro/kbdckiagphjeldfdfeobdhcajkpidong"
+              href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg px-8 py-4 text-lg font-bold transition-all hover:scale-105 shadow-xl"
@@ -2041,7 +2041,7 @@ export default function Home() {
                   </li>
                 </ul>
                 <a
-                  href="https://microsoftedge.microsoft.com/addons/detail/aiworkspace-pro/kbdckiagphjeldfdfeobdhcajkpidong"
+                  href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-8 inline-flex w-full items-center justify-center rounded-full border px-6 py-3 text-sm font-semibold transition hover:scale-105"
@@ -2228,7 +2228,7 @@ export default function Home() {
               Free forever. No credit card required. Install in seconds.
             </p>
             <a
-              href="https://microsoftedge.microsoft.com/addons/detail/aiworkspace-pro/kbdckiagphjeldfdfeobdhcajkpidong"
+              href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg px-8 py-4 text-lg font-bold transition-all hover:scale-105 shadow-xl"

@@ -1008,6 +1008,235 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Product Showcase Carousel */}
+        <section className="relative py-24 overflow-hidden">
+          {/* Background decoration */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 z-0 opacity-30"
+          >
+            <div
+              className="absolute left-[-15%] top-1/4 h-[400px] w-[500px] blur-3xl"
+              style={{
+                background:
+                  "radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, transparent 70%)",
+              }}
+            />
+            <div
+              className="absolute right-[-15%] bottom-1/4 h-[400px] w-[500px] blur-3xl"
+              style={{
+                background:
+                  "radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%)",
+              }}
+            />
+          </div>
+
+          <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <p
+                className="text-sm font-semibold uppercase tracking-[0.3em] mb-4"
+                style={{ color: "var(--color-accent)" }}
+              >
+                See It In Action
+              </p>
+              <h2
+                className="text-3xl font-semibold sm:text-4xl mb-6"
+                style={{
+                  background: "var(--premium-title-gradient)",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Experience the Power of AI Workspace
+              </h2>
+              <p
+                className="text-lg leading-relaxed"
+                style={{ color: "var(--color-text-secondary)" }}
+              >
+                Explore our intuitive interface designed to supercharge your ChatGPT workflow
+              </p>
+            </div>
+
+            {/* Carousel Container */}
+            <div className="relative">
+              {/* Main carousel viewport */}
+              <div
+                className="overflow-hidden rounded-3xl"
+                style={{
+                  border: "1px solid rgba(6, 182, 212, 0.2)",
+                  boxShadow: "0 25px 50px rgba(6, 182, 212, 0.15)",
+                }}
+              >
+                <div className="carousel-track flex transition-transform duration-700 ease-in-out">
+                  {/* Slide 1 */}
+                  <div className="carousel-slide min-w-full">
+                    <Image
+                      src="/images/carousel/BrandBird 2025-11-20 19.37.47.png"
+                      alt="AI Workspace - Prompt Library Management"
+                      width={1920}
+                      height={1080}
+                      className="w-full h-auto"
+                      priority
+                    />
+                  </div>
+                  {/* Slide 2 */}
+                  <div className="carousel-slide min-w-full">
+                    <Image
+                      src="/images/carousel/BrandBird 2025-11-20 19.38.41.png"
+                      alt="AI Workspace - Conversation Organization"
+                      width={1920}
+                      height={1080}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  {/* Slide 3 */}
+                  <div className="carousel-slide min-w-full">
+                    <Image
+                      src="/images/carousel/BrandBird 2025-11-20 19.39.10.png"
+                      alt="AI Workspace - Folder System"
+                      width={1920}
+                      height={1080}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  {/* Slide 4 */}
+                  <div className="carousel-slide min-w-full">
+                    <Image
+                      src="/images/carousel/BrandBird 2025-11-20 19.39.38.png"
+                      alt="AI Workspace - Search & Filter"
+                      width={1920}
+                      height={1080}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  {/* Slide 5 */}
+                  <div className="carousel-slide min-w-full">
+                    <Image
+                      src="/images/carousel/BrandBird 2025-11-20 19.40.43.png"
+                      alt="AI Workspace - Export Options"
+                      width={1920}
+                      height={1080}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  {/* Slide 6 */}
+                  <div className="carousel-slide min-w-full">
+                    <Image
+                      src="/images/carousel/BrandBird 2025-11-20 19.43.13.png"
+                      alt="AI Workspace - Settings & Customization"
+                      width={1920}
+                      height={1080}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Navigation Arrows */}
+              <button
+                className="carousel-btn carousel-btn-prev absolute left-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full backdrop-blur-md transition-all duration-300 hover:scale-110"
+                style={{
+                  background: "rgba(6, 182, 212, 0.2)",
+                  border: "1px solid rgba(6, 182, 212, 0.3)",
+                }}
+                aria-label="Previous slide"
+              >
+                <svg
+                  className="h-6 w-6"
+                  style={{ color: "var(--color-text)" }}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button
+                className="carousel-btn carousel-btn-next absolute right-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full backdrop-blur-md transition-all duration-300 hover:scale-110"
+                style={{
+                  background: "rgba(6, 182, 212, 0.2)",
+                  border: "1px solid rgba(6, 182, 212, 0.3)",
+                }}
+                aria-label="Next slide"
+              >
+                <svg
+                  className="h-6 w-6"
+                  style={{ color: "var(--color-text)" }}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+
+              {/* Dots Navigation */}
+              <div className="flex justify-center gap-3 mt-8">
+                <button
+                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
+                  style={{
+                    background: "var(--color-accent)",
+                  }}
+                  aria-label="Go to slide 1"
+                  data-slide="0"
+                />
+                <button
+                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
+                  style={{
+                    background: "rgba(6, 182, 212, 0.3)",
+                  }}
+                  aria-label="Go to slide 2"
+                  data-slide="1"
+                />
+                <button
+                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
+                  style={{
+                    background: "rgba(6, 182, 212, 0.3)",
+                  }}
+                  aria-label="Go to slide 3"
+                  data-slide="2"
+                />
+                <button
+                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
+                  style={{
+                    background: "rgba(6, 182, 212, 0.3)",
+                  }}
+                  aria-label="Go to slide 4"
+                  data-slide="3"
+                />
+                <button
+                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
+                  style={{
+                    background: "rgba(6, 182, 212, 0.3)",
+                  }}
+                  aria-label="Go to slide 5"
+                  data-slide="4"
+                />
+                <button
+                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
+                  style={{
+                    background: "rgba(6, 182, 212, 0.3)",
+                  }}
+                  aria-label="Go to slide 6"
+                  data-slide="5"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section
           id="showcase"
           className="border-t py-24 section section-primary-teal"
@@ -2657,6 +2886,75 @@ function ScriptHandler() {
           btn.appendChild(ripple);
           ripple.addEventListener("animationend", () => ripple.remove());
         });
+      }
+
+      // Carousel functionality
+      const track = document.querySelector(".carousel-track") as HTMLElement;
+      const dots = document.querySelectorAll(".carousel-dot");
+      const prevBtn = document.querySelector(".carousel-btn-prev");
+      const nextBtn = document.querySelector(".carousel-btn-next");
+      
+      if (track && dots.length > 0) {
+        let currentSlide = 0;
+        const totalSlides = dots.length;
+        let autoplayInterval: NodeJS.Timeout;
+
+        const updateCarousel = (index: number) => {
+          currentSlide = (index + totalSlides) % totalSlides;
+          track.style.transform = `translateX(-${currentSlide * 100}%)`;
+          
+          // Update dots
+          dots.forEach((dot, i) => {
+            const dotEl = dot as HTMLElement;
+            if (i === currentSlide) {
+              dotEl.style.background = "var(--color-accent)";
+              dotEl.style.width = "2rem";
+            } else {
+              dotEl.style.background = "rgba(6, 182, 212, 0.3)";
+              dotEl.style.width = "0.75rem";
+            }
+          });
+        };
+
+        const startAutoplay = () => {
+          autoplayInterval = setInterval(() => {
+            updateCarousel(currentSlide + 1);
+          }, 5000);
+        };
+
+        const stopAutoplay = () => {
+          clearInterval(autoplayInterval);
+        };
+
+        // Next/Prev buttons
+        nextBtn?.addEventListener("click", () => {
+          stopAutoplay();
+          updateCarousel(currentSlide + 1);
+          startAutoplay();
+        });
+
+        prevBtn?.addEventListener("click", () => {
+          stopAutoplay();
+          updateCarousel(currentSlide - 1);
+          startAutoplay();
+        });
+
+        // Dot navigation
+        dots.forEach((dot) => {
+          dot.addEventListener("click", () => {
+            stopAutoplay();
+            const slideIndex = parseInt(dot.getAttribute("data-slide") || "0");
+            updateCarousel(slideIndex);
+            startAutoplay();
+          });
+        });
+
+        // Pause on hover
+        track.parentElement?.addEventListener("mouseenter", stopAutoplay);
+        track.parentElement?.addEventListener("mouseleave", startAutoplay);
+
+        // Start autoplay
+        startAutoplay();
       }
     });
   }

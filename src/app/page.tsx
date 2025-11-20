@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import type { ReactNode, SVGProps } from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import LogoCarousel from "@/components/LogoCarousel";
 import DemoModal from "@/components/DemoModal";
 
@@ -24,6 +24,41 @@ const browserInstallButtons = [
     url: "https://addons.mozilla.org/en-GB/firefox/addon/aiworkspace-pro/",
   },
 ];
+
+// Browser detection function
+function detectBrowser() {
+  if (typeof window === "undefined") return "chrome";
+  
+  const userAgent = navigator.userAgent.toLowerCase();
+  
+  // Check for Edge (must be before Chrome check as Edge includes Chrome in UA)
+  if (userAgent.includes("edg/") || userAgent.includes("edge/")) {
+    return "edge";
+  }
+  
+  // Check for Firefox
+  if (userAgent.includes("firefox")) {
+    return "firefox";
+  }
+  
+  // Default to Chrome (includes Chrome, Brave, Opera, and other Chromium browsers)
+  return "chrome";
+}
+
+// Get install URL based on detected browser
+function getBrowserInstallUrl() {
+  const browser = detectBrowser();
+  
+  switch (browser) {
+    case "edge":
+      return "https://microsoftedge.microsoft.com/addons/detail/aiworkspace-pro/kbdckiagphjeldfdfeobdhcajkpidong";
+    case "firefox":
+      return "https://addons.mozilla.org/en-GB/firefox/addon/aiworkspace-pro/";
+    case "chrome":
+    default:
+      return "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg";
+  }
+}
 
 const showcases = [
   {
@@ -149,6 +184,12 @@ const testimonials = [
 ];
 
 export default function Home() {
+  const [installUrl, setInstallUrl] = useState("");
+
+  useEffect(() => {
+    setInstallUrl(getBrowserInstallUrl());
+  }, []);
+
   return (
     <div
       style={{ background: "var(--color-bg-primary)" }}
@@ -187,7 +228,7 @@ export default function Home() {
               <a href="#pricing" className="nav-link">
                 Pricing
               </a>
-              <a href="#pricing" className="nav-cta">
+              <a href={installUrl || "#pricing"} target="_blank" rel="noopener noreferrer" className="nav-cta">
                 Get started free
               </a>
             </div>
@@ -2139,7 +2180,7 @@ export default function Home() {
               Workspace.
             </p>
             <a
-              href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"
+              href={installUrl || "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg px-8 py-4 text-lg font-bold transition-all hover:scale-105 shadow-xl"
@@ -2452,7 +2493,7 @@ export default function Home() {
                   </li>
                 </ul>
                 <a
-                  href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"
+                  href={installUrl || "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-8 inline-flex w-full items-center justify-center rounded-full border px-6 py-3 text-sm font-semibold transition hover:scale-105"
@@ -2591,7 +2632,7 @@ export default function Home() {
                   </li>
                 </ul>
                 <a
-                  href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"
+                  href={installUrl || "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-8 inline-flex w-full items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition"
@@ -2641,7 +2682,7 @@ export default function Home() {
               Free forever. No credit card required. Install in seconds.
             </p>
             <a
-              href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"
+              href={installUrl || "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg px-8 py-4 text-lg font-bold transition-all hover:scale-105 shadow-xl"

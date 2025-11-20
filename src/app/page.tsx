@@ -5,6 +5,7 @@ import type { ReactNode, SVGProps } from "react";
 import { useEffect, useState } from "react";
 import LogoCarousel from "@/components/LogoCarousel";
 import DemoModal from "@/components/DemoModal";
+import DemoHubButton from "@/components/DemoHubButton";
 
 const browserInstallButtons = [
   {
@@ -344,13 +345,14 @@ export default function Home() {
                       </svg>
                       Install AI Workspace Free
                     </a>
-                    <p
-                      className="text-sm"
-                      style={{ color: "var(--color-text-muted)" }}
-                    >
-                      For Chrome, Edge & Firefox
-                    </p>
+                    <DemoHubButton />
                   </div>
+                  <p
+                    className="text-sm"
+                    style={{ color: "var(--color-text-muted)" }}
+                  >
+                    For Chrome, Edge & Firefox • Watch Video Demos
+                  </p>
 
                   {/* Browser Installation Buttons - Secondary */}
                   <div className="space-y-3">

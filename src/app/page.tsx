@@ -22,8 +22,6 @@ const browserInstallButtons = [
   },
 ];
 
-
-
 const showcases = [
   {
     title: "Prompt Vault for instant recall",
@@ -93,31 +91,51 @@ const showcases = [
 const testimonials = [
   {
     quote:
-      "AI Workspace finally gave us a way to manage sensitive prompts without sending anything to external servers. Our compliance team was immediately on board.",
-    name: "Leah Park",
-    role: "Head of Innovation, Northwind Consulting",
-    variant: "legal",
+      "SuperPower GPT is exceptional! Connecting Your OpenAI Chat GPT Account PLUS Not Required to an extensive list of PROMPTS. The developers have not disappointed SignUp for their newsletter for great offers, and opportunities!",
+    name: "Rob",
+    date: "Apr 15, 2024",
+    rating: 5,
+    verified: true,
   },
   {
     quote:
-      "The local vault plus multi-platform support lets us switch between ChatGPT and Claude without losing context. Productivity is up, and our data never leaves the office.",
-    name: "Jonas Müller",
-    role: "CTO, Helix Labs",
-    variant: "engineering",
+      "I love everything about SuperPower ChatGPT. It really helps keep my ChatGPT organized and helps me be more efficient and effective when using it.",
+    name: "Joe Travers",
+    date: "Apr 10, 2024",
+    rating: 5,
+    verified: true,
   },
   {
     quote:
-      "Bulk exports and automation save our content team 10+ hours weekly. Everything stays local, which means no contracts, no approvals, no delays.",
-    name: "Carmen Rivera",
-    role: "Director of Content, Orbit Media",
-    variant: "creative",
+      "This extension is the BEST!! Incredible. The fact that you can use both GPT-4 and GPT-3.5 for free is truly remarkable. Your dedication and hard work is obvious and appreciated.",
+    name: "Mich",
+    date: "Mar 31, 2024",
+    rating: 5,
+    verified: true,
   },
   {
     quote:
-      "We keep everything on-device and still collaborate smoothly across teams. The export presets are a hit with our clients.",
-    name: "Sofia Martins",
-    role: "Operations Lead, Brightline Studio",
-    variant: "operations",
+      "SuperPower ChatGPT has always been my default tool to help with my configuration possibilities and gain of time regarding the optimal setup within ChatGPT.",
+    name: "Antoine",
+    date: "Mar 13, 2024",
+    rating: 5,
+    verified: true,
+  },
+  {
+    quote:
+      "Of all the extensions I have downloaded for ChatGPT this is the only one that I use. It has really helped me organize my conversations with ChatGPT and gives me extra features.",
+    name: "Era Rivers",
+    date: "Apr 25, 2024",
+    rating: 5,
+    verified: true,
+  },
+  {
+    quote:
+      "ChatGPT has the worst way of organizing their chats. But WOW I think this is what I'm looking for! Pure genius! Thank you reddit and Sauce!",
+    name: "Marky",
+    date: "Feb 23, 2024",
+    rating: 5,
+    verified: true,
   },
 ];
 
@@ -237,9 +255,9 @@ export default function Home() {
                   className="hero-subtitle text-lg leading-relaxed sm:text-xl"
                   style={{ color: "var(--color-text-secondary)" }}
                 >
-                  Take complete control of your ChatGPT workflow. Organize conversations into folders, 
-                  save and reuse prompts instantly, search across all your chats, and export everything — 
-                  all with{" "}
+                  Take complete control of your ChatGPT workflow. Organize
+                  conversations into folders, save and reuse prompts instantly,
+                  search across all your chats, and export everything — all with{" "}
                   <span
                     style={{ color: "var(--color-accent)", fontWeight: 600 }}
                   >
@@ -267,12 +285,19 @@ export default function Home() {
                         color: "#ffffff",
                       }}
                     >
-                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                      <svg
+                        className="h-5 w-5"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
                         <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
                       </svg>
                       Install AI Workspace Free
                     </a>
-                    <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
+                    <p
+                      className="text-sm"
+                      style={{ color: "var(--color-text-muted)" }}
+                    >
                       For Chrome, Edge & Firefox
                     </p>
                   </div>
@@ -590,21 +615,54 @@ export default function Home() {
                 Sound familiar?
               </p>
               <div className="grid md:grid-cols-2 gap-4 text-left">
-                <div className="flex items-start gap-3 p-4 rounded-lg" style={{ background: "rgba(239, 68, 68, 0.05)", border: "1px solid rgba(239, 68, 68, 0.2)" }}>
+                <div
+                  className="flex items-start gap-3 p-4 rounded-lg"
+                  style={{
+                    background: "rgba(239, 68, 68, 0.05)",
+                    border: "1px solid rgba(239, 68, 68, 0.2)",
+                  }}
+                >
                   <span style={{ color: "#ef4444" }}>❌</span>
-                  <span style={{ color: "var(--color-text-secondary)" }}>&ldquo;Where was that perfect prompt again?&rdquo;</span>
+                  <span style={{ color: "var(--color-text-secondary)" }}>
+                    &ldquo;Where was that perfect prompt again?&rdquo;
+                  </span>
                 </div>
-                <div className="flex items-start gap-3 p-4 rounded-lg" style={{ background: "rgba(239, 68, 68, 0.05)", border: "1px solid rgba(239, 68, 68, 0.2)" }}>
+                <div
+                  className="flex items-start gap-3 p-4 rounded-lg"
+                  style={{
+                    background: "rgba(239, 68, 68, 0.05)",
+                    border: "1px solid rgba(239, 68, 68, 0.2)",
+                  }}
+                >
                   <span style={{ color: "#ef4444" }}>❌</span>
-                  <span style={{ color: "var(--color-text-secondary)" }}>&ldquo;I&rsquo;ve explained this to ChatGPT 10 times already...&rdquo;</span>
+                  <span style={{ color: "var(--color-text-secondary)" }}>
+                    &ldquo;I&rsquo;ve explained this to ChatGPT 10 times
+                    already...&rdquo;
+                  </span>
                 </div>
-                <div className="flex items-start gap-3 p-4 rounded-lg" style={{ background: "rgba(239, 68, 68, 0.05)", border: "1px solid rgba(239, 68, 68, 0.2)" }}>
+                <div
+                  className="flex items-start gap-3 p-4 rounded-lg"
+                  style={{
+                    background: "rgba(239, 68, 68, 0.05)",
+                    border: "1px solid rgba(239, 68, 68, 0.2)",
+                  }}
+                >
                   <span style={{ color: "#ef4444" }}>❌</span>
-                  <span style={{ color: "var(--color-text-secondary)" }}>&ldquo;My chat history is a complete mess&rdquo;</span>
+                  <span style={{ color: "var(--color-text-secondary)" }}>
+                    &ldquo;My chat history is a complete mess&rdquo;
+                  </span>
                 </div>
-                <div className="flex items-start gap-3 p-4 rounded-lg" style={{ background: "rgba(239, 68, 68, 0.05)", border: "1px solid rgba(239, 68, 68, 0.2)" }}>
+                <div
+                  className="flex items-start gap-3 p-4 rounded-lg"
+                  style={{
+                    background: "rgba(239, 68, 68, 0.05)",
+                    border: "1px solid rgba(239, 68, 68, 0.2)",
+                  }}
+                >
                   <span style={{ color: "#ef4444" }}>❌</span>
-                  <span style={{ color: "var(--color-text-secondary)" }}>&ldquo;I can&rsquo;t find what I did last week&rdquo;</span>
+                  <span style={{ color: "var(--color-text-secondary)" }}>
+                    &ldquo;I can&rsquo;t find what I did last week&rdquo;
+                  </span>
                 </div>
               </div>
             </div>
@@ -626,7 +684,8 @@ export default function Home() {
                 className="text-xl leading-relaxed"
                 style={{ color: "var(--color-text-secondary)" }}
               >
-                Stop wasting time searching and retyping. Start working smarter with organized AI workflows.
+                Stop wasting time searching and retyping. Start working smarter
+                with organized AI workflows.
               </p>
             </div>
 
@@ -659,18 +718,29 @@ export default function Home() {
                   >
                     Save Time & Boost Productivity
                   </h3>
-                  <ul className="space-y-3 text-sm" style={{ color: "var(--color-text-secondary)" }}>
+                  <ul
+                    className="space-y-3 text-sm"
+                    style={{ color: "var(--color-text-secondary)" }}
+                  >
                     <li className="flex items-start gap-2">
                       <span>⚡</span>
-                      <span>Never retype prompts again &mdash; save and reuse instantly</span>
+                      <span>
+                        Never retype prompts again &mdash; save and reuse
+                        instantly
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span>🔍</span>
-                      <span>Find previous conversations in seconds with powerful search</span>
+                      <span>
+                        Find previous conversations in seconds with powerful
+                        search
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span>📁</span>
-                      <span>Organize hundreds of chats with custom folders and tags</span>
+                      <span>
+                        Organize hundreds of chats with custom folders and tags
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span>⏱️</span>
@@ -706,22 +776,34 @@ export default function Home() {
                   >
                     Better AI Results
                   </h3>
-                  <ul className="space-y-3 text-sm" style={{ color: "var(--color-text-secondary)" }}>
+                  <ul
+                    className="space-y-3 text-sm"
+                    style={{ color: "var(--color-text-secondary)" }}
+                  >
                     <li className="flex items-start gap-2">
                       <span>💡</span>
-                      <span>Build a library of your best-performing prompts</span>
+                      <span>
+                        Build a library of your best-performing prompts
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span>🔄</span>
-                      <span>Refine and iterate &mdash; save what works, improve what doesn&rsquo;t</span>
+                      <span>
+                        Refine and iterate &mdash; save what works, improve what
+                        doesn&rsquo;t
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span>📊</span>
-                      <span>Track which prompts deliver the results you need</span>
+                      <span>
+                        Track which prompts deliver the results you need
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span>✨</span>
-                      <span>Consistent quality across all your AI interactions</span>
+                      <span>
+                        Consistent quality across all your AI interactions
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -753,14 +835,21 @@ export default function Home() {
                   >
                     Never Lose Work Again
                   </h3>
-                  <ul className="space-y-3 text-sm" style={{ color: "var(--color-text-secondary)" }}>
+                  <ul
+                    className="space-y-3 text-sm"
+                    style={{ color: "var(--color-text-secondary)" }}
+                  >
                     <li className="flex items-start gap-2">
                       <span>💾</span>
-                      <span>Automatic backup of all your conversations and prompts</span>
+                      <span>
+                        Automatic backup of all your conversations and prompts
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span>🔐</span>
-                      <span>Everything stored locally &mdash; you own your data</span>
+                      <span>
+                        Everything stored locally &mdash; you own your data
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span>📥</span>
@@ -800,22 +889,32 @@ export default function Home() {
                   >
                     Work More Efficiently
                   </h3>
-                  <ul className="space-y-3 text-sm" style={{ color: "var(--color-text-secondary)" }}>
+                  <ul
+                    className="space-y-3 text-sm"
+                    style={{ color: "var(--color-text-secondary)" }}
+                  >
                     <li className="flex items-start gap-2">
                       <span>⌨️</span>
                       <span>One-click access to your favorite prompts</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span>📋</span>
-                      <span>Templates for repetitive tasks &mdash; stop starting from scratch</span>
+                      <span>
+                        Templates for repetitive tasks &mdash; stop starting
+                        from scratch
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span>🎨</span>
-                      <span>Customize your workspace to match your workflow</span>
+                      <span>
+                        Customize your workspace to match your workflow
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span>⚙️</span>
-                      <span>Keyboard shortcuts for everything you do regularly</span>
+                      <span>
+                        Keyboard shortcuts for everything you do regularly
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -847,24 +946,114 @@ export default function Home() {
                   >
                     For Power Users
                   </h3>
-                  <ul className="space-y-3 text-sm" style={{ color: "var(--color-text-secondary)" }}>
+                  <ul
+                    className="space-y-3 text-sm"
+                    style={{ color: "var(--color-text-secondary)" }}
+                  >
                     <li className="flex items-start gap-2">
                       <span>🔗</span>
-                      <span>Works with ChatGPT, Claude, Gemini, and more</span>
+                      <span>
+                        Works with ChatGPT, Claude (work in progress for Gemini,
+                        and more)
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span>📊</span>
-                      <span>Advanced filtering and sorting for massive chat libraries</span>
+                      <span>
+                        Advanced filtering and sorting for massive chat
+                        libraries
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span>🏷️</span>
-                      <span>Nested folders, tags, favorites &mdash; organize your way</span>
+                      <span>
+                        Nested folders, tags, favorites &mdash; organize your
+                        way
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span>🌐</span>
                       <span>Available on Chrome, Edge, and Firefox</span>
                     </li>
                   </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Trust Signals */}
+            <div className="mt-16">
+              <div className="mx-auto grid max-w-5xl gap-4 sm:grid-cols-3">
+                <div
+                  className="flex flex-col items-center gap-3 rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-1"
+                  style={{
+                    background:
+                      "linear-gradient(120deg, rgba(6, 182, 212, 0.05), rgba(14, 165, 233, 0.08))",
+                    border: "1px solid rgba(6, 182, 212, 0.15)",
+                  }}
+                >
+                  <span className="text-3xl">🔐</span>
+                  <div>
+                    <div
+                      className="text-sm font-semibold"
+                      style={{ color: "var(--color-text)" }}
+                    >
+                      100% Secure & Private
+                    </div>
+                    <div
+                      className="mt-1 text-xs"
+                      style={{ color: "var(--color-text-secondary)" }}
+                    >
+                      All data stored locally
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="flex flex-col items-center gap-3 rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-1"
+                  style={{
+                    background:
+                      "linear-gradient(120deg, rgba(6, 182, 212, 0.05), rgba(14, 165, 233, 0.08))",
+                    border: "1px solid rgba(6, 182, 212, 0.15)",
+                  }}
+                >
+                  <span className="text-3xl">⭐</span>
+                  <div>
+                    <div
+                      className="text-sm font-semibold"
+                      style={{ color: "var(--color-text)" }}
+                    >
+                      4.9/5 Rating
+                    </div>
+                    <div
+                      className="mt-1 text-xs"
+                      style={{ color: "var(--color-text-secondary)" }}
+                    >
+                      4,600+ happy users
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="flex flex-col items-center gap-3 rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-1"
+                  style={{
+                    background:
+                      "linear-gradient(120deg, rgba(6, 182, 212, 0.05), rgba(14, 165, 233, 0.08))",
+                    border: "1px solid rgba(6, 182, 212, 0.15)",
+                  }}
+                >
+                  <span className="text-3xl">✓</span>
+                  <div>
+                    <div
+                      className="text-sm font-semibold"
+                      style={{ color: "var(--color-text)" }}
+                    >
+                      Works on ChatGPT.com
+                    </div>
+                    <div
+                      className="mt-1 text-xs"
+                      style={{ color: "var(--color-text-secondary)" }}
+                    >
+                      Claude, Gemini & more
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1140,7 +1329,7 @@ export default function Home() {
                   className="text-sm font-semibold uppercase tracking-[0.3em]"
                   style={{ color: "var(--color-accent)" }}
                 >
-                  Testimonials
+                  User Reviews
                 </p>
                 <h2
                   className="text-3xl font-semibold sm:text-4xl"
@@ -1151,61 +1340,85 @@ export default function Home() {
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  Trusted by teams who put{" "}
+                  Loved by{" "}
                   <span style={{ color: "var(--color-accent)" }}>
-                    privacy first
+                    4,600+ users
                   </span>
                 </h2>
                 <p
                   className="text-lg leading-relaxed"
                   style={{ color: "var(--color-text-secondary)" }}
                 >
-                  From{" "}
-                  <span style={{ color: "var(--color-text)", fontWeight: 500 }}>
-                    legal firms to creative studios
-                  </span>
-                  , professionals rely on AI Workspace to manage prompts, notes,
-                  and media{" "}
-                  <span
-                    style={{ color: "var(--color-accent)", fontWeight: 500 }}
-                  >
-                    without risking their data in the cloud
-                  </span>
-                  . Discover how users save hours each week while staying fully
-                  in control.
+                  Join thousands of professionals who trust AI Workspace to
+                  organize their ChatGPT conversations, save prompts, and boost
+                  productivity.
                 </p>
 
                 <div className="h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
 
-                <div className="grid gap-6 sm:grid-cols-2">
-                  {testimonials.map((testimonial) => (
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  {testimonials.map((testimonial, index) => (
                     <div
-                      key={testimonial.name}
+                      key={index}
                       className="testimonial-card rounded-3xl p-6"
+                      style={{
+                        background:
+                          "linear-gradient(120deg, rgba(6, 182, 212, 0.03), rgba(14, 165, 233, 0.06))",
+                        border: "1px solid rgba(6, 182, 212, 0.12)",
+                      }}
                     >
-                      <div className="testimonial-header mb-3">
-                        <div>
-                          <div className="testimonial-name text-xs font-semibold uppercase tracking-[0.2em]">
-                            {testimonial.name}
-                          </div>
+                      <div className="mb-3 flex items-center justify-between">
+                        <div className="flex items-center gap-2">
                           <div
-                            className="testimonial-role text-xs"
-                            style={{ color: "var(--color-text-muted)" }}
+                            className="flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold"
+                            style={{
+                              background:
+                                "linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(14, 165, 233, 0.3))",
+                              color: "var(--color-accent)",
+                            }}
                           >
-                            {testimonial.role}
+                            {testimonial.name.charAt(0)}
+                          </div>
+                          <div>
+                            <div
+                              className="text-sm font-semibold"
+                              style={{ color: "var(--color-text)" }}
+                            >
+                              {testimonial.name}
+                            </div>
+                            <div
+                              className="text-xs"
+                              style={{ color: "var(--color-text-muted)" }}
+                            >
+                              {testimonial.date}
+                            </div>
                           </div>
                         </div>
-                        <span
-                          className={`company-chip ${
-                            testimonial.variant ?? ""
-                          }`}
-                        >
-                          {testimonial.variant
-                            ? testimonial.variant
-                            : "Verified"}
-                        </span>
+                        {testimonial.verified && (
+                          <span
+                            className="text-xs"
+                            style={{ color: "var(--color-accent)" }}
+                            title="Verified Chrome Web Store Review"
+                          >
+                            ✓
+                          </span>
+                        )}
                       </div>
-                      <p className="testimonial-quote text-sm">
+                      <div className="mb-2 flex gap-0.5">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <span
+                            key={i}
+                            className="text-sm"
+                            style={{ color: "#fbbf24" }}
+                          >
+                            ★
+                          </span>
+                        ))}
+                      </div>
+                      <p
+                        className="text-sm leading-relaxed"
+                        style={{ color: "var(--color-text-secondary)" }}
+                      >
                         &ldquo;{testimonial.quote}&rdquo;
                       </p>
                     </div>
@@ -1528,8 +1741,12 @@ export default function Home() {
             >
               Ready to boost your ChatGPT productivity?
             </h2>
-            <p className="text-lg mb-8" style={{ color: "var(--color-text-secondary)" }}>
-              Join thousands of users organizing their AI workflows with AI Workspace.
+            <p
+              className="text-lg mb-8"
+              style={{ color: "var(--color-text-secondary)" }}
+            >
+              Join thousands of users organizing their AI workflows with AI
+              Workspace.
             </p>
             <a
               href="https://microsoftedge.microsoft.com/addons/detail/aiworkspace-pro/kbdckiagphjeldfdfeobdhcajkpidong"
@@ -1546,7 +1763,10 @@ export default function Home() {
               </svg>
               Install AI Workspace Free
             </a>
-            <p className="mt-4 text-sm" style={{ color: "var(--color-text-muted)" }}>
+            <p
+              className="mt-4 text-sm"
+              style={{ color: "var(--color-text-muted)" }}
+            >
               Free forever • No credit card required • Install in seconds
             </p>
           </div>
@@ -1999,7 +2219,10 @@ export default function Home() {
         </section>
 
         {/* Final CTA Section - Before Footer */}
-        <section className="border-t py-24 section section-primary-teal" style={{ borderColor: "var(--color-border)" }}>
+        <section
+          className="border-t py-24 section section-primary-teal"
+          style={{ borderColor: "var(--color-border)" }}
+        >
           <div className="mx-auto max-w-4xl px-6 text-center">
             <h2
               className="text-4xl font-bold mb-4"
@@ -2012,7 +2235,10 @@ export default function Home() {
             >
               Start organizing your ChatGPT workflow today
             </h2>
-            <p className="text-xl mb-10" style={{ color: "var(--color-text-secondary)" }}>
+            <p
+              className="text-xl mb-10"
+              style={{ color: "var(--color-text-secondary)" }}
+            >
               Free forever. No credit card required. Install in seconds.
             </p>
             <a

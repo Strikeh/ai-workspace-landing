@@ -2591,7 +2591,9 @@ export default function Home() {
                   </li>
                 </ul>
                 <a
-                  href="#get-started"
+                  href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-8 inline-flex w-full items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition"
                   style={{
                     background: "var(--color-accent)",

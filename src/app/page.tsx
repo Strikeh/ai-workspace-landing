@@ -1,5 +1,8 @@
-﻿import Image from "next/image";
+﻿"use client";
+
+import Image from "next/image";
 import type { ReactNode, SVGProps } from "react";
+import { useEffect } from "react";
 import LogoCarousel from "@/components/LogoCarousel";
 import DemoModal from "@/components/DemoModal";
 
@@ -1073,7 +1076,7 @@ export default function Home() {
                   {/* Slide 1 */}
                   <div className="carousel-slide min-w-full">
                     <Image
-                      src="/images/carousel/BrandBird 2025-11-20 19.37.47.png"
+                      src="/images/carousel/BrandBird 2025-11-20 11.36.08.png"
                       alt="AI Workspace - Prompt Library Management"
                       width={1920}
                       height={1080}
@@ -1084,6 +1087,46 @@ export default function Home() {
                   {/* Slide 2 */}
                   <div className="carousel-slide min-w-full">
                     <Image
+                      src="/images/carousel/BrandBird 2025-11-20 12.01.36.png"
+                      alt="AI Workspace - Advanced Features"
+                      width={1920}
+                      height={1080}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  {/* Slide 3 */}
+                  <div className="carousel-slide min-w-full">
+                    <Image
+                      src="/images/carousel/BrandBird 2025-11-20 12.01.58.png"
+                      alt="AI Workspace - Workspace Management"
+                      width={1920}
+                      height={1080}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  {/* Slide 4 */}
+                  <div className="carousel-slide min-w-full">
+                    <Image
+                      src="/images/carousel/BrandBird 2025-11-20 12.04.10.png"
+                      alt="AI Workspace - Custom Settings"
+                      width={1920}
+                      height={1080}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  {/* Slide 5 */}
+                  <div className="carousel-slide min-w-full">
+                    <Image
+                      src="/images/carousel/BrandBird 2025-11-20 19.37.47.png"
+                      alt="AI Workspace - Prompt Templates"
+                      width={1920}
+                      height={1080}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  {/* Slide 6 */}
+                  <div className="carousel-slide min-w-full">
+                    <Image
                       src="/images/carousel/BrandBird 2025-11-20 19.38.41.png"
                       alt="AI Workspace - Conversation Organization"
                       width={1920}
@@ -1091,7 +1134,7 @@ export default function Home() {
                       className="w-full h-auto"
                     />
                   </div>
-                  {/* Slide 3 */}
+                  {/* Slide 7 */}
                   <div className="carousel-slide min-w-full">
                     <Image
                       src="/images/carousel/BrandBird 2025-11-20 19.39.10.png"
@@ -1101,7 +1144,7 @@ export default function Home() {
                       className="w-full h-auto"
                     />
                   </div>
-                  {/* Slide 4 */}
+                  {/* Slide 8 */}
                   <div className="carousel-slide min-w-full">
                     <Image
                       src="/images/carousel/BrandBird 2025-11-20 19.39.38.png"
@@ -1111,7 +1154,7 @@ export default function Home() {
                       className="w-full h-auto"
                     />
                   </div>
-                  {/* Slide 5 */}
+                  {/* Slide 9 */}
                   <div className="carousel-slide min-w-full">
                     <Image
                       src="/images/carousel/BrandBird 2025-11-20 19.40.43.png"
@@ -1121,11 +1164,61 @@ export default function Home() {
                       className="w-full h-auto"
                     />
                   </div>
-                  {/* Slide 6 */}
+                  {/* Slide 10 */}
                   <div className="carousel-slide min-w-full">
                     <Image
                       src="/images/carousel/BrandBird 2025-11-20 19.43.13.png"
                       alt="AI Workspace - Settings & Customization"
+                      width={1920}
+                      height={1080}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  {/* Slide 11 */}
+                  <div className="carousel-slide min-w-full">
+                    <Image
+                      src="/images/carousel/BrandBird 2025-11-20 19.46.23.png"
+                      alt="AI Workspace - Data Management"
+                      width={1920}
+                      height={1080}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  {/* Slide 12 */}
+                  <div className="carousel-slide min-w-full">
+                    <Image
+                      src="/images/carousel/BrandBird 2025-11-20 19.46.47.png"
+                      alt="AI Workspace - Integration Options"
+                      width={1920}
+                      height={1080}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  {/* Slide 13 */}
+                  <div className="carousel-slide min-w-full">
+                    <Image
+                      src="/images/carousel/BrandBird 2025-11-20 19.47.27.png"
+                      alt="AI Workspace - Advanced Tools"
+                      width={1920}
+                      height={1080}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  {/* Slide 14 */}
+                  <div className="carousel-slide min-w-full">
+                    <Image
+                      src="/images/carousel/BrandBird 2025-11-20 19.47.59.png"
+                      alt="AI Workspace - Customization Panel"
+                      width={1920}
+                      height={1080}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  {/* Slide 15 */}
+                  <div className="carousel-slide min-w-full">
+                    <Image
+                      src="/images/carousel/BrandBird 2025-11-20 19.48.31.png"
+                      alt="AI Workspace - Complete Overview"
                       width={1920}
                       height={1080}
                       className="w-full h-auto"
@@ -1136,6 +1229,7 @@ export default function Home() {
 
               {/* Navigation Arrows */}
               <button
+                type="button"
                 className="carousel-btn carousel-btn-prev absolute left-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full backdrop-blur-md transition-all duration-300 hover:scale-110"
                 style={{
                   background: "rgba(6, 182, 212, 0.2)",
@@ -1159,6 +1253,7 @@ export default function Home() {
                 </svg>
               </button>
               <button
+                type="button"
                 className="carousel-btn carousel-btn-next absolute right-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full backdrop-blur-md transition-all duration-300 hover:scale-110"
                 style={{
                   background: "rgba(6, 182, 212, 0.2)",
@@ -1185,6 +1280,7 @@ export default function Home() {
               {/* Dots Navigation */}
               <div className="flex justify-center gap-3 mt-8">
                 <button
+                  type="button"
                   className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
                   style={{
                     background: "var(--color-accent)",
@@ -1193,6 +1289,7 @@ export default function Home() {
                   data-slide="0"
                 />
                 <button
+                  type="button"
                   className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
                   style={{
                     background: "rgba(6, 182, 212, 0.3)",
@@ -1201,6 +1298,7 @@ export default function Home() {
                   data-slide="1"
                 />
                 <button
+                  type="button"
                   className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
                   style={{
                     background: "rgba(6, 182, 212, 0.3)",
@@ -1209,6 +1307,7 @@ export default function Home() {
                   data-slide="2"
                 />
                 <button
+                  type="button"
                   className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
                   style={{
                     background: "rgba(6, 182, 212, 0.3)",
@@ -1217,6 +1316,7 @@ export default function Home() {
                   data-slide="3"
                 />
                 <button
+                  type="button"
                   className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
                   style={{
                     background: "rgba(6, 182, 212, 0.3)",
@@ -1225,12 +1325,94 @@ export default function Home() {
                   data-slide="4"
                 />
                 <button
+                  type="button"
                   className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
                   style={{
                     background: "rgba(6, 182, 212, 0.3)",
                   }}
                   aria-label="Go to slide 6"
                   data-slide="5"
+                />
+                <button
+                  type="button"
+                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
+                  style={{
+                    background: "rgba(6, 182, 212, 0.3)",
+                  }}
+                  aria-label="Go to slide 7"
+                  data-slide="6"
+                />
+                <button
+                  type="button"
+                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
+                  style={{
+                    background: "rgba(6, 182, 212, 0.3)",
+                  }}
+                  aria-label="Go to slide 8"
+                  data-slide="7"
+                />
+                <button
+                  type="button"
+                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
+                  style={{
+                    background: "rgba(6, 182, 212, 0.3)",
+                  }}
+                  aria-label="Go to slide 9"
+                  data-slide="8"
+                />
+                <button
+                  type="button"
+                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
+                  style={{
+                    background: "rgba(6, 182, 212, 0.3)",
+                  }}
+                  aria-label="Go to slide 10"
+                  data-slide="9"
+                />
+                <button
+                  type="button"
+                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
+                  style={{
+                    background: "rgba(6, 182, 212, 0.3)",
+                  }}
+                  aria-label="Go to slide 11"
+                  data-slide="10"
+                />
+                <button
+                  type="button"
+                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
+                  style={{
+                    background: "rgba(6, 182, 212, 0.3)",
+                  }}
+                  aria-label="Go to slide 12"
+                  data-slide="11"
+                />
+                <button
+                  type="button"
+                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
+                  style={{
+                    background: "rgba(6, 182, 212, 0.3)",
+                  }}
+                  aria-label="Go to slide 13"
+                  data-slide="12"
+                />
+                <button
+                  type="button"
+                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
+                  style={{
+                    background: "rgba(6, 182, 212, 0.3)",
+                  }}
+                  aria-label="Go to slide 14"
+                  data-slide="13"
+                />
+                <button
+                  type="button"
+                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
+                  style={{
+                    background: "rgba(6, 182, 212, 0.3)",
+                  }}
+                  aria-label="Go to slide 15"
+                  data-slide="14"
                 />
               </div>
             </div>
@@ -2855,9 +3037,7 @@ export default function Home() {
 }
 
 function ScriptHandler() {
-  // Attach a click ripple to the primary CTA when the component is mounted
-  if (typeof window !== "undefined") {
-    requestAnimationFrame(() => {
+  useEffect(() => {
       // lightweight scroll variable for parallax
       const setScrollVar = () => {
         const y = window.scrollY || window.pageYOffset || 0;
@@ -2897,7 +3077,7 @@ function ScriptHandler() {
       if (track && dots.length > 0) {
         let currentSlide = 0;
         const totalSlides = dots.length;
-        let autoplayInterval: NodeJS.Timeout;
+        let autoplayInterval: NodeJS.Timeout | null = null;
 
         const updateCarousel = (index: number) => {
           currentSlide = (index + totalSlides) % totalSlides;
@@ -2916,36 +3096,37 @@ function ScriptHandler() {
           });
         };
 
+        const stopAutoplay = () => {
+          if (autoplayInterval) {
+            clearInterval(autoplayInterval);
+            autoplayInterval = null;
+          }
+        };
+
         const startAutoplay = () => {
+          stopAutoplay(); // Stop any existing interval first
           autoplayInterval = setInterval(() => {
             updateCarousel(currentSlide + 1);
           }, 5000);
         };
 
-        const stopAutoplay = () => {
-          clearInterval(autoplayInterval);
-        };
-
         // Next/Prev buttons
         nextBtn?.addEventListener("click", () => {
-          stopAutoplay();
           updateCarousel(currentSlide + 1);
-          startAutoplay();
+          startAutoplay(); // Restart interval
         });
 
         prevBtn?.addEventListener("click", () => {
-          stopAutoplay();
           updateCarousel(currentSlide - 1);
-          startAutoplay();
+          startAutoplay(); // Restart interval
         });
 
         // Dot navigation
         dots.forEach((dot) => {
           dot.addEventListener("click", () => {
-            stopAutoplay();
             const slideIndex = parseInt(dot.getAttribute("data-slide") || "0");
             updateCarousel(slideIndex);
-            startAutoplay();
+            startAutoplay(); // Restart interval
           });
         });
 
@@ -2953,11 +3134,136 @@ function ScriptHandler() {
         track.parentElement?.addEventListener("mouseenter", stopAutoplay);
         track.parentElement?.addEventListener("mouseleave", startAutoplay);
 
+        // Image zoom functionality
+        const slides = document.querySelectorAll(".carousel-slide img");
+        slides.forEach((img) => {
+          const imgEl = img as HTMLImageElement;
+          imgEl.style.cursor = "zoom-in";
+          
+          imgEl.addEventListener("click", (e) => {
+            e.stopPropagation();
+            stopAutoplay();
+            
+            // Create modal overlay
+            const modal = document.createElement("div");
+            modal.className = "image-zoom-modal";
+            modal.style.cssText = `
+              position: fixed;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background: rgba(0, 0, 0, 0.95);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              z-index: 9999;
+              cursor: zoom-out;
+              animation: fadeIn 0.2s ease-in-out;
+              padding: 2rem;
+            `;
+            
+            // Create close button
+            const closeBtn = document.createElement("button");
+            closeBtn.innerHTML = "✕";
+            closeBtn.style.cssText = `
+              position: absolute;
+              top: 1.5rem;
+              right: 1.5rem;
+              background: rgba(6, 182, 212, 0.2);
+              border: 1px solid rgba(6, 182, 212, 0.3);
+              color: white;
+              width: 3rem;
+              height: 3rem;
+              border-radius: 50%;
+              font-size: 1.5rem;
+              cursor: pointer;
+              backdrop-filter: blur(10px);
+              transition: all 0.3s;
+              z-index: 10000;
+            `;
+            closeBtn.addEventListener("mouseenter", () => {
+              closeBtn.style.transform = "scale(1.1)";
+              closeBtn.style.background = "rgba(6, 182, 212, 0.3)";
+            });
+            closeBtn.addEventListener("mouseleave", () => {
+              closeBtn.style.transform = "scale(1)";
+              closeBtn.style.background = "rgba(6, 182, 212, 0.2)";
+            });
+            
+            // Clone image
+            const zoomedImg = imgEl.cloneNode(true) as HTMLImageElement;
+            zoomedImg.style.cssText = `
+              max-width: 95%;
+              max-height: 95%;
+              object-fit: contain;
+              border-radius: 1rem;
+              box-shadow: 0 25px 50px rgba(6, 182, 212, 0.3);
+              animation: zoomIn 0.3s ease-out;
+            `;
+            
+            // Add CSS animations
+            const style = document.createElement("style");
+            style.textContent = `
+              @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+              }
+              @keyframes zoomIn {
+                from { 
+                  transform: scale(0.9);
+                  opacity: 0;
+                }
+                to { 
+                  transform: scale(1);
+                  opacity: 1;
+                }
+              }
+            `;
+            document.head.appendChild(style);
+            
+            // Close modal function
+            const closeModal = () => {
+              modal.style.animation = "fadeIn 0.2s ease-in-out reverse";
+              setTimeout(() => {
+                document.body.removeChild(modal);
+                document.head.removeChild(style);
+                startAutoplay();
+              }, 200);
+            };
+            
+            closeBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              closeModal();
+            });
+            
+            modal.addEventListener("click", closeModal);
+            
+            // ESC key to close
+            const escHandler = (e: KeyboardEvent) => {
+              if (e.key === "Escape") {
+                closeModal();
+                document.removeEventListener("keydown", escHandler);
+              }
+            };
+            document.addEventListener("keydown", escHandler);
+            
+            modal.appendChild(closeBtn);
+            modal.appendChild(zoomedImg);
+            document.body.appendChild(modal);
+          });
+        });
+
         // Start autoplay
         startAutoplay();
+
+        // Cleanup
+        return () => {
+          stopAutoplay();
+        };
       }
-    });
-  }
+  }, []);
+
   return null;
 }
 function Badge({

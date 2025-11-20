@@ -18,7 +18,7 @@ const browserInstallButtons = [
   {
     name: "Firefox",
     icon: "/images/browsers/firefox.svg",
-    url: "#",
+    url: "https://addons.mozilla.org/en-GB/firefox/addon/aiworkspace-pro/",
   },
 ];
 

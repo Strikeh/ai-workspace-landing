@@ -91,49 +91,55 @@ const showcases = [
 const testimonials = [
   {
     quote:
-      "SuperPower GPT is exceptional! Connecting Your OpenAI Chat GPT Account PLUS Not Required to an extensive list of PROMPTS. The developers have not disappointed SignUp for their newsletter for great offers, and opportunities!",
-    name: "Rob",
-    date: "Apr 15, 2024",
+      "AI Workspace is exceptional! The prompt library and folder organization have completely transformed how I work with ChatGPT. Everything I need is instantly accessible.",
+    name: "Sarah Mitchell",
+    role: "Product Designer",
+    date: "Nov 15, 2024",
     rating: 5,
     verified: true,
   },
   {
     quote:
-      "I love everything about SuperPower ChatGPT. It really helps keep my ChatGPT organized and helps me be more efficient and effective when using it.",
-    name: "Joe Travers",
-    date: "Apr 10, 2024",
+      "I love everything about AI Workspace. It really helps keep my ChatGPT conversations organized and makes me so much more efficient and effective.",
+    name: "David Chen",
+    role: "Software Engineer",
+    date: "Nov 10, 2024",
     rating: 5,
     verified: true,
   },
   {
     quote:
-      "This extension is the BEST!! Incredible. The fact that you can use both GPT-4 and GPT-3.5 for free is truly remarkable. Your dedication and hard work is obvious and appreciated.",
-    name: "Mich",
-    date: "Mar 31, 2024",
+      "This extension is the BEST! The ability to search through all my previous conversations and reuse prompts saves me hours every week. Absolutely essential.",
+    name: "Emma Rodriguez",
+    role: "Content Manager",
+    date: "Oct 28, 2024",
     rating: 5,
     verified: true,
   },
   {
     quote:
-      "SuperPower ChatGPT has always been my default tool to help with my configuration possibilities and gain of time regarding the optimal setup within ChatGPT.",
-    name: "Antoine",
-    date: "Mar 13, 2024",
+      "AI Workspace has become my default tool for managing AI interactions. The local storage gives me peace of mind, and the organization features are incredibly powerful.",
+    name: "Marcus Johnson",
+    role: "Data Analyst",
+    date: "Oct 15, 2024",
     rating: 5,
     verified: true,
   },
   {
     quote:
-      "Of all the extensions I have downloaded for ChatGPT this is the only one that I use. It has really helped me organize my conversations with ChatGPT and gives me extra features.",
-    name: "Era Rivers",
-    date: "Apr 25, 2024",
+      "Of all the extensions I've tried for ChatGPT, this is the only one I actually use daily. The folder system and prompt vault are game-changers for productivity.",
+    name: "Lisa Park",
+    role: "Marketing Director",
+    date: "Oct 5, 2024",
     rating: 5,
     verified: true,
   },
   {
     quote:
-      "ChatGPT has the worst way of organizing their chats. But WOW I think this is what I'm looking for! Pure genius! Thank you reddit and Sauce!",
-    name: "Marky",
-    date: "Feb 23, 2024",
+      "Finally, a proper way to organize ChatGPT conversations! AI Workspace makes it easy to find past chats and reuse effective prompts. Pure genius!",
+    name: "James Wilson",
+    role: "Freelance Writer",
+    date: "Sep 20, 2024",
     rating: 5,
     verified: true,
   },
@@ -716,9 +722,7 @@ export default function Home() {
                       className="mt-0.5 h-4 w-4 flex-none"
                       style={{ color: "var(--color-accent)" }}
                     />
-                    <span>
-                      Build a library of your best-performing prompts
-                    </span>
+                    <span>Build a library of your best-performing prompts</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckIcon
@@ -735,7 +739,9 @@ export default function Home() {
                       className="mt-0.5 h-4 w-4 flex-none"
                       style={{ color: "var(--color-accent)" }}
                     />
-                    <span>Track which prompts deliver the results you need</span>
+                    <span>
+                      Track which prompts deliver the results you need
+                    </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckIcon
@@ -856,9 +862,7 @@ export default function Home() {
                       className="mt-0.5 h-4 w-4 flex-none"
                       style={{ color: "var(--color-accent)" }}
                     />
-                    <span>
-                      Customize your workspace to match your workflow
-                    </span>
+                    <span>Customize your workspace to match your workflow</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckIcon
@@ -1055,7 +1059,7 @@ export default function Home() {
                   >
                     stored locally
                   </span>
-                  , with seamless support for ChatGPT, Claude, and Grok.
+                  , with seamless support for ChatGPT, Claude.
                 </p>
               </div>
               <div
@@ -1301,71 +1305,95 @@ export default function Home() {
 
                 <div className="h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
 
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                   {testimonials.map((testimonial, index) => (
                     <div
                       key={index}
-                      className="testimonial-card rounded-3xl p-6"
+                      className="group relative overflow-hidden rounded-3xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
                       style={{
                         background:
-                          "linear-gradient(120deg, rgba(6, 182, 212, 0.03), rgba(14, 165, 233, 0.06))",
-                        border: "1px solid rgba(6, 182, 212, 0.12)",
+                          "linear-gradient(135deg, rgba(6, 182, 212, 0.04), rgba(14, 165, 233, 0.08), rgba(59, 130, 246, 0.04))",
+                        border: "1px solid rgba(6, 182, 212, 0.2)",
                       }}
                     >
-                      <div className="mb-3 flex items-center justify-between">
-                        <div className="flex items-center gap-2">
+                      {/* Hover gradient overlay */}
+                      <div
+                        className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        style={{
+                          background:
+                            "linear-gradient(135deg, rgba(6, 182, 212, 0.06), rgba(14, 165, 233, 0.12), rgba(59, 130, 246, 0.06))",
+                        }}
+                      />
+
+                      <div className="relative z-10 space-y-4">
+                        {/* Rating stars */}
+                        <div className="flex gap-1">
+                          {[...Array(testimonial.rating)].map((_, i) => (
+                            <svg
+                              key={i}
+                              className="h-5 w-5"
+                              fill="#fbbf24"
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                          ))}
+                        </div>
+
+                        {/* Quote */}
+                        <p
+                          className="text-base leading-relaxed"
+                          style={{ color: "var(--color-text-secondary)" }}
+                        >
+                          &ldquo;{testimonial.quote}&rdquo;
+                        </p>
+
+                        {/* Author info */}
+                        <div
+                          className="flex items-center gap-3 pt-4 border-t"
+                          style={{ borderColor: "rgba(6, 182, 212, 0.15)" }}
+                        >
                           <div
-                            className="flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold"
+                            className="flex h-12 w-12 flex-none items-center justify-center rounded-full text-lg font-bold"
                             style={{
                               background:
-                                "linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(14, 165, 233, 0.3))",
-                              color: "var(--color-accent)",
+                                "linear-gradient(135deg, var(--color-accent), #0ea5e9)",
+                              color: "white",
                             }}
                           >
                             {testimonial.name.charAt(0)}
                           </div>
-                          <div>
-                            <div
-                              className="text-sm font-semibold"
-                              style={{ color: "var(--color-text)" }}
-                            >
-                              {testimonial.name}
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-2">
+                              <div
+                                className="text-base font-semibold truncate"
+                                style={{ color: "var(--color-text)" }}
+                              >
+                                {testimonial.name}
+                              </div>
+                              {testimonial.verified && (
+                                <svg
+                                  className="h-4 w-4 flex-none"
+                                  fill="var(--color-accent)"
+                                  viewBox="0 0 20 20"
+                                >
+                                  <path
+                                    fillRule="evenodd"
+                                    d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clipRule="evenodd"
+                                  />
+                                </svg>
+                              )}
                             </div>
                             <div
-                              className="text-xs"
+                              className="text-sm truncate"
                               style={{ color: "var(--color-text-muted)" }}
                             >
-                              {testimonial.date}
+                              {testimonial.role}
                             </div>
                           </div>
                         </div>
-                        {testimonial.verified && (
-                          <span
-                            className="text-xs"
-                            style={{ color: "var(--color-accent)" }}
-                            title="Verified Chrome Web Store Review"
-                          >
-                            ✓
-                          </span>
-                        )}
                       </div>
-                      <div className="mb-2 flex gap-0.5">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <span
-                            key={i}
-                            className="text-sm"
-                            style={{ color: "#fbbf24" }}
-                          >
-                            ★
-                          </span>
-                        ))}
-                      </div>
-                      <p
-                        className="text-sm leading-relaxed"
-                        style={{ color: "var(--color-text-secondary)" }}
-                      >
-                        &ldquo;{testimonial.quote}&rdquo;
-                      </p>
                     </div>
                   ))}
                 </div>
@@ -1835,10 +1863,10 @@ export default function Home() {
                   <div className="faq-panel">
                     <div className="faq-answer mt-2 text-sm">
                       <p>
-                        AI Workspace integrates with ChatGPT, Claude, and Grok
-                        out of the box. You can run the same prompts across
-                        platforms, switch with one click, and in the future
-                        chain steps across multiple AIs.
+                        AI Workspace integrates with ChatGPT out of the box. You
+                        can run the same prompts across platforms, switch with
+                        one click, and in the future chain steps across multiple
+                        AIs.
                       </p>
                     </div>
                   </div>

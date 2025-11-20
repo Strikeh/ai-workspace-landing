@@ -976,7 +976,7 @@ export default function Home() {
                       className="mt-1 text-xs"
                       style={{ color: "var(--color-text-secondary)" }}
                     >
-                      4,600+ happy users
+                      Trusted by many users
                     </div>
                   </div>
                 </div>
@@ -1291,7 +1291,7 @@ export default function Home() {
               >
                 Loved by{" "}
                 <span style={{ color: "var(--color-accent)" }}>
-                  4,600+ users
+                  thousands of users
                 </span>
               </h2>
               <p
@@ -1458,7 +1458,8 @@ export default function Home() {
                     className="text-sm leading-relaxed"
                     style={{ color: "var(--color-text-muted)" }}
                   >
-                    Link multiple prompts together for complex automated workflows
+                    Link multiple prompts together for complex automated
+                    workflows
                   </p>
                 </div>
               </div>
@@ -1487,7 +1488,8 @@ export default function Home() {
                     className="text-sm leading-relaxed"
                     style={{ color: "var(--color-text-muted)" }}
                   >
-                    Deep insights into your AI usage patterns and productivity metrics
+                    Deep insights into your AI usage patterns and productivity
+                    metrics
                   </p>
                 </div>
               </div>
@@ -1516,7 +1518,8 @@ export default function Home() {
                     className="text-sm leading-relaxed"
                     style={{ color: "var(--color-text-muted)" }}
                   >
-                    Native integrations for Gemini, Perplexity, Llama, and more AI platforms
+                    Native integrations for Gemini, Perplexity, Llama, and more
+                    AI platforms
                   </p>
                 </div>
               </div>
@@ -1545,7 +1548,8 @@ export default function Home() {
                     className="text-sm leading-relaxed"
                     style={{ color: "var(--color-text-muted)" }}
                   >
-                    Interface localization for Spanish, French, German, Japanese, and more
+                    Interface localization for Spanish, French, German,
+                    Japanese, and more
                   </p>
                 </div>
               </div>
@@ -1574,7 +1578,8 @@ export default function Home() {
                     className="text-sm leading-relaxed"
                     style={{ color: "var(--color-text-muted)" }}
                   >
-                    Trigger actions based on events: auto-categorize, smart-archive, scheduled exports
+                    Trigger actions based on events: auto-categorize,
+                    smart-archive, scheduled exports
                   </p>
                 </div>
               </div>
@@ -1603,7 +1608,8 @@ export default function Home() {
                     className="text-sm leading-relaxed"
                     style={{ color: "var(--color-text-muted)" }}
                   >
-                    Share prompt libraries and vault templates with your team (privacy-first)
+                    Share prompt libraries and vault templates with your team
+                    (privacy-first)
                   </p>
                 </div>
               </div>
@@ -1632,7 +1638,8 @@ export default function Home() {
                     className="text-sm leading-relaxed"
                     style={{ color: "var(--color-text-muted)" }}
                   >
-                    Transcribe voice notes, organize audio conversations, voice-to-prompt
+                    Transcribe voice notes, organize audio conversations,
+                    voice-to-prompt
                   </p>
                 </div>
               </div>
@@ -1661,7 +1668,8 @@ export default function Home() {
                     className="text-sm leading-relaxed"
                     style={{ color: "var(--color-text-muted)" }}
                   >
-                    Connect your own AI models and third-party tools via REST API
+                    Connect your own AI models and third-party tools via REST
+                    API
                   </p>
                 </div>
               </div>
@@ -1688,7 +1696,9 @@ export default function Home() {
                 </span>
               </div>
               <p className="leading-relaxed">
-                These features are in various stages of development. Want to influence the roadmap? Join our community or reach out with feedback!
+                These features are in various stages of development. Want to
+                influence the roadmap? Join our community or reach out with
+                feedback!
               </p>
             </div>
           </div>
@@ -2027,7 +2037,7 @@ export default function Home() {
                       className="mt-0.5 h-4 w-4 flex-none"
                       style={{ color: "var(--color-accent)" }}
                     />
-                    Dark/Light themes + EN/NL interface
+                    Dark/Light themes + EN/FR/NL interface
                   </li>
                 </ul>
                 <a
@@ -2161,6 +2171,13 @@ export default function Home() {
                     />
                     Priority support
                   </li>
+                  <li className="flex items-start gap-2">
+                    <CheckIcon
+                      className="mt-0.5 h-4 w-4 flex-none"
+                      style={{ color: "var(--color-accent)" }}
+                    />
+                    More features coming soon...
+                  </li>
                 </ul>
                 <a
                   href="#get-started"
@@ -2250,72 +2267,110 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="relative py-24">
-          <div className="mx-auto max-w-4xl px-6 lg:px-12">
+        <section id="contact" className="relative py-32">
+          <div className="mx-auto max-w-6xl px-6 lg:px-12">
+            {/* Floating background orbs */}
+            <div className="absolute inset-0 pointer-events-none opacity-20">
+              <div
+                className="absolute top-1/4 left-1/4 h-96 w-96 rounded-full blur-3xl"
+                style={{
+                  background: "radial-gradient(circle, rgba(6, 182, 212, 0.4), transparent 70%)",
+                }}
+              />
+              <div
+                className="absolute bottom-1/4 right-1/4 h-96 w-96 rounded-full blur-3xl"
+                style={{
+                  background: "radial-gradient(circle, rgba(14, 165, 233, 0.3), transparent 70%)",
+                }}
+              />
+            </div>
+
             <div
-              className="relative overflow-hidden rounded-3xl p-12 text-center"
+              className="relative overflow-hidden rounded-[2rem] p-16 text-center"
               style={{
-                border: "1px solid var(--color-card-border)",
-                background: "linear-gradient(135deg, rgba(6, 182, 212, 0.08), rgba(14, 165, 233, 0.12), rgba(59, 130, 246, 0.08))",
+                border: "1px solid rgba(6, 182, 212, 0.3)",
+                background:
+                  "linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(14, 165, 233, 0.15), rgba(59, 130, 246, 0.1))",
+                boxShadow: "0 20px 60px rgba(6, 182, 212, 0.15)",
               }}
             >
-              {/* Background decoration */}
+              {/* Animated gradient overlay */}
               <div
-                className="absolute inset-0 opacity-30"
+                className="absolute inset-0 opacity-40"
                 style={{
-                  background: "radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 70%)",
+                  background:
+                    "radial-gradient(circle at 30% 30%, rgba(6, 182, 212, 0.2) 0%, transparent 50%), radial-gradient(circle at 70% 70%, rgba(14, 165, 233, 0.2) 0%, transparent 50%)",
                 }}
               />
 
-              <div className="relative z-10 space-y-6">
+              <div className="relative z-10 space-y-10">
+                {/* Icon container with pulsing effect */}
                 <div className="inline-flex items-center justify-center">
-                  <div
-                    className="flex h-16 w-16 items-center justify-center rounded-2xl shadow-lg"
-                    style={{
-                      background: "linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%)",
-                    }}
-                  >
-                    <svg
-                      className="h-8 w-8 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth="2"
+                  <div className="relative">
+                    {/* Pulsing rings */}
+                    <div
+                      className="absolute inset-0 rounded-3xl animate-ping opacity-20"
+                      style={{
+                        background: "var(--color-accent)",
+                        animationDuration: "2s",
+                      }}
+                    />
+                    <div
+                      className="relative flex h-24 w-24 items-center justify-center rounded-3xl shadow-2xl"
+                      style={{
+                        background:
+                          "linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%)",
+                      }}
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
-                    </svg>
+                      <svg
+                        className="h-12 w-12 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </div>
 
-                <div>
+                <div className="max-w-2xl mx-auto">
                   <h2
-                    className="text-3xl font-bold sm:text-4xl"
-                    style={{ color: "var(--color-text)" }}
+                    className="text-4xl font-bold sm:text-5xl mb-6"
+                    style={{
+                      background: "var(--premium-title-gradient)",
+                      WebkitBackgroundClip: "text",
+                      backgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
                   >
                     Questions or Suggestions?
                   </h2>
                   <p
-                    className="mt-4 text-lg"
+                    className="text-xl leading-relaxed"
                     style={{ color: "var(--color-text-secondary)" }}
                   >
-                    We&apos;d love to hear from you! Share your feedback, report issues, or suggest new features.
+                    We&apos;d love to hear from you! Share your feedback, report
+                    issues, or suggest new features.
                   </p>
                 </div>
 
-                <div className="flex flex-col items-center gap-4">
+                <div className="flex flex-col items-center gap-6">
                   <a
                     href="mailto:ai.workspace.extension@gmail.com"
-                    className="group inline-flex items-center gap-3 rounded-2xl px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl"
+                    className="group inline-flex items-center gap-4 rounded-2xl px-12 py-5 text-lg font-bold text-white shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(6,182,212,0.3)]"
                     style={{
-                      background: "linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%)",
+                      background:
+                        "linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%)",
                     }}
                   >
                     <svg
-                      className="h-5 w-5"
+                      className="h-6 w-6"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -2329,67 +2384,137 @@ export default function Home() {
                     </svg>
                     Contact Us
                     <svg
-                      className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+                      className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-2"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
                       strokeWidth="2.5"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 5l7 7-7 7"
+                      />
                     </svg>
                   </a>
-                  
+
                   <p
-                    className="text-sm"
+                    className="text-base font-medium"
                     style={{ color: "var(--color-text-muted)" }}
                   >
                     ai.workspace.extension@gmail.com
                   </p>
                 </div>
 
-                <div className="mt-8 grid gap-4 sm:grid-cols-3">
+                <div className="mt-12 grid gap-6 sm:grid-cols-3">
                   <div
-                    className="rounded-xl p-4"
+                    className="group rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                     style={{
-                      background: "rgba(6, 182, 212, 0.05)",
-                      border: "1px solid rgba(6, 182, 212, 0.15)",
+                      background: "rgba(6, 182, 212, 0.08)",
+                      border: "1px solid rgba(6, 182, 212, 0.25)",
                     }}
                   >
-                    <div className="flex items-center justify-center gap-2 text-sm font-semibold" style={{ color: "var(--color-text)" }}>
-                      <svg className="h-5 w-5" style={{ color: "var(--color-accent)" }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                      </svg>
-                      Feature Requests
+                    <div
+                      className="flex flex-col items-center gap-3 text-center"
+                    >
+                      <div
+                        className="flex h-12 w-12 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110"
+                        style={{ background: "var(--color-accent)" }}
+                      >
+                        <svg
+                          className="h-6 w-6 text-white"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                          />
+                        </svg>
+                      </div>
+                      <span
+                        className="text-base font-bold"
+                        style={{ color: "var(--color-text)" }}
+                      >
+                        Feature Requests
+                      </span>
                     </div>
                   </div>
-                  
+
                   <div
-                    className="rounded-xl p-4"
+                    className="group rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                     style={{
-                      background: "rgba(6, 182, 212, 0.05)",
-                      border: "1px solid rgba(6, 182, 212, 0.15)",
+                      background: "rgba(6, 182, 212, 0.08)",
+                      border: "1px solid rgba(6, 182, 212, 0.25)",
                     }}
                   >
-                    <div className="flex items-center justify-center gap-2 text-sm font-semibold" style={{ color: "var(--color-text)" }}>
-                      <svg className="h-5 w-5" style={{ color: "var(--color-accent)" }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                      </svg>
-                      Bug Reports
+                    <div
+                      className="flex flex-col items-center gap-3 text-center"
+                    >
+                      <div
+                        className="flex h-12 w-12 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110"
+                        style={{ background: "var(--color-accent)" }}
+                      >
+                        <svg
+                          className="h-6 w-6 text-white"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                          />
+                        </svg>
+                      </div>
+                      <span
+                        className="text-base font-bold"
+                        style={{ color: "var(--color-text)" }}
+                      >
+                        Bug Reports
+                      </span>
                     </div>
                   </div>
-                  
+
                   <div
-                    className="rounded-xl p-4"
+                    className="group rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                     style={{
-                      background: "rgba(6, 182, 212, 0.05)",
-                      border: "1px solid rgba(6, 182, 212, 0.15)",
+                      background: "rgba(6, 182, 212, 0.08)",
+                      border: "1px solid rgba(6, 182, 212, 0.25)",
                     }}
                   >
-                    <div className="flex items-center justify-center gap-2 text-sm font-semibold" style={{ color: "var(--color-text)" }}>
-                      <svg className="h-5 w-5" style={{ color: "var(--color-accent)" }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                      </svg>
-                      General Feedback
+                    <div
+                      className="flex flex-col items-center gap-3 text-center"
+                    >
+                      <div
+                        className="flex h-12 w-12 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110"
+                        style={{ background: "var(--color-accent)" }}
+                      >
+                        <svg
+                          className="h-6 w-6 text-white"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                          />
+                        </svg>
+                      </div>
+                      <span
+                        className="text-base font-bold"
+                        style={{ color: "var(--color-text)" }}
+                      >
+                        General Feedback
+                      </span>
                     </div>
                   </div>
                 </div>

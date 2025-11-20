@@ -11,13 +11,39 @@ export default function DemoHubButton() {
   return (
     <button
       onClick={handleClick}
-      className="demo-hub-btn cta-btn cta-btn--primary px-8 py-4 text-base"
+      className="group relative inline-flex items-center gap-2.5 rounded-lg px-8 py-4 text-lg font-bold transition-all duration-300 hover:scale-105 shadow-lg overflow-hidden"
+      style={{
+        background: "rgba(6, 182, 212, 0.15)",
+        border: "2px solid rgba(6, 182, 212, 0.4)",
+        color: "var(--color-accent)",
+        backdropFilter: "blur(10px)",
+      }}
     >
-      <span className="btn-icon">
-        <PlayIcon className="h-5 w-5" />
+      {/* Animated background gradient on hover */}
+      <span
+        className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        style={{
+          background: "linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(14, 165, 233, 0.2) 100%)",
+        }}
+      />
+      
+      {/* Play icon with pulse animation */}
+      <span className="relative z-10 flex items-center justify-center">
+        <span className="absolute inset-0 animate-ping opacity-40">
+          <PlayIcon className="h-5 w-5" />
+        </span>
+        <PlayIcon className="h-5 w-5 relative" />
       </span>
-      <span className="font-bold">Explore Demo Hub</span>
-      <span className="demo-hub-pulse" aria-hidden="true" />
+      
+      <span className="relative z-10">Explore Demo Hub</span>
+      
+      {/* Shimmer effect */}
+      <span
+        className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
+        style={{
+          background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent)",
+        }}
+      />
     </button>
   );
 }

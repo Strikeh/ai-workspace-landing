@@ -31,6 +31,12 @@ const demoVideos = {
       videoId: "kriH0lG5h3o",
       thumbnail: "",
     },
+    {
+      id: 4,
+      title: "AI Workspace Demo",
+      videoId: "RIBEO7YSBXg",
+      thumbnail: "",
+    },
   ],
   "action-bar": [],
   "workspace-overlay": [],

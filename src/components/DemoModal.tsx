@@ -25,6 +25,12 @@ const demoVideos = {
       videoId: "D4xBchnUWcI",
       thumbnail: "",
     },
+    {
+      id: 3,
+      title: "One Click Prompt Execution with AIWorkspace Pro",
+      videoId: "kriH0lG5h3o",
+      thumbnail: "",
+    },
   ],
   "action-bar": [],
   "workspace-overlay": [],

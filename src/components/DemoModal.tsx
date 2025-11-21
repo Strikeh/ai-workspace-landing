@@ -33,7 +33,7 @@ const demoVideos = {
     },
     {
       id: 4,
-      title: "AI Workspace Demo",
+      title: "Managing AI Prompts With Categories & Tags",
       videoId: "RIBEO7YSBXg",
       thumbnail: "",
     },

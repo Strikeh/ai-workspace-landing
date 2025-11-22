@@ -15,24 +15,30 @@ const demoVideos = {
   workspace: [
     {
       id: 1,
+      title: "AI Workspace Pro - Complete Overview (FEATURED)",
+      videoId: "LI7teDw2qh4",
+      thumbnail: "",
+    },
+    {
+      id: 2,
       title: "Organize Your Workspace With Categories",
       videoId: "GN7Zu_jRL8U",
       thumbnail: "",
     },
     {
-      id: 2,
+      id: 3,
       title: "How to Create a New Vault in AI Workspace",
       videoId: "D4xBchnUWcI",
       thumbnail: "",
     },
     {
-      id: 3,
+      id: 4,
       title: "One Click Prompt Execution with AIWorkspace Pro",
       videoId: "kriH0lG5h3o",
       thumbnail: "",
     },
     {
-      id: 4,
+      id: 5,
       title: "Managing AI Prompts With Categories & Tags",
       videoId: "RIBEO7YSBXg",
       thumbnail: "",

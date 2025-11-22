@@ -454,7 +454,69 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="relative mx-auto w-full max-w-lg">
+              
+              {/* Hero Video Section */}
+              <div className="relative mx-auto w-full max-w-2xl lg:max-w-xl">
+                <div
+                  className="absolute inset-0 -translate-y-6 translate-x-4 rounded-3xl blur-3xl opacity-40"
+                  style={{
+                    background:
+                      "radial-gradient(circle, rgba(20, 184, 166, 0.2) 0%, transparent 70%)",
+                  }}
+                />
+                <div className="relative overflow-hidden rounded-2xl border shadow-2xl" style={{
+                  borderColor: "rgba(6, 182, 212, 0.3)",
+                  background: "rgba(6, 182, 212, 0.05)",
+                  backdropFilter: "blur(10px)",
+                }}>
+                  {/* Video Header */}
+                  <div className="flex items-center justify-between border-b px-4 py-3" style={{ 
+                    borderColor: "rgba(6, 182, 212, 0.2)",
+                    background: "rgba(6, 182, 212, 0.08)",
+                  }}>
+                    <div className="flex items-center gap-2">
+                      <svg className="h-5 w-5" style={{ color: "var(--color-accent)" }} fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                      <span className="text-sm font-semibold" style={{ color: "var(--color-text)" }}>
+                        Watch Full Demo
+                      </span>
+                    </div>
+                    <span className="text-xs font-medium px-2 py-1 rounded-full" style={{
+                      background: "var(--color-accent-light)",
+                      color: "var(--color-accent)",
+                    }}>
+                      2:30
+                    </span>
+                  </div>
+                  
+                  {/* YouTube Video Embed */}
+                  <div className="relative" style={{ paddingBottom: "56.25%" }}>
+                    <iframe
+                      src="https://www.youtube.com/embed/LI7teDw2qh4"
+                      title="AI Workspace Pro - Complete Overview"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                      style={{
+                        border: "none",
+                      }}
+                    />
+                  </div>
+                  
+                  {/* Video Description */}
+                  <div className="px-4 py-3 space-y-2" style={{ 
+                    background: "rgba(6, 182, 212, 0.03)",
+                  }}>
+                    <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
+                      Discover everything AI Workspace Pro can do. From secure vaults to smart prompt management — see how this Chrome extension streamlines your AI workflow.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Keep the original info card below for mobile or remove it */}
+              <div className="relative mx-auto w-full max-w-lg hidden">
                 <div
                   className="absolute inset-0 -translate-y-6 translate-x-4 rounded-3xl blur-3xl opacity-40"
                   style={{

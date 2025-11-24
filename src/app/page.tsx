@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import type { SVGProps } from "react";
 import { useEffect, useState } from "react";
 import LogoCarousel from "@/components/LogoCarousel";
@@ -229,6 +230,9 @@ export default function Home() {
               <a href="#pricing" className="nav-link">
                 Pricing
               </a>
+              <Link href="/blog" className="nav-link">
+                Blog
+              </Link>
               <a
                 href={installUrl || "#pricing"}
                 target="_blank"
@@ -2089,6 +2093,14 @@ export default function Home() {
                     >
                       Roadmap
                     </a>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-slate-400 hover:text-cyan-400 transition-colors"
+                      href="/blog"
+                    >
+                      Blog
+                    </Link>
                   </li>
                 </ul>
               </div>

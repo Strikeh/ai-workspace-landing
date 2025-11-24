@@ -63,6 +63,11 @@ const siteConfig = {
     "chatgpt power user tools",
     "best chrome extension for chatgpt",
     "chatgpt productivity booster",
+    // Performance & Anti-bloat keywords
+    "lightweight chatgpt extension",
+    "fast chatgpt extension",
+    "no bloatware chatgpt tool",
+    "clean chatgpt interface",
   ],
 };
 

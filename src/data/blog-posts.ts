@@ -11,6 +11,65 @@
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "how-to-create-custom-gpt",
+    title: "How to Create Your Own Custom GPT in Minutes",
+    excerpt:
+      "There is a simple trick inside ChatGPT that most overlook. Learn how to build your own AI assistant in 5 easy steps—no coding required.",
+    date: "Nov 25, 2025",
+    readTime: "3 min read",
+    category: "Guides",
+    image: "/images/blog/custom-gpt-creation.png",
+    content: `
+      <div class="bg-cyan-500/10 border border-cyan-500/20 rounded-xl p-6 mb-8">
+        <p class="text-lg font-medium text-cyan-100 m-0">
+          Most people don't realise this 👇
+        </p>
+        <p class="text-slate-300 mt-2 mb-0">
+          There is a simple trick inside ChatGPT that most overlook: You can create your own custom GPT in minutes. No coding, no setup, no technical steps.
+        </p>
+      </div>
+
+      <p>Here’s how to do it:</p>
+
+      <h2>1. Go to GPTs → Create</h2>
+      <p>Open ChatGPT on the web, click <strong>GPTs</strong> in the sidebar, then hit <strong>Create</strong>.</p>
+
+      <h2>2. Customise your GPT</h2>
+      <ul>
+        <li>Give it a name.</li>
+        <li>Write a short description.</li>
+        <li>Add instructions so it behaves the way you want.</li>
+      </ul>
+
+      <h2>3. Train it</h2>
+      <ul>
+        <li>Upload background files.</li>
+        <li>Set rules and constraints.</li>
+        <li>Define the tone and style of its outputs.</li>
+        <li>Test it with a few examples.</li>
+      </ul>
+
+      <img src="/images/blog/custom-gpt-creation.png" alt="Interface showing the configuration screen of a custom GPT" class="max-w-[85%] mx-auto rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <h2>4. Refine it</h2>
+      <p>If you want to change anything, click <strong>Edit GPT</strong> and adjust the behaviour.</p>
+
+      <div class="bg-slate-800/50 border-l-4 border-cyan-500 p-6 my-8 rounded-r-xl">
+        <h4 class="text-cyan-400 font-bold text-lg mb-2 mt-0">💡 Pro Tip</h4>
+        <p class="text-slate-300 m-0">
+          You can update your custom GPT at any time. As you use it, you'll notice areas for improvement. Just go back to "Edit GPT" and refine the instructions.
+        </p>
+      </div>
+
+      <h2>5. Use it</h2>
+      <p>That is it. You have just built your own AI assistant.</p>
+
+      <p class="text-center italic text-slate-400 mt-12">
+        Want a bespoke custom GPT created? <a href="mailto:contact@aiworkspace.com">Send me a message</a>.
+      </p>
+    `,
+  },
+  {
     slug: "why-local-privacy-matters-for-ai",
     title: "Why Local Privacy Matters for AI Workflows",
     excerpt:

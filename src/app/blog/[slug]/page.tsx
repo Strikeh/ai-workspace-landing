@@ -126,8 +126,17 @@ export default async function BlogPost({ params }: Props) {
           </header>
 
           {/* Content */}
-          <div 
-            className="prose prose-invert prose-lg max-w-none prose-headings:text-slate-100 prose-p:text-slate-300 prose-a:text-cyan-400 prose-a:no-underline hover:prose-a:underline prose-strong:text-white prose-code:text-cyan-300 prose-code:bg-slate-800/50 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none"
+          <div
+            className="prose prose-invert prose-lg max-w-none 
+            prose-headings:font-bold prose-headings:text-slate-100
+            prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-cyan-400
+            prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-white
+            prose-p:text-slate-300 prose-p:leading-relaxed
+            prose-a:text-cyan-400 prose-a:no-underline hover:prose-a:underline 
+            prose-strong:text-white prose-strong:font-bold
+            prose-ul:my-6 prose-li:my-2 prose-li:marker:text-cyan-500
+            prose-code:text-cyan-300 prose-code:bg-slate-800/50 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
+            prose-blockquote:border-l-4 prose-blockquote:border-cyan-500 prose-blockquote:bg-slate-800/30 prose-blockquote:p-6 prose-blockquote:rounded-r-lg prose-blockquote:not-italic prose-blockquote:text-slate-200"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
@@ -137,7 +146,8 @@ export default async function BlogPost({ params }: Props) {
               Ready to upgrade your workflow?
             </h3>
             <p className="text-slate-300 mb-8 max-w-lg mx-auto">
-              Join thousands of power users who trust AI Workspace to organize their prompts and conversations securely.
+              Join thousands of power users who trust AI Workspace to organize
+              their prompts and conversations securely.
             </p>
             <a
               href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"

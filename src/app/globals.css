@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
   /* Core theme colors - Deeper, richer dark theme */
@@ -9,13 +10,13 @@
   --color-text-blue-accent: #38bdf8; /* Sky 400 */
   --color-text-secondary: #94a3b8; /* Slate 400 */
   --color-text-muted: #64748b; /* Slate 500 */
-  
+
   /* Brand Colors - Cyan/Sky/Blue */
   --color-accent: #06b6d4; /* Cyan 500 */
   --color-accent-hover: #0891b2; /* Cyan 600 */
   --color-accent-light: rgba(6, 182, 212, 0.15);
   --color-accent-glow: rgba(6, 182, 212, 0.5);
-  
+
   /* Surface colors - Glassmorphism base */
   --color-surface: rgba(30, 41, 59, 0.4);
   --color-surface-hover: rgba(30, 41, 59, 0.6);
@@ -25,16 +26,29 @@
   /* Button colors */
   --color-btn-primary: #06b6d4;
   --color-btn-primary-hover: #0891b2;
-  
+
   /* Card colors */
   --color-card-bg: rgba(15, 23, 42, 0.6);
   --color-card-border: rgba(255, 255, 255, 0.08);
-  
+
   /* Gradients */
-  --premium-bg-gradient: radial-gradient(circle at 50% 0%, #1e293b 0%, #020617 100%);
-  --premium-title-gradient: linear-gradient(135deg, #22d3ee 0%, #38bdf8 50%, #818cf8 100%);
+  --premium-bg-gradient: radial-gradient(
+    circle at 50% 0%,
+    #1e293b 0%,
+    #020617 100%
+  );
+  --premium-title-gradient: linear-gradient(
+    135deg,
+    #22d3ee 0%,
+    #38bdf8 50%,
+    #818cf8 100%
+  );
   --premium-icon-gradient: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
-  --premium-glass-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  --premium-glass-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
 
   --background: var(--color-bg-primary);
   --foreground: var(--color-text);
@@ -50,11 +64,19 @@ body {
   min-height: 100vh;
   background-color: var(--color-bg-primary);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont;
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont;
   overflow-x: hidden;
-  background-image: 
-    radial-gradient(circle at 15% 50%, rgba(6, 182, 212, 0.08), transparent 25%),
-    radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.08), transparent 25%);
+  background-image: radial-gradient(
+      circle at 15% 50%,
+      rgba(6, 182, 212, 0.08),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 85% 30%,
+      rgba(59, 130, 246, 0.08),
+      transparent 25%
+    );
 }
 
 /* Bento Grid Utilities */
@@ -102,8 +124,7 @@ body {
 .bento-card:hover {
   transform: translateY(-4px);
   border-color: var(--color-surface-border-hover);
-  box-shadow: 
-    0 20px 40px -10px rgba(0, 0, 0, 0.5),
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5),
     0 0 20px -10px rgba(6, 182, 212, 0.3);
 }
 
@@ -446,8 +467,7 @@ details[open].faq-card {
   background: rgba(30, 41, 59, 0.5); /* Slate 800 transparent - Lighter */
   border: 1px solid rgba(6, 182, 212, 0.2);
   box-shadow: 0 0 0 1px rgba(6, 182, 212, 0.05),
-              0 10px 30px -10px rgba(0, 0, 0, 0.5),
-              inset 0 0 20px rgba(6, 182, 212, 0.05);
+    0 10px 30px -10px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(6, 182, 212, 0.05);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -1662,8 +1682,8 @@ details[open].faq-card {
   background: rgba(15, 23, 42, 0.95); /* Slate 900 */
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 24px;
-  box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.5), 
-              0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
   backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
@@ -1834,7 +1854,6 @@ details[open].faq-card {
     left: 34px;
   }
 }
-
 
 /* Tabs - premium */
 .demo-modal-tabs {

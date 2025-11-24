@@ -29,18 +29,11 @@ export default function LogoCarousel() {
   const logos = [...LOGOS, ...LOGOS];
 
   return (
-    <section
-      className="logo-carousel-section py-16 overflow-visible border-y"
-      style={{
-        background:
-          "linear-gradient(180deg, rgba(20, 184, 166, 0.02) 0%, transparent 50%, rgba(20, 184, 166, 0.02) 100%)",
-        borderColor: "rgba(20, 184, 166, 0.08)",
-      }}
-    >
-      <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
-        <div className="text-center mb-8">
+    <section className="py-24 relative overflow-hidden">
+      <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16 relative z-10">
+        <div className="text-center mb-10">
           <p
-            className="text-xs font-semibold uppercase tracking-[0.3em] mb-2"
+            className="text-xs font-bold uppercase tracking-[0.3em] mb-3"
             style={{ color: "var(--color-accent)" }}
           >
             Trusted Globally
@@ -52,27 +45,22 @@ export default function LogoCarousel() {
             Our users work at these companies
           </p>
         </div>
-      </div>
-      {/* Full-bleed band */}
-      <div className="full-bleed">
+
         <div className="logo-band">
-          <div className="relative">
-            <div className="logo-marquee" aria-hidden="true">
+          <div className="relative overflow-hidden">
+            {/* Gradient masks for smooth fade out at edges */}
+            <div className="absolute left-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-r from-[#1e293b] to-transparent pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-l from-[#1e293b] to-transparent pointer-events-none"></div>
+
+            <div className="logo-marquee flex items-center" aria-hidden="true">
               {logos.map((logo, i) => (
-                <div key={`${logo.src}-${i}`} className="logo-item">
-                  <span className="sr-only">{logo.alt}</span>
+                <div key={`${logo.src}-${i}`} className="logo-item flex-shrink-0 mx-8 transition-opacity duration-300">
                   <Image
                     src={logo.src}
                     alt={logo.alt}
-                    width={logo.width ?? 200}
-                    height={logo.height ?? 64}
-                    className="h-auto logo-image"
-                    style={{
-                      height: "clamp(32px, 5.5vw, 64px)",
-                      width: "auto",
-                      objectFit: "contain",
-                    }}
-                    priority={i < 6}
+                    width={logo.width ?? 160}
+                    height={logo.height ?? 50}
+                    className="h-8 w-auto object-contain logo-image"
                   />
                 </div>
               ))}

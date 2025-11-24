@@ -11,10 +11,10 @@ export default function DemoHubButton() {
   return (
     <button
       onClick={handleClick}
-      className="group relative inline-flex items-center gap-2.5 rounded-lg px-8 py-4 text-lg font-bold transition-all duration-300 hover:scale-105 shadow-lg overflow-hidden"
+      className="group relative inline-flex items-center justify-center gap-2.5 rounded-xl px-8 py-4 text-lg font-bold transition-all duration-300 hover:scale-[1.02] shadow-lg overflow-hidden whitespace-nowrap w-full sm:w-auto"
       style={{
-        background: "rgba(6, 182, 212, 0.15)",
-        border: "2px solid rgba(6, 182, 212, 0.4)",
+        background: "rgba(6, 182, 212, 0.1)",
+        border: "1px solid rgba(6, 182, 212, 0.3)",
         color: "var(--color-accent)",
         backdropFilter: "blur(10px)",
       }}

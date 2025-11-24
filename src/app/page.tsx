@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import Image from "next/image";
-import type { ReactNode, SVGProps } from "react";
+import type { SVGProps } from "react";
 import { useEffect, useState } from "react";
 import LogoCarousel from "@/components/LogoCarousel";
 import DemoModal from "@/components/DemoModal";
@@ -29,19 +29,19 @@ const browserInstallButtons = [
 // Browser detection function
 function detectBrowser() {
   if (typeof window === "undefined") return "chrome";
-  
+
   const userAgent = navigator.userAgent.toLowerCase();
-  
+
   // Check for Edge (must be before Chrome check as Edge includes Chrome in UA)
   if (userAgent.includes("edg/") || userAgent.includes("edge/")) {
     return "edge";
   }
-  
+
   // Check for Firefox
   if (userAgent.includes("firefox")) {
     return "firefox";
   }
-  
+
   // Default to Chrome (includes Chrome, Brave, Opera, and other Chromium browsers)
   return "chrome";
 }
@@ -49,7 +49,7 @@ function detectBrowser() {
 // Get install URL based on detected browser
 function getBrowserInstallUrl() {
   const browser = detectBrowser();
-  
+
   switch (browser) {
     case "edge":
       return "https://microsoftedge.microsoft.com/addons/detail/aiworkspace-pro/kbdckiagphjeldfdfeobdhcajkpidong";
@@ -75,7 +75,7 @@ const showcases = [
     imageAlt: "AI Workspace Prompt Vault overview",
   },
   {
-    title: "Image Gallery for all your AI visuals",
+    title: "Image Gallery for your ChatGPT visuals",
     description:
       "Browse every image used or generated in your conversations — all in one secure gallery. Jump back into the original chat with one click, download files instantly, or organize them into folders for later use.",
     highlights: [
@@ -122,7 +122,7 @@ const showcases = [
       "Floating action menu for instant access to core tools",
       "One-click print, message stats, and advanced export options",
     ],
-    image: "/images/chatgpt.png",
+    image: "/images/carousel/BrandBird 2025-11-20 11.36.08.png",
     imageAlt: "AI Workspace features injected into chatgpt.com UI",
   },
 ];
@@ -157,7 +157,7 @@ const testimonials = [
   },
   {
     quote:
-      "AI Workspace has become my default tool for managing AI interactions. The local storage gives me peace of mind, and the organization features are incredibly powerful.",
+      "AI Workspace has become my default tool for managing my ChatGPT workflow. The local storage gives me peace of mind, and the organization features are incredibly powerful.",
     name: "Marcus Johnson",
     role: "Data Analyst",
     date: "Oct 15, 2024",
@@ -229,7 +229,12 @@ export default function Home() {
               <a href="#pricing" className="nav-link">
                 Pricing
               </a>
-              <a href={installUrl || "#pricing"} target="_blank" rel="noopener noreferrer" className="nav-cta">
+              <a
+                href={installUrl || "#pricing"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-cta"
+              >
                 Get started free
               </a>
             </div>
@@ -238,49 +243,54 @@ export default function Home() {
       </nav>
 
       <main>
-        <section className="hero-section relative isolate overflow-hidden">
-          {/* Lighter, more subtle gradient orbs */}
-          <div
-            className="absolute inset-x-0 top-[-20%] z-0 h-[420px] opacity-30 blur-3xl"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(6, 182, 212, 0.25) 0%, transparent 70%)",
-            }}
-          />
-          <div
-            className="absolute inset-x-0 top-[-10%] z-0 h-[320px] opacity-25 blur-3xl"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(20, 184, 166, 0.2) 0%, transparent 70%)",
-            }}
-          />
-          {/* Subtle accent line */}
-          <div
-            className="absolute inset-x-0 top-0 z-0 h-px"
-            style={{
-              background:
-                "linear-gradient(90deg, transparent, rgba(20, 184, 166, 0.2) 50%, transparent)",
-            }}
-          />
+        <section className="hero-section relative isolate overflow-hidden min-h-[90vh] flex items-center">
+          {/* Premium Background Effects */}
+          <div className="absolute inset-0 z-0">
+            <div
+              className="absolute top-[-10%] left-[20%] w-[600px] h-[600px] rounded-full opacity-20 blur-[120px]"
+              style={{
+                background:
+                  "radial-gradient(circle, var(--color-accent) 0%, transparent 70%)",
+              }}
+            />
+            <div
+              className="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] rounded-full opacity-15 blur-[100px]"
+              style={{
+                background:
+                  "radial-gradient(circle, var(--color-text-blue-accent) 0%, transparent 70%)",
+              }}
+            />
+            <div
+              className="absolute top-[40%] left-[-10%] w-[400px] h-[400px] rounded-full opacity-10 blur-[80px]"
+              style={{
+                background:
+                  "radial-gradient(circle, #8b5cf6 0%, transparent 70%)",
+              }}
+            />
+          </div>
+
           <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-16 px-6 pb-32 pt-20 md:px-10 lg:px-16">
-            <div className="flex flex-col gap-16 lg:flex-row lg:items-center lg:justify-between">
-              <div className="max-w-2xl space-y-10">
-                <div
-                  className="flex flex-wrap items-center gap-3 text-sm"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  <Badge icon={ShieldIcon}>Local only. Zero telemetry.</Badge>
-                  <Badge icon={SparklesIcon}>ChatGPT — Claude — Grok</Badge>
+            <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
+              <div className="max-w-2xl space-y-8">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-sm text-slate-300">
+                  <span className="flex h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
+                  <span>v2.0 Now Available</span>
+                  <span className="mx-2 text-white/20">|</span>
+                  <span className="text-cyan-400 font-medium">
+                    100% Local Privacy
+                  </span>
                 </div>
+
                 <h1
-                  className="hero-title text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
+                  className="hero-title text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl"
                   style={{
                     color: "var(--color-text)",
-                    lineHeight: "1.2",
+                    lineHeight: "1.1",
                   }}
                 >
-                  Supercharge Your{" "}
+                  Your ChatGPT Workspace <br />
                   <span
+                    className="relative inline-block"
                     style={{
                       background: "var(--premium-title-gradient)",
                       backgroundClip: "text",
@@ -288,421 +298,159 @@ export default function Home() {
                       WebkitTextFillColor: "transparent",
                     }}
                   >
-                    ChatGPT Productivity
-                  </span>{" "}
-                  with Powerful{" "}
-                  <span
-                    style={{
-                      background: "var(--premium-title-gradient)",
-                      backgroundClip: "text",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                    }}
-                  >
-                    Organization Tools
+                    Reimagined
+                    <svg
+                      className="absolute -bottom-2 left-0 w-full h-3 text-cyan-500 opacity-50"
+                      viewBox="0 0 100 10"
+                      preserveAspectRatio="none"
+                    >
+                      <path
+                        d="M0 5 Q 50 10 100 5"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        fill="none"
+                      />
+                    </svg>
                   </span>
                 </h1>
-                <p
-                  className="hero-subtitle text-lg leading-relaxed sm:text-xl"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  Take complete control of your ChatGPT workflow. Organize
-                  conversations into folders, save and reuse prompts instantly,
-                  search across all your chats, and export everything — all with{" "}
-                  <span
-                    style={{ color: "var(--color-accent)", fontWeight: 600 }}
-                  >
-                    local-first privacy
-                  </span>
-                  . The browser extension that makes ChatGPT work the way{" "}
-                  <span
-                    style={{ color: "var(--color-accent)", fontWeight: 600 }}
-                  >
-                    you
-                  </span>{" "}
-                  do.
+
+                <p className="hero-subtitle text-xl leading-relaxed text-slate-400 max-w-xl">
+                  The ultimate browser extension for <span className="text-cyan-400 font-medium">power users</span>. Take <span className="text-white font-medium">complete control</span> of your ChatGPT workflow. <span className="text-cyan-400 font-medium">Organize conversations</span> into folders, save and reuse prompts instantly, search across all your chats, and export everything.
                 </p>
-                <div className="space-y-8">
+
+                <div className="flex flex-col sm:flex-row gap-4 pt-6 w-full sm:w-auto">
                   {/* Primary CTA */}
-                  <div className="flex flex-wrap items-center gap-4 relative">
-                    <div className="ambient-glow" aria-hidden />
+                  <div className="relative group w-full sm:w-auto">
+                    <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-200"></div>
                     <a
                       href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-lg px-8 py-4 text-lg font-bold transition-all hover:scale-105 shadow-xl"
+                      className="relative flex items-center justify-center gap-3 rounded-xl px-8 py-4 text-lg font-bold text-white transition-all hover:scale-[1.02] whitespace-nowrap w-full sm:w-auto"
                       style={{
-                        background: "var(--color-accent)",
-                        color: "#ffffff",
+                        background:
+                          "linear-gradient(135deg, #06b6d4 0%, #2563eb 100%)",
                       }}
                     >
                       <svg
-                        className="h-5 w-5"
+                        className="h-6 w-6 flex-shrink-0"
                         fill="currentColor"
-                        viewBox="0 0 20 20"
+                        viewBox="0 0 24 24"
                       >
-                        <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
                       </svg>
-                      Install AI Workspace Free
+                      Add to Browser
                     </a>
-                    <DemoHubButton />
                   </div>
-                  <p
-                    className="text-sm"
-                    style={{ color: "var(--color-text-muted)" }}
-                  >
-                    For Chrome, Edge & Firefox • Watch Video Demos
-                  </p>
+                  <DemoHubButton />
+                </div>
 
-                  {/* Browser Installation Buttons - Secondary */}
-                  <div className="space-y-3">
-                    <div className="install-buttons flex flex-wrap items-center gap-3">
-                      {browserInstallButtons.map((browser) => (
-                        <a
-                          key={browser.name}
-                          href={browser.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={`Add AI Workspace to ${browser.name}`}
-                          className="browser-install-btn"
+                <div className="flex items-center gap-6 text-sm text-slate-500 pt-4">
+                  <div className="flex items-center gap-2">
+                    <Image
+                      src="/images/browsers/chrome.svg"
+                      alt="Chrome"
+                      width={20}
+                      height={20}
+                      className="opacity-70 grayscale hover:grayscale-0 transition-all"
+                    />
+                    <Image
+                      src="/images/browsers/edge.svg"
+                      alt="Edge"
+                      width={20}
+                      height={20}
+                      className="opacity-70 grayscale hover:grayscale-0 transition-all"
+                    />
+                    <Image
+                      src="/images/browsers/firefox.svg"
+                      alt="Firefox"
+                      width={20}
+                      height={20}
+                      className="opacity-70 grayscale hover:grayscale-0 transition-all"
+                    />
+                  </div>
+                  <div className="h-4 w-px bg-white/10"></div>
+                  <div className="flex items-center gap-1">
+                    <div className="flex text-yellow-500">
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
+                          className="w-4 h-4 fill-current"
+                          viewBox="0 0 20 20"
                         >
-                          <Image
-                            src={browser.icon}
-                            alt={`${browser.name} icon`}
-                            width={20}
-                            height={20}
-                            className="h-5 w-5"
-                          />
-                          <span>Add to {browser.name}</span>
-                        </a>
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
                       ))}
                     </div>
-
-                    {/* Social Proof Badge */}
-                    <div
-                      className="inline-flex items-center gap-3 rounded-full px-4 py-2.5"
-                      style={{
-                        background: "rgba(6, 182, 212, 0.08)",
-                        border: "1px solid rgba(6, 182, 212, 0.2)",
-                      }}
-                    >
-                      {/* Avatar Stack */}
-                      <div className="flex -space-x-2">
-                        <div
-                          className="h-7 w-7 rounded-full border-2 border-white/20 flex items-center justify-center overflow-hidden"
-                          style={{
-                            background:
-                              "linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)",
-                          }}
-                        >
-                          <Image
-                            src="/images/people/person%201.png"
-                            alt="User avatar"
-                            width={28}
-                            height={28}
-                            className="h-full w-full object-cover"
-                          />
-                        </div>
-                        <div
-                          className="h-7 w-7 rounded-full border-2 border-white/20 flex items-center justify-center overflow-hidden"
-                          style={{
-                            background:
-                              "linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%)",
-                          }}
-                        >
-                          <Image
-                            src="/images/people/person%202.png"
-                            alt="User avatar"
-                            width={28}
-                            height={28}
-                            className="h-full w-full object-cover"
-                          />
-                        </div>
-                        <div
-                          className="h-7 w-7 rounded-full border-2 border-white/20 flex items-center justify-center overflow-hidden"
-                          style={{
-                            background:
-                              "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)",
-                          }}
-                        >
-                          <Image
-                            src="/images/people/person%203.png"
-                            alt="User avatar"
-                            width={28}
-                            height={28}
-                            className="h-full w-full object-cover"
-                          />
-                        </div>
-                      </div>
-
-                      {/* Text */}
-                      <div className="flex flex-col">
-                        <span
-                          className="text-xs font-semibold"
-                          style={{ color: "var(--color-text)" }}
-                        >
-                          Join thousands of professionals
-                        </span>
-                        <span
-                          className="text-[10px]"
-                          style={{ color: "var(--color-text-muted)" }}
-                        >
-                          using this resource
-                        </span>
-                      </div>
-                    </div>
+                    <span className="text-slate-400">4.9/5 Rating</span>
                   </div>
                 </div>
               </div>
-              
-              {/* Hero Video Section */}
-              <div className="relative mx-auto w-full max-w-2xl lg:max-w-xl">
-                <div
-                  className="absolute inset-0 -translate-y-6 translate-x-4 rounded-3xl blur-3xl opacity-40"
-                  style={{
-                    background:
-                      "radial-gradient(circle, rgba(20, 184, 166, 0.2) 0%, transparent 70%)",
-                  }}
-                />
-                <div className="relative overflow-hidden rounded-2xl border shadow-2xl" style={{
-                  borderColor: "rgba(6, 182, 212, 0.3)",
-                  background: "rgba(6, 182, 212, 0.05)",
-                  backdropFilter: "blur(10px)",
-                }}>
+
+              {/* Hero Video Section - Floating Glass Card */}
+              <div className="relative w-full max-w-2xl lg:max-w-xl perspective-1000">
+                {/* Glow behind video */}
+                <div className="absolute inset-0 bg-cyan-500/20 blur-[60px] rounded-full transform translate-y-10"></div>
+
+                <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-slate-900/50 backdrop-blur-xl transform transition-transform hover:scale-[1.01] duration-500">
                   {/* Video Header */}
-                  <div className="flex items-center justify-between border-b px-4 py-3" style={{ 
-                    borderColor: "rgba(6, 182, 212, 0.2)",
-                    background: "rgba(6, 182, 212, 0.08)",
-                  }}>
-                    <div className="flex items-center gap-2">
-                      <svg className="h-5 w-5" style={{ color: "var(--color-accent)" }} fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                      <span className="text-sm font-semibold" style={{ color: "var(--color-text)" }}>
-                        Watch Full Demo
+                  <div className="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-white/5">
+                    <div className="flex gap-2">
+                      <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+                      <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                      <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+                    </div>
+                    <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-black/20 border border-white/5">
+                      <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
+                      <span className="text-xs font-medium text-slate-300">
+                        Live Demo
                       </span>
                     </div>
-                    <span className="text-xs font-medium px-2 py-1 rounded-full" style={{
-                      background: "var(--color-accent-light)",
-                      color: "var(--color-accent)",
-                    }}>
-                      2:30
-                    </span>
                   </div>
-                  
+
                   {/* YouTube Video Embed */}
-                  <div className="relative" style={{ paddingBottom: "56.25%" }}>
+                  <div className="relative aspect-video bg-black">
                     <iframe
-                      src="https://www.youtube.com/embed/LI7teDw2qh4"
+                      src="https://www.youtube.com/embed/LI7teDw2qh4?autoplay=0&controls=1&rel=0"
                       title="AI Workspace Pro - Complete Overview"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                       className="absolute inset-0 w-full h-full"
-                      style={{
-                        border: "none",
-                      }}
                     />
                   </div>
-                  
-                  {/* Video Description */}
-                  <div className="px-4 py-3 space-y-2" style={{ 
-                    background: "rgba(6, 182, 212, 0.03)",
-                  }}>
-                    <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
-                      Discover everything AI Workspace Pro can do. From secure vaults to smart prompt management — see how this Chrome extension streamlines your AI workflow.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Keep the original info card below for mobile or remove it */}
-              <div className="relative mx-auto w-full max-w-lg hidden">
-                <div
-                  className="absolute inset-0 -translate-y-6 translate-x-4 rounded-3xl blur-3xl opacity-40"
-                  style={{
-                    background:
-                      "radial-gradient(circle, rgba(20, 184, 166, 0.2) 0%, transparent 70%)",
-                  }}
-                />
-                <div className="premium-info-card relative overflow-hidden rounded-3xl border shadow-2xl backdrop-blur">
-                  {/* Lighter animated background blobs */}
-                  <div
-                    aria-hidden
-                    className="pointer-events-none absolute inset-0 z-0"
-                  >
-                    <div
-                      className="card-blob blob-1 absolute -left-10 -top-12 h-40 w-56 blur-3xl opacity-50"
-                      style={{
-                        background:
-                          "radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, transparent 70%)",
-                      }}
-                    />
-                    <div
-                      className="card-blob blob-2 absolute -right-14 -bottom-12 h-36 w-52 blur-3xl opacity-50"
-                      style={{
-                        background:
-                          "radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%)",
-                      }}
-                    />
-                  </div>
-                  <div
-                    className="relative z-10 flex items-center justify-between border-b px-6 py-5"
-                    style={{ borderColor: "var(--color-border)" }}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div
-                        className="flex h-10 w-10 items-center justify-center rounded-xl"
-                        style={{
-                          background:
-                            "linear-gradient(135deg, rgba(20, 184, 166, 0.12), rgba(20, 184, 166, 0.05))",
-                          border: "1px solid rgba(20, 184, 166, 0.2)",
-                        }}
-                      >
-                        <ShieldIcon
-                          className="h-5 w-5"
-                          style={{ color: "var(--color-accent)" }}
-                        />
-                      </div>
+
+                  {/* Video Footer */}
+                  <div className="px-6 py-4 bg-gradient-to-b from-slate-900/50 to-slate-900/80 backdrop-blur-md border-t border-white/5">
+                    <div className="flex items-center justify-between">
                       <div>
-                        <div
-                          className="text-xs font-semibold uppercase tracking-wider"
-                          style={{ color: "var(--color-text)" }}
-                        >
-                          Your Complete AI Workspace
-                        </div>
-                        <div
-                          className="text-xs font-bold mt-0.5"
-                          style={{
-                            color: "var(--color-accent)",
-                          }}
-                        >
-                          100% Local, 0% Cloud
-                        </div>
+                        <h3 className="text-sm font-semibold text-white">
+                          Product Walkthrough
+                        </h3>
+                        <p className="text-xs text-slate-400">
+                          See how AI Workspace transforms your workflow
+                        </p>
                       </div>
-                    </div>
-                    <span className="pill-badge">Private</span>
-                  </div>
-                  <div className="relative z-10 space-y-8 px-6 py-8">
-                    <div className="space-y-3">
-                      <h3
-                        className="info-title text-base font-semibold flex items-center gap-2"
-                        style={{
-                          background: "var(--premium-title-gradient)",
-                          backgroundClip: "text",
-                          WebkitBackgroundClip: "text",
-                          WebkitTextFillColor: "transparent",
-                        }}
-                      >
-                        <LayersIcon
-                          className="h-5 w-5"
-                          style={{ color: "var(--color-accent)" }}
-                        />
-                        All-in-One AI Productivity Hub
-                      </h3>
-                      <p
-                        className="text-sm leading-relaxed"
-                        style={{ color: "var(--color-text-secondary)" }}
-                      >
-                        Centralizes{" "}
-                        <span
-                          style={{
-                            color: "var(--color-text)",
-                            fontWeight: 500,
-                          }}
+                      <button className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors border border-white/5">
+                        <svg
+                          className="w-5 h-5 text-cyan-400"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
                         >
-                          prompts, conversations, notes, images, and GPTs
-                        </span>{" "}
-                        into one secure hub. Everything you need without
-                        switching tabs.
-                      </p>
-                    </div>
-
-                    <div className="h-px bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent" />
-
-                    <div className="space-y-3">
-                      <h3
-                        className="info-title text-base font-semibold flex items-center gap-2"
-                        style={{
-                          background: "var(--premium-title-gradient)",
-                          backgroundClip: "text",
-                          WebkitBackgroundClip: "text",
-                          WebkitTextFillColor: "transparent",
-                        }}
-                      >
-                        <ShieldIcon
-                          className="h-5 w-5"
-                          style={{ color: "var(--color-accent)" }}
-                        />
-                        Privacy-First, Multi-Platform Freedom
-                      </h3>
-                      <p
-                        className="text-sm leading-relaxed"
-                        style={{ color: "var(--color-text-secondary)" }}
-                      >
-                        <span
-                          style={{
-                            color: "var(--color-text)",
-                            fontWeight: 500,
-                          }}
-                        >
-                          Nothing is sent to the cloud
-                        </span>
-                        . Your data stays encrypted on your device, while you
-                        enjoy seamless integrations with{" "}
-                        <span
-                          style={{
-                            color: "var(--color-accent)",
-                            fontWeight: 500,
-                          }}
-                        >
-                          ChatGPT, Claude, and Grok
-                        </span>
-                        .
-                      </p>
-                    </div>
-
-                    <div className="h-px bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent" />
-
-                    <div className="info-subpanel relative rounded-2xl border p-5 space-y-3">
-                      <div
-                        className="flex items-center gap-2 text-sm font-semibold"
-                        style={{ color: "var(--color-accent)" }}
-                      >
-                        <SparklesIcon className="h-4 w-4" />
-                        Why Privacy Matters
-                      </div>
-                      <ul
-                        className="space-y-2.5 text-sm"
-                        style={{ color: "var(--color-text-secondary)" }}
-                      >
-                        <li className="flex items-start gap-3">
-                          <CheckIcon
-                            className="h-4 w-4 flex-shrink-0 mt-0.5"
-                            style={{ color: "var(--color-accent)" }}
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
                           />
-                          <span>
-                            All data stays on your device — never uploaded
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <CheckIcon
-                            className="h-4 w-4 flex-shrink-0 mt-0.5"
-                            style={{ color: "var(--color-accent)" }}
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                           />
-                          <span>
-                            End-to-end encrypted vaults for sensitive work
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <CheckIcon
-                            className="h-4 w-4 flex-shrink-0 mt-0.5"
-                            style={{ color: "var(--color-accent)" }}
-                          />
-                          <span>
-                            No telemetry, no tracking, no third-party access
-                          </span>
-                        </li>
-                      </ul>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -716,19 +464,38 @@ export default function Home() {
 
         <section
           id="features"
-          className="border-t py-24 section section-secondary-blue"
-          style={{ borderColor: "var(--color-border)" }}
+          className="border-t py-32 section relative overflow-hidden"
+          style={{
+            borderColor: "var(--color-border)",
+            background: "var(--color-bg-secondary)",
+          }}
         >
-          <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
-            <div className="max-w-3xl space-y-5 mb-16">
-              <p
-                className="text-sm font-semibold uppercase tracking-[0.3em]"
-                style={{ color: "var(--color-accent)" }}
-              >
+          {/* Background Glows */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
+            <div
+              className="absolute top-[20%] left-[10%] w-[500px] h-[500px] rounded-full opacity-20 blur-[100px]"
+              style={{
+                background:
+                  "radial-gradient(circle, var(--color-accent) 0%, transparent 70%)",
+              }}
+            />
+            <div
+              className="absolute bottom-[20%] right-[10%] w-[400px] h-[400px] rounded-full opacity-20 blur-[100px]"
+              style={{
+                background:
+                  "radial-gradient(circle, var(--color-text-blue-accent) 0%, transparent 70%)",
+              }}
+            />
+          </div>
+
+          <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16 relative z-10">
+            <div className="max-w-3xl space-y-6 mb-20">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-bold uppercase tracking-widest">
+                <SparklesIcon className="w-3 h-3" />
                 Platform Features
-              </p>
+              </div>
               <h2
-                className="text-3xl font-semibold tracking-tight sm:text-4xl"
+                className="text-4xl md:text-5xl font-bold tracking-tight"
                 style={{ color: "var(--color-text)" }}
               >
                 Everything you need to{" "}
@@ -740,376 +507,192 @@ export default function Home() {
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  master AI workflows
+                  master ChatGPT
                 </span>
               </h2>
               <p
-                className="text-lg leading-relaxed"
+                className="text-xl leading-relaxed max-w-2xl"
                 style={{ color: "var(--color-text-secondary)" }}
               >
-                From prompt management to conversation organization,{" "}
-                <span style={{ color: "var(--color-text)", fontWeight: 500 }}>
-                  AI Workspace provides powerful tools
-                </span>{" "}
-                to enhance your productivity with ChatGPT, Claude, and more.
+                From prompt management to conversation organization, AI
+                Workspace provides the missing tools for ChatGPT.
               </p>
             </div>
 
-            <div className="mt-12 h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
+            {/* Bento Grid Layout */}
+            <div className="bento-grid">
+              {/* Card 1: Save Time (Large) */}
+              <div className="bento-card col-span-1 md:col-span-2 lg:col-span-2 row-span-2">
+                <div className="bento-card-content gap-8">
+                  <div className="flex items-center gap-4">
+                    <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/20">
+                      <SparkIcon className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white">
+                      Save Time & Boost Productivity
+                    </h3>
+                  </div>
 
-            <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {/* Save Time & Boost Productivity */}
-              <div className="feature-card flex h-full flex-col gap-6 p-8 transition-all">
-                <div className="flex items-center gap-3">
-                  <span className="feature-icon">
-                    <SparkIcon className="h-5 w-5" />
-                  </span>
-                  <h3 className="feature-title text-xl font-semibold">
-                    Save Time & Boost Productivity
-                  </h3>
+                  <div className="grid md:grid-cols-2 gap-8 h-full">
+                    <div className="space-y-4">
+                      <p className="text-slate-400 leading-relaxed">
+                        Stop wasting time searching for lost prompts. Our
+                        advanced vault system keeps your most effective
+                        workflows just one click away.
+                      </p>
+                      <ul className="space-y-3">
+                        <li className="flex items-center gap-3 text-slate-300">
+                          <div className="h-6 w-6 rounded-full bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20">
+                            <CheckIcon className="h-3 w-3 text-cyan-400" />
+                          </div>
+                          <span>Never retype prompts again</span>
+                        </li>
+                        <li className="flex items-center gap-3 text-slate-300">
+                          <div className="h-6 w-6 rounded-full bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20">
+                            <CheckIcon className="h-3 w-3 text-cyan-400" />
+                          </div>
+                          <span>Instant search across all chats</span>
+                        </li>
+                        <li className="flex items-center gap-3 text-slate-300">
+                          <div className="h-6 w-6 rounded-full bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20">
+                            <CheckIcon className="h-3 w-3 text-cyan-400" />
+                          </div>
+                          <span>Custom folders & tags</span>
+                        </li>
+                      </ul>
+                    </div>
+                    {/* Visual representation/mini-mockup */}
+                    <a 
+                      href="#lightbox-savetime"
+                      className="relative block rounded-xl overflow-hidden border border-white/5 bg-slate-900/50 aspect-video group/image cursor-zoom-in"
+                    >
+                      <Image
+                        src="/images/carousel/BrandBird 2025-11-20 12.01.36.png"
+                        alt="AI Workspace Prompt Vault Interface"
+                        fill
+                        className="object-cover opacity-90 group-hover/image:opacity-100 transition-opacity duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
+                      
+                      {/* Zoom indicator */}
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-opacity duration-300">
+                        <div className="bg-black/50 backdrop-blur-sm p-2 rounded-full border border-white/10">
+                          <svg
+                            className="w-6 h-6 text-white"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-                <ul
-                  className="feature-bullets space-y-2 text-sm"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>
-                      Never retype prompts again &mdash; save and reuse
-                      instantly
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>
-                      Find previous conversations in seconds with powerful
-                      search
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>
-                      Organize hundreds of chats with custom folders and tags
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>Spend less time searching, more time creating</span>
-                  </li>
-                </ul>
               </div>
 
-              {/* Better AI Results */}
-              <div className="feature-card flex h-full flex-col gap-6 p-8 transition-all">
-                <div className="flex items-center gap-3">
-                  <span className="feature-icon">
-                    <SparklesIcon className="h-5 w-5" />
-                  </span>
-                  <h3 className="feature-title text-xl font-semibold">
-                    Better AI Results
-                  </h3>
+              {/* Card 2: Better AI Results */}
+              <div className="bento-card col-span-1">
+                <div className="bento-card-content gap-6">
+                  <div className="h-10 w-10 rounded-xl bg-slate-800 flex items-center justify-center border border-white/10">
+                    <SparklesIcon className="h-5 w-5 text-cyan-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      Better ChatGPT Responses
+                    </h3>
+                    <p className="text-sm text-slate-400">
+                      Build a library of your best-performing prompts and
+                      iterate for consistent quality.
+                    </p>
+                  </div>
                 </div>
-                <ul
-                  className="feature-bullets space-y-2 text-sm"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>Build a library of your best-performing prompts</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>
-                      Refine and iterate &mdash; save what works, improve what
-                      doesn&rsquo;t
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>
-                      Track which prompts deliver the results you need
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>
-                      Consistent quality across all your AI interactions
-                    </span>
-                  </li>
-                </ul>
               </div>
 
-              {/* Never Lose Work Again */}
-              <div className="feature-card flex h-full flex-col gap-6 p-8 transition-all">
-                <div className="flex items-center gap-3">
-                  <span className="feature-icon">
-                    <ShieldIcon className="h-5 w-5" />
-                  </span>
-                  <h3 className="feature-title text-xl font-semibold">
-                    Never Lose Work Again
-                  </h3>
+              {/* Card 3: Never Lose Work */}
+              <div className="bento-card col-span-1">
+                <div className="bento-card-content gap-6">
+                  <div className="h-10 w-10 rounded-xl bg-slate-800 flex items-center justify-center border border-white/10">
+                    <ShieldIcon className="h-5 w-5 text-cyan-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      Never Lose Work
+                    </h3>
+                    <p className="text-sm text-slate-400">
+                      Automatic local backups ensure you own your data. Export
+                      anytime in multiple formats.
+                    </p>
+                  </div>
                 </div>
-                <ul
-                  className="feature-bullets space-y-2 text-sm"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>
-                      Automatic backup of all your conversations and prompts
-                      <span
-                        className="ml-2 rounded-full px-2 py-0.5 text-xs font-semibold"
-                        style={{
-                          background: "rgba(251, 191, 36, 0.1)",
-                          color: "#fbbf24",
-                          border: "1px solid rgba(251, 191, 36, 0.2)",
-                        }}
-                      >
-                        WIP
-                      </span>
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>
-                      Everything stored locally &mdash; you own your data
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>Export anytime in multiple formats</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>
-                      Sync across devices without cloud storage
-                      <span
-                        className="ml-2 rounded-full px-2 py-0.5 text-xs font-semibold"
-                        style={{
-                          background: "rgba(251, 191, 36, 0.1)",
-                          color: "#fbbf24",
-                          border: "1px solid rgba(251, 191, 36, 0.2)",
-                        }}
-                      >
-                        WIP
-                      </span>
-                    </span>
-                  </li>
-                </ul>
               </div>
 
-              {/* Work More Efficiently */}
-              <div className="feature-card flex h-full flex-col gap-6 p-8 transition-all">
-                <div className="flex items-center gap-3">
-                  <span className="feature-icon">
-                    <LayersIcon className="h-5 w-5" />
-                  </span>
-                  <h3 className="feature-title text-xl font-semibold">
-                    Work More Efficiently
-                  </h3>
+              {/* Card 4: Power Users (Wide) */}
+              <div className="bento-card col-span-1 md:col-span-2 lg:col-span-3">
+                <div className="bento-card-content flex-row items-center justify-between gap-8 flex-wrap md:flex-nowrap">
+                  <div className="max-w-xl space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="h-10 w-10 rounded-xl bg-slate-800 flex items-center justify-center border border-white/10">
+                        <LayersIcon className="h-5 w-5 text-cyan-400" />
+                      </div>
+                      <h3 className="text-xl font-bold text-white">
+                        Built for Power Users
+                      </h3>
+                    </div>
+                    <p className="text-slate-400">
+                      Advanced filtering, nested folders, keyboard shortcuts,
+                      and multi-platform support for ChatGPT, Claude, and more.
+                    </p>
+                  </div>
+                  <div className="flex gap-4">
+                    <div className="px-4 py-2 rounded-lg bg-slate-800/50 border border-white/10 text-sm text-slate-300">
+                      Chrome
+                    </div>
+                    <div className="px-4 py-2 rounded-lg bg-slate-800/50 border border-white/10 text-sm text-slate-300">
+                      Edge
+                    </div>
+                    <div className="px-4 py-2 rounded-lg bg-slate-800/50 border border-white/10 text-sm text-slate-300">
+                      Firefox
+                    </div>
+                  </div>
                 </div>
-                <ul
-                  className="feature-bullets space-y-2 text-sm"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>One-click access to your favorite prompts</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>
-                      Templates for repetitive tasks &mdash; stop starting from
-                      scratch
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>Customize your workspace to match your workflow</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>
-                      Keyboard shortcuts for everything you do regularly
-                    </span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* For Power Users */}
-              <div className="feature-card flex h-full flex-col gap-6 p-8 transition-all">
-                <div className="flex items-center gap-3">
-                  <span className="feature-icon">
-                    <SparkIcon className="h-5 w-5" />
-                  </span>
-                  <h3 className="feature-title text-xl font-semibold">
-                    For Power Users
-                  </h3>
-                </div>
-                <ul
-                  className="feature-bullets space-y-2 text-sm"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>
-                      Works with ChatGPT, Claude (work in progress for Gemini,
-                      and more)
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>
-                      Advanced filtering and sorting for massive chat libraries
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>
-                      Nested folders, tags, favorites &mdash; organize your way
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    <span>Available on Chrome, Edge, and Firefox</span>
-                  </li>
-                </ul>
               </div>
             </div>
 
-            {/* Trust Signals */}
-            <div className="mt-16">
-              <div className="mx-auto grid max-w-5xl gap-4 sm:grid-cols-3">
-                <div
-                  className="flex flex-col items-center gap-3 rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-1"
-                  style={{
-                    background:
-                      "linear-gradient(120deg, rgba(6, 182, 212, 0.05), rgba(14, 165, 233, 0.08))",
-                    border: "1px solid rgba(6, 182, 212, 0.15)",
-                  }}
-                >
-                  <span className="text-3xl">🔐</span>
-                  <div>
-                    <div
-                      className="text-sm font-semibold"
-                      style={{ color: "var(--color-text)" }}
-                    >
-                      100% Secure & Private
-                    </div>
-                    <div
-                      className="mt-1 text-xs"
-                      style={{ color: "var(--color-text-secondary)" }}
-                    >
-                      All data stored locally
-                    </div>
+            {/* Trust Signals - Redesigned as a glass strip */}
+            <div className="mt-20 p-1 rounded-2xl bg-gradient-to-r from-transparent via-white/10 to-transparent">
+              <div className="bg-slate-900/80 backdrop-blur-md rounded-xl border border-white/5 p-8 grid md:grid-cols-3 gap-8 text-center">
+                <div className="space-y-2">
+                  <div className="text-3xl font-bold text-white">100%</div>
+                  <div className="text-sm text-cyan-400 font-medium uppercase tracking-wider">
+                    Secure & Private
+                  </div>
+                  <div className="text-xs text-slate-500">
+                    Local storage only
                   </div>
                 </div>
-                <div
-                  className="flex flex-col items-center gap-3 rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-1"
-                  style={{
-                    background:
-                      "linear-gradient(120deg, rgba(6, 182, 212, 0.05), rgba(14, 165, 233, 0.08))",
-                    border: "1px solid rgba(6, 182, 212, 0.15)",
-                  }}
-                >
-                  <span className="text-3xl">⭐</span>
-                  <div>
-                    <div
-                      className="text-sm font-semibold"
-                      style={{ color: "var(--color-text)" }}
-                    >
-                      4.9/5 Rating
-                    </div>
-                    <div
-                      className="mt-1 text-xs"
-                      style={{ color: "var(--color-text-secondary)" }}
-                    >
-                      Trusted by many users
-                    </div>
+                <div className="space-y-2 border-l border-r border-white/5">
+                  <div className="text-3xl font-bold text-white">4.9/5</div>
+                  <div className="text-sm text-cyan-400 font-medium uppercase tracking-wider">
+                    User Rating
+                  </div>
+                  <div className="text-xs text-slate-500">
+                    Trusted by thousands
                   </div>
                 </div>
-                <div
-                  className="flex flex-col items-center gap-3 rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-1"
-                  style={{
-                    background:
-                      "linear-gradient(120deg, rgba(6, 182, 212, 0.05), rgba(14, 165, 233, 0.08))",
-                    border: "1px solid rgba(6, 182, 212, 0.15)",
-                  }}
-                >
-                  <span className="text-3xl">✓</span>
-                  <div>
-                    <div
-                      className="text-sm font-semibold"
-                      style={{ color: "var(--color-text)" }}
-                    >
-                      Works on ChatGPT.com
-                    </div>
-                    <div
-                      className="mt-1 text-xs"
-                      style={{ color: "var(--color-text-secondary)" }}
-                    >
-                      Claude, Gemini & more
-                    </div>
+                <div className="space-y-2">
+                  <div className="text-3xl font-bold text-white">3+</div>
+                  <div className="text-sm text-cyan-400 font-medium uppercase tracking-wider">
+                    Platforms
+                  </div>
+                  <div className="text-xs text-slate-500">
+                    ChatGPT, Claude, Grok
                   </div>
                 </div>
               </div>
@@ -1157,13 +740,14 @@ export default function Home() {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                Experience the Power of AI Workspace
+                Supercharge your ChatGPT Experience
               </h2>
               <p
                 className="text-lg leading-relaxed"
                 style={{ color: "var(--color-text-secondary)" }}
               >
-                Explore our intuitive interface designed to supercharge your ChatGPT workflow
+                Explore our intuitive interface designed to supercharge your
+                ChatGPT workflow
               </p>
             </div>
 
@@ -1526,20 +1110,32 @@ export default function Home() {
 
         <section
           id="showcase"
-          className="border-t py-24 section section-primary-teal"
-          style={{ borderColor: "var(--color-border)" }}
+          className="border-t py-32 section relative overflow-hidden"
+          style={{
+            borderColor: "var(--color-border)",
+            background: "var(--color-bg-primary)",
+          }}
         >
-          <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
-            <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          {/* Background Glows */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div
+              className="absolute top-[10%] right-[5%] w-[600px] h-[600px] rounded-full opacity-10 blur-[120px]"
+              style={{
+                background:
+                  "radial-gradient(circle, var(--color-accent) 0%, transparent 70%)",
+              }}
+            />
+          </div>
+
+          <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16 relative z-10">
+            <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between mb-20">
               <div className="max-w-2xl space-y-5">
-                <p
-                  className="text-sm font-semibold uppercase tracking-[0.3em]"
-                  style={{ color: "var(--color-accent)" }}
-                >
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-bold uppercase tracking-widest">
+                  <LayersIcon className="w-3 h-3" />
                   Showcase
-                </p>
+                </div>
                 <h2
-                  className="text-3xl font-semibold sm:text-4xl"
+                  className="text-3xl font-bold sm:text-5xl"
                   style={{ color: "var(--color-text)" }}
                 >
                   Designed for{" "}
@@ -1551,152 +1147,93 @@ export default function Home() {
                       WebkitTextFillColor: "transparent",
                     }}
                   >
-                    power-users
-                  </span>{" "}
-                  who need{" "}
-                  <span
-                    style={{ color: "var(--color-accent)", fontWeight: 600 }}
-                  >
-                    control, privacy, and speed
+                    Power Users
                   </span>
-                  .
                 </h2>
-                <p
-                  className="text-lg leading-relaxed"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  AI Workspace brings{" "}
-                  <span style={{ color: "var(--color-text)", fontWeight: 500 }}>
-                    prompts, conversations, images, notes, and custom GPTs
-                  </span>{" "}
-                  together in one secure environment — all{" "}
-                  <span
-                    style={{ color: "var(--color-accent)", fontWeight: 500 }}
-                  >
-                    stored locally
-                  </span>
-                  , with seamless support for ChatGPT, Claude.
+                <p className="text-xl leading-relaxed text-slate-400">
+                  Control, privacy, and speed. All in one secure environment.
                 </p>
-              </div>
-              <div
-                className="rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em]"
-                style={{
-                  borderColor: "var(--color-accent)",
-                  background: "var(--color-accent-light)",
-                  color: "var(--color-accent)",
-                }}
-              >
-                Analytics dashboard — beta / coming soon
               </div>
             </div>
 
-            <div className="mt-12 h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
-
-            <div className="mt-16 grid gap-12">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {showcases.map((showcase, index) => (
                 <div
                   key={showcase.title}
-                  className={`showcase-card flex flex-col gap-10 rounded-3xl p-8 lg:flex-row ${
-                    index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                  className={`bento-card group ${
+                    index === 0 || index === 3 ? "md:col-span-2" : "col-span-1"
                   }`}
                 >
-                  <div className="flex-1 space-y-5">
-                    <div className="flex flex-wrap items-center gap-3">
-                      <h3 className="showcase-title text-2xl font-semibold">
-                        {showcase.title}
-                      </h3>
-                      {showcase.badge ? (
-                        <span className="pill-badge">{showcase.badge}</span>
-                      ) : null}
+                  <div className="bento-card-content h-full justify-between">
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <div className="h-10 w-10 rounded-xl bg-slate-800 flex items-center justify-center border border-white/10 group-hover:border-cyan-500/50 transition-colors">
+                          <SparklesIcon className="h-5 w-5 text-cyan-400" />
+                        </div>
+                        {showcase.badge && (
+                          <span className="px-2 py-1 rounded-md bg-cyan-500/20 border border-cyan-500/30 text-xs font-bold text-cyan-400 uppercase tracking-wider">
+                            {showcase.badge}
+                          </span>
+                        )}
+                      </div>
+
+                      <div>
+                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                          {showcase.title}
+                        </h3>
+                        <p className="text-sm text-slate-400 leading-relaxed">
+                          {showcase.description}
+                        </p>
+                      </div>
+
+                      <ul className="space-y-2">
+                        {showcase.highlights.slice(0, 2).map((highlight, i) => (
+                          <li
+                            key={i}
+                            className="flex items-start gap-2 text-xs text-slate-500"
+                          >
+                            <CheckIcon className="h-3.5 w-3.5 text-cyan-500/70 mt-0.5" />
+                            <span>{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <p
-                      className="text-sm"
-                      style={{ color: "var(--color-text-secondary)" }}
+
+                    <a
+                      href={`#lightbox-${index}`}
+                      className="mt-6 block relative rounded-lg overflow-hidden border border-white/5 bg-black/20 aspect-video group-hover:border-white/10 transition-colors cursor-zoom-in"
                     >
-                      {showcase.description}
-                    </p>
-                    <ul
-                      className="space-y-2 text-sm"
-                      style={{ color: "var(--color-text-secondary)" }}
-                    >
-                      {showcase.highlights.map((highlight) => (
-                        <li key={highlight} className="flex items-start gap-2">
-                          <SparkIcon
-                            className="mt-0.5 h-4 w-4 flex-none"
-                            style={{ color: "var(--color-accent)" }}
-                          />
-                          <span>{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="flex-1" id={`sc-${index}`}>
-                    <div className="showcase-media relative mx-auto w-full max-w-xl">
-                      <a
-                        href={`#lightbox-${index}`}
-                        aria-label={`Open ${showcase.title} image`}
-                      >
-                        <Image
-                          src={showcase.image}
-                          alt={showcase.imageAlt}
-                          width={640}
-                          height={400}
-                          className="h-auto w-full"
-                          priority={index === 0}
-                        />
-                      </a>
-                    </div>
-                    {/* Lightbox overlay moved outside card to avoid clipping */}
+                      <Image
+                        src={showcase.image}
+                        alt={showcase.imageAlt}
+                        fill
+                        className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                      />
+                      {/* Overlay gradient */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
+
+                      {/* Zoom indicator */}
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="bg-black/50 backdrop-blur-sm p-2 rounded-full border border-white/10">
+                          <svg
+                            className="w-6 h-6 text-white"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </a>
                   </div>
                 </div>
               ))}
-              <div className="showcase-card flex flex-col gap-10 rounded-3xl p-8 lg:flex-row">
-                <div className="flex-1 space-y-5">
-                  <div className="flex flex-wrap items-center gap-3">
-                    <h3 className="showcase-title text-2xl font-semibold">
-                      Print & export conversations your way
-                    </h3>
-                    <span className="pill-badge">Print-ready</span>
-                  </div>
-                  <p className="text-sm text-slate-300">
-                    Turn any conversation into a polished document with one
-                    click. Choose from over 30 customizable themes to match your
-                    preferred style, whether for personal archives, client
-                    handovers, or team reports.
-                  </p>
-                  <ul className="space-y-2 text-sm text-slate-300">
-                    <li className="flex items-start gap-2">
-                      <SparkIcon className="mt-0.5 h-4 w-4 flex-none text-cyan-300" />
-                      Flexible layout options: light, dark, and custom themes
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <SparkIcon className="mt-0.5 h-4 w-4 flex-none text-cyan-300" />
-                      Include or exclude headers, roles, and metadata
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <SparkIcon className="mt-0.5 h-4 w-4 flex-none text-cyan-300" />
-                      Export-ready formatting for print or digital sharing
-                    </li>
-                  </ul>
-                </div>
-                <div className="flex-1" id="sc-print">
-                  <div className="showcase-media relative mx-auto w-full max-w-xl">
-                    <a
-                      href="#lightbox-print"
-                      aria-label="Open Print & export image"
-                    >
-                      <Image
-                        src="/images/print.png"
-                        alt="AI Workspace print & export preview"
-                        width={560}
-                        height={280}
-                        className="h-auto w-full"
-                      />
-                    </a>
-                  </div>
-                  {/* Lightbox overlay moved outside card to avoid clipping */}
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -1761,135 +1298,132 @@ export default function Home() {
               </span>
             </div>
           </a>
+          {/* Save Time showcase overlay */}
+          <a
+            id="lightbox-savetime"
+            className="lightbox-overlay"
+            href="#features"
+            aria-label="Close image"
+          >
+            <div className="lightbox-content">
+              <Image
+                src="/images/carousel/BrandBird 2025-11-20 12.01.36.png"
+                alt="AI Workspace Prompt Vault Interface"
+                width={1600}
+                height={900}
+                sizes="(max-width: 1600px) 96vw, 1600px"
+                style={{
+                  maxWidth: "min(1600px, 96vw)",
+                  maxHeight: "88vh",
+                  width: "auto",
+                  height: "auto",
+                  objectFit: "contain",
+                }}
+                className="lightbox-img"
+              />
+              <span className="lightbox-close" aria-hidden>
+                ×
+              </span>
+            </div>
+          </a>
         </div>
         {/* Testimonials Section */}
         <section
           id="testimonials"
-          className="relative border-t py-24 section section-primary-blue"
-          style={{ borderColor: "var(--color-border)" }}
+          className="relative border-t py-32 section"
+          style={{
+            borderColor: "var(--color-border)",
+            background: "var(--color-bg-secondary)",
+          }}
         >
-          {/* subtle background orbs for depth */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 z-0 opacity-40"
-          >
+          {/* Background Glows */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <div
-              className="absolute left-[-10%] top-[-10%] h-[320px] w-[450px] blur-3xl"
+              className="absolute top-[20%] left-[-10%] w-[500px] h-[500px] rounded-full opacity-10 blur-[100px]"
               style={{
                 background:
-                  "radial-gradient(circle, rgba(20, 184, 166, 0.2) 0%, transparent 70%)",
+                  "radial-gradient(circle, var(--color-accent) 0%, transparent 70%)",
               }}
             />
             <div
-              className="absolute right-[-12%] bottom-[-10%] h-[280px] w-[420px] blur-3xl"
+              className="absolute bottom-[20%] right-[-10%] w-[500px] h-[500px] rounded-full opacity-10 blur-[100px]"
               style={{
                 background:
-                  "radial-gradient(circle, rgba(6, 182, 212, 0.18) 0%, transparent 70%)",
+                  "radial-gradient(circle, #8b5cf6 0%, transparent 70%)",
               }}
             />
           </div>
+
           <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <p
-                className="text-sm font-semibold uppercase tracking-[0.3em] mb-4"
-                style={{ color: "var(--color-accent)" }}
-              >
-                User Reviews
-              </p>
+            <div className="text-center max-w-3xl mx-auto mb-20">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-bold uppercase tracking-widest mb-6">
+                <SparklesIcon className="w-3 h-3" />
+                Community Love
+              </div>
               <h2
-                className="text-3xl font-semibold sm:text-4xl mb-6"
-                style={{
-                  background: "var(--premium-title-gradient)",
-                  WebkitBackgroundClip: "text",
-                  backgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
+                className="text-3xl font-bold sm:text-5xl mb-6"
+                style={{ color: "var(--color-text)" }}
               >
                 Loved by{" "}
-                <span style={{ color: "var(--color-accent)" }}>
+                <span
+                  style={{
+                    background: "var(--premium-title-gradient)",
+                    WebkitBackgroundClip: "text",
+                    backgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
                   thousands of users
                 </span>
               </h2>
-              <p
-                className="text-lg leading-relaxed"
-                style={{ color: "var(--color-text-secondary)" }}
-              >
-                Join thousands of professionals who trust AI Workspace to
-                organize their ChatGPT conversations, save prompts, and boost
-                productivity.
+              <p className="text-xl leading-relaxed text-slate-400">
+                Join the community of professionals who trust AI Workspace to
+                organize their AI workflow.
               </p>
             </div>
 
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="group relative overflow-hidden rounded-3xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(6, 182, 212, 0.04), rgba(14, 165, 233, 0.08), rgba(59, 130, 246, 0.04))",
-                    border: "1px solid rgba(6, 182, 212, 0.2)",
-                  }}
+                  className="group relative p-8 rounded-2xl border border-white/5 bg-slate-900/40 backdrop-blur-sm hover:bg-slate-800/40 transition-all duration-300 hover:-translate-y-1"
                 >
-                  {/* Hover gradient overlay */}
-                  <div
-                    className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, rgba(6, 182, 212, 0.06), rgba(14, 165, 233, 0.12), rgba(59, 130, 246, 0.06))",
-                    }}
-                  />
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
 
-                  <div className="relative z-10 space-y-4">
-                    {/* Rating stars */}
-                    <div className="flex gap-1">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <svg
-                          key={i}
-                          className="h-5 w-5"
-                          fill="#fbbf24"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
+                  <div className="relative z-10 space-y-6">
+                    <div className="flex items-center justify-between">
+                      <div className="flex gap-1">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <svg
+                            key={i}
+                            className="h-4 w-4 text-yellow-500"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
+                      <div className="text-xs text-slate-500 font-mono">
+                        {testimonial.date}
+                      </div>
                     </div>
 
-                    {/* Quote */}
-                    <p
-                      className="text-base leading-relaxed"
-                      style={{ color: "var(--color-text-secondary)" }}
-                    >
+                    <p className="text-slate-300 leading-relaxed">
                       &ldquo;{testimonial.quote}&rdquo;
                     </p>
 
-                    {/* Author info */}
-                    <div
-                      className="flex items-center gap-4 pt-4 border-t"
-                      style={{ borderColor: "rgba(6, 182, 212, 0.15)" }}
-                    >
-                      <div
-                        className="flex h-14 w-14 flex-none items-center justify-center rounded-full text-xl font-bold"
-                        style={{
-                          background:
-                            "linear-gradient(135deg, var(--color-accent), #0ea5e9)",
-                          color: "white",
-                        }}
-                      >
+                    <div className="flex items-center gap-4 pt-4 border-t border-white/5">
+                      <div className="h-10 w-10 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-sm">
                         {testimonial.name.charAt(0)}
                       </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2 mb-1">
-                          <div
-                            className="text-lg font-semibold"
-                            style={{ color: "var(--color-text)" }}
-                          >
-                            {testimonial.name}
-                          </div>
+                      <div>
+                        <div className="text-sm font-semibold text-white flex items-center gap-2">
+                          {testimonial.name}
                           {testimonial.verified && (
                             <svg
-                              className="h-5 w-5 flex-none"
-                              fill="var(--color-accent)"
+                              className="h-3 w-3 text-cyan-400"
+                              fill="currentColor"
                               viewBox="0 0 20 20"
                             >
                               <path
@@ -1900,10 +1434,7 @@ export default function Home() {
                             </svg>
                           )}
                         </div>
-                        <div
-                          className="text-base"
-                          style={{ color: "var(--color-text-muted)" }}
-                        >
+                        <div className="text-xs text-slate-500">
                           {testimonial.role}
                         </div>
                       </div>
@@ -1918,304 +1449,89 @@ export default function Home() {
         {/* Coming Soon Section */}
         <section
           id="roadmap"
-          className="relative border-t py-24 section section-primary-blue"
-          style={{ borderColor: "var(--color-border)" }}
+          className="relative border-t py-32 section"
+          style={{
+            borderColor: "var(--color-border)",
+            background: "var(--color-bg-primary)",
+          }}
         >
           <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <p
-                className="text-sm font-semibold uppercase tracking-[0.3em] mb-4"
-                style={{ color: "var(--color-accent)" }}
-              >
-                Coming Soon
-              </p>
+            <div className="text-center max-w-3xl mx-auto mb-20">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-bold uppercase tracking-widest mb-6">
+                <SparkIcon className="w-3 h-3" />
+                Roadmap
+              </div>
               <h2
-                className="text-3xl font-semibold sm:text-4xl mb-6"
-                style={{
-                  background: "var(--premium-title-gradient)",
-                  WebkitBackgroundClip: "text",
-                  backgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
+                className="text-3xl font-bold sm:text-5xl mb-6"
+                style={{ color: "var(--color-text)" }}
               >
-                Future Features on the Roadmap
+                Future Features
               </h2>
-              <p
-                className="text-lg leading-relaxed"
-                style={{ color: "var(--color-text-secondary)" }}
-              >
+              <p className="text-xl leading-relaxed text-slate-400">
                 We&apos;re constantly evolving AI Workspace with powerful new
-                capabilities to enhance your productivity.
+                capabilities.
               </p>
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-8">
-              <div
-                className="flex items-start gap-4 rounded-2xl p-6"
-                style={{
-                  background: "rgba(6, 182, 212, 0.05)",
-                  border: "1px solid rgba(6, 182, 212, 0.2)",
-                }}
-              >
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-12">
+              {[
+                {
+                  title: "Prompt Chaining",
+                  desc: "Link multiple prompts together for complex automated workflows",
+                },
+                {
+                  title: "Advanced Analytics",
+                  desc: "Deep insights into your ChatGPT usage patterns and productivity metrics",
+                },
+                {
+                  title: "Extended LLM Support",
+                  desc: "Native integrations for Gemini, Perplexity, Llama, and more",
+                },
+                {
+                  title: "Multi-Language",
+                  desc: "Interface localization for Spanish, French, German, Japanese",
+                },
+                {
+                  title: "Workflow Automation",
+                  desc: "Trigger actions based on events: auto-categorize, smart-archive",
+                },
+                {
+                  title: "Team Collaboration",
+                  desc: "Share prompt libraries and vault templates with your team",
+                },
+                {
+                  title: "Voice Processing",
+                  desc: "Transcribe voice notes, organize audio conversations",
+                },
+                {
+                  title: "Custom API",
+                  desc: "Connect your own AI models and third-party tools via REST API",
+                },
+              ].map((item, i) => (
                 <div
-                  className="flex h-12 w-12 flex-none items-center justify-center rounded-xl"
-                  style={{ background: "var(--color-accent)" }}
+                  key={i}
+                  className="group p-6 rounded-2xl border border-white/5 bg-slate-900/40 backdrop-blur-sm hover:bg-slate-800/60 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/30"
                 >
-                  <SparkIcon className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <p
-                    className="text-base font-semibold mb-2"
-                    style={{ color: "var(--color-text)" }}
-                  >
-                    Prompt Chaining
-                  </p>
-                  <p
-                    className="text-sm leading-relaxed"
-                    style={{ color: "var(--color-text-muted)" }}
-                  >
-                    Link multiple prompts together for complex automated
-                    workflows
+                  <div className="h-10 w-10 rounded-lg bg-slate-800 flex items-center justify-center mb-4 group-hover:bg-cyan-500/20 transition-colors">
+                    <SparkIcon className="h-5 w-5 text-slate-400 group-hover:text-cyan-400 transition-colors" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-slate-400 leading-relaxed">
+                    {item.desc}
                   </p>
                 </div>
-              </div>
-
-              <div
-                className="flex items-start gap-4 rounded-2xl p-6"
-                style={{
-                  background: "rgba(6, 182, 212, 0.05)",
-                  border: "1px solid rgba(6, 182, 212, 0.2)",
-                }}
-              >
-                <div
-                  className="flex h-12 w-12 flex-none items-center justify-center rounded-xl"
-                  style={{ background: "var(--color-accent)" }}
-                >
-                  <SparkIcon className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <p
-                    className="text-base font-semibold mb-2"
-                    style={{ color: "var(--color-text)" }}
-                  >
-                    Advanced Analytics Dashboard
-                  </p>
-                  <p
-                    className="text-sm leading-relaxed"
-                    style={{ color: "var(--color-text-muted)" }}
-                  >
-                    Deep insights into your AI usage patterns and productivity
-                    metrics
-                  </p>
-                </div>
-              </div>
-
-              <div
-                className="flex items-start gap-4 rounded-2xl p-6"
-                style={{
-                  background: "rgba(6, 182, 212, 0.05)",
-                  border: "1px solid rgba(6, 182, 212, 0.2)",
-                }}
-              >
-                <div
-                  className="flex h-12 w-12 flex-none items-center justify-center rounded-xl"
-                  style={{ background: "var(--color-accent)" }}
-                >
-                  <SparkIcon className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <p
-                    className="text-base font-semibold mb-2"
-                    style={{ color: "var(--color-text)" }}
-                  >
-                    Extended LLM Support
-                  </p>
-                  <p
-                    className="text-sm leading-relaxed"
-                    style={{ color: "var(--color-text-muted)" }}
-                  >
-                    Native integrations for Gemini, Perplexity, Llama, and more
-                    AI platforms
-                  </p>
-                </div>
-              </div>
-
-              <div
-                className="flex items-start gap-4 rounded-2xl p-6"
-                style={{
-                  background: "rgba(6, 182, 212, 0.05)",
-                  border: "1px solid rgba(6, 182, 212, 0.2)",
-                }}
-              >
-                <div
-                  className="flex h-12 w-12 flex-none items-center justify-center rounded-xl"
-                  style={{ background: "var(--color-accent)" }}
-                >
-                  <SparkIcon className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <p
-                    className="text-base font-semibold mb-2"
-                    style={{ color: "var(--color-text)" }}
-                  >
-                    Multi-Language Support
-                  </p>
-                  <p
-                    className="text-sm leading-relaxed"
-                    style={{ color: "var(--color-text-muted)" }}
-                  >
-                    Interface localization for Spanish, French, German,
-                    Japanese, and more
-                  </p>
-                </div>
-              </div>
-
-              <div
-                className="flex items-start gap-4 rounded-2xl p-6"
-                style={{
-                  background: "rgba(6, 182, 212, 0.05)",
-                  border: "1px solid rgba(6, 182, 212, 0.2)",
-                }}
-              >
-                <div
-                  className="flex h-12 w-12 flex-none items-center justify-center rounded-xl"
-                  style={{ background: "var(--color-accent)" }}
-                >
-                  <SparkIcon className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <p
-                    className="text-base font-semibold mb-2"
-                    style={{ color: "var(--color-text)" }}
-                  >
-                    Workflow Automation
-                  </p>
-                  <p
-                    className="text-sm leading-relaxed"
-                    style={{ color: "var(--color-text-muted)" }}
-                  >
-                    Trigger actions based on events: auto-categorize,
-                    smart-archive, scheduled exports
-                  </p>
-                </div>
-              </div>
-
-              <div
-                className="flex items-start gap-4 rounded-2xl p-6"
-                style={{
-                  background: "rgba(6, 182, 212, 0.05)",
-                  border: "1px solid rgba(6, 182, 212, 0.2)",
-                }}
-              >
-                <div
-                  className="flex h-12 w-12 flex-none items-center justify-center rounded-xl"
-                  style={{ background: "var(--color-accent)" }}
-                >
-                  <SparkIcon className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <p
-                    className="text-base font-semibold mb-2"
-                    style={{ color: "var(--color-text)" }}
-                  >
-                    Team Collaboration Tools
-                  </p>
-                  <p
-                    className="text-sm leading-relaxed"
-                    style={{ color: "var(--color-text-muted)" }}
-                  >
-                    Share prompt libraries and vault templates with your team
-                    (privacy-first)
-                  </p>
-                </div>
-              </div>
-
-              <div
-                className="flex items-start gap-4 rounded-2xl p-6"
-                style={{
-                  background: "rgba(6, 182, 212, 0.05)",
-                  border: "1px solid rgba(6, 182, 212, 0.2)",
-                }}
-              >
-                <div
-                  className="flex h-12 w-12 flex-none items-center justify-center rounded-xl"
-                  style={{ background: "var(--color-accent)" }}
-                >
-                  <SparkIcon className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <p
-                    className="text-base font-semibold mb-2"
-                    style={{ color: "var(--color-text)" }}
-                  >
-                    Voice & Audio Processing
-                  </p>
-                  <p
-                    className="text-sm leading-relaxed"
-                    style={{ color: "var(--color-text-muted)" }}
-                  >
-                    Transcribe voice notes, organize audio conversations,
-                    voice-to-prompt
-                  </p>
-                </div>
-              </div>
-
-              <div
-                className="flex items-start gap-4 rounded-2xl p-6"
-                style={{
-                  background: "rgba(6, 182, 212, 0.05)",
-                  border: "1px solid rgba(6, 182, 212, 0.2)",
-                }}
-              >
-                <div
-                  className="flex h-12 w-12 flex-none items-center justify-center rounded-xl"
-                  style={{ background: "var(--color-accent)" }}
-                >
-                  <SparkIcon className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <p
-                    className="text-base font-semibold mb-2"
-                    style={{ color: "var(--color-text)" }}
-                  >
-                    Custom API Integrations
-                  </p>
-                  <p
-                    className="text-sm leading-relaxed"
-                    style={{ color: "var(--color-text-muted)" }}
-                  >
-                    Connect your own AI models and third-party tools via REST
-                    API
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
 
-            <div
-              className="rounded-2xl p-6 text-sm max-w-4xl mx-auto"
-              style={{
-                border: "1px solid rgba(6, 182, 212, 0.2)",
-                background: "rgba(6, 182, 212, 0.05)",
-                color: "var(--color-text-secondary)",
-              }}
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div
-                  className="h-2 w-2 rounded-full animate-pulse"
-                  style={{ background: "var(--color-accent)" }}
-                />
-                <span
-                  className="font-semibold text-base"
-                  style={{ color: "var(--color-text)" }}
-                >
+            <div className="flex justify-center">
+              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-slate-900/50 border border-white/10 backdrop-blur-md">
+                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+                <span className="text-sm font-medium text-slate-300">
                   Active Development
                 </span>
               </div>
-              <p className="leading-relaxed">
-                These features are in various stages of development. Want to
-                influence the roadmap? Join our community or reach out with
-                feedback!
-              </p>
             </div>
           </div>
         </section>
@@ -2223,10 +1539,12 @@ export default function Home() {
         {/* CTA Section - Middle */}
 
         {/* CTA Section - Middle */}
-        <section className="py-20 section section-primary-blue">
-          <div className="mx-auto max-w-4xl px-6 text-center">
+        <section className="py-32 section relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950 to-slate-900" />
+
+          <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
             <h2
-              className="text-3xl font-bold mb-4"
+              className="text-4xl font-bold mb-6"
               style={{
                 background: "var(--premium-title-gradient)",
                 WebkitBackgroundClip: "text",
@@ -2234,34 +1552,39 @@ export default function Home() {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              Ready to boost your ChatGPT productivity?
+              Ready to boost your productivity?
             </h2>
-            <p
-              className="text-lg mb-8"
-              style={{ color: "var(--color-text-secondary)" }}
-            >
-              Join thousands of users organizing their AI workflows with AI
+            <p className="text-xl mb-10 text-slate-400">
+              Join thousands of users organizing their ChatGPT workflows with AI
               Workspace.
             </p>
-            <a
-              href={installUrl || "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg px-8 py-4 text-lg font-bold transition-all hover:scale-105 shadow-xl"
-              style={{
-                background: "var(--color-accent)",
-                color: "#ffffff",
-              }}
-            >
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
-              </svg>
-              Install AI Workspace Free
-            </a>
-            <p
-              className="mt-4 text-sm"
-              style={{ color: "var(--color-text-muted)" }}
-            >
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href={
+                  installUrl ||
+                  "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative flex items-center justify-center gap-3 rounded-xl px-8 py-4 text-lg font-bold text-white transition-all hover:scale-[1.02] shadow-lg shadow-cyan-500/25"
+                style={{
+                  background:
+                    "linear-gradient(135deg, #06b6d4 0%, #2563eb 100%)",
+                }}
+              >
+                <svg
+                  className="h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                </svg>
+                Add to Browser
+              </a>
+            </div>
+
+            <p className="mt-6 text-sm text-slate-500">
               Free forever • No credit card required • Install in seconds
             </p>
           </div>
@@ -2269,455 +1592,236 @@ export default function Home() {
 
         <section
           id="faq"
-          className="border-t py-24 section section-primary-teal"
-          style={{ borderColor: "var(--color-border)" }}
+          className="border-t py-32 section relative"
+          style={{
+            borderColor: "var(--color-border)",
+            background: "var(--color-bg-secondary)",
+          }}
         >
-          <div className="mx-auto max-w-5xl px-6 md:px-10 lg:px-16">
-            <div className="text-center space-y-4">
-              <p
-                className="text-sm font-semibold uppercase tracking-[0.3em]"
-                style={{ color: "var(--color-accent)" }}
-              >
+          <div className="mx-auto max-w-4xl px-6 md:px-10 lg:px-16">
+            <div className="text-center space-y-4 mb-16">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-bold uppercase tracking-widest">
+                <span className="w-2 h-2 rounded-full bg-cyan-400" />
                 FAQ
-              </p>
+              </div>
               <h2
-                className="mt-4 text-3xl font-semibold sm:text-4xl"
-                style={{
-                  background: "var(--premium-title-gradient)",
-                  WebkitBackgroundClip: "text",
-                  backgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
+                className="text-3xl font-bold sm:text-5xl"
+                style={{ color: "var(--color-text)" }}
               >
-                Everything you want to know
+                Common Questions
               </h2>
-              <p
-                className="text-lg max-w-2xl mx-auto"
-                style={{ color: "var(--color-text-secondary)" }}
-              >
-                Quick answers to common questions about{" "}
-                <span style={{ color: "var(--color-accent)", fontWeight: 500 }}>
-                  security, features, and pricing
-                </span>
-                .
-              </p>
             </div>
 
-            <div className="mt-10 h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
-
-            <div className="mt-12 space-y-6">
-              <details className="faq-card faq-accordion">
-                <summary className="faq-summary">
-                  <span className="faq-caret" aria-hidden />
-                  <span className="faq-question text-lg font-semibold">
-                    Is my data stored securely?
-                  </span>
-                </summary>
-                <div className="faq-content">
-                  <div className="faq-panel">
-                    <div className="faq-answer mt-2 text-sm">
-                      <p>
-                        Yes. All prompts, notes, and chats are saved locally in
-                        vaults. Private vaults are protected with AES-256
-                        encryption, optional passwords, and auto-lock when
-                        inactive. Nothing is sent to external servers unless you
-                        manually export.
-                      </p>
-                    </div>
+            <div className="space-y-4">
+              {[
+                {
+                  q: "Is my data stored securely?",
+                  a: "Yes. All prompts, notes, and chats are saved locally in vaults. Private vaults are protected with AES-256 encryption. Nothing is sent to external servers unless you manually export.",
+                },
+                {
+                  q: "Can I organize my prompts and chats?",
+                  a: "Absolutely. The Prompt Manager lets you save, tag, and categorize prompts with a nested tree structure. Chats and notes can be linked, favorited, pinned, or searched with advanced filters.",
+                },
+                {
+                  q: "What's the difference between Free and Pro?",
+                  a: "Free includes limited prompts and notes, 1 vault, and no encryption. Pro ($9.99/month) offers unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, GPT Manager, and multi-platform support.",
+                },
+                {
+                  q: "Which AI platforms are supported?",
+                  a: "AI Workspace integrates with ChatGPT out of the box. You can run the same prompts across platforms, switch with one click, and in the future chain steps across multiple AIs.",
+                },
+                {
+                  q: "Does it support images and GPTs too?",
+                  a: "Yes. The Image Gallery collects both uploaded and AI-generated visuals. The GPT Manager lets you search, filter, and launch GPTs instantly from one central hub.",
+                },
+              ].map((item, i) => (
+                <details
+                  key={i}
+                  className="group rounded-2xl border border-white/5 bg-slate-900/40 backdrop-blur-sm open:bg-slate-800/60 transition-all duration-300"
+                >
+                  <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                    <span className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                      {item.q}
+                    </span>
+                    <span className="ml-4 flex-shrink-0 text-slate-500 group-open:rotate-180 transition-transform duration-300">
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </span>
+                  </summary>
+                  <div className="px-6 pb-6 text-slate-400 leading-relaxed border-t border-white/5 pt-4">
+                    {item.a}
                   </div>
-                </div>
-              </details>
-
-              <details className="faq-card faq-accordion">
-                <summary className="faq-summary">
-                  <span className="faq-caret" aria-hidden />
-                  <span className="faq-question text-lg font-semibold">
-                    Can I organize my prompts and chats?
-                  </span>
-                </summary>
-                <div className="faq-content">
-                  <div className="faq-panel">
-                    <div className="faq-answer mt-2 text-sm">
-                      <p>
-                        Absolutely. The Prompt Manager lets you save, tag, and
-                        categorize prompts with a nested tree structure. Chats
-                        and notes can be linked, favorited, pinned, or searched
-                        with advanced filters for quick recall.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </details>
-
-              <details className="faq-card faq-accordion">
-                <summary className="faq-summary">
-                  <span className="faq-caret" aria-hidden />
-                  <span className="faq-question text-lg font-semibold">
-                    What&rsquo;s the difference between Free and Pro?
-                  </span>
-                </summary>
-                <div className="faq-content">
-                  <div className="faq-panel">
-                    <div className="faq-answer mt-2 text-sm">
-                      <p>
-                        <strong>Free:</strong> limited prompts and notes, 1
-                        vault, no encryption.
-                      </p>
-                      <p>
-                        <strong>Pro ($9.99/month or $79.99/year):</strong>{" "}
-                        unlimited prompts, vaults, and notes, encrypted storage,
-                        full Image Gallery, GPT Manager, multi-platform support,
-                        and version history.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </details>
-
-              <details className="faq-card faq-accordion">
-                <summary className="faq-summary">
-                  <span className="faq-caret" aria-hidden />
-                  <span className="faq-question text-lg font-semibold">
-                    Which AI platforms are supported?
-                  </span>
-                </summary>
-                <div className="faq-content">
-                  <div className="faq-panel">
-                    <div className="faq-answer mt-2 text-sm">
-                      <p>
-                        AI Workspace integrates with ChatGPT out of the box. You
-                        can run the same prompts across platforms, switch with
-                        one click, and in the future chain steps across multiple
-                        AIs.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </details>
-
-              <details className="faq-card faq-accordion">
-                <summary className="faq-summary">
-                  <span className="faq-caret" aria-hidden />
-                  <span className="faq-question text-lg font-semibold">
-                    Does it support images and GPTs too?
-                  </span>
-                </summary>
-                <div className="faq-content">
-                  <div className="faq-panel">
-                    <div className="faq-answer mt-2 text-sm">
-                      <p>
-                        Yes. The Image Gallery collects both uploaded and
-                        AI-generated visuals, so you can browse, download, and
-                        manage them. The GPT Manager lets you search, filter,
-                        and launch GPTs instantly from one central hub.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </details>
-
-              <details className="faq-card faq-accordion">
-                <summary className="faq-summary">
-                  <span className="faq-caret" aria-hidden />
-                  <span className="faq-question text-lg font-semibold">
-                    How do I access everything quickly?
-                  </span>
-                </summary>
-                <div className="faq-content">
-                  <div className="faq-panel">
-                    <div className="faq-answer mt-2 text-sm">
-                      <p>
-                        Use the floating menu for instant access to vaults,
-                        prompts, and settings. Themes (dark, light, mint green,
-                        retro) and multi-language support (EN/NL, with more to
-                        come) make the workspace customizable.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </details>
-
-              <details className="faq-card faq-accordion">
-                <summary className="faq-summary">
-                  <span className="faq-caret" aria-hidden />
-                  <span className="faq-question text-lg font-semibold">
-                    What about analytics and logging?
-                  </span>
-                </summary>
-                <div className="faq-content">
-                  <div className="faq-panel">
-                    <div className="faq-answer mt-2 text-sm">
-                      <p>
-                        Every prompt run is logged locally so you can retrace
-                        workflows, analyze usage, and review past activity. An
-                        expanded analytics dashboard is on the roadmap, with the
-                        same local-first, privacy-first approach.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </details>
+                </details>
+              ))}
             </div>
           </div>
         </section>
         <section
           id="pricing"
-          className="border-t py-24 section section-secondary-blue"
-          style={{ borderColor: "var(--color-border)" }}
+          className="border-t py-32 section relative overflow-hidden"
+          style={{
+            borderColor: "var(--color-border)",
+            background: "var(--color-bg-primary)",
+          }}
         >
-          <div className="mx-auto max-w-6xl px-6 md:px-10 lg:px-16">
-            <div className="text-center">
-              <p
-                className="text-sm font-semibold uppercase tracking-[0.3em]"
-                style={{ color: "var(--color-accent)" }}
-              >
-                Plans
-              </p>
+          {/* Background Glows */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div
+              className="absolute top-[40%] left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full opacity-10 blur-[120px]"
+              style={{
+                background:
+                  "radial-gradient(circle, var(--color-accent) 0%, transparent 70%)",
+              }}
+            />
+          </div>
+
+          <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16 relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-20">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-bold uppercase tracking-widest mb-6">
+                <SparkIcon className="w-3 h-3" />
+                Simple Pricing
+              </div>
               <h2
-                className="mt-4 text-3xl font-semibold sm:text-4xl"
-                style={{
-                  background: "var(--premium-title-gradient)",
-                  WebkitBackgroundClip: "text",
-                  backgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
+                className="text-3xl font-bold sm:text-5xl mb-6"
+                style={{ color: "var(--color-text)" }}
               >
-                Start free. Go PRO when you are ready.
-              </h2>
-            </div>
-            <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              {/* Free plan */}
-              <div className="pricing-card p-8">
-                <div className="card-topline mb-5" aria-hidden />
-                <h3
-                  className="text-xl font-semibold"
-                  style={{ color: "var(--color-text)" }}
-                >
-                  Free
-                </h3>
-                <p
-                  className="mt-2 text-sm"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  Best for individuals exploring local-first AI workflows.
-                </p>
-                <div className="mt-5">
-                  <div className="price-value">$0</div>
-                  <div className="price-meta mt-1">per month</div>
-                </div>
-                <ul className="pricing-features mt-6 text-sm">
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    Save and organize prompts with categories & tags
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    1 Vault (no encryption)
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    Notes Manager (basic)
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    Image Gallery (basic, limited items)
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    Community GPT Store (browse & launch GPTs)
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    Local logging & history of recent prompts
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    Dark/Light themes + EN/FR/NL interface
-                  </li>
-                </ul>
-                <a
-                  href={installUrl || "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-8 inline-flex w-full items-center justify-center rounded-full border px-6 py-3 text-sm font-semibold transition hover:scale-105"
+                Start free.{" "}
+                <span
                   style={{
-                    borderColor: "var(--color-card-border)",
-                    color: "var(--color-text)",
+                    background: "var(--premium-title-gradient)",
+                    WebkitBackgroundClip: "text",
+                    backgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
                   }}
                 >
-                  Try now for free
+                  Go PRO when ready.
+                </span>
+              </h2>
+              <p className="text-xl leading-relaxed text-slate-400">
+                Transparent pricing for everyone. No hidden fees.
+              </p>
+            </div>
+
+            <div className="grid gap-8 lg:grid-cols-2 max-w-5xl mx-auto">
+              {/* Free plan */}
+              <div className="relative p-8 rounded-3xl border border-white/5 bg-slate-900/40 backdrop-blur-sm hover:bg-slate-800/40 transition-all duration-300">
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">Free</h3>
+                  <p className="text-slate-400 text-sm">
+                    Essential tools for individuals.
+                  </p>
+                  <div className="mt-6 flex items-baseline gap-1">
+                    <span className="text-4xl font-bold text-white">$0</span>
+                    <span className="text-slate-500">/month</span>
+                  </div>
+                </div>
+
+                <ul className="space-y-4 mb-8">
+                  {[
+                    "Save & organize prompts",
+                    "1 Secure Vault",
+                    "Basic Notes Manager",
+                    "Limited Image Gallery",
+                    "Community GPT Store",
+                    "Local history log",
+                    "Dark/Light themes",
+                  ].map((feature, i) => (
+                    <li
+                      key={i}
+                      className="flex items-center gap-3 text-slate-300 text-sm"
+                    >
+                      <div className="h-5 w-5 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
+                        <CheckIcon className="h-3 w-3 text-slate-400" />
+                      </div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href={
+                    installUrl ||
+                    "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full py-4 rounded-xl border border-white/10 bg-white/5 text-center font-semibold text-white hover:bg-white/10 transition-colors"
+                >
+                  Get Started Free
                 </a>
               </div>
 
               {/* PRO plan */}
-              <div className="pricing-card pricing-card--pro p-8">
-                <div className="card-topline mb-5" aria-hidden />
-                <div
-                  className="mb-3 inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em]"
-                  style={{
-                    background: "var(--color-accent-light)",
-                    color: "var(--color-accent)",
-                  }}
-                >
-                  <SparkIcon className="h-3.5 w-3.5" />
-                  Most popular
+              <div className="relative p-8 rounded-3xl border border-cyan-500/30 bg-slate-900/60 backdrop-blur-md shadow-2xl shadow-cyan-500/10">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-xs font-bold text-white uppercase tracking-wider shadow-lg">
+                  Most Popular
                 </div>
-                <h3
-                  className="text-xl font-semibold"
-                  style={{ color: "var(--color-text)" }}
-                >
-                  PRO
-                </h3>
-                <p
-                  className="mt-2 text-sm"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  For power users and teams who need unlimited everything.
-                </p>
-                <div className="mt-5">
-                  <div className="price-value">$9.99</div>
-                  <div className="price-meta mt-1">
-                    per month — or $79.99/year (save 33%)
+
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">PRO</h3>
+                  <p className="text-cyan-200/70 text-sm">
+                    Power tools for serious users.
+                  </p>
+                  <div className="mt-6 flex items-baseline gap-1">
+                    <span className="text-4xl font-bold text-white">$9.99</span>
+                    <span className="text-slate-500">/month</span>
                   </div>
+                  <p className="text-xs text-cyan-400 mt-2">
+                    or $79.99/year (save 33%)
+                  </p>
                 </div>
-                <ul className="pricing-features mt-6 text-sm">
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    Unlimited prompts, notes, and encrypted vaults
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    AES-256 encryption + autolock
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    Advanced Prompt Manager: variables, versioning, batch
-                    actions
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    Advanced search across prompts, notes & images
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    Full Image Gallery with downloads, exports, filters
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    Full Notes Manager with exports & conversation linking
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    GPT Store with advanced filters, trending & featured GPTs
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    Multi-platform support (ChatGPT, Claude, Grok)
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    Automation: auto-archive/delete, dry run flows, exports
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    Local analytics dashboard (beta)
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    Custom themes + floating action menu
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    Priority support
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon
-                      className="mt-0.5 h-4 w-4 flex-none"
-                      style={{ color: "var(--color-accent)" }}
-                    />
-                    More features coming soon...
-                  </li>
+
+                <ul className="space-y-4 mb-8">
+                  {[
+                    "Unlimited prompts, notes & vaults",
+                    "AES-256 Encryption + Autolock",
+                    "Variable injection in prompts",
+                    "Quick access menus",
+                    "Search inside chats & prompts",
+                    "Full Image Gallery & Exports",
+                    "Multi-platform Support",
+                  ].map((feature, i) => (
+                    <li
+                      key={i}
+                      className="flex items-center gap-3 text-white text-sm"
+                    >
+                      <div className="h-5 w-5 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0">
+                        <CheckIcon className="h-3 w-3 text-cyan-400" />
+                      </div>
+                      {feature}
+                    </li>
+                  ))}
                 </ul>
+
                 <a
-                  href={installUrl || "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"}
+                  href={
+                    installUrl ||
+                    "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-8 inline-flex w-full items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition"
-                  style={{
-                    background: "var(--color-accent)",
-                    color: "#0a0f13",
-                  }}
+                  className="block w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-center font-bold text-white hover:shadow-lg hover:shadow-cyan-500/25 transition-all hover:scale-[1.02]"
                 >
                   Upgrade to PRO
-                  <ArrowRightIcon className="ml-2 h-4 w-4" />
                 </a>
               </div>
             </div>
 
-            {/* Billing note */}
-            <div
-              className="mt-10 pricing-billing p-4 text-sm"
-              style={{ color: "var(--color-text-secondary)" }}
-            >
-              Billing is handled via Stripe with transparent invoicing and
-              cancel-anytime flexibility.
+            <div className="mt-12 text-center">
+              <p className="text-sm text-slate-500">
+                Secure payment via Stripe. Cancel anytime.
+              </p>
             </div>
           </div>
         </section>
@@ -2746,7 +1850,10 @@ export default function Home() {
               Free forever. No credit card required. Install in seconds.
             </p>
             <a
-              href={installUrl || "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"}
+              href={
+                installUrl ||
+                "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"
+              }
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg px-8 py-4 text-lg font-bold transition-all hover:scale-105 shadow-xl"
@@ -2785,81 +1892,98 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="relative py-32">
-          <div className="mx-auto max-w-6xl px-6 lg:px-12">
-            {/* Floating background orbs */}
-            <div className="absolute inset-0 pointer-events-none opacity-20">
-              <div
-                className="absolute top-1/4 left-1/4 h-96 w-96 rounded-full blur-3xl"
+        <section id="contact" className="relative py-32 border-t" style={{ borderColor: "var(--color-border)" }}>
+          <div className="mx-auto max-w-4xl px-6 text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-bold uppercase tracking-widest mb-8">
+              <span className="w-2 h-2 rounded-full bg-cyan-400" />
+              Get in Touch
+            </div>
+            
+            <h2
+              className="text-3xl font-bold sm:text-5xl mb-6"
+              style={{ color: "var(--color-text)" }}
+            >
+              Questions or{" "}
+              <span
                 style={{
-                  background: "radial-gradient(circle, rgba(6, 182, 212, 0.4), transparent 70%)",
+                  background: "var(--premium-title-gradient)",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
                 }}
-              />
-              <div
-                className="absolute bottom-1/4 right-1/4 h-96 w-96 rounded-full blur-3xl"
+              >
+                Suggestions?
+              </span>
+            </h2>
+            
+            <p className="text-xl leading-relaxed text-slate-400 mb-12 max-w-2xl mx-auto">
+              We&apos;d love to hear from you! Share your feedback, report issues, or suggest new features to help us improve.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
+              <a
+                href="mailto:ai.workspace.extension@gmail.com"
+                className="group relative inline-flex items-center gap-3 rounded-full px-8 py-4 text-lg font-bold text-white transition-all hover:scale-105"
                 style={{
-                  background: "radial-gradient(circle, rgba(14, 165, 233, 0.3), transparent 70%)",
+                  background: "var(--premium-primary-gradient)",
+                  boxShadow: "0 10px 30px -10px rgba(6, 182, 212, 0.5)",
                 }}
-              />
+              >
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Contact Support
+              </a>
+              
+              <div className="text-slate-500 text-sm font-medium">
+                or email <span className="text-slate-300">ai.workspace.extension@gmail.com</span>
+              </div>
             </div>
 
-            <div
-              className="relative overflow-hidden rounded-[2rem] p-16 text-center"
-              style={{
-                border: "1px solid rgba(6, 182, 212, 0.3)",
-                background:
-                  "linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(14, 165, 233, 0.15), rgba(59, 130, 246, 0.1))",
-                boxShadow: "0 20px 60px rgba(6, 182, 212, 0.15)",
-              }}
-            >
-              {/* Animated gradient overlay */}
-              <div
-                className="absolute inset-0 opacity-40"
-                style={{
-                  background:
-                    "radial-gradient(circle at 30% 30%, rgba(6, 182, 212, 0.2) 0%, transparent 50%), radial-gradient(circle at 70% 70%, rgba(14, 165, 233, 0.2) 0%, transparent 50%)",
-                }}
-              />
-
-              <div className="relative z-10 space-y-10">
-                {/* Icon container with pulsing effect */}
-                <div className="inline-flex items-center justify-center">
-                  <div className="relative">
-                    {/* Pulsing rings */}
-                    <div
-                      className="absolute inset-0 rounded-3xl animate-ping opacity-20"
-                      style={{
-                        background: "var(--color-accent)",
-                        animationDuration: "2s",
-                      }}
-                    />
-                    <div
-                      className="relative flex h-24 w-24 items-center justify-center rounded-3xl shadow-2xl"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%)",
-                      }}
-                    >
-                      <svg
-                        className="h-12 w-12 text-white"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                        />
-                      </svg>
-                    </div>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {[
+                { title: "Feature Requests", icon: <SparkIcon className="w-5 h-5" /> },
+                { title: "Bug Reports", icon: <ShieldIcon className="w-5 h-5" /> },
+                { title: "General Feedback", icon: <CheckIcon className="w-5 h-5" /> },
+              ].map((item, i) => (
+                <a
+                  key={i}
+                  href="mailto:ai.workspace.extension@gmail.com"
+                  className="group flex items-center justify-center gap-3 p-4 rounded-xl border border-white/5 bg-slate-900/40 hover:bg-slate-800/60 hover:border-cyan-500/30 transition-all duration-300"
+                >
+                  <div className="text-slate-400 group-hover:text-cyan-400 transition-colors">
+                    {item.icon}
                   </div>
-                </div>
+                  <span className="font-medium text-slate-300 group-hover:text-white transition-colors">
+                    {item.title}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
 
-                <div className="max-w-2xl mx-auto">
-                  <h2
-                    className="text-4xl font-bold sm:text-5xl mb-6"
+        <footer
+          id="footer"
+          className="border-t py-20 section relative overflow-hidden"
+          style={{
+            borderColor: "var(--color-border)",
+            background: "var(--color-bg-secondary)",
+          }}
+        >
+          <div className="mx-auto max-w-6xl px-6 md:px-10 lg:px-16 relative z-10">
+            <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
+              <div className="space-y-6">
+                <div className="flex items-center gap-3">
+                  <Image
+                    src="/images/logo-dark.svg"
+                    alt="AI Workspace Logo"
+                    width={40}
+                    height={40}
+                    className="h-10 w-10"
+                  />
+                  <h3
+                    className="text-2xl font-bold"
                     style={{
                       background: "var(--premium-title-gradient)",
                       WebkitBackgroundClip: "text",
@@ -2867,275 +1991,143 @@ export default function Home() {
                       WebkitTextFillColor: "transparent",
                     }}
                   >
-                    Questions or Suggestions?
-                  </h2>
-                  <p
-                    className="text-xl leading-relaxed"
-                    style={{ color: "var(--color-text-secondary)" }}
-                  >
-                    We&apos;d love to hear from you! Share your feedback, report
-                    issues, or suggest new features.
-                  </p>
+                    AI Workspace
+                  </h3>
                 </div>
-
-                <div className="flex flex-col items-center gap-6">
-                  <a
-                    href="mailto:ai.workspace.extension@gmail.com"
-                    className="group inline-flex items-center gap-4 rounded-2xl px-12 py-5 text-lg font-bold text-white shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(6,182,212,0.3)]"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%)",
-                    }}
-                  >
-                    <svg
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
-                    </svg>
-                    Contact Us
-                    <svg
-                      className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-2"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </a>
-
-                  <p
-                    className="text-base font-medium"
-                    style={{ color: "var(--color-text-muted)" }}
-                  >
-                    ai.workspace.extension@gmail.com
-                  </p>
-                </div>
-
-                <div className="mt-12 grid gap-6 sm:grid-cols-3">
-                  <div
-                    className="group rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                    style={{
-                      background: "rgba(6, 182, 212, 0.08)",
-                      border: "1px solid rgba(6, 182, 212, 0.25)",
-                    }}
-                  >
-                    <div
-                      className="flex flex-col items-center gap-3 text-center"
-                    >
-                      <div
-                        className="flex h-12 w-12 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110"
-                        style={{ background: "var(--color-accent)" }}
-                      >
-                        <svg
-                          className="h-6 w-6 text-white"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                          />
-                        </svg>
-                      </div>
-                      <span
-                        className="text-base font-bold"
-                        style={{ color: "var(--color-text)" }}
-                      >
-                        Feature Requests
-                      </span>
-                    </div>
-                  </div>
-
-                  <div
-                    className="group rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                    style={{
-                      background: "rgba(6, 182, 212, 0.08)",
-                      border: "1px solid rgba(6, 182, 212, 0.25)",
-                    }}
-                  >
-                    <div
-                      className="flex flex-col items-center gap-3 text-center"
-                    >
-                      <div
-                        className="flex h-12 w-12 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110"
-                        style={{ background: "var(--color-accent)" }}
-                      >
-                        <svg
-                          className="h-6 w-6 text-white"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-                          />
-                        </svg>
-                      </div>
-                      <span
-                        className="text-base font-bold"
-                        style={{ color: "var(--color-text)" }}
-                      >
-                        Bug Reports
-                      </span>
-                    </div>
-                  </div>
-
-                  <div
-                    className="group rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                    style={{
-                      background: "rgba(6, 182, 212, 0.08)",
-                      border: "1px solid rgba(6, 182, 212, 0.25)",
-                    }}
-                  >
-                    <div
-                      className="flex flex-col items-center gap-3 text-center"
-                    >
-                      <div
-                        className="flex h-12 w-12 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110"
-                        style={{ background: "var(--color-accent)" }}
-                      >
-                        <svg
-                          className="h-6 w-6 text-white"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                          />
-                        </svg>
-                      </div>
-                      <span
-                        className="text-base font-bold"
-                        style={{ color: "var(--color-text)" }}
-                      >
-                        General Feedback
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <footer
-          id="footer"
-          className="border-t py-20 section section-primary-blue"
-          style={{ borderColor: "var(--color-border)" }}
-        >
-          <div className="mx-auto max-w-6xl px-6 md:px-10 lg:px-16">
-            <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
-              <div className="space-y-4">
-                <h3
-                  className="text-2xl font-semibold footer-heading"
-                  style={{
-                    background: "var(--premium-title-gradient)",
-                    WebkitBackgroundClip: "text",
-                    backgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                >
-                  AI Workspace
-                </h3>
-                <p
-                  className="text-sm"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  Your complete local-first AI productivity hub. Manage prompts,
+                <p className="text-sm leading-relaxed text-slate-400 max-w-md">
+                  The ultimate local-first extension for ChatGPT. Manage prompts,
                   conversations, images, notes, and GPTs securely — without
                   sending data to the cloud.
                 </p>
-                <p
-                  className="text-sm"
-                  style={{ color: "var(--color-text-muted)" }}
-                >
-                  Privacy-first ◆ Multi-platform (ChatGPT, Claude, Grok) ◆ Works
-                  on Chrome Extension (macOS, Windows, Linux)
-                </p>
+                <div className="flex gap-4">
+                  <a
+                    href="#"
+                    className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  >
+                    <span className="sr-only">Twitter</span>
+                    <svg
+                      className="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  >
+                    <span className="sr-only">GitHub</span>
+                    <svg
+                      className="h-5 w-5"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </div>
               </div>
               <div>
                 <h4
-                  className="text-sm font-semibold uppercase tracking-[0.3em]"
+                  className="text-sm font-bold uppercase tracking-widest mb-6"
                   style={{ color: "var(--color-accent)" }}
                 >
-                  Quick Links
+                  Product
                 </h4>
-                <ul className="mt-4 space-y-2 text-sm">
+                <ul className="space-y-4 text-sm">
                   <li>
-                    <a className="footer-link" href="#features">
+                    <a
+                      className="text-slate-400 hover:text-cyan-400 transition-colors"
+                      href="#features"
+                    >
                       Features
                     </a>
                   </li>
                   <li>
-                    <a className="footer-link" href="#pricing">
+                    <a
+                      className="text-slate-400 hover:text-cyan-400 transition-colors"
+                      href="#showcase"
+                    >
+                      Showcase
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="text-slate-400 hover:text-cyan-400 transition-colors"
+                      href="#pricing"
+                    >
                       Pricing
                     </a>
                   </li>
                   <li>
-                    <a className="footer-link" href="#faq">
-                      FAQ
-                    </a>
-                  </li>
-                  <li>
-                    <a className="footer-link" href="#">
-                      Download
-                    </a>
-                  </li>
-                  <li>
-                    <a className="footer-link" href="#contact">
-                      Contact
+                    <a
+                      className="text-slate-400 hover:text-cyan-400 transition-colors"
+                      href="#roadmap"
+                    >
+                      Roadmap
                     </a>
                   </li>
                 </ul>
               </div>
               <div>
                 <h4
-                  className="text-sm font-semibold uppercase tracking-[0.3em]"
+                  className="text-sm font-bold uppercase tracking-widest mb-6"
                   style={{ color: "var(--color-accent)" }}
                 >
-                  Legal
+                  Support
                 </h4>
-                <ul className="mt-4 space-y-2 text-sm">
+                <ul className="space-y-4 text-sm">
                   <li>
-                    <a className="footer-link" href="/privacy">
+                    <a
+                      className="text-slate-400 hover:text-cyan-400 transition-colors"
+                      href="#faq"
+                    >
+                      FAQ
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="text-slate-400 hover:text-cyan-400 transition-colors"
+                      href="#contact"
+                    >
+                      Contact Us
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="text-slate-400 hover:text-cyan-400 transition-colors"
+                      href="/privacy"
+                    >
                       Privacy Policy
                     </a>
                   </li>
                   <li>
-                    <a className="footer-link" href="/terms">
+                    <a
+                      className="text-slate-400 hover:text-cyan-400 transition-colors"
+                      href="/terms"
+                    >
                       Terms of Service
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div className="hr-gradient my-8" aria-hidden />
-            <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
-              © 2025 AI Workspace. All rights reserved.
-            </p>
+            <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+              <p className="text-xs text-slate-500">
+                © 2025 AI Workspace. All rights reserved.
+              </p>
+              <div className="flex items-center gap-2 text-xs text-slate-500">
+                <span className="w-2 h-2 rounded-full bg-green-500"></span>
+                All systems operational
+              </div>
+            </div>
           </div>
         </footer>
       </main>
@@ -3145,116 +2137,116 @@ export default function Home() {
 
 function ScriptHandler() {
   useEffect(() => {
-      // lightweight scroll variable for parallax
-      const setScrollVar = () => {
-        const y = window.scrollY || window.pageYOffset || 0;
-        document.documentElement.style.setProperty("--scroll-y", `${y}px`);
-      };
-      setScrollVar();
-      window.addEventListener("scroll", setScrollVar, { passive: true });
+    // lightweight scroll variable for parallax
+    const setScrollVar = () => {
+      const y = window.scrollY || window.pageYOffset || 0;
+      document.documentElement.style.setProperty("--scroll-y", `${y}px`);
+    };
+    setScrollVar();
+    window.addEventListener("scroll", setScrollVar, { passive: true });
 
-      const btn = document.querySelector<HTMLAnchorElement>(
-        ".install-buttons .cta-btn--primary"
-      );
-      if (btn && !btn.dataset.rippleInit) {
-        btn.dataset.rippleInit = "true";
-        btn.addEventListener("click", (e) => {
-          const rect = btn.getBoundingClientRect();
-          const x = (e as MouseEvent).clientX - rect.left;
-          const y = (e as MouseEvent).clientY - rect.top;
-          const ripple = document.createElement("span");
-          ripple.className = "ripple";
-          ripple.style.width = ripple.style.height = `${Math.max(
-            rect.width,
-            rect.height
-          )}px`;
-          ripple.style.left = `${x}px`;
-          ripple.style.top = `${y}px`;
-          btn.appendChild(ripple);
-          ripple.addEventListener("animationend", () => ripple.remove());
-        });
-      }
+    const btn = document.querySelector<HTMLAnchorElement>(
+      ".install-buttons .cta-btn--primary"
+    );
+    if (btn && !btn.dataset.rippleInit) {
+      btn.dataset.rippleInit = "true";
+      btn.addEventListener("click", (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = (e as MouseEvent).clientX - rect.left;
+        const y = (e as MouseEvent).clientY - rect.top;
+        const ripple = document.createElement("span");
+        ripple.className = "ripple";
+        ripple.style.width = ripple.style.height = `${Math.max(
+          rect.width,
+          rect.height
+        )}px`;
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+        btn.appendChild(ripple);
+        ripple.addEventListener("animationend", () => ripple.remove());
+      });
+    }
 
-      // Carousel functionality
-      const track = document.querySelector(".carousel-track") as HTMLElement;
-      const dots = document.querySelectorAll(".carousel-dot");
-      const prevBtn = document.querySelector(".carousel-btn-prev");
-      const nextBtn = document.querySelector(".carousel-btn-next");
-      
-      if (track && dots.length > 0) {
-        let currentSlide = 0;
-        const totalSlides = dots.length;
-        let autoplayInterval: NodeJS.Timeout | null = null;
+    // Carousel functionality
+    const track = document.querySelector(".carousel-track") as HTMLElement;
+    const dots = document.querySelectorAll(".carousel-dot");
+    const prevBtn = document.querySelector(".carousel-btn-prev");
+    const nextBtn = document.querySelector(".carousel-btn-next");
 
-        const updateCarousel = (index: number) => {
-          currentSlide = (index + totalSlides) % totalSlides;
-          track.style.transform = `translateX(-${currentSlide * 100}%)`;
-          
-          // Update dots
-          dots.forEach((dot, i) => {
-            const dotEl = dot as HTMLElement;
-            if (i === currentSlide) {
-              dotEl.style.background = "var(--color-accent)";
-              dotEl.style.width = "2rem";
-            } else {
-              dotEl.style.background = "rgba(6, 182, 212, 0.3)";
-              dotEl.style.width = "0.75rem";
-            }
-          });
-        };
+    if (track && dots.length > 0) {
+      let currentSlide = 0;
+      const totalSlides = dots.length;
+      let autoplayInterval: NodeJS.Timeout | null = null;
 
-        const stopAutoplay = () => {
-          if (autoplayInterval) {
-            clearInterval(autoplayInterval);
-            autoplayInterval = null;
+      const updateCarousel = (index: number) => {
+        currentSlide = (index + totalSlides) % totalSlides;
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+        // Update dots
+        dots.forEach((dot, i) => {
+          const dotEl = dot as HTMLElement;
+          if (i === currentSlide) {
+            dotEl.style.background = "var(--color-accent)";
+            dotEl.style.width = "2rem";
+          } else {
+            dotEl.style.background = "rgba(6, 182, 212, 0.3)";
+            dotEl.style.width = "0.75rem";
           }
-        };
+        });
+      };
 
-        const startAutoplay = () => {
-          stopAutoplay(); // Stop any existing interval first
-          autoplayInterval = setInterval(() => {
-            updateCarousel(currentSlide + 1);
-          }, 5000);
-        };
+      const stopAutoplay = () => {
+        if (autoplayInterval) {
+          clearInterval(autoplayInterval);
+          autoplayInterval = null;
+        }
+      };
 
-        // Next/Prev buttons
-        nextBtn?.addEventListener("click", () => {
+      const startAutoplay = () => {
+        stopAutoplay(); // Stop any existing interval first
+        autoplayInterval = setInterval(() => {
           updateCarousel(currentSlide + 1);
+        }, 5000);
+      };
+
+      // Next/Prev buttons
+      nextBtn?.addEventListener("click", () => {
+        updateCarousel(currentSlide + 1);
+        startAutoplay(); // Restart interval
+      });
+
+      prevBtn?.addEventListener("click", () => {
+        updateCarousel(currentSlide - 1);
+        startAutoplay(); // Restart interval
+      });
+
+      // Dot navigation
+      dots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          const slideIndex = parseInt(dot.getAttribute("data-slide") || "0");
+          updateCarousel(slideIndex);
           startAutoplay(); // Restart interval
         });
+      });
 
-        prevBtn?.addEventListener("click", () => {
-          updateCarousel(currentSlide - 1);
-          startAutoplay(); // Restart interval
-        });
+      // Pause on hover
+      track.parentElement?.addEventListener("mouseenter", stopAutoplay);
+      track.parentElement?.addEventListener("mouseleave", startAutoplay);
 
-        // Dot navigation
-        dots.forEach((dot) => {
-          dot.addEventListener("click", () => {
-            const slideIndex = parseInt(dot.getAttribute("data-slide") || "0");
-            updateCarousel(slideIndex);
-            startAutoplay(); // Restart interval
-          });
-        });
+      // Image zoom functionality
+      const slides = document.querySelectorAll(".carousel-slide img");
+      slides.forEach((img) => {
+        const imgEl = img as HTMLImageElement;
+        imgEl.style.cursor = "zoom-in";
 
-        // Pause on hover
-        track.parentElement?.addEventListener("mouseenter", stopAutoplay);
-        track.parentElement?.addEventListener("mouseleave", startAutoplay);
+        imgEl.addEventListener("click", (e) => {
+          e.stopPropagation();
+          stopAutoplay();
 
-        // Image zoom functionality
-        const slides = document.querySelectorAll(".carousel-slide img");
-        slides.forEach((img) => {
-          const imgEl = img as HTMLImageElement;
-          imgEl.style.cursor = "zoom-in";
-          
-          imgEl.addEventListener("click", (e) => {
-            e.stopPropagation();
-            stopAutoplay();
-            
-            // Create modal overlay
-            const modal = document.createElement("div");
-            modal.className = "image-zoom-modal";
-            modal.style.cssText = `
+          // Create modal overlay
+          const modal = document.createElement("div");
+          modal.className = "image-zoom-modal";
+          modal.style.cssText = `
               position: fixed;
               top: 0;
               left: 0;
@@ -3269,11 +2261,11 @@ function ScriptHandler() {
               animation: fadeIn 0.2s ease-in-out;
               padding: 2rem;
             `;
-            
-            // Create close button
-            const closeBtn = document.createElement("button");
-            closeBtn.innerHTML = "✕";
-            closeBtn.style.cssText = `
+
+          // Create close button
+          const closeBtn = document.createElement("button");
+          closeBtn.innerHTML = "✕";
+          closeBtn.style.cssText = `
               position: absolute;
               top: 1.5rem;
               right: 1.5rem;
@@ -3289,18 +2281,18 @@ function ScriptHandler() {
               transition: all 0.3s;
               z-index: 10000;
             `;
-            closeBtn.addEventListener("mouseenter", () => {
-              closeBtn.style.transform = "scale(1.1)";
-              closeBtn.style.background = "rgba(6, 182, 212, 0.3)";
-            });
-            closeBtn.addEventListener("mouseleave", () => {
-              closeBtn.style.transform = "scale(1)";
-              closeBtn.style.background = "rgba(6, 182, 212, 0.2)";
-            });
-            
-            // Clone image
-            const zoomedImg = imgEl.cloneNode(true) as HTMLImageElement;
-            zoomedImg.style.cssText = `
+          closeBtn.addEventListener("mouseenter", () => {
+            closeBtn.style.transform = "scale(1.1)";
+            closeBtn.style.background = "rgba(6, 182, 212, 0.3)";
+          });
+          closeBtn.addEventListener("mouseleave", () => {
+            closeBtn.style.transform = "scale(1)";
+            closeBtn.style.background = "rgba(6, 182, 212, 0.2)";
+          });
+
+          // Clone image
+          const zoomedImg = imgEl.cloneNode(true) as HTMLImageElement;
+          zoomedImg.style.cssText = `
               max-width: 95%;
               max-height: 95%;
               object-fit: contain;
@@ -3308,10 +2300,10 @@ function ScriptHandler() {
               box-shadow: 0 25px 50px rgba(6, 182, 212, 0.3);
               animation: zoomIn 0.3s ease-out;
             `;
-            
-            // Add CSS animations
-            const style = document.createElement("style");
-            style.textContent = `
+
+          // Add CSS animations
+          const style = document.createElement("style");
+          style.textContent = `
               @keyframes fadeIn {
                 from { opacity: 0; }
                 to { opacity: 1; }
@@ -3327,74 +2319,51 @@ function ScriptHandler() {
                 }
               }
             `;
-            document.head.appendChild(style);
-            
-            // Close modal function
-            const closeModal = () => {
-              modal.style.animation = "fadeIn 0.2s ease-in-out reverse";
-              setTimeout(() => {
-                document.body.removeChild(modal);
-                document.head.removeChild(style);
-                startAutoplay();
-              }, 200);
-            };
-            
-            closeBtn.addEventListener("click", (e) => {
-              e.stopPropagation();
-              closeModal();
-            });
-            
-            modal.addEventListener("click", closeModal);
-            
-            // ESC key to close
-            const escHandler = (e: KeyboardEvent) => {
-              if (e.key === "Escape") {
-                closeModal();
-                document.removeEventListener("keydown", escHandler);
-              }
-            };
-            document.addEventListener("keydown", escHandler);
-            
-            modal.appendChild(closeBtn);
-            modal.appendChild(zoomedImg);
-            document.body.appendChild(modal);
+          document.head.appendChild(style);
+
+          // Close modal function
+          const closeModal = () => {
+            modal.style.animation = "fadeIn 0.2s ease-in-out reverse";
+            setTimeout(() => {
+              document.body.removeChild(modal);
+              document.head.removeChild(style);
+              startAutoplay();
+            }, 200);
+          };
+
+          closeBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            closeModal();
           });
+
+          modal.addEventListener("click", closeModal);
+
+          // ESC key to close
+          const escHandler = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+              closeModal();
+              document.removeEventListener("keydown", escHandler);
+            }
+          };
+          document.addEventListener("keydown", escHandler);
+
+          modal.appendChild(closeBtn);
+          modal.appendChild(zoomedImg);
+          document.body.appendChild(modal);
         });
+      });
 
-        // Start autoplay
-        startAutoplay();
+      // Start autoplay
+      startAutoplay();
 
-        // Cleanup
-        return () => {
-          stopAutoplay();
-        };
-      }
+      // Cleanup
+      return () => {
+        stopAutoplay();
+      };
+    }
   }, []);
 
   return null;
-}
-function Badge({
-  icon: Icon,
-  children,
-}: {
-  icon: (props: SVGProps<SVGSVGElement>) => ReactNode;
-  children: ReactNode;
-}) {
-  return (
-    <span
-      className="hero-badge inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.2em]"
-      style={{
-        borderColor: "rgba(20, 184, 166, 0.25)",
-        background:
-          "linear-gradient(135deg, rgba(20, 184, 166, 0.08), rgba(20, 184, 166, 0.04))",
-        color: "var(--color-text-secondary)",
-        boxShadow: "0 0 20px rgba(20, 184, 166, 0.1)",
-      }}
-    >
-      <Icon className="h-3.5 w-3.5" style={{ color: "var(--color-accent)" }} />
-      {children}
-    </span>
-  );
 }
 
 function CheckIcon(props: SVGProps<SVGSVGElement>) {
@@ -3462,23 +2431,6 @@ function LayersIcon(props: SVGProps<SVGSVGElement>) {
       <path d="M12 3l9 4.5-9 4.5-9-4.5z" />
       <path d="M3 12l9 4.5 9-4.5" />
       <path d="M3 16.5l9 4.5 9-4.5" />
-    </svg>
-  );
-}
-
-function ArrowRightIcon(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="M5 12h14" />
-      <path d="M13 6l6 6-6 6" />
     </svg>
   );
 }

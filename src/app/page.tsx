@@ -646,8 +646,8 @@ export default function Home() {
                       </h3>
                     </div>
                     <p className="text-slate-400">
-                      Advanced filtering, nested folders, keyboard shortcuts,
-                      and multi-platform support for ChatGPT, Claude, and more.
+                      Advanced filtering, nested folders, keyboard shortcuts for ChatGPT,
+                      and a Universal Prompt Library for Claude & Grok.
                     </p>
                   </div>
                   <div className="flex gap-4">
@@ -689,10 +689,10 @@ export default function Home() {
                 <div className="space-y-2">
                   <div className="text-3xl font-bold text-white">3+</div>
                   <div className="text-sm text-cyan-400 font-medium uppercase tracking-wider">
-                    Platforms
+                    Supported AIs
                   </div>
                   <div className="text-xs text-slate-500">
-                    ChatGPT, Claude, Grok
+                    For Prompt Library
                   </div>
                 </div>
               </div>

@@ -1,7 +1,6 @@
 ﻿'use client';
 
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
 
 export default function ImageLightbox() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -11,9 +10,13 @@ export default function ImageLightbox() {
     const handleImageClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       if (target.tagName === 'IMG' && target.closest('.prose')) {
+        e.preventDefault();
         const img = target as HTMLImageElement;
-        if (img.src) {
-          setSelectedImage(img.src);
+        // Use currentSrc for Next.js optimized images, fallback to src
+        const imageSrc = img.currentSrc || img.src;
+        if (imageSrc) {
+          console.log('Opening image:', imageSrc);
+          setSelectedImage(imageSrc);
         }
       }
     };
@@ -73,11 +76,9 @@ export default function ImageLightbox() {
       </button>
 
       <div className="relative max-h-[90vh] max-w-[90vw] animate-in zoom-in-95 duration-200">
-        <Image
+        <img
           src={selectedImage}
           alt="Enlarged view"
-          width={1920}
-          height={1080}
           className="h-auto w-auto max-h-[90vh] max-w-[90vw] rounded-lg object-contain shadow-2xl"
           onClick={(e) => e.stopPropagation()}
         />

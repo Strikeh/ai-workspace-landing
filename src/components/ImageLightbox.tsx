@@ -1,6 +1,6 @@
-﻿'use client';
+﻿"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export default function ImageLightbox() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -9,43 +9,43 @@ export default function ImageLightbox() {
     // Add click handlers to all images in the blog content
     const handleImageClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      if (target.tagName === 'IMG' && target.closest('.prose')) {
+      if (target.tagName === "IMG" && target.closest(".prose")) {
         e.preventDefault();
         const img = target as HTMLImageElement;
         // Use currentSrc for Next.js optimized images, fallback to src
         const imageSrc = img.currentSrc || img.src;
         if (imageSrc) {
-          console.log('Opening image:', imageSrc);
+          console.log("Opening image:", imageSrc);
           setSelectedImage(imageSrc);
         }
       }
     };
 
-    document.addEventListener('click', handleImageClick);
-    return () => document.removeEventListener('click', handleImageClick);
+    document.addEventListener("click", handleImageClick);
+    return () => document.removeEventListener("click", handleImageClick);
   }, []);
 
   useEffect(() => {
     // Disable body scroll when lightbox is open
     if (selectedImage) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     }
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     };
   }, [selectedImage]);
 
   useEffect(() => {
     // Close on Escape key
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+      if (e.key === "Escape") {
         setSelectedImage(null);
       }
     };
-    window.addEventListener('keydown', handleEscape);
-    return () => window.removeEventListener('keydown', handleEscape);
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
   }, []);
 
   if (!selectedImage) return null;

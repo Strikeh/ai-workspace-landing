@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { blogPosts } from "@/data/blog-posts";
 import { Metadata } from "next";
+import ImageLightbox from "@/components/ImageLightbox";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -136,9 +137,12 @@ export default async function BlogPost({ params }: Props) {
             prose-strong:text-white prose-strong:font-bold
             prose-ul:my-6 prose-li:my-2 prose-li:marker:text-cyan-500
             prose-code:text-cyan-300 prose-code:bg-slate-800/50 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
-            prose-blockquote:border-l-4 prose-blockquote:border-cyan-500 prose-blockquote:bg-slate-800/30 prose-blockquote:p-6 prose-blockquote:rounded-r-lg prose-blockquote:not-italic prose-blockquote:text-slate-200"
+            prose-blockquote:border-l-4 prose-blockquote:border-cyan-500 prose-blockquote:bg-slate-800/30 prose-blockquote:p-6 prose-blockquote:rounded-r-lg prose-blockquote:not-italic prose-blockquote:text-slate-200
+            [&_img]:cursor-zoom-in [&_img]:transition-transform [&_img]:duration-200 hover:[&_img]:scale-[1.02]"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
+
+          <ImageLightbox />
 
           {/* CTA */}
           <div className="mt-16 rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-cyan-900/20 to-slate-900/50 p-8 text-center backdrop-blur-sm">

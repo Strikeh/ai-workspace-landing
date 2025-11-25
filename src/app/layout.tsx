@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -157,7 +158,8 @@ export default function RootLayout({
               applicationCategory: "ProductivityApplication",
               applicationSubCategory: "Browser Extension",
               operatingSystem: "Chrome, Edge, Firefox",
-              browserRequirements: "Requires Chrome 90+, Edge 90+, or Firefox 88+",
+              browserRequirements:
+                "Requires Chrome 90+, Edge 90+, or Firefox 88+",
               softwareVersion: "2.0",
               datePublished: "2024-01-01",
               author: {
@@ -186,7 +188,8 @@ export default function RootLayout({
                     unitText: "MONTH",
                   },
                   availability: "https://schema.org/InStock",
-                  description: "Unlimited prompts, vaults, and advanced features",
+                  description:
+                    "Unlimited prompts, vaults, and advanced features",
                 },
               ],
               aggregateRating: {
@@ -198,7 +201,8 @@ export default function RootLayout({
                 reviewCount: "1247",
               },
               description: siteConfig.description,
-              screenshot: "https://getaiworkspace.com/images/carousel/BrandBird%202025-11-20%2011.36.08.png",
+              screenshot:
+                "https://getaiworkspace.com/images/carousel/BrandBird%202025-11-20%2011.36.08.png",
               featureList: [
                 "Local-first encrypted storage with AES-256",
                 "Multi-platform AI integration (ChatGPT, Claude, Grok)",
@@ -213,7 +217,8 @@ export default function RootLayout({
                 "Multi-language support (EN/FR/NL)",
                 "Advanced search and filtering",
               ],
-              keywords: "chatgpt extension, chrome extension, ai productivity, prompt manager, conversation organizer",
+              keywords:
+                "chatgpt extension, chrome extension, ai productivity, prompt manager, conversation organizer",
             }),
           }}
         />
@@ -281,6 +286,7 @@ export default function RootLayout({
         <div className="aurora-parallax" aria-hidden />
         {children}
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

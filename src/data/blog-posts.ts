@@ -11,6 +11,96 @@
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "getting-started-nano-banana-pro",
+    title: "Getting Started with Nano Banana Pro: A Step‑by‑Step Guide",
+    excerpt:
+      "Artificial intelligence is no longer just a tool for experimentation—it’s becoming a professional standard. Learn how to unlock 4K creativity with this guide.",
+    date: "Nov 28, 2025",
+    readTime: "6 min read",
+    category: "Guides",
+    image: "/images/blog/nano-banana-pro-guide-header.png",
+    content: `
+      <div class="bg-cyan-500/10 border border-cyan-500/20 rounded-xl p-6 mb-8">
+        <p class="text-lg font-medium text-cyan-100 m-0">
+          Artificial intelligence is no longer just a tool for experimentation—it’s becoming a professional standard.
+        </p>
+        <p class="text-slate-300 mt-2 mb-0">
+          Nano Banana Pro is one of the most advanced AI image generation platforms available today, offering 4K resolution, accurate text rendering, and professional editing controls. If you’re ready to harness its full potential, here’s a practical guide to get you started.
+        </p>
+      </div>
+
+      <h2>🖥 Step 1: Access Nano Banana Pro</h2>
+      <p>Nano Banana Pro can be used through different interfaces:</p>
+      <ul>
+        <li><strong>Chat</strong> – Fast and simple, ideal for quick drafts.</li>
+        <li><strong>Flow</strong> – Streamlined workflows for iterative projects.</li>
+        <li><strong>API</strong> – Unlocks the full power of Nano Banana Pro, including 4K resolution and advanced customization.</li>
+      </ul>
+      
+      <div class="bg-slate-800/50 border-l-4 border-cyan-500 p-6 my-8 rounded-r-xl">
+        <p class="text-slate-300 m-0">
+          👉 <strong>Note:</strong> For professional results, the API route is recommended.
+        </p>
+      </div>
+
+      <h2>✍️ Step 2: Craft Your Prompt</h2>
+      <p>Your prompt is the foundation of your image. To get the best results:</p>
+      <ul>
+        <li><strong>Be specific:</strong> Instead of “a dog,” try “a golden retriever puppy sitting on a red blanket in sunlight.”</li>
+        <li><strong>Add style cues:</strong> “cinematic lighting,” “watercolor illustration,” or “realistic photography.”</li>
+        <li><strong>Use contextual details:</strong> Include mood, perspective, or environment.</li>
+      </ul>
+
+      <img src="/images/blog/nano-banana-pro-prompting.png" alt="Comparison of simple vs detailed prompt results" class="max-w-[85%] mx-auto rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <h2>📸 Step 3: Add References</h2>
+      <p>Nano Banana Pro allows you to upload multiple reference images (up to 8). This is crucial for:</p>
+      <ul>
+        <li><strong>Character consistency</strong> – Keep the same face or style across different images.</li>
+        <li><strong>Brand identity</strong> – Ensure logos, fonts, and colors remain uniform.</li>
+        <li><strong>Scene continuity</strong> – Maintain objects or environments across variations.</li>
+      </ul>
+
+      <h2>🎛 Step 4: Customize Settings</h2>
+      <p>Here’s where Nano Banana Pro shines:</p>
+      <ul>
+        <li><strong>Resolution</strong> – Push up to 4K for professional‑grade visuals.</li>
+        <li><strong>Aspect ratio</strong> – Choose formats like 16:9 for video thumbnails or 1:1 for social posts.</li>
+        <li><strong>Camera controls</strong> – Adjust angles, depth of field, and lighting.</li>
+        <li><strong>Style parameters</strong> – Fine‑tune realism, artistic flair, or experimental looks.</li>
+      </ul>
+
+      <h2>🔄 Step 5: Generate and Refine</h2>
+      <p>Run your prompt and review the output.</p>
+      <ul>
+        <li>Use the built‑in editor to tweak colors, sharpness, or composition.</li>
+        <li><strong>Iterate:</strong> small prompt changes can dramatically improve consistency.</li>
+      </ul>
+
+      <img src="/images/blog/nano-banana-pro-refinement.png" alt="Interface showing refinement tools in Nano Banana Pro" class="max-w-[85%] mx-auto rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <h2>🌍 Step 6: Apply in Real Projects</h2>
+      <p>Nano Banana Pro isn’t just for fun—it’s a professional tool.</p>
+      <ul>
+        <li><strong>Marketing teams</strong> can design campaign visuals in minutes.</li>
+        <li><strong>Educators</strong> can create diagrams and explainers with accurate text.</li>
+        <li><strong>Content creators</strong> can produce thumbnails, infographics, and social posts that stand out.</li>
+        <li><strong>Designers</strong> can prototype ideas faster than traditional workflows.</li>
+      </ul>
+
+      <h2>⚡ Pro Tips</h2>
+      <ul>
+        <li>Use API access for the best quality.</li>
+        <li>Keep prompts short but detailed—overly complex instructions can confuse the model.</li>
+        <li>Save your favorite settings for consistency across projects.</li>
+        <li>Experiment with multi‑image fusion to blend styles or concepts.</li>
+      </ul>
+
+      <h2>🎨 Final Thoughts</h2>
+      <p>Nano Banana Pro is more than an AI image generator—it’s a creative ecosystem. By following these steps, you’ll move beyond casual experimentation into production‑ready design. Whether you’re building a brand, teaching a class, or creating content, Nano Banana Pro gives you the tools to produce visuals that are sharp, consistent, and professional.</p>
+    `,
+  },
+  {
     slug: "nano-banana-pro-redefining-ai-image-creation",
     title: "Nano Banana Pro: Redefining AI Image Creation for Professionals",
     excerpt:

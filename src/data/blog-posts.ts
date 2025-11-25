@@ -11,6 +11,103 @@
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "visual-gpt-project-management",
+    title: "Visual GPT & Project Management: Find Conversations Instantly",
+    excerpt:
+      "Introducing GPT avatars and smart filtering in AI Workspace. Instantly identify which CustomGPT or Project was used in any conversation and filter your entire chat history with precision.",
+    date: "Nov 25, 2025",
+    readTime: "5 min read",
+    category: "Updates",
+    image: "/images/blog/gpt-project-overview.png",
+    content: `
+      <div class="bg-cyan-500/10 border border-cyan-500/20 rounded-xl p-6 mb-8">
+        <p class="text-lg font-medium text-cyan-100 m-0">
+          Managing hundreds of AI conversations just got a whole lot easier.
+        </p>
+        <p class="text-slate-300 mt-2 mb-0">
+          We're excited to introduce a major visual and organizational upgrade to AI Workspace: comprehensive GPT and Project management with beautiful avatar displays and intelligent filtering. Now you can instantly identify which CustomGPT or Project was used in any conversation.
+        </p>
+      </div>
+
+      <h2>🎨 What's New</h2>
+
+      <h3>GPT & Project Avatars on Every Chat</h3>
+      <p>Every conversation card now displays the avatar of the CustomGPT or Project that was used. No more guessing which GPT you were talking to!</p>
+      <ul>
+        <li><strong>Visual Recognition</strong> – See the profile picture of ChatGPT, DALL·E, Code Interpreter, or your custom GPTs</li>
+        <li><strong>Project Icons</strong> – Project conversations show their distinctive avatars</li>
+        <li><strong>Works Everywhere</strong> – Available in both grid and list view</li>
+      </ul>
+
+      <img src="/images/blog/chat-card-avatars-grid.png" alt="Chat cards in grid view showing GPT avatars" class="max-w-[85%] mx-auto rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <h3>Smart Filtering System</h3>
+      <p>Two new dropdown filters allow you to instantly narrow down your conversations:</p>
+      
+      <div class="bg-slate-800/50 border-l-4 border-cyan-500 p-6 my-8 rounded-r-xl">
+        <h4 class="text-cyan-400 font-bold text-lg mb-2 mt-0">🔍 Combined Filtering</h4>
+        <p class="text-slate-300 m-0">
+          Use both filters together for precise results. Example: "Show me all Nexus.io GPT conversations in the Marketing Project" — done in two clicks.
+        </p>
+      </div>
+
+      <ul>
+        <li><strong>CustomGPT Filter</strong> – Filter by any GPT you've used, dynamically updated as you create new chats</li>
+        <li><strong>Project Filter</strong> – Filter by organizational Projects for team collaboration</li>
+        <li><strong>Works with Search</strong> – Combine with existing search and category filters for surgical precision</li>
+      </ul>
+
+      <img src="/images/blog/toolbar-filters.png" alt="New filter dropdowns in the chat toolbar" class="max-w-[85%] mx-auto rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <h3>Vault Sidebar Integration</h3>
+      <p>The injected vault sidebar now also displays GPT and Project avatars for quick visual identification:</p>
+      <ul>
+        <li><strong>Hover Tooltips</strong> – See "Open GPT: [Name]" when you hover over avatars</li>
+        <li><strong>Click to Navigate</strong> – Click any avatar to jump directly to that GPT or Project page</li>
+        <li><strong>Smooth Animations</strong> – Hover effects for better interactivity</li>
+      </ul>
+
+      <img src="/images/blog/vault-sidebar-avatars.png" alt="Vault sidebar showing GPT avatars with hover effects" class="max-w-[85%] mx-auto rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <h2>💡 Real-World Use Cases</h2>
+
+      <h3>For Individual Users</h3>
+      <p><strong>Scenario:</strong> "I used a custom Research GPT last week to analyze some data. Where did I save that conversation?"</p>
+      <p><strong>Solution:</strong> Open the CustomGPT filter, select "Research GPT", and instantly see all related conversations.</p>
+
+      <h3>For Teams & Projects</h3>
+      <p><strong>Scenario:</strong> "Show me all conversations from the Q4 Marketing Campaign project."</p>
+      <p><strong>Solution:</strong> Use the Project filter to isolate all project-related chats, regardless of which GPT was used.</p>
+
+      <h3>For Power Users</h3>
+      <p><strong>Scenario:</strong> "Find all conversations with the Code Interpreter GPT in the Backend Refactor project."</p>
+      <p><strong>Solution:</strong> Combine both filters for surgical precision.</p>
+
+      <h2>🚀 Getting Started</h2>
+      <ol>
+        <li><strong>Update AI Workspace</strong> – Make sure you're running version 0.0.26 or later</li>
+        <li><strong>Sync Your Conversations</strong> – The extension will automatically enrich your existing conversations with GPT and Project metadata</li>
+        <li><strong>Explore the Filters</strong> – Look for the two new dropdown filters in the toolbar and try combining them</li>
+        <li><strong>Check the Vault Sidebar</strong> – Hover over avatars to see names, click to navigate</li>
+      </ol>
+
+      <img src="/images/blog/combined-filters.png" alt="Using both GPT and Project filters simultaneously" class="max-w-[85%] mx-auto rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <h2>🎯 Key Benefits</h2>
+      <ul>
+        <li><strong>Faster Navigation</strong> – No need to open chats to see which GPT was used</li>
+        <li><strong>Better Organization</strong> – Clear separation between Projects and CustomGPTs</li>
+        <li><strong>Improved Workflow</strong> – Quick filtering saves time when managing hundreds of conversations</li>
+        <li><strong>Enhanced Context</strong> – Tooltips and hover states provide immediate information</li>
+      </ul>
+
+      <h2>🔮 What's Next?</h2>
+      <p>We're continuously improving AI Workspace's visual and organizational capabilities. Future enhancements may include custom avatar support, color coding, saved filter queries, and usage analytics.</p>
+      
+      <p class="text-slate-400 italic mt-8">This feature was developed in response to user feedback requesting better visual identification and filtering capabilities for CustomGPT conversations.</p>
+    `,
+  },
+  {
     slug: "getting-started-nano-banana-pro",
     title: "Getting Started with Nano Banana Pro: A Step‑by‑Step Guide",
     excerpt:

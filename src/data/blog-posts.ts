@@ -11,6 +11,118 @@
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "text-highlighting-feature",
+    title: "Introducing Text Highlighting: Never Lose Important Information",
+    excerpt:
+      "Mark important parts of AI responses and navigate between them effortlessly. Whether you're researching, learning, or managing projects, never lose track of crucial information again.",
+    date: "Nov 25, 2025",
+    readTime: "6 min read",
+    category: "Updates",
+    image: "/images/blog/highlight-hero.png",
+    content: `
+      <div class="bg-cyan-500/10 border border-cyan-500/20 rounded-xl p-6 mb-8">
+        <p class="text-lg font-medium text-cyan-100 m-0">
+          We're thrilled to announce one of our most requested features: Text Highlighting!
+        </p>
+        <p class="text-slate-300 mt-2 mb-0">
+          Now you can highlight important parts of AI responses and navigate between them effortlessly. Whether you're researching, learning, or managing complex projects, this feature ensures you never lose track of crucial information.
+        </p>
+      </div>
+
+      <h2>The Problem We're Solving</h2>
+      <p>Have you ever scrolled through a long ChatGPT conversation looking for that one perfect answer? Or tried to remember which part of a 50-message thread contained the code snippet you needed?</p>
+      <p>We've all been there. AI conversations can get long and overwhelming. Important insights get buried in lengthy responses, and finding them later becomes a frustrating game of scroll-and-search.</p>
+      <p><strong>Not anymore.</strong></p>
+
+      <h2>Highlight Anything, Anywhere</h2>
+      <p>With our new highlighting system, you can mark any text in your AI conversations on ChatGPT, Claude, or Grok. Simply:</p>
+      <ol>
+        <li><strong>Select the text</strong> you want to remember</li>
+        <li><strong>Press Ctrl+Shift+H</strong> or right-click and choose "AI Workspace → Highlight Selection"</li>
+        <li><strong>Done!</strong> Your highlight is saved and will persist forever</li>
+      </ol>
+
+      <img src="/images/blog/highlight-creation.png" alt="Screenshot showing text selection and highlight creation in action" class="max-w-[85%] mx-auto rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <div class="bg-slate-800/50 border-l-4 border-cyan-500 p-6 my-8 rounded-r-xl">
+        <h4 class="text-cyan-400 font-bold text-lg mb-2 mt-0">💾 Your highlights survive everything</h4>
+        <ul class="text-slate-300 m-0">
+          <li>Page refreshes</li>
+          <li>Browser restarts</li>
+          <li>Extension updates</li>
+          <li>Dynamic content changes</li>
+          <li>Message streaming</li>
+        </ul>
+      </div>
+
+      <h2>Navigate Like a Pro</h2>
+      <p>Once you've highlighted important sections, a sleek Navigation Toolbar appears at the bottom of your screen showing:</p>
+      <ul>
+        <li><strong>Highlight counter</strong> (e.g., "2/4") - know exactly where you are</li>
+        <li><strong>Previous/Next buttons</strong> - jump between highlights instantly</li>
+        <li><strong>Clear All button</strong> - remove all highlights when you're done</li>
+      </ul>
+
+      <img src="/images/blog/navigation-toolbar.png" alt="Navigation toolbar showing previous/next buttons and highlight counter" class="max-w-[85%] mx-auto rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <p>The toolbar is smart too. It automatically hides when you navigate to chats without highlights, smoothly scrolls to bring each highlight into view, and updates in real-time as you add or remove highlights.</p>
+
+      <h2>Visual Design That Works</h2>
+      <p>We spent considerable time perfecting the visual design:</p>
+      <ul>
+        <li><strong>Inactive highlights</strong> use a subtle yellow background that doesn't distract from your reading flow</li>
+        <li><strong>Active highlights</strong> (the one you're currently viewing) stand out with professional blue accent styling - soft blue background glow, subtle border shadow, and clean underline indicator</li>
+      </ul>
+
+      <img src="/images/blog/highlight-styles.png" alt="Comparison showing inactive vs active highlight styling" class="max-w-[85%] mx-auto rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <h2>Multiple Ways to Access</h2>
+      <p>We know everyone works differently, so we've provided two ways to create highlights:</p>
+      
+      <h3>Keyboard Shortcut</h3>
+      <p>Power users can press <strong>Ctrl+Shift+H</strong> after selecting text for instant highlighting.</p>
+
+      <h3>Context Menu</h3>
+      <p>Prefer the mouse? Right-click your selected text and choose "AI Workspace → Highlight Selection" from the context menu.</p>
+
+      <img src="/images/blog/context-menu.png" alt="Context menu showing AI Workspace submenu with Highlight Selection option" class="max-w-[85%] mx-auto rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <h2>Real-World Use Cases</h2>
+      <ul>
+        <li><strong>📚 Research & Learning</strong> – Highlight key concepts while learning. Later, quickly review important points without rereading everything.</li>
+        <li><strong>💼 Project Management</strong> – Mark action items and requirements during planning chats. Jump between them to create task lists.</li>
+        <li><strong>🎓 Education</strong> – Teachers can highlight the best activities from AI-generated lesson plans.</li>
+        <li><strong>✍️ Content Creation</strong> – Mark the best ideas during brainstorming sessions.</li>
+        <li><strong>🔬 Technical Problem Solving</strong> – Highlight solutions and code snippets in long debugging sessions for quick reference.</li>
+      </ul>
+
+      <h2>Try It Today</h2>
+      <p>The Text Highlighting System is available now in <strong>AI Workspace v0.0.28</strong> for all users - completely free!</p>
+      <p>It works seamlessly across ChatGPT, Claude, and Grok.</p>
+
+      <div class="bg-slate-800/50 border-l-4 border-cyan-500 p-6 my-8 rounded-r-xl">
+        <h4 class="text-cyan-400 font-bold text-lg mb-2 mt-0">🚀 Get Started in 3 Steps</h4>
+        <ol class="text-slate-300 m-0">
+          <li>Install/Update AI Workspace from the Chrome Web Store</li>
+          <li>Select text in any AI conversation</li>
+          <li>Press Ctrl+Shift+H or use the context menu</li>
+        </ol>
+      </div>
+
+      <h2>What's Next?</h2>
+      <p>This is just the beginning for our highlighting feature. We're already working on:</p>
+      <ul>
+        <li>🎨 <strong>Color options</strong> – different highlight colors for categorization</li>
+        <li>📝 <strong>Highlight notes</strong> – add personal annotations to highlighted text</li>
+        <li>🔍 <strong>Search highlights</strong> – find specific highlights across all conversations</li>
+        <li>📊 <strong>Highlight badges</strong> – see which chats have highlights in the vault sidebar</li>
+        <li>🏷️ <strong>Highlight tags</strong> – organize highlights by topic or project</li>
+      </ul>
+
+      <p class="text-slate-400 italic mt-8">Start highlighting and never lose important information again.</p>
+    `,
+  },
+  {
     slug: "visual-gpt-project-management",
     title: "Visual GPT & Project Management: Find Conversations Instantly",
     excerpt:

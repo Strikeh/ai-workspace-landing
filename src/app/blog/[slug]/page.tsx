@@ -113,7 +113,7 @@ export default async function BlogPost({ params }: Props) {
               {post.title}
             </h1>
             {post.image && (
-              <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
+              <div className={`relative ${post.slug === 'getting-started-nano-banana-pro' ? 'aspect-square' : 'aspect-video'} w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl`}>
                 <Image
                   src={post.image}
                   alt={post.title}

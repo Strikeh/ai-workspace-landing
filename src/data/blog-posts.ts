@@ -107,8 +107,6 @@ export const blogPosts: BlogPost[] = [
 
       <p>The system uses a sophisticated message detection algorithm that identifies highlighted content and preserves those messages even if they fall outside your configured limit. It's smart enough to understand that if you took the time to highlight something, it's worth keeping on screen.</p>
 
-      <img src="/images/blog/highlight-preservation.png" alt="Highlight Preservation in Thread Trimming" class="max-w-[85%] mx-auto rounded-xl border border-white/10 shadow-2xl my-8" />
-
       <h2>Real-World Performance Impact</h2>
       <p>We tested thread trimming across various conversation lengths on a mid-range laptop (Intel i5, 8GB RAM):</p>
 
@@ -192,8 +190,6 @@ export const blogPosts: BlogPost[] = [
 
       <h3>Glassmorphism Design</h3>
       <p>The visual indicator uses modern CSS with <code>backdrop-filter: blur(12px)</code> and transparent gradients for a premium, native feel that matches ChatGPT's aesthetic.</p>
-
-      <img src="/images/blog/technical-architecture.png" alt="Technical Architecture Diagram" class="max-w-[85%] mx-auto rounded-xl border border-white/10 shadow-2xl my-8" />
 
       <h2>Privacy & Data Security</h2>
       <p>Thread trimming is designed with privacy as a core principle:</p>

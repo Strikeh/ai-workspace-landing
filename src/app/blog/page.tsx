@@ -94,7 +94,7 @@ export default function BlogIndex() {
                 className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-slate-900/50 transition-all hover:-translate-y-1 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 {/* Image */}
-                <div className="relative aspect-video w-full overflow-hidden bg-slate-800">
+                <div className="relative aspect-square w-full overflow-hidden bg-slate-800">
                   {post.image && (
                     <Image
                       src={post.image}

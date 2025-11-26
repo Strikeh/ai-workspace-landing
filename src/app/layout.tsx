@@ -109,7 +109,7 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
-    creator: "@aiworkspace", // Update met je echte Twitter handle
+    creator: "@Strikeh82",
   },
   robots: {
     index: true,

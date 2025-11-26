@@ -2005,7 +2005,9 @@ export default function Home() {
                 </p>
                 <div className="flex gap-4">
                   <a
-                    href="#"
+                    href="https://x.com/Strikeh82"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-slate-400 hover:text-cyan-400 transition-colors"
                   >
                     <span className="sr-only">Twitter</span>
@@ -2019,7 +2021,9 @@ export default function Home() {
                     </svg>
                   </a>
                   <a
-                    href="#"
+                    href="https://github.com/Strikeh"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-slate-400 hover:text-cyan-400 transition-colors"
                   >
                     <span className="sr-only">GitHub</span>

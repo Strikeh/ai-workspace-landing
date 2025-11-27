@@ -21,24 +21,30 @@ const demoVideos = {
     },
     {
       id: 2,
+      title: "Fix Slow ChatGPT: Auto-Trim Long Threads (NEW)",
+      videoId: "L3EXlMBB1zI",
+      thumbnail: "",
+    },
+    {
+      id: 3,
       title: "Organize Your Workspace With Categories",
       videoId: "GN7Zu_jRL8U",
       thumbnail: "",
     },
     {
-      id: 3,
+      id: 4,
       title: "How to Create a New Vault in AI Workspace",
       videoId: "D4xBchnUWcI",
       thumbnail: "",
     },
     {
-      id: 4,
+      id: 5,
       title: "One Click Prompt Execution with AIWorkspace Pro",
       videoId: "kriH0lG5h3o",
       thumbnail: "",
     },
     {
-      id: 5,
+      id: 6,
       title: "Managing AI Prompts With Categories & Tags",
       videoId: "RIBEO7YSBXg",
       thumbnail: "",

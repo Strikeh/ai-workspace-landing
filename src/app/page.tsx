@@ -648,6 +648,29 @@ export default function Home() {
                 </div>
               </div>
 
+              {/* Card: Smart Thread Trimming */}
+              <div className="bento-card col-span-1">
+                <div className="bento-card-content gap-6">
+                  <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center shadow-lg shadow-yellow-500/20">
+                    <svg className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      Lightning Fast Chats
+                    </h3>
+                    <p className="text-sm text-slate-400">
+                      Smart Thread Trimming auto-hides older messages in long conversations. Say goodbye to laggy 200+ message threads.
+                    </p>
+                    <div className="mt-3 inline-flex items-center gap-1.5 px-2 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-medium">
+                      <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
+                      Free Feature
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {/* Card 4: Power Users (Wide) */}
               <div className="bento-card col-span-1 md:col-span-2 lg:col-span-3">
                 <div className="bento-card-content flex-row items-center justify-between gap-8 flex-wrap md:flex-nowrap">

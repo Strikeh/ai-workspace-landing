@@ -5,7 +5,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blog | AI Workspace",
-  description: "Latest updates, guides, and productivity tips for ChatGPT, Claude, and AI Workspace.",
+  description:
+    "Latest updates, guides, and productivity tips for ChatGPT, Claude, and AI Workspace.",
 };
 
 export default function BlogIndex() {
@@ -82,7 +83,8 @@ export default function BlogIndex() {
               </span>
             </h1>
             <p className="text-xl text-slate-400 leading-relaxed">
-              Tips, tutorials, and insights to help you master your AI workflow and get the most out of ChatGPT.
+              Tips, tutorials, and insights to help you master your AI workflow
+              and get the most out of ChatGPT.
             </p>
           </div>
 
@@ -150,7 +152,9 @@ export default function BlogIndex() {
       {/* Simple Footer */}
       <footer className="border-t border-white/10 bg-slate-950 py-12">
         <div className="mx-auto max-w-7xl px-6 text-center text-slate-500">
-          <p>&copy; {new Date().getFullYear()} AI Workspace. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} AI Workspace. All rights reserved.
+          </p>
         </div>
       </footer>
     </div>

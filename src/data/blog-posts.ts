@@ -11,8 +11,217 @@
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "november-2025-feature-roundup",
+    title: "AI Workspace Pro: November 2025 Feature Roundup",
+    excerpt:
+      "Cloud Sync, Smart Thread Trimming, Text Highlighting, Advanced Tags, and more. Discover all the powerful new features that supercharge your AI workflow this month.",
+    date: "Nov 27, 2025",
+    readTime: "10 min read",
+    category: "Updates",
+    image: "/images/blog/november-2025-roundup-hero.png",
+    content: `
+      <div class="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-xl p-6 mb-8">
+        <p class="text-lg font-medium text-cyan-100 m-0">
+          🎉 <strong>November was huge for AI Workspace Pro!</strong>
+        </p>
+        <p class="text-slate-300 mt-2 mb-0">
+          We shipped Cross-Device Cloud Sync, Smart Thread Trimming, a powerful Text Highlighting system, Advanced Tags, and dozens of UX improvements. Here's everything you need to know.
+        </p>
+      </div>
+
+      <h2>🚀 Complete Cross-Device Cloud Sync</h2>
+      <p><strong>Your AI workspace, everywhere you go.</strong></p>
+      <p>We've built a comprehensive cloud sync system that keeps your entire AI workspace synchronized across all your devices. Whether you're on your desktop at work, laptop at home, or switching between browsers — your organization stays perfect.</p>
+
+      <img src="/images/blog/cloud-sync-devices.png" alt="Cloud Sync across multiple devices" class="max-w-[85%] mx-auto rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <h3>What Syncs Automatically</h3>
+      <ul>
+        <li>✅ <strong>Vaults</strong> — Your workspace containers sync instantly</li>
+        <li>✅ <strong>Folders & Categories</strong> — Hierarchical organization preserved</li>
+        <li>✅ <strong>Chat Assignments</strong> — Which chats belong to which folders</li>
+        <li>✅ <strong>Tags</strong> — Custom tags with colors sync across devices</li>
+        <li>✅ <strong>Chat Metadata</strong> — Favorites, pinned, archived status, and tags on chats</li>
+        <li>✅ <strong>Real-time Updates</strong> — Changes appear on other devices within 15 seconds</li>
+      </ul>
+
+      <div class="bg-slate-800/50 border-l-4 border-cyan-500 p-6 my-8 rounded-r-xl">
+        <h4 class="text-cyan-400 font-bold text-lg mb-2 mt-0">🔒 Privacy First</h4>
+        <p class="text-slate-300 m-0">
+          Only metadata syncs — <strong>never your actual conversations</strong>. Your chat content stays on the AI platform where it belongs. We sync the organization layer, not your data.
+        </p>
+      </div>
+
+      <h3>Smart Sync Technology</h3>
+      <ul>
+        <li><strong>Automatic polling</strong> detects changes from other devices</li>
+        <li><strong>Edit protection</strong> pauses sync while you're typing</li>
+        <li><strong>Conflict resolution</strong> with remote-wins merge strategy</li>
+        <li><strong>Instant feedback</strong> with sync status indicators</li>
+      </ul>
+
+      <h2>⚡ Smart Thread Trimming for Lightning Performance</h2>
+      <p><strong>Say goodbye to laggy long conversations.</strong></p>
+      <p>ChatGPT can slow to a crawl with 100+ message threads. Our new Thread Trimming feature automatically hides older messages to keep your browser responsive.</p>
+
+      <img src="/images/blog/thread-trimming-demo.png" alt="Thread Trimming in action showing trimmed message count" class="max-w-[85%] mx-auto rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <h3>Key Features</h3>
+      <ul>
+        <li><strong>Configurable limit</strong> — Set anywhere from 10 to 100 visible messages</li>
+        <li><strong>Smart preservation</strong> — Highlighted text, system prompts, and tool messages never get trimmed</li>
+        <li><strong>One-click controls</strong> — "Show All" to temporarily view everything, "Re-enable Trimming" to optimize again</li>
+        <li><strong>Visual feedback</strong> — Floating toolbar shows "Trimmed: Showing 50/247 messages"</li>
+        <li><strong>Real-time updates</strong> — Works with streaming messages as they come in</li>
+      </ul>
+
+      <p>Navigate to <strong>Settings → Performance & Speed</strong> to toggle auto-trim, adjust your message limit with the slider, and choose whether to preserve system messages.</p>
+
+      <h2>🎨 Text Highlighting System</h2>
+      <p><strong>Never lose important information in long conversations.</strong></p>
+      <p>Select any text in your AI conversations and create persistent highlights that survive page reloads, conversation switches, and even browser restarts.</p>
+
+      <h3>Highlight Features</h3>
+      <ul>
+        <li><strong>Multiple ways to highlight</strong> — Keyboard shortcut (Ctrl+Shift+H) or right-click menu</li>
+        <li><strong>Floating navigation toolbar</strong> — Jump between highlights with Previous/Next buttons</li>
+        <li><strong>Smart active highlight</strong> — Current highlight stands out with blue accent styling</li>
+        <li><strong>Persistent storage</strong> — Highlights saved to local database, restored automatically</li>
+        <li><strong>Works everywhere</strong> — ChatGPT, Claude, and Grok supported</li>
+      </ul>
+
+      <div class="bg-slate-800/50 border-l-4 border-yellow-500 p-6 my-8 rounded-r-xl">
+        <h4 class="text-yellow-400 font-bold text-lg mb-2 mt-0">💡 Pro Tip</h4>
+        <p class="text-slate-300 m-0">
+          Highlights integrate seamlessly with Thread Trimming — highlighted messages are <strong>never trimmed</strong>, even if they fall outside your visible message limit. Your important information always stays accessible.
+        </p>
+      </div>
+
+      <h2>🏷️ Advanced Tagging System</h2>
+      <p><strong>Organize with colorful, powerful tags.</strong></p>
+      <p>Create custom tags with personalized colors to categorize your chats and prompts across your entire workspace.</p>
+
+      <img src="/images/blog/tag-manager.png" alt="Tag Manager with color picker" class="max-w-[85%] mx-auto rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <h3>Tag Features</h3>
+      <ul>
+        <li><strong>Custom colors</strong> — Each tag can have its own background color</li>
+        <li><strong>Cross-device sync</strong> — Tags sync with Cloud Sync (Pro)</li>
+        <li><strong>Multi-select filtering</strong> — Filter by multiple tags at once</li>
+        <li><strong>Consistent display</strong> — Tags show their colors everywhere in the app</li>
+        <li><strong>Chat card integration</strong> — See tags directly on chat cards</li>
+      </ul>
+
+      <h3>Tag Manager</h3>
+      <p>The new Tag Manager features a clean two-column layout: tag list on the left, edit panel on the right. You get a live preview as you edit, a color picker with hex input, and one-click deletion with confirmation.</p>
+
+      <h2>📂 Chat Card UX Improvements</h2>
+      <p><strong>Small touches that make a big difference.</strong></p>
+
+      <h3>Category Badge Modes</h3>
+      <p>We added a toggle for how category badges display on chat cards:</p>
+      <ul>
+        <li><strong>Always Visible</strong> (default) — Badge fully visible at bottom of card, scales on hover</li>
+        <li><strong>Peek Mode</strong> — Badge shows just a hint, reveals smoothly on card hover</li>
+      </ul>
+      <p>Perfect for switching between large monitors (always visible) and smaller screens (peek mode saves space).</p>
+
+      <h3>Additional Improvements</h3>
+      <ul>
+        <li>Long category names truncate with "..." (max 90px)</li>
+        <li>One-click navigation to category from badge</li>
+        <li>Consistent styling across light and dark themes</li>
+      </ul>
+
+      <h2>🔒 Pro Features Overview</h2>
+      <p>These power features are available to Pro subscribers:</p>
+
+      <div class="overflow-x-auto my-8">
+        <table class="min-w-full border-collapse">
+          <thead>
+            <tr class="border-b border-slate-700">
+              <th class="text-left py-3 px-4 text-slate-300">Feature</th>
+              <th class="text-center py-3 px-4 text-slate-300">Free</th>
+              <th class="text-center py-3 px-4 text-slate-300">Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-slate-800">
+              <td class="py-3 px-4">Cloud Sync</td>
+              <td class="py-3 px-4 text-center text-red-400">❌</td>
+              <td class="py-3 px-4 text-center text-green-400">✅</td>
+            </tr>
+            <tr class="border-b border-slate-800">
+              <td class="py-3 px-4">Unlimited Folders</td>
+              <td class="py-3 px-4 text-center text-slate-400">Limited</td>
+              <td class="py-3 px-4 text-center text-green-400">✅</td>
+            </tr>
+            <tr class="border-b border-slate-800">
+              <td class="py-3 px-4">Thread Trimming</td>
+              <td class="py-3 px-4 text-center text-green-400">✅</td>
+              <td class="py-3 px-4 text-center text-green-400">✅</td>
+            </tr>
+            <tr class="border-b border-slate-800">
+              <td class="py-3 px-4">Text Highlighting</td>
+              <td class="py-3 px-4 text-center text-green-400">✅</td>
+              <td class="py-3 px-4 text-center text-green-400">✅</td>
+            </tr>
+            <tr class="border-b border-slate-800">
+              <td class="py-3 px-4">Custom Tags</td>
+              <td class="py-3 px-4 text-center text-green-400">✅</td>
+              <td class="py-3 px-4 text-center text-green-400">✅</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4">Priority Support</td>
+              <td class="py-3 px-4 text-center text-red-400">❌</td>
+              <td class="py-3 px-4 text-center text-green-400">✅</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>🛠️ Technical Highlights</h2>
+      <p>For the developers among you, here's what's under the hood:</p>
+      <ul>
+        <li><strong>React 19</strong> with TypeScript for type-safe development</li>
+        <li><strong>Zustand</strong> for lightweight state management</li>
+        <li><strong>IndexedDB</strong> for local persistence with instant access</li>
+        <li><strong>MySQL</strong> backend on Railway for cloud sync</li>
+        <li><strong>MutationObserver</strong> for real-time DOM synchronization</li>
+        <li><strong>Shadow DOM</strong> isolation for conflict-free styling</li>
+      </ul>
+
+      <h2>📈 What's Next?</h2>
+      <p>We're constantly improving AI Workspace Pro. Coming soon:</p>
+      <ul>
+        <li>Enhanced GPT and Project filtering</li>
+        <li>More export options</li>
+        <li>Improved mobile experience</li>
+        <li>And much more based on your feedback!</li>
+      </ul>
+
+      <h2>Get Started</h2>
+      <ol>
+        <li><strong>Install</strong> AI Workspace from the <a href="https://chrome.google.com/webstore" class="text-cyan-400 hover:text-cyan-300 underline">Chrome Web Store</a></li>
+        <li><strong>Click</strong> the extension icon and open Settings</li>
+        <li><strong>Explore</strong> Cloud Sync, Thread Trimming, and Highlighting features</li>
+        <li><strong>Upgrade to Pro</strong> for the complete experience</li>
+      </ol>
+
+      <div class="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-xl p-6 my-8 text-center">
+        <p class="text-xl font-bold text-white mb-2">Ready to supercharge your AI workflow?</p>
+        <p class="text-slate-300 m-0">
+          Questions? Feedback? Contact us through the extension or follow us on <a href="https://x.com/Strikeh82" class="text-cyan-400 hover:text-cyan-300 underline">Twitter/X</a>.
+        </p>
+      </div>
+
+      <p class="text-slate-400 italic mt-8 text-center">AI Workspace Pro — Your AI conversations, supercharged.</p>
+    `,
+  },
+  {
     slug: "smart-thread-trimming",
-    title: "Supercharge Your ChatGPT Performance: Introducing Smart Thread Trimming",
+    title:
+      "Supercharge Your ChatGPT Performance: Introducing Smart Thread Trimming",
     excerpt:
       "Long ChatGPT conversations grinding your browser to a halt? Our new Smart Thread Trimming feature automatically hides older messages while keeping your most important content visible.",
     date: "Nov 25, 2025",

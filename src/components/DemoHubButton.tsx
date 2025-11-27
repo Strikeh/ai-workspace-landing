@@ -23,10 +23,11 @@ export default function DemoHubButton() {
       <span
         className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
-          background: "linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(14, 165, 233, 0.2) 100%)",
+          background:
+            "linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(14, 165, 233, 0.2) 100%)",
         }}
       />
-      
+
       {/* Play icon with pulse animation */}
       <span className="relative z-10 flex items-center justify-center">
         <span className="absolute inset-0 animate-ping opacity-40">
@@ -34,14 +35,15 @@ export default function DemoHubButton() {
         </span>
         <PlayIcon className="h-5 w-5 relative" />
       </span>
-      
+
       <span className="relative z-10">Explore Demo Hub</span>
-      
+
       {/* Shimmer effect */}
       <span
         className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
         style={{
-          background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent)",
+          background:
+            "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent)",
         }}
       />
     </button>

@@ -54,7 +54,10 @@ export default function LogoCarousel() {
 
             <div className="logo-marquee flex items-center" aria-hidden="true">
               {logos.map((logo, i) => (
-                <div key={`${logo.src}-${i}`} className="logo-item flex-shrink-0 mx-8 transition-opacity duration-300">
+                <div
+                  key={`${logo.src}-${i}`}
+                  className="logo-item flex-shrink-0 mx-8 transition-opacity duration-300"
+                >
                   <Image
                     src={logo.src}
                     alt={logo.alt}

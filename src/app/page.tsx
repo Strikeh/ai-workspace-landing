@@ -319,7 +319,18 @@ export default function Home() {
                 </h1>
 
                 <p className="hero-subtitle text-xl leading-relaxed text-slate-400 max-w-xl">
-                  The ultimate browser extension for <span className="text-cyan-400 font-medium">power users</span>. Take <span className="text-white font-medium">complete control</span> of your ChatGPT workflow. <span className="text-cyan-400 font-medium">Organize conversations</span> into folders, save and reuse prompts instantly, search across all your chats, and export everything.
+                  The ultimate browser extension for{" "}
+                  <span className="text-cyan-400 font-medium">power users</span>
+                  . Take{" "}
+                  <span className="text-white font-medium">
+                    complete control
+                  </span>{" "}
+                  of your ChatGPT workflow.{" "}
+                  <span className="text-cyan-400 font-medium">
+                    Organize conversations
+                  </span>{" "}
+                  into folders, save and reuse prompts instantly, search across
+                  all your chats, and export everything.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-6 w-full sm:w-auto">
@@ -566,7 +577,7 @@ export default function Home() {
                       </ul>
                     </div>
                     {/* Visual representation/mini-mockup */}
-                    <a 
+                    <a
                       href="#lightbox-savetime"
                       className="relative block rounded-xl overflow-hidden border border-white/5 bg-slate-900/50 aspect-video group/image cursor-zoom-in"
                     >
@@ -577,7 +588,7 @@ export default function Home() {
                         className="object-cover opacity-90 group-hover/image:opacity-100 transition-opacity duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
-                      
+
                       {/* Zoom indicator */}
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-opacity duration-300">
                         <div className="bg-black/50 backdrop-blur-sm p-2 rounded-full border border-white/10">
@@ -650,8 +661,8 @@ export default function Home() {
                       </h3>
                     </div>
                     <p className="text-slate-400">
-                      Advanced filtering, nested folders, keyboard shortcuts for ChatGPT,
-                      and a Universal Prompt Library for Claude & Grok.
+                      Advanced filtering, nested folders, keyboard shortcuts for
+                      ChatGPT, and a Universal Prompt Library for Claude & Grok.
                     </p>
                   </div>
                   <div className="flex gap-4">
@@ -1896,13 +1907,17 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="relative py-32 border-t" style={{ borderColor: "var(--color-border)" }}>
+        <section
+          id="contact"
+          className="relative py-32 border-t"
+          style={{ borderColor: "var(--color-border)" }}
+        >
           <div className="mx-auto max-w-4xl px-6 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-bold uppercase tracking-widest mb-8">
               <span className="w-2 h-2 rounded-full bg-cyan-400" />
               Get in Touch
             </div>
-            
+
             <h2
               className="text-3xl font-bold sm:text-5xl mb-6"
               style={{ color: "var(--color-text)" }}
@@ -1919,9 +1934,10 @@ export default function Home() {
                 Suggestions?
               </span>
             </h2>
-            
+
             <p className="text-xl leading-relaxed text-slate-400 mb-12 max-w-2xl mx-auto">
-              We&apos;d love to hear from you! Share your feedback, report issues, or suggest new features to help us improve.
+              We&apos;d love to hear from you! Share your feedback, report
+              issues, or suggest new features to help us improve.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
@@ -1933,22 +1949,44 @@ export default function Home() {
                   boxShadow: "0 10px 30px -10px rgba(6, 182, 212, 0.5)",
                 }}
               >
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                <svg
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
                 </svg>
                 Contact Support
               </a>
-              
+
               <div className="text-slate-500 text-sm font-medium">
-                or email <span className="text-slate-300">ai.workspace.extension@gmail.com</span>
+                or email{" "}
+                <span className="text-slate-300">
+                  ai.workspace.extension@gmail.com
+                </span>
               </div>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-3">
               {[
-                { title: "Feature Requests", icon: <SparkIcon className="w-5 h-5" /> },
-                { title: "Bug Reports", icon: <ShieldIcon className="w-5 h-5" /> },
-                { title: "General Feedback", icon: <CheckIcon className="w-5 h-5" /> },
+                {
+                  title: "Feature Requests",
+                  icon: <SparkIcon className="w-5 h-5" />,
+                },
+                {
+                  title: "Bug Reports",
+                  icon: <ShieldIcon className="w-5 h-5" />,
+                },
+                {
+                  title: "General Feedback",
+                  icon: <CheckIcon className="w-5 h-5" />,
+                },
               ].map((item, i) => (
                 <a
                   key={i}
@@ -1999,9 +2037,9 @@ export default function Home() {
                   </h3>
                 </div>
                 <p className="text-sm leading-relaxed text-slate-400 max-w-md">
-                  The ultimate local-first extension for ChatGPT. Manage prompts,
-                  conversations, images, notes, and GPTs securely — without
-                  sending data to the cloud.
+                  The ultimate local-first extension for ChatGPT. Manage
+                  prompts, conversations, images, notes, and GPTs securely —
+                  without sending data to the cloud.
                 </p>
                 <div className="flex gap-4">
                   <a
@@ -2053,7 +2091,7 @@ export default function Home() {
                       viewBox="0 0 24 24"
                       aria-hidden="true"
                     >
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                     </svg>
                   </a>
                 </div>

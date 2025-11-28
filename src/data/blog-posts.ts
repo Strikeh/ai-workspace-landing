@@ -211,7 +211,7 @@ export const blogPosts: BlogPost[] = [
       <div class="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-xl p-6 my-8 text-center">
         <p class="text-xl font-bold text-white mb-2">Ready to supercharge your AI workflow?</p>
         <p class="text-slate-300 m-0">
-          Questions? Feedback? Contact us through the extension or follow us on <a href="https://x.com/Strikeh82" class="text-cyan-400 hover:text-cyan-300 underline">Twitter/X</a>.
+          Questions? Feedback? Join our <a href="https://discord.gg/9wESDrQN" class="text-indigo-400 hover:text-indigo-300 underline">Discord community</a> or follow us on <a href="https://x.com/Strikeh82" class="text-cyan-400 hover:text-cyan-300 underline">Twitter/X</a>.
         </p>
       </div>
 

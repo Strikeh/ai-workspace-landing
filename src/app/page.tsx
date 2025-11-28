@@ -250,23 +250,27 @@ export default function Home() {
 			<main>
 				<section className="hero-section relative isolate overflow-hidden min-h-[90vh] flex items-center">
 					{/* Premium Background Effects */}
-					<div className="absolute inset-0 z-0">
+					<div className="absolute inset-0 z-0 overflow-hidden">
+						{/* Grid Pattern */}
+						<div className="absolute inset-0 bg-grid-pattern opacity-[0.15]" />
+						
+						{/* Animated Blobs */}
 						<div
-							className="absolute top-[-10%] left-[20%] w-[600px] h-[600px] rounded-full opacity-20 blur-[120px]"
+							className="absolute top-[-10%] left-[20%] w-[600px] h-[600px] rounded-full opacity-20 blur-[120px] animate-blob"
 							style={{
 								background:
 									"radial-gradient(circle, var(--color-accent) 0%, transparent 70%)",
 							}}
 						/>
 						<div
-							className="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] rounded-full opacity-15 blur-[100px]"
+							className="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] rounded-full opacity-15 blur-[100px] animate-blob animation-delay-2000"
 							style={{
 								background:
 									"radial-gradient(circle, var(--color-text-blue-accent) 0%, transparent 70%)",
 							}}
 						/>
 						<div
-							className="absolute top-[40%] left-[-10%] w-[400px] h-[400px] rounded-full opacity-10 blur-[80px]"
+							className="absolute top-[40%] left-[-10%] w-[400px] h-[400px] rounded-full opacity-10 blur-[80px] animate-blob animation-delay-4000"
 							style={{
 								background:
 									"radial-gradient(circle, #8b5cf6 0%, transparent 70%)",
@@ -491,14 +495,14 @@ export default function Home() {
 					{/* Background Glows */}
 					<div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
 						<div
-							className="absolute top-[20%] left-[10%] w-[500px] h-[500px] rounded-full opacity-20 blur-[100px]"
+							className="absolute top-[20%] left-[10%] w-[500px] h-[500px] rounded-full opacity-20 blur-[100px] animate-blob"
 							style={{
 								background:
 									"radial-gradient(circle, var(--color-accent) 0%, transparent 70%)",
 							}}
 						/>
 						<div
-							className="absolute bottom-[20%] right-[10%] w-[400px] h-[400px] rounded-full opacity-20 blur-[100px]"
+							className="absolute bottom-[20%] right-[10%] w-[400px] h-[400px] rounded-full opacity-20 blur-[100px] animate-blob animation-delay-2000"
 							style={{
 								background:
 									"radial-gradient(circle, var(--color-text-blue-accent) 0%, transparent 70%)",
@@ -758,14 +762,14 @@ export default function Home() {
 						className="pointer-events-none absolute inset-0 z-0 opacity-30"
 					>
 						<div
-							className="absolute left-[-15%] top-1/4 h-[400px] w-[500px] blur-3xl"
+							className="absolute left-[-15%] top-1/4 h-[400px] w-[500px] blur-3xl animate-blob"
 							style={{
 								background:
 									"radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, transparent 70%)",
 							}}
 						/>
 						<div
-							className="absolute right-[-15%] bottom-1/4 h-[400px] w-[500px] blur-3xl"
+							className="absolute right-[-15%] bottom-1/4 h-[400px] w-[500px] blur-3xl animate-blob animation-delay-2000"
 							style={{
 								background:
 									"radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%)",
@@ -1388,14 +1392,14 @@ export default function Home() {
 					{/* Background Glows */}
 					<div className="absolute inset-0 pointer-events-none overflow-hidden">
 						<div
-							className="absolute top-[20%] left-[-10%] w-[500px] h-[500px] rounded-full opacity-10 blur-[100px]"
+							className="absolute top-[20%] left-[-10%] w-[500px] h-[500px] rounded-full opacity-10 blur-[100px] animate-blob"
 							style={{
 								background:
 									"radial-gradient(circle, var(--color-accent) 0%, transparent 70%)",
 							}}
 						/>
 						<div
-							className="absolute bottom-[20%] right-[-10%] w-[500px] h-[500px] rounded-full opacity-10 blur-[100px]"
+							className="absolute bottom-[20%] right-[-10%] w-[500px] h-[500px] rounded-full opacity-10 blur-[100px] animate-blob animation-delay-2000"
 							style={{
 								background:
 									"radial-gradient(circle, #8b5cf6 0%, transparent 70%)",
@@ -1730,7 +1734,7 @@ export default function Home() {
 					{/* Background Glows */}
 					<div className="absolute inset-0 pointer-events-none">
 						<div
-							className="absolute top-[40%] left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full opacity-10 blur-[120px]"
+							className="absolute top-[40%] left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full opacity-10 blur-[120px] animate-blob-slow"
 							style={{
 								background:
 									"radial-gradient(circle, var(--color-accent) 0%, transparent 70%)",

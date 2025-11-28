@@ -2058,7 +2058,7 @@ details[open].faq-card {
 
 .demo-video-title {
   font-size: 0.9375rem;
-  font-weight: 600;
+  font-weight:  600;
   color: var(--color-text);
   line-height: 1.5;
   display: -webkit-box;
@@ -2174,16 +2174,66 @@ details[open].faq-card {
   border: 1px dashed rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive adjustments */
-@media (max-width: 640px) {
-  .demo-modal-container {
-    max-width: 100%;
-    height: 100vh;
-    max-height: 100vh;
-    border-radius: 0;
+/* Background Animations */
+@keyframes blob-bounce {
+  0% {
+    transform: translate(0, 0) scale(1);
   }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
 
-  .demo-video-grid {
-    grid-template-columns: 1fr;
+@keyframes blob-spin {
+  0% {
+    transform: rotate(0deg) scale(1);
   }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob-bounce 10s infinite ease-in-out;
+}
+
+.animate-blob-slow {
+  animation: blob-bounce 15s infinite ease-in-out reverse;
+}
+
+.animate-blob-spin {
+  animation: blob-spin 20s infinite linear;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Subtle Grid Background */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  mask-image: radial-gradient(
+    circle at center,
+    black 40%,
+    transparent 80%
+  );
 }

@@ -166,25 +166,32 @@ export default function RootLayout({
                 "@type": "Organization",
                 name: "AI Workspace",
                 url: "https://getaiworkspace.com",
+                logo: "https://getaiworkspace.com/images/logo-dark.svg",
+                sameAs: [
+                  "https://x.com/Strikeh82",
+                  "https://github.com/Strikeh",
+                  "https://www.linkedin.com/in/dirk-lammers-345a26397/",
+                  "https://discord.gg/9wESDrQN"
+                ]
               },
               offers: [
                 {
                   "@type": "Offer",
                   name: "Free Plan",
                   price: "0",
-                  priceCurrency: "EUR",
+                  priceCurrency: "USD",
                   availability: "https://schema.org/InStock",
                   description: "Free forever with core features",
                 },
                 {
                   "@type": "Offer",
                   name: "Pro Plan",
-                  price: "10",
-                  priceCurrency: "EUR",
+                  price: "9.99",
+                  priceCurrency: "USD",
                   priceSpecification: {
                     "@type": "UnitPriceSpecification",
-                    price: "10",
-                    priceCurrency: "EUR",
+                    price: "9.99",
+                    priceCurrency: "USD",
                     unitText: "MONTH",
                   },
                   availability: "https://schema.org/InStock",
@@ -219,6 +226,31 @@ export default function RootLayout({
               ],
               keywords:
                 "chatgpt extension, chrome extension, ai productivity, prompt manager, conversation organizer",
+            }),
+          }}
+        />
+
+        {/* Structured Data - Organization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "AI Workspace",
+              url: siteConfig.url,
+              logo: "https://getaiworkspace.com/images/logo-dark.svg",
+              sameAs: [
+                "https://x.com/Strikeh82",
+                "https://github.com/Strikeh",
+                "https://www.linkedin.com/in/dirk-lammers-345a26397/",
+                "https://discord.gg/9wESDrQN",
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                email: "ai.workspace.extension@gmail.com",
+                contactType: "customer support",
+              },
             }),
           }}
         />
@@ -270,7 +302,7 @@ export default function RootLayout({
                   name: "What's the difference between Free and Pro?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Free: limited prompts and notes, 1 vault, no encryption. Pro (€10/month): unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, GPT Manager, multi-platform support, and version history.",
+                    text: "Free: limited prompts and notes, 1 vault, no encryption. Pro ($9.99/month): unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, GPT Manager, multi-platform support, and version history.",
                   },
                 },
               ],

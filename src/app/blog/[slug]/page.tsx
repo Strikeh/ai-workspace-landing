@@ -46,8 +46,26 @@ export default async function BlogPost({ params }: Props) {
     notFound();
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    image: post.image ? [`https://getaiworkspace.com${post.image}`] : [],
+    datePublished: post.date,
+    author: {
+      "@type": "Organization",
+      name: "AI Workspace",
+      url: "https://getaiworkspace.com",
+    },
+  };
+
   return (
     <div className="min-h-screen bg-[var(--color-bg-primary)] text-slate-100 font-sans selection:bg-cyan-500/30">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Navigation */}
       <nav className="site-nav relative z-50">
         <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">

@@ -16,7 +16,7 @@ const demoVideos = {
     {
       id: 1,
       title: "AI Workspace Pro - Complete Overview (FEATURED)",
-      videoId: "LI7teDw2qh4",
+      videoId: "pDZD1maOWBA",
       thumbnail: "",
     },
     {

@@ -47,23 +47,27 @@ export default function LogoCarousel() {
         </div>
 
         <div className="logo-band">
-          <div className="relative overflow-hidden">
-            {/* Gradient masks for smooth fade out at edges */}
-            <div className="absolute left-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-r from-[#1e293b] to-transparent pointer-events-none"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-l from-[#1e293b] to-transparent pointer-events-none"></div>
-
+          <div
+            className="relative overflow-hidden"
+            style={{
+              maskImage:
+                "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+              WebkitMaskImage:
+                "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+            }}
+          >
             <div className="logo-marquee flex items-center" aria-hidden="true">
               {logos.map((logo, i) => (
                 <div
                   key={`${logo.src}-${i}`}
-                  className="logo-item flex-shrink-0 mx-8 transition-opacity duration-300"
+                  className="logo-item flex-shrink-0 mx-12 transition-opacity duration-300"
                 >
                   <Image
                     src={logo.src}
                     alt={logo.alt}
-                    width={logo.width ?? 160}
-                    height={logo.height ?? 50}
-                    className="h-8 w-auto object-contain logo-image"
+                    width={logo.width ?? 200}
+                    height={logo.height ?? 80}
+                    className="h-12 w-auto object-contain logo-image"
                   />
                 </div>
               ))}

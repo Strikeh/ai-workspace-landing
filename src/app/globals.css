@@ -462,41 +462,41 @@ details[open].faq-card {
 .logo-band {
   position: relative;
   border-radius: 9999px; /* Pill shape */
-  padding-block: 1.5rem;
+  padding-block: 2.5rem;
   overflow: hidden;
-  background: rgba(30, 41, 59, 0.5); /* Slate 800 transparent - Lighter */
-  border: 1px solid rgba(6, 182, 212, 0.2);
-  box-shadow: 0 0 0 1px rgba(6, 182, 212, 0.05),
-    0 10px 30px -10px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(6, 182, 212, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(15, 23, 42, 0.6); /* Slate 900 transparent */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 1px rgba(6, 182, 212, 0.1),
+    0 20px 50px -10px rgba(0, 0, 0, 0.5), inset 0 0 30px rgba(6, 182, 212, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 /* Premium top highlight */
 .logo-band::before {
   content: "";
   position: absolute;
-  left: 20%;
-  right: 20%;
+  left: 15%;
+  right: 15%;
   top: 0;
   height: 1px;
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(6, 182, 212, 0.4),
+    rgba(6, 182, 212, 0.5),
     transparent
   );
   pointer-events: none;
 }
 
 .logo-marquee {
-  --gap: 4rem;
+  --gap: 0rem;
   display: flex;
   align-items: center;
   gap: var(--gap);
   width: max-content;
   padding-inline: 2rem;
-  animation: marquee 40s linear infinite;
+  animation: marquee 50s linear infinite;
   will-change: transform;
 }
 

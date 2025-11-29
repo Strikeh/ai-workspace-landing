@@ -655,33 +655,51 @@ export default function Home() {
 							</StaggerItem>
 
 							{/* Card: Smart Thread Trimming */}
-							<StaggerItem className="bento-card col-span-1">
-								<div className="bento-card-content gap-6">
-									<div className="h-10 w-10 rounded-xl bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center shadow-lg shadow-yellow-500/20">
-										<svg
-											className="h-5 w-5 text-white"
-											fill="none"
-											viewBox="0 0 24 24"
-											stroke="currentColor"
-											strokeWidth={2}
-										>
-											<path
-												strokeLinecap="round"
-												strokeLinejoin="round"
-												d="M13 10V3L4 14h7v7l9-11h-7z"
-											/>
-										</svg>
+							<StaggerItem className="bento-card col-span-1 !p-0 overflow-hidden group">
+								<div className="bento-card-content h-full">
+									{/* Video Header */}
+									<div className="relative w-full aspect-video bg-slate-900">
+										<iframe
+											src="https://www.youtube.com/embed/L3EXlMBB1zI?autoplay=0&controls=1&rel=0&modestbranding=1"
+											title="Lightning Fast Chats"
+											className="absolute inset-0 w-full h-full"
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+											allowFullScreen
+										/>
 									</div>
-									<div>
-										<h3 className="text-xl font-bold text-white mb-2">
-											Lightning Fast Chats
-										</h3>
-										<p className="text-sm text-slate-400">
-											Smart Thread Trimming auto-hides older messages in long conversations. Say goodbye to laggy 200+ message threads.
+
+									<div className="p-6 flex flex-col gap-4">
+										<div className="flex items-center gap-3">
+											<div className="h-8 w-8 rounded-lg bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center shadow-lg shadow-yellow-500/20">
+												<svg
+													className="h-4 w-4 text-white"
+													fill="none"
+													viewBox="0 0 24 24"
+													stroke="currentColor"
+													strokeWidth={2}
+												>
+													<path
+														strokeLinecap="round"
+														strokeLinejoin="round"
+														d="M13 10V3L4 14h7v7l9-11h-7z"
+													/>
+												</svg>
+											</div>
+											<h3 className="text-lg font-bold text-white">
+												Lightning Fast Chats
+											</h3>
+										</div>
+
+										<p className="text-sm text-slate-400 leading-relaxed">
+											Smart Thread Trimming auto-hides older messages in long
+											conversations. Say goodbye to laggy 200+ message threads.
 										</p>
-										<div className="mt-3 inline-flex items-center gap-1.5 px-2 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-medium">
-											<span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
-											Free Feature
+
+										<div>
+											<div className="inline-flex items-center gap-1.5 px-2 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-medium">
+												<span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
+												Free Feature
+											</div>
 										</div>
 									</div>
 								</div>

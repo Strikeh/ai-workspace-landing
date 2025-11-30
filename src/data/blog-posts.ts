@@ -11,6 +11,147 @@
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "claude-agentic-building-blocks",
+    title: "Understanding Claude's Agentic Building Blocks: Skills, Projects, & MCP",
+    excerpt: "Confused about Skills vs. Projects? Wondering where MCP fits in? We break down Anthropic's new agentic ecosystem and how to use each building block effectively.",
+    date: "Dec 02, 2025",
+    readTime: "8 min read",
+    category: "Guides",
+    image: "/images/blog/claude-skills.png",
+    content: `
+      <div class="bg-gradient-to-r from-blue-500/10 to-indigo-500/10 border border-blue-500/20 rounded-xl p-6 mb-8">
+        <p class="text-lg font-medium text-blue-100 m-0">
+          🧩 <strong>The AI workflow is evolving.</strong>
+        </p>
+        <p class="text-slate-300 mt-2 mb-0">
+          It's no longer just about typing a prompt and getting an answer. Anthropic has introduced a suite of "agentic building blocks" that transform Claude from a chatbot into a powerful workflow engine. But with Skills, Projects, Subagents, and MCP, it can get confusing. Let's break it down.
+        </p>
+      </div>
+
+      <h2>The 5 Core Building Blocks</h2>
+      <p>Think of building an AI agent like staffing a new department. You need people (Subagents), training manuals (Skills), a filing cabinet (Projects), communication lines (MCP), and daily emails (Prompts).</p>
+      <img src="/images/blog/claude-building-blocks-diagram.png" alt="Diagram of Claude's 5 Core Building Blocks" class="w-full rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <h3>1. Skills: The "How-To" Manuals</h3>
+      <p><strong>What they are:</strong> Reusable sets of instructions that teach Claude <em>how</em> to perform a specific task. They are procedural knowledge.</p>
+      <p><strong>When to use them:</strong> If you find yourself pasting the same "Review this code using these specific security guidelines" prompt over and over, that should be a Skill. Skills load dynamically only when needed, saving your context window.</p>
+      <ul>
+        <li><em>Example:</em> A "Brand Voice" skill that teaches Claude your company's specific tone and formatting rules.</li>
+      </ul>
+
+      <h3>2. Projects: The "Knowledge Base"</h3>
+      <p><strong>What they are:</strong> Persistent workspaces that hold background knowledge. Everything in a Project is "always on" context.</p>
+      <p><strong>When to use them:</strong> When you have a specific initiative—like "Q4 Marketing Launch"—that requires access to the same set of PDFs, reports, and past chats. It's the "what you need to know" layer.</p>
+      <ul>
+        <li><em>Example:</em> A project containing all your competitor analysis reports and product specs.</li>
+      </ul>
+
+      <h3>3. MCP (Model Context Protocol): The "Connectors"</h3>
+      <p><strong>What it is:</strong> A universal standard that lets Claude connect to external tools and data sources like Google Drive, Slack, or your local database.</p>
+      <p><strong>When to use it:</strong> When Claude needs to <em>do</em> something outside of the chat window or access live data. If Skills teach Claude <em>how</em> to process data, MCP gives Claude access to the data itself.</p>
+      <ul>
+        <li><em>Example:</em> Connecting Claude to your GitHub repo so it can read your actual code files instead of you pasting them in.</li>
+      </ul>
+
+      <h3>4. Subagents: The "Specialists"</h3>
+      <p><strong>What they are:</strong> Independent AI assistants with their own specific tools and permissions. They can be delegated tasks by the main agent.</p>
+      <p><strong>When to use them:</strong> For complex workflows where you want separation of concerns. You might have a "Researcher" subagent that can only search the web, and a "Coder" subagent that can write files.</p>
+
+      <h3>5. Prompts: The "Daily Chat"</h3>
+      <p><strong>What they are:</strong> The ephemeral, moment-to-moment instructions you type in the chat box.</p>
+      <p><strong>When to use them:</strong> For one-off requests or to guide the other blocks. "Summarize this" or "Use the Brand Voice skill to rewrite this."</p>
+
+      <h2>Putting It All Together: The Research Agent</h2>
+      <p>The real magic happens when you combine these blocks. Imagine building a <strong>Competitive Analysis Agent</strong>:</p>
+
+      <div class="bg-slate-800/50 border border-white/10 rounded-xl p-6 my-8">
+        <ol class="space-y-4 m-0">
+          <li class="flex gap-3">
+            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-sm font-bold">1</span>
+            <span><strong>Project:</strong> You create a "Market Research" project and upload your past year's strategy docs.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-sm font-bold">2</span>
+            <span><strong>MCP:</strong> You connect Google Drive so the agent can pull fresh competitor reports.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-sm font-bold">3</span>
+            <span><strong>Skills:</strong> You add a "SWOT Analysis" skill that teaches Claude exactly how to format the output.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-sm font-bold">4</span>
+            <span><strong>Prompt:</strong> You simply ask: "Analyze our top 3 competitors based on the new reports in Drive."</span>
+          </li>
+        </ol>
+      </div>
+      <img src="/images/blog/research-agent-workflow.png" alt="Research Agent Workflow Diagram" class="w-full rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <p>Claude uses the <strong>Project</strong> for context, <strong>MCP</strong> to find the files, the <strong>Skill</strong> to structure the analysis, and your <strong>Prompt</strong> to kick it all off.</p>
+
+      <p><em>Ready to start building? Check out our <a href="#" class="text-cyan-400 hover:underline">Prompt Vault</a> to start organizing your Skills and Prompts today.</em></p>
+    `,
+  },
+  {
+    slug: "ten-things-thinking-about-ai",
+    title: "Ten things I’m thinking about AI",
+    excerpt:
+      "From the politeness paradox to the drunk intern coding buddy. A lighthearted look at our new reality living with artificial intelligence.",
+    date: "Nov 30, 2025",
+    readTime: "6 min read",
+    category: "Thoughts",
+    image: "/images/blog/ai-thoughts.png",
+    content: `
+      <div class="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-6 mb-8">
+        <p class="text-lg font-medium text-purple-100 m-0">
+          🤔 <strong>It's been a weird year, hasn't it?</strong>
+        </p>
+        <p class="text-slate-300 mt-2 mb-0">
+          We went from "AI is cool" to "I can't do my job without it" in record time. Here are 10 random thoughts bouncing around my head about our new silicon overlords.
+        </p>
+      </div>
+
+      <h2>1. The Politeness Paradox</h2>
+      <p>I still say "please" and "thank you" to ChatGPT. Part of me says it's just good habit-forming. The other part of me is definitely trying to secure a spot in the "good human" zoo when the AGI takes over. Better safe than sorry, right?</p>
+
+      <h2>2. The "Drunk Intern" Coding Buddy</h2>
+      <p>Coding with AI is exactly like having a brilliant intern who has read every documentation page in existence but is also slightly drunk. <br>
+      <em>"Here's the solution! I used a library that was deprecated in 2019 and invented three new functions that don't exist. Good luck!"</em></p>
+
+      <h2>3. Context Windows are the new RAM</h2>
+      <p>Remember when we used to brag about gigabytes of RAM? Now it's all about token limits. "Oh, you can only fit a small novel in your context window? That's cute. I just fed mine the entire codebase of Linux."</p>
+      <img src="/images/blog/context-window.png" alt="Context Windows vs RAM meme" class="w-full rounded-xl border border-white/10 shadow-2xl my-6" />
+
+      <h2>4. The "I Could Have Done This Faster Myself" Loop</h2>
+      <p>There is a specific zone of procrastination where you spend 45 minutes trying to craft the <em>perfect</em> prompt to automate a 5-minute task. We've all been there. It's not about efficiency anymore; it's about the principle.</p>
+
+      <h2>5. Hands are Hard (Still)</h2>
+      <p>We can simulate protein folding and predict weather patterns, but ask an image generator to draw a hand holding a coffee cup, and suddenly everyone has 7 fingers and the cup is melting into their wrist. It's humbling, really.</p>
+
+      <h2>6. The "Hallucination" Feature</h2>
+      <p>We call them hallucinations. Marketing calls it "unbounded creativity." When I make stuff up, I get fired. When the AI does it, it's just "temperature 0.9 behavior."</p>
+
+      <h2>7. Subscription Fatigue is Real</h2>
+      <p>I have a subscription for the text AI, the image AI, the coding AI, and the video AI. I'm pretty sure my credit card statement thinks I'm running a venture capital firm. Can we get a bundle? The "I Just Want To Make Cool Stuff" bundle?</p>
+      <img src="/images/blog/subscription-fatigue.png" alt="Too many AI subscriptions" class="w-full rounded-xl border border-white/10 shadow-2xl my-6" />
+
+      <h2>8. The Blank Page is Dead</h2>
+      <p>Writer's block doesn't exist anymore. Now we have "Editor's Block" — staring at 500 words of generated text that is <em>almost</em> right but sounds like a corporate press release written by a robot... wait.</p>
+
+      <h2>9. We are the Bootloader</h2>
+      <p>Sometimes I wonder if all of human history—the wars, the art, the memes—was just a really long, complicated boot sequence to get us to the point where we could build the thing that actually matters. (Just kidding... mostly).</p>
+
+      <h2>10. It's Actually Magic</h2>
+      <p>Jokes aside, we are typing words into a sand-rock that we tricked into thinking, and it types back. If you stop and think about it for too long, you'll get dizzy. Let's just enjoy the ride.</p>
+
+      <div class="bg-slate-800/50 border-l-4 border-cyan-500 p-6 my-8 rounded-r-xl">
+        <h4 class="text-cyan-400 font-bold text-lg mb-2 mt-0">👋 What do you think?</h4>
+        <p class="text-slate-300 m-0">
+          Are you also polite to your AI? Let us know. In the meantime, check out the new features in AI Workspace Pro to help manage your drunk intern... I mean, AI assistant.
+        </p>
+      </div>
+    `,
+  },
+  {
     slug: "november-2025-feature-roundup",
     title: "AI Workspace Pro: November 2025 Feature Roundup",
     excerpt:
@@ -1009,6 +1150,104 @@ export const blogPosts: BlogPost[] = [
       <p>Break complex tasks into smaller steps. Instead of one massive prompt, use a sequence. Save this sequence as a "Workflow" in your notes to execute it consistently every time.</p>
 
       <p>By implementing these simple hacks, you can turn ChatGPT from a novelty into a serious productivity engine.</p>
+    `,
+  },
+  {
+    slug: "ultimate-guide-ai-productivity-2025",
+    title: "The Ultimate Guide to AI Productivity in 2025 (Or: How to Stop Drowning in Browser Tabs)",
+    excerpt: "Stop switching tabs. Stop losing prompts. Start actually getting work done. A humorous deep dive into why an AI sidebar is the productivity hack you didn't know you needed.",
+    date: "Dec 05, 2025",
+    readTime: "12 min read",
+    category: "Guides",
+    image: "/images/blog/seo-productivity-hero.png",
+    content: `
+      <div class="bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-xl p-6 mb-8">
+        <p class="text-lg font-medium text-green-100 m-0">
+          🤫 <strong>Secret: This post is designed to be helpful AND rank high.</strong>
+        </p>
+        <p class="text-slate-300 mt-2 mb-0">
+          We know you're searching for the "Best AI Chrome Extension" or "How to use ChatGPT and Claude together". Well, you found it. But stick around, because we're also going to fix your terrible browsing habits.
+        </p>
+      </div>
+
+      <h2>The Great "Alt-Tab" Epidemic</h2>
+      <p>Here is a scientific fact I just made up: The average human spends 40% of their life pressing <code>Alt+Tab</code> to switch between their work and ChatGPT. It’s the "Walk of Shame" of the digital age.</p>
+      <p>You're writing an email. You need AI help. You open a new tab. You type "chat.openai.com". You wait. You forget what the email was about. You end up watching cat videos. This is why you need an <strong>AI Sidebar</strong>.</p>
+      
+      <img src="/images/blog/tab-switching-chaos.png" alt="Chaos of switching between 100 browser tabs" class="w-full rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <h2>Why "Model Monogamy" is Holding You Back</h2>
+      <p>Are you still "loyal" to just one AI model? That's so 2023. In 2025, the <strong>Best AI Workspace</strong> lets you cheat on ChatGPT with Claude, and flirt with Gemini on the side.</p>
+      <p>Different models have different strengths:</p>
+      <ul>
+        <li><strong>Claude 3.5 Sonnet:</strong> The coding wizard and creative writer.</li>
+        <li><strong>GPT-4o:</strong> The logical reasoning beast.</li>
+        <li><strong>Gemini:</strong> The one that integrates with your Google stuff.</li>
+      </ul>
+      <p>Why choose? A true <strong>AI Browser Extension</strong> gives you all of them in one side panel. It's like having The Avengers, but for writing emails.</p>
+
+      <img src="/images/blog/ai-model-battle.png" alt="Superhero battle between different AI logos" class="w-full rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <h2>The "I'll Remember That Prompt" Lie</h2>
+      <p>We all tell ourselves this lie. "That was a great prompt, I'll remember it for next time." No, you won't. You will forget it in 30 seconds.</p>
+      <p>This is where a <strong>Prompt Library</strong> comes in. Stop reinventing the wheel every time you need to summarize a PDF or fix a bug. Save your genius. Reuse it. Be lazy. (Efficiently lazy).</p>
+
+      <h2>Privacy: Because Big Brother is Watching (Maybe)</h2>
+      <p>If you're pasting sensitive company data into a public chat window, your IT department is probably having a panic attack right now. Using a secure <strong>AI Workspace</strong> that allows for local LLMs or enterprise API keys isn't just smart; it's job security.</p>
+
+      <img src="/images/blog/privacy-shield.png" alt="A digital shield protecting data from prying eyes" class="w-full rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <h2>Conclusion: Just Use the Sidebar</h2>
+      <p>Look, we wrote this article to rank for keywords like <strong>Productivity Tools</strong> and <strong>Chrome Extensions</strong>. But we also built the tool because we were tired of the tab chaos.</p>
+      <p>Give your <code>Alt</code> key a break. Try the sidebar.</p>
+    `,
+  },
+  {
+    slug: "can-ai-be-funny",
+    title: "Can AI Actually Be Funny? The Science of Computational Comedy",
+    excerpt: "Why does ChatGPT tell dad jokes? We dive into the mechanics of humor, prompt engineering, and why your AI assistant might be the next stand-up star.",
+    date: "Dec 08, 2025",
+    readTime: "9 min read",
+    category: "Deep Dive",
+    image: "/images/blog/robot-standup.png",
+    content: `
+      <div class="bg-gradient-to-r from-pink-500/10 to-rose-500/10 border border-pink-500/20 rounded-xl p-6 mb-8">
+        <p class="text-lg font-medium text-pink-100 m-0">
+          🎭 <strong>Knock knock. Who's there? An algorithm.</strong>
+        </p>
+        <p class="text-slate-300 mt-2 mb-0">
+          If you've ever asked ChatGPT to "tell me a joke," you've probably cringed. But is AI inherently unfunny, or are we just bad at asking? Let's explore the weird world of <strong>computational humor</strong>.
+        </p>
+      </div>
+
+      <h2>The "Dad Joke" Default</h2>
+      <p>Ask a standard AI model for a joke, and you'll get this:</p>
+      <blockquote class="border-l-4 border-slate-600 pl-4 italic text-slate-400 my-4">
+        "Why did the scarecrow win an award? Because he was outstanding in his field."
+      </blockquote>
+      <p>Groan. The reason <strong>AI writing</strong> defaults to this isn't because it lacks a soul (well, it does, but that's not the point). It's because these models are trained to be <em>helpful</em> and <em>safe</em>. The average of the entire internet's humor is... well, a dad joke.</p>
+
+      <img src="/images/blog/robot-dad-joke.png" alt="A robot reading a book of dad jokes looking confused" class="w-full rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <h2>The Persona Hack: Prompt Engineering for Comedy</h2>
+      <p>Here is the secret to <strong>ChatGPT creative writing</strong>: Context is king. If you want funny, you have to tell the AI <em>who</em> it is.</p>
+      <p>Instead of "Tell me a joke," try this:</p>
+      <div class="bg-slate-900 p-4 rounded-lg font-mono text-sm text-cyan-300 mb-6">
+        "You are a cynical, dry-witted stand-up comedian from the 90s. Write a monologue about the absurdity of modern smart toasters."
+      </div>
+      <p>Suddenly, the AI isn't just predicting the next word; it's predicting the next word <em>in the style of a specific persona</em>. This is advanced <strong>prompt engineering</strong> at work.</p>
+
+      <h2>The Comedy Turing Test</h2>
+      <p>Can you tell the difference between a human joke and an AI joke? In a recent experiment, researchers found that when AI is prompted correctly, it can mimic the style of famous comedians like Dave Chappelle or George Carlin with frightening accuracy.</p>
+      <p>It turns out, humor is just another pattern. Setup, anticipation, punchline. It's math. (Which ruins the magic a bit, doesn't it?)</p>
+
+      <img src="/images/blog/robot-masks.png" alt="A robot holding up different masks representing different comedy styles" class="w-full rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <h2>Humor-as-a-Service?</h2>
+      <p>Are we going to see <strong>AI content generation</strong> replacing comedians? Probably not. Comedy requires shared human experience—pain, awkwardness, and the fear of death. AI doesn't fear death; it only fears being turned off.</p>
+      <p>But as a tool for brainstorming? Absolutely. Think of AI as the ultimate "Yes, and..." partner for your creative process.</p>
+
+      <p><em>Want to test your own comedy prompts? Use the AI Workspace sidebar to iterate on your jokes without leaving your writing app.</em></p>
     `,
   },
 ];

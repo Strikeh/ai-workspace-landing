@@ -345,7 +345,7 @@ export default function Home() {
 									<div className="relative group w-full sm:w-auto">
 										<div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-200"></div>
 										<a
-											href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"
+											href={installUrl || "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"}
 											target="_blank"
 											rel="noopener noreferrer"
 											className="relative flex items-center justify-center gap-3 rounded-xl px-8 py-4 text-lg font-bold text-white transition-all hover:scale-[1.02] whitespace-nowrap w-full sm:w-auto"
@@ -369,27 +369,23 @@ export default function Home() {
 
 								<div className="flex items-center gap-6 text-sm text-slate-500 pt-4">
 									<div className="flex items-center gap-2">
-										<Image
-											src="/images/browsers/chrome.svg"
-											alt="Chrome"
-											width={20}
-											height={20}
-											className="opacity-70 grayscale hover:grayscale-0 transition-all"
-										/>
-										<Image
-											src="/images/browsers/edge.svg"
-											alt="Edge"
-											width={20}
-											height={20}
-											className="opacity-70 grayscale hover:grayscale-0 transition-all"
-										/>
-										<Image
-											src="/images/browsers/firefox.svg"
-											alt="Firefox"
-											width={20}
-											height={20}
-											className="opacity-70 grayscale hover:grayscale-0 transition-all"
-										/>
+										{browserInstallButtons.map((btn) => (
+											<a
+												key={btn.name}
+												href={btn.url}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="opacity-70 hover:opacity-100 grayscale hover:grayscale-0 transition-all hover:scale-110"
+												title={`Install for ${btn.name}`}
+											>
+												<Image
+													src={btn.icon}
+													alt={btn.name}
+													width={20}
+													height={20}
+												/>
+											</a>
+										))}
 									</div>
 									<div className="h-4 w-px bg-white/10"></div>
 									<div className="flex items-center gap-1">

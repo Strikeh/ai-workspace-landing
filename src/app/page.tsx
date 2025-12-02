@@ -198,6 +198,7 @@ export default function Home() {
   const [installUrl, setInstallUrl] = useState("");
   const [activeSection, setActiveSection] = useState("");
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     setInstallUrl(getBrowserInstallUrl());
@@ -298,8 +299,90 @@ export default function Home() {
                 Get started free
               </a>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-slate-300 hover:text-white"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              )}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu Overlay */}
+        {mobileMenuOpen && (
+          <div className="md:hidden absolute top-16 left-0 w-full bg-slate-900/95 backdrop-blur-lg border-b border-white/10 p-6 flex flex-col gap-4 shadow-2xl animate-in slide-in-from-top-5">
+            <a
+              href="#features"
+              className="text-lg font-medium text-slate-300 hover:text-cyan-400 py-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Features
+            </a>
+            <a
+              href="#showcase"
+              className="text-lg font-medium text-slate-300 hover:text-cyan-400 py-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Showcase
+            </a>
+            <a
+              href="#pricing"
+              className="text-lg font-medium text-slate-300 hover:text-cyan-400 py-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Pricing
+            </a>
+            <Link
+              href="/blog"
+              className="text-lg font-medium text-slate-300 hover:text-cyan-400 py-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Blog
+            </Link>
+            <a
+              href={installUrl || "#pricing"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 flex items-center justify-center rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 text-base font-bold text-white shadow-lg shadow-cyan-500/20"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Get started free
+            </a>
+          </div>
+        )}
       </nav>
 
       <main>

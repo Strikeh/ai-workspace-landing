@@ -242,6 +242,7 @@ export default function FeatureShowcase() {
               key={tab.id}
               onClick={() => handleTabChange(tab.id)}
               className={`
+                flex-shrink-0 snap-center
                 relative px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300
                 ${
                   activeTab === tab.id
@@ -260,7 +261,82 @@ export default function FeatureShowcase() {
       </div>
 
       {/* Content */}
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-start">
+        {/* Visual (Video or Image) - Mobile: Top, Desktop: Right/Sticky */}
+        <div className="relative lg:sticky lg:top-24 lg:order-last order-first">
+          {/* Glow Effect */}
+          <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-[2rem] blur-2xl opacity-0 lg:opacity-100 transition-opacity duration-500" />
+          
+          <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-slate-900/90 shadow-2xl backdrop-blur-sm">
+            {/* Browser Header */}
+            <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-white/5">
+              <div className="flex gap-1.5">
+                <div className="w-3 h-3 rounded-full bg-[#FF5F56]" />
+                <div className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
+                <div className="w-3 h-3 rounded-full bg-[#27C93F]" />
+              </div>
+              <div className="ml-4 flex-1 flex justify-center">
+                <div className="px-3 py-1 rounded-md bg-black/20 border border-white/5 text-[10px] text-slate-500 font-mono truncate max-w-[150px]">
+                  ai-workspace.extension
+                </div>
+              </div>
+            </div>
+
+            {/* Media Content */}
+            <div className="relative aspect-video bg-black/50 group/media">
+              {activeFeature.video ? (
+                <iframe
+                  key={activeFeature.video}
+                  src={`${activeFeature.video}?autoplay=0&controls=1&rel=0&modestbranding=1&loop=1`}
+                  title={`${activeFeature.title} Demo`}
+                  className="absolute inset-0 w-full h-full"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              ) : activeFeature.image ? (
+                <div 
+                  className="relative w-full h-full cursor-zoom-in"
+                  onClick={() => setIsLightboxOpen(true)}
+                >
+                  <Image
+                    key={activeFeature.image}
+                    src={activeFeature.image}
+                    alt={`${activeFeature.title} Screenshot`}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover/media:scale-105"
+                  />
+                  {/* Zoom Hint Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover/media:bg-black/20 transition-colors duration-300">
+                    <div className="opacity-0 group-hover/media:opacity-100 transform translate-y-4 group-hover/media:translate-y-0 transition-all duration-300 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-full flex items-center gap-2 text-sm font-medium border border-white/10">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                      </svg>
+                      Click to enlarge
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center bg-slate-800/50">
+                  <div className="text-center space-y-2">
+                    <span className="text-4xl">🚧</span>
+                    <p className="text-slate-400 font-medium">Preview coming soon</p>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+
+          <p className="mt-6 text-slate-500 text-sm text-center font-medium lg:hidden">
+            <span className="inline-block animate-pulse mr-2">👇</span>
+            Select a feature below to update preview
+          </p>
+          <p className="mt-6 text-slate-500 text-sm text-center font-medium hidden lg:block">
+            <span className="inline-block animate-pulse mr-2">👆</span>
+            Select a feature to see it in action
+          </p>
+        </div>
+
         {/* Features List */}
         <div className="space-y-8">
           <div className="space-y-2">
@@ -317,75 +393,6 @@ export default function FeatureShowcase() {
           </div>
         </div>
 
-        {/* Visual (Video or Image) */}
-        <div className="relative lg:sticky lg:top-24">
-          {/* Glow Effect */}
-          <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-[2rem] blur-2xl opacity-0 lg:opacity-100 transition-opacity duration-500" />
-          
-          <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-slate-900/90 shadow-2xl backdrop-blur-sm">
-            {/* Browser Header */}
-            <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-white/5">
-              <div className="flex gap-1.5">
-                <div className="w-3 h-3 rounded-full bg-[#FF5F56]" />
-                <div className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
-                <div className="w-3 h-3 rounded-full bg-[#27C93F]" />
-              </div>
-              <div className="ml-4 flex-1 flex justify-center">
-                <div className="px-3 py-1 rounded-md bg-black/20 border border-white/5 text-[10px] text-slate-500 font-mono">
-                  ai-workspace.extension
-                </div>
-              </div>
-            </div>
-
-            {/* Media Content */}
-            <div className="relative aspect-video bg-black/50 group/media">
-              {activeFeature.video ? (
-                <iframe
-                  key={activeFeature.video}
-                  src={`${activeFeature.video}?autoplay=1&controls=1&rel=0&modestbranding=1&loop=1`}
-                  title={`${activeFeature.title} Demo`}
-                  className="absolute inset-0 w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              ) : activeFeature.image ? (
-                <div 
-                  className="relative w-full h-full cursor-zoom-in"
-                  onClick={() => setIsLightboxOpen(true)}
-                >
-                  <Image
-                    key={activeFeature.image}
-                    src={activeFeature.image}
-                    alt={`${activeFeature.title} Screenshot`}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover/media:scale-105"
-                  />
-                  {/* Zoom Hint Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover/media:bg-black/20 transition-colors duration-300">
-                    <div className="opacity-0 group-hover/media:opacity-100 transform translate-y-4 group-hover/media:translate-y-0 transition-all duration-300 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-full flex items-center gap-2 text-sm font-medium border border-white/10">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-                      </svg>
-                      Click to enlarge
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                <div className="absolute inset-0 flex items-center justify-center bg-slate-800/50">
-                  <div className="text-center space-y-2">
-                    <span className="text-4xl">🚧</span>
-                    <p className="text-slate-400 font-medium">Preview coming soon</p>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-
-          <p className="mt-6 text-slate-500 text-sm text-center font-medium">
-            <span className="inline-block animate-pulse mr-2">👆</span>
-            Select a feature to see it in action
-          </p>
-        </div>
       </div>
     </div>
   );

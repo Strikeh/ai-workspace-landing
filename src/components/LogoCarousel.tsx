@@ -29,45 +29,25 @@ export default function LogoCarousel() {
   const logos = [...LOGOS, ...LOGOS];
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-12 relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16 relative z-10">
         <div className="text-center mb-10">
-          <p
-            className="text-xs font-bold uppercase tracking-[0.3em] mb-3"
-            style={{ color: "var(--color-accent)" }}
-          >
-            Trusted Globally
-          </p>
-          <p
-            className="text-sm font-medium"
-            style={{ color: "var(--color-text-secondary)" }}
-          >
-            Our users work at these companies
+          <p className="text-sm font-semibold text-slate-300 uppercase tracking-wider">
+            Trusted by teams at
           </p>
         </div>
 
         <div className="logo-band">
-          <div
-            className="relative overflow-hidden"
-            style={{
-              maskImage:
-                "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
-              WebkitMaskImage:
-                "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
-            }}
-          >
-            <div className="logo-marquee flex items-center" aria-hidden="true">
+          <div className="relative overflow-hidden">
+            <div className="logo-marquee" aria-hidden="true">
               {logos.map((logo, i) => (
-                <div
-                  key={`${logo.src}-${i}`}
-                  className="logo-item flex-shrink-0 mx-12 transition-opacity duration-300"
-                >
+                <div key={`${logo.src}-${i}`} className="logo-item">
                   <Image
                     src={logo.src}
                     alt={logo.alt}
                     width={logo.width ?? 200}
                     height={logo.height ?? 80}
-                    className="h-12 w-auto object-contain logo-image"
+                    className="logo-image"
                   />
                 </div>
               ))}

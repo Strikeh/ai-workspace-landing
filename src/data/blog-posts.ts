@@ -11,9 +11,111 @@
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "organizing-ai-conversations-2025",
+    title: "The Ultimate Guide to Organizing Your AI Conversations in 2025",
+    excerpt:
+      "Drowning in 'New Chat' windows? Learn the PRO method for structuring your AI workflow. Folders, tags, and naming conventions that will save you hours every week.",
+    date: "Dec 03, 2025",
+    readTime: "6 min read",
+    category: "Productivity",
+    image: "/images/blog/organizing-ai-hero.png",
+    content: `
+      <div class="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-6 mb-8">
+        <p class="text-lg font-medium text-purple-100 m-0">
+          🧹 <strong>Is your ChatGPT sidebar a mess?</strong>
+        </p>
+        <p class="text-slate-300 mt-2 mb-0">
+          We've all been there. You're looking for that <em>one</em> perfect prompt you wrote three weeks ago, but it's buried under a mountain of "New Chat" and "Untitled Conversation" entries. In 2025, AI isn't just a novelty; it's a daily tool. It's time to treat your prompt history like the valuable knowledge base it is.
+        </p>
+      </div>
+
+      <h2>The "New Chat" Epidemic</h2>
+      <p>Most AI interfaces are designed for <em>now</em>, not for <em>later</em>. They encourage disposable conversations. But as we start building complex workflows, code snippets, and content strategies with AI, this linear list becomes a productivity killer. You wouldn't dump all your computer files onto your desktop, so why do it with your AI chats?</p>
+      
+      <img src="/images/blog/chaos-vs-order.png" alt="Comparison of a messy chat list versus an organized workspace" class="w-full rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <h2>1. The PARA Method for AI</h2>
+      <p>Tiago Forte's <strong>PARA</strong> method (Projects, Areas, Resources, Archives) is the gold standard for digital organization. Here is how to adapt it for your AI Workspace:</p>
+
+      <div class="grid md:grid-cols-2 gap-4 my-8">
+        <div class="bg-slate-800/50 p-5 rounded-xl border border-white/5">
+          <h3 class="text-cyan-400 mt-0">📁 Projects</h3>
+          <p class="text-sm text-slate-400 mb-0">Short-term efforts with a deadline.</p>
+          <ul class="text-sm mt-2 space-y-1">
+            <li>• Website Redesign</li>
+            <li>• Q1 Marketing Report</li>
+            <li>• Python Script Fix</li>
+          </ul>
+        </div>
+        <div class="bg-slate-800/50 p-5 rounded-xl border border-white/5">
+          <h3 class="text-purple-400 mt-0">🌍 Areas</h3>
+          <p class="text-sm text-slate-400 mb-0">Ongoing responsibilities.</p>
+          <ul class="text-sm mt-2 space-y-1">
+            <li>• Coding Standards</li>
+            <li>• Content Writing</li>
+            <li>• HR & Team Mgmt</li>
+          </ul>
+        </div>
+        <div class="bg-slate-800/50 p-5 rounded-xl border border-white/5">
+          <h3 class="text-yellow-400 mt-0">📚 Resources</h3>
+          <p class="text-sm text-slate-400 mb-0">Topics of interest & reference.</p>
+          <ul class="text-sm mt-2 space-y-1">
+            <li>• Prompt Library</li>
+            <li>• React Documentation</li>
+            <li>• Competitor Research</li>
+          </ul>
+        </div>
+        <div class="bg-slate-800/50 p-5 rounded-xl border border-white/5">
+          <h3 class="text-slate-400 mt-0">📦 Archives</h3>
+          <p class="text-sm text-slate-400 mb-0">Completed projects.</p>
+          <ul class="text-sm mt-2 space-y-1">
+            <li>• 2024 Planning</li>
+            <li>• Old Blog Posts</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>2. Naming Conventions That Work</h2>
+      <p>Stop letting the AI name your chats. "Delving into the intricacies of..." is not a helpful title. Adopt a strict naming convention:</p>
+      <p class="text-xl font-mono bg-black/30 p-4 rounded-lg text-center text-green-400">
+        [PROJECT] Task - Status
+      </p>
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li><code>[WEBSITE] Hero Copy - Draft 1</code></li>
+        <li><code>[PYTHON] Data Scraper - Debugging</code></li>
+        <li><code>[EMAIL] Newsletter #42 - Final Polish</code></li>
+      </ul>
+
+      <h2>3. The Power of Tags</h2>
+      <p>Folders are great for hierarchy, but tags are essential for <em>status</em>. A chat might live in your "Marketing" folder, but is it a draft? Is it approved? Is it a template?</p>
+      <img src="/images/blog/tagging-system.png" alt="Visual showing a chat with multiple colored tags" class="w-full rounded-xl border border-white/10 shadow-2xl my-8" />
+      
+      <p><strong>Essential Tags to Start With:</strong></p>
+      <div class="flex flex-wrap gap-2 my-4">
+        <span class="px-2 py-1 rounded bg-green-500/20 text-green-300 text-xs border border-green-500/30">#template</span>
+        <span class="px-2 py-1 rounded bg-blue-500/20 text-blue-300 text-xs border border-blue-500/30">#research</span>
+        <span class="px-2 py-1 rounded bg-yellow-500/20 text-yellow-300 text-xs border border-yellow-500/30">#wip</span>
+        <span class="px-2 py-1 rounded bg-red-500/20 text-red-300 text-xs border border-red-500/30">#bug</span>
+      </div>
+
+      <h2>4. The "Inbox Zero" Weekly Review</h2>
+      <p>Set aside 10 minutes every Friday for an "AI Cleanup".</p>
+      <ol>
+        <li><strong>Delete</strong> the one-off questions ("What is the capital of Peru?").</li>
+        <li><strong>Rename</strong> the valuable conversations.</li>
+        <li><strong>Move</strong> them into their PARA folders.</li>
+        <li><strong>Extract</strong> any reusable prompts into your Prompt Library.</li>
+      </ol>
+
+    `,
+  },
+  {
     slug: "claude-agentic-building-blocks",
-    title: "Understanding Claude's Agentic Building Blocks: Skills, Projects, & MCP",
-    excerpt: "Confused about Skills vs. Projects? Wondering where MCP fits in? We break down Anthropic's new agentic ecosystem and how to use each building block effectively.",
+    title:
+      "Understanding Claude's Agentic Building Blocks: Skills, Projects, & MCP",
+    excerpt:
+      "Confused about Skills vs. Projects? Wondering where MCP fits in? We break down Anthropic's new agentic ecosystem and how to use each building block effectively.",
     date: "Dec 02, 2025",
     readTime: "8 min read",
     category: "Guides",
@@ -1154,8 +1256,10 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "ultimate-guide-ai-productivity-2025",
-    title: "The Ultimate Guide to AI Productivity in 2025 (Or: How to Stop Drowning in Browser Tabs)",
-    excerpt: "Stop switching tabs. Stop losing prompts. Start actually getting work done. A humorous deep dive into why an AI sidebar is the productivity hack you didn't know you needed.",
+    title:
+      "The Ultimate Guide to AI Productivity in 2025 (Or: How to Stop Drowning in Browser Tabs)",
+    excerpt:
+      "Stop switching tabs. Stop losing prompts. Start actually getting work done. A humorous deep dive into why an AI sidebar is the productivity hack you didn't know you needed.",
     date: "Dec 05, 2025",
     readTime: "12 min read",
     category: "Guides",
@@ -1205,7 +1309,8 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "can-ai-be-funny",
     title: "Can AI Actually Be Funny? The Science of Computational Comedy",
-    excerpt: "Why does ChatGPT tell dad jokes? We dive into the mechanics of humor, prompt engineering, and why your AI assistant might be the next stand-up star.",
+    excerpt:
+      "Why does ChatGPT tell dad jokes? We dive into the mechanics of humor, prompt engineering, and why your AI assistant might be the next stand-up star.",
     date: "Dec 08, 2025",
     readTime: "9 min read",
     category: "Deep Dive",

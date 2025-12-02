@@ -43,6 +43,9 @@ export default function BlogIndex() {
               <Link href="/#pricing" className="nav-link">
                 Pricing
               </Link>
+              <Link href="/blog" className="nav-link text-cyan-400">
+                Blog
+              </Link>
               <a
                 href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"
                 target="_blank"

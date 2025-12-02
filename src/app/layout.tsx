@@ -171,8 +171,8 @@ export default function RootLayout({
                   "https://x.com/Strikeh82",
                   "https://github.com/Strikeh",
                   "https://www.linkedin.com/in/dirk-lammers-345a26397/",
-                  "https://discord.gg/9wESDrQN"
-                ]
+                  "https://discord.gg/9wESDrQN",
+                ],
               },
               offers: [
                 {

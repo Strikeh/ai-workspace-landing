@@ -16,25 +16,33 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "OpenAI and Thrive Capital are ditching the 'pilot' phase. Their new strategy? Buying companies and rebuilding their core operations with AI from the ground up.",
     date: "Dec 03, 2025",
-    readTime: "5 min read",
+    readTime: "8 min read",
     category: "Industry News",
-    image: "/images/blog/productivity-flow.png",
+    image: "/images/blog/openai-thrive-hero.png",
     content: `
       <div class="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 rounded-xl p-6 mb-8">
         <p class="text-lg font-medium text-blue-100 m-0">
           🚀 <strong>The Era of "AI Pilots" is Over.</strong>
         </p>
         <p class="text-slate-300 mt-2 mb-0">
-          While most enterprises are stuck in "proof-of-concept" purgatory, OpenAI and Thrive Capital are taking a radical new approach: <strong>buying companies outright to rebuild them with AI.</strong> This isn't just about adding a chatbot; it's about a fundamental operational redesign.
+          While most enterprises are stuck in "proof-of-concept" purgatory, OpenAI and Thrive Capital are taking a radical new approach: <strong>buying companies outright to rebuild them with AI.</strong> This isn't just about adding a chatbot; it's about a fundamental operational redesign backed by hundreds of millions of dollars.
         </p>
       </div>
 
       <h2>The "Deep Integration" Strategy</h2>
       <p>Thrive Capital is using its portfolio companies—specifically <strong>Crete Professionals Alliance</strong> (accounting) and <strong>Shield Technology Partners</strong> (IT services)—as live laboratories. Instead of selling software <em>to</em> these companies, they are embedding OpenAI's engineers directly <em>within</em> them.</p>
       
-      <p>The goal? To move beyond generic automation and tackle the messy, complex, domain-specific workflows that actually drive business value.</p>
+      <p>The goal? To move beyond generic automation and tackle the messy, complex, domain-specific workflows that actually drive business value. Thrive has committed <strong>$500 million</strong> to Crete and over <strong>$100 million</strong> to Shield, proving this isn't just a side experiment.</p>
 
-      <img src="/images/blog/gemini-agentic-workflow.png" alt="Deep integration of AI into enterprise workflows" class="w-full rounded-xl border border-white/10 shadow-2xl my-8" />
+      <img src="/images/blog/deep-integration-diagram.png" alt="Deep integration of AI into enterprise workflows" class="w-full rounded-xl border border-white/10 shadow-2xl my-8" />
+
+      <h2>Why Accounting & IT?</h2>
+      <p>These industries are the perfect testing ground for "Agentic AI" because they share three critical traits:</p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-300 marker:text-cyan-400">
+        <li><strong>Heavy Workloads:</strong> Thousands of repetitive tasks that burn out human workers.</li>
+        <li><strong>Strict Rules:</strong> Accounting and IT have clear "right and wrong" answers, making it easier to measure AI accuracy.</li>
+        <li><strong>Sensitive Data:</strong> If an AI can handle confidential tax data or secure IT infrastructure, it can handle almost anything.</li>
+      </ul>
 
       <h2>Why "Generic" AI Fails in Enterprise</h2>
       <p>Most AI implementations fail because they try to layer new tech on top of old, broken processes. The OpenAI x Thrive model flips this script:</p>
@@ -62,6 +70,10 @@ export const blogPosts: BlogPost[] = [
           </div>
         </li>
       </ul>
+
+      <h2>OpenAI's Skin in the Game</h2>
+      <p>Why is OpenAI doing this? With a valuation hovering around <strong>$500 billion</strong> and infrastructure commitments topping <strong>$1.4 trillion</strong>, OpenAI needs to prove that its models can generate real, massive economic value—not just write poems.</p>
+      <p>By taking an ownership stake in Thrive, OpenAI gains something money can't buy: <strong>feedback loops</strong>. They get to see exactly where their models break in the real world and fix them, creating a competitive moat that is hard to replicate.</p>
 
       <h2>What This Means for Your Business</h2>
       <p>You might not have OpenAI's budget to buy companies, but you can steal their playbook:</p>

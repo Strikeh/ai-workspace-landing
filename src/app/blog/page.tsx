@@ -82,12 +82,11 @@ export default function BlogIndex() {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                Blog & Updates
+                AI Workflow Guides & Updates
               </span>
             </h1>
             <p className="text-xl text-slate-400 leading-relaxed">
-              Tips, tutorials, and insights to help you master your AI workflow
-              and get the most out of ChatGPT.
+              Practical tips, deep dives, and release notes — built for teams working across ChatGPT, Claude, and Grok.
             </p>
           </div>
 

@@ -453,8 +453,11 @@ export default function Home() {
                     lineHeight: "1.15",
                   }}
                 >
+                  <span className="text-slate-100 text-3xl sm:text-4xl lg:text-5xl block mb-3">
+                    Master AI across platforms
+                  </span>
                   <span
-                    className="relative inline-block"
+                    className="relative inline-block text-5xl sm:text-6xl lg:text-7xl"
                     style={{
                       background: "var(--premium-title-gradient)",
                       backgroundClip: "text",
@@ -462,29 +465,13 @@ export default function Home() {
                       WebkitTextFillColor: "transparent",
                     }}
                   >
-                    Your AI Workspace
-                  </span>
-                  <br />
-                  <span className="text-slate-300 text-3xl sm:text-4xl lg:text-5xl">
-                    One extension for{" "}
-                    <span className="text-white font-semibold">
-                      <span className="text-cyan-400">ChatGPT</span>, Claude.ai
-                      & Grok
-                    </span>
+                    One Unified Workspace
                   </span>
                 </h1>
 
                 {/* One-liner value prop */}
-                <p className="hero-subtitle text-xl leading-relaxed text-slate-300 max-w-xl">
-                  Organize conversations, save prompts instantly, and boost your
-                  productivity{" "}
-                  <span className="text-white font-medium">
-                    across all AI platforms
-                  </span>
-                  . <br className="hidden sm:block" />
-                  <span className="text-slate-400">
-                    Everything stored locally. 100% private.
-                  </span>
+                <p className="hero-subtitle text-xl leading-relaxed text-slate-300 max-w-2xl">
+                  Work faster and stay organized with <span className="text-white font-semibold">folders, deep search, GPT manager, image gallery, prompt chains, PDF export</span> and more — built to run <span className="text-cyan-400 font-medium">seamlessly with ChatGPT, Claude, and Grok</span>.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-6 w-full sm:w-auto">
@@ -517,29 +504,10 @@ export default function Home() {
                   <DemoHubButton />
                 </div>
 
-                {/* Teaser for more features */}
-                <div className="flex items-center gap-2 text-sm text-slate-500 pt-2">
-                  <span className="text-slate-400">Plus:</span>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-slate-400 text-xs">
-                      ChatGPT Sidebar
-                    </span>
-                    <span className="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-slate-400 text-xs">
-                      Folder Organization
-                    </span>
-                    <span className="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-slate-400 text-xs">
-                      Image Gallery
-                    </span>
-                    <span className="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-slate-400 text-xs">
-                      GPT Store
-                    </span>
-                    <a
-                      href="#features"
-                      className="px-2 py-0.5 rounded bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs hover:bg-cyan-500/20 transition-colors"
-                    >
-                      & plenty more →
-                    </a>
-                  </div>
+                {/* Feature highlights */}
+                <div className="text-sm text-slate-400 pt-2 leading-relaxed max-w-xl">
+                  <span className="text-slate-300 font-medium">Highlights: </span>
+                  Sidebar inside ChatGPT, nested folders, full‑text search, prompt library, image gallery, GPT store manager, smart tags, bulk actions, encrypted vaults, and clean PDF export — all in one place.
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 pt-3">

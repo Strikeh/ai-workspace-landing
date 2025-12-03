@@ -19,6 +19,7 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/ScrollAnimation";
+import { FolderOpen, Hourglass, FileText } from "lucide-react";
 
 const browserInstallButtons = [
   {
@@ -305,7 +306,7 @@ export default function Home() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-slate-300 hover:text-white"
+              className="md:hidden p-2 text-slate-300 hover:text-white cursor-pointer"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -349,28 +350,28 @@ export default function Home() {
           <div className="md:hidden absolute top-16 left-0 w-full bg-slate-900/95 backdrop-blur-lg border-b border-white/10 p-6 flex flex-col gap-4 shadow-2xl animate-in slide-in-from-top-5">
             <a
               href="#features"
-              className="text-lg font-medium text-slate-300 hover:text-cyan-400 py-2"
+              className="text-lg font-medium text-slate-300 hover:text-cyan-400 py-2 cursor-pointer"
               onClick={() => setMobileMenuOpen(false)}
             >
               Features
             </a>
             <a
               href="#showcase"
-              className="text-lg font-medium text-slate-300 hover:text-cyan-400 py-2"
+              className="text-lg font-medium text-slate-300 hover:text-cyan-400 py-2 cursor-pointer"
               onClick={() => setMobileMenuOpen(false)}
             >
               Showcase
             </a>
             <a
               href="#pricing"
-              className="text-lg font-medium text-slate-300 hover:text-cyan-400 py-2"
+              className="text-lg font-medium text-slate-300 hover:text-cyan-400 py-2 cursor-pointer"
               onClick={() => setMobileMenuOpen(false)}
             >
               Pricing
             </a>
             <Link
               href="/blog"
-              className="text-lg font-medium text-slate-300 hover:text-cyan-400 py-2"
+              className="text-lg font-medium text-slate-300 hover:text-cyan-400 py-2 cursor-pointer"
               onClick={() => setMobileMenuOpen(false)}
             >
               Blog
@@ -379,7 +380,7 @@ export default function Home() {
               href={installUrl || "#pricing"}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 flex items-center justify-center rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 text-base font-bold text-white shadow-lg shadow-cyan-500/20"
+              className="mt-2 flex items-center justify-center rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 text-base font-bold text-white shadow-lg shadow-cyan-500/20 cursor-pointer"
               onClick={() => setMobileMenuOpen(false)}
             >
               Get started free
@@ -477,8 +478,8 @@ export default function Home() {
                 <p className="hero-subtitle text-xl leading-relaxed text-slate-300 max-w-2xl">
                   Work faster and stay organized with{" "}
                   <span className="text-white font-semibold">
-                    folders, deep search, GPT manager, image gallery, prompt
-                    chains, PDF export
+                    folders, deep search, GPT manager, image gallery, vaults,
+                    multiple export formats
                   </span>{" "}
                   and more — built to run{" "}
                   <span className="text-cyan-400 font-medium">
@@ -540,7 +541,7 @@ export default function Home() {
                   </span>
                   Sidebar inside ChatGPT, nested folders, full‑text search,
                   prompt library, image gallery, GPT store manager, smart tags,
-                  bulk actions, encrypted vaults, and clean PDF export — all in
+                  bulk actions, encrypted vaults, and multiple export formats — all in
                   one place.
                 </div>
 
@@ -691,7 +692,7 @@ export default function Home() {
 
                   <div className="relative z-10">
                     <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-white/10 flex items-center justify-center text-3xl mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
-                      📂
+                      <FolderOpen className="w-8 h-8 text-orange-400" />
                     </div>
 
                     <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
@@ -739,7 +740,7 @@ export default function Home() {
 
                   <div className="relative z-10">
                     <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-white/10 flex items-center justify-center text-3xl mb-6 shadow-lg group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500">
-                      🐌
+                      <Hourglass className="w-8 h-8 text-cyan-400" />
                     </div>
 
                     <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
@@ -787,7 +788,7 @@ export default function Home() {
 
                   <div className="relative z-10">
                     <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-white/10 flex items-center justify-center text-3xl mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
-                      📝
+                      <FileText className="w-8 h-8 text-green-400" />
                     </div>
 
                     <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
@@ -1434,7 +1435,7 @@ export default function Home() {
 
                     <a
                       href={`#lightbox-${index}`}
-                      className="mt-6 block relative rounded-lg overflow-hidden border border-white/5 bg-black/20 aspect-video group-hover:border-white/10 transition-colors cursor-zoom-in"
+                      className="mt-6 block relative rounded-lg overflow-hidden border border-white/5 bg-black/20 aspect-video group-hover:border-white/10 transition-colors cursor-pointer"
                     >
                       <Image
                         src={showcase.image}

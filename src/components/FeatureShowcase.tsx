@@ -2,6 +2,31 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import {
+  Folder,
+  Palette,
+  Tag,
+  Search,
+  Pin,
+  Zap,
+  Trash2,
+  Highlighter,
+  Scissors,
+  Rocket,
+  Bell,
+  Compass,
+  Library,
+  Wrench,
+  Link,
+  History,
+  Image as ImageIcon,
+  FileText,
+  Download,
+  Eye,
+  FolderOpen,
+  MessageSquare,
+  Sparkles,
+} from "lucide-react";
 
 const CheckIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -21,7 +46,7 @@ const CheckIcon = (props: React.SVGProps<SVGSVGElement>) => (
 type Tab = "organization" | "performance" | "prompts" | "advanced";
 
 interface Feature {
-  icon: string;
+  icon: React.ElementType;
   title: string;
   description: string;
   video?: string;
@@ -33,43 +58,43 @@ const featureData: Record<Tab, { features: Feature[] }> = {
   organization: {
     features: [
       {
-        icon: "📁",
+        icon: Folder,
         title: "Unlimited nested folders with drag & drop",
         description: "Create a hierarchy that matches your workflow",
         video: "https://www.youtube.com/embed/pDZD1maOWBA",
       },
       {
-        icon: "🎨",
+        icon: Palette,
         title: "Color-coded categories with custom icons",
         description: "Visual organization at a glance",
         image: "/images/carousel/BrandBird 2025-11-20 12.01.36.png",
       },
       {
-        icon: "🏷️",
+        icon: Tag,
         title: "Multi-tag system with custom colors",
         description: "Tag conversations with multiple labels",
         image: "/images/carousel/BrandBird 2025-11-20 12.01.58.png",
       },
       {
-        icon: "🔍",
+        icon: Search,
         title: "Advanced search across all conversations",
         description: "Find any chat instantly with powerful filters",
         image: "/images/carousel/BrandBird 2025-11-20 12.04.10.png",
       },
       {
-        icon: "📌",
+        icon: Pin,
         title: "Pin important chats to the top",
         description: "Keep your most-used conversations accessible",
         image: "/images/carousel/BrandBird 2025-11-20 19.37.47.png",
       },
       {
-        icon: "⚡",
+        icon: Zap,
         title: "Bulk operations (delete, archive, categorize)",
         description: "Manage hundreds of chats in seconds",
         image: "/images/carousel/BrandBird 2025-11-20 19.38.41.png",
       },
       {
-        icon: "🗑️",
+        icon: Trash2,
         title: "Auto-delete old conversations",
         description: "Keep your workspace clean automatically",
         image: "/images/carousel/BrandBird 2025-11-20 19.39.10.png",
@@ -79,32 +104,32 @@ const featureData: Record<Tab, { features: Feature[] }> = {
   performance: {
     features: [
       {
-        icon: "✨",
+        icon: Highlighter,
         title: "Text Highlighting",
         description:
           "Mark important parts of conversations for quick reference",
         video: "https://www.youtube.com/embed/L3EXlMBB1zI",
       },
       {
-        icon: "✂️",
+        icon: Scissors,
         title: "Thread Trimming",
         description: "Auto-hide old messages in long conversations",
         image: "/images/carousel/BrandBird 2025-11-20 19.39.38.png",
       },
       {
-        icon: "🚀",
+        icon: Rocket,
         title: "73% Memory Saving",
         description: "Dramatically reduce browser memory usage",
         image: "/images/carousel/BrandBird 2025-11-20 19.40.43.png",
       },
       {
-        icon: "🔔",
+        icon: Bell,
         title: "Audio Notifications",
         description: "Get notified when AI responses are ready",
         image: "/images/carousel/BrandBird 2025-11-20 19.43.13.png",
       },
       {
-        icon: "🧭",
+        icon: Compass,
         title: "Smart Navigation",
         description: "Jump between highlighted sections instantly",
         image: "/images/carousel/BrandBird 2025-11-20 19.46.23.png",
@@ -114,32 +139,32 @@ const featureData: Record<Tab, { features: Feature[] }> = {
   prompts: {
     features: [
       {
-        icon: "📚",
+        icon: Library,
         title: "Library (200+)",
         description: "Save unlimited prompts with organization",
         image: "/images/prompt-library.png",
       },
       {
-        icon: "⚡",
+        icon: Zap,
         title: 'Quick "/" Access',
         description: "Type / to instantly insert saved prompts",
         image: "/images/prompt-quick-access.png",
       },
       {
-        icon: "🔧",
+        icon: Wrench,
         title: "Templates {{}}",
         description: "Use variables in prompts for dynamic content",
         image: "/images/prompt-templates.png",
       },
       {
-        icon: "🔗",
+        icon: Link,
         title: "Chains",
         description: "Link prompts together for complex workflows",
         image: "/images/prompt-chains.png",
         isWip: true,
       },
       {
-        icon: "📜",
+        icon: History,
         title: "History",
         description: "Track all your prompt usage and iterations",
         image: "/images/prompt-history.png",
@@ -149,31 +174,31 @@ const featureData: Record<Tab, { features: Feature[] }> = {
   advanced: {
     features: [
       {
-        icon: "🖼️",
+        icon: ImageIcon,
         title: "Image Gallery",
         description: "Browse all images from your conversations",
         image: "/images/image-gallery.png",
       },
       {
-        icon: "📝",
+        icon: FileText,
         title: "Notes System",
         description: "Add notes to any conversation",
         image: "/images/carousel/BrandBird 2025-11-20 19.48.31.png",
       },
       {
-        icon: "📤",
-        title: "Export (PDF/MD/JSON)",
+        icon: Download,
+        title: "Export (JSON/TXT/MD)",
         description: "Export conversations in multiple formats",
         image: "/images/print.png",
       },
       {
-        icon: "🔗",
+        icon: Link,
         title: "Reference Chats",
         description: "Link related conversations together",
         image: "/images/dashboard.png",
       },
       {
-        icon: "👁️",
+        icon: Eye,
         title: "Conversation Preview",
         description: "Quick preview without opening the chat",
         image: "/images/gallery-preview.svg",
@@ -187,11 +212,11 @@ export default function FeatureShowcase() {
   const [activeFeatureIndex, setActiveFeatureIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
-  const tabs: { id: Tab; label: string; icon: string }[] = [
-    { id: "organization", label: "Organization", icon: "📂" },
-    { id: "performance", label: "Performance", icon: "⚡" },
-    { id: "prompts", label: "Prompts", icon: "📝" },
-    { id: "advanced", label: "Advanced", icon: "🖼️" },
+  const tabs: { id: Tab; label: string; icon: React.ElementType }[] = [
+    { id: "organization", label: "Organization", icon: FolderOpen },
+    { id: "performance", label: "Performance", icon: Zap },
+    { id: "prompts", label: "Prompts", icon: MessageSquare },
+    { id: "advanced", label: "Advanced", icon: Sparkles },
   ];
 
   const currentData = featureData[activeTab];
@@ -208,7 +233,7 @@ export default function FeatureShowcase() {
       {/* Lightbox Modal */}
       {isLightboxOpen && activeFeature.image && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 animate-in fade-in duration-200"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 animate-in fade-in duration-200 cursor-pointer"
           onClick={() => setIsLightboxOpen(false)}
         >
           <div className="relative max-w-7xl w-full max-h-[90vh] aspect-video rounded-xl overflow-hidden shadow-2xl">
@@ -220,7 +245,7 @@ export default function FeatureShowcase() {
               quality={100}
             />
             <button
-              className="absolute top-4 right-4 p-2 rounded-full bg-black/50 text-white hover:bg-white/20 transition-colors"
+              className="absolute top-4 right-4 p-2 rounded-full bg-black/50 text-white hover:bg-white/20 transition-colors cursor-pointer"
               onClick={(e) => {
                 e.stopPropagation();
                 setIsLightboxOpen(false);
@@ -254,7 +279,7 @@ export default function FeatureShowcase() {
               onClick={() => handleTabChange(tab.id)}
               className={`
                 flex-shrink-0 snap-center
-                relative px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300
+                relative px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer
                 ${
                   activeTab === tab.id
                     ? "bg-gradient-to-r from-cyan-500/20 to-blue-600/20 text-cyan-400 shadow-[0_0_20px_-5px_rgba(6,182,212,0.3)] border border-cyan-500/30"
@@ -263,13 +288,11 @@ export default function FeatureShowcase() {
               `}
             >
               <span className="flex items-center gap-2">
-                <span
-                  className={
+                <tab.icon
+                  className={`w-4 h-4 ${
                     activeTab === tab.id ? "scale-110 transition-transform" : ""
-                  }
-                >
-                  {tab.icon}
-                </span>
+                  }`}
+                />
                 {tab.label}
               </span>
             </button>
@@ -313,7 +336,7 @@ export default function FeatureShowcase() {
                 />
               ) : activeFeature.image ? (
                 <div
-                  className="relative w-full h-full cursor-zoom-in"
+                  className="relative w-full h-full cursor-pointer"
                   onClick={() => setIsLightboxOpen(true)}
                 >
                   <Image
@@ -381,7 +404,7 @@ export default function FeatureShowcase() {
               <button
                 key={index}
                 onClick={() => setActiveFeatureIndex(index)}
-                className={`group flex items-start gap-4 p-4 rounded-2xl transition-all duration-300 border text-left w-full
+                className={`group flex items-start gap-4 p-4 rounded-2xl transition-all duration-300 border text-left w-full cursor-pointer
                   ${
                     activeFeatureIndex === index
                       ? "bg-white/10 border-cyan-500/30 shadow-lg shadow-cyan-500/5"
@@ -399,7 +422,13 @@ export default function FeatureShowcase() {
                   }
                 `}
                 >
-                  {feature.icon}
+                  <feature.icon
+                    className={`w-6 h-6 transition-colors ${
+                      activeFeatureIndex === index
+                        ? "text-cyan-400"
+                        : "text-slate-400 group-hover:text-cyan-400"
+                    }`}
+                  />
                 </div>
                 <div className="pt-1 flex-1">
                   <div className="flex items-center gap-2 mb-1">

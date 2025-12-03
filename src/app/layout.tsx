@@ -219,7 +219,7 @@ export default function RootLayout({
                 "GPT Store integration for custom GPTs",
                 "Zero telemetry and 100% cloud-free",
                 "Folder-based organization system",
-                "One-click export to Markdown/JSON/PDF",
+                "One-click export to Markdown/JSON/TXT",
                 "Dark/Light themes with customization",
                 "Multi-language support (EN/FR/NL)",
                 "Advanced search and filtering",

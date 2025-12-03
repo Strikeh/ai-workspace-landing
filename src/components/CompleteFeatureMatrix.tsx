@@ -1,6 +1,15 @@
 ﻿"use client";
 
 import { useState } from "react";
+import {
+  FolderOpen,
+  Zap,
+  MessageSquare,
+  Palette,
+  Sparkles,
+  ShieldCheck,
+  Globe,
+} from "lucide-react";
 
 const CheckIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -22,7 +31,7 @@ export default function CompleteFeatureMatrix() {
 
   const featureCategories = [
     {
-      icon: "📂",
+      icon: FolderOpen,
       title: "ORGANIZATION",
       features: [
         "Folders (nested)",
@@ -33,7 +42,7 @@ export default function CompleteFeatureMatrix() {
       ],
     },
     {
-      icon: "⚡",
+      icon: Zap,
       title: "PERFORMANCE",
       features: [
         "Text Highlighting",
@@ -44,7 +53,7 @@ export default function CompleteFeatureMatrix() {
       ],
     },
     {
-      icon: "📝",
+      icon: MessageSquare,
       title: "PROMPTS",
       features: [
         "Library (200+)",
@@ -55,7 +64,7 @@ export default function CompleteFeatureMatrix() {
       ],
     },
     {
-      icon: "🎨",
+      icon: Palette,
       title: "CUSTOMIZATION",
       features: [
         "Premium Themes",
@@ -66,18 +75,18 @@ export default function CompleteFeatureMatrix() {
       ],
     },
     {
-      icon: "🖼️",
+      icon: Sparkles,
       title: "ADVANCED",
       features: [
         "Image Gallery",
         "Notes System",
-        "Export (PDF/MD/JSON)",
+        "Export (JSON/TXT/MD)",
         "Reference Chats",
         "Conversation Preview",
       ],
     },
     {
-      icon: "🔒",
+      icon: ShieldCheck,
       title: "PRIVACY",
       features: [
         "100% Local-first",
@@ -106,7 +115,7 @@ export default function CompleteFeatureMatrix() {
         <div className="text-center mb-8">
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-slate-800/50 hover:bg-slate-800 border border-white/10 text-white font-semibold transition-all"
+            className="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-slate-800/50 hover:bg-slate-800 border border-white/10 text-white font-semibold transition-all cursor-pointer"
           >
             <svg
               className={`w-5 h-5 transition-transform ${
@@ -140,7 +149,7 @@ export default function CompleteFeatureMatrix() {
                 className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <span className="text-3xl">{category.icon}</span>
+                  <category.icon className="w-8 h-8 text-cyan-400" />
                   <h3 className="text-lg font-bold text-cyan-400">
                     {category.title}
                   </h3>
@@ -163,7 +172,7 @@ export default function CompleteFeatureMatrix() {
           {/* Supported Platforms */}
           <div className="mt-12 text-center p-8 bg-slate-800/20 rounded-2xl border border-white/10">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <span className="text-2xl">🌐</span>
+              <Globe className="w-8 h-8 text-cyan-400" />
               <h3 className="text-xl font-bold text-white">
                 SUPPORTED PLATFORMS
               </h3>

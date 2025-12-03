@@ -52,7 +52,7 @@ export default function ImageLightbox() {
 
   return (
     <div
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/95 p-4 cursor-zoom-out animate-in fade-in duration-200"
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/95 p-4 cursor-pointer animate-in fade-in duration-200"
       onClick={() => setSelectedImage(null)}
     >
       <button

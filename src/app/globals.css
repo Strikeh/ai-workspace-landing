@@ -1646,6 +1646,7 @@ details[open].faq-card {
   justify-content: center;
   padding: 20px;
   animation: fadeIn 0.2s ease-out;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

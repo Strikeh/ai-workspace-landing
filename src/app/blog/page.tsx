@@ -86,7 +86,8 @@ export default function BlogIndex() {
               </span>
             </h1>
             <p className="text-xl text-slate-400 leading-relaxed">
-              Practical tips, deep dives, and release notes — built for teams working across ChatGPT, Claude, and Grok.
+              Practical tips, deep dives, and release notes — built for teams
+              working across ChatGPT, Claude, and Grok.
             </p>
           </div>
 

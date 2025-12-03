@@ -9,6 +9,9 @@ import DemoModal from "@/components/DemoModal";
 import DemoHubButton from "@/components/DemoHubButton";
 import FeatureShowcase from "@/components/FeatureShowcase";
 import CompleteFeatureMatrix from "@/components/CompleteFeatureMatrix";
+import { HeroConnectionLines } from "@/components/HeroConnectionLines";
+import { ProblemSolutionLines } from "@/components/ProblemSolutionLines";
+import { ShowcaseLines } from "@/components/ShowcaseLines";
 import {
   FadeIn,
   SlideUp,
@@ -417,7 +420,8 @@ export default function Home() {
           </div>
 
           <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-16 px-6 pb-16 pt-20 md:px-10 lg:px-16">
-            <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
+            <div className="relative flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
+              <HeroConnectionLines />
               <SlideUp className="max-w-2xl space-y-6" delay={0.1}>
                 {/* Social Proof Bar - First thing they see */}
                 <div className="flex flex-wrap items-center gap-3 text-sm">
@@ -453,7 +457,7 @@ export default function Home() {
                     lineHeight: "1.15",
                   }}
                 >
-                  <span className="text-slate-100 text-3xl sm:text-4xl lg:text-5xl block mb-3">
+                  <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent text-3xl sm:text-4xl lg:text-5xl block mb-3">
                     Master AI across platforms
                   </span>
                   <span
@@ -471,8 +475,33 @@ export default function Home() {
 
                 {/* One-liner value prop */}
                 <p className="hero-subtitle text-xl leading-relaxed text-slate-300 max-w-2xl">
-                  Work faster and stay organized with <span className="text-white font-semibold">folders, deep search, GPT manager, image gallery, prompt chains, PDF export</span> and more — built to run <span className="text-cyan-400 font-medium">seamlessly with ChatGPT, Claude, and Grok</span>.
+                  Work faster and stay organized with{" "}
+                  <span className="text-white font-semibold">
+                    folders, deep search, GPT manager, image gallery, prompt
+                    chains, PDF export
+                  </span>{" "}
+                  and more — built to run{" "}
+                  <span className="text-cyan-400 font-medium">
+                    seamlessly with ChatGPT, Claude, and Grok
+                  </span>
+                  .
                 </p>
+
+                {/* Security & Privacy Emphasis */}
+                <div className="flex flex-wrap gap-3 pt-4 pb-2">
+                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-950/30 border border-emerald-500/30 text-emerald-400 text-sm font-medium shadow-[0_0_10px_rgba(16,185,129,0.1)]">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                    Encrypted Vaults
+                  </div>
+                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-950/30 border border-blue-500/30 text-blue-400 text-sm font-medium shadow-[0_0_10px_rgba(59,130,246,0.1)]">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                    100% Local Privacy
+                  </div>
+                </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-6 w-full sm:w-auto">
                   {/* Primary CTA */}
@@ -506,8 +535,13 @@ export default function Home() {
 
                 {/* Feature highlights */}
                 <div className="text-sm text-slate-400 pt-2 leading-relaxed max-w-xl">
-                  <span className="text-slate-300 font-medium">Highlights: </span>
-                  Sidebar inside ChatGPT, nested folders, full‑text search, prompt library, image gallery, GPT store manager, smart tags, bulk actions, encrypted vaults, and clean PDF export — all in one place.
+                  <span className="text-slate-300 font-medium">
+                    Highlights:{" "}
+                  </span>
+                  Sidebar inside ChatGPT, nested folders, full‑text search,
+                  prompt library, image gallery, GPT store manager, smart tags,
+                  bulk actions, encrypted vaults, and clean PDF export — all in
+                  one place.
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 pt-3">
@@ -635,6 +669,7 @@ export default function Home() {
 
         {/* Problem → Solution Section */}
         <section className="py-20 relative overflow-hidden bg-slate-900/50">
+          <ProblemSolutionLines />
           <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16 relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1315,6 +1350,7 @@ export default function Home() {
         >
           {/* Background Glows */}
           <div className="absolute inset-0 pointer-events-none">
+            <ShowcaseLines />
             <div
               className="absolute top-[10%] right-[5%] w-[600px] h-[600px] rounded-full opacity-10 blur-[120px]"
               style={{

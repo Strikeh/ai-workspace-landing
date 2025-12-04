@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Folder,
   Palette,
@@ -17,7 +18,7 @@ import {
   Compass,
   Library,
   Wrench,
-  Link,
+  Link as LinkIcon,
   History,
   Image as ImageIcon,
   FileText,
@@ -26,6 +27,7 @@ import {
   FolderOpen,
   MessageSquare,
   Sparkles,
+  ExternalLink,
 } from "lucide-react";
 
 const CheckIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -52,6 +54,7 @@ interface Feature {
   video?: string;
   image?: string;
   isWip?: boolean;
+  link?: string;
 }
 
 const featureData: Record<Tab, { features: Feature[] }> = {
@@ -62,36 +65,42 @@ const featureData: Record<Tab, { features: Feature[] }> = {
         title: "Unlimited nested folders with drag & drop",
         description: "Create a hierarchy that matches your workflow",
         video: "https://www.youtube.com/embed/pDZD1maOWBA",
+        link: "/organization",
       },
       {
         icon: Palette,
         title: "Color-coded categories with custom icons",
         description: "Visual organization at a glance",
         image: "/images/carousel/BrandBird 2025-11-20 12.01.36.png",
+        link: "/organization",
       },
       {
         icon: Tag,
         title: "Multi-tag system with custom colors",
         description: "Tag conversations with multiple labels",
         image: "/images/carousel/BrandBird 2025-11-20 12.01.58.png",
+        link: "/organization",
       },
       {
         icon: Search,
         title: "Advanced search across all conversations",
         description: "Find any chat instantly with powerful filters",
         image: "/images/carousel/BrandBird 2025-11-20 12.04.10.png",
+        link: "/organization",
       },
       {
         icon: Pin,
         title: "Pin important chats to the top",
         description: "Keep your most-used conversations accessible",
         image: "/images/carousel/BrandBird 2025-11-20 19.37.47.png",
+        link: "/organization",
       },
       {
         icon: Zap,
         title: "Bulk operations (delete, archive, categorize)",
         description: "Manage hundreds of chats in seconds",
         image: "/images/carousel/BrandBird 2025-11-20 19.38.41.png",
+        link: "/organization",
       },
       {
         icon: Trash2,
@@ -109,12 +118,14 @@ const featureData: Record<Tab, { features: Feature[] }> = {
         description:
           "Mark important parts of conversations for quick reference",
         video: "https://www.youtube.com/embed/L3EXlMBB1zI",
+        link: "/chatgpt-text-highlighter",
       },
       {
         icon: Scissors,
         title: "Thread Trimming",
         description: "Auto-hide old messages in long conversations",
         image: "/images/carousel/BrandBird 2025-11-20 19.39.38.png",
+        link: "/chatgpt-text-highlighter",
       },
       {
         icon: Rocket,
@@ -143,21 +154,24 @@ const featureData: Record<Tab, { features: Feature[] }> = {
         title: "Library (200+)",
         description: "Save unlimited prompts with organization",
         image: "/images/prompt-library.png",
+        link: "/prompt-library",
       },
       {
         icon: Zap,
         title: 'Quick "/" Access',
         description: "Type / to instantly insert saved prompts",
         image: "/images/prompt-quick-access.png",
+        link: "/prompt-library",
       },
       {
         icon: Wrench,
         title: "Templates {{}}",
         description: "Use variables in prompts for dynamic content",
         image: "/images/prompt-templates.png",
+        link: "/prompt-library",
       },
       {
-        icon: Link,
+        icon: LinkIcon,
         title: "Chains",
         description: "Link prompts together for complex workflows",
         image: "/images/prompt-chains.png",
@@ -168,6 +182,7 @@ const featureData: Record<Tab, { features: Feature[] }> = {
         title: "History",
         description: "Track all your prompt usage and iterations",
         image: "/images/prompt-history.png",
+        link: "/prompt-library",
       },
     ],
   },
@@ -192,7 +207,7 @@ const featureData: Record<Tab, { features: Feature[] }> = {
         image: "/images/print.png",
       },
       {
-        icon: Link,
+        icon: LinkIcon,
         title: "Reference Chats",
         description: "Link related conversations together",
         image: "/images/dashboard.png",
@@ -380,6 +395,18 @@ export default function FeatureShowcase() {
             </div>
           </div>
 
+          {activeFeature.link && (
+            <div className="mt-4 flex justify-center animate-in fade-in slide-in-from-top-4 duration-500">
+              <Link
+                href={activeFeature.link}
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:from-cyan-500/20 hover:to-blue-500/20 hover:border-cyan-500/40 transition-all duration-300 text-sm font-medium group"
+              >
+                <span>Learn more about {activeFeature.title}</span>
+                <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+              </Link>
+            </div>
+          )}
+
           <p className="mt-6 text-slate-500 text-sm text-center font-medium lg:hidden">
             <span className="inline-block animate-pulse mr-2">👇</span>
             Select a feature below to update preview
@@ -401,7 +428,7 @@ export default function FeatureShowcase() {
 
           <div className="grid gap-4">
             {currentData.features.map((feature, index) => (
-              <button
+              <div
                 key={index}
                 onClick={() => setActiveFeatureIndex(index)}
                 className={`group relative rounded-2xl p-[1px] overflow-hidden transition-all duration-300 text-left w-full cursor-pointer
@@ -452,7 +479,7 @@ export default function FeatureShowcase() {
                     />
                   </div>
                   <div className="pt-1 flex-1">
-                    <div className="flex items-center gap-2 mb-1">
+                    <div className="flex items-center gap-2 mb-1 flex-wrap">
                       <h4
                         className={`font-semibold transition-colors ${
                           activeFeatureIndex === index
@@ -462,6 +489,20 @@ export default function FeatureShowcase() {
                       >
                         {feature.title}
                       </h4>
+                      {feature.link && (
+                        <Link
+                          href={feature.link}
+                          onClick={(e) => e.stopPropagation()}
+                          className={`flex items-center gap-1 text-xs px-2 py-0.5 rounded-full border transition-colors ${
+                            activeFeatureIndex === index
+                              ? "bg-cyan-500/10 border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20"
+                              : "bg-slate-800 border-white/10 text-slate-400 group-hover:border-cyan-500/30 group-hover:text-cyan-400"
+                          }`}
+                        >
+                          <span>Learn more</span>
+                          <ExternalLink className="w-3 h-3" />
+                        </Link>
+                      )}
                       {feature.isWip && (
                         <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">
                           WIP
@@ -479,7 +520,7 @@ export default function FeatureShowcase() {
                     </p>
                   </div>
                 </div>
-              </button>
+              </div>
             ))}
           </div>
         </div>

@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import {
   FolderOpen,
   Zap,
@@ -161,7 +162,38 @@ export default function CompleteFeatureMatrix() {
                       className="flex items-start gap-2 text-slate-300"
                     >
                       <CheckIcon className="h-5 w-5 text-cyan-400 mt-0.5 flex-shrink-0" />
-                      <span>{feature}</span>
+                      {feature === "Text Highlighting" ||
+                      feature === "Thread Trimming" ? (
+                        <Link
+                          href="/chatgpt-text-highlighter"
+                          className="hover:text-cyan-400 hover:underline transition-colors"
+                        >
+                          {feature}
+                        </Link>
+                      ) : feature === "Library (200+)" ||
+                        feature === 'Quick "/" Access' ||
+                        feature === "Templates {{}}" ||
+                        feature === "History" ? (
+                        <Link
+                          href="/prompt-library"
+                          className="hover:text-cyan-400 hover:underline transition-colors"
+                        >
+                          {feature}
+                        </Link>
+                      ) : feature === "Folders (nested)" ||
+                        feature === "Categories" ||
+                        feature === "Tags & Colors" ||
+                        feature === "Search & Filter" ||
+                        feature === "Pin & Archive" ? (
+                        <Link
+                          href="/organization"
+                          className="hover:text-cyan-400 hover:underline transition-colors"
+                        >
+                          {feature}
+                        </Link>
+                      ) : (
+                        <span>{feature}</span>
+                      )}
                     </li>
                   ))}
                 </ul>

@@ -2180,6 +2180,30 @@ export default function Home() {
                       Blog
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      className="text-slate-400 hover:text-cyan-400 transition-colors"
+                      href="/chatgpt-text-highlighter"
+                    >
+                      Text Highlighter
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-slate-400 hover:text-cyan-400 transition-colors"
+                      href="/prompt-library"
+                    >
+                      Prompt Library
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-slate-400 hover:text-cyan-400 transition-colors"
+                      href="/organization"
+                    >
+                      Organization
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div>

@@ -1341,56 +1341,60 @@ export default function Home() {
               {testimonials.map((testimonial, index) => (
                 <StaggerItem
                   key={index}
-                  className="group relative p-8 rounded-2xl border border-white/5 bg-slate-900/40 backdrop-blur-sm hover:bg-slate-800/40 transition-all duration-300 hover:-translate-y-1"
+                  className="group relative rounded-2xl bg-slate-900 p-[1px] overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/20"
                 >
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+                  {/* Rotating Border Effect */}
+                  <div className="absolute inset-[-100%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00000000_50%,#06b6d4_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                  <div className="relative z-10 space-y-6">
-                    <div className="flex items-center justify-between">
-                      <div className="flex gap-1">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <svg
-                            key={i}
-                            className="h-4 w-4 text-yellow-500"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                          </svg>
-                        ))}
-                      </div>
-                      <div className="text-xs text-slate-500 font-mono">
-                        {testimonial.date}
-                      </div>
-                    </div>
-
-                    <p className="text-slate-300 leading-relaxed">
-                      &ldquo;{testimonial.quote}&rdquo;
-                    </p>
-
-                    <div className="flex items-center gap-4 pt-4 border-t border-white/5">
-                      <div className="h-10 w-10 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-sm">
-                        {testimonial.name.charAt(0)}
-                      </div>
-                      <div>
-                        <div className="text-sm font-semibold text-white flex items-center gap-2">
-                          {testimonial.name}
-                          {testimonial.verified && (
+                  {/* Card Content */}
+                  <div className="relative h-full rounded-2xl bg-slate-900/90 backdrop-blur-xl p-8 border border-white/5 group-hover:border-transparent transition-colors">
+                    <div className="relative z-10 space-y-6 h-full flex flex-col">
+                      <div className="flex items-center justify-between">
+                        <div className="flex gap-1">
+                          {[...Array(testimonial.rating)].map((_, i) => (
                             <svg
-                              className="h-3 w-3 text-cyan-400"
+                              key={i}
+                              className="h-4 w-4 text-yellow-500 drop-shadow-[0_0_8px_rgba(234,179,8,0.3)]"
                               fill="currentColor"
                               viewBox="0 0 20 20"
                             >
-                              <path
-                                fillRule="evenodd"
-                                d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clipRule="evenodd"
-                              />
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
-                          )}
+                          ))}
                         </div>
-                        <div className="text-xs text-slate-500">
-                          {testimonial.role}
+                        <div className="text-xs text-slate-500 font-mono">
+                          {testimonial.date}
+                        </div>
+                      </div>
+
+                      <p className="text-slate-300 leading-relaxed flex-1">
+                        &ldquo;{testimonial.quote}&rdquo;
+                      </p>
+
+                      <div className="flex items-center gap-4 pt-4 border-t border-white/5 mt-auto">
+                        <div className="h-10 w-10 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-cyan-500/20">
+                          {testimonial.name.charAt(0)}
+                        </div>
+                        <div>
+                          <div className="text-sm font-semibold text-white flex items-center gap-2">
+                            {testimonial.name}
+                            {testimonial.verified && (
+                              <svg
+                                className="h-3 w-3 text-cyan-400"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                              >
+                                <path
+                                  fillRule="evenodd"
+                                  d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                  clipRule="evenodd"
+                                />
+                              </svg>
+                            )}
+                          </div>
+                          <div className="text-xs text-slate-500">
+                            {testimonial.role}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1570,36 +1574,65 @@ export default function Home() {
             <StaggerContainer className="space-y-4">
               {[
                 {
-                  q: "Is my data stored securely?",
-                  a: "Yes. All prompts, notes, and chats are saved locally in vaults. Private vaults are protected with AES-256 encryption. Nothing is sent to external servers unless you manually export.",
-                },
-                {
-                  q: "Can I organize my prompts and chats?",
-                  a: "Absolutely. The Prompt Manager lets you save, tag, and categorize prompts with a nested tree structure. Chats and notes can be linked, favorited, pinned, or searched with advanced filters.",
+                  q: "Can I use AI Workspace extension for free?",
+                  a: "Yes! The core features are free forever. You get access to custom workspaces, basic prompt management, and local history without paying a dime.",
                 },
                 {
                   q: "What's the difference between Free and Pro?",
                   a: "Free includes limited prompts and notes, 1 vault, and no encryption. Pro ($9.99/month) offers unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, GPT Manager, and multi-platform support.",
                 },
                 {
-                  q: "Which AI platforms are supported?",
-                  a: "AI Workspace integrates with ChatGPT out of the box. You can run the same prompts across platforms, switch with one click, and in the future chain steps across multiple AIs.",
+                  q: "Can I install the extension on Microsoft Edge or Firefox?",
+                  a: "Currently, AI Workspace is optimized for Google Chrome. We are working on support for Microsoft Edge and Firefox, which will be available soon.",
                 },
                 {
-                  q: "Does it support images and GPTs too?",
-                  a: "Yes. The Image Gallery collects both uploaded and AI-generated visuals. The GPT Manager lets you search, filter, and launch GPTs instantly from one central hub.",
+                  q: "Is my data stored securely?",
+                  a: "Yes. All prompts, notes, and chats are saved locally in vaults. Private vaults are protected with AES-256 encryption. Nothing is sent to external servers unless you manually export.",
+                },
+                {
+                  q: "Are my chats saved anywhere other than my personal device?",
+                  a: "No. Unlike some other extensions (e.g., Superpower ChatGPT) that may sync your data to their servers, AI Workspace keeps 100% of your data locally on your device. We have zero access to your chats.",
+                },
+                {
+                  q: "How can I request a feature or report a bug?",
+                  a: (
+                    <>
+                      We love feedback! You can join our{" "}
+                      <a
+                        href="https://discord.gg/9wESDrQN"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-cyan-400 hover:text-cyan-300 underline"
+                      >
+                        Discord community
+                      </a>{" "}
+                      to chat directly with the developers, or send us an email
+                      at{" "}
+                      <a
+                        href="mailto:ai.workspace.extension@gmail.com"
+                        className="text-cyan-400 hover:text-cyan-300 underline"
+                      >
+                        ai.workspace.extension@gmail.com
+                      </a>
+                      .
+                    </>
+                  ),
+                },
+                {
+                  q: "Can I cancel anytime?",
+                  a: "Yes, you can cancel your Pro subscription at any time via the Stripe customer portal. You'll keep your Pro features until the end of your billing period.",
                 },
               ].map((item, i) => (
                 <StaggerItem
                   key={i}
-                  className="group rounded-2xl border border-white/5 bg-slate-900/40 backdrop-blur-sm open:bg-slate-800/60 transition-all duration-300"
+                  className="group rounded-2xl border border-white/5 bg-slate-900/40 backdrop-blur-sm open:bg-slate-800/60 transition-all duration-300 hover:border-cyan-500/30 hover:shadow-[0_0_20px_-5px_rgba(6,182,212,0.15)]"
                 >
                   <details className="group">
                     <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
                       <span className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
                         {item.q}
                       </span>
-                      <span className="ml-4 flex-shrink-0 text-slate-500 group-open:rotate-180 transition-transform duration-300">
+                      <span className="ml-4 flex-shrink-0 text-slate-500 group-open:rotate-180 transition-transform duration-300 group-open:text-cyan-400">
                         <svg
                           className="w-5 h-5"
                           fill="none"
@@ -1670,9 +1703,9 @@ export default function Home() {
               </p>
             </div>
 
-            <StaggerContainer className="grid gap-8 lg:grid-cols-2 max-w-5xl mx-auto">
+            <StaggerContainer className="grid gap-8 lg:grid-cols-2 max-w-5xl mx-auto items-stretch">
               {/* Free plan */}
-              <StaggerItem className="relative p-8 rounded-3xl border border-white/5 bg-slate-900/40 backdrop-blur-sm hover:bg-slate-800/40 transition-all duration-300">
+              <StaggerItem className="relative p-8 rounded-3xl border border-white/5 bg-slate-900/40 backdrop-blur-sm hover:bg-slate-800/40 transition-all duration-300 flex flex-col h-full">
                 <div className="mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">Free</h3>
                   <p className="text-slate-400 text-sm">
@@ -1684,15 +1717,16 @@ export default function Home() {
                   </div>
                 </div>
 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8 flex-1">
                   {[
-                    "Save & organize prompts",
-                    "1 Secure Vault",
+                    "Limited prompts & folders",
+                    "1 Custom Workspace",
                     "Basic Notes Manager",
-                    "Limited Image Gallery",
+                    "Highlight text in chats",
+                    "Trim long chat threads",
+                    "Limited conversation themes",
                     "Community GPT Store",
                     "Local history log",
-                    "Dark/Light themes",
                   ].map((feature, i) => (
                     <li
                       key={i}
@@ -1713,15 +1747,15 @@ export default function Home() {
                   }
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full py-4 rounded-xl border border-white/10 bg-white/5 text-center font-semibold text-white hover:bg-white/10 transition-colors"
+                  className="block w-full py-4 rounded-xl border border-white/10 bg-white/5 text-center font-semibold text-white hover:bg-white/10 transition-colors mt-auto"
                 >
                   Get Started Free
                 </a>
               </StaggerItem>
 
               {/* PRO plan */}
-              <StaggerItem className="relative p-8 rounded-3xl border border-cyan-500/30 bg-slate-900/60 backdrop-blur-md shadow-2xl shadow-cyan-500/10">
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-xs font-bold text-white uppercase tracking-wider shadow-lg">
+              <StaggerItem className="relative p-8 rounded-3xl border border-cyan-500/50 bg-slate-900/80 backdrop-blur-md shadow-[0_0_40px_-10px_rgba(6,182,212,0.3)] flex flex-col h-full hover:shadow-[0_0_60px_-10px_rgba(6,182,212,0.4)] transition-all duration-500">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-xs font-bold text-white uppercase tracking-wider shadow-lg shadow-cyan-500/40">
                   Most Popular
                 </div>
 
@@ -1739,7 +1773,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8 flex-1">
                   {[
                     "Unlimited prompts, notes & vaults",
                     "AES-256 Encryption + Autolock",
@@ -1748,6 +1782,13 @@ export default function Home() {
                     "Search inside chats & prompts",
                     "Full Image Gallery & Exports",
                     "Multi-platform Support",
+                    "Advanced Thread Trimming",
+                    "Audio Notifications",
+                    "Prompt History & Chaining",
+                    "Priority Support",
+                    "Early Access to new features",
+                    "Custom Themes & Colors",
+                    "And many more...",
                   ].map((feature, i) => (
                     <li
                       key={i}
@@ -1768,7 +1809,7 @@ export default function Home() {
                   }
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-center font-bold text-white hover:shadow-lg hover:shadow-cyan-500/25 transition-all hover:scale-[1.02]"
+                  className="block w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-center font-bold text-white hover:shadow-lg hover:shadow-cyan-500/25 transition-all hover:scale-[1.02] mt-auto"
                 >
                   Upgrade to PRO
                 </a>

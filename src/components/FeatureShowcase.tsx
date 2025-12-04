@@ -404,58 +404,80 @@ export default function FeatureShowcase() {
               <button
                 key={index}
                 onClick={() => setActiveFeatureIndex(index)}
-                className={`group flex items-start gap-4 p-4 rounded-2xl transition-all duration-300 border text-left w-full cursor-pointer
+                className={`group relative rounded-2xl p-[1px] overflow-hidden transition-all duration-300 text-left w-full cursor-pointer
                   ${
                     activeFeatureIndex === index
-                      ? "bg-white/10 border-cyan-500/30 shadow-lg shadow-cyan-500/5"
-                      : "hover:bg-white/5 border-transparent hover:border-white/5"
+                      ? "shadow-[0_0_20px_-5px_rgba(6,182,212,0.3)] scale-[1.02]"
+                      : "hover:scale-[1.01]"
                   }
                 `}
               >
+                {/* Rotating Border Effect - Always visible for active, hover for others */}
                 <div
-                  className={`
+                  className={`absolute inset-[-100%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00000000_50%,#06b6d4_100%)] transition-opacity duration-300
+                    ${
+                      activeFeatureIndex === index
+                        ? "opacity-100"
+                        : "opacity-0 group-hover:opacity-50"
+                    }
+                `}
+                />
+
+                {/* Content Container */}
+                <div
+                  className={`relative h-full rounded-2xl backdrop-blur-xl p-4 border transition-colors flex items-start gap-4
+                    ${
+                      activeFeatureIndex === index
+                        ? "bg-slate-900/90 border-transparent"
+                        : "bg-slate-900/60 border-white/5 group-hover:border-transparent group-hover:bg-slate-900/80"
+                    }
+                `}
+                >
+                  <div
+                    className={`
                   flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-2xl transition-all duration-300 border
                   ${
                     activeFeatureIndex === index
-                      ? "bg-cyan-500/20 border-cyan-500/30 scale-110"
+                      ? "bg-cyan-500/20 border-cyan-500/30 scale-110 shadow-lg shadow-cyan-500/20"
                       : "bg-slate-800/50 border-white/5 group-hover:bg-cyan-500/10 group-hover:border-cyan-500/20 group-hover:scale-110"
                   }
                 `}
-                >
-                  <feature.icon
-                    className={`w-6 h-6 transition-colors ${
-                      activeFeatureIndex === index
-                        ? "text-cyan-400"
-                        : "text-slate-400 group-hover:text-cyan-400"
-                    }`}
-                  />
-                </div>
-                <div className="pt-1 flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <h4
-                      className={`font-semibold transition-colors ${
+                  >
+                    <feature.icon
+                      className={`w-6 h-6 transition-colors ${
                         activeFeatureIndex === index
                           ? "text-cyan-400"
-                          : "text-white group-hover:text-cyan-400"
+                          : "text-slate-400 group-hover:text-cyan-400"
+                      }`}
+                    />
+                  </div>
+                  <div className="pt-1 flex-1">
+                    <div className="flex items-center gap-2 mb-1">
+                      <h4
+                        className={`font-semibold transition-colors ${
+                          activeFeatureIndex === index
+                            ? "text-cyan-400"
+                            : "text-white group-hover:text-cyan-400"
+                        }`}
+                      >
+                        {feature.title}
+                      </h4>
+                      {feature.isWip && (
+                        <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">
+                          WIP
+                        </span>
+                      )}
+                    </div>
+                    <p
+                      className={`text-sm leading-relaxed transition-colors ${
+                        activeFeatureIndex === index
+                          ? "text-slate-300"
+                          : "text-slate-400 group-hover:text-slate-300"
                       }`}
                     >
-                      {feature.title}
-                    </h4>
-                    {feature.isWip && (
-                      <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">
-                        WIP
-                      </span>
-                    )}
+                      {feature.description}
+                    </p>
                   </div>
-                  <p
-                    className={`text-sm leading-relaxed transition-colors ${
-                      activeFeatureIndex === index
-                        ? "text-slate-300"
-                        : "text-slate-400 group-hover:text-slate-300"
-                    }`}
-                  >
-                    {feature.description}
-                  </p>
                 </div>
               </button>
             ))}

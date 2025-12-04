@@ -11,7 +11,6 @@ import FeatureShowcase from "@/components/FeatureShowcase";
 import CompleteFeatureMatrix from "@/components/CompleteFeatureMatrix";
 import { HeroConnectionLines } from "@/components/HeroConnectionLines";
 import { ProblemSolutionLines } from "@/components/ProblemSolutionLines";
-import { ShowcaseLines } from "@/components/ShowcaseLines";
 import {
   FadeIn,
   SlideUp,
@@ -74,72 +73,6 @@ function getBrowserInstallUrl() {
       return "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg";
   }
 }
-
-const showcases = [
-  {
-    title: "Prompt Vault for instant recall",
-    description:
-      "Keep every ChatGPT prompt at your fingertips with a structured, searchable vault. Organize prompts into categories, mark favorites, or pin them for quick access — all locally stored and fully private.",
-    highlights: [
-      "Bulk actions to edit, archive, or link prompts in seconds",
-      "Advanced search with filters and real-time results",
-      "Favorites & pins for faster workflows across projects",
-    ],
-    image: "/images/prompts-overview.png",
-    imageAlt: "AI Workspace Prompt Vault overview",
-  },
-  {
-    title: "Image Gallery for your ChatGPT visuals",
-    description:
-      "Browse every image used or generated in your conversations — all in one secure gallery. Jump back into the original chat with one click, download files instantly, or organize them into folders for later use.",
-    highlights: [
-      "Unified view of local and generated images",
-      "Direct links back to the source conversation",
-      "Quick download, export, and organization tools",
-    ],
-    image: "/images/image-gallery.png",
-    imageAlt: "AI Workspace image gallery overview",
-  },
-  {
-    title: "Discover and launch custom GPTs",
-    badge: "New",
-    description:
-      "Browse a curated store of GPTs across categories like writing, productivity, research, and more. Open any GPT to view details, explore its capabilities, and start a conversation instantly — all directly inside AI Workspace.",
-    highlights: [
-      "Filter by featured, trending, or category-specific GPTs",
-      "Quick detail view with direct launch into a new chat",
-      "Deep links keep every GPT accessible in one secure hub",
-    ],
-    image: "/images/gpt-store.png",
-    imageAlt: "AI Workspace GPT Store overview",
-  },
-  {
-    title: "Analytics Dashboard (beta)",
-    badge: "Beta",
-    description:
-      "Get insights into how you work with prompts, vaults, and AI platforms. Track usage trends, export activity, and performance metrics — all processed locally for full privacy. This dashboard is still a work in progress, but already gives a preview of upcoming features like platform distribution, export statistics, and system health monitoring.",
-    highlights: [
-      "Local-first analytics, no external tracking",
-      "Usage breakdown by prompts, vaults, and exports",
-      "Early preview of performance & reliability stats",
-    ],
-    image: "/images/dashboard.png",
-    imageAlt: "AI Workspace Analytics Dashboard (beta)",
-  },
-  {
-    title: "Enhanced experience inside ChatGPT",
-    badge: "Live",
-    description:
-      "AI Workspace extends ChatGPT with a powerful overlay that adds structure, shortcuts, and insights — without disrupting your flow. Organize conversations, track stats, and access tools directly where you work.",
-    highlights: [
-      "Sidebar with custom categories and vaults",
-      "Floating action menu for instant access to core tools",
-      "One-click print, message stats, and advanced export options",
-    ],
-    image: "/images/carousel/BrandBird 2025-11-20 11.36.08.png",
-    imageAlt: "AI Workspace features injected into chatgpt.com UI",
-  },
-];
 
 const testimonials = [
   {
@@ -210,7 +143,7 @@ export default function Home() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      const sections = ["features", "showcase", "pricing"];
+      const sections = ["features", "pricing"];
       let current = "";
 
       for (const section of sections) {
@@ -274,14 +207,6 @@ export default function Home() {
                 }`}
               >
                 Features
-              </a>
-              <a
-                href="#showcase"
-                className={`nav-link transition-colors ${
-                  activeSection === "showcase" ? "!text-cyan-400" : ""
-                }`}
-              >
-                Showcase
               </a>
               <a
                 href="#pricing"
@@ -354,13 +279,6 @@ export default function Home() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Features
-            </a>
-            <a
-              href="#showcase"
-              className="text-lg font-medium text-slate-300 hover:text-cyan-400 py-2 cursor-pointer"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Showcase
             </a>
             <a
               href="#pricing"
@@ -459,49 +377,69 @@ export default function Home() {
                   }}
                 >
                   <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent text-3xl sm:text-4xl lg:text-5xl block mb-3">
-                    Master AI across platforms
+                    Organize Everything
                   </span>
-                  <span
-                    className="relative inline-block text-5xl sm:text-6xl lg:text-7xl"
-                    style={{
-                      background: "var(--premium-title-gradient)",
-                      backgroundClip: "text",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                    }}
-                  >
-                    One Unified Workspace
+                  <span className="block text-5xl sm:text-6xl lg:text-7xl text-white">
+                    Into{" "}
+                    <span
+                      className="relative inline-block"
+                      style={{
+                        background:
+                          "linear-gradient(to right, #22d3ee, #3b82f6)",
+                        backgroundClip: "text",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                      }}
+                    >
+                      Workspaces
+                    </span>
                   </span>
                 </h1>
 
                 {/* One-liner value prop */}
-                <p className="hero-subtitle text-xl leading-relaxed text-slate-300 max-w-2xl">
-                  Work faster and stay organized with{" "}
-                  <span className="text-white font-semibold">
-                    folders, deep search, GPT manager, image gallery, vaults,
-                    multiple export formats
-                  </span>{" "}
-                  and more — built to run{" "}
-                  <span className="text-cyan-400 font-medium">
-                    seamlessly with ChatGPT, Claude, and Grok
-                  </span>
-                  .
-                </p>
+                <div className="space-y-4 max-w-2xl">
+                  <p className="hero-subtitle text-xl leading-relaxed text-slate-300">
+                    Your prompts, notes, chats, categories and tools — finally
+                    together in one clean, private AI workspace.
+                  </p>
 
-                {/* Security & Privacy Emphasis */}
-                <div className="flex flex-wrap gap-3 pt-4 pb-2">
-                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-950/30 border border-emerald-500/30 text-emerald-400 text-sm font-medium shadow-[0_0_10px_rgba(16,185,129,0.1)]">
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                    Encrypted Vaults
-                  </div>
-                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-950/30 border border-blue-500/30 text-blue-400 text-sm font-medium shadow-[0_0_10px_rgba(59,130,246,0.1)]">
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                    100% Local Privacy
-                  </div>
+                  <p className="text-lg font-medium text-cyan-400">
+                    Built for people who use AI every day and need clarity,
+                    structure and speed.
+                  </p>
+
+                  {/* Feature List */}
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 pt-2">
+                    {[
+                      "Deep ChatGPT integration",
+                      "Multi-platform: Claude, Grok & more",
+                      "Variable injection",
+                      "Saved chats & highlights",
+                      "Thread trimming & fast scroll",
+                      "Themes & customizations",
+                      "Custom menus & quick actions",
+                    ].map((feature, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-2 text-slate-300"
+                      >
+                        <svg
+                          className="w-5 h-5 text-emerald-400 flex-shrink-0"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-6 w-full sm:w-auto">
@@ -541,8 +479,8 @@ export default function Home() {
                   </span>
                   Sidebar inside ChatGPT, nested folders, full‑text search,
                   prompt library, image gallery, GPT store manager, smart tags,
-                  bulk actions, encrypted vaults, and multiple export formats — all in
-                  one place.
+                  bulk actions, encrypted workspaces, and multiple export
+                  formats — all in one place.
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 pt-3">
@@ -599,7 +537,7 @@ export default function Home() {
                 <div className="animate-float">
                   <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-slate-900/50 backdrop-blur-xl transform transition-transform hover:scale-[1.01] duration-500">
                     {/* Video Header */}
-                    <div className="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-white/5">
+                    <div className="flex items-center justify-between px-4 py-3 border-b border-white/10 bg-gradient-to-r from-slate-800 to-slate-900">
                       <div className="flex gap-2">
                         <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
                         <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
@@ -973,14 +911,14 @@ export default function Home() {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                Supercharge your ChatGPT Experience
+                Supercharge your AI Experience
               </h2>
               <p
                 className="text-lg leading-relaxed"
                 style={{ color: "var(--color-text-secondary)" }}
               >
                 Explore our intuitive interface designed to supercharge your
-                ChatGPT workflow
+                workflow across ChatGPT, Claude, and Grok
               </p>
             </div>
 
@@ -1340,226 +1278,6 @@ export default function Home() {
             </FadeIn>
           </div>
         </section>
-
-        <section
-          id="showcase"
-          className="border-t py-32 section relative overflow-hidden"
-          style={{
-            borderColor: "var(--color-border)",
-            background: "var(--color-bg-primary)",
-          }}
-        >
-          {/* Background Glows */}
-          <div className="absolute inset-0 pointer-events-none">
-            <ShowcaseLines />
-            <div
-              className="absolute top-[10%] right-[5%] w-[600px] h-[600px] rounded-full opacity-10 blur-[120px]"
-              style={{
-                background:
-                  "radial-gradient(circle, var(--color-accent) 0%, transparent 70%)",
-              }}
-            />
-          </div>
-
-          <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16 relative z-10">
-            <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between mb-20">
-              <div className="max-w-2xl space-y-5">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-bold uppercase tracking-widest mb-6">
-                  <LayersIcon className="w-3 h-3" />
-                  Showcase
-                </div>
-                <h2
-                  className="text-3xl font-bold sm:text-5xl"
-                  style={{ color: "var(--color-text)" }}
-                >
-                  Designed for{" "}
-                  <span
-                    style={{
-                      background: "var(--premium-title-gradient)",
-                      backgroundClip: "text",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                    }}
-                  >
-                    Power Users
-                  </span>
-                </h2>
-                <p className="text-xl leading-relaxed text-slate-400">
-                  Control, privacy, and speed. All in one secure environment.
-                </p>
-              </div>
-            </div>
-
-            <StaggerContainer className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {showcases.map((showcase, index) => (
-                <StaggerItem
-                  key={showcase.title}
-                  className={`bento-card group ${
-                    index === 0 || index === 3 ? "md:col-span-2" : "col-span-1"
-                  }`}
-                >
-                  <div className="bento-card-content h-full justify-between">
-                    <div className="space-y-4">
-                      <div className="flex items-center justify-between">
-                        <div className="h-10 w-10 rounded-xl bg-slate-800 flex items-center justify-center border border-white/10 group-hover:border-cyan-500/50 transition-colors">
-                          <SparklesIcon className="h-5 w-5 text-cyan-400" />
-                        </div>
-                        {showcase.badge && (
-                          <span className="px-2 py-1 rounded-md bg-cyan-500/20 border border-cyan-500/30 text-xs font-bold text-cyan-400 uppercase tracking-wider">
-                            {showcase.badge}
-                          </span>
-                        )}
-                      </div>
-
-                      <div>
-                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                          {showcase.title}
-                        </h3>
-                        <p className="text-sm text-slate-400 leading-relaxed">
-                          {showcase.description}
-                        </p>
-                      </div>
-
-                      <ul className="space-y-2">
-                        {showcase.highlights.slice(0, 2).map((highlight, i) => (
-                          <li
-                            key={i}
-                            className="flex items-start gap-2 text-xs text-slate-500"
-                          >
-                            <CheckIcon className="h-3.5 w-3.5 text-cyan-500/70 mt-0.5" />
-                            <span>{highlight}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <a
-                      href={`#lightbox-${index}`}
-                      className="mt-6 block relative rounded-lg overflow-hidden border border-white/5 bg-black/20 aspect-video group-hover:border-white/10 transition-colors cursor-pointer"
-                    >
-                      <Image
-                        src={showcase.image}
-                        alt={showcase.imageAlt}
-                        fill
-                        className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                      />
-                      {/* Overlay gradient */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
-
-                      {/* Zoom indicator */}
-                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="bg-black/50 backdrop-blur-sm p-2 rounded-full border border-white/10">
-                          <svg
-                            className="w-6 h-6 text-white"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
-          </div>
-        </section>
-        {/* Lightbox overlays for showcases (rendered outside the cards to prevent clipping) */}
-        <div aria-hidden>
-          {showcases.map((showcase, index) => (
-            <a
-              key={`lightbox-${index}`}
-              id={`lightbox-${index}`}
-              className="lightbox-overlay"
-              href={`#sc-${index}`}
-              aria-label="Close image"
-            >
-              <div className="lightbox-content">
-                <Image
-                  src={showcase.image}
-                  alt={showcase.imageAlt}
-                  width={1600}
-                  height={900}
-                  sizes="(max-width: 1600px) 96vw, 1600px"
-                  priority={index === 0}
-                  style={{
-                    maxWidth: "min(1600px, 96vw)",
-                    maxHeight: "88vh",
-                    width: "auto",
-                    height: "auto",
-                    objectFit: "contain",
-                  }}
-                  className="lightbox-img"
-                />
-                <span className="lightbox-close" aria-hidden>
-                  ×
-                </span>
-              </div>
-            </a>
-          ))}
-          {/* Print showcase overlay */}
-          <a
-            id="lightbox-print"
-            className="lightbox-overlay"
-            href="#sc-print"
-            aria-label="Close image"
-          >
-            <div className="lightbox-content">
-              <Image
-                src="/images/print.png"
-                alt="AI Workspace print & export preview"
-                width={1600}
-                height={900}
-                sizes="(max-width: 1600px) 96vw, 1600px"
-                style={{
-                  maxWidth: "min(1600px, 96vw)",
-                  maxHeight: "88vh",
-                  width: "auto",
-                  height: "auto",
-                  objectFit: "contain",
-                }}
-                className="lightbox-img"
-              />
-              <span className="lightbox-close" aria-hidden>
-                ×
-              </span>
-            </div>
-          </a>
-          {/* Save Time showcase overlay */}
-          <a
-            id="lightbox-savetime"
-            className="lightbox-overlay"
-            href="#features"
-            aria-label="Close image"
-          >
-            <div className="lightbox-content">
-              <Image
-                src="/images/carousel/BrandBird 2025-11-20 12.01.36.png"
-                alt="AI Workspace Prompt Vault Interface"
-                width={1600}
-                height={900}
-                sizes="(max-width: 1600px) 96vw, 1600px"
-                style={{
-                  maxWidth: "min(1600px, 96vw)",
-                  maxHeight: "88vh",
-                  width: "auto",
-                  height: "auto",
-                  objectFit: "contain",
-                }}
-                className="lightbox-img"
-              />
-              <span className="lightbox-close" aria-hidden>
-                ×
-              </span>
-            </div>
-          </a>
-        </div>
 
         {/* Complete Feature Matrix */}
         <CompleteFeatureMatrix />

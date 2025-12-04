@@ -9,7 +9,11 @@ export default function ImageLightbox() {
     // Add click handlers to all images in the blog content
     const handleImageClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      if (target.tagName === "IMG" && target.closest(".prose")) {
+      if (
+        target.tagName === "IMG" &&
+        (target.closest(".prose") ||
+          target.classList.contains("zoomable-image"))
+      ) {
         e.preventDefault();
         const img = target as HTMLImageElement;
         // Use currentSrc for Next.js optimized images, fallback to src

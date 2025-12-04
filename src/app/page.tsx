@@ -377,10 +377,10 @@ export default function Home() {
                   }}
                 >
                   <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent text-3xl sm:text-4xl lg:text-5xl block mb-3">
-                    Organize Everything
+                    Tame Your AI Chaos
                   </span>
                   <span className="block text-5xl sm:text-6xl lg:text-7xl text-white">
-                    Into{" "}
+                    in One{" "}
                     <span
                       className="relative inline-block"
                       style={{
@@ -391,58 +391,52 @@ export default function Home() {
                         WebkitTextFillColor: "transparent",
                       }}
                     >
-                      Workspaces
+                      Workspace
                     </span>
                   </span>
                 </h1>
 
                 {/* One-liner value prop */}
                 <div className="space-y-4 max-w-2xl">
-                  <p className="hero-subtitle text-xl leading-relaxed text-slate-300">
-                    Your prompts, notes, chats, categories and tools — finally
-                    together in one clean, private AI workspace.
-                  </p>
-
-                  <p className="text-lg font-medium text-cyan-400">
-                    Built for people who use AI every day and need clarity,
-                    structure and speed.
+                  <p className="text-lg leading-8 text-slate-300">
+                    Stop losing track of prompts, ideas, and ChatGPT
+                    conversations. Organize everything in clean, powerful
+                    workspaces — instantly searchable, always accessible.
                   </p>
 
                   {/* Feature List */}
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 pt-2">
+                  <ul className="grid grid-cols-1 gap-y-3 pt-4">
                     {[
-                      "Deep ChatGPT integration",
-                      "Multi-platform: Claude, Grok & more",
-                      "Variable injection",
-                      "Saved chats & highlights",
-                      "Thread trimming & fast scroll",
-                      "Themes & customizations",
-                      "Custom menus & quick actions",
+                      "Organize chats with Folders & Tags",
+                      "Sync across ChatGPT, Claude & Grok",
+                      "Save prompts with variables",
                     ].map((feature, i) => (
                       <li
                         key={i}
-                        className="flex items-center gap-2 text-slate-300"
+                        className="flex items-center gap-3 text-lg text-slate-300"
                       >
-                        <svg
-                          className="w-5 h-5 text-emerald-400 flex-shrink-0"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
+                        <div className="p-1 rounded-full bg-emerald-500/10">
+                          <svg
+                            className="w-5 h-5 text-emerald-400 flex-shrink-0"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2.5}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                        </div>
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 pt-6 w-full sm:w-auto">
+                <div className="flex flex-col sm:flex-row gap-4 pt-8 w-full sm:w-auto">
                   {/* Primary CTA */}
                   <div className="relative group w-full sm:w-auto">
                     <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-200"></div>
@@ -466,7 +460,7 @@ export default function Home() {
                       >
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
                       </svg>
-                      Add to Browser
+                      Start free
                     </a>
                   </div>
                   <DemoHubButton />
@@ -1539,7 +1533,7 @@ export default function Home() {
                 >
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
                 </svg>
-                Add to Browser
+                Start free
               </a>
             </div>
 

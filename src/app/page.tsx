@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { SVGProps } from "react";
 import { useEffect, useState } from "react";
-import LogoCarousel from "@/components/LogoCarousel";
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import DemoModal from "@/components/DemoModal";
 import DemoHubButton from "@/components/DemoHubButton";
 import FeatureShowcase from "@/components/FeatureShowcase";
@@ -347,7 +347,7 @@ export default function Home() {
                   {/* Multi-platform badge - key differentiator */}
                   <div className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10">
                     <span className="text-purple-300 font-medium">
-                      Capture prompts from ChatGPT, Claude.ai & Grok
+                      Stop scrolling through endless chats
                     </span>
                   </div>
                   {/* Rating badge */}
@@ -377,10 +377,9 @@ export default function Home() {
                   }}
                 >
                   <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent text-3xl sm:text-4xl lg:text-5xl block mb-3">
-                    Organize Everything
+                    Turn ChatGPT into an
                   </span>
                   <span className="block text-5xl sm:text-6xl lg:text-7xl text-white">
-                    Into{" "}
                     <span
                       className="relative inline-block"
                       style={{
@@ -391,7 +390,7 @@ export default function Home() {
                         WebkitTextFillColor: "transparent",
                       }}
                     >
-                      Workspaces
+                      Organized Workspace
                     </span>
                   </span>
                 </h1>
@@ -399,13 +398,13 @@ export default function Home() {
                 {/* One-liner value prop */}
                 <div className="space-y-4 max-w-2xl">
                   <p className="hero-subtitle text-xl leading-relaxed text-slate-300">
-                    Your prompts, notes, chats, categories and tools — finally
-                    together in one clean, private AI workspace.
+                    Folders, Tags, Search & a Prompt Library. Stop losing your
+                    best ideas and work 10x faster.
                   </p>
 
                   <p className="text-lg font-medium text-cyan-400">
-                    Built for people who use AI every day and need clarity,
-                    structure and speed.
+                    Built for power users who need clarity, structure, and
+                    speed.
                   </p>
 
                   {/* Feature List */}
@@ -603,8 +602,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Companies Carousel Section */}
-        <LogoCarousel />
+        {/* Before & After Slider Section */}
+        <BeforeAfterSlider />
 
         {/* Problem → Solution Section */}
         <section className="py-20 relative overflow-hidden bg-slate-900/50">

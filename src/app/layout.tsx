@@ -248,7 +248,7 @@ export default function RootLayout({
               ],
               contactPoint: {
                 "@type": "ContactPoint",
-                email: "ai.workspace.extension@gmail.com",
+                email: "support@getaiworkspace.com",
                 contactType: "customer support",
               },
             }),

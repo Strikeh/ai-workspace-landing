@@ -1606,10 +1606,10 @@ export default function Home() {
                       to chat directly with the developers, or send us an email
                       at{" "}
                       <a
-                        href="mailto:ai.workspace.extension@gmail.com"
+                        href="mailto:support@getaiworkspace.com"
                         className="text-cyan-400 hover:text-cyan-300 underline"
                       >
-                        ai.workspace.extension@gmail.com
+                        support@getaiworkspace.com
                       </a>
                       .
                     </>
@@ -1950,7 +1950,7 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
               <a
-                href="mailto:ai.workspace.extension@gmail.com"
+                href="mailto:support@getaiworkspace.com"
                 className="group relative inline-flex items-center gap-3 rounded-full px-8 py-4 text-lg font-bold text-white transition-all hover:scale-105"
                 style={{
                   background: "var(--premium-primary-gradient)",
@@ -2007,7 +2007,7 @@ export default function Home() {
               ].map((item, i) => (
                 <a
                   key={i}
-                  href="mailto:ai.workspace.extension@gmail.com"
+                  href="mailto:support@getaiworkspace.com"
                   className="group flex items-center justify-center gap-3 p-4 rounded-xl border border-white/5 bg-slate-900/40 hover:bg-slate-800/60 hover:border-cyan-500/30 transition-all duration-300"
                 >
                   <div className="text-slate-400 group-hover:text-cyan-400 transition-colors">

@@ -2031,7 +2031,7 @@ export default function Home() {
           }}
         >
           <FadeIn className="mx-auto max-w-6xl px-6 md:px-10 lg:px-16 relative z-10">
-            <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
+            <div className="grid gap-8 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
                   <Image
@@ -2177,12 +2177,22 @@ export default function Home() {
                       Blog
                     </Link>
                   </li>
+                </ul>
+              </div>
+              <div>
+                <h4
+                  className="text-sm font-bold uppercase tracking-widest mb-6"
+                  style={{ color: "var(--color-accent)" }}
+                >
+                  Solutions
+                </h4>
+                <ul className="space-y-4 text-sm">
                   <li>
                     <Link
                       className="text-slate-400 hover:text-cyan-400 transition-colors"
-                      href="/chatgpt-text-highlighter"
+                      href="/organization"
                     >
-                      Text Highlighter
+                      Organization
                     </Link>
                   </li>
                   <li>
@@ -2196,9 +2206,17 @@ export default function Home() {
                   <li>
                     <Link
                       className="text-slate-400 hover:text-cyan-400 transition-colors"
-                      href="/organization"
+                      href="/chatgpt-text-highlighter"
                     >
-                      Organization
+                      Text Highlighter
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-slate-400 hover:text-cyan-400 transition-colors"
+                      href="/agencies"
+                    >
+                      For Agencies
                     </Link>
                   </li>
                 </ul>

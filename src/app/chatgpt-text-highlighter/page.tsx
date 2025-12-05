@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import ImageLightbox from "@/components/ImageLightbox";
 import { HeroConnectionLines } from "@/components/HeroConnectionLines";
 import {
   FadeIn,
@@ -87,10 +88,10 @@ export default function HighlighterPage() {
                 {/* Placeholder for Screenshot of highlight toolbar + navigation */}
                 <div className="aspect-video rounded-lg bg-slate-800/50 border border-white/5 flex items-center justify-center relative overflow-hidden group">
                   <Image
-                    src="/images/carousel/BrandBird 2025-11-20 19.46.23.png"
+                    src="/images/landingpages/highlighting.png"
                     alt="Smart Navigation & Highlighting"
                     fill
-                    className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+                    className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 zoomable-image cursor-pointer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end justify-center pb-8">
                     <p className="text-cyan-300 font-medium flex items-center gap-2">
@@ -228,10 +229,10 @@ export default function HighlighterPage() {
               <div className="aspect-video relative bg-slate-900">
                 {/* Placeholder for GIF of highlights */}
                 <Image
-                  src="/images/carousel/BrandBird 2025-11-20 12.04.10.png"
+                  src="/images/landingpages/highlighting.gif"
                   alt="Highlighting Demo"
                   fill
-                  className="object-cover"
+                  className="object-cover zoomable-image cursor-pointer"
                 />
                 <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur px-3 py-1 rounded text-xs text-white">
                   Highlighting in Action
@@ -245,7 +246,7 @@ export default function HighlighterPage() {
                   src="/images/carousel/BrandBird 2025-11-20 19.39.38.png"
                   alt="Thread Trimming Demo"
                   fill
-                  className="object-cover"
+                  className="object-cover zoomable-image cursor-pointer"
                 />
                 <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur px-3 py-1 rounded text-xs text-white">
                   Thread Trimming
@@ -313,6 +314,7 @@ export default function HighlighterPage() {
           </p>
         </div>
       </section>
+      <ImageLightbox />
     </main>
   );
 }

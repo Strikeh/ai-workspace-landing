@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import ImageLightbox from "@/components/ImageLightbox";
 import { HeroConnectionLines } from "@/components/HeroConnectionLines";
 import {
   FadeIn,
@@ -98,7 +99,7 @@ export default function PromptLibraryPage() {
                     src="/images/prompt-library.png"
                     alt="Prompt Library Interface"
                     fill
-                    className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+                    className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 zoomable-image cursor-pointer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end justify-center pb-8">
                     <p className="text-cyan-300 font-medium flex items-center gap-2">
@@ -263,7 +264,7 @@ export default function PromptLibraryPage() {
                   src="/images/prompt-quick-access.png"
                   alt="Quick Access Menu"
                   fill
-                  className="object-cover"
+                  className="object-cover zoomable-image cursor-pointer"
                 />
                 <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur px-3 py-1 rounded text-xs text-white">
                   Type / for Quick Access
@@ -277,7 +278,7 @@ export default function PromptLibraryPage() {
                   src="/images/prompt-templates.png"
                   alt="Variable Injection"
                   fill
-                  className="object-cover"
+                  className="object-cover zoomable-image cursor-pointer"
                 />
                 <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur px-3 py-1 rounded text-xs text-white">
                   Dynamic Variables
@@ -345,6 +346,7 @@ export default function PromptLibraryPage() {
           </p>
         </div>
       </section>
+      <ImageLightbox />
     </main>
   );
 }

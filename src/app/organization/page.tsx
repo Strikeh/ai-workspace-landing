@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import ImageLightbox from "@/components/ImageLightbox";
 import { HeroConnectionLines } from "@/components/HeroConnectionLines";
 import {
   FadeIn,
@@ -64,11 +65,12 @@ export default function OrganizationPage() {
                 Stay Organized
               </div>
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-cyan-100 to-cyan-400">
-                Tame the Chaos of Your AI Conversations
+                Tame Your AI Chaos in One Workspace
               </h1>
               <p className="text-lg leading-8 text-slate-400 mb-10 max-w-2xl mx-auto">
-                Organize thousands of chats with folders, tags, and powerful
-                search. Stop scrolling, start finding.
+                Stop losing track of prompts, ideas, and ChatGPT conversations.
+                Organize everything in clean, powerful workspaces — instantly
+                searchable, always accessible.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
@@ -90,10 +92,10 @@ export default function OrganizationPage() {
                 {/* Placeholder for Screenshot of Organization */}
                 <div className="aspect-video rounded-lg bg-slate-800/50 border border-white/5 flex items-center justify-center relative overflow-hidden group">
                   <Image
-                    src="/images/organization-hero.png"
+                    src="/images/carousel/BrandBird 2025-11-20 12.01.36.png"
                     alt="Organization Interface"
                     fill
-                    className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+                    className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 zoomable-image cursor-pointer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end justify-center pb-8">
                     <p className="text-cyan-300 font-medium flex items-center gap-2">
@@ -117,11 +119,19 @@ export default function OrganizationPage() {
                 The <span className="text-red-400">Endless Scroll</span> Problem
               </h2>
               <div className="space-y-6 text-slate-400 text-lg">
-                <p>"Where was that code snippet from last week?"</p>
+                <p>&quot;Where was that code snippet from last week?&quot;</p>
                 <p>
-                  ChatGPT's default sidebar is a flat list. Once a chat drops
-                  off the screen, it's basically gone forever. Finding old
-                  information is a nightmare.
+                  We&apos;ve all been there. You know you solved this exact
+                  problem three weeks ago, but the chat is buried under hundreds
+                  of &quot;New Chat&quot; sessions.
+                </p>
+                <p>
+                  ChatGPT&apos;s default sidebar is a simple flat list designed
+                  for the present, not for building a knowledge base. Once a
+                  conversation drops off the screen, it&apos;s effectively lost
+                  in the void. Trying to retrieve old information becomes a
+                  frustrating, time-consuming nightmare that breaks your flow
+                  and kills your productivity.
                 </p>
               </div>
             </FadeIn>
@@ -173,7 +183,8 @@ export default function OrganizationPage() {
               </h3>
               <p className="text-slate-400">
                 Create unlimited folders and subfolders to group related
-                conversations. Keep "Work", "Personal", and "Coding" separate.
+                conversations. Keep &apos;Work&apos;, &apos;Personal&apos;, and
+                &apos;Coding&apos; separate.
               </p>
             </StaggerItem>
 
@@ -248,10 +259,10 @@ export default function OrganizationPage() {
               <div className="aspect-video relative bg-slate-900">
                 {/* Placeholder for Folders */}
                 <Image
-                  src="/images/organization-folders.png"
+                  src="/images/landingpages/nested-folders.png"
                   alt="Nested Folders"
                   fill
-                  className="object-cover"
+                  className="object-cover zoomable-image cursor-pointer"
                 />
                 <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur px-3 py-1 rounded text-xs text-white">
                   Nested Folders
@@ -262,10 +273,10 @@ export default function OrganizationPage() {
               <div className="aspect-video relative bg-slate-900">
                 {/* Placeholder for Search */}
                 <Image
-                  src="/images/organization-search.png"
+                  src="/images/landingpages/instant-search.png"
                   alt="Powerful Search"
                   fill
-                  className="object-cover"
+                  className="object-cover zoomable-image cursor-pointer"
                 />
                 <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur px-3 py-1 rounded text-xs text-white">
                   Instant Search
@@ -333,6 +344,7 @@ export default function OrganizationPage() {
           </p>
         </div>
       </section>
+      <ImageLightbox />
     </main>
   );
 }

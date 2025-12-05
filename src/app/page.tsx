@@ -2190,33 +2190,57 @@ export default function Home() {
                   <li>
                     <Link
                       className="text-slate-400 hover:text-cyan-400 transition-colors"
-                      href="/organization"
-                    >
-                      Organization
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="text-slate-400 hover:text-cyan-400 transition-colors"
-                      href="/prompt-library"
-                    >
-                      Prompt Library
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="text-slate-400 hover:text-cyan-400 transition-colors"
-                      href="/chatgpt-text-highlighter"
-                    >
-                      Text Highlighter
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="text-slate-400 hover:text-cyan-400 transition-colors"
                       href="/agencies"
                     >
                       For Agencies
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-slate-400 hover:text-cyan-400 transition-colors"
+                      href="/students"
+                    >
+                      For Students
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-slate-400 hover:text-cyan-400 transition-colors"
+                      href="/creators"
+                    >
+                      For Creators
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-slate-400 hover:text-cyan-400 transition-colors"
+                      href="/freelancers"
+                    >
+                      For Freelancers
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-slate-400 hover:text-cyan-400 transition-colors"
+                      href="/consultants"
+                    >
+                      For Consultants
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-slate-400 hover:text-cyan-400 transition-colors"
+                      href="/social-media-managers"
+                    >
+                      For Social Media Managers
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-slate-400 hover:text-cyan-400 transition-colors"
+                      href="/teams"
+                    >
+                      For Teams
                     </Link>
                   </li>
                 </ul>

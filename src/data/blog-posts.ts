@@ -11,6 +11,285 @@
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "getting-started-with-ai-workspace",
+    title: "Getting Started with AI Workspace: Complete Beginner's Guide",
+    excerpt:
+      "Learn how to set up AI Workspace, create your first workspace, and organize your ChatGPT and Claude conversations like a pro. Step-by-step tutorial for beginners.",
+    date: "Dec 06, 2025",
+    readTime: "12 min read",
+    category: "Tutorial",
+    image: "/images/blog/getting-started-hero.png",
+    content: `
+      <p class="text-xl leading-relaxed text-slate-300 mb-8">
+        AI Workspace transforms how you work with ChatGPT and Claude.ai by giving you a professional workspace to organize prompts, manage conversations, and boost your productivity. In this tutorial, we'll walk through the basics of getting started.
+      </p>
+
+      <div class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-xl p-6 mb-10">
+        <h3 class="text-lg font-bold text-white mt-0 mb-3">📚 What You'll Learn</h3>
+        <ul class="grid sm:grid-cols-2 gap-2 text-slate-300 m-0">
+          <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> How to access AI Workspace</li>
+          <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Understanding the interface</li>
+          <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Creating your first workspace</li>
+          <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Linking and organizing chats</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Step 1: Accessing AI Workspace</h2>
+      <p class="text-slate-300 mb-6">After installing the extension from the Chrome Web Store:</p>
+
+      <div class="bg-slate-800/50 rounded-xl p-6 mb-6 border border-white/10">
+        <h4 class="text-white font-semibold mb-3">Navigate to ChatGPT or Claude.ai</h4>
+        <ul class="space-y-2 text-slate-300">
+          <li>• Open <a href="https://chatgpt.com" class="text-cyan-400 hover:underline">chatgpt.com</a> or <a href="https://claude.ai" class="text-cyan-400 hover:underline">claude.ai</a> in your browser</li>
+          <li>• You'll notice a new floating button appears in the bottom-right corner</li>
+          <li>• This is your AI Workspace quick access menu</li>
+        </ul>
+      </div>
+
+      <img src="/images/blog/getting-started-floating-button.png" alt="AI Workspace floating button in the bottom-right corner" class="w-full rounded-xl border border-white/10 shadow-lg mb-8" />
+
+      <p class="text-slate-300 mb-8">The circular button with the AI Workspace icon is always accessible. Click it to reveal your workspace options.</p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Step 2: Understanding the Interface</h2>
+      <p class="text-slate-300 mb-6">When you click the floating menu, you'll see several options:</p>
+
+      <div class="grid sm:grid-cols-2 gap-4 mb-8">
+        <div class="bg-slate-900/50 p-4 rounded-lg border border-white/5">
+          <span class="text-2xl mb-2 block">📝</span>
+          <strong class="text-white">Prompts</strong>
+          <p class="text-slate-400 text-sm m-0">Your prompt library and management</p>
+        </div>
+        <div class="bg-slate-900/50 p-4 rounded-lg border border-white/5">
+          <span class="text-2xl mb-2 block">💬</span>
+          <strong class="text-white">Chats</strong>
+          <p class="text-slate-400 text-sm m-0">Conversation history and organization</p>
+        </div>
+        <div class="bg-slate-900/50 p-4 rounded-lg border border-white/5">
+          <span class="text-2xl mb-2 block">🖼️</span>
+          <strong class="text-white">Image Gallery</strong>
+          <p class="text-slate-400 text-sm m-0">Your AI-generated images</p>
+        </div>
+        <div class="bg-slate-900/50 p-4 rounded-lg border border-white/5">
+          <span class="text-2xl mb-2 block">📓</span>
+          <strong class="text-white">Notes</strong>
+          <p class="text-slate-400 text-sm m-0">Quick notes and documentation</p>
+        </div>
+        <div class="bg-slate-900/50 p-4 rounded-lg border border-white/5">
+          <span class="text-2xl mb-2 block">🗂️</span>
+          <strong class="text-white">Workspaces</strong>
+          <p class="text-slate-400 text-sm m-0">Switch between environments</p>
+        </div>
+        <div class="bg-slate-900/50 p-4 rounded-lg border border-white/5">
+          <span class="text-2xl mb-2 block">⚙️</span>
+          <strong class="text-white">Settings</strong>
+          <p class="text-slate-400 text-sm m-0">Customize your experience</p>
+        </div>
+      </div>
+
+      <h3 class="text-xl font-semibold text-cyan-400 mt-8 mb-4">The Workspace Concept</h3>
+      <p class="text-slate-300 mb-4">Think of workspaces like different projects or contexts. Each workspace keeps its prompts, chats, and notes completely separate:</p>
+
+      <div class="grid sm:grid-cols-2 gap-4 mb-8">
+        <div class="bg-slate-800/30 p-4 rounded-lg border-l-4 border-blue-500">
+          <strong class="text-white">Personal Workspace</strong>
+          <p class="text-slate-400 text-sm m-0">For your individual projects</p>
+        </div>
+        <div class="bg-slate-800/30 p-4 rounded-lg border-l-4 border-green-500">
+          <strong class="text-white">Work Projects</strong>
+          <p class="text-slate-400 text-sm m-0">For professional tasks</p>
+        </div>
+        <div class="bg-slate-800/30 p-4 rounded-lg border-l-4 border-purple-500">
+          <strong class="text-white">Learning Workspace</strong>
+          <p class="text-slate-400 text-sm m-0">For educational content</p>
+        </div>
+        <div class="bg-slate-800/30 p-4 rounded-lg border-l-4 border-orange-500">
+          <strong class="text-white">Client Work</strong>
+          <p class="text-slate-400 text-sm m-0">For customer-specific projects</p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Step 3: Creating Your First Workspace</h2>
+      <p class="text-slate-300 mb-6">Let's create a workspace for a specific project:</p>
+
+      <div class="space-y-6 mb-8">
+        <div class="bg-slate-800/50 rounded-xl p-6 border border-white/10">
+          <div class="flex items-start gap-4">
+            <span class="flex-shrink-0 w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold">1</span>
+            <div>
+              <h4 class="text-white font-semibold mb-2">Open the Workspace Selector</h4>
+              <ul class="text-slate-300 space-y-1">
+                <li>• Click the floating menu button</li>
+                <li>• Select "Manage workspaces" from the menu</li>
+                <li>• You'll see your current workspace (usually "My Workspace" by default)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <img src="/images/blog/getting-started-workspace-selector.png" alt="Workspace selector interface" class="w-full rounded-xl border border-white/10 shadow-lg" />
+
+        <div class="bg-slate-800/50 rounded-xl p-6 border border-white/10">
+          <div class="flex items-start gap-4">
+            <span class="flex-shrink-0 w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold">2</span>
+            <div>
+              <h4 class="text-white font-semibold mb-2">Create a New Workspace</h4>
+              <ul class="text-slate-300 space-y-1">
+                <li>• Click the "+ New Workspace" button</li>
+                <li>• A dialog appears asking for workspace details</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/50 rounded-xl p-6 border border-white/10">
+          <div class="flex items-start gap-4">
+            <span class="flex-shrink-0 w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold">3</span>
+            <div>
+              <h4 class="text-white font-semibold mb-2">Name Your Workspace</h4>
+              <ul class="text-slate-300 space-y-1">
+                <li>• Enter a descriptive name (e.g., "Blog Writing Project")</li>
+                <li>• Add an optional description</li>
+                <li>• Pick a color for easy visual identification</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <img src="/images/blog/getting-started-create-workspace.png" alt="Create new workspace dialog" class="w-full rounded-xl border border-white/10 shadow-lg" />
+      </div>
+
+      <div class="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-6 mb-8">
+        <h4 class="text-white font-bold mt-0 mb-3">🔒 Security Option: Encrypt Your Workspace <span class="text-xs bg-purple-500/30 text-purple-300 px-2 py-0.5 rounded ml-2">PRO</span></h4>
+        <p class="text-slate-300 mb-4">For sensitive projects, enable encryption:</p>
+        <ul class="space-y-2 text-slate-300 mb-4">
+          <li class="flex gap-2"><span class="text-purple-400">•</span> All prompts are encrypted locally on your device</li>
+          <li class="flex gap-2"><span class="text-purple-400">•</span> Password required to access the workspace</li>
+          <li class="flex gap-2"><span class="text-purple-400">•</span> Auto-locks after 15 minutes of inactivity</li>
+          <li class="flex gap-2"><span class="text-purple-400">•</span> 100% local encryption — never sent to any server</li>
+        </ul>
+        <div class="bg-red-500/10 border border-red-500/20 rounded-lg p-3">
+          <p class="text-red-300 text-sm m-0"><strong>⚠️ Important:</strong> Choose a strong, memorable password. There's no password recovery option!</p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Step 4: Basic Navigation</h2>
+
+      <h3 class="text-xl font-semibold text-cyan-400 mt-8 mb-4">Switching Between Workspaces</h3>
+      <p class="text-slate-300 mb-4">Click the workspace manager at the top of the floating menu. Click any workspace to switch instantly. Each workspace maintains its own:</p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-300 marker:text-cyan-400 mb-8">
+        <li>Prompt library</li>
+        <li>Chat history</li>
+        <li>Notes collection</li>
+        <li>Categories and organization</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold text-cyan-400 mt-8 mb-4">Linking Chats to Workspaces</h3>
+      <p class="text-slate-300 mb-6">One of the most powerful features is organizing your conversations by linking chats to specific workspaces. This keeps your project conversations separate and organized.</p>
+
+      <img src="/images/blog/getting-started-link-chats.png" alt="Chat linking interface" class="w-full rounded-xl border border-white/10 shadow-lg mb-8" />
+
+      <div class="space-y-4 mb-8">
+        <div class="bg-slate-800/50 rounded-lg p-5 border border-white/10">
+          <h4 class="text-green-400 font-semibold mt-0 mb-2">Manual Chat Linking</h4>
+          <p class="text-slate-400 text-sm m-0">Perfect when you want precise control. Review each new chat after syncing and assign it to the appropriate workspace individually.</p>
+        </div>
+        <div class="bg-slate-800/50 rounded-lg p-5 border border-white/10">
+          <h4 class="text-blue-400 font-semibold mt-0 mb-2">Bulk Linking</h4>
+          <p class="text-slate-400 text-sm m-0">Use "Link All to Workspace" to quickly assign all new chats to the same workspace. Great after focused work sessions.</p>
+        </div>
+        <div class="bg-slate-800/50 rounded-lg p-5 border border-white/10">
+          <h4 class="text-purple-400 font-semibold mt-0 mb-2">Automatic Assignment</h4>
+          <p class="text-slate-400 text-sm m-0">Enable in Settings to automatically link new chats to your active workspace. No manual intervention needed!</p>
+        </div>
+      </div>
+
+      <div class="bg-cyan-500/10 border border-cyan-500/20 rounded-xl p-6 mb-8">
+        <p class="text-cyan-300 m-0">💡 <strong>Pro Tip:</strong> Before starting a new project, create and switch to the dedicated workspace. Then enable auto-assign in settings. All conversations during that session will automatically organize themselves!</p>
+      </div>
+
+      <h3 class="text-xl font-semibold text-cyan-400 mt-8 mb-4">Deleting a Workspace</h3>
+      <p class="text-slate-300 mb-4">When you no longer need a workspace:</p>
+
+      <ol class="list-decimal pl-6 space-y-3 text-slate-300 mb-6">
+        <li>Open Workspace Management and find the workspace to delete</li>
+        <li>Click the trash icon — a confirmation dialog shows what will be deleted</li>
+        <li>Choose to <strong>unlink chats</strong> (preserve them) or <strong>delete chats</strong> (permanent)</li>
+        <li>Confirm deletion</li>
+      </ol>
+
+      <div class="bg-red-500/10 border border-red-500/20 rounded-xl p-6 mb-8">
+        <h4 class="text-red-400 font-bold mt-0 mb-3">⚠️ Important Warnings</h4>
+        <ul class="space-y-2 text-slate-300 m-0">
+          <li>• Workspace deletion is <strong>permanent and irreversible</strong></li>
+          <li>• Encrypted workspaces cannot be recovered</li>
+          <li>• Always export important prompts before deleting</li>
+          <li>• Consider unlinking chats to preserve conversation history</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">What's Next?</h2>
+      <p class="text-slate-300 mb-4">Now that you understand the basics, you're ready to:</p>
+      <ul class="space-y-2 text-slate-300 mb-8">
+        <li class="flex items-center gap-2"><span class="text-cyan-400">→</span> Create and organize prompts</li>
+        <li class="flex items-center gap-2"><span class="text-cyan-400">→</span> Use variables for dynamic prompts</li>
+        <li class="flex items-center gap-2"><span class="text-cyan-400">→</span> Organize with categories</li>
+        <li class="flex items-center gap-2"><span class="text-cyan-400">→</span> Customize your workspace settings</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Tips for Success</h2>
+      <div class="grid sm:grid-cols-2 gap-4 mb-8">
+        <div class="bg-slate-800/30 p-4 rounded-lg border border-white/5">
+          <span class="text-2xl mb-2 block">1️⃣</span>
+          <strong class="text-white block mb-1">Start Simple</strong>
+          <span class="text-slate-400 text-sm">Create one workspace per major project</span>
+        </div>
+        <div class="bg-slate-800/30 p-4 rounded-lg border border-white/5">
+          <span class="text-2xl mb-2 block">2️⃣</span>
+          <strong class="text-white block mb-1">Use Descriptive Names</strong>
+          <span class="text-slate-400 text-sm">Make workspaces easy to identify</span>
+        </div>
+        <div class="bg-slate-800/30 p-4 rounded-lg border border-white/5">
+          <span class="text-2xl mb-2 block">3️⃣</span>
+          <strong class="text-white block mb-1">Explore Gradually</strong>
+          <span class="text-slate-400 text-sm">Don't try to learn everything at once</span>
+        </div>
+        <div class="bg-slate-800/30 p-4 rounded-lg border border-white/5">
+          <span class="text-2xl mb-2 block">4️⃣</span>
+          <strong class="text-white block mb-1">Build Your Library</strong>
+          <span class="text-slate-400 text-sm">Save useful prompts for reuse</span>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Common Questions</h2>
+      <div class="space-y-4 mb-8">
+        <details class="bg-slate-800/50 rounded-lg border border-white/10">
+          <summary class="p-4 cursor-pointer text-white font-medium hover:bg-slate-800/70 rounded-lg">Can I use multiple workspaces at the same time?</summary>
+          <p class="px-4 pb-4 text-slate-400 m-0">You can only have one workspace active at a time, but switching is instant and you can quickly jump between them.</p>
+        </details>
+        <details class="bg-slate-800/50 rounded-lg border border-white/10">
+          <summary class="p-4 cursor-pointer text-white font-medium hover:bg-slate-800/70 rounded-lg">Is my data synced across devices?</summary>
+          <p class="px-4 pb-4 text-slate-400 m-0">With a PRO account, your workspaces can be synced across all your devices.</p>
+        </details>
+        <details class="bg-slate-800/50 rounded-lg border border-white/10">
+          <summary class="p-4 cursor-pointer text-white font-medium hover:bg-slate-800/70 rounded-lg">Can I share workspaces with team members?</summary>
+          <p class="px-4 pb-4 text-slate-400 m-0">Currently, workspaces are personal. Team features are planned for future releases.</p>
+        </details>
+        <details class="bg-slate-800/50 rounded-lg border border-white/10">
+          <summary class="p-4 cursor-pointer text-white font-medium hover:bg-slate-800/70 rounded-lg">What happens if I delete a workspace?</summary>
+          <p class="px-4 pb-4 text-slate-400 m-0">All prompts, chats, and notes within that workspace are permanently deleted. Always export important data first.</p>
+        </details>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Conclusion</h2>
+      <p class="text-slate-300 mb-6">
+        You've now mastered the basics of AI Workspace! The floating menu is your command center, workspaces keep your projects organized, and the interface is designed to stay out of your way while providing powerful features when you need them.
+      </p>
+      <p class="text-xl font-medium text-white text-center p-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20">
+        In the next tutorial, we'll dive into creating your first prompt and see how AI Workspace can dramatically speed up your workflow.
+      </p>
+    `,
+  },
+  {
     slug: "organize-500-plus-chatgpt-conversations",
     title: "How to Organize 500+ ChatGPT Conversations Without Losing Context",
     excerpt:

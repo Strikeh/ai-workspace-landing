@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowUp } from "lucide-react";
 import { FadeIn } from "@/components/ScrollAnimation";
 
 export function Footer() {
@@ -267,6 +268,14 @@ export function Footer() {
               <span className="w-2 h-2 rounded-full bg-green-500"></span>
               All systems operational
             </div>
+            <span className="text-slate-600">|</span>
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="flex items-center gap-2 hover:text-cyan-400 transition-colors cursor-pointer"
+            >
+              Back to Top
+              <ArrowUp className="w-3 h-3" />
+            </button>
           </div>
         </div>
       </FadeIn>

@@ -29,10 +29,10 @@ export const HeroConnectionLines = () => {
             <stop offset="100%" stopColor="#c084fc" stopOpacity="0" />
           </linearGradient>
           <filter id="glow">
-            <feGaussianBlur stdDeviation="0.5" result="coloredBlur"/>
+            <feGaussianBlur stdDeviation="0.5" result="coloredBlur" />
             <feMerge>
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
         </defs>
@@ -48,12 +48,12 @@ export const HeroConnectionLines = () => {
           transition={{ duration: 1.5, ease: "easeOut" }}
         />
         <circle r="0.4" fill="#22d3ee" filter="url(#glow)">
-            <animateMotion
-                dur="3s"
-                repeatCount="indefinite"
-                path="M 75 30 C 60 30, 50 20, 25 20"
-                rotate="auto"
-            />
+          <animateMotion
+            dur="3s"
+            repeatCount="indefinite"
+            path="M 75 30 C 60 30, 50 20, 25 20"
+            rotate="auto"
+          />
         </circle>
 
         {/* Line 2: Video Middle to Features */}
@@ -67,15 +67,15 @@ export const HeroConnectionLines = () => {
           transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
         />
         <circle r="0.4" fill="#818cf8" filter="url(#glow)">
-            <animateMotion
-                dur="4s"
-                repeatCount="indefinite"
-                path="M 75 50 C 60 50, 50 60, 25 60"
-                rotate="auto"
-            />
+          <animateMotion
+            dur="4s"
+            repeatCount="indefinite"
+            path="M 75 50 C 60 50, 50 60, 25 60"
+            rotate="auto"
+          />
         </circle>
-        
-         {/* Line 3: Video Bottom to CTA */}
+
+        {/* Line 3: Video Bottom to CTA */}
         <motion.path
           d="M 75 70 C 60 70, 50 80, 25 80"
           stroke="url(#grad3)"
@@ -86,14 +86,13 @@ export const HeroConnectionLines = () => {
           transition={{ duration: 1.5, delay: 0.4, ease: "easeOut" }}
         />
         <circle r="0.4" fill="#c084fc" filter="url(#glow)">
-            <animateMotion
-                dur="5s"
-                repeatCount="indefinite"
-                path="M 75 70 C 60 70, 50 80, 25 80"
-                rotate="auto"
-            />
+          <animateMotion
+            dur="5s"
+            repeatCount="indefinite"
+            path="M 75 70 C 60 70, 50 80, 25 80"
+            rotate="auto"
+          />
         </circle>
-
       </svg>
     </div>
   );

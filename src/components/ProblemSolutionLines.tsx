@@ -24,10 +24,10 @@ export const ProblemSolutionLines = () => {
             <stop offset="100%" stopColor="#06b6d4" stopOpacity="0" />
           </linearGradient>
           <filter id="probGlow">
-            <feGaussianBlur stdDeviation="0.5" result="coloredBlur"/>
+            <feGaussianBlur stdDeviation="0.5" result="coloredBlur" />
             <feMerge>
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
         </defs>
@@ -44,12 +44,12 @@ export const ProblemSolutionLines = () => {
           transition={{ duration: 2, ease: "easeInOut" }}
         />
         <circle r="0.3" fill="#f97316" filter="url(#probGlow)">
-            <animateMotion
-                dur="4s"
-                repeatCount="indefinite"
-                path="M 16 50 Q 33 20, 50 50"
-                rotate="auto"
-            />
+          <animateMotion
+            dur="4s"
+            repeatCount="indefinite"
+            path="M 16 50 Q 33 20, 50 50"
+            rotate="auto"
+          />
         </circle>
 
         {/* Connecting Line: Card 2 to Card 3 */}
@@ -64,14 +64,13 @@ export const ProblemSolutionLines = () => {
           transition={{ duration: 2, delay: 1, ease: "easeInOut" }}
         />
         <circle r="0.3" fill="#06b6d4" filter="url(#probGlow)">
-            <animateMotion
-                dur="4s"
-                repeatCount="indefinite"
-                path="M 50 50 Q 66 80, 84 50"
-                rotate="auto"
-            />
+          <animateMotion
+            dur="4s"
+            repeatCount="indefinite"
+            path="M 50 50 Q 66 80, 84 50"
+            rotate="auto"
+          />
         </circle>
-
       </svg>
     </div>
   );

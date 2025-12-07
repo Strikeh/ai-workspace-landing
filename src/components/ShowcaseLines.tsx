@@ -23,11 +23,11 @@ export const ShowcaseLines = () => {
             <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.2" />
             <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0" />
           </linearGradient>
-           <filter id="showGlow">
-            <feGaussianBlur stdDeviation="0.5" result="coloredBlur"/>
+          <filter id="showGlow">
+            <feGaussianBlur stdDeviation="0.5" result="coloredBlur" />
             <feMerge>
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
         </defs>
@@ -44,12 +44,12 @@ export const ShowcaseLines = () => {
           transition={{ duration: 2.5, ease: "linear" }}
         />
         <circle r="0.3" fill="#3b82f6" filter="url(#showGlow)">
-            <animateMotion
-                dur="8s"
-                repeatCount="indefinite"
-                path="M 20 10 L 20 90"
-                rotate="auto"
-            />
+          <animateMotion
+            dur="8s"
+            repeatCount="indefinite"
+            path="M 20 10 L 20 90"
+            rotate="auto"
+          />
         </circle>
 
         {/* Vertical Line Right */}
@@ -63,13 +63,13 @@ export const ShowcaseLines = () => {
           viewport={{ once: true }}
           transition={{ duration: 2.5, delay: 0.5, ease: "linear" }}
         />
-         <circle r="0.3" fill="#3b82f6" filter="url(#showGlow)">
-            <animateMotion
-                dur="7s"
-                repeatCount="indefinite"
-                path="M 80 90 L 80 10"
-                rotate="auto"
-            />
+        <circle r="0.3" fill="#3b82f6" filter="url(#showGlow)">
+          <animateMotion
+            dur="7s"
+            repeatCount="indefinite"
+            path="M 80 90 L 80 10"
+            rotate="auto"
+          />
         </circle>
 
         {/* Horizontal Line Top */}
@@ -84,15 +84,15 @@ export const ShowcaseLines = () => {
           transition={{ duration: 3, delay: 1, ease: "linear" }}
         />
         <circle r="0.3" fill="#8b5cf6" filter="url(#showGlow)">
-            <animateMotion
-                dur="10s"
-                repeatCount="indefinite"
-                path="M 10 30 L 90 30"
-                rotate="auto"
-            />
+          <animateMotion
+            dur="10s"
+            repeatCount="indefinite"
+            path="M 10 30 L 90 30"
+            rotate="auto"
+          />
         </circle>
 
-         {/* Horizontal Line Bottom */}
+        {/* Horizontal Line Bottom */}
         <motion.path
           d="M 90 70 L 10 70"
           stroke="url(#showGrad2)"
@@ -103,15 +103,14 @@ export const ShowcaseLines = () => {
           viewport={{ once: true }}
           transition={{ duration: 3, delay: 1.5, ease: "linear" }}
         />
-         <circle r="0.3" fill="#8b5cf6" filter="url(#showGlow)">
-            <animateMotion
-                dur="9s"
-                repeatCount="indefinite"
-                path="M 90 70 L 10 70"
-                rotate="auto"
-            />
+        <circle r="0.3" fill="#8b5cf6" filter="url(#showGlow)">
+          <animateMotion
+            dur="9s"
+            repeatCount="indefinite"
+            path="M 90 70 L 10 70"
+            rotate="auto"
+          />
         </circle>
-
       </svg>
     </div>
   );

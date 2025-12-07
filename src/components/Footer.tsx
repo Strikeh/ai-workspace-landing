@@ -253,9 +253,20 @@ export function Footer() {
           <p className="text-xs text-slate-500">
             © 2025 AI Workspace. All rights reserved.
           </p>
-          <div className="flex items-center gap-2 text-xs text-slate-500">
-            <span className="w-2 h-2 rounded-full bg-green-500"></span>
-            All systems operational
+          <div className="flex items-center gap-4 text-xs text-slate-500">
+            <a
+              href="https://nexus.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyan-400 transition-colors"
+            >
+              Powered by Nexus
+            </a>
+            <span className="text-slate-600">|</span>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-green-500"></span>
+              All systems operational
+            </div>
           </div>
         </div>
       </FadeIn>

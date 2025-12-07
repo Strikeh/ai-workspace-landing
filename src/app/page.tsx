@@ -1596,7 +1596,7 @@ export default function Home() {
                     <>
                       We love feedback! You can join our{" "}
                       <a
-                        href="https://discord.gg/9wESDrQN"
+                        href="https://discord.gg/adx5DTrQEp"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-cyan-400 hover:text-cyan-300 underline"
@@ -1974,7 +1974,7 @@ export default function Home() {
               </a>
 
               <a
-                href="https://discord.gg/9wESDrQN"
+                href="https://discord.gg/adx5DTrQEp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative inline-flex items-center gap-3 rounded-full px-8 py-4 text-lg font-bold text-white transition-all hover:scale-105 border border-indigo-500/30 bg-indigo-500/10 hover:bg-indigo-500/20"
@@ -2112,7 +2112,7 @@ export default function Home() {
                     </svg>
                   </a>
                   <a
-                    href="https://discord.gg/9wESDrQN"
+                    href="https://discord.gg/adx5DTrQEp"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-slate-400 hover:text-cyan-400 transition-colors"

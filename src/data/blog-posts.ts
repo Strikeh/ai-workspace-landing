@@ -2199,6 +2199,378 @@ export const blogPosts: BlogPost[] = [
     `,
   },
   {
+    slug: "reddit-marketing-playbook-solo-founder",
+    title:
+      "The Reddit Marketing Playbook: How a Solo Founder Grew a SaaS to $17K MRR With Zero Audience",
+    excerpt:
+      "Discover how Diego built a $17K MRR SaaS in 4 months with no audience and $0 ad spend using Reddit. A step-by-step playbook for solo founders.",
+    date: "Dec 08, 2025",
+    readTime: "10 min read",
+    category: "Founder Playbooks",
+    image: "/images/blog/reddit-playbook-hero.png",
+    content: `
+      <div class="bg-slate-800/50 border-l-4 border-cyan-500 p-4 mb-8">
+        <p class="text-cyan-400 font-bold m-0">Founder Playbooks Series — Real strategies from real builders</p>
+      </div>
+
+      <p class="text-xl leading-relaxed text-slate-300 mb-6">
+        Most founders believe they need a big audience to get traction. Followers first, customers later. Right?
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        Diego proved the opposite. In just <strong>four months</strong>, he built an AI-powered mobile design tool that now generates around <strong>$17,000 in monthly recurring revenue</strong>, all while having:
+      </p>
+
+      <ul class="list-disc pl-6 space-y-2 text-slate-300 marker:text-cyan-400 mb-6">
+        <li><strong>Fewer than 100 followers on X (Twitter)</strong></li>
+        <li><strong>No YouTube, TikTok, Instagram, or existing audience</strong></li>
+        <li><strong>Zero spent on paid ads</strong></li>
+      </ul>
+
+      <p class="text-slate-300 mb-6">
+        His entire growth engine? <strong>Reddit.</strong>
+      </p>
+
+      <p class="text-slate-300 mb-8">
+        Not a trick. Not a hack. A repeatable system for validation, distribution, and acquisition — all powered by value-first content inside niche communities. This post turns Diego’s learnings into a <strong>step-by-step playbook</strong> you can use to grow your own SaaS from scratch.
+      </p>
+
+      <div class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-xl p-6 mb-10">
+        <h3 class="text-lg font-bold text-white mt-0 mb-3">🧩 Overview: What You’ll Learn</h3>
+        <ol class="grid sm:grid-cols-2 gap-2 text-slate-300 m-0 list-decimal pl-5">
+          <li>Who Diego is and what he built</li>
+          <li>How he sourced and validated the idea</li>
+          <li>How he built a two-week MVP using AI</li>
+          <li>How to prepare your Reddit account for marketing</li>
+          <li>How to build a massive subreddit targeting list</li>
+          <li>How to write high-performing Reddit posts</li>
+          <li>How to scale through crossposting and volume</li>
+          <li>Diego’s tech stack, costs, and margins</li>
+          <li>The strategic lessons founders can take away</li>
+          <li>A practical checklist to implement this playbook</li>
+        </ol>
+      </div>
+
+      <img src="/images/blog/reddit-founder-journey.png" alt="Timeline illustration of a SaaS founder journey" class="w-full rounded-xl border border-white/10 shadow-lg mb-8" />
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">1. Who Is Diego, and What Did He Build?</h2>
+
+      <p class="text-slate-300 mb-6">
+        Diego is a solo developer who created <strong>AppAlchemy</strong>, an AI tool that generates mobile app designs extremely quickly. Think of it as:
+      </p>
+
+      <blockquote class="border-l-4 border-slate-600 pl-4 italic text-slate-400 my-6">
+        “Cursor, but for UI design.”
+      </blockquote>
+
+      <p class="text-slate-300 mb-6">
+        His results after four months:
+      </p>
+
+      <ul class="list-disc pl-6 space-y-2 text-slate-300 marker:text-cyan-400 mb-6">
+        <li><strong>$17K+ MRR</strong></li>
+        <li><strong>20,000+ signups</strong></li>
+        <li><strong>1,000+ paying customers</strong></li>
+        <li><strong>~20K monthly visitors</strong></li>
+        <li><strong>Over 1 million impressions</strong> — all from Reddit</li>
+      </ul>
+
+      <p class="text-slate-300 mb-6">
+        No ads. No audience. No complicated content strategy. Just a sharp problem-solution fit and the right distribution channel.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">2. Step 1: Start With a Problem You Personally Experience</h2>
+
+      <p class="text-slate-300 mb-6">
+        Diego didn’t start with AI hype or idea brainstorming. He started with <strong>pain</strong>.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        He wanted to build a mobile app and hired a designer on Upwork. It was expensive and slow, and every small revision cost more money. That frustration sparked the insight:
+      </p>
+
+      <blockquote class="border-l-4 border-slate-600 pl-4 italic text-slate-400 my-6">
+        “If AI can generate code, why can’t it generate app designs?”
+      </blockquote>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Why this works</h3>
+      <ul class="list-disc pl-6 space-y-2 text-slate-300 marker:text-cyan-400 mb-6">
+        <li>When you solve your own pain, you understand the problem at a deeper level.</li>
+        <li>You don’t have to guess whether people pay — you already did.</li>
+        <li>Validation becomes faster because you intuitively know the target user.</li>
+      </ul>
+
+      <div class="bg-slate-800/50 p-4 rounded-lg border border-white/10 mb-6">
+        <p class="text-emerald-400 font-bold m-0 mb-2">💡 Bonus insight: Choose a growing market</p>
+        <p class="text-slate-300 m-0">
+          Diego avoided stagnant or declining industries. His rule: <em>“Build in markets that are expanding — AI, no-code, developer tools, creator tools.”</em> Growing markets make distribution easier. Declining ones drain your energy.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">3. Step 2: Build a Two-Week MVP Using AI</h2>
+
+      <p class="text-slate-300 mb-6">
+        Diego built his MVP in <strong>~14 days</strong>. Not by cutting corners, but by building strategically.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">3.1. Use technologies AI understands well</h3>
+      <p class="text-slate-300 mb-4">Diego chose:</p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-300 marker:text-cyan-400 mb-6">
+        <li><strong>Next.js + React</strong></li>
+        <li><strong>Firebase (Auth + Database)</strong></li>
+        <li><strong>Cursor as his AI coding assistant</strong></li>
+      </ul>
+      <p class="text-slate-300 mb-6">
+        Why not newer frameworks? AI performs best with widely adopted, well-documented tech stacks. This saves hours of debugging and troubleshooting.
+      </p>
+
+      <img src="/images/blog/reddit-mvp-architecture.png" alt="Simple architecture diagram of a SaaS MVP" class="w-full rounded-xl border border-white/10 shadow-lg mb-8" />
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">3.2. Use UI component libraries — not custom UI</h3>
+      <p class="text-slate-300 mb-6">
+        To move fast and look professional from day one, he relied on <strong>Chakra UI</strong> and <strong>Ant Design</strong>. This removes 80% of the UI work and gives you polished components instantly.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">3.3. What belongs in a 2-week MVP?</h3>
+      <p class="text-slate-300 mb-4">Only the essentials:</p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-300 marker:text-cyan-400 mb-6">
+        <li>A single core feature that solves the main problem</li>
+        <li>Basic onboarding (sign-up/login)</li>
+        <li>A simple pricing model</li>
+        <li>A clean, honest landing page</li>
+      </ul>
+      <p class="text-slate-300 mb-6">
+        Nothing more. The goal is not perfection — it’s <strong>validation</strong>.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">4. Step 3: Become a Reddit Native Before Posting</h2>
+
+      <p class="text-slate-300 mb-6">
+        Many founders make a Reddit account and immediately try to promote their product. Reddit instantly filters or removes these posts.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">4.1. Warm up your account for at least 7 days</h3>
+      <ul class="list-disc pl-6 space-y-2 text-slate-300 marker:text-cyan-400 mb-6">
+        <li>Comment genuinely</li>
+        <li>Upvote content in your niche</li>
+        <li>Participate in discussions</li>
+        <li>Build a natural user profile</li>
+      </ul>
+      <p class="text-slate-300 mb-6">
+        Diego emphasizes: <em>“New accounts that post promotional content get shadowbanned automatically.”</em> You must look like a real human, not a marketer.
+      </p>
+
+      <img src="/images/blog/reddit-feed-ui.png" alt="Illustration of a Reddit-style feed" class="w-full rounded-xl border border-white/10 shadow-lg mb-8" />
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">5. Step 4: Build the Largest Subreddit List You Can</h2>
+
+      <p class="text-slate-300 mb-6">
+        Reddit’s power lies in <strong>hyper-targeted communities</strong>. There is a subreddit for nearly every niche, including ultra-specific ones.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">5.1. Use Reddit Ads Manager (free) to discover subreddits</h3>
+      <p class="text-slate-300 mb-4">You don’t have to run ads. Just use the targeting tool.</p>
+      <ol class="list-decimal pl-6 space-y-2 text-slate-300 marker:text-cyan-400 mb-6">
+        <li>Go to Reddit Ads</li>
+        <li>Create a fake campaign</li>
+        <li>Go to <strong>Targeting → Communities</strong></li>
+        <li>Enter a keyword (e.g., “UI design”, “AI”, “no code”, “productivity”)</li>
+        <li>Reddit suggests dozens of related subreddits</li>
+        <li>Add them to your list</li>
+      </ol>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">5.2. Aim for 30–100 subreddits</h3>
+      <p class="text-slate-300 mb-6">
+        Break them into categories:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-300 marker:text-cyan-400 mb-6">
+        <li><strong>Broad:</strong> /r/Entrepreneur, /r/SaaS</li>
+        <li><strong>Niche:</strong> /r/UI_Design, /r/MobileApps</li>
+        <li><strong>Problem-based:</strong> /r/Freelance, /r/AppDev</li>
+      </ul>
+      <p class="text-slate-300 mb-6">This list becomes your marketing engine.</p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">6. Step 5: Write a High-Performing Reddit Post (Value First)</h2>
+
+      <p class="text-slate-300 mb-6">
+        This is the heart of the playbook. Most founders write posts like: <em>“I built an app, check it out!”</em> or <em>“Launching my new tool!”</em> These always flop.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        Diego’s secret: <strong>Give value first. Only mention your product after the reader cares.</strong>
+      </p>
+
+      <img src="/images/blog/reddit-post-structure.png" alt="Infographic showing structure of a high-performing Reddit post" class="w-full rounded-xl border border-white/10 shadow-lg mb-8" />
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">6.1. Use this structure</h3>
+
+      <div class="space-y-6">
+        <div class="bg-slate-800/50 p-4 rounded-lg border border-white/10">
+          <h4 class="text-cyan-400 font-bold mt-0 mb-2">1. A curiosity-driven, value-based title</h4>
+          <p class="text-slate-300 m-0">
+            Examples: <em>“I analyzed how top apps design their onboarding — here’s what I learned”</em> or <em>“How I sped up mobile UI design from hours to 2 minutes”</em>. No product mention. No self-promotion. Just intrigue.
+          </p>
+        </div>
+        <div class="bg-slate-800/50 p-4 rounded-lg border border-white/10">
+          <h4 class="text-cyan-400 font-bold mt-0 mb-2">2. A valuable post body</h4>
+          <p class="text-slate-300 m-0">
+            This can be a case study, a teardown, a tutorial, or a story. Diego often breaks down successful apps or workflows.
+          </p>
+        </div>
+        <div class="bg-slate-800/50 p-4 rounded-lg border border-white/10">
+          <h4 class="text-cyan-400 font-bold mt-0 mb-2">3. Subtly introduce your product halfway through</h4>
+          <p class="text-slate-300 m-0">
+            <em>“While experimenting with different workflows, I built a small AI tool to automate screen generation. I used it for this case study and the results surprised me…”</em> Not salesy. Not forced. Just relevant.
+          </p>
+        </div>
+        <div class="bg-slate-800/50 p-4 rounded-lg border border-white/10">
+          <h4 class="text-cyan-400 font-bold mt-0 mb-2">4. Add a link at the bottom (if allowed)</h4>
+          <p class="text-slate-300 m-0">
+            If linking is restricted, mention a <strong>secondary</strong>, complementary tool to reduce the chance of being flagged.
+          </p>
+        </div>
+      </div>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">6.2. What NOT to do</h3>
+      <ul class="list-disc pl-6 space-y-2 text-slate-300 marker:text-red-400 mb-6">
+        <li>Product name in the title</li>
+        <li>Starting with “I built X…”</li>
+        <li>Posting feature lists</li>
+        <li>Dropping Discord links</li>
+        <li>Sounding like an ad</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">7. Step 6: Scale Through Crossposting</h2>
+
+      <p class="text-slate-300 mb-6">
+        Once you have a great post, <strong>don’t just publish it once</strong>. Diego reposts the same content across many communities (10–30 at a time).
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        Why it works: Not every subreddit will boost your post. Some will give you 500 views, some 20,000. Even mediocre outcomes compound: 10 subreddits × ~10,000 views = <strong>100,000 impressions</strong>.
+      </p>
+
+      <img src="/images/blog/reddit-traffic-funnel.png" alt="Diagram showing Reddit posts traffic funnel" class="w-full rounded-xl border border-white/10 shadow-lg mb-8" />
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">8. Step 7: Repeat, Iterate, and Scale</h2>
+
+      <p class="text-slate-300 mb-6">
+        Diego posts <strong>2–3 times per week</strong> in different formats and communities. More than that risks bans. But the key is consistency. This is not a one-time stunt; it’s an acquisition channel.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">9. Diego’s Tech Stack, Costs, and Margins</h2>
+
+      <div class="grid md:grid-cols-3 gap-4 mb-8">
+        <div class="bg-slate-800/50 p-4 rounded-xl border border-white/5">
+          <h4 class="text-cyan-400 font-bold mt-0 mb-2">🔧 Tech Stack</h4>
+          <ul class="text-sm text-slate-300 space-y-1 pl-0 list-none">
+            <li>Next.js</li>
+            <li>React</li>
+            <li>Firebase</li>
+            <li>AI API backend</li>
+            <li>Cursor</li>
+          </ul>
+        </div>
+        <div class="bg-slate-800/50 p-4 rounded-xl border border-white/5">
+          <h4 class="text-cyan-400 font-bold mt-0 mb-2">💰 Monthly Costs</h4>
+          <ul class="text-sm text-slate-300 space-y-1 pl-0 list-none">
+            <li>AI API: ~$2,500</li>
+            <li>Vercel: ~$40</li>
+            <li>Cursor: ~$20</li>
+          </ul>
+        </div>
+        <div class="bg-slate-800/50 p-4 rounded-xl border border-white/5">
+          <h4 class="text-cyan-400 font-bold mt-0 mb-2">📈 Margin</h4>
+          <p class="text-2xl font-bold text-white m-0">~70%</p>
+          <p class="text-xs text-slate-400 mt-1">Strong for an AI tool</p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">10. Key Strategic Lessons</h2>
+
+      <div class="space-y-4 mb-8">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold">1</div>
+          <div>
+            <h4 class="text-white font-bold m-0">Solve a real problem in a growing market</h4>
+            <p class="text-slate-400 text-sm m-0">Don’t fight gravity. Ride momentum.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold">2</div>
+          <div>
+            <h4 class="text-white font-bold m-0">Marketing matters as much as product</h4>
+            <p class="text-slate-400 text-sm m-0">Users don’t care unless they know you exist.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold">3</div>
+          <div>
+            <h4 class="text-white font-bold m-0">Speed is your advantage</h4>
+            <p class="text-slate-400 text-sm m-0">Ship fast. Validate fast. Learn fast.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold">4</div>
+          <div>
+            <h4 class="text-white font-bold m-0">You do NOT need an audience</h4>
+            <p class="text-slate-400 text-sm m-0">Reddit proves you can leverage niche communities without followers.</p>
+          </div>
+        </div>
+      </div>
+
+      <img src="/images/blog/reddit-founder-quote.png" alt="Startup quote graphic" class="w-full rounded-xl border border-white/10 shadow-lg mb-8" />
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">11. The Practical Implementation Checklist</h2>
+
+      <div class="bg-slate-900/50 p-6 rounded-xl border border-white/10 mb-8">
+        <h4 class="text-white font-bold mt-0 mb-4">Use This Today</h4>
+        <ul class="space-y-3 text-slate-300">
+          <li class="flex items-start gap-3">
+            <input type="checkbox" class="mt-1.5 accent-cyan-500" />
+            <span><strong>Idea Validation:</strong> List 3 problems you paid to solve. Pick one in a growing market.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <input type="checkbox" class="mt-1.5 accent-cyan-500" />
+            <span><strong>MVP (2 Weeks):</strong> Build core feature + onboarding + pricing only. Use standard stack.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <input type="checkbox" class="mt-1.5 accent-cyan-500" />
+            <span><strong>Reddit Prep:</strong> Warm account for 7 days. Engage genuinely.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <input type="checkbox" class="mt-1.5 accent-cyan-500" />
+            <span><strong>Subreddit List:</strong> Find 30–100 communities using Ads Manager.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <input type="checkbox" class="mt-1.5 accent-cyan-500" />
+            <span><strong>Content:</strong> Write value-first post. Subtle product mention.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <input type="checkbox" class="mt-1.5 accent-cyan-500" />
+            <span><strong>Distribution:</strong> Post in 10–30 subreddits. Repeat 2–3x/week.</span>
+          </li>
+        </ul>
+      </div>
+
+      <img src="/images/blog/reddit-cta-builder.png" alt="Indie hacker starting a new project" class="w-full rounded-xl border border-white/10 shadow-lg mb-8" />
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Final Thoughts</h2>
+
+      <p class="text-slate-300 mb-6">
+        If Diego’s story proves anything, it’s this: <strong>You don’t need an audience to build a profitable SaaS.</strong> You need a painful problem, a fast MVP, a distribution channel, and consistency.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        Reddit can be that channel. This playbook is not theory. It’s a blueprint you can implement today — alone, without funding, without followers.
+      </p>
+
+      <p class="text-slate-300 font-bold">
+        The best time to build your SaaS was yesterday. The second best time is now.
+      </p>
+    `,
+  },
+  {
     slug: "prompt-engineering-guide-mastering-llms",
     title: "Prompt Engineering: A Closer Look at Mastering LLMs",
     excerpt:

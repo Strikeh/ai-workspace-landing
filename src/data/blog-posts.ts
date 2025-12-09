@@ -2694,4 +2694,105 @@ export const blogPosts: BlogPost[] = [
       </div>
     `,
   },
+  {
+    slug: "introducing-prompt-chaining",
+    title: "Introducing Prompt Chaining: Automate Your AI Workflows",
+    excerpt:
+      "Stop copy-pasting. Start automating. Discover how Prompt Chaining in AI Workspace lets you build complex, multi-step AI workflows that run on autopilot.",
+    date: "Dec 09, 2025",
+    readTime: "6 min read",
+    category: "Product Updates",
+    image: "/images/blog/prompt-chaining-hero.png",
+    content: `
+      <p class="text-xl leading-relaxed text-slate-300 mb-8">
+        AI Workspace just got a massive upgrade. We're thrilled to introduce <strong>Prompt Chaining</strong>—a powerful new way to orchestrate complex interactions with ChatGPT, Claude, and Grok.
+      </p>
+
+      <p class="text-slate-300 mb-8">
+        Instead of manually copying and pasting or typing follow-up prompts, you can now define a sequence of steps that execute one after another. It turns your AI from a chatbot into a workflow automation tool.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">What is Prompt Chaining?</h2>
+
+      <p class="text-slate-300 mb-6">
+        Imagine you have a workflow you do every day. Maybe it's writing a blog post, debugging code, or analyzing data. Usually, this involves multiple turns:
+      </p>
+
+      <ol class="list-decimal pl-6 space-y-2 text-slate-300 marker:text-cyan-400 mb-6">
+        <li>"Write an outline for X."</li>
+        <li><em>(Wait for answer)</em> -> "Great, now write the introduction."</li>
+        <li><em>(Wait for answer)</em> -> "Now write the body paragraphs."</li>
+      </ol>
+
+      <p class="text-slate-300 mb-6">
+        With Prompt Chaining, you define these steps <strong>once</strong>. When you run the chain, AI Workspace handles the flow for you.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">A Visual Tour</h2>
+
+      <p class="text-slate-300 mb-6">
+        Let's look at how it works. In your prompt library, chains are now clearly distinguishable from regular prompts. They have a dedicated "Prompt Chain" badge and show the number of steps involved.
+      </p>
+
+      <img src="/images/blog/prompt-chain-card.png" alt="Prompt Chain Card in the library" class="w-full rounded-xl border border-white/10 shadow-lg mb-8" />
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Building Your Chain</h3>
+      <p class="text-slate-300 mb-6">
+        Creating a chain is intuitive. In the editor, you can add as many steps as you need. Each step can reference the output of previous steps or use global variables.
+      </p>
+
+      <img src="/images/blog/prompt-chain-edit-modal.png" alt="Editing a Prompt Chain with multiple steps" class="w-full rounded-xl border border-white/10 shadow-lg mb-8" />
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Smart Variables</h3>
+      <p class="text-slate-300 mb-6">
+        One of the most powerful features is <strong>Smart Variables</strong>. Use <code>{{variables}}</code> across your entire chain. AI Workspace detects them and asks you to fill them in <em>once</em> before the chain starts. No more hunting for placeholders in every single prompt.
+      </p>
+
+      <img src="/images/blog/prompt-chain-variables.png" alt="Filling variables before running a chain" class="w-full rounded-xl border border-white/10 shadow-lg mb-8" />
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Flexible Execution</h3>
+      <p class="text-slate-300 mb-6">
+        Need to restart from the middle? Or just want to test the last part of your chain? You can easily choose which step to start execution from using the Run dialog.
+      </p>
+
+      <img src="/images/blog/prompt-chain-run-modal.png" alt="Selecting which step to start from" class="w-full rounded-xl border border-white/10 shadow-lg mb-8" />
+
+      <p class="text-slate-300 mb-6">
+        Once started, a floating window keeps you updated on the progress, so you can see exactly which step is currently running.
+      </p>
+
+      <img src="/images/blog/prompt-chain-execution.png" alt="Prompt Chain execution progress" class="w-full rounded-xl border border-white/10 shadow-lg mb-8" />
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Real-World Examples</h2>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-slate-800/50 p-6 rounded-xl border border-white/5">
+          <h4 class="text-cyan-400 font-bold mt-0 mb-2">✍️ The Content Creator</h4>
+          <p class="text-sm text-slate-300 mb-4"><strong>The Old Way:</strong> Ask for 10 ideas. Pick one. Ask for an outline. Ask for the draft. Ask for a tweet thread.</p>
+          <p class="text-sm text-slate-300"><strong>The Chain Way:</strong> Create a "Blog Post Generator" chain. Enter the topic once, and watch the AI build your entire content package.</p>
+        </div>
+        <div class="bg-slate-800/50 p-6 rounded-xl border border-white/5">
+          <h4 class="text-cyan-400 font-bold mt-0 mb-2">💻 The Developer</h4>
+          <p class="text-sm text-slate-300 mb-4"><strong>Scenario:</strong> Documenting legacy code.</p>
+          <p class="text-sm text-slate-300"><strong>The Chain Way:</strong> Step 1: Analyze code. Step 2: Generate JSDoc. Step 3: Write README. Step 4: Generate unit tests.</p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Why it's a Game Changer</h2>
+
+      <p class="text-slate-300 mb-6">
+        Prompt Chaining captures your best prompting strategies into reusable workflows. It ensures consistency, saves time, and reduces the cognitive load of managing complex AI interactions.
+      </p>
+
+      <div class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-xl p-6 mt-8">
+        <h4 class="text-white font-bold mt-0 mb-2">Ready to automate your workflow?</h4>
+        <p class="text-slate-400 mb-4">
+          Update AI Workspace today and start building your first chain. It works seamlessly across ChatGPT, Claude, and Grok.
+        </p>
+        <a href="#" class="inline-block bg-cyan-500 hover:bg-cyan-400 text-black font-bold py-2 px-4 rounded-lg transition-colors">
+          Try Prompt Chaining
+        </a>
+      </div>
+    `,
+  },
 ];

@@ -74,16 +74,14 @@ export default function ConsultantsPage() {
 
           {/* Mockup Container */}
           <div className="relative max-w-5xl mx-auto rounded-xl border border-white/10 bg-[#0A0A0A] shadow-2xl overflow-hidden">
-            <div className="aspect-video bg-[#111] flex items-center justify-center border-b border-white/10">
-              <div className="text-center p-10">
-                <p className="text-gray-500 mb-2">
-                  Place your screenshot here:
-                </p>
-                <code className="bg-black px-2 py-1 rounded text-indigo-400">
-                  /images/landingpages/consultants-hero.png
-                </code>
-              </div>
-            </div>
+            <Image
+              src="/images/landingpages/consultants-hero.png"
+              alt="AI Workspace for Consultants"
+              width={1200}
+              height={675}
+              className="w-full h-auto"
+              priority
+            />
           </div>
         </div>
       </section>

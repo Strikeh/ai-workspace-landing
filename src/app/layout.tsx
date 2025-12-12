@@ -2,6 +2,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
+import { RecentSalesNotification } from "@/components/RecentSalesNotification";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -317,6 +318,7 @@ export default function RootLayout({
         {/* Subtle scroll-driven aurora parallax layer */}
         <div className="aurora-parallax" aria-hidden />
         {children}
+        <RecentSalesNotification />
         <SpeedInsights />
         <Analytics />
       </body>

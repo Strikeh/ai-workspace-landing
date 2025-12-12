@@ -552,7 +552,7 @@ export default function Home() {
                     {/* YouTube Video Embed */}
                     <div className="relative aspect-video bg-black">
                       <iframe
-                        src="https://www.youtube.com/embed/pDZD1maOWBA?autoplay=0&controls=1&rel=0"
+                        src="https://www.youtube.com/embed/pDZD1maOWBA?autoplay=0&controls=1&rel=0&vq=hd1080"
                         title="AI Workspace Pro - Complete Overview"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen

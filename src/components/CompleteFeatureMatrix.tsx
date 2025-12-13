@@ -1,6 +1,5 @@
 ﻿"use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import {
   FolderOpen,
@@ -28,12 +27,14 @@ const CheckIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 export default function CompleteFeatureMatrix() {
-  const [isExpanded, setIsExpanded] = useState(false);
-
   const featureCategories = [
     {
       icon: FolderOpen,
       title: "ORGANIZATION",
+      color: "text-orange-400",
+      bgColor: "bg-orange-500/10",
+      borderColor: "hover:border-orange-500/30",
+      blobColor: "bg-orange-500/10",
       features: [
         "Folders (nested)",
         "Categories",
@@ -45,6 +46,10 @@ export default function CompleteFeatureMatrix() {
     {
       icon: Zap,
       title: "PERFORMANCE",
+      color: "text-cyan-400",
+      bgColor: "bg-cyan-500/10",
+      borderColor: "hover:border-cyan-500/30",
+      blobColor: "bg-cyan-500/10",
       features: [
         "Text Highlighting",
         "Thread Trimming",
@@ -56,6 +61,10 @@ export default function CompleteFeatureMatrix() {
     {
       icon: MessageSquare,
       title: "PROMPTS",
+      color: "text-green-400",
+      bgColor: "bg-green-500/10",
+      borderColor: "hover:border-green-500/30",
+      blobColor: "bg-green-500/10",
       features: [
         "Library (200+)",
         'Quick "/" Access',
@@ -67,6 +76,10 @@ export default function CompleteFeatureMatrix() {
     {
       icon: Palette,
       title: "CUSTOMIZATION",
+      color: "text-purple-400",
+      bgColor: "bg-purple-500/10",
+      borderColor: "hover:border-purple-500/30",
+      blobColor: "bg-purple-500/10",
       features: [
         "Premium Themes",
         "Dark Mode",
@@ -78,6 +91,10 @@ export default function CompleteFeatureMatrix() {
     {
       icon: Sparkles,
       title: "ADVANCED",
+      color: "text-pink-400",
+      bgColor: "bg-pink-500/10",
+      borderColor: "hover:border-pink-500/30",
+      blobColor: "bg-pink-500/10",
       features: [
         "Image Gallery",
         "Notes System",
@@ -89,6 +106,10 @@ export default function CompleteFeatureMatrix() {
     {
       icon: ShieldCheck,
       title: "PRIVACY",
+      color: "text-blue-400",
+      bgColor: "bg-blue-500/10",
+      borderColor: "hover:border-blue-500/30",
+      blobColor: "bg-blue-500/10",
       features: [
         "100% Local-first",
         "Encrypted Vaults",
@@ -100,73 +121,61 @@ export default function CompleteFeatureMatrix() {
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden bg-slate-900/30">
-      <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
+    <section className="py-20 relative overflow-hidden bg-slate-900/50">
+      <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16 relative z-10">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Complete Feature Matrix
           </h2>
-          <p className="text-slate-400 text-lg">
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
             Over 50+ features to supercharge your AI workflow
           </p>
         </div>
 
-        {/* Expand/Collapse Button */}
-        <div className="text-center mb-8">
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-slate-800/50 hover:bg-slate-800 border border-white/10 text-white font-semibold transition-all cursor-pointer"
-          >
-            <svg
-              className={`w-5 h-5 transition-transform ${
-                isExpanded ? "rotate-180" : ""
-              }`}
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+        {/* Content */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {featureCategories.map((category, index) => (
+            <div
+              key={index}
+              className={`group relative h-full bg-slate-900/40 backdrop-blur-xl rounded-3xl p-8 border border-white/5 ${category.borderColor} transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 overflow-hidden`}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-            {isExpanded ? "Hide all features" : "See all 50+ features"}
-          </button>
-        </div>
-
-        {/* Expandable Content */}
-        <div
-          className={`overflow-hidden transition-all duration-500 ${
-            isExpanded ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"
-          }`}
-        >
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8">
-            {featureCategories.map((category, index) => (
+              {/* Decorative blob background */}
               <div
-                key={index}
-                className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
-              >
-                <div className="flex items-center gap-3 mb-6">
-                  <category.icon className="w-8 h-8 text-cyan-400" />
-                  <h3 className="text-lg font-bold text-cyan-400">
+                className={`absolute -top-24 -left-24 w-48 h-48 ${category.blobColor} rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
+
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div
+                    className={`w-12 h-12 rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 border border-white/10 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500`}
+                  >
+                    <category.icon className={`w-6 h-6 ${category.color}`} />
+                  </div>
+                  <h3
+                    className={`text-xl font-bold text-white group-hover:${category.color} transition-colors`}
+                  >
                     {category.title}
                   </h3>
                 </div>
+
                 <ul className="space-y-3">
                   {category.features.map((feature, fIndex) => (
                     <li
                       key={fIndex}
-                      className="flex items-start gap-2 text-slate-300"
+                      className="flex items-start gap-3 text-slate-400 group-hover:text-slate-300 transition-colors"
                     >
-                      <CheckIcon className="h-5 w-5 text-cyan-400 mt-0.5 flex-shrink-0" />
+                      <div
+                        className={`mt-1 p-0.5 rounded-full ${category.bgColor} ${category.color}`}
+                      >
+                        <CheckIcon className="h-3.5 w-3.5" />
+                      </div>
                       {feature === "Text Highlighting" ||
                       feature === "Thread Trimming" ? (
                         <Link
                           href="/chatgpt-text-highlighter"
-                          className="hover:text-cyan-400 hover:underline transition-colors"
+                          className={`hover:${category.color} hover:underline transition-colors`}
                         >
                           {feature}
                         </Link>
@@ -176,7 +185,7 @@ export default function CompleteFeatureMatrix() {
                         feature === "History" ? (
                         <Link
                           href="/prompt-library"
-                          className="hover:text-cyan-400 hover:underline transition-colors"
+                          className={`hover:${category.color} hover:underline transition-colors`}
                         >
                           {feature}
                         </Link>
@@ -187,7 +196,7 @@ export default function CompleteFeatureMatrix() {
                         feature === "Pin & Archive" ? (
                         <Link
                           href="/organization"
-                          className="hover:text-cyan-400 hover:underline transition-colors"
+                          className={`hover:${category.color} hover:underline transition-colors`}
                         >
                           {feature}
                         </Link>
@@ -198,19 +207,19 @@ export default function CompleteFeatureMatrix() {
                   ))}
                 </ul>
               </div>
-            ))}
-          </div>
-
-          {/* Supported Platforms */}
-          <div className="mt-12 text-center p-8 bg-slate-800/20 rounded-2xl border border-white/10">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Globe className="w-8 h-8 text-cyan-400" />
-              <h3 className="text-xl font-bold text-white">
-                SUPPORTED PLATFORMS
-              </h3>
             </div>
-            <p className="text-slate-300 text-lg">ChatGPT • Claude.ai • Grok</p>
+          ))}
+        </div>
+
+        {/* Supported Platforms */}
+        <div className="mt-16 text-center p-8 bg-slate-800/20 rounded-2xl border border-white/10 backdrop-blur-sm">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Globe className="w-8 h-8 text-cyan-400" />
+            <h3 className="text-xl font-bold text-white">
+              SUPPORTED PLATFORMS
+            </h3>
           </div>
+          <p className="text-slate-300 text-lg">ChatGPT • Claude.ai • Grok</p>
         </div>
       </div>
     </section>

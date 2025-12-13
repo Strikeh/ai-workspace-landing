@@ -10,7 +10,6 @@ import DemoHubButton from "@/components/DemoHubButton";
 import FeatureShowcase from "@/components/FeatureShowcase";
 import CompleteFeatureMatrix from "@/components/CompleteFeatureMatrix";
 import { HeroConnectionLines } from "@/components/HeroConnectionLines";
-import { ProblemSolutionLines } from "@/components/ProblemSolutionLines";
 import { Footer } from "@/components/Footer";
 import {
   FadeIn,
@@ -19,7 +18,6 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/ScrollAnimation";
-import { FolderOpen, Hourglass, FileText } from "lucide-react";
 
 const browserInstallButtons = [
   {
@@ -604,175 +602,8 @@ export default function Home() {
         {/* Before & After Slider Section */}
         <BeforeAfterSlider />
 
-        {/* Problem → Solution Section */}
-        <section className="py-20 relative overflow-hidden bg-slate-900/50">
-          <ProblemSolutionLines />
-          <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16 relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Built to solve{" "}
-                <span className="text-cyan-400">real problems</span>
-              </h2>
-              <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-                Every feature addresses a pain point AI users face daily
-              </p>
-            </div>
-
-            <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Problem 1: Lost in chats */}
-              <StaggerItem>
-                <div className="group relative h-full bg-slate-900/40 backdrop-blur-xl rounded-3xl p-8 border border-white/5 hover:border-cyan-500/30 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/10 hover:-translate-y-1 overflow-hidden">
-                  {/* Decorative blob background */}
-                  <div className="absolute -top-24 -left-24 w-48 h-48 bg-orange-500/10 rounded-full blur-3xl" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
-
-                  <div className="relative z-10">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-white/10 flex items-center justify-center text-3xl mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
-                      <FolderOpen className="w-8 h-8 text-orange-400" />
-                    </div>
-
-                    <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                      Lost in 1000+ chats?
-                    </h3>
-
-                    <ul className="space-y-3 mb-8">
-                      {[
-                        "Folders & Subfolders",
-                        "Tags & Categories",
-                        "Search & Filter",
-                        "Pin & Archive",
-                      ].map((item, i) => (
-                        <li
-                          key={i}
-                          className="flex items-start gap-3 text-slate-400 group-hover:text-slate-300 transition-colors"
-                        >
-                          <div className="mt-1 p-0.5 rounded-full bg-cyan-500/10 text-cyan-400">
-                            <CheckIcon className="h-3.5 w-3.5" />
-                          </div>
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <a
-                      href="#features"
-                      className="inline-flex items-center gap-2 text-cyan-400 text-sm font-bold hover:text-cyan-300 transition-colors group/link"
-                    >
-                      Learn more
-                      <span className="group-hover/link:translate-x-1 transition-transform">
-                        →
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </StaggerItem>
-
-              {/* Problem 2: ChatGPT lagging */}
-              <StaggerItem>
-                <div className="group relative h-full bg-slate-900/40 backdrop-blur-xl rounded-3xl p-8 border border-white/5 hover:border-cyan-500/30 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/10 hover:-translate-y-1 overflow-hidden">
-                  {/* Decorative blob background */}
-                  <div className="absolute -top-24 -left-24 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
-
-                  <div className="relative z-10">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-white/10 flex items-center justify-center text-3xl mb-6 shadow-lg group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500">
-                      <Hourglass className="w-8 h-8 text-cyan-400" />
-                    </div>
-
-                    <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                      ChatGPT lagging?
-                    </h3>
-
-                    <ul className="space-y-3 mb-8">
-                      {[
-                        "Thread Trimming",
-                        "Text Highlighting",
-                        "73% faster scrolling",
-                        "Smart Navigation",
-                      ].map((item, i) => (
-                        <li
-                          key={i}
-                          className="flex items-start gap-3 text-slate-400 group-hover:text-slate-300 transition-colors"
-                        >
-                          <div className="mt-1 p-0.5 rounded-full bg-cyan-500/10 text-cyan-400">
-                            <CheckIcon className="h-3.5 w-3.5" />
-                          </div>
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <a
-                      href="#features"
-                      className="inline-flex items-center gap-2 text-cyan-400 text-sm font-bold hover:text-cyan-300 transition-colors group/link"
-                    >
-                      Learn more
-                      <span className="group-hover/link:translate-x-1 transition-transform">
-                        →
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </StaggerItem>
-
-              {/* Problem 3: Retyping prompts */}
-              <StaggerItem>
-                <div className="group relative h-full bg-slate-900/40 backdrop-blur-xl rounded-3xl p-8 border border-white/5 hover:border-cyan-500/30 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/10 hover:-translate-y-1 overflow-hidden">
-                  {/* Decorative blob background */}
-                  <div className="absolute -top-24 -left-24 w-48 h-48 bg-green-500/10 rounded-full blur-3xl" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
-
-                  <div className="relative z-10">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-white/10 flex items-center justify-center text-3xl mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
-                      <FileText className="w-8 h-8 text-green-400" />
-                    </div>
-
-                    <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                      Retyping same prompts?
-                    </h3>
-
-                    <ul className="space-y-3 mb-8">
-                      <li className="flex items-start gap-3 text-slate-400 group-hover:text-slate-300 transition-colors">
-                        <div className="mt-1 p-0.5 rounded-full bg-cyan-500/10 text-cyan-400">
-                          <CheckIcon className="h-3.5 w-3.5" />
-                        </div>
-                        <span>Prompt Library (200+ saved)</span>
-                      </li>
-                      <li className="flex items-start gap-3 text-slate-400 group-hover:text-slate-300 transition-colors">
-                        <div className="mt-1 p-0.5 rounded-full bg-cyan-500/10 text-cyan-400">
-                          <CheckIcon className="h-3.5 w-3.5" />
-                        </div>
-                        <span>Quick &ldquo;/&rdquo; access menu</span>
-                      </li>
-                      <li className="flex items-start gap-3 text-slate-400 group-hover:text-slate-300 transition-colors">
-                        <div className="mt-1 p-0.5 rounded-full bg-cyan-500/10 text-cyan-400">
-                          <CheckIcon className="h-3.5 w-3.5" />
-                        </div>
-                        <span>Template variables {`{{var}}`}</span>
-                      </li>
-                      <li className="flex items-start gap-3 text-slate-400 group-hover:text-slate-300 transition-colors">
-                        <div className="mt-1 p-0.5 rounded-full bg-cyan-500/10 text-cyan-400">
-                          <CheckIcon className="h-3.5 w-3.5" />
-                        </div>
-                        <span>Prompt chains & history</span>
-                      </li>
-                    </ul>
-
-                    <a
-                      href="#features"
-                      className="inline-flex items-center gap-2 text-cyan-400 text-sm font-bold hover:text-cyan-300 transition-colors group/link"
-                    >
-                      Learn more
-                      <span className="group-hover/link:translate-x-1 transition-transform">
-                        →
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </StaggerItem>
-            </StaggerContainer>
-          </div>
-        </section>
+        {/* Complete Feature Matrix Section */}
+        <CompleteFeatureMatrix />
 
         <section
           id="features"
@@ -1276,9 +1107,6 @@ export default function Home() {
             </FadeIn>
           </div>
         </section>
-
-        {/* Complete Feature Matrix */}
-        <CompleteFeatureMatrix />
 
         {/* Testimonials Section */}
         <section

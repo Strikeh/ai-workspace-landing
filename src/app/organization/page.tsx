@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ImageLightbox from "@/components/ImageLightbox";
@@ -23,9 +24,12 @@ import {
   MousePointerClick,
   Sparkles,
   Filter,
+  Maximize2,
+  X,
 } from "lucide-react";
 
 export default function OrganizationPage() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   const installUrl =
     "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg";
 
@@ -89,19 +93,26 @@ export default function OrganizationPage() {
             <ScaleUp className="mt-16 relative rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur-xl shadow-2xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-blue-500/10" />
               <div className="relative p-4 sm:p-8">
-                {/* Placeholder for Screenshot of Organization */}
-                <div className="aspect-video rounded-lg bg-slate-800/50 border border-white/5 flex items-center justify-center relative overflow-hidden group">
-                  <Image
-                    src="/images/carousel/BrandBird 2025-11-20 12.01.36.png"
-                    alt="Organization Interface"
-                    fill
-                    className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 zoomable-image cursor-pointer"
+                {/* Video Container */}
+                <div
+                  className="aspect-video rounded-lg bg-slate-800/50 border border-white/5 flex items-center justify-center relative overflow-hidden group cursor-pointer"
+                  onClick={() => setIsVideoOpen(true)}
+                >
+                  <video
+                    src="/videos/organization-hero.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="object-cover w-full h-full opacity-90 group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end justify-center pb-8">
-                    <p className="text-cyan-300 font-medium flex items-center gap-2">
-                      <FolderOpen className="w-4 h-4" /> Your Organized
-                      Workspace
-                    </p>
+
+                  {/* Overlay with "Click to expand" */}
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                    <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-3 flex items-center gap-3 text-white font-medium group-hover:scale-105 transition-transform">
+                      <Maximize2 className="w-5 h-5" />
+                      <span>Click to expand</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -109,6 +120,32 @@ export default function OrganizationPage() {
           </div>
         </div>
       </section>
+
+      {/* Video Modal */}
+      {isVideoOpen && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-xl flex items-center justify-center p-4 sm:p-8"
+          onClick={() => setIsVideoOpen(false)}
+        >
+          <button
+            className="absolute top-4 right-4 text-white/50 hover:text-white transition-colors"
+            onClick={() => setIsVideoOpen(false)}
+          >
+            <X className="w-8 h-8" />
+          </button>
+          <div
+            className="relative w-full max-w-7xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl border border-white/10"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <video
+              src="/videos/organization-hero.mp4"
+              controls
+              autoPlay
+              className="w-full h-full"
+            />
+          </div>
+        </div>
+      )}
 
       {/* Problem Section */}
       <section className="py-24 bg-slate-900/50 relative">

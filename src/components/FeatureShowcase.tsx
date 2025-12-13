@@ -64,7 +64,7 @@ const featureData: Record<Tab, { features: Feature[] }> = {
         icon: Folder,
         title: "Unlimited nested folders with drag & drop",
         description: "Create a hierarchy that matches your workflow",
-        video: "https://www.youtube.com/embed/pDZD1maOWBA",
+        video: "/videos/organization-hero.mp4",
         link: "/organization",
       },
       {
@@ -340,15 +340,28 @@ export default function FeatureShowcase() {
             {/* Media Content */}
             <div className="relative aspect-video bg-black/50 group/media">
               {activeFeature.video ? (
-                <iframe
-                  key={activeFeature.video}
-                  src={`${activeFeature.video}?autoplay=0&controls=1&rel=0&modestbranding=1&loop=1`}
-                  title={`${activeFeature.title} Demo`}
-                  className="absolute inset-0 w-full h-full"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  loading="lazy"
-                />
+                activeFeature.video.endsWith(".mp4") ? (
+                  <video
+                    key={activeFeature.video}
+                    src={activeFeature.video}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    controls
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  />
+                ) : (
+                  <iframe
+                    key={activeFeature.video}
+                    src={`${activeFeature.video}?autoplay=0&controls=1&rel=0&modestbranding=1&loop=1`}
+                    title={`${activeFeature.title} Demo`}
+                    className="absolute inset-0 w-full h-full"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                )
               ) : activeFeature.image ? (
                 <div
                   className="relative w-full h-full cursor-pointer"

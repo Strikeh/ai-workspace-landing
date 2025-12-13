@@ -52,10 +52,16 @@ export default function BlogIndex() {
     return ["All", ...Array.from(cats)];
   }, []);
 
-  // Filter posts based on active filter
+  // Filter posts based on active filter and sort by date (newest first)
   const filteredPosts = useMemo(() => {
-    if (activeFilter === "All") return blogPosts;
-    return blogPosts.filter((post) => post.category === activeFilter);
+    const posts =
+      activeFilter === "All"
+        ? blogPosts
+        : blogPosts.filter((post) => post.category === activeFilter);
+
+    return [...posts].sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
   }, [activeFilter]);
 
   // Count posts per category

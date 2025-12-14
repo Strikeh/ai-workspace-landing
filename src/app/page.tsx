@@ -4,11 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import type { SVGProps } from "react";
 import { useEffect, useState } from "react";
-import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import DemoModal from "@/components/DemoModal";
 import DemoHubButton from "@/components/DemoHubButton";
 import FeatureShowcase from "@/components/FeatureShowcase";
 import CompleteFeatureMatrix from "@/components/CompleteFeatureMatrix";
+import WhyChooseSection from "@/components/WhyChooseSection";
 import { HeroConnectionLines } from "@/components/HeroConnectionLines";
 import { Footer } from "@/components/Footer";
 import {
@@ -599,8 +599,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Before & After Slider Section */}
-        <BeforeAfterSlider />
+        {/* Why Choose Section */}
+        <WhyChooseSection />
 
         {/* Complete Feature Matrix Section */}
         <CompleteFeatureMatrix />

@@ -145,6 +145,14 @@ export function Footer() {
                   Blog
                 </Link>
               </li>
+              <li>
+                <Link
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  href="/affiliate"
+                >
+                  Affiliate Program
+                </Link>
+              </li>
             </ul>
           </div>
           <div>

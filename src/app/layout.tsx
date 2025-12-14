@@ -310,6 +310,21 @@ export default function RootLayout({
             }),
           }}
         />
+
+        {/* PromoteKit Affiliate Tracking Script */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var script = document.createElement('script');
+                script.src = 'https://cdn.promotekit.com/promotekit.js';
+                script.setAttribute('data-promotekit', 'aiworkspace');
+                script.async = true;
+                document.head.appendChild(script);
+              })();
+            `,
+          }}
+        />
       </head>
       <body
         suppressHydrationWarning

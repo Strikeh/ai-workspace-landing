@@ -22,383 +22,106 @@ export const blogPosts: BlogPost[] = [
     image: "/images/blog/image-gallery-hero.png",
     content: `
       <p class="text-xl leading-relaxed text-slate-300 mb-8">
-        Have you ever tried to find an image you uploaded to ChatGPT months ago? Or wanted to revisit that perfect DALL-E generation from a conversation you can barely remember? ChatGPT's native interface only shows you recent images from the latest DALL-E model — leaving years of visual content buried and inaccessible.
+        If you've been using ChatGPT for a while, you know the frustration: you generated an amazing image three months ago, but now it's buried somewhere in your conversation history. Or you uploaded a screenshot for analysis, and now it's lost forever.
       </p>
 
       <p class="text-slate-300 mb-8">
-        <strong>AI Workspace's Image Gallery changes everything.</strong> It automatically scans all your ChatGPT conversations to retrieve every single image — both uploaded and AI-generated — from your entire history. No more digging through endless conversations. No more lost creations.
+        <strong>The reality is simple:</strong> ChatGPT is built for conversation, not asset management. Its native gallery only shows recent DALL-E generations — completely ignoring your uploads and older images.
       </p>
 
-      <div class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-xl p-6 mb-10">
-        <h3 class="text-lg font-bold text-white mt-0 mb-3">🖼️ What Makes Image Gallery Unique</h3>
-        <ul class="space-y-2 text-slate-300 m-0">
-          <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Scans ALL conversations, not just recent ones</li>
-          <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Retrieves both uploaded AND generated images</li>
-          <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Stores everything locally in IndexedDB</li>
-          <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Preserves original prompts for DALL-E images</li>
-          <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Links back to source conversations</li>
-        </ul>
+      <div class="my-8">
+        <img src="/images/blog/image-gallery-hero.png" alt="AI Workspace Image Gallery Interface" class="w-full rounded-lg border border-white/10 shadow-2xl" />
       </div>
 
-      <div class="bg-slate-800/50 rounded-xl p-6 my-8 border border-white/10">
-        <h4 class="text-emerald-400 font-bold mt-0 mb-2">🎨 AI Image Generation Prompt</h4>
-        <p class="text-slate-300 text-sm mb-4">Use this prompt to generate the hero image:</p>
-        <div class="bg-slate-900/50 p-4 rounded-lg font-mono text-xs text-slate-300 border border-white/10">
-          "A beautiful digital art gallery interface floating in a dark space, showing a grid of colorful AI-generated images and photographs, with glowing cyan connection lines linking images to conversation bubbles, modern UI design, dark theme with neon accents, 8k resolution --ar 16:9"
-        </div>
-        <div class="mt-4 text-center border-2 border-dashed border-slate-700 rounded-lg p-8">
-          <p class="text-slate-500 m-0">📸 Placeholder: Hero image showing the Image Gallery interface</p>
-        </div>
-      </div>
-
-      <h2 class="text-2xl font-bold text-white mt-12 mb-6">The Problem: ChatGPT's Hidden Image Limitation</h2>
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">The Problem: Your Visual History is Lost</h2>
 
       <p class="text-slate-300 mb-6">
-        If you've been using ChatGPT for a while, you've probably accumulated hundreds — maybe thousands — of images. Screenshots you uploaded for analysis, photos you shared for editing suggestions, and countless DALL-E generations you created over months of experimentation.
-      </p>
-
-      <p class="text-slate-300 mb-6">
-        But here's what most users don't realize: <strong>ChatGPT's native gallery only shows images from the latest DALL-E model via API</strong>. All those images from older conversations? Gone from sight. Your uploaded images? Not indexed at all.
+        Most users don't realize how much visual data they're losing. Every time you start a new chat, the images from the previous one drift further into the void.
       </p>
 
       <div class="bg-red-500/10 border border-red-500/20 rounded-xl p-6 mb-8">
-        <h4 class="text-red-400 font-bold mt-0 mb-3">❌ What ChatGPT's Native Gallery Misses</h4>
+        <h4 class="text-red-400 font-bold mt-0 mb-3">❌ Why the Native Gallery Fails</h4>
         <ul class="space-y-2 text-slate-300 m-0">
-          <li>• Images from older DALL-E versions</li>
-          <li>• Any image you've ever uploaded</li>
-          <li>• Images from archived conversations</li>
-          <li>• The original prompts used for generation</li>
-          <li>• Any organizational system (tags, filters)</li>
+          <li>• It <strong>only</strong> shows DALL-E images (no uploads)</li>
+          <li>• Limited history window</li>
+          <li>• No search functionality</li>
+          <li>• No organization or tagging</li>
         </ul>
       </div>
 
-      <div class="bg-slate-800/50 rounded-xl p-6 my-8 border border-white/10">
-        <h4 class="text-emerald-400 font-bold mt-0 mb-2">📸 Screenshot Suggestion</h4>
-        <p class="text-slate-300 text-sm mb-4">Take a screenshot showing:</p>
-        <div class="bg-slate-900/50 p-4 rounded-lg text-sm text-slate-300 border border-white/10">
-          Compare ChatGPT's limited native image view vs. AI Workspace's comprehensive Image Gallery side-by-side
-        </div>
-        <div class="mt-4 text-center border-2 border-dashed border-slate-700 rounded-lg p-8">
-          <p class="text-slate-500 m-0">📸 Placeholder: Side-by-side comparison screenshot</p>
-        </div>
-      </div>
 
-      <h2 class="text-2xl font-bold text-white mt-12 mb-6">How Image Gallery Works: Smart Sync Technology</h2>
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">The Solution: A Real Gallery for ChatGPT</h2>
 
       <p class="text-slate-300 mb-6">
-        Image Gallery uses intelligent scanning to build a complete visual archive of your ChatGPT history. Here's how the magic happens:
+        AI Workspace introduces the first <strong>comprehensive Image Gallery</strong> that lives directly inside ChatGPT. It doesn't just show you what you made today; it travels back in time to retrieve everything you've ever created or shared.
       </p>
 
       <div class="grid md:grid-cols-2 gap-6 mb-8">
         <div class="bg-slate-800/50 p-6 rounded-xl border border-white/10">
           <div class="text-3xl mb-3">🔄</div>
-          <h4 class="text-cyan-400 font-bold mt-0 mb-2">First Sync</h4>
-          <p class="text-slate-400 text-sm m-0">Scans all your ChatGPT conversations from the beginning. This initial sync can take several minutes depending on your history size, but it's a one-time process.</p>
+          <h4 class="text-cyan-400 font-bold mt-0 mb-2">Full History Sync</h4>
+          <p class="text-slate-400 text-sm m-0">We scan every conversation to index your entire visual history.</p>
         </div>
         <div class="bg-slate-800/50 p-6 rounded-xl border border-white/10">
-          <div class="text-3xl mb-3">💾</div>
-          <h4 class="text-cyan-400 font-bold mt-0 mb-2">Local Storage</h4>
-          <p class="text-slate-400 text-sm m-0">Images are saved in IndexedDB — your browser's built-in database. This means instant access without re-downloading, and your images stay private on your device.</p>
-        </div>
-        <div class="bg-slate-800/50 p-6 rounded-xl border border-white/10">
-          <div class="text-3xl mb-3">🧠</div>
-          <h4 class="text-cyan-400 font-bold mt-0 mb-2">Smart Updates</h4>
-          <p class="text-slate-400 text-sm m-0">Conversations are re-scanned after 7 days to catch any edits or additions. The system only checks what needs checking — keeping daily syncs lightning fast.</p>
-        </div>
-        <div class="bg-slate-800/50 p-6 rounded-xl border border-white/10">
-          <div class="text-3xl mb-3">⚡</div>
-          <h4 class="text-cyan-400 font-bold mt-0 mb-2">Auto Sync</h4>
-          <p class="text-slate-400 text-sm m-0">Runs daily in the background when you open the gallery. You can also force a full rescan anytime with the manual refresh button.</p>
+          <div class="text-3xl mb-3">🔒</div>
+          <h4 class="text-cyan-400 font-bold mt-0 mb-2">100% Private</h4>
+          <p class="text-slate-400 text-sm m-0">Images stored locally in your browser. No external servers, no privacy risks.</p>
         </div>
       </div>
 
-      <div class="bg-slate-800/50 rounded-xl p-6 my-8 border border-white/10">
-        <h4 class="text-emerald-400 font-bold mt-0 mb-2">📸 Screenshot Suggestion</h4>
-        <p class="text-slate-300 text-sm mb-4">Take a screenshot showing:</p>
-        <div class="bg-slate-900/50 p-4 rounded-lg text-sm text-slate-300 border border-white/10">
-          The sync progress indicator during first-time setup, showing conversations being scanned
-        </div>
-        <div class="mt-4 text-center border-2 border-dashed border-slate-700 rounded-lg p-8">
-          <p class="text-slate-500 m-0">📸 Placeholder: Sync progress indicator screenshot</p>
-        </div>
+      <div class="my-8">
+        <img src="/images/blog/image-gallery-sync.png" alt="Syncing Process" class="w-full rounded-lg border border-white/10 shadow-2xl" />
       </div>
 
-      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Feature Deep Dive: Preview & Details</h2>
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Features That Matter</h2>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Instant Preview & Metadata</h3>
+      <p class="text-slate-300 mb-4">
+        Click any image to see its full context. For DALL-E images, we retrieve the <strong>original prompt</strong> so you can recreate the style. For uploads, we show which conversation it came from.
+      </p>
+      <div class="my-8">
+        <img src="/images/blog/image-gallery-preview.png" alt="Image Preview with Metadata" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+      </div>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Batch Download</h3>
+      <p class="text-slate-300 mb-4">
+        Need to backup your work? Select multiple images (or your entire library) and download them in one click. We even include the prompts as text files.
+      </p>
+      <div class="my-8">
+        <img src="/images/blog/image-gallery-batch.png" alt="Batch Download Interface" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+      </div>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Smart Tagging</h3>
+      <p class="text-slate-300 mb-4">
+        Create custom tags like "Project Alpha," "Inspiration," or "Funny" to keep your assets organized.
+      </p>
+      <div class="my-8">
+        <img src="/images/blog/image-gallery-tags.png" alt="Tagging System" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+      </div>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Global Search</h3>
+      <p class="text-slate-300 mb-4">
+        Remember a prompt but not the image? Just type a keyword. We search through prompts and conversation titles to find the exact match.
+      </p>
+      <div class="my-8">
+        <img src="/images/blog/image-gallery-search.png" alt="Search Functionality" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Who is this for?</h2>
 
       <p class="text-slate-300 mb-6">
-        Click any image in your gallery to open a detailed preview panel. This isn't just a bigger view — it's a complete context panel that shows you everything about that image.
+        Whether you're a designer building mood boards, a developer saving UI mockups, or a marketer managing campaign assets, this gallery turns ChatGPT into a persistent asset library.
       </p>
 
-      <div class="bg-slate-800/50 rounded-xl p-6 mb-8 border border-white/10">
-        <h4 class="text-emerald-400 font-bold mt-0 mb-4">👁️ Preview Panel Features</h4>
-        <ul class="space-y-3 text-slate-300 m-0">
-          <li class="flex items-start gap-3">
-            <span class="text-cyan-400 mt-1">→</span>
-            <span><strong>Full-size preview</strong> with zoom capability for examining details</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-cyan-400 mt-1">→</span>
-            <span><strong>Conversation context</strong> — see the title and date of the source conversation</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-cyan-400 mt-1">→</span>
-            <span><strong>Original prompt text</strong> for AI-generated images — never lose your winning prompts again</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-cyan-400 mt-1">→</span>
-            <span><strong>Quick actions</strong> — download single image or share directly</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-cyan-400 mt-1">→</span>
-            <span><strong>Jump to conversation</strong> — click the title to open the full chat context</span>
-          </li>
-        </ul>
+      <div class="my-8">
+        <img src="/images/blog/image-gallery-use-cases.png" alt="Use Cases" class="w-full rounded-lg border border-white/10 shadow-2xl" />
       </div>
 
-      <div class="bg-slate-800/50 rounded-xl p-6 my-8 border border-white/10">
-        <h4 class="text-emerald-400 font-bold mt-0 mb-2">🎨 AI Image Generation Prompt</h4>
-        <p class="text-slate-300 text-sm mb-4">Use this prompt to illustrate the preview feature:</p>
-        <div class="bg-slate-900/50 p-4 rounded-lg font-mono text-xs text-slate-300 border border-white/10">
-          "A sleek UI mockup showing an image preview panel, with a large AI-generated artwork displayed, metadata showing conversation title, date, and original prompt text visible in a sidebar, dark theme interface with soft glowing borders, modern design aesthetic --ar 16:9"
-        </div>
-        <div class="mt-4 text-center border-2 border-dashed border-slate-700 rounded-lg p-8">
-          <p class="text-slate-500 m-0">📸 Placeholder: Preview panel showing image with metadata and prompt</p>
-        </div>
-      </div>
-
-      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Batch Download: Export Your Visual Archive</h2>
-
-      <p class="text-slate-300 mb-6">
-        Need to back up your images or transfer them to another tool? Image Gallery's batch download feature lets you export multiple images at once as a ZIP file, with smart filtering options.
-      </p>
-
-      <div class="grid sm:grid-cols-2 gap-4 mb-8">
-        <div class="bg-slate-800/30 p-4 rounded-lg border border-white/5">
-          <strong class="text-cyan-400 block mb-2">📅 Date Range Filter</strong>
-          <span class="text-slate-400 text-sm">Select specific time periods — last week, last month, or custom date ranges</span>
-        </div>
-        <div class="bg-slate-800/30 p-4 rounded-lg border border-white/5">
-          <strong class="text-cyan-400 block mb-2">📝 Include Prompts</strong>
-          <span class="text-slate-400 text-sm">Optionally export .txt files containing the original prompts alongside each image</span>
-        </div>
-        <div class="bg-slate-800/30 p-4 rounded-lg border border-white/5">
-          <strong class="text-cyan-400 block mb-2">🏷️ Smart Naming</strong>
-          <span class="text-slate-400 text-sm">Files are named with conversation title and timestamp for easy organization</span>
-        </div>
-        <div class="bg-slate-800/30 p-4 rounded-lg border border-white/5">
-          <strong class="text-cyan-400 block mb-2">📊 Live Count</strong>
-          <span class="text-slate-400 text-sm">See exactly how many images match your filter before downloading</span>
-        </div>
-      </div>
-
-      <div class="bg-slate-800/50 rounded-xl p-6 my-8 border border-white/10">
-        <h4 class="text-emerald-400 font-bold mt-0 mb-2">📸 Screenshot Suggestion</h4>
-        <p class="text-slate-300 text-sm mb-4">Take a screenshot showing:</p>
-        <div class="bg-slate-900/50 p-4 rounded-lg text-sm text-slate-300 border border-white/10">
-          The batch download dialog with date range picker, prompt inclusion toggle, and live image count
-        </div>
-        <div class="mt-4 text-center border-2 border-dashed border-slate-700 rounded-lg p-8">
-          <p class="text-slate-500 m-0">📸 Placeholder: Batch download dialog screenshot</p>
-        </div>
-      </div>
-
-      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Organize with Tags: Your Personal Visual System</h2>
-
-      <p class="text-slate-300 mb-6">
-        As your image collection grows, finding specific images becomes challenging. Image Gallery's tagging system lets you create a personalized organization structure that fits your workflow.
-      </p>
-
-      <div class="bg-slate-800/50 rounded-xl p-6 mb-8 border border-white/10">
-        <h4 class="text-emerald-400 font-bold mt-0 mb-4">🏷️ Tagging Features</h4>
-        <ul class="space-y-3 text-slate-300 m-0">
-          <li class="flex items-start gap-3">
-            <span class="text-cyan-400 mt-1">→</span>
-            <span><strong>Custom tags</strong> with names and colors you choose</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-cyan-400 mt-1">→</span>
-            <span><strong>Multiple tags per image</strong> — an image can be both "Logo Ideas" and "Client Work"</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-cyan-400 mt-1">→</span>
-            <span><strong>AND logic filtering</strong> — select multiple tags to find images that match ALL selected tags</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-cyan-400 mt-1">→</span>
-            <span><strong>Visual badges</strong> — tag colors appear on thumbnails for quick identification</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-cyan-400 mt-1">→</span>
-            <span><strong>Tag management</strong> — create, rename, and delete tags from a central panel</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-6 mb-8">
-        <h4 class="text-purple-400 font-bold mt-0 mb-3">💡 Pro Tip: Tag Organization Ideas</h4>
-        <ul class="space-y-2 text-slate-300 m-0">
-          <li>• <strong>By project:</strong> "Website Redesign", "Marketing Campaign", "Personal"</li>
-          <li>• <strong>By quality:</strong> "Favorites", "Needs Editing", "Final"</li>
-          <li>• <strong>By style:</strong> "Photorealistic", "Illustration", "Abstract"</li>
-          <li>• <strong>By use case:</strong> "Social Media", "Blog Headers", "Icons"</li>
-        </ul>
-      </div>
-
-      <div class="bg-slate-800/50 rounded-xl p-6 my-8 border border-white/10">
-        <h4 class="text-emerald-400 font-bold mt-0 mb-2">🎨 AI Image Generation Prompt</h4>
-        <p class="text-slate-300 text-sm mb-4">Use this prompt to illustrate the tagging feature:</p>
-        <div class="bg-slate-900/50 p-4 rounded-lg font-mono text-xs text-slate-300 border border-white/10">
-          "A UI design showing an image gallery with colorful tag badges on thumbnails, a tag filter panel on the side with different colored labels like red, blue, green, purple, images organized in a grid, dark theme interface, modern flat design style --ar 16:9"
-        </div>
-        <div class="mt-4 text-center border-2 border-dashed border-slate-700 rounded-lg p-8">
-          <p class="text-slate-500 m-0">📸 Placeholder: Image gallery with tag badges and filter panel</p>
-        </div>
-      </div>
-
-      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Search & Filter: Find Any Image in Seconds</h2>
-
-      <p class="text-slate-300 mb-6">
-        With potentially thousands of images in your collection, powerful search is essential. Image Gallery offers multiple ways to narrow down your results instantly.
-      </p>
-
-      <div class="grid md:grid-cols-2 gap-6 mb-8">
-        <div class="bg-slate-800/50 p-6 rounded-xl border border-white/10">
-          <div class="text-3xl mb-3">🔍</div>
-          <h4 class="text-cyan-400 font-bold mt-0 mb-2">Smart Search</h4>
-          <p class="text-slate-400 text-sm m-0">Search by conversation title, original prompt text, or image ID. Find that "sunset mountain landscape" prompt instantly.</p>
-        </div>
-        <div class="bg-slate-800/50 p-6 rounded-xl border border-white/10">
-          <div class="text-3xl mb-3">🎯</div>
-          <h4 class="text-cyan-400 font-bold mt-0 mb-2">Type Filter</h4>
-          <p class="text-slate-400 text-sm m-0">Toggle between all images, uploads only, or AI-generated only. Perfect for reviewing just your DALL-E creations.</p>
-        </div>
-        <div class="bg-slate-800/50 p-6 rounded-xl border border-white/10">
-          <div class="text-3xl mb-3">📱</div>
-          <h4 class="text-cyan-400 font-bold mt-0 mb-2">Grid View</h4>
-          <p class="text-slate-400 text-sm m-0">Large thumbnails for visual browsing. Ideal when you remember what an image looks like but not its name.</p>
-        </div>
-        <div class="bg-slate-800/50 p-6 rounded-xl border border-white/10">
-          <div class="text-3xl mb-3">📋</div>
-          <h4 class="text-cyan-400 font-bold mt-0 mb-2">List View</h4>
-          <p class="text-slate-400 text-sm m-0">Compact rows showing detailed metadata. Perfect for reviewing images with their prompts and dates side-by-side.</p>
-        </div>
-      </div>
-
-      <div class="bg-slate-800/50 rounded-xl p-6 my-8 border border-white/10">
-        <h4 class="text-emerald-400 font-bold mt-0 mb-2">📸 Screenshot Suggestion</h4>
-        <p class="text-slate-300 text-sm mb-4">Take screenshots showing:</p>
-        <div class="bg-slate-900/50 p-4 rounded-lg text-sm text-slate-300 border border-white/10">
-          1. Grid view with search active, showing filtered results<br/>
-          2. List view showing images with metadata columns<br/>
-          3. The type filter dropdown (All / Uploads / Generated)
-        </div>
-        <div class="mt-4 text-center border-2 border-dashed border-slate-700 rounded-lg p-8">
-          <p class="text-slate-500 m-0">📸 Placeholder: Search and filter interface screenshots</p>
-        </div>
-      </div>
-
-      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Real-World Use Cases</h2>
-
-      <p class="text-slate-300 mb-6">
-        Here's how different users are leveraging Image Gallery to supercharge their workflows:
-      </p>
-
-      <div class="space-y-4 mb-8">
-        <div class="bg-slate-800/50 p-5 rounded-xl border border-white/10">
-          <h4 class="text-cyan-400 font-bold mt-0 mb-2">🎨 Designers & Artists</h4>
-          <p class="text-slate-400 m-0">"I've generated hundreds of logo concepts over the past year. Image Gallery lets me search by prompt to find similar styles I've created before — and reuse those winning prompts."</p>
-        </div>
-        <div class="bg-slate-800/50 p-5 rounded-xl border border-white/10">
-          <h4 class="text-cyan-400 font-bold mt-0 mb-2">📊 Content Marketers</h4>
-          <p class="text-slate-400 m-0">"I batch download all my blog header images monthly, with prompts included. It's become my content archive — I can always recreate or iterate on past work."</p>
-        </div>
-        <div class="bg-slate-800/50 p-5 rounded-xl border border-white/10">
-          <h4 class="text-cyan-400 font-bold mt-0 mb-2">📚 Researchers & Academics</h4>
-          <p class="text-slate-400 m-0">"I upload diagrams and charts to ChatGPT for analysis. Now I can tag them by research project and find any visualization from any paper instantly."</p>
-        </div>
-        <div class="bg-slate-800/50 p-5 rounded-xl border border-white/10">
-          <h4 class="text-cyan-400 font-bold mt-0 mb-2">💼 Freelancers & Agencies</h4>
-          <p class="text-slate-400 m-0">"Different clients, different projects — tags keep everything organized. When a client asks for 'that image from 3 months ago,' I find it in seconds."</p>
-        </div>
-      </div>
-
-      <div class="bg-slate-800/50 rounded-xl p-6 my-8 border border-white/10">
-        <h4 class="text-emerald-400 font-bold mt-0 mb-2">🎨 AI Image Generation Prompt</h4>
-        <p class="text-slate-300 text-sm mb-4">Use this prompt for a use-case illustration:</p>
-        <div class="bg-slate-900/50 p-4 rounded-lg font-mono text-xs text-slate-300 border border-white/10">
-          "A split-screen showing four different professionals using the same image gallery app: a designer reviewing logo concepts, a marketer organizing blog images, a researcher tagging diagrams, and a freelancer presenting to a client, modern illustration style, vibrant colors on dark background --ar 16:9"
-        </div>
-        <div class="mt-4 text-center border-2 border-dashed border-slate-700 rounded-lg p-8">
-          <p class="text-slate-500 m-0">📸 Placeholder: Multi-user use case illustration</p>
-        </div>
-      </div>
-
-      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Getting Started with Image Gallery</h2>
-
-      <p class="text-slate-300 mb-6">
-        Ready to unlock your complete ChatGPT image history? Here's how to get started:
-      </p>
-
-      <div class="space-y-4 mb-8">
-        <div class="flex gap-4 items-start">
-          <div class="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0 text-cyan-400 font-bold">1</div>
-          <div>
-            <h4 class="text-white font-bold m-0">Install AI Workspace</h4>
-            <p class="text-slate-400 text-sm m-0">Get the AI Workspace Chrome extension from the Chrome Web Store</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0 text-cyan-400 font-bold">2</div>
-          <div>
-            <h4 class="text-white font-bold m-0">Open Image Gallery</h4>
-            <p class="text-slate-400 text-sm m-0">Navigate to the Image Gallery tab in the AI Workspace sidebar</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0 text-cyan-400 font-bold">3</div>
-          <div>
-            <h4 class="text-white font-bold m-0">Run Your First Sync</h4>
-            <p class="text-slate-400 text-sm m-0">Let the initial scan complete — grab a coffee while it indexes your entire history</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0 text-cyan-400 font-bold">4</div>
-          <div>
-            <h4 class="text-white font-bold m-0">Explore & Organize</h4>
-            <p class="text-slate-400 text-sm m-0">Start tagging, searching, and rediscovering images you forgot you had</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-xl p-6 mb-8">
-        <h4 class="text-emerald-400 font-bold mt-0 mb-4">🚀 Ready to Unlock Your Image History?</h4>
-        <p class="text-slate-300 mb-4">
-          Stop losing your ChatGPT images. AI Workspace's Image Gallery gives you complete access to every image you've ever uploaded or generated — organized, searchable, and always accessible.
-        </p>
+      <div class="bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-xl p-6 mt-12">
+        <h4 class="text-emerald-400 font-bold mt-0 mb-4">🚀 Start Organizing Today</h4>
         <p class="text-slate-300 m-0">
-          <strong>Your visual AI history deserves better than ChatGPT's limited native gallery. Take control today.</strong>
+          The Image Gallery is available now in AI Workspace. Install the extension, open the gallery tab, and watch your history come back to life.
         </p>
-      </div>
-
-      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Frequently Asked Questions</h2>
-
-      <div class="space-y-4 mb-8">
-        <div class="bg-slate-800/50 p-5 rounded-xl border border-white/10">
-          <h4 class="text-white font-bold mt-0 mb-2">How long does the first sync take?</h4>
-          <p class="text-slate-400 m-0">It depends on how many conversations you have. Users with hundreds of conversations typically see the initial sync complete in 5-15 minutes. After that, daily syncs are nearly instant since only new or modified conversations are scanned.</p>
-        </div>
-        <div class="bg-slate-800/50 p-5 rounded-xl border border-white/10">
-          <h4 class="text-white font-bold mt-0 mb-2">Are my images stored securely?</h4>
-          <p class="text-slate-400 m-0">Yes! All images are stored locally in your browser's IndexedDB. They never leave your device or get uploaded to any external server. Your visual history stays completely private.</p>
-        </div>
-        <div class="bg-slate-800/50 p-5 rounded-xl border border-white/10">
-          <h4 class="text-white font-bold mt-0 mb-2">Will this work with images from months/years ago?</h4>
-          <p class="text-slate-400 m-0">Absolutely! That's the whole point. Image Gallery scans your entire ChatGPT history, regardless of when images were uploaded or generated. If the conversation still exists in your ChatGPT account, we can retrieve the images.</p>
-        </div>
-        <div class="bg-slate-800/50 p-5 rounded-xl border border-white/10">
-          <h4 class="text-white font-bold mt-0 mb-2">Can I export my images with their prompts?</h4>
-          <p class="text-slate-400 m-0">Yes! The batch download feature includes an option to export .txt files containing the original prompts alongside each AI-generated image. Perfect for building your prompt library.</p>
-        </div>
       </div>
     `,
   },
@@ -416,15 +139,8 @@ export const blogPosts: BlogPost[] = [
         It is December 2025. The era of experimenting with AI in isolated sandboxes is over on Wall Street. During a recent Goldman Sachs conference in New York, the message was loud and clear: AI is operational, productivity is skyrocketing, and yes, that means banks will be doing the same (or more) work with fewer people in the future.
       </p>
 
-      <div class="bg-slate-800/50 rounded-xl p-6 my-8 border border-white/10">
-        <h4 class="text-emerald-400 font-bold mt-0 mb-2">🎨 AI Image Generation Prompt</h4>
-        <p class="text-slate-300 text-sm mb-4">Use this prompt to generate the header image:</p>
-        <div class="bg-slate-900/50 p-4 rounded-lg font-mono text-xs text-slate-300 border border-white/10">
-          "Cinematic wide shot of a futuristic Wall Street boardroom, executives looking at holographic financial data, sleek glass and steel architecture, moody lighting, cyber-finance aesthetic, 8k resolution, photorealistic --ar 16:9"
-        </div>
-        <div class="mt-4 text-center border-2 border-dashed border-slate-700 rounded-lg p-2">
-          <img src="/images/blog/wall-street-ai.png" alt="Futuristic Wall Street" class="w-full rounded-lg" />
-        </div>
+      <div class="my-8">
+        <img src="/images/blog/wall-street-ai.png" alt="Futuristic Wall Street" class="w-full rounded-lg border border-white/10 shadow-2xl" />
       </div>
 
       <p class="text-slate-300 mb-6">
@@ -441,15 +157,8 @@ export const blogPosts: BlogPost[] = [
         Lake predicts that certain operational roles will eventually see productivity gains of <strong>40% to 50%</strong> as AI becomes more deeply integrated into daily routines. These are no longer marginal improvements; this is a fundamental reshuffling of how much human labor is needed to run a bank.
       </p>
 
-      <div class="bg-slate-800/50 rounded-xl p-6 my-8 border border-white/10">
-        <h4 class="text-emerald-400 font-bold mt-0 mb-2">🎨 AI Image Generation Prompt</h4>
-        <p class="text-slate-300 text-sm mb-4">Prompt for visualizing productivity growth:</p>
-        <div class="bg-slate-900/50 p-4 rounded-lg font-mono text-xs text-slate-300 border border-white/10">
-          "Abstract data visualization showing a steep upward curve of productivity, glowing digital lines, financial symbols floating in the background, dark blue and neon green color palette, 3d render, high tech style --ar 3:2"
-        </div>
-        <div class="mt-4 text-center border-2 border-dashed border-slate-700 rounded-lg p-2">
-          <img src="/images/blog/wall-street-productivity.png" alt="Productivity Graph" class="w-full rounded-lg" />
-        </div>
+      <div class="my-8">
+        <img src="/images/blog/wall-street-productivity.png" alt="Productivity Graph" class="w-full rounded-lg border border-white/10 shadow-2xl" />
       </div>
 
       <h3 class="text-xl font-bold text-white mt-8 mb-4">Software Development in the Fast Lane</h3>
@@ -473,21 +182,9 @@ export const blogPosts: BlogPost[] = [
       </p>
 
       <div class="bg-slate-800/50 rounded-xl p-6 my-8 border border-white/10">
-        <h4 class="text-emerald-400 font-bold mt-0 mb-2">🎨 AI Image Generation Prompt</h4>
-        <p class="text-slate-300 text-sm mb-4">Prompt for the concept of a changing workplace:</p>
-        <div class="bg-slate-900/50 p-4 rounded-lg font-mono text-xs text-slate-300 border border-white/10">
-          "A lonely silhouette of a business person walking through a large, empty, high-tech corporate hallway, reflections on the floor, symbolic of workforce reduction, cinematic lighting, melancholic but modern atmosphere --ar 16:9"
-        </div>
         <div class="mt-4 text-center border-2 border-dashed border-slate-700 rounded-lg p-2">
-          <img src="/images/blog/wall-street-workforce.png" alt="Empty Hallway" class="w-full rounded-lg" />
-        </div>
-      </div>
-
-      <p class="text-slate-300 mb-6">
-        Bill Demchak of PNC painted a similar picture. His bank's headcount has been stable for ten years, despite business growth. According to him, AI is not a new direction, but an "accelerator" of this long-running trend of automation.
-      </p>
-
-      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Where AI Has the Most Impact</h2>
+          <img srcmy-8">
+        <img src="/images/blog/wall-street-workforce.png" alt="Empty Hallway" class="w-full rounded-lg border border-white/10 shadow-2xl" /ss="text-2xl font-bold text-white mt-12 mb-6">Where AI Has the Most Impact</h2>
 
       <p class="text-slate-300 mb-6">
         The biggest gains aren't being made in the flashy trading algorithms that Hollywood movies are about, but in the boring, repetitive processes. It involves work that relies heavily on documents, follows rules, and is predictable.
@@ -511,21 +208,10 @@ export const blogPosts: BlogPost[] = [
       </p>
 
       <div class="bg-slate-800/50 rounded-xl p-6 my-8 border border-white/10">
-        <h4 class="text-emerald-400 font-bold mt-0 mb-2">🎨 AI Image Generation Prompt</h4>
-        <p class="text-slate-300 text-sm mb-4">Prompt for the concept of AI Governance and Security:</p>
-        <div class="bg-slate-900/50 p-4 rounded-lg font-mono text-xs text-slate-300 border border-white/10">
-          "Digital padlock concept, glowing circuitry forming a shield around a bank vault, symbolizing AI security and governance, dark background with blue and silver accents, 3d render, isometric view --ar 1:1"
-        </div>
+       
         <div class="mt-4 text-center border-2 border-dashed border-slate-700 rounded-lg p-2">
-          <img src="/images/blog/wall-street-governance.png" alt="AI Governance Shield" class="w-full rounded-lg" />
-        </div>
-      </div>
-
-      <p class="text-slate-300 mb-6">
-        JPMorgan, for example, has developed its own "LLM Suite": a controlled environment where employees can generate and summarize content without data leaving the bank. Prompts are logged, performance is monitored for "drift" (the slow deviation of the model), and humans remain ultimately responsible for high-impact decisions.
-      </p>
-
-      <p class="text-slate-300 mb-6">
+          <img srcmy-8">
+        <img src="/images/blog/wall-street-governance.png" alt="AI Governance Shield" class="w-full rounded-lg border border-white/10 shadow-2xl" /s="text-slate-300 mb-6">
         This is crucial. US regulators (such as the Federal Reserve) require models to be explainable and traceable. "Black box" AI is a no-go in the financial world.
       </p>
 

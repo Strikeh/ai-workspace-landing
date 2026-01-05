@@ -11,6 +11,174 @@
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "smart-thread-hiding-chatgpt-lag-fix",
+    title:
+      "Smart Thread Hiding: The Secret to Lightning-Fast ChatGPT Responses",
+    excerpt:
+      "ChatGPT slowing down after 30+ messages? Smart Thread Hiding automatically manages conversation length to maintain instant responsiveness without deleting your history.",
+    date: "Jan 05, 2026",
+    readTime: "5 min read",
+    category: "Features",
+    image: "/images/blog/smart-thread-hiding-hero.png",
+    content: `
+      <p class="text-xl leading-relaxed text-slate-300 mb-8">
+        ChatGPT gets noticeably slower as conversations grow longer. What starts as instant responses gradually degrades to 10-15 second delays after 30-40 messages. This happens because ChatGPT's interface processes and renders the entire conversation history with each response - the more messages, the more lag.
+      </p>
+
+      <p class="text-slate-300 mb-8">
+        For power users having deep technical discussions or iterative work sessions, this becomes a serious productivity killer. You're forced to either start new chats constantly (losing valuable context), manually delete old messages (tedious and breaks flow), or just accept the lag.
+      </p>
+
+      <div class="my-8">
+        <img src="/images/blog/smart-thread-hiding-hero.png" alt="Smart Thread Hiding Concept" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">The Solution: Smart Thread Hiding</h2>
+
+      <p class="text-slate-300 mb-6">
+        AI Workspace Pro's <strong>Smart Thread Hiding</strong> feature automatically manages conversation length to maintain ChatGPT's responsiveness without losing your conversation history.
+      </p>
+
+      <div class="bg-slate-800/50 p-6 rounded-xl border border-white/10 mb-8">
+        <h3 class="text-xl font-bold text-white mt-0 mb-4">How it works:</h3>
+        <ol class="space-y-3 text-slate-300 m-0 pl-5">
+          <li><strong>Set your preferred visible message count</strong> (e.g., 10-15 recent messages)</li>
+          <li><strong>Toggle on Smart Thread Hiding</strong></li>
+          <li><strong>Older messages are hidden from the DOM</strong> - not deleted, just made invisible</li>
+          <li><strong>ChatGPT processes only visible messages</strong> → instant speed boost</li>
+          <li><strong>Toggle off anytime</strong> to restore full conversation view</li>
+        </ol>
+      </div>
+
+      <div class="my-8">
+        <img src="/images/blog/showinglastxofytotalmessages_toolbar.png" alt="Smart Thread Hiding Toolbar" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Key Benefits</h2>
+      <ul class="space-y-2 text-slate-300 mb-8">
+        <li>✅ <strong>10x faster responses</strong> - Even in 100+ message conversations</li>
+        <li>✅ <strong>No context loss</strong> - Full history preserved, just hidden</li>
+        <li>✅ <strong>Automatic</strong> - Set it once, forget about it</li>
+        <li>✅ <strong>Reversible</strong> - Toggle off to see full conversation anytime</li>
+        <li>✅ <strong>Smart</strong> - Keeps most recent context where it matters</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Technical Explanation</h2>
+      <p class="text-slate-300 mb-6">
+        ChatGPT's frontend renders and processes every message in the conversation DOM tree when generating responses. By selectively hiding older messages from the DOM while keeping them in local storage, we reduce the browser's rendering workload without affecting ChatGPT's server-side processing.
+      </p>
+      <p class="text-slate-300 mb-8">
+        The result: ChatGPT "sees" a shorter conversation and responds as if it's a fresh chat, while your complete history remains intact and retrievable.
+      </p>
+
+      <div class="my-8">
+        <img src="/images/blog/settings_auto_trim_long_threads.png" alt="Smart Thread Hiding Settings" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Real-World Use Case</h2>
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-red-500/10 border border-red-500/20 p-6 rounded-xl">
+          <h4 class="text-red-400 font-bold mt-0 mb-3">Before Smart Thread Hiding</h4>
+          <ul class="space-y-2 text-slate-300 m-0 text-sm">
+            <li>• Developer working on debugging session</li>
+            <li>• After 40 messages: 15+ second wait per response</li>
+            <li>• Forced to start new chat, losing debugging context</li>
+            <li>• Copy-pasting previous findings manually</li>
+          </ul>
+        </div>
+        <div class="bg-emerald-500/10 border border-emerald-500/20 p-6 rounded-xl">
+          <h4 class="text-emerald-400 font-bold mt-0 mb-3">With Smart Thread Hiding</h4>
+          <ul class="space-y-2 text-slate-300 m-0 text-sm">
+            <li>• Same 40+ message session</li>
+            <li>• Responses arrive in 2-3 seconds consistently</li>
+            <li>• Full debugging history preserved</li>
+            <li>• No workflow interruption</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Feature Comparison</h2>
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-white/10">
+              <th class="p-3 text-white">Approach</th>
+              <th class="p-3 text-white">Speed</th>
+              <th class="p-3 text-white">Context</th>
+              <th class="p-3 text-white">Manual Work</th>
+              <th class="p-3 text-white">Reversible</th>
+            </tr>
+          </thead>
+          <tbody class="text-slate-300">
+            <tr class="border-b border-white/5">
+              <td class="p-3">Start new chats</td>
+              <td class="p-3 text-emerald-400">✅ Fast</td>
+              <td class="p-3 text-red-400">❌ Lost</td>
+              <td class="p-3 text-yellow-400">⚠️ Constant</td>
+              <td class="p-3 text-red-400">❌ No</td>
+            </tr>
+            <tr class="border-b border-white/5">
+              <td class="p-3">Manual deletion</td>
+              <td class="p-3 text-emerald-400">✅ Fast</td>
+              <td class="p-3 text-yellow-400">⚠️ Partial</td>
+              <td class="p-3 text-red-400">❌ Tedious</td>
+              <td class="p-3 text-red-400">❌ No</td>
+            </tr>
+            <tr class="border-b border-white/5">
+              <td class="p-3">Do nothing</td>
+              <td class="p-3 text-red-400">❌ Slow</td>
+              <td class="p-3 text-emerald-400">✅ Full</td>
+              <td class="p-3 text-emerald-400">✅ None</td>
+              <td class="p-3">-</td>
+            </tr>
+            <tr class="bg-white/5 font-bold">
+              <td class="p-3 text-white">Smart Thread Hiding</td>
+              <td class="p-3 text-emerald-400">✅ Fast</td>
+              <td class="p-3 text-emerald-400">✅ Full</td>
+              <td class="p-3 text-emerald-400">✅ None</td>
+              <td class="p-3 text-emerald-400">✅ Yes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">User Testimonials</h2>
+      <div class="space-y-6 mb-12">
+        <blockquote class="border-l-4 border-cyan-500 pl-4 italic text-slate-300">
+          "I thought I was going crazy - ChatGPT would just hang for 10+ seconds after long sessions. Smart Thread Hiding fixed it completely. Game changer for technical work."
+          <footer class="text-cyan-400 not-italic mt-2 text-sm font-bold">- Developer</footer>
+        </blockquote>
+        <blockquote class="border-l-4 border-cyan-500 pl-4 italic text-slate-300">
+          "Finally I can have those deep, 50+ message conversations without the lag. This should be built into ChatGPT by default."
+          <footer class="text-cyan-400 not-italic mt-2 text-sm font-bold">- Product Manager</footer>
+        </blockquote>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">FAQ</h2>
+      <div class="space-y-6 mb-12">
+        <div>
+          <h4 class="text-white font-bold mb-2">Q: Does this delete my messages?</h4>
+          <p class="text-slate-300 m-0">A: No. Messages are hidden from view, not deleted. Toggle off Smart Thread Hiding anytime to see your complete conversation.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-2">Q: Will ChatGPT remember the context from hidden messages?</h4>
+          <p class="text-slate-300 m-0">A: Hidden messages are not sent to ChatGPT's API. Only visible messages count as context. For most use cases, the last 10-15 messages provide sufficient context.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-2">Q: Can I customize how many messages stay visible?</h4>
+          <p class="text-slate-300 m-0">A: Yes. Set your preferred message count in settings (recommended: 10-15 messages).</p>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-xl p-6 mt-12">
+        <h4 class="text-emerald-400 font-bold mt-0 mb-4">🚀 Stop choosing between speed and context</h4>
+        <p class="text-slate-300 m-0">
+          Smart Thread Hiding is available now in AI Workspace Pro. Install the extension and keep your long conversations lightning fast.
+        </p>
+      </div>
+    `,
+  },
+  {
     slug: "chatgpt-image-gallery-complete-history-uploaded-generated-images",
     title:
       "ChatGPT Image Gallery: Access Your Complete Image History (Uploads & DALL-E)",

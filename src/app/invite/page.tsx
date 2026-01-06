@@ -1,11 +1,11 @@
 ﻿"use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function InvitePage() {
+function InviteContent() {
   const searchParams = useSearchParams();
   const [refCode, setRefCode] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -235,5 +235,22 @@ export default function InvitePage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function InvitePage() {
+  return (
+    <Suspense
+      fallback={
+        <div
+          className="min-h-screen flex items-center justify-center"
+          style={{ background: "var(--color-bg-primary)" }}
+        >
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-cyan-500"></div>
+        </div>
+      }
+    >
+      <InviteContent />
+    </Suspense>
   );
 }

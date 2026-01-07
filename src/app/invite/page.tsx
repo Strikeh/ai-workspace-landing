@@ -9,6 +9,7 @@ function InviteContent() {
   const searchParams = useSearchParams();
   const [refCode, setRefCode] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [copied, setCopied] = useState(false);
 
   // Chrome Web Store URL - Replace with actual extension ID
   const CHROME_STORE_URL =
@@ -124,12 +125,82 @@ function InviteContent() {
             </p>
 
             {/* Discount Badge */}
-            <div className="inline-block mb-12">
+            <div className="inline-block mb-8">
               <div className="relative px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30">
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-2xl blur-xl"></div>
                 <p className="relative text-2xl font-bold text-emerald-400">
-                  🎁 Get 20% OFF Your First Month!
+                  🎁 Get Your First Month at a Special Price!
                 </p>
+              </div>
+            </div>
+
+            {/* Promo Code Box */}
+            <div className="mb-12 max-w-md mx-auto">
+              <div className="relative rounded-2xl bg-gradient-to-r from-amber-500/10 to-orange-500/10 border-2 border-amber-500/30 p-6">
+                <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-orange-500/5 rounded-2xl blur-lg"></div>
+                <div className="relative">
+                  <p className="text-sm text-slate-400 mb-3 text-center">
+                    Use this code at checkout:
+                  </p>
+                  <div className="flex items-center gap-3 bg-slate-900/50 rounded-xl p-4 border border-amber-500/20">
+                    <div className="flex-1">
+                      <code className="text-2xl md:text-3xl font-bold text-amber-400 tracking-wider">
+                        FRIEND20
+                      </code>
+                    </div>
+                    <button
+                      onClick={() => {
+                        navigator.clipboard.writeText("FRIEND20");
+                        setCopied(true);
+                        setTimeout(() => setCopied(false), 2000);
+                      }}
+                      className="flex items-center gap-2 px-4 py-2 bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/30 rounded-lg transition-all duration-200 hover:scale-105"
+                    >
+                      {copied ? (
+                        <>
+                          <svg
+                            className="w-5 h-5 text-emerald-400"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                          <span className="text-sm font-medium text-emerald-400">
+                            Copied!
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          <svg
+                            className="w-5 h-5 text-amber-400"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                            />
+                          </svg>
+                          <span className="text-sm font-medium text-amber-400">
+                            Copy
+                          </span>
+                        </>
+                      )}
+                    </button>
+                  </div>
+                  <p className="text-xs text-slate-500 mt-3 text-center">
+                    💰 Save 20% on your first month subscription
+                  </p>
+                </div>
               </div>
             </div>
           </div>

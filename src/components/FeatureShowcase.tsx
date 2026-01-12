@@ -54,6 +54,7 @@ interface Feature {
   video?: string;
   image?: string;
   isWip?: boolean;
+  isNew?: boolean;
   link?: string;
 }
 
@@ -209,8 +210,10 @@ const featureData: Record<Tab, { features: Feature[] }> = {
       {
         icon: LinkIcon,
         title: "Reference Chats",
-        description: "Link related conversations together",
+        description:
+          "Reference older conversations in a new conversation with one click",
         image: "/images/dashboard.png",
+        isNew: true,
       },
       {
         icon: Eye,
@@ -519,6 +522,11 @@ export default function FeatureShowcase() {
                       {feature.isWip && (
                         <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">
                           WIP
+                        </span>
+                      )}
+                      {feature.isNew && (
+                        <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 text-emerald-400 border border-emerald-500/30 animate-pulse">
+                          NEW
                         </span>
                       )}
                     </div>

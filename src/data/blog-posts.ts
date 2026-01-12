@@ -11,6 +11,177 @@
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "reference-chat-context-feature",
+    title:
+      "Reference Chats: Bring Context from Previous Conversations into New Chats with One Click",
+    excerpt:
+      "Never lose the context of important conversations. Reference older chats instantly and continue your work seamlessly across multiple AI sessions.",
+    date: "Jan 12, 2026",
+    readTime: "4 min read",
+    category: "Features",
+    image: "/images/blog/reference-chat-hero.png",
+    content: `
+      <p class="text-xl leading-relaxed text-slate-300 mb-8">
+        We're excited to introduce <strong>Reference Chat</strong> – a powerful new Pro feature that transforms how you work with AI across multiple conversations. With a single click, you can now reference entire previous conversations in your current chat, giving the AI complete context without manual copy-pasting.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">The Problem We're Solving</h2>
+      <p class="text-slate-300 mb-6">
+        Working with AI assistants often requires building on previous conversations. Until now, you had two frustrating options:
+      </p>
+      <ul class="space-y-2 text-slate-300 mb-8 list-disc pl-5">
+        <li><strong>Manually copy-paste</strong> entire conversations (time-consuming and error-prone)</li>
+        <li><strong>Start from scratch</strong> and lose valuable context (inefficient and incomplete)</li>
+      </ul>
+      <p class="text-slate-300 mb-8">
+        Both approaches break your workflow and limit what you can achieve with AI.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Introducing Reference Chat</h2>
+      <p class="text-slate-300 mb-6">
+        <strong>Reference Chat</strong> makes it effortless to bring context from any previous conversation into your current chat. Here's how it works:
+      </p>
+
+      <div class="bg-slate-800/50 p-6 rounded-xl border border-white/10 mb-8">
+        <h3 class="text-xl font-bold text-white mt-0 mb-4">How to Use Reference Chat</h3>
+        <ol class="space-y-3 text-slate-300 m-0 pl-5 list-decimal">
+          <li><strong>Open any chat</strong> in your vault sidebar</li>
+          <li><strong>Right-click</strong> on the conversation you want to reference</li>
+          <li><strong>Select "Reference this chat"</strong> from the context menu</li>
+          <li>The conversation is <strong>instantly attached</strong> to your current chat as a text file</li>
+        </ol>
+      </div>
+
+      <div class="my-8">
+        <img src="/images/blog/reference-chat-workflow.png" alt="Reference Chat Workflow" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+      </div>
+
+      <p class="text-slate-300 mb-8">
+        That's it! The AI now has full access to the referenced conversation and can reason across both chats.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Real-World Use Cases</h2>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-slate-800/30 border border-white/10 p-6 rounded-xl">
+          <h4 class="text-purple-400 font-bold mt-0 mb-3">Complex Research & Analysis</h4>
+          <p class="text-slate-300 text-sm mb-2">Build comprehensive reports by referencing multiple research conversations:</p>
+          <ul class="space-y-1 text-slate-400 text-sm list-disc pl-4">
+            <li>Reference a technical discussion from last week</li>
+            <li>Add insights from a brainstorming session</li>
+            <li>Combine findings from different expert consultations</li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-800/30 border border-white/10 p-6 rounded-xl">
+          <h4 class="text-blue-400 font-bold mt-0 mb-3">Software Development</h4>
+          <p class="text-slate-300 text-sm mb-2">Continue code discussions across multiple sessions:</p>
+          <ul class="space-y-1 text-slate-400 text-sm list-disc pl-4">
+            <li>Reference architecture decisions from previous chats</li>
+            <li>Connect bug fixes to original feature discussions</li>
+            <li>Link implementation details across sprint conversations</li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-800/30 border border-white/10 p-6 rounded-xl">
+          <h4 class="text-green-400 font-bold mt-0 mb-3">Content Creation</h4>
+          <p class="text-slate-300 text-sm mb-2">Build cohesive content by connecting related discussions:</p>
+          <ul class="space-y-1 text-slate-400 text-sm list-disc pl-4">
+            <li>Reference tone guidelines from brand strategy chat</li>
+            <li>Connect product benefits discussed in earlier sessions</li>
+            <li>Link audience insights from research conversations</li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-800/30 border border-white/10 p-6 rounded-xl">
+          <h4 class="text-amber-400 font-bold mt-0 mb-3">Legal & Professional Work</h4>
+          <p class="text-slate-300 text-sm mb-2">Maintain context across complex case work:</p>
+          <ul class="space-y-1 text-slate-400 text-sm list-disc pl-4">
+            <li>Reference precedent discussions from previous analyses</li>
+            <li>Connect client requirements across multiple consultations</li>
+            <li>Link research findings to current case strategy</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Why Reference Chat is Powerful</h2>
+      <ul class="space-y-4 text-slate-300 mb-8">
+        <li class="flex items-start">
+          <span class="mr-2 text-xl">✅</span>
+          <div>
+            <strong>One-Click Simplicity</strong><br/>
+            No more copying, pasting, or manually formatting previous conversations. Reference any chat with a single click.
+          </div>
+        </li>
+        <li class="flex items-start">
+          <span class="mr-2 text-xl">✅</span>
+          <div>
+            <strong>Full Context Preservation</strong><br/>
+            The entire conversation is attached – nothing gets lost or summarized incorrectly. The AI sees everything exactly as it happened.
+          </div>
+        </li>
+        <li class="flex items-start">
+          <span class="mr-2 text-xl">✅</span>
+          <div>
+            <strong>Multi-Conversation Reasoning</strong><br/>
+            Ask questions that span multiple conversations. The AI can compare, contrast, and synthesize information across all referenced chats.
+          </div>
+        </li>
+        <li class="flex items-start">
+          <span class="mr-2 text-xl">✅</span>
+          <div>
+            <strong>Time-Saving Workflow</strong><br/>
+            What used to take 10+ minutes of copy-pasting now takes seconds. Stay in your flow and focus on thinking, not administrative tasks.
+          </div>
+        </li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Pro Feature</h2>
+      <p class="text-slate-300 mb-6">
+        Reference Chat is available exclusively for <strong>AIWorkspace Pro users</strong>.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">What Our Users Are Saying</h2>
+      <div class="space-y-6 mb-12">
+        <blockquote class="border-l-4 border-purple-500 pl-4 py-2 bg-slate-800/30 rounded-r-lg">
+          <p class="text-slate-300 italic mb-2">"Reference Chat has completely changed how I work with AI. I can now build complex analyses that span weeks of conversations without losing any context."</p>
+          <footer class="text-slate-400 text-sm">– Sarah K., Product Manager</footer>
+        </blockquote>
+        <blockquote class="border-l-4 border-blue-500 pl-4 py-2 bg-slate-800/30 rounded-r-lg">
+          <p class="text-slate-300 italic mb-2">"As a developer, being able to reference architecture decisions from previous chats while discussing implementation details is game-changing."</p>
+          <footer class="text-slate-400 text-sm">– Alex M., Senior Engineer</footer>
+        </blockquote>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Upgrade to Pro Today</h2>
+      <p class="text-slate-300 mb-6">
+        Ready to unlock the full power of context-aware AI conversations? Upgrade to AIWorkspace Pro and start using Reference Chat today.
+      </p>
+      
+      <div class="my-8 text-center">
+        <a href="/pricing" class="inline-block px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold rounded-lg transition-all transform hover:scale-105 shadow-lg shadow-purple-500/25">
+          Upgrade to Pro →
+        </a>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Frequently Asked Questions</h2>
+      <dl class="space-y-6 text-slate-300">
+        <div>
+          <dt class="font-bold text-white mb-2">Q: How many conversations can I reference in a single chat?</dt>
+          <dd class="text-slate-400 pl-4 border-l-2 border-slate-700">A: There's no limit! Reference as many conversations as you need for your work.</dd>
+        </div>
+        <div>
+          <dt class="font-bold text-white mb-2">Q: Does this work with all conversation lengths?</dt>
+          <dd class="text-slate-400 pl-4 border-l-2 border-slate-700">A: Yes, Reference Chat works with conversations of any length.</dd>
+        </div>
+        <div>
+          <dt class="font-bold text-white mb-2">Q: Is my conversation data sent to any servers?</dt>
+          <dd class="text-slate-400 pl-4 border-l-2 border-slate-700">A: No, Reference Chat works entirely locally. Your conversations are never sent to external servers.</dd>
+        </div>
+      </dl>
+    `,
+  },
+  {
     slug: "smart-thread-hiding-chatgpt-lag-fix",
     title:
       "Smart Thread Hiding: The Secret to Lightning-Fast ChatGPT Responses",

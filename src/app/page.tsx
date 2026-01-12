@@ -1616,29 +1616,52 @@ export default function Home() {
                     "Unlimited folders & prompt categories",
                     "Image Gallery - Search, View & Download All Images",
                     "Pinned Messages & Advanced Notes",
+                    {
+                      text: "Reference Chats - Link conversations with one click",
+                      badge: "NEW",
+                    },
                     "AES-256 Encryption + Autolock",
                     "Variable injection in prompts",
                     "Quick access menus",
                     "Search inside chats & prompts",
                     "Multi-platform Support (ChatGPT, Claude, Grok)",
-                    "Advanced Thread Trimming",
+                    { text: "Advanced Thread Trimming", badge: "HOT" },
                     "Audio Notifications",
                     "Prompt History & Chaining",
                     "Priority Support",
                     "Early Access to new features",
                     "Custom Themes & Colors",
                     "And many more...",
-                  ].map((feature, i) => (
-                    <li
-                      key={i}
-                      className="flex items-center gap-3 text-white text-sm"
-                    >
-                      <div className="h-5 w-5 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0">
-                        <CheckIcon className="h-3 w-3 text-cyan-400" />
-                      </div>
-                      {feature}
-                    </li>
-                  ))}
+                  ].map((feature, i) => {
+                    const isObject =
+                      typeof feature === "object" && feature !== null;
+                    const featureText = isObject ? feature.text : feature;
+                    const badge = isObject ? feature.badge : null;
+
+                    return (
+                      <li
+                        key={i}
+                        className="flex items-center gap-3 text-white text-sm"
+                      >
+                        <div className="h-5 w-5 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0">
+                          <CheckIcon className="h-3 w-3 text-cyan-400" />
+                        </div>
+                        <span className="flex items-center gap-2">
+                          {featureText}
+                          {badge === "NEW" && (
+                            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 text-emerald-400 border border-emerald-500/30">
+                              {badge}
+                            </span>
+                          )}
+                          {badge === "HOT" && (
+                            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-gradient-to-r from-orange-500/20 to-red-500/20 text-orange-400 border border-orange-500/30">
+                              🔥 {badge}
+                            </span>
+                          )}
+                        </span>
+                      </li>
+                    );
+                  })}
                 </ul>
 
                 <a

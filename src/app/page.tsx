@@ -1595,13 +1595,15 @@ export default function Home() {
                   </p>
                   <div className="mt-6 space-y-2">
                     <div className="flex items-baseline gap-2">
-                      <span className="text-2xl font-bold text-slate-500 line-through">$15.0</span>
-                      <span className="text-4xl font-bold text-white">$9.99</span>
+                      <span className="text-2xl font-bold text-slate-500 line-through">
+                        $15.0
+                      </span>
+                      <span className="text-4xl font-bold text-white">
+                        $9.99
+                      </span>
                       <span className="text-slate-500">/month</span>
                     </div>
-                    <p className="text-xs text-cyan-400">
-                      billed annually
-                    </p>
+                    <p className="text-xs text-cyan-400">billed annually</p>
                     <p className="text-sm text-slate-400 mt-2">
                       or $11.99/month (billed monthly)
                     </p>

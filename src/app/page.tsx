@@ -1405,7 +1405,7 @@ export default function Home() {
                 },
                 {
                   q: "What's the difference between Free and Pro?",
-                  a: "Free includes limited prompts and notes, 1 vault, and no encryption. Pro ($9.99/month) offers unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, GPT Manager, and multi-platform support.",
+                  a: "Free includes limited prompts and notes, 1 vault, and no encryption. Pro ($9.99/month billed annually or $11.99/month billed monthly) offers unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, unlimited folders & categories, pinned messages, and multi-platform support.",
                 },
                 {
                   q: "Can I install the extension on Microsoft Edge or Firefox?",
@@ -1550,6 +1550,9 @@ export default function Home() {
                     "Basic Notes Manager",
                     "Highlight text in chats",
                     "Trim long chat threads",
+                    "Export chats (PDF, Text, Markdown, JSON)",
+                    "Prompt Chains & Favorite Prompts",
+                    "Word & Character Counter",
                     "Limited conversation themes",
                     "Community GPT Store",
                     "Local history log",
@@ -1590,24 +1593,32 @@ export default function Home() {
                   <p className="text-cyan-200/70 text-sm">
                     Power tools for serious users.
                   </p>
-                  <div className="mt-6 flex items-baseline gap-1">
-                    <span className="text-4xl font-bold text-white">$9.99</span>
-                    <span className="text-slate-500">/month</span>
+                  <div className="mt-6 space-y-2">
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-2xl font-bold text-slate-500 line-through">$15.0</span>
+                      <span className="text-4xl font-bold text-white">$9.99</span>
+                      <span className="text-slate-500">/month</span>
+                    </div>
+                    <p className="text-xs text-cyan-400">
+                      billed annually
+                    </p>
+                    <p className="text-sm text-slate-400 mt-2">
+                      or $11.99/month (billed monthly)
+                    </p>
                   </div>
-                  <p className="text-xs text-cyan-400 mt-2">
-                    or $79.99/year (save 33%)
-                  </p>
                 </div>
 
                 <ul className="space-y-4 mb-8 flex-1">
                   {[
                     "Unlimited prompts, notes & vaults",
+                    "Unlimited folders & prompt categories",
+                    "Image Gallery - Search, View & Download All Images",
+                    "Pinned Messages & Advanced Notes",
                     "AES-256 Encryption + Autolock",
                     "Variable injection in prompts",
                     "Quick access menus",
                     "Search inside chats & prompts",
-                    "Full Image Gallery & Exports",
-                    "Multi-platform Support",
+                    "Multi-platform Support (ChatGPT, Claude, Grok)",
                     "Advanced Thread Trimming",
                     "Audio Notifications",
                     "Prompt History & Chaining",

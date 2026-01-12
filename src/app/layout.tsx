@@ -193,11 +193,12 @@ export default function RootLayout({
                     "@type": "UnitPriceSpecification",
                     price: "9.99",
                     priceCurrency: "USD",
-                    unitText: "MONTH",
+                    billingDuration: "P1Y",
+                    billingIncrement: 1,
                   },
                   availability: "https://schema.org/InStock",
                   description:
-                    "Unlimited prompts, vaults, and advanced features",
+                    "Annual billing: $9.99/month or Monthly billing: $11.99/month with unlimited prompts, encrypted storage, and premium features",
                 },
               ],
               aggregateRating: {
@@ -303,7 +304,7 @@ export default function RootLayout({
                   name: "What's the difference between Free and Pro?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Free: limited prompts and notes, 1 vault, no encryption. Pro ($9.99/month): unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, GPT Manager, multi-platform support, and version history.",
+                    text: "Free: limited prompts and notes, 1 vault, no encryption. Pro ($9.99/month billed annually or $11.99/month billed monthly): unlimited prompts, vaults, and notes, unlimited folders & categories, encrypted storage, full Image Gallery with search and download, pinned messages, GPT Manager, multi-platform support, and version history.",
                   },
                 },
               ],

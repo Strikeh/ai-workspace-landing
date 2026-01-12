@@ -183,13 +183,16 @@ export default function TermsPage() {
               4.2 Pro Version
             </h3>
             <p className="mb-3" style={{ color: "var(--color-text)" }}>
-              The Pro version ($9.99/month or $79.99/year) includes:
+              The Pro version ($9.99/month billed annually or $11.99/month billed monthly) includes:
             </p>
             <ul
               className="list-disc list-inside space-y-2"
               style={{ color: "var(--color-text-secondary)" }}
             >
               <li>Unlimited prompts, vaults, and notes</li>
+              <li>Unlimited folders & prompt categories</li>
+              <li>Image Gallery with search and download capabilities</li>
+              <li>Pinned messages & advanced notes</li>
               <li>End-to-end encrypted storage</li>
               <li>Full Image Gallery access</li>
               <li>GPT Manager with discovery features</li>

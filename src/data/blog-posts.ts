@@ -11,6 +11,232 @@
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "master-chatgpt-with-smart-highlights",
+    title: "Master Your ChatGPT Conversations with Smart Highlights",
+    excerpt:
+      "Never lose important insights again. Learn how to highlight, organize, and manage key moments in your AI conversations with shortcuts and smart tools.",
+    date: "Jan 14, 2026",
+    readTime: "6 min read",
+    category: "Guides",
+    image: "/images/blog/highlights-hero.png",
+    content: `
+      <p class="text-xl leading-relaxed text-slate-300 mb-8">
+        Imagine reading a book and using a highlighter to mark important passages. Now bring that same power to your ChatGPT conversations. Whether it's a brilliant code solution, a creative idea, or an insightful explanation - you can now capture and organize these moments effortlessly.
+      </p>
+
+      <div class="my-8">
+        <video controls class="w-full rounded-lg border border-white/10 shadow-2xl">
+          <source src="/videos/highlights-demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="text-sm text-slate-500 mt-2 text-center">Watch a complete walkthrough of the highlights feature in action.</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">What Are Conversation Highlights?</h2>
+      <p class="text-slate-300 mb-6">
+        With AI Workspace's Highlights feature, you can:
+      </p>
+      <ul class="space-y-2 text-slate-300 mb-8 list-none pl-0">
+        <li class="flex items-center"><span class="mr-3 text-lg">🎯</span> Mark important text instantly with keyboard shortcuts</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">🎨</span> Color-code highlights for different purposes</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">📝</span> Add private notes to remember context</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">🔍</span> Find any highlight across all conversations in seconds</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">📊</span> Manage hundreds of highlights from a centralized dashboard</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Creating Your First Highlight</h2>
+      
+      <div class="mb-8">
+        <h3 class="text-xl font-bold text-purple-400 mb-4">The Quick Way: Keyboard Shortcut</h3>
+        <ol class="space-y-2 text-slate-300 list-decimal pl-5 mb-6">
+          <li><strong>Select the text</strong> you want to highlight</li>
+          <li>Press <kbd class="px-2 py-1 bg-slate-700 rounded text-sm text-white">Ctrl+Shift+H</kbd></li>
+          <li>The text is instantly highlighted!</li>
+        </ol>
+
+        <h3 class="text-xl font-bold text-blue-400 mb-4">Choose Your Color First</h3>
+        <p class="text-slate-300 mb-4">Before highlighting, pick your color from the smart toolbar:</p>
+        <ol class="space-y-2 text-slate-300 list-decimal pl-5 mb-6">
+          <li><strong>Look for the highlighter icon</strong> 🖊️ at the top of the ChatGPT page</li>
+          <li><strong>Click the colored highlighter button</strong> to open the color picker</li>
+          <li><strong>Select your preferred color</strong> from the 7 available options</li>
+          <li>Now all new highlights will use this color until you change it</li>
+        </ol>
+
+        <h3 class="text-xl font-bold text-green-400 mb-4">Alternative: Right-Click Menu</h3>
+        <ol class="space-y-2 text-slate-300 list-decimal pl-5">
+          <li><strong>Select the text</strong> you want to highlight</li>
+          <li><strong>Right-click</strong> on the selection</li>
+          <li>Choose <strong>"Highlight Text"</strong> from the menu</li>
+          <li>Pick a color and add a note</li>
+        </ol>
+      </div>
+
+      <div class="my-8 bg-slate-800/50 p-6 rounded-xl border border-white/10">
+        <h3 class="text-xl font-bold text-white mb-4">Available Colors</h3>
+        <p class="text-slate-300 mb-4">Choose from 7 distinct colors to organize your highlights:</p>
+        <div class="flex flex-wrap gap-4">
+          <div class="w-8 h-8 rounded bg-yellow-400 border border-white/10" title="Yellow"></div>
+          <div class="w-8 h-8 rounded bg-green-400 border border-white/10 relative">
+             <div class="absolute inset-0 flex items-center justify-center text-slate-900 font-bold">✓</div>
+          </div>
+          <div class="w-8 h-8 rounded bg-blue-400 border border-white/10" title="Blue"></div>
+          <div class="w-8 h-8 rounded bg-rose-400 border border-white/10" title="Red"></div>
+          <div class="w-8 h-8 rounded bg-purple-400 border border-white/10" title="Purple"></div>
+          <div class="w-8 h-8 rounded bg-pink-400 border border-white/10" title="Pink"></div>
+          <div class="w-8 h-8 rounded bg-orange-400 border border-white/10" title="Orange"></div>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">The Smart Highlights Toolbar</h2>
+      <p class="text-slate-300 mb-6">
+        When you're in a conversation with highlights, the smart toolbar appears at the top, offering quick navigation and controls.
+      </p>
+      
+      <div class="my-6 p-4 bg-slate-800 border-l-4 border-blue-500 rounded-r-lg">
+        <p class="text-slate-300 m-0"><strong>Toolbar Features:</strong> Color Picker, Highlight Counter, Navigation Arrows, Clear Highlights, and Quick Access to Manager.</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">The Highlights Management Screen</h2>
+      <p class="text-slate-300 mb-6">
+        Access your complete highlights library by clicking the Highlighter icon 🖊️ or pressing <kbd class="px-2 py-1 bg-slate-700 rounded text-sm text-white">Ctrl+Shift+L</kbd>.
+      </p>
+
+      <div class="my-8">
+        <img src="/images/blog/highlights-manager-overview.png" alt="Highlights Management Screen" class="w-full rounded-lg border border-white/10 shadow-lg" />
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div>
+          <h4 class="text-lg font-bold text-white mb-3">Powerful Search & Filter</h4>
+          <p class="text-slate-300 text-sm mb-4">Instantly find what you need by filtering based on:</p>
+          <ul class="list-disc pl-5 text-slate-400 space-y-1 text-sm">
+            <li><strong>Filter by Color:</strong> Click color badges to filter (e.g., see only "Green" solutions)</li>
+            <li><strong>Search Text:</strong> Find specific words in highlights or notes</li>
+            <li><strong>Conversation:</strong> Search by source conversation title</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-white mb-3">Professional Highlight Cards</h4>
+          <p class="text-slate-300 text-sm mb-4">Each card is designed for clarity:</p>
+          <ul class="list-disc pl-5 text-slate-400 space-y-1 text-sm">
+            <li><strong>Color Badge:</strong> Instant category recognition</li>
+            <li><strong>Quick Actions:</strong> Copy, Open, or Delete in one click</li>
+            <li><strong>Bulk Operations:</strong> Select multiple cards to delete in bulk</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Real-World Use Cases</h2>
+
+      <div class="space-y-6">
+        <div class="bg-slate-800/30 border border-white/10 p-6 rounded-xl">
+          <div class="flex items-center mb-3">
+            <span class="text-2xl mr-3">📚</span>
+            <h4 class="text-white font-bold m-0">Research & Learning</h4>
+          </div>
+          <p class="text-slate-300 text-sm mb-3">Learning a new framework? Build a searchable knowledge base.</p>
+          <div class="flex gap-2">
+            <span class="text-xs px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded border border-yellow-500/30">Key Concepts</span>
+            <span class="text-xs px-2 py-1 bg-green-500/20 text-green-300 rounded border border-green-500/30">Working Code</span>
+            <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded border border-blue-500/30">Questions</span>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/30 border border-white/10 p-6 rounded-xl">
+          <div class="flex items-center mb-3">
+            <span class="text-2xl mr-3">🐛</span>
+            <h4 class="text-white font-bold m-0">Code Review & Debugging</h4>
+          </div>
+          <p class="text-slate-300 text-sm mb-3">Create a personal debugging playbook from solved issues.</p>
+          <div class="flex gap-2">
+            <span class="text-xs px-2 py-1 bg-red-500/20 text-red-300 rounded border border-red-500/30">Bug Explanation</span>
+            <span class="text-xs px-2 py-1 bg-green-500/20 text-green-300 rounded border border-green-500/30">Verified Fix</span>
+            <span class="text-xs px-2 py-1 bg-pink-500/20 text-pink-300 rounded border border-pink-500/30">Why it works</span>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/30 border border-white/10 p-6 rounded-xl">
+          <div class="flex items-center mb-3">
+            <span class="text-2xl mr-3">🚀</span>
+            <h4 class="text-white font-bold m-0">Project Planning</h4>
+          </div>
+          <p class="text-slate-300 text-sm mb-3">Turn brainstorming sessions into actionable roadmaps.</p>
+          <div class="flex gap-2">
+            <span class="text-xs px-2 py-1 bg-green-500/20 text-green-300 rounded border border-green-500/30">Approved</span>
+            <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded border border-blue-500/30">Maybe</span>
+            <span class="text-xs px-2 py-1 bg-red-500/20 text-red-300 rounded border border-red-500/30">Risks</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Pro Tips</h2>
+      <dl class="space-y-6 text-slate-300">
+        <div class="pl-4 border-l-2 border-purple-500">
+          <dt class="font-bold text-white mb-1">Develop a System</dt>
+          <dd class="text-sm text-slate-400">Consistency is key. Decide what each color means for you (e.g., Green = Done, Red = Action Required) and stick to it.</dd>
+        </div>
+        <div class="pl-4 border-l-2 border-purple-500">
+          <dt class="font-bold text-white mb-1">Use Notes Liberally</dt>
+          <dd class="text-sm text-slate-400">Future you will thank present you. Always add context about <em>why</em> you highlighted something or what the next step is.</dd>
+        </div>
+        <div class="pl-4 border-l-2 border-purple-500">
+          <dt class="font-bold text-white mb-1">Use Color Filters</dt>
+          <dd class="text-sm text-slate-400">Start your day by clicking the <strong>Blue</strong> filter to find all your pending questions or TODOs.</dd>
+        </div>
+      </dl>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Keyboard Shortcuts Cheat Sheet</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-white/10">
+              <th class="py-3 px-4 text-slate-300 font-medium">Action</th>
+              <th class="py-3 px-4 text-slate-300 font-medium">Windows/Linux</th>
+              <th class="py-3 px-4 text-slate-300 font-medium">Mac</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm text-slate-400">
+            <tr class="border-b border-white/5 hover:bg-white/5">
+              <td class="py-3 px-4 font-bold text-white">Create Highlight</td>
+              <td class="py-3 px-4"><code class="bg-slate-800 px-2 py-1 rounded">Ctrl+Shift+H</code></td>
+              <td class="py-3 px-4"><code class="bg-slate-800 px-2 py-1 rounded">Cmd+Shift+H</code></td>
+            </tr>
+            <tr class="border-b border-white/5 hover:bg-white/5">
+              <td class="py-3 px-4 font-bold text-white">Open Manager</td>
+              <td class="py-3 px-4"><code class="bg-slate-800 px-2 py-1 rounded">Ctrl+Shift+L</code></td>
+              <td class="py-3 px-4"><code class="bg-slate-800 px-2 py-1 rounded">Cmd+Shift+L</code></td>
+            </tr>
+            <tr class="border-b border-white/5 hover:bg-white/5">
+              <td class="py-3 px-4 font-bold text-white">Next Highlight</td>
+              <td class="py-3 px-4"><code class="bg-slate-800 px-2 py-1 rounded">Ctrl+Shift+]</code></td>
+              <td class="py-3 px-4"><code class="bg-slate-800 px-2 py-1 rounded">Cmd+Shift+]</code></td>
+            </tr>
+            <tr class="hover:bg-white/5">
+              <td class="py-3 px-4 font-bold text-white">Prev Highlight</td>
+              <td class="py-3 px-4"><code class="bg-slate-800 px-2 py-1 rounded">Ctrl+Shift+[</code></td>
+              <td class="py-3 px-4"><code class="bg-slate-800 px-2 py-1 rounded">Cmd+Shift+[</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Privacy First</h2>
+      <p class="text-slate-300 mb-6">
+        Just like all our features, your highlights are stored <strong>locally in your browser</strong>. They are never sent to our servers or third parties. Your data remains strictly yours.
+      </p>
+
+      <hr class="border-white/10 my-12" />
+
+      <p class="text-xl text-center text-white font-bold mb-4">Start organizing your AI insights today!</p>
+      <div class="flex justify-center mb-12">
+        <a href="#" class="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-lg transition-colors">
+          Open AI Workspace Settings
+        </a>
+      </div>
+    `,
+  },
+  {
     slug: "reference-chat-context-feature",
     title:
       "Reference Chats: Bring Context from Previous Conversations into New Chats with One Click",

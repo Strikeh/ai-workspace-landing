@@ -203,7 +203,7 @@ const featureData: Record<Tab, { features: Feature[] }> = {
       },
       {
         icon: Download,
-        title: "Export (JSON/TXT/MD)",
+        title: "Export (JSON/TXT/MD/PDF)",
         description: "Export conversations in multiple formats",
         image: "/images/print.png",
       },

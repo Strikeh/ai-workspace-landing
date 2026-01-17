@@ -98,7 +98,7 @@ export default function CompleteFeatureMatrix() {
       features: [
         "Image Gallery",
         "Notes System",
-        "Export (JSON/TXT/MD)",
+        "Export (JSON/TXT/MD/PDF)",
         "Reference Chats",
         "Conversation Preview",
       ],

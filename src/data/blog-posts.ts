@@ -4570,4 +4570,204 @@ export const blogPosts: BlogPost[] = [
       </p>
     `,
   },
+  {
+    slug: "how-do-i-organize-chatgpt-prompts-guide",
+    title:
+      "How Do I Organize ChatGPT Prompts? The Complete Guide to Prompt Management",
+    excerpt:
+      "Stop losing your best prompts. Discover how AI Workspace helps you capture, categorize, variables, and reuse your ChatGPT prompts directly in your browser.",
+    date: "Jan 18, 2026",
+    readTime: "7 min read",
+    category: "Guides",
+    image: "/images/blog/prompt-management/hero-prompt-management.png",
+    content: `
+      <p class="text-xl leading-relaxed text-slate-300 mb-8">
+        If you're a serious ChatGPT user, you've probably hit this problem: you craft the perfect prompt, get amazing results, and then... it's gone. Buried somewhere in your conversation history, impossible to find when you need it again.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        Or maybe you have dozens of prompts scattered across:
+      </p>
+
+      <ul class="space-y-2 text-slate-300 mb-8 list-none pl-0">
+        <li class="flex items-center"><span class="mr-3 text-lg">📝</span> Note-taking apps</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">💾</span> Text files on your desktop</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">📧</span> Emails you sent yourself</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">🧠</span> Your memory (good luck with that)</li>
+      </ul>
+
+      <p class="text-slate-300 mb-8">
+        Sound familiar? <strong class="text-white">AI Workspace</strong> solves this chaos with a complete prompt management system built directly into your browser. It automatically captures, organizes, and helps you reuse your best prompts—without ever leaving ChatGPT, Claude, or Grok.
+      </p>
+
+      <div class="my-8">
+        <img src="/images/blog/prompt-management/hero-ui-vault.png" alt="AI Workspace prompt vault" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+        <p class="text-sm text-slate-500 mt-2 text-center">Your personal prompt command center.</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">The Problem: Prompt Chaos</h2>
+      <p class="text-slate-300 mb-6">
+        Let's be honest—prompt engineering is hard enough without having to remember where you saved that perfect prompt from three weeks ago. Here's what happens without proper prompt management:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-slate-800/50 p-6 rounded-xl border border-white/5">
+          <h4 class="text-lg font-bold text-red-400 mb-4">🔍 Discovery Problem</h4>
+          <ul class="space-y-2 text-slate-300 text-sm">
+            <li>• Can't find old prompts</li>
+            <li>• Endless history scrolling</li>
+            <li>• Rewriting from scratch</li>
+          </ul>
+        </div>
+        <div class="bg-slate-800/50 p-6 rounded-xl border border-white/5">
+          <h4 class="text-lg font-bold text-red-400 mb-4">📁 Organization Problem</h4>
+          <ul class="space-y-2 text-slate-300 text-sm">
+            <li>• No structure or folders</li>
+            <li>• Hard to categorize</li>
+            <li>• Losing related prompts</li>
+          </ul>
+        </div>
+        <div class="bg-slate-800/50 p-6 rounded-xl border border-white/5">
+          <h4 class="text-lg font-bold text-red-400 mb-4">🔄 Reusability Problem</h4>
+          <ul class="space-y-2 text-slate-300 text-sm">
+            <li>• Copy-pasting constantly</li>
+            <li>• Manual tweaking</li>
+            <li>• No chaining support</li>
+          </ul>
+        </div>
+        <div class="bg-slate-800/50 p-6 rounded-xl border border-white/5">
+          <h4 class="text-lg font-bold text-red-400 mb-4">🤝 Collaboration Problem</h4>
+          <ul class="space-y-2 text-slate-300 text-sm">
+            <li>• Hard to share w/ team</li>
+            <li>• No standardized format</li>
+            <li>• Siloed knowledge</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="my-8">
+        <img src="/images/blog/prompt-management/chaos-vs-organized.png" alt="Chaos vs Organization" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Automatic Prompt Capture: Never Lose a Good Prompt Again</h2>
+      <p class="text-slate-300 mb-6">
+        The first feature that makes AI Workspace special? <strong class="text-white">Automatic prompt detection and logging</strong>. Every time you send a prompt to ChatGPT, Claude, or Grok, AI Workspace detects it and offers to save it to your <strong>Recent Prompts</strong> collection.
+      </p>
+
+      <ul class="space-y-2 text-slate-300 mb-8 list-none pl-0">
+        <li class="flex items-center"><span class="mr-3 text-lg">✅</span> Review recent prompts at any time</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">✅</span> Save the good ones to your permanent library</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">✅</span> Discard the experimental ones</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">✅</span> Edit before saving</li>
+      </ul>
+
+      <div class="my-8">
+        <img src="/images/blog/prompt-management/recent-prompts-capture.png" alt="Auto-detected recent prompts" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">The Prompt Vault: Your Personal Prompt Library</h2>
+      <p class="text-slate-300 mb-6">
+        Once you save a prompt, it goes into your <strong>Prompt Vault</strong>—a powerful, searchable library with all the organization features you need.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mb-4">Core Features</h3>
+      
+      <div class="space-y-6 mb-8">
+        <div>
+           <h4 class="text-lg font-bold text-purple-400 mb-2">📂 Categories</h4>
+           <p class="text-slate-300 mb-2">Organize prompts into categories like Marketing, Code, or Research. Each gets custom colors and icons.</p>
+           <img src="/images/blog/prompt-management/categories-grid.png" alt="Categories Grid" class="w-full rounded-lg border border-white/10 shadow-lg mb-4" />
+        </div>
+
+        <div>
+           <h4 class="text-lg font-bold text-purple-400 mb-2">🏷️ Tags</h4>
+           <p class="text-slate-300 mb-2">Add tags like <code class="bg-slate-800 px-1 py-0.5 rounded text-cyan-400 text-sm">#urgent</code> or <code class="bg-slate-800 px-1 py-0.5 rounded text-cyan-400 text-sm">#SEO</code> for cross-referencing prompts across categories.</p>
+        </div>
+
+        <div>
+           <h4 class="text-lg font-bold text-purple-400 mb-2">🔍 Search & Filter</h4>
+           <p class="text-slate-300 mb-2">Find anything instantly by title, content, tag, date, or platform.</p>
+           <img src="/images/blog/prompt-management/search-filters.png" alt="Search and Filters" class="w-full rounded-lg border border-white/10 shadow-lg" />
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Variables: Make Prompts Reusable</h2>
+      <p class="text-slate-300 mb-6">
+        With AI Workspace, you can create dynamic prompts using variables. Instead of rewriting "Write an email to John," you save:
+      </p>
+
+      <div class="bg-slate-800 p-4 rounded-lg border border-white/10 mb-6">
+        <code class="text-green-400 block font-mono">"Write a professional email to <span class="text-yellow-400">{recipient}</span> about <span class="text-yellow-400">{topic}</span>."</code>
+      </div>
+
+      <p class="text-slate-300 mb-6">
+        When you use this prompt, AI Workspace asks you to fill in the blanks. Suitable for template libraries, cold emails, or structured analysis.
+      </p>
+
+      <div class="my-8">
+        <img src="/images/blog/prompt-management/variable-input.png" alt="Variable input dialog" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Chained Prompts: Automate Multi-Step Workflows</h2>
+      <p class="text-slate-300 mb-6">
+        Execute a sequence of prompts in order. Perfect for content creation workflows like <em>Research → Outline → Draft → Polish</em>.
+      </p>
+
+      <div class="bg-slate-900 p-4 rounded-lg mb-8 overflow-x-auto text-sm font-mono text-slate-300">
+        <div class="mb-2 text-cyan-400">Chain: "Blog Post Generator"</div>
+        <div>├─ Step 1: Generate 10 ideas about {topic}</div>
+        <div>├─ Step 2: Expand idea #{idea_number} into outline</div>
+        <div>├─ Step 3: Write introduction</div>
+        <div>└─ Step 4: Write conclusion</div>
+      </div>
+
+      <div class="my-8">
+        <img src="/images/blog/prompt-management/chained-prompt-builder.png" alt="Chained Prompt Builder" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Import, Export & Teams</h2>
+      <p class="text-slate-300 mb-6">
+        Easily share prompts with your team via JSON/CSV export, or import issues directly from <strong>GitHub</strong> to turn bug reports into prompts instantly.
+      </p>
+
+      <div class="my-8">
+        <img src="/images/blog/prompt-management/github-import.png" alt="GitHub Issue Import" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Highlights: Capture Key Moments</h2>
+      <p class="text-slate-300 mb-6">
+        Not all prompts are worth saving, but sometimes the <em>answer</em> is gold. Use <strong>Highlights</strong> to mark and save specific Code snippets, strategic insights, or brilliant ideas directly from the chat stream.
+      </p>
+
+      <div class="my-8">
+        <img src="/images/blog/prompt-management/highlights-gallery.png" alt="Highlights Gallery" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Best Practices for Prompt Organization</h2>
+      <ul class="space-y-4 text-slate-300 mb-8 list-none pl-0">
+        <li class="p-4 bg-slate-800/50 rounded-lg border border-white/5">
+            <strong class="text-white block mb-1">1. Start with Categories</strong>
+            Create 5-10 broad categories (Project, Task, Client) before getting lost in tags.
+        </li>
+        <li class="p-4 bg-slate-800/50 rounded-lg border border-white/5">
+            <strong class="text-white block mb-1">2. Use Descriptive Titles</strong>
+            Avoid "Prompt 1". Use "Email subject line generator" instead.
+        </li>
+        <li class="p-4 bg-slate-800/50 rounded-lg border border-white/5">
+            <strong class="text-white block mb-1">3. Review Weekly</strong>
+            Check your "Recent Prompts" once a week to capture gems and discard duplicates.
+        </li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Conclusion</h2>
+      <p class="text-slate-300 mb-8">
+        Organizing ChatGPT prompts doesn't have to be a chore. With <strong>AI Workspace</strong>, you get automatic capture, powerful organization, reusable templates, and multi-step workflows—all in your browser.
+      </p>
+
+      <p class="text-slate-300 mb-8">
+        <strong>Ready to get organized?</strong><br />
+        <a href="https://chromewebstore.google.com/detail/ai-workspace-pro-for-chat/mngeddjcngpcdakdhfcbaefeonmmeomg" class="text-cyan-400 hover:text-cyan-300 underline">Install AI Workspace</a> and take control of your prompts.
+      </p>
+    `,
+  },
 ];

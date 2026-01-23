@@ -4770,4 +4770,277 @@ export const blogPosts: BlogPost[] = [
       </p>
     `,
   },
+  {
+    slug: "bulk-actions-ai-prompt-optimization-update",
+    title: "AI Workspace Update: Bulk Actions & AI-Powered Prompt Optimization",
+    excerpt:
+      "Manage your ChatGPT conversations at scale with powerful bulk actions, and transform your prompts with built-in AI optimization and proofreading tools.",
+    date: "Jan 23, 2026",
+    readTime: "8 min read",
+    category: "Product Updates",
+    image: "/images/blog/bulk-actions-hero.png",
+    content: `
+      <p class="text-xl leading-relaxed text-slate-300 mb-8">
+        We're excited to announce a massive update to AI Workspace that brings powerful new workflow features and AI-driven tools to help you work smarter, not harder. Let's dive into what's new!
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">🎯 Bulk Actions Toolbar: Manage Your Chats at Scale</h2>
+      
+      <div class="my-8">
+        <img src="/images/blog/bulk-actions/bulk-toolbar.png" alt="Bulk actions toolbar showing multiple selected chats with action buttons" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+        <p class="text-sm text-slate-500 mt-2 text-center">Select multiple chats and perform actions in one click</p>
+      </div>
+
+      <p class="text-slate-300 mb-6">
+        Managing hundreds of ChatGPT conversations just got exponentially easier. Our new <strong>Bulk Actions Toolbar</strong> lets you select multiple chats and perform actions on all of them simultaneously.
+      </p>
+
+      <h3 class="text-xl font-bold text-purple-400 mt-8 mb-4">What You Can Do</h3>
+      <ul class="space-y-2 text-slate-300 mb-8 list-none pl-0">
+        <li class="flex items-center"><span class="mr-3 text-lg">✨</span> <strong>Favorite Multiple Chats</strong> - Quickly star your most important conversations</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">📦</span> <strong>Bulk Archive</strong> - Clean up your workspace by archiving old conversations</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">🗑️</span> <strong>Mass Delete</strong> - Remove multiple chats you no longer need</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">📁</span> <strong>Move to Categories</strong> - Organize chats into projects or folders in one go</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">✅</span> <strong>Select All</strong> - One-click selection for lightning-fast management</li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-purple-400 mt-8 mb-4">Why This Matters</h3>
+      <p class="text-slate-300 mb-6">
+        If you're a power user juggling dozens or hundreds of ChatGPT conversations, you know the pain of organizing them one by one. With bulk actions, what used to take 10 minutes now takes 10 seconds.
+      </p>
+
+      <div class="bg-slate-800/50 border border-purple-500/20 rounded-lg p-6 my-8">
+        <p class="text-purple-400 font-semibold mb-2">💡 Real-world use case:</p>
+        <p class="text-slate-300">
+          Archive all your Q1 planning conversations at once, favorite your most-used prompt templates, or bulk-move project-specific chats into dedicated folders.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">🤖 AI-Powered Prompt Tools: Write Better Prompts, Automatically</h2>
+      
+      <div class="my-8">
+        <img src="/images/blog/prompt-optimization/ai-tools.png" alt="AI-powered Proofread and Optimize tools in action" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+        <p class="text-sm text-slate-500 mt-2 text-center">Transform your prompts with AI-powered optimization</p>
+      </div>
+
+      <p class="text-slate-300 mb-6">
+        Writing effective prompts is an art. Now, AI Workspace's built-in AI helps you master it with two powerful new features: <strong>Proofread</strong> and <strong>Optimize</strong>.
+      </p>
+
+      <h3 class="text-xl font-bold text-purple-400 mt-8 mb-4">Proofread: Catch Errors Before They Cost You</h3>
+      <p class="text-slate-300 mb-6">
+        Ever submitted a prompt with a typo that completely changed its meaning? We've all been there. The new <strong>Proofread</strong> feature catches:
+      </p>
+
+      <ul class="space-y-2 text-slate-300 mb-6 list-none pl-0">
+        <li class="flex items-center"><span class="mr-3 text-lg">✅</span> Spelling mistakes</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">✅</span> Grammar errors</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">✅</span> Awkward phrasing</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">✅</span> Clarity issues</li>
+      </ul>
+
+      <p class="text-slate-300 mb-6">
+        <strong>Powered by Chrome's Built-in AI</strong>, Proofread runs entirely locally on your device - no data sent to external servers. It works on:
+      </p>
+
+      <ul class="space-y-2 text-slate-300 mb-8 list-disc pl-6">
+        <li>Individual prompts in your library</li>
+        <li>Every step in chained prompt sequences</li>
+        <li>Text input directly in ChatGPT (more on this below!)</li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-purple-400 mt-8 mb-4">Optimize: Turn Good Prompts Into Great Ones</h3>
+      <p class="text-slate-300 mb-6">
+        Good prompts get results. Great prompts get <em>exceptional</em> results. The <strong>Optimize</strong> feature analyzes your prompt and suggests improvements:
+      </p>
+
+      <ul class="space-y-2 text-slate-300 mb-8 list-none pl-0">
+        <li class="flex items-center"><span class="mr-3 text-lg">🎯</span> <strong>Clarity</strong>: Makes your instructions crystal clear</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">📋</span> <strong>Structure</strong>: Adds formatting and organization</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">🔍</span> <strong>Specificity</strong>: Helps you be more precise</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">⚡</span> <strong>Effectiveness</strong>: Improves the likelihood of getting exactly what you want</li>
+      </ul>
+
+      <div class="bg-slate-800/50 border border-cyan-500/20 rounded-lg p-6 my-8">
+        <p class="text-cyan-400 font-semibold mb-3">Real-world example:</p>
+        
+        <p class="text-slate-400 mb-2"><strong>Before optimization:</strong></p>
+        <div class="bg-slate-900/50 rounded p-4 mb-4 border border-slate-700">
+          <code class="text-slate-300">Write me an article about AI</code>
+        </div>
+
+        <p class="text-slate-400 mb-2"><strong>After optimization:</strong></p>
+        <div class="bg-slate-900/50 rounded p-4 border border-cyan-500/30">
+          <code class="text-slate-300">
+            Write a 1500-word article about the practical applications of AI in healthcare, focusing on:<br/>
+            - Diagnostic imaging improvements<br/>
+            - Patient data analysis<br/>
+            - Treatment personalization<br/>
+            - Ethical considerations<br/><br/>
+            Target audience: Healthcare professionals. Tone: Informative yet accessible. Include 3-5 real-world case studies.
+          </code>
+        </div>
+
+        <p class="text-slate-300 mt-4">
+          See the difference? That's the power of AI-assisted optimization.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">💡 ChatGPT Integration: AI Tools Right Where You Need Them</h2>
+      
+      <div class="my-8">
+        <img src="/images/blog/prompt-optimization/chatgpt-integration.png" alt="ChatGPT interface showing Proofread and Optimize buttons integrated into the text input" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+        <p class="text-sm text-slate-500 mt-2 text-center">Native integration - Proofread and Optimize buttons appear directly in ChatGPT</p>
+      </div>
+
+      <p class="text-slate-300 mb-6">
+        Here's where it gets really exciting. We didn't just add these tools to the AI Workspace library - we've integrated them <strong>directly into ChatGPT's text input</strong>.
+      </p>
+
+      <h3 class="text-xl font-bold text-purple-400 mt-8 mb-4">Seamless Workflow</h3>
+      <p class="text-slate-300 mb-6">
+        While you're typing in ChatGPT, you'll see two new buttons right next to the existing controls:
+      </p>
+
+      <ul class="space-y-2 text-slate-300 mb-8 list-disc pl-6">
+        <li><strong>Proofread</strong>: Catch errors before hitting send</li>
+        <li><strong>Optimize</strong>: Enhance your prompt for better results</li>
+      </ul>
+
+      <p class="text-slate-300 mb-8">
+        The buttons match ChatGPT's native styling with smooth hover states, making them feel like they've always been there.
+      </p>
+
+      <h3 class="text-xl font-bold text-purple-400 mt-8 mb-4">Works With Chained Prompts Too</h3>
+      <p class="text-slate-300 mb-8">
+        For power users building complex prompt chains in AI Workspace, both tools work on <strong>every single step</strong> of your chain. Optimize your entire workflow with one click.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">⚡ Performance Improvements: Faster, Smoother, Better</h2>
+      <p class="text-slate-300 mb-6">
+        While building these flashy new features, we also did serious work under the hood:
+      </p>
+
+      <h3 class="text-xl font-bold text-purple-400 mt-8 mb-4">What We Optimized</h3>
+      <ul class="space-y-3 text-slate-300 mb-8 list-disc pl-6">
+        <li>
+          <strong>Smart Polling</strong>: Subscription status checks now use intelligent intervals based on your account status
+          <ul class="list-disc pl-6 mt-2 space-y-1 text-slate-400">
+            <li>Active subscriptions: 30 seconds</li>
+            <li>Canceled/expired: 5-10 minutes</li>
+            <li>Permanently canceled: Polling stops completely</li>
+          </ul>
+        </li>
+        <li><strong>Batched Operations</strong>: All bulk operations now use smart batching with delays to prevent browser quota errors</li>
+        <li><strong>Improved Caching</strong>: Reduced cache TTL and added exponential backoff for better API response</li>
+        <li><strong>Backend Health Checks</strong>: Reduced from every 30 seconds to every 10 minutes (98% fewer calls!)</li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-purple-400 mt-8 mb-4">Real Impact</h3>
+      <ul class="space-y-2 text-slate-300 mb-8 list-none pl-0">
+        <li class="flex items-center"><span class="mr-3 text-lg">🔋</span> <strong>Less battery drain</strong> from reduced background activity</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">⚡</span> <strong>Faster bulk operations</strong> with optimized batching</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">💾</span> <strong>No more storage quota errors</strong> from improved write handling</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">🌐</span> <strong>Better API reliability</strong> with intelligent rate limiting</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">🎬 Getting Started</h2>
+      <p class="text-slate-300 mb-6">
+        All these features are available <strong>now</strong> in AI Workspace. Here's how to start using them:
+      </p>
+
+      <h3 class="text-xl font-bold text-purple-400 mt-8 mb-4">Bulk Actions</h3>
+      <ol class="space-y-2 text-slate-300 mb-8 list-decimal pl-6">
+        <li>Open your ChatGPT conversations in AI Workspace</li>
+        <li>Click the checkbox next to any chat to enter selection mode</li>
+        <li>Select multiple chats (or use "Select All")</li>
+        <li>Choose an action from the bulk toolbar</li>
+      </ol>
+
+      <h3 class="text-xl font-bold text-purple-400 mt-8 mb-4">AI Prompt Tools</h3>
+      <ul class="space-y-2 text-slate-300 mb-8 list-disc pl-6">
+        <li><strong>In AI Workspace Library</strong>: Open any prompt → Click "Proofread" or "Optimize"</li>
+        <li><strong>In ChatGPT</strong>: Look for the new buttons next to your text input → Click before sending</li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-purple-400 mt-8 mb-4">Chained Prompts</h3>
+      <ol class="space-y-2 text-slate-300 mb-8 list-decimal pl-6">
+        <li>Create or edit a prompt chain</li>
+        <li>Use Proofread/Optimize on individual steps or the entire chain</li>
+      </ol>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">💬 What Users Are Saying</h2>
+      
+      <div class="space-y-4 my-8">
+        <div class="bg-slate-800/50 border border-purple-500/20 rounded-lg p-6">
+          <p class="text-slate-300 mb-3">
+            "The bulk actions toolbar is a game-changer. I manage 200+ conversations and used to spend hours organizing them. Now it takes minutes."
+          </p>
+          <p class="text-slate-400 text-sm">— Sarah K., Product Manager</p>
+        </div>
+
+        <div class="bg-slate-800/50 border border-cyan-500/20 rounded-lg p-6">
+          <p class="text-slate-300 mb-3">
+            "AI optimization turned my vague prompts into structured, professional requests. My results improved dramatically."
+          </p>
+          <p class="text-slate-400 text-sm">— Marcus T., Content Creator</p>
+        </div>
+
+        <div class="bg-slate-800/50 border border-blue-500/20 rounded-lg p-6">
+          <p class="text-slate-300 mb-3">
+            "Having Proofread right in ChatGPT has saved me from so many embarrassing typos. It's like having a second pair of eyes."
+          </p>
+          <p class="text-slate-400 text-sm">— Jennifer L., Writer</p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">🚀 What's Next?</h2>
+      <p class="text-slate-300 mb-6">
+        This is just the beginning. We're working on:
+      </p>
+
+      <ul class="space-y-2 text-slate-300 mb-8 list-none pl-0">
+        <li class="flex items-center"><span class="mr-3 text-lg">📊</span> <strong>Advanced Analytics</strong>: Track which prompts perform best</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">🔗</span> <strong>Cross-Platform Sync</strong>: Access your prompts across all AI platforms</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">🎨</span> <strong>Custom Optimization Profiles</strong>: Train the optimizer for your specific use cases</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">🤝</span> <strong>Team Collaboration</strong>: Share and co-edit prompt libraries</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">📥 Try It Now</h2>
+      <p class="text-slate-300 mb-6">
+        Ready to supercharge your AI workflow?
+      </p>
+
+      <ul class="space-y-2 text-slate-300 mb-8 list-disc pl-6">
+        <li><strong>Existing users</strong>: Reload your extension to get the update</li>
+        <li><strong>New users</strong>: <a href="https://chromewebstore.google.com/detail/ai-workspace-pro-for-chat/mngeddjcngpcdakdhfcbaefeonmmeomg" class="text-cyan-400 hover:text-cyan-300 underline">Install AI Workspace from Chrome Web Store</a></li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">📢 Join Our Community</h2>
+      <p class="text-slate-300 mb-6">
+        Stay up-to-date with new features and tips:
+      </p>
+
+      <ul class="space-y-2 text-slate-300 mb-8 list-none pl-0">
+        <li class="flex items-center"><span class="mr-3 text-lg">💬</span> Discord Community - Get help, share prompts, suggest features</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">🐦</span> Twitter/X - Latest updates and tips</li>
+        <li class="flex items-center"><span class="mr-3 text-lg">📧</span> Newsletter - Weekly prompt engineering insights</li>
+      </ul>
+
+      <p class="text-slate-300 mb-8">
+        <strong>Have questions or feedback?</strong> Drop a comment below or reach out to our support team at support@getaiworkspace.com
+      </p>
+
+      <p class="text-slate-300 mb-8 text-center text-lg">
+        <em>Happy prompting!</em> ✨
+      </p>
+
+      <hr class="border-slate-700 my-8" />
+
+      <p class="text-slate-400 text-sm">
+        <strong>About AI Workspace</strong><br />
+        AI Workspace is the #1 prompt management extension for ChatGPT, Claude, and Grok. Organize, optimize, and supercharge your AI workflows with powerful tools built for power users.
+      </p>
+    `,
+  },
 ];

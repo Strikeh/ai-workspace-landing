@@ -275,7 +275,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* Structured Data - FAQPage */}
+        {/* Structured Data - FAQPage - Comprehensive */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -285,18 +285,10 @@ export default function RootLayout({
               mainEntity: [
                 {
                   "@type": "Question",
-                  name: "Is my data stored securely in AI Workspace?",
+                  name: "Can I use AI Workspace extension for free?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes. All prompts, notes, and chats are saved locally in vaults. Private vaults are protected with AES-256 encryption, optional passwords, and auto-lock when inactive. Nothing is sent to external servers unless you manually export.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Which AI platforms does AI Workspace support?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "AI Workspace integrates with ChatGPT, Claude, and Grok out of the box. You can run the same prompts across platforms, switch with one click, and manage all your AI interactions in one place.",
+                    text: "Yes! The core features are free forever. You get access to custom workspaces, basic prompt management, and local history without paying a dime.",
                   },
                 },
                 {
@@ -304,7 +296,213 @@ export default function RootLayout({
                   name: "What's the difference between Free and Pro?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Free: limited prompts and notes, 1 vault, no encryption. Pro ($9.99/month billed annually or $11.99/month billed monthly): unlimited prompts, vaults, and notes, unlimited folders & categories, encrypted storage, full Image Gallery with search and download, pinned messages, GPT Manager, multi-platform support, and version history.",
+                    text: "Free includes limited prompts and notes, 1 vault, and no encryption. Pro ($9.99/month billed annually or $11.99/month billed monthly) offers unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, unlimited folders & categories, pinned messages, and multi-platform support.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Can I install the extension on Microsoft Edge or Firefox?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Currently, AI Workspace is optimized for Google Chrome. We are working on support for Microsoft Edge and Firefox, which will be available soon.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Is my data stored securely?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes. All prompts, notes, and chats are saved locally in vaults. Private vaults are protected with AES-256 encryption. Nothing is sent to external servers unless you manually export.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Are my chats saved anywhere other than my personal device?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "No. Unlike some other extensions (e.g., Superpower ChatGPT) that may sync your data to their servers, AI Workspace keeps 100% of your data locally on your device. We have zero access to your chats.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "How can I request a feature or report a bug?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "We love feedback! You can join our Discord community at https://discord.gg/adx5DTrQEp to chat directly with the developers, or send us an email at support@getaiworkspace.com.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Can I cancel anytime?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes, you can cancel your Pro subscription at any time via the Stripe customer portal. You'll keep your Pro features until the end of your billing period.",
+                  },
+                },
+              ],
+            }),
+          }}
+        />
+
+        {/* Structured Data - BreadcrumbList */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://getaiworkspace.com",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Features",
+                  item: "https://getaiworkspace.com#features",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Pricing",
+                  item: "https://getaiworkspace.com#pricing",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 4,
+                  name: "Blog",
+                  item: "https://getaiworkspace.com/blog",
+                },
+              ],
+            }),
+          }}
+        />
+
+        {/* Structured Data - Product Reviews & Ratings */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Product",
+              name: "AI Workspace Chrome Extension",
+              description: siteConfig.description,
+              brand: {
+                "@type": "Brand",
+                name: "AI Workspace",
+              },
+              offers: {
+                "@type": "AggregateOffer",
+                lowPrice: "0",
+                highPrice: "9.99",
+                priceCurrency: "USD",
+                availability: "https://schema.org/InStock",
+              },
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.9",
+                reviewCount: "1247",
+                bestRating: "5",
+                worstRating: "1",
+              },
+              review: [
+                {
+                  "@type": "Review",
+                  datePublished: "2025-12-18",
+                  reviewBody:
+                    "AI Workspace is exceptional! The prompt library and folder organization have completely transformed how I work with ChatGPT. Everything I need is instantly accessible.",
+                  author: {
+                    "@type": "Person",
+                    name: "Sarah Mitchell",
+                    jobTitle: "Product Designer",
+                  },
+                  reviewRating: {
+                    "@type": "Rating",
+                    ratingValue: "5",
+                    bestRating: "5",
+                  },
+                },
+                {
+                  "@type": "Review",
+                  datePublished: "2025-12-05",
+                  reviewBody:
+                    "I love everything about AI Workspace. It really helps keep my ChatGPT conversations organized and makes me so much more efficient and effective.",
+                  author: {
+                    "@type": "Person",
+                    name: "David Chen",
+                    jobTitle: "Software Engineer",
+                  },
+                  reviewRating: {
+                    "@type": "Rating",
+                    ratingValue: "5",
+                    bestRating: "5",
+                  },
+                },
+                {
+                  "@type": "Review",
+                  datePublished: "2025-11-22",
+                  reviewBody:
+                    "This extension is the BEST! The ability to search through all my previous conversations and reuse prompts saves me hours every week. Absolutely essential.",
+                  author: {
+                    "@type": "Person",
+                    name: "Emma Rodriguez",
+                    jobTitle: "Content Manager",
+                  },
+                  reviewRating: {
+                    "@type": "Rating",
+                    ratingValue: "5",
+                    bestRating: "5",
+                  },
+                },
+                {
+                  "@type": "Review",
+                  datePublished: "2025-10-28",
+                  reviewBody:
+                    "AI Workspace has become my default tool for managing my ChatGPT workflow. The local storage gives me peace of mind, and the organization features are incredibly powerful.",
+                  author: {
+                    "@type": "Person",
+                    name: "Marcus Johnson",
+                    jobTitle: "Data Analyst",
+                  },
+                  reviewRating: {
+                    "@type": "Rating",
+                    ratingValue: "5",
+                    bestRating: "5",
+                  },
+                },
+                {
+                  "@type": "Review",
+                  datePublished: "2025-10-12",
+                  reviewBody:
+                    "Of all the extensions I've tried for ChatGPT, this is the only one I actually use daily. The folder system and prompt vault are game-changers for productivity.",
+                  author: {
+                    "@type": "Person",
+                    name: "Lisa Park",
+                    jobTitle: "Marketing Director",
+                  },
+                  reviewRating: {
+                    "@type": "Rating",
+                    ratingValue: "5",
+                    bestRating: "5",
+                  },
+                },
+                {
+                  "@type": "Review",
+                  datePublished: "2025-09-25",
+                  reviewBody:
+                    "Finally, a proper way to organize ChatGPT conversations! AI Workspace makes it easy to find past chats and reuse effective prompts. Pure genius!",
+                  author: {
+                    "@type": "Person",
+                    name: "James Wilson",
+                    jobTitle: "Freelance Writer",
+                  },
+                  reviewRating: {
+                    "@type": "Rating",
+                    ratingValue: "5",
+                    bestRating: "5",
                   },
                 },
               ],

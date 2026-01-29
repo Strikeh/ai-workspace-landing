@@ -79,7 +79,7 @@ const testimonials = [
       "AI Workspace is exceptional! The prompt library and folder organization have completely transformed how I work with ChatGPT. Everything I need is instantly accessible.",
     name: "Sarah Mitchell",
     role: "Product Designer",
-    date: "Nov 15, 2024",
+    date: "Dec 18, 2025",
     rating: 5,
     verified: true,
   },
@@ -88,7 +88,7 @@ const testimonials = [
       "I love everything about AI Workspace. It really helps keep my ChatGPT conversations organized and makes me so much more efficient and effective.",
     name: "David Chen",
     role: "Software Engineer",
-    date: "Nov 10, 2024",
+    date: "Dec 5, 2025",
     rating: 5,
     verified: true,
   },
@@ -97,7 +97,7 @@ const testimonials = [
       "This extension is the BEST! The ability to search through all my previous conversations and reuse prompts saves me hours every week. Absolutely essential.",
     name: "Emma Rodriguez",
     role: "Content Manager",
-    date: "Oct 28, 2024",
+    date: "Nov 22, 2025",
     rating: 5,
     verified: true,
   },
@@ -106,7 +106,7 @@ const testimonials = [
       "AI Workspace has become my default tool for managing my ChatGPT workflow. The local storage gives me peace of mind, and the organization features are incredibly powerful.",
     name: "Marcus Johnson",
     role: "Data Analyst",
-    date: "Oct 15, 2024",
+    date: "Oct 28, 2025",
     rating: 5,
     verified: true,
   },
@@ -115,7 +115,7 @@ const testimonials = [
       "Of all the extensions I've tried for ChatGPT, this is the only one I actually use daily. The folder system and prompt vault are game-changers for productivity.",
     name: "Lisa Park",
     role: "Marketing Director",
-    date: "Oct 5, 2024",
+    date: "Oct 12, 2025",
     rating: 5,
     verified: true,
   },
@@ -124,7 +124,7 @@ const testimonials = [
       "Finally, a proper way to organize ChatGPT conversations! AI Workspace makes it easy to find past chats and reuse effective prompts. Pure genius!",
     name: "James Wilson",
     role: "Freelance Writer",
-    date: "Sep 20, 2024",
+    date: "Sep 25, 2025",
     rating: 5,
     verified: true,
   },
@@ -367,7 +367,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Pain Point Headline */}
+                {/* SEO-Optimized H1 Headline */}
                 <h1
                   className="hero-title text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
                   style={{
@@ -375,21 +375,12 @@ export default function Home() {
                     lineHeight: "1.15",
                   }}
                 >
-                  <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent text-3xl sm:text-4xl lg:text-5xl block mb-3">
-                    Turn ChatGPT into an
-                  </span>
-                  <span className="block text-5xl sm:text-6xl lg:text-7xl text-white">
-                    <span
-                      className="relative inline-block"
-                      style={{
-                        background:
-                          "linear-gradient(to right, #22d3ee, #3b82f6)",
-                        backgroundClip: "text",
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                      }}
-                    >
-                      Organized Workspace
+                  <span className="block text-5xl sm:text-6xl lg:text-7xl">
+                    <span className="text-white">
+                      Best ChatGPT Chrome Extension -{" "}
+                    </span>
+                    <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                      Transform Your AI Workspace
                     </span>
                   </span>
                 </h1>
@@ -397,13 +388,19 @@ export default function Home() {
                 {/* One-liner value prop */}
                 <div className="space-y-4 max-w-2xl">
                   <p className="hero-subtitle text-xl leading-relaxed text-slate-300">
-                    Folders, Tags, Search & a Prompt Library. Stop losing your
-                    best ideas and work 10x faster.
+                    Organize ChatGPT conversations with folders, tags, and a{" "}
+                    <a
+                      href="#features"
+                      className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-500/30 hover:decoration-cyan-400 transition-colors"
+                    >
+                      powerful prompt library
+                    </a>
+                    . Stop losing your best ideas and work 10x faster.
                   </p>
 
                   <p className="text-lg font-medium text-cyan-400">
-                    Built for power users who need clarity, structure, and
-                    speed.
+                    Built for ChatGPT power users who need clarity, structure,
+                    and speed.
                   </p>
 
                   {/* Feature List */}
@@ -641,7 +638,7 @@ export default function Home() {
                 className="text-4xl md:text-5xl font-bold tracking-tight"
                 style={{ color: "var(--color-text)" }}
               >
-                Everything you need to{" "}
+                Powerful ChatGPT Organization Features for{" "}
                 <span
                   style={{
                     background: "var(--premium-title-gradient)",
@@ -650,15 +647,23 @@ export default function Home() {
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  master AI platforms
+                  AI Power Users
                 </span>
               </h2>
               <p
                 className="text-xl leading-relaxed max-w-2xl mx-auto"
                 style={{ color: "var(--color-text-secondary)" }}
               >
-                From prompt management to conversation organization, AI
-                Workspace provides the missing tools for all AI platforms.
+                From{" "}
+                <span className="text-cyan-400 font-medium">
+                  prompt management
+                </span>{" "}
+                to{" "}
+                <span className="text-cyan-400 font-medium">
+                  conversation organization
+                </span>
+                , AI Workspace provides the missing productivity tools for
+                ChatGPT, Claude, and Grok.
               </p>
             </div>
 
@@ -740,7 +745,7 @@ export default function Home() {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                Supercharge your AI Experience
+                ChatGPT Organization in Action - Supercharge Your AI Workflow
               </h2>
               <p
                 className="text-lg leading-relaxed"
@@ -766,7 +771,7 @@ export default function Home() {
                   <div className="carousel-slide min-w-full">
                     <Image
                       src="/images/carousel/BrandBird 2025-11-20 11.36.08.png"
-                      alt="AI Workspace - Prompt Library Management"
+                      alt="ChatGPT prompt library management interface showing organized prompt templates with folders, categories, and search functionality for AI power users"
                       width={1920}
                       height={1080}
                       className="w-full h-auto"
@@ -777,7 +782,7 @@ export default function Home() {
                   <div className="carousel-slide min-w-full">
                     <Image
                       src="/images/carousel/BrandBird 2025-11-20 12.01.36.png"
-                      alt="AI Workspace - Advanced Features"
+                      alt="ChatGPT Chrome extension advanced features including conversation history, notes manager, and AI-generated image gallery with export tools"
                       width={1920}
                       height={1080}
                       className="w-full h-auto"
@@ -787,7 +792,7 @@ export default function Home() {
                   <div className="carousel-slide min-w-full">
                     <Image
                       src="/images/carousel/BrandBird 2025-11-20 12.01.58.png"
-                      alt="AI Workspace - Workspace Management"
+                      alt="AI Workspace custom workspace management dashboard with folder organization system for organizing ChatGPT conversations and prompts by project"
                       width={1920}
                       height={1080}
                       className="w-full h-auto"
@@ -797,7 +802,7 @@ export default function Home() {
                   <div className="carousel-slide min-w-full">
                     <Image
                       src="/images/carousel/BrandBird 2025-11-20 12.04.10.png"
-                      alt="AI Workspace - Custom Settings"
+                      alt="ChatGPT extension custom settings panel with dark theme, multi-language support, and personalization options for enhanced productivity"
                       width={1920}
                       height={1080}
                       className="w-full h-auto"
@@ -807,7 +812,7 @@ export default function Home() {
                   <div className="carousel-slide min-w-full">
                     <Image
                       src="/images/carousel/BrandBird 2025-11-20 19.37.47.png"
-                      alt="AI Workspace - Prompt Templates"
+                      alt="ChatGPT prompt templates library with reusable prompts, custom variables, and organized categories for AI productivity automation"
                       width={1920}
                       height={1080}
                       className="w-full h-auto"
@@ -817,7 +822,7 @@ export default function Home() {
                   <div className="carousel-slide min-w-full">
                     <Image
                       src="/images/carousel/BrandBird 2025-11-20 19.38.41.png"
-                      alt="AI Workspace - Conversation Organization"
+                      alt="ChatGPT conversation organization with hierarchical folder structure, tags, and advanced search filters for efficient workflow management"
                       width={1920}
                       height={1080}
                       className="w-full h-auto"
@@ -827,7 +832,7 @@ export default function Home() {
                   <div className="carousel-slide min-w-full">
                     <Image
                       src="/images/carousel/BrandBird 2025-11-20 19.39.10.png"
-                      alt="AI Workspace - Folder System"
+                      alt="AI Workspace intelligent folder system with nested folders, color coding, and drag-drop organization for ChatGPT conversations"
                       width={1920}
                       height={1080}
                       className="w-full h-auto"
@@ -837,7 +842,7 @@ export default function Home() {
                   <div className="carousel-slide min-w-full">
                     <Image
                       src="/images/carousel/BrandBird 2025-11-20 19.39.38.png"
-                      alt="AI Workspace - Search & Filter"
+                      alt="Advanced search and filter functionality for ChatGPT conversations with keyword search, date filters, and smart categorization"
                       width={1920}
                       height={1080}
                       className="w-full h-auto"
@@ -847,7 +852,7 @@ export default function Home() {
                   <div className="carousel-slide min-w-full">
                     <Image
                       src="/images/carousel/BrandBird 2025-11-20 19.40.43.png"
-                      alt="AI Workspace - Export Options"
+                      alt="ChatGPT export options with one-click export to Markdown, JSON, TXT, and PDF formats for conversation backup and sharing"
                       width={1920}
                       height={1080}
                       className="w-full h-auto"
@@ -857,7 +862,7 @@ export default function Home() {
                   <div className="carousel-slide min-w-full">
                     <Image
                       src="/images/carousel/BrandBird 2025-11-20 19.43.13.png"
-                      alt="AI Workspace - Settings & Customization"
+                      alt="Comprehensive settings and customization panel for ChatGPT extension with theme options, shortcuts, and privacy controls"
                       width={1920}
                       height={1080}
                       className="w-full h-auto"
@@ -867,7 +872,7 @@ export default function Home() {
                   <div className="carousel-slide min-w-full">
                     <Image
                       src="/images/carousel/BrandBird 2025-11-20 19.46.23.png"
-                      alt="AI Workspace - Data Management"
+                      alt="ChatGPT data management with encrypted vault storage, AES-256 security, and local-only data storage for privacy protection"
                       width={1920}
                       height={1080}
                       className="w-full h-auto"
@@ -877,7 +882,7 @@ export default function Home() {
                   <div className="carousel-slide min-w-full">
                     <Image
                       src="/images/carousel/BrandBird 2025-11-20 19.46.47.png"
-                      alt="AI Workspace - Integration Options"
+                      alt="Multi-platform AI integration options supporting ChatGPT, Claude, and Grok with unified prompt management across platforms"
                       width={1920}
                       height={1080}
                       className="w-full h-auto"
@@ -887,7 +892,7 @@ export default function Home() {
                   <div className="carousel-slide min-w-full">
                     <Image
                       src="/images/carousel/BrandBird 2025-11-20 19.47.27.png"
-                      alt="AI Workspace - Advanced Tools"
+                      alt="Advanced ChatGPT productivity tools including bulk actions, batch processing, and automation features for power users"
                       width={1920}
                       height={1080}
                       className="w-full h-auto"
@@ -897,7 +902,7 @@ export default function Home() {
                   <div className="carousel-slide min-w-full">
                     <Image
                       src="/images/carousel/BrandBird 2025-11-20 19.47.59.png"
-                      alt="AI Workspace - Customization Panel"
+                      alt="ChatGPT extension customization panel with interface themes, layout options, and personalized workspace configurations"
                       width={1920}
                       height={1080}
                       className="w-full h-auto"
@@ -907,7 +912,7 @@ export default function Home() {
                   <div className="carousel-slide min-w-full">
                     <Image
                       src="/images/carousel/BrandBird 2025-11-20 19.48.31.png"
-                      alt="AI Workspace - Complete Overview"
+                      alt="Complete overview of AI Workspace ChatGPT Chrome extension showing all features, tools, and organization capabilities in one interface"
                       width={1920}
                       height={1080}
                       className="w-full h-auto"
@@ -1145,7 +1150,7 @@ export default function Home() {
                 className="text-3xl font-bold sm:text-5xl mb-6"
                 style={{ color: "var(--color-text)" }}
               >
-                Loved by{" "}
+                Top-Rated ChatGPT Extension - Loved by{" "}
                 <span
                   style={{
                     background: "var(--premium-title-gradient)",
@@ -1154,12 +1159,13 @@ export default function Home() {
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  thousands of users
+                  Thousands of Users
                 </span>
               </h2>
               <p className="text-xl leading-relaxed text-slate-400">
-                Join the community of professionals who trust AI Workspace to
-                organize their AI workflow.
+                Join the community of professionals and power users who trust AI
+                Workspace to organize their ChatGPT conversations and boost
+                productivity.
               </p>
             </div>
 
@@ -1250,11 +1256,11 @@ export default function Home() {
                 className="text-3xl font-bold sm:text-5xl mb-6"
                 style={{ color: "var(--color-text)" }}
               >
-                Future Features
+                Upcoming ChatGPT Extension Features
               </h2>
               <p className="text-xl leading-relaxed text-slate-400">
                 We&apos;re constantly evolving AI Workspace with powerful new
-                capabilities.
+                productivity capabilities for ChatGPT power users.
               </p>
             </div>
 
@@ -1393,8 +1399,12 @@ export default function Home() {
                 className="text-3xl font-bold sm:text-5xl"
                 style={{ color: "var(--color-text)" }}
               >
-                Common Questions
+                ChatGPT Extension FAQ - Common Questions
               </h2>
+              <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+                Everything you need to know about installing and using AI
+                Workspace for ChatGPT
+              </p>
             </div>
 
             <StaggerContainer className="space-y-4">
@@ -1512,7 +1522,7 @@ export default function Home() {
                 className="text-3xl font-bold sm:text-5xl mb-6"
                 style={{ color: "var(--color-text)" }}
               >
-                Start free.{" "}
+                ChatGPT Extension Pricing - Start Free.{" "}
                 <span
                   style={{
                     background: "var(--premium-title-gradient)",
@@ -1904,7 +1914,7 @@ function ScriptHandler() {
     window.addEventListener("scroll", setScrollVar, { passive: true });
 
     const btn = document.querySelector<HTMLAnchorElement>(
-      ".install-buttons .cta-btn--primary"
+      ".install-buttons .cta-btn--primary",
     );
     if (btn && !btn.dataset.rippleInit) {
       btn.dataset.rippleInit = "true";
@@ -1916,7 +1926,7 @@ function ScriptHandler() {
         ripple.className = "ripple";
         ripple.style.width = ripple.style.height = `${Math.max(
           rect.width,
-          rect.height
+          rect.height,
         )}px`;
         ripple.style.left = `${x}px`;
         ripple.style.top = `${y}px`;

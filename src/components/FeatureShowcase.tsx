@@ -114,6 +114,14 @@ const featureData: Record<Tab, { features: Feature[] }> = {
   performance: {
     features: [
       {
+        icon: Compass,
+        title: "Smart Conversation Outline",
+        description:
+          "Navigate long AI conversations instantly with an interactive sidebar that shows every message and lets you jump to any point with one click",
+        image: "/images/carousel/BrandBird 2025-11-20 19.46.23.png",
+        isNew: true,
+      },
+      {
         icon: Highlighter,
         title: "Text Highlighting",
         description:
@@ -139,12 +147,6 @@ const featureData: Record<Tab, { features: Feature[] }> = {
         title: "Audio Notifications",
         description: "Get notified when AI responses are ready",
         image: "/images/carousel/BrandBird 2025-11-20 19.43.13.png",
-      },
-      {
-        icon: Compass,
-        title: "Smart Navigation",
-        description: "Jump between highlighted sections instantly",
-        image: "/images/carousel/BrandBird 2025-11-20 19.46.23.png",
       },
     ],
   },

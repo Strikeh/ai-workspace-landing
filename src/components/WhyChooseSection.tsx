@@ -5,6 +5,12 @@ import { FadeIn, StaggerContainer, StaggerItem } from "./ScrollAnimation";
 
 const features = [
   {
+    title: "Stop Scrolling. Start Navigating.",
+    description:
+      "Lost in a 100-message conversation? Our Smart Conversation Outline gives you a floating sidebar with every message mapped out. Jump to any point with one click, filter by user or AI responses, and use keyboard shortcuts to navigate like a pro.",
+    video: "/videos/organize like a pro.mp4",
+  },
+  {
     title: "Organize Like a Pro",
     description:
       "Structure your creative chaos with folders, tags, and categories. Whether you're juggling client projects or building a personal prompt library, everything stays searchable, sortable, and stupidly simple to use.",
@@ -15,12 +21,6 @@ const features = [
     description:
       "Add dynamic variables to your prompts and reuse them across projects. Customize outputs on the fly without writing the same thing twice. One prompt, endless use cases.",
     video: "/videos/variables.mp4",
-  },
-  {
-    title: "Powerful Prompt Chaining",
-    description:
-      "Don't stop at one question. Chain multiple prompts together to build complex workflows. Let the AI handle multi-step reasoning while you sit back and watch the magic happen.",
-    video: "/videos/prompt chaining.mp4",
   },
 ];
 

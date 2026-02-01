@@ -51,11 +51,11 @@ export default function CompleteFeatureMatrix() {
       borderColor: "hover:border-cyan-500/30",
       blobColor: "bg-cyan-500/10",
       features: [
+        "Conversation Outline ✨",
         "Text Highlighting",
         "Thread Trimming",
         "73% Memory Saving",
         "Audio Notifications",
-        "Smart Navigation",
       ],
     },
     {

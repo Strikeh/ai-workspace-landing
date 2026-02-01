@@ -11,6 +11,137 @@
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "smart-conversation-outline-navigate-ai-chats",
+    title: "Smart Conversation Outline: Navigate Long AI Chats Like a Pro",
+    excerpt:
+      "Stop scrolling through endless messages. Jump to any point in your ChatGPT, Claude, or Grok conversations instantly with our new Smart Conversation Outline feature.",
+    date: "Jan 31, 2026",
+    readTime: "5 min read",
+    category: "Features",
+    image: "/images/blog/conversation-outline-hero.png",
+    content: `
+      <p class="text-xl leading-relaxed text-slate-300 mb-8">
+        Ever lost an important piece of information buried 50 messages deep in a ChatGPT conversation? Spent minutes scrolling up and down trying to find that code snippet the AI shared earlier? You're not alone. Long AI conversations are notoriously hard to navigate - until now.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Introducing Smart Conversation Outline</h2>
+      <p class="text-slate-300 mb-6">
+        The Smart Conversation Outline is a floating sidebar that gives you a visual map of your entire AI conversation. Think of it as a table of contents for your chat - click any message to jump directly to it.
+      </p>
+
+      <div class="my-8 bg-slate-800/50 p-6 rounded-xl border border-white/10">
+        <h3 class="text-xl font-bold text-white mb-4">Key Features at a Glance</h3>
+        <ul class="space-y-3 text-slate-300 list-none pl-0">
+          <li class="flex items-center"><span class="mr-3 text-lg">&#128506;</span> <strong>Visual conversation map</strong> - See every user/assistant exchange</li>
+          <li class="flex items-center"><span class="mr-3 text-lg">&#127919;</span> <strong>One-click jump</strong> - Navigate to any message instantly</li>
+          <li class="flex items-center"><span class="mr-3 text-lg">&#128202;</span> <strong>Progress tracking</strong> - Real-time scroll position indicator</li>
+          <li class="flex items-center"><span class="mr-3 text-lg">&#127912;</span> <strong>Smart filtering</strong> - View only your questions or AI responses</li>
+          <li class="flex items-center"><span class="mr-3 text-lg">&#128269;</span> <strong>Instant search</strong> - Find specific messages by keyword</li>
+          <li class="flex items-center"><span class="mr-3 text-lg">&#128433;</span> <strong>Fully draggable</strong> - Position it anywhere on your screen</li>
+          <li class="flex items-center"><span class="mr-3 text-lg">&#9000;</span> <strong>Keyboard shortcuts</strong> - Cmd/Ctrl + . to toggle</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">The Problem It Solves</h2>
+      <p class="text-slate-300 mb-6">
+        AI chat sessions can easily grow to 50, 100, or even 200+ exchanges. Native platforms like ChatGPT and Claude offer zero navigation structure - conversations are just endless vertical scrolls.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-red-500/10 border border-red-500/20 p-5 rounded-xl">
+          <h4 class="text-red-400 font-bold mb-2">Without Outline</h4>
+          <ul class="text-slate-400 text-sm space-y-2 list-disc pl-4">
+            <li>Scroll endlessly to find earlier messages</li>
+            <li>Lose track of where you are in the conversation</li>
+            <li>Waste minutes searching for specific information</li>
+            <li>No way to see just your questions or just AI answers</li>
+          </ul>
+        </div>
+        <div class="bg-green-500/10 border border-green-500/20 p-5 rounded-xl">
+          <h4 class="text-green-400 font-bold mb-2">With Smart Outline</h4>
+          <ul class="text-slate-400 text-sm space-y-2 list-disc pl-4">
+            <li>Jump to any message with one click</li>
+            <li>Visual progress bar shows your position</li>
+            <li>Find messages in seconds with search</li>
+            <li>Filter by user-only or assistant-only view</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">How It Works</h2>
+
+      <h3 class="text-xl font-bold text-cyan-400 mb-4">1. Open the Outline Panel</h3>
+      <p class="text-slate-300 mb-4">
+        Press <kbd class="px-2 py-1 bg-slate-700 rounded text-sm text-white">Cmd/Ctrl + .</kbd> or click the outline icon in your toolbar. The panel slides in from the right side of your screen.
+      </p>
+
+      <h3 class="text-xl font-bold text-cyan-400 mb-4">2. Navigate Your Conversation</h3>
+      <p class="text-slate-300 mb-4">
+        The panel displays a hierarchical list of all conversation turns. Click any item to instantly scroll to that exact message with smooth animation.
+      </p>
+
+      <h3 class="text-xl font-bold text-cyan-400 mb-4">3. Filter Your View</h3>
+      <p class="text-slate-300 mb-6">
+        Use the view mode toggles to show All messages, User Only (just your questions), or Assistant Only (just AI responses).
+      </p>
+
+      <h3 class="text-xl font-bold text-cyan-400 mb-4">4. Search for Specific Messages</h3>
+      <p class="text-slate-300 mb-6">
+        Type in the search bar to filter the outline in real-time. Perfect for finding that code snippet or specific topic you discussed earlier.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Keyboard Shortcuts</h2>
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-white/10">
+              <th class="py-3 px-4 text-slate-300 font-medium">Action</th>
+              <th class="py-3 px-4 text-slate-300 font-medium">Shortcut</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm text-slate-400">
+            <tr class="border-b border-white/5 hover:bg-white/5">
+              <td class="py-3 px-4 font-bold text-white">Toggle Panel</td>
+              <td class="py-3 px-4"><code class="bg-slate-800 px-2 py-1 rounded">Cmd/Ctrl + .</code></td>
+            </tr>
+            <tr class="border-b border-white/5 hover:bg-white/5">
+              <td class="py-3 px-4 font-bold text-white">Navigate Items</td>
+              <td class="py-3 px-4"><code class="bg-slate-800 px-2 py-1 rounded">Arrow Up / Down</code></td>
+            </tr>
+            <tr class="border-b border-white/5 hover:bg-white/5">
+              <td class="py-3 px-4 font-bold text-white">Jump to Selected</td>
+              <td class="py-3 px-4"><code class="bg-slate-800 px-2 py-1 rounded">Enter</code></td>
+            </tr>
+            <tr class="hover:bg-white/5">
+              <td class="py-3 px-4 font-bold text-white">Close Panel</td>
+              <td class="py-3 px-4"><code class="bg-slate-800 px-2 py-1 rounded">Escape</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Platform Support</h2>
+      <p class="text-slate-300 mb-6">
+        Smart Conversation Outline works across all major AI platforms: ChatGPT, Claude, Grok, and Gemini.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Get Started</h2>
+      <p class="text-slate-300 mb-6">
+        Smart Conversation Outline is available now as part of AI Workspace Pro. Start navigating your AI conversations like a pro today!
+      </p>
+
+      <div class="flex justify-center mb-8">
+        <a href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg" target="_blank" rel="noopener" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold rounded-lg transition-all shadow-lg shadow-cyan-500/25">
+          Try AI Workspace Pro
+        </a>
+      </div>
+
+      <p class="text-center text-slate-500 text-sm">
+        Released in version 0.1.61 (January 30, 2026) - Desktop/tablet only
+      </p>
+    `,
+  },
+  {
     slug: "master-chatgpt-with-smart-highlights",
     title: "Master Your ChatGPT Conversations with Smart Highlights",
     excerpt:

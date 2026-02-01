@@ -406,9 +406,9 @@ export default function Home() {
                   {/* Feature List */}
                   <ul className="grid grid-cols-1 gap-y-3 pt-4">
                     {[
-                      "Organize chats with Folders & Tags",
+                      "Navigate long chats with Smart Outline",
+                      "Organize with Folders & Tags",
                       "Sync across ChatGPT, Claude & Grok",
-                      "Save prompts with variables",
                     ].map((feature, i) => (
                       <li
                         key={i}
@@ -470,10 +470,10 @@ export default function Home() {
                   <span className="text-slate-300 font-medium">
                     Highlights:{" "}
                   </span>
-                  Sidebar inside ChatGPT, nested folders, full‑text search,
-                  prompt library, image gallery, GPT store manager, smart tags,
-                  bulk actions, encrypted workspaces, and multiple export
-                  formats — all in one place.
+                  Smart conversation outline, sidebar inside ChatGPT, nested
+                  folders, full‑text search, prompt library, image gallery, GPT
+                  store manager, smart tags, bulk actions, encrypted workspaces,
+                  and multiple export formats — all in one place.
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 pt-3">
@@ -701,6 +701,249 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* NEW: Smart Conversation Outline Feature Highlight */}
+        <section
+          className="relative py-24 overflow-hidden border-t"
+          style={{ borderColor: "var(--color-border)" }}
+        >
+          {/* Background Effects */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div
+              className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-20 blur-[120px]"
+              style={{
+                background:
+                  "radial-gradient(circle, #06b6d4 0%, transparent 70%)",
+              }}
+            />
+            <div
+              className="absolute top-1/3 right-1/4 w-[400px] h-[400px] rounded-full opacity-15 blur-[100px]"
+              style={{
+                background:
+                  "radial-gradient(circle, #8b5cf6 0%, transparent 70%)",
+              }}
+            />
+          </div>
+
+          <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              {/* Left: Content */}
+              <FadeIn className="space-y-8">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-widest">
+                  <SparklesIcon className="w-3 h-3" />
+                  New Feature
+                </div>
+
+                <h2
+                  className="text-4xl md:text-5xl font-bold tracking-tight"
+                  style={{ color: "var(--color-text)" }}
+                >
+                  Never Get Lost in{" "}
+                  <span
+                    style={{
+                      background: "var(--premium-title-gradient)",
+                      backgroundClip: "text",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
+                    AI Conversations
+                  </span>{" "}
+                  Again
+                </h2>
+
+                <p className="text-xl text-slate-400 leading-relaxed">
+                  Stop scrolling through endless messages. Our Smart
+                  Conversation Outline gives you a visual map of your entire
+                  chat — jump to any message with one click.
+                </p>
+
+                {/* Feature Grid */}
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {[
+                    {
+                      icon: "🗺️",
+                      title: "Visual Conversation Map",
+                      desc: "See every exchange at a glance",
+                    },
+                    {
+                      icon: "🎯",
+                      title: "One-Click Jump",
+                      desc: "Navigate to any message instantly",
+                    },
+                    {
+                      icon: "📊",
+                      title: "Progress Tracking",
+                      desc: "Real-time scroll position indicator",
+                    },
+                    {
+                      icon: "🎨",
+                      title: "Smart Filtering",
+                      desc: "View only questions or answers",
+                    },
+                    {
+                      icon: "⌨️",
+                      title: "Keyboard Shortcuts",
+                      desc: "Cmd/Ctrl + . to toggle panel",
+                    },
+                    {
+                      icon: "🖱️",
+                      title: "Fully Draggable",
+                      desc: "Position it anywhere you want",
+                    },
+                  ].map((feature, i) => (
+                    <div
+                      key={i}
+                      className="flex items-start gap-3 p-3 rounded-xl bg-slate-900/40 border border-white/5 hover:border-cyan-500/20 transition-colors"
+                    >
+                      <span className="text-2xl">{feature.icon}</span>
+                      <div>
+                        <div className="font-semibold text-white text-sm">
+                          {feature.title}
+                        </div>
+                        <div className="text-slate-500 text-xs">
+                          {feature.desc}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Benefits */}
+                <div className="flex flex-wrap gap-3 pt-4">
+                  {[
+                    "10x faster navigation",
+                    "Works on ChatGPT, Claude, Grok & Gemini",
+                    "Desktop optimized",
+                  ].map((benefit, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium"
+                    >
+                      ✓ {benefit}
+                    </span>
+                  ))}
+                </div>
+              </FadeIn>
+
+              {/* Right: Visual Demo */}
+              <ScaleUp className="relative" delay={0.2}>
+                <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-slate-900/50 backdrop-blur-xl">
+                  {/* Browser Header */}
+                  <div className="flex items-center justify-between px-4 py-3 border-b border-white/10 bg-gradient-to-r from-slate-800 to-slate-900">
+                    <div className="flex gap-2">
+                      <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+                      <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                      <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+                    </div>
+                    <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/30">
+                      <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+                      <span className="text-xs font-medium text-emerald-400">
+                        PRO Feature
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Mock Outline Panel Visual */}
+                  <div className="p-6 space-y-4">
+                    {/* Progress Bar */}
+                    <div className="flex items-center gap-3 pb-4 border-b border-white/5">
+                      <div className="flex-1 h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                        <div className="w-2/3 h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></div>
+                      </div>
+                      <span className="text-xs text-slate-500 font-mono">
+                        67%
+                      </span>
+                    </div>
+
+                    {/* Message List Preview */}
+                    <div className="space-y-2">
+                      {[
+                        {
+                          type: "user",
+                          text: "How do I optimize my React app?",
+                          active: false,
+                        },
+                        {
+                          type: "assistant",
+                          text: "Here are 5 key strategies for optimization...",
+                          active: false,
+                        },
+                        {
+                          type: "user",
+                          text: "Can you show me code examples?",
+                          active: false,
+                        },
+                        {
+                          type: "assistant",
+                          text: "Sure! Let me demonstrate with useMemo...",
+                          active: true,
+                        },
+                        {
+                          type: "user",
+                          text: "What about useCallback?",
+                          active: false,
+                        },
+                        {
+                          type: "assistant",
+                          text: "useCallback is perfect for...",
+                          active: false,
+                        },
+                      ].map((msg, i) => (
+                        <div
+                          key={i}
+                          className={`flex items-center gap-3 p-2 rounded-lg cursor-pointer transition-all ${
+                            msg.active
+                              ? "bg-cyan-500/20 border border-cyan-500/30"
+                              : "hover:bg-white/5 border border-transparent"
+                          }`}
+                        >
+                          <span className="text-sm">
+                            {msg.type === "user" ? "👤" : "🤖"}
+                          </span>
+                          <span
+                            className={`text-xs truncate ${msg.active ? "text-cyan-300" : "text-slate-400"}`}
+                          >
+                            {msg.text}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Filter Pills */}
+                    <div className="flex gap-2 pt-4 border-t border-white/5">
+                      <span className="px-2 py-1 rounded text-[10px] font-medium bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
+                        Both
+                      </span>
+                      <span className="px-2 py-1 rounded text-[10px] font-medium bg-white/5 text-slate-500">
+                        User Only
+                      </span>
+                      <span className="px-2 py-1 rounded text-[10px] font-medium bg-white/5 text-slate-500">
+                        AI Only
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Floating Keyboard Shortcut Hint */}
+                <div className="absolute -bottom-4 -right-4 px-4 py-2 rounded-xl bg-slate-800 border border-white/10 shadow-xl">
+                  <div className="flex items-center gap-2">
+                    <kbd className="px-2 py-1 rounded bg-slate-900 border border-white/10 text-xs text-slate-300 font-mono">
+                      ⌘
+                    </kbd>
+                    <span className="text-slate-500 text-xs">+</span>
+                    <kbd className="px-2 py-1 rounded bg-slate-900 border border-white/10 text-xs text-slate-300 font-mono">
+                      .
+                    </kbd>
+                    <span className="text-slate-500 text-xs ml-1">
+                      to toggle
+                    </span>
+                  </div>
+                </div>
+              </ScaleUp>
             </div>
           </div>
         </section>
@@ -1414,8 +1657,12 @@ export default function Home() {
                   a: "Yes! The core features are free forever. You get access to custom workspaces, basic prompt management, and local history without paying a dime.",
                 },
                 {
+                  q: "What is the Smart Conversation Outline feature?",
+                  a: "Smart Conversation Outline is a floating sidebar that shows every message in your AI conversation, letting you jump to any point with one click. It includes a visual progress bar, smart filtering (show only your questions or AI responses), instant search, and keyboard shortcuts (Cmd/Ctrl + .) for power users. It works across ChatGPT, Claude, Grok, and Gemini.",
+                },
+                {
                   q: "What's the difference between Free and Pro?",
-                  a: "Free includes limited prompts and notes, 1 vault, and no encryption. Pro ($9.99/month billed annually or $11.99/month billed monthly) offers unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, unlimited folders & categories, pinned messages, and multi-platform support.",
+                  a: "Free includes limited prompts and notes, 1 vault, and no encryption. Pro ($9.99/month billed annually or $11.99/month billed monthly) offers unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, Smart Conversation Outline, unlimited folders & categories, pinned messages, and multi-platform support.",
                 },
                 {
                   q: "Can I install the extension on Microsoft Edge or Firefox?",
@@ -1624,12 +1871,13 @@ export default function Home() {
                   {[
                     "Unlimited prompts, notes & vaults",
                     "Unlimited folders & prompt categories",
-                    "Image Gallery - Search, View & Download All Images",
-                    "Pinned Messages & Advanced Notes",
                     {
-                      text: "Reference Chats - Link conversations with one click",
+                      text: "Smart Conversation Outline - Jump to any message instantly",
                       badge: "NEW",
                     },
+                    "Image Gallery - Search, View & Download All Images",
+                    "Pinned Messages & Advanced Notes",
+                    "Reference Chats - Link conversations with one click",
                     "AES-256 Encryption + Autolock",
                     "Variable injection in prompts",
                     "Quick access menus",

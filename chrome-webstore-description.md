@@ -17,6 +17,9 @@ Create dedicated workspaces to separate your work, personal, and sensitive data.
 Smart Organization & Local Search
 Organize conversations into folders, create categories, and tag chats. Use lightning-fast local search to find any prompt or conversation instantly, even across thousands of items.
 
+Custom GPT Auto-Organization (NEW)
+Automatically organize your Custom GPT conversations into folders and link them to your active workspace. No more manual sorting—your GPT chats are always where they belong.
+
 Audio Notifications
 Get a notification sound when the AI finishes generating a response, so you can multitask efficiently without constantly checking the tab.
 

@@ -109,6 +109,13 @@ const featureData: Record<Tab, { features: Feature[] }> = {
         description: "Keep your workspace clean automatically",
         image: "/images/carousel/BrandBird 2025-11-20 19.39.10.png",
       },
+      {
+        icon: Sparkles,
+        title: "Auto-organize Custom GPT conversations",
+        description:
+          "Automatically sort your Custom GPT chats into folders and link them to your active workspace",
+        isNew: true,
+      },
     ],
   },
   performance: {

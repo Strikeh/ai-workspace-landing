@@ -13,7 +13,7 @@ const features = [
   {
     title: "Organize Like a Pro",
     description:
-      "Structure your creative chaos with folders, tags, and categories. Whether you're juggling client projects or building a personal prompt library, everything stays searchable, sortable, and stupidly simple to use.",
+      "Structure your creative chaos with folders, tags, and categories. Custom GPT conversations are automatically organized into folders and linked to your active workspace. Whether you're juggling client projects or building a personal prompt library, everything stays searchable, sortable, and stupidly simple to use.",
     video: "/videos/organize like a pro.mp4",
   },
   {

@@ -41,6 +41,7 @@ export default function CompleteFeatureMatrix() {
         "Tags & Colors",
         "Search & Filter",
         "Pin & Archive",
+        "GPT Auto-Organize ✨",
       ],
     },
     {

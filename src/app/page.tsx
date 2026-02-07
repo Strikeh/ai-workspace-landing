@@ -408,6 +408,7 @@ export default function Home() {
                     {[
                       "Navigate long chats with Smart Outline",
                       "Organize with Folders & Tags",
+                      "Auto-organize Custom GPT conversations",
                       "Sync across ChatGPT, Claude & Grok",
                     ].map((feature, i) => (
                       <li
@@ -472,8 +473,9 @@ export default function Home() {
                   </span>
                   Smart conversation outline, sidebar inside ChatGPT, nested
                   folders, full‑text search, prompt library, image gallery, GPT
-                  store manager, smart tags, bulk actions, encrypted workspaces,
-                  and multiple export formats — all in one place.
+                  store manager, smart tags, bulk actions, auto-organize Custom
+                  GPT conversations, encrypted workspaces, and multiple export
+                  formats — all in one place.
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 pt-3">
@@ -1873,6 +1875,10 @@ export default function Home() {
                     "Unlimited folders & prompt categories",
                     {
                       text: "Smart Conversation Outline - Jump to any message instantly",
+                      badge: "NEW",
+                    },
+                    {
+                      text: "Auto-organize Custom GPT conversations into workspace folders",
                       badge: "NEW",
                     },
                     "Image Gallery - Search, View & Download All Images",

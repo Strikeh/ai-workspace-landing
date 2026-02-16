@@ -17,32 +17,47 @@ const geistMono = Geist_Mono({
 
 const siteConfig = {
   name: "AI Workspace",
-  title:
-    "AI Workspace - Best ChatGPT Chrome Extension | Organize Prompts & Conversations",
+  title: "ChatGPT Workspaces | Separate Context for Freelancers & Consultants",
   description:
-    "#1 ChatGPT Chrome extension for power users. Organize prompts, conversations, and AI workflows locally with encrypted vaults. Works with ChatGPT, Claude & Grok. Free to start. 4.9★ rating from 4,600+ users. Privacy-first, zero telemetry, local-only storage.",
+    "Create unlimited workspaces inside ChatGPT. Separate clients, projects, and personal chats with complete context isolation. Built for freelancers, consultants, and developers. Works with ChatGPT, Claude & Grok. Free to start. 4.9★ rating from 4,600+ users. Privacy-first, local-only storage.",
   url: "https://getaiworkspace.com",
   ogImage: "https://getaiworkspace.com/og-image.png",
   keywords: [
-    // Primary keywords (high search volume)
+    // Primary workspaces keywords
+    "chatgpt workspaces",
+    "chatgpt workspace extension",
+    "separate chatgpt contexts",
+    "chatgpt project organizer",
+    "chatgpt for freelancers",
+    "chatgpt for consultants",
+    "chatgpt multiple projects",
+    "chatgpt context isolation",
+    // Primary extension keywords
     "chatgpt extension",
     "chatgpt chrome extension",
     "best chatgpt extension",
     "chatgpt organizer",
+    "chatgpt productivity tool",
+    // Target audience keywords
+    "chatgpt for developers",
+    "chatgpt for agencies",
+    "freelancer chatgpt tool",
+    "consultant ai tools",
+    "indie builder chatgpt",
+    "chatgpt client management",
+    // Feature-specific keywords
     "chatgpt prompt manager",
     "chatgpt conversation manager",
-    "chatgpt productivity tool",
     "chatgpt folder organizer",
-    // Secondary keywords
-    "AI productivity extension",
     "AI workspace manager",
     "prompt library chrome extension",
+    "chatgpt vault",
+    "chatgpt export",
+    // Platform keywords
     "claude extension",
     "grok extension",
+    "multi-platform ai tool",
     "AI conversation organizer",
-    "chatgpt vault",
-    "chatgpt notes",
-    "chatgpt export",
     // Privacy & Security keywords
     "private chatgpt extension",
     "encrypted ai storage",
@@ -50,25 +65,19 @@ const siteConfig = {
     "privacy chatgpt tool",
     "secure ai workspace",
     "chatgpt data privacy",
-    // Feature-specific keywords
-    "chatgpt image gallery",
-    "gpt store extension",
-    "ai prompt templates",
-    "chatgpt automation",
-    "multi-platform ai tool",
-    "chatgpt workflow manager",
     // Long-tail keywords
-    "organize chatgpt conversations",
-    "save chatgpt prompts",
+    "organize chatgpt conversations by project",
+    "separate chatgpt chats by client",
+    "switch between chatgpt projects",
+    "chatgpt workspace switcher",
+    "multiple chatgpt accounts alternative",
+    "organize chatgpt for multiple clients",
     "chatgpt folder structure",
-    "export chatgpt history",
     "chatgpt power user tools",
     "best chrome extension for chatgpt",
-    "chatgpt productivity booster",
-    // Performance & Anti-bloat keywords
+    // Performance keywords
     "lightweight chatgpt extension",
     "fast chatgpt extension",
-    "no bloatware chatgpt tool",
     "clean chatgpt interface",
   ],
 };
@@ -101,7 +110,7 @@ export const metadata: Metadata = {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: "AI Workspace - Privacy-First AI Productivity Hub",
+        alt: "ChatGPT Workspaces - Separate Context for Freelancers & Consultants",
       },
     ],
   },

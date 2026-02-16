@@ -1,23 +1,143 @@
 ﻿# Marketing Strategy - AI Workspace
 
 **Created:** December 2, 2025  
-**Status:** Action Plan Ready  
-**Goal:** Increase user acquisition through layered messaging and multi-channel distribution
+**Updated:** February 16, 2026  
+**Status:** Workspace-Focused Positioning  
+**Goal:** Target niche audience with workspaces as hero feature
 
 ---
 
-## 🎯 Core Marketing Philosophy
+## 🎯 Core Positioning (NEW)
 
-**The Challenge:** How to market a feature-rich product without overwhelming users or hiding features you've worked hard on.
+### The Problem with Broad Positioning
+Competing against Superpower ChatGPT with "ChatGPT organizer" positioning is difficult:
+- They have first-mover advantage
+- Large existing user base
+- Similar feature set
+- Generic positioning makes differentiation hard
 
-**The Solution:** **Layered Messaging Strategy**
+### New Strategic Positioning
 
-1. **Hook** with 1-2 features (depending on channel)
-2. **Demo** those features in 30-60 seconds
-3. **Reveal** all other features at the end ("Plus X, Y, Z, and more")
-4. **Rotate** which features you highlight per week/channel
+**We are not a "ChatGPT organizer"**  
+**We are: ChatGPT Workspaces – Separate Context. Stay Focused.**
 
-**Key Principle:** Different contexts = Different angles, but always showcase the complete product.
+**Unique Differentiator:** Workspaces with context isolation
+
+**Supporting Features:**
+- Folders, tags, search (within each workspace)
+- Prompt library (across workspaces)
+- Highlights, trimming, image gallery (workspace tools)
+- Encrypted vaults (workspace-level security)
+
+**Feature Hierarchy:**
+1. 🥇 **Hero Feature:** Workspaces (context isolation)
+2. 🥈 **Second Layer:** Organization tools within workspaces
+3. 🥉 **Advanced:** Power features for retention
+
+---
+
+## 👥 Target Audience (FOCUSED)
+
+### Primary Niche
+**Heavy ChatGPT users with multiple contexts**
+
+**Specific personas:**
+- ✅ Freelancers (multiple clients)
+- ✅ Consultants (multiple engagements)
+- ✅ Developers (personal + work projects)
+- ✅ Indie builders (multiple side projects)
+- ✅ Founders (company + personal)
+
+**Why this audience?**
+- Use ChatGPT daily
+- Work on 3+ different projects/clients simultaneously
+- Experience context switching pain
+- Need mental separation between work contexts
+- Willing to pay for productivity tools
+- Understand value of organization
+
+### NOT Targeting
+- ❌ Casual ChatGPT users
+- ❌ Students (unless professional use)
+- ❌ General "AI curious" audience
+- ❌ Single-context users
+
+---
+
+## 💬 Messaging Framework
+
+### Old Messaging (Generic)
+❌ "Organize your ChatGPT conversations"  
+❌ "Best ChatGPT Chrome Extension"  
+❌ "Transform Your AI Workspace"
+
+### New Messaging (Focused)
+✅ "ChatGPT Workspaces – Separate Context. Stay Focused."  
+✅ "One ChatGPT. Multiple Workspaces."  
+✅ "Separate your clients, projects and personal chats inside ChatGPT."
+
+### Value Propositions by Audience
+
+**For Freelancers:**
+"Create a workspace for each client. Switch instantly. Zero mental clutter."
+
+**For Consultants:**
+"One workspace per engagement. Complete context isolation. Professional privacy."
+
+**For Developers:**
+"Separate work, personal, and side projects. Keep your contexts clean."
+
+**For Indie Builders:**
+"Juggle 5 projects without losing your mind. Each gets its own space."
+
+---
+
+## 🏗 Website Structure (NEW)
+
+### Hero Section
+**Must include:**
+- "Workspaces" in H1 title
+- Context separation as main benefit
+- Target audience mention (freelancers, consultants, developers)
+- Visual showing workspace switching
+
+**Example H1:**
+"ChatGPT Workspaces – Separate Context. Stay Focused."
+
+**Example Subheading:**
+"Create unlimited workspaces for different clients, projects, or personal use. Switch between them instantly – zero mental clutter, complete context isolation."
+
+**Example CTA:**
+"Create Your First Workspace →"
+
+### Feature Sections (Priority Order)
+
+#### 1️⃣ Primary: Workspaces
+**Headline:** "Separate Contexts. Stay Focused."  
+**Visual:** Workspace switcher showing "Client A", "Client B", "Personal"  
+**Benefits:**
+- Create unlimited workspaces
+- Instant context switching
+- Complete conversation isolation
+- Mental clarity between projects
+
+#### 2️⃣ Secondary: Organization (Within Workspaces)
+**Headline:** "Organize Each Workspace"  
+**Visual:** Folders, tags, search within a workspace  
+**Benefits:**
+- Nested folders
+- Smart tags
+- Full-text search
+- Bulk operations
+
+#### 3️⃣ Tertiary: Power Features
+**Headline:** "Advanced Tools for Power Users"  
+**Visual:** Prompts, highlights, exports, vaults  
+**Benefits:**
+- Prompt library with variables
+- Text highlighting & navigation
+- Encrypted vaults
+- Multiple export formats
 
 ---
 

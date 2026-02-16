@@ -1,5 +1,30 @@
 ﻿# SEO Optimalisatie Checklist - AI Workspace Landing Page
 
+## 🎯 Nieuwe Positionering (Feb 2026)
+
+### Strategic Shift: Workspaces als Hero Feature
+- ✅ H1 aangepast: "ChatGPT Workspaces – Separate Context. Stay Focused."
+- ✅ Title tag: "ChatGPT Workspaces | Separate Context for Freelancers & Consultants"
+- ✅ Meta description focus op workspaces en doelgroep
+- ✅ Keywords uitgebreid met workspace-specifieke termen
+- ✅ Hero sectie herstructureerd met workspaces als kernboodschap
+- ✅ Feature hiërarchie aangepast: Workspaces → Organization → Advanced
+
+### Target Audience Keywords
+- ✅ chatgpt workspaces
+- ✅ chatgpt for freelancers
+- ✅ chatgpt for consultants
+- ✅ chatgpt multiple projects
+- ✅ chatgpt context isolation
+- ✅ separate chatgpt chats by client
+- ✅ chatgpt workspace switcher
+
+### Niche Doelgroep
+✅ Primair: Freelancers, Consultants, Developers, Indie builders, Founders
+❌ Niet: Casual users, studenten zonder professioneel gebruik
+
+---
+
 ## ✅ Gerealiseerd
 
 ### 1. **Meta Tags & Metadata**

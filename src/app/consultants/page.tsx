@@ -53,14 +53,15 @@ export default function ConsultantsPage() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
-            Turn ChatGPT Into Your
+            One Workspace Per Client.
             <br />
-            <span className="text-indigo-500">Research Analyst.</span>
+            <span className="text-indigo-500">Zero Context Bleed.</span>
           </h1>
 
           <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-            Organize client insights, build reusable strategy frameworks, and
-            keep confidential data segmented. The professional layer for AI.
+            Separate client insights, strategy frameworks, and confidential data
+            into isolated workspaces. Switch between engagements with complete
+            context separation.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">

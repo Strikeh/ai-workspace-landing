@@ -54,14 +54,15 @@ export default function FreelancersPage() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
-            The Solo Business OS
+            Separate Every Client
             <br />
-            <span className="text-emerald-500">for ChatGPT.</span>
+            <span className="text-emerald-500">with ChatGPT Workspaces.</span>
           </h1>
 
           <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-            Juggle 5 clients, admin work, and your own marketing without losing
-            your mind. Keep every project perfectly organized.
+            Create a dedicated workspace for each client project. Switch
+            contexts instantly without mixing conversations, prompts, or files.
+            No mental clutter.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">

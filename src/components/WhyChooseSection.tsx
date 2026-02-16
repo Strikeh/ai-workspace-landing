@@ -5,21 +5,21 @@ import { FadeIn, StaggerContainer, StaggerItem } from "./ScrollAnimation";
 
 const features = [
   {
-    title: "Stop Scrolling. Start Navigating.",
+    title: "Separate Contexts. Stay Focused.",
     description:
-      "Lost in a 100-message conversation? Our Smart Conversation Outline gives you a floating sidebar with every message mapped out. Jump to any point with one click, filter by user or AI responses, and use keyboard shortcuts to navigate like a pro.",
+      "Create unlimited workspaces for different clients, projects, or personal use. Each workspace has its own conversations, folders, and prompts. Switch between them instantly \u2013 zero mental clutter, complete context isolation.",
     video: "/videos/organize like a pro.mp4",
   },
   {
-    title: "Organize Like a Pro",
+    title: "Organize Each Workspace",
     description:
-      "Structure your creative chaos with folders, tags, and categories. Custom GPT conversations are automatically organized into folders and linked to your active workspace. Whether you're juggling client projects or building a personal prompt library, everything stays searchable, sortable, and stupidly simple to use.",
+      "Inside every workspace: nested folders, smart tags, and powerful search. Custom GPT conversations are automatically organized and linked. Whether you're managing 5 clients or 50 side projects, everything stays structured and findable.",
     video: "/videos/organize like a pro.mp4",
   },
   {
-    title: "Smarter Prompts with Variables",
+    title: "Reuse Prompts with Variables",
     description:
-      "Add dynamic variables to your prompts and reuse them across projects. Customize outputs on the fly without writing the same thing twice. One prompt, endless use cases.",
+      "Build a prompt library with dynamic variables. Customize outputs on the fly without rewriting. One prompt template, endless use cases across all your workspaces.",
     video: "/videos/variables.mp4",
   },
 ];
@@ -37,11 +37,13 @@ export default function WhyChooseSection() {
         <div className="text-center max-w-3xl mx-auto mb-20">
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-              Why <span className="text-cyan-400">AI Workspace?</span>
+              One ChatGPT.{" "}
+              <span className="text-cyan-400">Multiple Workspaces.</span>
             </h2>
             <p className="text-xl text-slate-400 leading-relaxed">
-              Because your AI workflow shouldn't be a mess. Stop wrestling with
-              spreadsheets and start building a second brain for your prompts.
+              For freelancers, consultants, and developers who need to separate
+              client work, side projects, and personal chats \u2013 without the
+              chaos.
             </p>
           </FadeIn>
         </div>

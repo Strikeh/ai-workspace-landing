@@ -346,7 +346,7 @@ export default function Home() {
                   {/* Multi-platform badge - key differentiator */}
                   <div className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10">
                     <span className="text-purple-300 font-medium">
-                      Stop scrolling through endless chats
+                      Separate clients, projects & personal chats
                     </span>
                   </div>
                   {/* Rating badge */}
@@ -376,11 +376,9 @@ export default function Home() {
                   }}
                 >
                   <span className="block text-5xl sm:text-6xl lg:text-7xl">
-                    <span className="text-white">
-                      Best ChatGPT Chrome Extension -{" "}
-                    </span>
+                    <span className="text-white">ChatGPT Workspaces – </span>
                     <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                      Transform Your AI Workspace
+                      Separate Context. Stay Focused.
                     </span>
                   </span>
                 </h1>
@@ -388,28 +386,33 @@ export default function Home() {
                 {/* One-liner value prop */}
                 <div className="space-y-4 max-w-2xl">
                   <p className="hero-subtitle text-xl leading-relaxed text-slate-300">
-                    Organize ChatGPT conversations with folders, tags, and a{" "}
+                    Switch between client projects, side hustles, and personal
+                    chats instantly.{" "}
+                    <span className="text-white font-semibold">
+                      Each workspace keeps its own conversations organized
+                    </span>{" "}
+                    with folders, tags, and a{" "}
                     <a
                       href="#features"
                       className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-500/30 hover:decoration-cyan-400 transition-colors"
                     >
                       powerful prompt library
                     </a>
-                    . Stop losing your best ideas and work 10x faster.
+                    .
                   </p>
 
                   <p className="text-lg font-medium text-cyan-400">
-                    Built for ChatGPT power users who need clarity, structure,
-                    and speed.
+                    Built for freelancers, consultants, and developers who
+                    juggle multiple contexts daily.
                   </p>
 
                   {/* Feature List */}
                   <ul className="grid grid-cols-1 gap-y-3 pt-4">
                     {[
-                      "Navigate long chats with Smart Outline",
-                      "Organize with Folders & Tags",
-                      "Auto-organize Custom GPT conversations",
-                      "Sync across ChatGPT, Claude & Grok",
+                      "Create unlimited workspaces for different projects",
+                      "Switch context instantly – no mental clutter",
+                      "Organize each workspace with folders & tags",
+                      "Works across ChatGPT, Claude & Grok",
                     ].map((feature, i) => (
                       <li
                         key={i}
@@ -469,13 +472,12 @@ export default function Home() {
                 {/* Feature highlights */}
                 <div className="text-sm text-slate-400 pt-2 leading-relaxed max-w-xl">
                   <span className="text-slate-300 font-medium">
-                    Highlights:{" "}
+                    In every workspace:{" "}
                   </span>
-                  Smart conversation outline, sidebar inside ChatGPT, nested
-                  folders, full‑text search, prompt library, image gallery, GPT
-                  store manager, smart tags, bulk actions, auto-organize Custom
-                  GPT conversations, encrypted workspaces, and multiple export
-                  formats — all in one place.
+                  Nested folders, smart tags, full‑text search, powerful prompt
+                  library, conversation highlights, image gallery, bulk actions,
+                  GPT store manager, encrypted vaults, and multiple export
+                  formats.
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 pt-3">
@@ -640,7 +642,7 @@ export default function Home() {
                 className="text-4xl md:text-5xl font-bold tracking-tight"
                 style={{ color: "var(--color-text)" }}
               >
-                Powerful ChatGPT Organization Features for{" "}
+                Organize Each Workspace with{" "}
                 <span
                   style={{
                     background: "var(--premium-title-gradient)",
@@ -649,23 +651,22 @@ export default function Home() {
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  AI Power Users
+                  Powerful Tools
                 </span>
               </h2>
               <p
                 className="text-xl leading-relaxed max-w-2xl mx-auto"
                 style={{ color: "var(--color-text-secondary)" }}
               >
-                From{" "}
+                Every workspace comes with{" "}
                 <span className="text-cyan-400 font-medium">
-                  prompt management
+                  folders, tags, and smart search
                 </span>{" "}
-                to{" "}
+                to keep conversations organized. Plus{" "}
                 <span className="text-cyan-400 font-medium">
-                  conversation organization
-                </span>
-                , AI Workspace provides the missing productivity tools for
-                ChatGPT, Claude, and Grok.
+                  prompt management, highlights, and performance tools
+                </span>{" "}
+                to work faster.
               </p>
             </div>
 

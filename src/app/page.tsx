@@ -603,9 +603,6 @@ export default function Home() {
         {/* Why Choose Section */}
         <WhyChooseSection />
 
-        {/* Complete Feature Matrix Section */}
-        <CompleteFeatureMatrix />
-
         <section
           id="features"
           className="border-t py-32 section relative overflow-hidden"
@@ -951,6 +948,9 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Complete Feature Matrix Section */}
+        <CompleteFeatureMatrix />
+
         {/* Product Showcase Carousel */}
         <section className="relative py-24 overflow-hidden">
           {/* Background decoration */}
@@ -983,7 +983,7 @@ export default function Home() {
                 See It In Action
               </p>
               <h2
-                className="text-3xl font-semibold sm:text-4xl mb-6"
+                className="text-4xl md:text-5xl font-bold tracking-tight mb-6"
                 style={{
                   background: "var(--premium-title-gradient)",
                   WebkitBackgroundClip: "text",
@@ -1393,7 +1393,7 @@ export default function Home() {
                 Community Love
               </div>
               <h2
-                className="text-3xl font-bold sm:text-5xl mb-6"
+                className="text-4xl md:text-5xl font-bold tracking-tight mb-6"
                 style={{ color: "var(--color-text)" }}
               >
                 Top-Rated ChatGPT Extension - Loved by{" "}
@@ -1499,7 +1499,7 @@ export default function Home() {
                 Roadmap
               </div>
               <h2
-                className="text-3xl font-bold sm:text-5xl mb-6"
+                className="text-4xl md:text-5xl font-bold tracking-tight mb-6"
                 style={{ color: "var(--color-text)" }}
               >
                 Upcoming ChatGPT Extension Features
@@ -1581,7 +1581,7 @@ export default function Home() {
 
           <ScaleUp className="relative z-10 mx-auto max-w-4xl px-6 text-center">
             <h2
-              className="text-4xl font-bold mb-6"
+              className="text-4xl md:text-5xl font-bold tracking-tight mb-6"
               style={{
                 background: "var(--premium-title-gradient)",
                 WebkitBackgroundClip: "text",
@@ -1642,7 +1642,7 @@ export default function Home() {
                 FAQ
               </div>
               <h2
-                className="text-3xl font-bold sm:text-5xl"
+                className="text-4xl md:text-5xl font-bold tracking-tight"
                 style={{ color: "var(--color-text)" }}
               >
                 ChatGPT Extension FAQ - Common Questions
@@ -1769,7 +1769,7 @@ export default function Home() {
                 Simple Pricing
               </div>
               <h2
-                className="text-3xl font-bold sm:text-5xl mb-6"
+                className="text-4xl md:text-5xl font-bold tracking-tight mb-6"
                 style={{ color: "var(--color-text)" }}
               >
                 ChatGPT Extension Pricing - Start Free.{" "}

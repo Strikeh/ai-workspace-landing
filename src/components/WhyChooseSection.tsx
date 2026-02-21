@@ -2,25 +2,35 @@
 
 import { useRef, useEffect } from "react";
 import { FadeIn, StaggerContainer, StaggerItem } from "./ScrollAnimation";
+import { Briefcase, FolderTree, Sparkles } from "lucide-react";
 
 const features = [
   {
     title: "Separate Contexts. Stay Focused.",
     description:
       "Create unlimited workspaces for different clients, projects, or personal use. Each workspace has its own conversations, folders, and prompts. Switch between them instantly \u2013 zero mental clutter, complete context isolation.",
-    video: "/videos/organize like a pro.mp4",
+    icon: Briefcase,
+    color: "text-cyan-400",
+    bgColor: "bg-cyan-500/10",
+    borderColor: "border-cyan-500/20",
   },
   {
     title: "Organize Each Workspace",
     description:
       "Inside every workspace: nested folders, smart tags, and powerful search. Custom GPT conversations are automatically organized and linked. Whether you're managing 5 clients or 50 side projects, everything stays structured and findable.",
-    video: "/videos/organize like a pro.mp4",
+    icon: FolderTree,
+    color: "text-emerald-400",
+    bgColor: "bg-emerald-500/10",
+    borderColor: "border-emerald-500/20",
   },
   {
     title: "Reuse Prompts with Variables",
     description:
       "Build a prompt library with dynamic variables. Customize outputs on the fly without rewriting. One prompt template, endless use cases across all your workspaces.",
-    video: "/videos/variables.mp4",
+    icon: Sparkles,
+    color: "text-purple-400",
+    bgColor: "bg-purple-500/10",
+    borderColor: "border-purple-500/20",
   },
 ];
 
@@ -51,22 +61,18 @@ export default function WhyChooseSection() {
         <StaggerContainer className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {features.map((feature, index) => (
             <StaggerItem key={index} className="flex flex-col group">
-              {/* Video Container */}
-              <div className="relative aspect-video rounded-2xl overflow-hidden bg-slate-900/50 border border-white/10 shadow-2xl mb-8 group-hover:border-cyan-500/30 group-hover:shadow-cyan-500/10 transition-all duration-500">
-                <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/20 to-transparent z-10" />
-                <video
-                  src={feature.video}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                />
+              {/* Icon Container */}
+              <div
+                className={`w-16 h-16 rounded-2xl ${feature.bgColor} border ${feature.borderColor} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500`}
+              >
+                <feature.icon className={`w-8 h-8 ${feature.color}`} />
               </div>
 
               {/* Text Content */}
               <div className="flex-1">
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                <h3
+                  className={`text-2xl font-bold text-white mb-4 group-hover:${feature.color} transition-colors`}
+                >
                   {feature.title}
                 </h3>
                 <p className="text-slate-400 leading-relaxed">

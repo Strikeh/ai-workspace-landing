@@ -126,10 +126,10 @@ export default function CompleteFeatureMatrix() {
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">
             Complete Feature Matrix
           </h2>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+          <p className="text-xl text-slate-400 leading-relaxed max-w-2xl mx-auto">
             Over 50+ features to supercharge your AI workflow
           </p>
         </div>

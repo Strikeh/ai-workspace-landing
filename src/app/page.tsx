@@ -130,9 +130,79 @@ const testimonials = [
   },
 ];
 
+const carouselSlides = [
+  {
+    src: "/images/carousel/BrandBird 2025-11-20 11.36.08.png",
+    alt: "ChatGPT prompt library management interface showing organized prompt templates with folders, categories, and search functionality for AI power users",
+  },
+  {
+    src: "/images/carousel/BrandBird 2025-11-20 12.01.36.png",
+    alt: "ChatGPT Chrome extension advanced features including conversation history, notes manager, and AI-generated image gallery with export tools",
+  },
+  {
+    src: "/images/carousel/BrandBird 2025-11-20 12.01.58.png",
+    alt: "AI Workspace custom workspace management dashboard with folder organization system for organizing ChatGPT conversations and prompts by project",
+  },
+  {
+    src: "/images/carousel/BrandBird 2025-11-20 12.04.10.png",
+    alt: "ChatGPT extension custom settings panel with dark theme, multi-language support, and personalization options for enhanced productivity",
+  },
+  {
+    src: "/images/carousel/BrandBird 2025-11-20 19.37.47.png",
+    alt: "ChatGPT prompt templates library with reusable prompts, custom variables, and organized categories for AI productivity automation",
+  },
+  {
+    src: "/images/carousel/BrandBird 2025-11-20 19.38.41.png",
+    alt: "ChatGPT conversation organization with hierarchical folder structure, tags, and advanced search filters for efficient workflow management",
+  },
+  {
+    src: "/images/carousel/BrandBird 2025-11-20 19.39.10.png",
+    alt: "AI Workspace intelligent folder system with nested folders, color coding, and drag-drop organization for ChatGPT conversations",
+  },
+  {
+    src: "/images/carousel/BrandBird 2025-11-20 19.39.38.png",
+    alt: "Advanced search and filter functionality for ChatGPT conversations with keyword search, date filters, and smart categorization",
+  },
+  {
+    src: "/images/carousel/BrandBird 2025-11-20 19.40.43.png",
+    alt: "ChatGPT export options with one-click export to Markdown, JSON, TXT, and PDF formats for conversation backup and sharing",
+  },
+  {
+    src: "/images/carousel/BrandBird 2025-11-20 19.43.13.png",
+    alt: "Comprehensive settings and customization panel for ChatGPT extension with theme options, shortcuts, and privacy controls",
+  },
+  {
+    src: "/images/carousel/BrandBird 2025-11-20 19.46.23.png",
+    alt: "ChatGPT data management with encrypted vault storage, AES-256 security, and local-only data storage for privacy protection",
+  },
+  {
+    src: "/images/carousel/BrandBird 2025-11-20 19.46.47.png",
+    alt: "Multi-platform AI integration options supporting ChatGPT, Claude, and Grok with unified prompt management across platforms",
+  },
+  {
+    src: "/images/carousel/BrandBird 2025-11-20 19.47.27.png",
+    alt: "Advanced ChatGPT productivity tools including bulk actions, batch processing, and automation features for power users",
+  },
+  {
+    src: "/images/carousel/BrandBird 2025-11-20 19.47.59.png",
+    alt: "ChatGPT extension customization panel with interface themes, layout options, and personalized workspace configurations",
+  },
+  {
+    src: "/images/carousel/BrandBird 2025-11-20 19.48.31.png",
+    alt: "Complete overview of AI Workspace ChatGPT Chrome extension showing all features, tools, and organization capabilities in one interface",
+  },
+];
+
 export default function Home() {
   const [installUrl, setInstallUrl] = useState("");
   const [activeSection, setActiveSection] = useState("");
+  const [activeBlobSections, setActiveBlobSections] = useState<Set<string>>(
+    () => new Set(["hero"]),
+  );
+  const [currentCarouselSlide, setCurrentCarouselSlide] = useState(0);
+  const [isCarouselHovered, setIsCarouselHovered] = useState(false);
+  const [isPageVisible, setIsPageVisible] = useState(true);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -163,6 +233,126 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
+      return;
+    }
+
+    const sectionIds = [
+      "hero",
+      "features",
+      "showcase",
+      "testimonials",
+      "pricing",
+    ];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        setActiveBlobSections((previous) => {
+          const next = new Set(previous);
+
+          for (const entry of entries) {
+            const sectionId = (entry.target as HTMLElement).id;
+            if (!sectionId) continue;
+
+            if (entry.isIntersecting) {
+              next.add(sectionId);
+            } else {
+              next.delete(sectionId);
+            }
+          }
+
+          return next;
+        });
+      },
+      {
+        rootMargin: "220px 0px",
+        threshold: 0,
+      },
+    );
+
+    for (const sectionId of sectionIds) {
+      const sectionElement = document.getElementById(sectionId);
+      if (sectionElement) {
+        observer.observe(sectionElement);
+      }
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const isBlobSectionActive = (sectionId: string) =>
+    activeBlobSections.has(sectionId);
+
+  useEffect(() => {
+    if (typeof document === "undefined") {
+      return;
+    }
+
+    const handleVisibilityChange = () => {
+      setIsPageVisible(!document.hidden);
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    handleVisibilityChange();
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !("matchMedia" in window)) {
+      return;
+    }
+
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const handleChange = (event: MediaQueryListEvent) => {
+      setPrefersReducedMotion(event.matches);
+    };
+
+    setPrefersReducedMotion(mediaQuery.matches);
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
+  }, []);
+
+  const carouselSlideCount = carouselSlides.length;
+  const isCarouselInView = isBlobSectionActive("showcase");
+  const shouldAutoplayCarousel =
+    isCarouselInView &&
+    isPageVisible &&
+    !isCarouselHovered &&
+    !prefersReducedMotion;
+
+  useEffect(() => {
+    if (!shouldAutoplayCarousel) {
+      return;
+    }
+
+    const autoplayInterval = window.setInterval(() => {
+      setCurrentCarouselSlide(
+        (previousSlide) => (previousSlide + 1) % carouselSlideCount,
+      );
+    }, 5000);
+
+    return () => {
+      window.clearInterval(autoplayInterval);
+    };
+  }, [shouldAutoplayCarousel, carouselSlideCount]);
+
+  const goToCarouselSlide = (index: number) => {
+    setCurrentCarouselSlide((index + carouselSlideCount) % carouselSlideCount);
+  };
+
+  const isSlideWithinRenderWindow = (slideIndex: number) => {
+    const distance = Math.abs(slideIndex - currentCarouselSlide);
+    const circularDistance = Math.min(distance, carouselSlideCount - distance);
+    return circularDistance <= 2;
+  };
+
   return (
     <div
       style={{ background: "var(--color-bg-primary)" }}
@@ -170,7 +360,7 @@ export default function Home() {
     >
       {/* Demo Modal */}
       <DemoModal />
-      {/* Ripple handler for primary CTA */}
+      {/* Client-only interaction handler */}
       <ScriptHandler />
       {/* Navigation Header */}
       <nav
@@ -307,7 +497,10 @@ export default function Home() {
       </nav>
 
       <main>
-        <section className="hero-section relative isolate overflow-hidden min-h-[90vh] flex items-center">
+        <section
+          id="hero"
+          className="hero-section relative isolate overflow-hidden min-h-[90vh] flex items-center"
+        >
           {/* Premium Background Effects */}
           <div className="absolute inset-0 z-0 overflow-hidden">
             {/* Grid Pattern */}
@@ -315,21 +508,21 @@ export default function Home() {
 
             {/* Animated Blobs */}
             <div
-              className="absolute top-[-10%] left-[20%] w-[600px] h-[600px] rounded-full opacity-20 blur-[120px] animate-blob"
+              className={`absolute top-[-10%] left-[20%] w-[600px] h-[600px] rounded-full opacity-20 blur-[120px] animate-blob blob-gated ${isBlobSectionActive("hero") ? "blob-active" : ""}`}
               style={{
                 background:
                   "radial-gradient(circle, var(--color-accent) 0%, transparent 70%)",
               }}
             />
             <div
-              className="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] rounded-full opacity-15 blur-[100px] animate-blob animation-delay-2000"
+              className={`absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] rounded-full opacity-15 blur-[100px] animate-blob animation-delay-2000 blob-gated ${isBlobSectionActive("hero") ? "blob-active" : ""}`}
               style={{
                 background:
                   "radial-gradient(circle, var(--color-text-blue-accent) 0%, transparent 70%)",
               }}
             />
             <div
-              className="absolute top-[40%] left-[-10%] w-[400px] h-[400px] rounded-full opacity-10 blur-[80px] animate-blob animation-delay-4000"
+              className={`absolute top-[40%] left-[-10%] w-[400px] h-[400px] rounded-full opacity-10 blur-[80px] animate-blob animation-delay-4000 blob-gated ${isBlobSectionActive("hero") ? "blob-active" : ""}`}
               style={{
                 background:
                   "radial-gradient(circle, #8b5cf6 0%, transparent 70%)",
@@ -614,14 +807,14 @@ export default function Home() {
           {/* Background Glows */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
             <div
-              className="absolute top-[20%] left-[10%] w-[500px] h-[500px] rounded-full opacity-20 blur-[100px] animate-blob"
+              className={`absolute top-[20%] left-[10%] w-[500px] h-[500px] rounded-full opacity-20 blur-[100px] animate-blob blob-gated ${isBlobSectionActive("features") ? "blob-active" : ""}`}
               style={{
                 background:
                   "radial-gradient(circle, var(--color-accent) 0%, transparent 70%)",
               }}
             />
             <div
-              className="absolute bottom-[20%] right-[10%] w-[400px] h-[400px] rounded-full opacity-20 blur-[100px] animate-blob animation-delay-2000"
+              className={`absolute bottom-[20%] right-[10%] w-[400px] h-[400px] rounded-full opacity-20 blur-[100px] animate-blob animation-delay-2000 blob-gated ${isBlobSectionActive("features") ? "blob-active" : ""}`}
               style={{
                 background:
                   "radial-gradient(circle, var(--color-text-blue-accent) 0%, transparent 70%)",
@@ -952,21 +1145,21 @@ export default function Home() {
         <CompleteFeatureMatrix />
 
         {/* Product Showcase Carousel */}
-        <section className="relative py-24 overflow-hidden">
+        <section id="showcase" className="relative py-24 overflow-hidden">
           {/* Background decoration */}
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0 z-0 opacity-30"
           >
             <div
-              className="absolute left-[-15%] top-1/4 h-[400px] w-[500px] blur-3xl animate-blob"
+              className={`absolute left-[-15%] top-1/4 h-[400px] w-[500px] blur-3xl animate-blob blob-gated ${isBlobSectionActive("showcase") ? "blob-active" : ""}`}
               style={{
                 background:
                   "radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, transparent 70%)",
               }}
             />
             <div
-              className="absolute right-[-15%] bottom-1/4 h-[400px] w-[500px] blur-3xl animate-blob animation-delay-2000"
+              className={`absolute right-[-15%] bottom-1/4 h-[400px] w-[500px] blur-3xl animate-blob animation-delay-2000 blob-gated ${isBlobSectionActive("showcase") ? "blob-active" : ""}`}
               style={{
                 background:
                   "radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%)",
@@ -1011,159 +1204,37 @@ export default function Home() {
                   border: "1px solid rgba(6, 182, 212, 0.2)",
                   boxShadow: "0 25px 50px rgba(6, 182, 212, 0.15)",
                 }}
+                onMouseEnter={() => setIsCarouselHovered(true)}
+                onMouseLeave={() => setIsCarouselHovered(false)}
               >
-                <div className="carousel-track flex transition-transform duration-700 ease-in-out">
-                  {/* Slide 1 */}
-                  <div className="carousel-slide min-w-full">
-                    <Image
-                      src="/images/carousel/BrandBird 2025-11-20 11.36.08.png"
-                      alt="ChatGPT prompt library management interface showing organized prompt templates with folders, categories, and search functionality for AI power users"
-                      width={1920}
-                      height={1080}
-                      className="w-full h-auto"
-                      priority
-                    />
-                  </div>
-                  {/* Slide 2 */}
-                  <div className="carousel-slide min-w-full">
-                    <Image
-                      src="/images/carousel/BrandBird 2025-11-20 12.01.36.png"
-                      alt="ChatGPT Chrome extension advanced features including conversation history, notes manager, and AI-generated image gallery with export tools"
-                      width={1920}
-                      height={1080}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  {/* Slide 3 */}
-                  <div className="carousel-slide min-w-full">
-                    <Image
-                      src="/images/carousel/BrandBird 2025-11-20 12.01.58.png"
-                      alt="AI Workspace custom workspace management dashboard with folder organization system for organizing ChatGPT conversations and prompts by project"
-                      width={1920}
-                      height={1080}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  {/* Slide 4 */}
-                  <div className="carousel-slide min-w-full">
-                    <Image
-                      src="/images/carousel/BrandBird 2025-11-20 12.04.10.png"
-                      alt="ChatGPT extension custom settings panel with dark theme, multi-language support, and personalization options for enhanced productivity"
-                      width={1920}
-                      height={1080}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  {/* Slide 5 */}
-                  <div className="carousel-slide min-w-full">
-                    <Image
-                      src="/images/carousel/BrandBird 2025-11-20 19.37.47.png"
-                      alt="ChatGPT prompt templates library with reusable prompts, custom variables, and organized categories for AI productivity automation"
-                      width={1920}
-                      height={1080}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  {/* Slide 6 */}
-                  <div className="carousel-slide min-w-full">
-                    <Image
-                      src="/images/carousel/BrandBird 2025-11-20 19.38.41.png"
-                      alt="ChatGPT conversation organization with hierarchical folder structure, tags, and advanced search filters for efficient workflow management"
-                      width={1920}
-                      height={1080}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  {/* Slide 7 */}
-                  <div className="carousel-slide min-w-full">
-                    <Image
-                      src="/images/carousel/BrandBird 2025-11-20 19.39.10.png"
-                      alt="AI Workspace intelligent folder system with nested folders, color coding, and drag-drop organization for ChatGPT conversations"
-                      width={1920}
-                      height={1080}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  {/* Slide 8 */}
-                  <div className="carousel-slide min-w-full">
-                    <Image
-                      src="/images/carousel/BrandBird 2025-11-20 19.39.38.png"
-                      alt="Advanced search and filter functionality for ChatGPT conversations with keyword search, date filters, and smart categorization"
-                      width={1920}
-                      height={1080}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  {/* Slide 9 */}
-                  <div className="carousel-slide min-w-full">
-                    <Image
-                      src="/images/carousel/BrandBird 2025-11-20 19.40.43.png"
-                      alt="ChatGPT export options with one-click export to Markdown, JSON, TXT, and PDF formats for conversation backup and sharing"
-                      width={1920}
-                      height={1080}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  {/* Slide 10 */}
-                  <div className="carousel-slide min-w-full">
-                    <Image
-                      src="/images/carousel/BrandBird 2025-11-20 19.43.13.png"
-                      alt="Comprehensive settings and customization panel for ChatGPT extension with theme options, shortcuts, and privacy controls"
-                      width={1920}
-                      height={1080}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  {/* Slide 11 */}
-                  <div className="carousel-slide min-w-full">
-                    <Image
-                      src="/images/carousel/BrandBird 2025-11-20 19.46.23.png"
-                      alt="ChatGPT data management with encrypted vault storage, AES-256 security, and local-only data storage for privacy protection"
-                      width={1920}
-                      height={1080}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  {/* Slide 12 */}
-                  <div className="carousel-slide min-w-full">
-                    <Image
-                      src="/images/carousel/BrandBird 2025-11-20 19.46.47.png"
-                      alt="Multi-platform AI integration options supporting ChatGPT, Claude, and Grok with unified prompt management across platforms"
-                      width={1920}
-                      height={1080}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  {/* Slide 13 */}
-                  <div className="carousel-slide min-w-full">
-                    <Image
-                      src="/images/carousel/BrandBird 2025-11-20 19.47.27.png"
-                      alt="Advanced ChatGPT productivity tools including bulk actions, batch processing, and automation features for power users"
-                      width={1920}
-                      height={1080}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  {/* Slide 14 */}
-                  <div className="carousel-slide min-w-full">
-                    <Image
-                      src="/images/carousel/BrandBird 2025-11-20 19.47.59.png"
-                      alt="ChatGPT extension customization panel with interface themes, layout options, and personalized workspace configurations"
-                      width={1920}
-                      height={1080}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  {/* Slide 15 */}
-                  <div className="carousel-slide min-w-full">
-                    <Image
-                      src="/images/carousel/BrandBird 2025-11-20 19.48.31.png"
-                      alt="Complete overview of AI Workspace ChatGPT Chrome extension showing all features, tools, and organization capabilities in one interface"
-                      width={1920}
-                      height={1080}
-                      className="w-full h-auto"
-                    />
-                  </div>
+                <div
+                  className="carousel-track flex transition-transform duration-700 ease-in-out"
+                  style={{
+                    transform: `translateX(-${currentCarouselSlide * 100}%)`,
+                  }}
+                >
+                  {carouselSlides.map((slide, slideIndex) => (
+                    <div className="carousel-slide min-w-full" key={slide.src}>
+                      {isSlideWithinRenderWindow(slideIndex) ? (
+                        <Image
+                          src={slide.src}
+                          alt={slide.alt}
+                          width={1600}
+                          height={900}
+                          className="w-full h-auto"
+                          priority={slideIndex === 0}
+                          loading={slideIndex === 0 ? "eager" : "lazy"}
+                          quality={72}
+                          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+                        />
+                      ) : (
+                        <div
+                          aria-hidden="true"
+                          className="w-full aspect-[16/9] bg-slate-900/40"
+                        />
+                      )}
+                    </div>
+                  ))}
                 </div>
               </div>
 
@@ -1176,6 +1247,9 @@ export default function Home() {
                   border: "1px solid rgba(6, 182, 212, 0.3)",
                 }}
                 aria-label="Previous slide"
+                onClick={() => goToCarouselSlide(currentCarouselSlide - 1)}
+                onMouseEnter={() => setIsCarouselHovered(true)}
+                onMouseLeave={() => setIsCarouselHovered(false)}
               >
                 <svg
                   className="h-6 w-6"
@@ -1200,6 +1274,9 @@ export default function Home() {
                   border: "1px solid rgba(6, 182, 212, 0.3)",
                 }}
                 aria-label="Next slide"
+                onClick={() => goToCarouselSlide(currentCarouselSlide + 1)}
+                onMouseEnter={() => setIsCarouselHovered(true)}
+                onMouseLeave={() => setIsCarouselHovered(false)}
               >
                 <svg
                   className="h-6 w-6"
@@ -1218,142 +1295,31 @@ export default function Home() {
               </button>
 
               {/* Dots Navigation */}
-              <div className="flex justify-center gap-3 mt-8">
-                <button
-                  type="button"
-                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
-                  style={{
-                    background: "var(--color-accent)",
-                  }}
-                  aria-label="Go to slide 1"
-                  data-slide="0"
-                />
-                <button
-                  type="button"
-                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
-                  style={{
-                    background: "rgba(6, 182, 212, 0.3)",
-                  }}
-                  aria-label="Go to slide 2"
-                  data-slide="1"
-                />
-                <button
-                  type="button"
-                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
-                  style={{
-                    background: "rgba(6, 182, 212, 0.3)",
-                  }}
-                  aria-label="Go to slide 3"
-                  data-slide="2"
-                />
-                <button
-                  type="button"
-                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
-                  style={{
-                    background: "rgba(6, 182, 212, 0.3)",
-                  }}
-                  aria-label="Go to slide 4"
-                  data-slide="3"
-                />
-                <button
-                  type="button"
-                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
-                  style={{
-                    background: "rgba(6, 182, 212, 0.3)",
-                  }}
-                  aria-label="Go to slide 5"
-                  data-slide="4"
-                />
-                <button
-                  type="button"
-                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
-                  style={{
-                    background: "rgba(6, 182, 212, 0.3)",
-                  }}
-                  aria-label="Go to slide 6"
-                  data-slide="5"
-                />
-                <button
-                  type="button"
-                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
-                  style={{
-                    background: "rgba(6, 182, 212, 0.3)",
-                  }}
-                  aria-label="Go to slide 7"
-                  data-slide="6"
-                />
-                <button
-                  type="button"
-                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
-                  style={{
-                    background: "rgba(6, 182, 212, 0.3)",
-                  }}
-                  aria-label="Go to slide 8"
-                  data-slide="7"
-                />
-                <button
-                  type="button"
-                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
-                  style={{
-                    background: "rgba(6, 182, 212, 0.3)",
-                  }}
-                  aria-label="Go to slide 9"
-                  data-slide="8"
-                />
-                <button
-                  type="button"
-                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
-                  style={{
-                    background: "rgba(6, 182, 212, 0.3)",
-                  }}
-                  aria-label="Go to slide 10"
-                  data-slide="9"
-                />
-                <button
-                  type="button"
-                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
-                  style={{
-                    background: "rgba(6, 182, 212, 0.3)",
-                  }}
-                  aria-label="Go to slide 11"
-                  data-slide="10"
-                />
-                <button
-                  type="button"
-                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
-                  style={{
-                    background: "rgba(6, 182, 212, 0.3)",
-                  }}
-                  aria-label="Go to slide 12"
-                  data-slide="11"
-                />
-                <button
-                  type="button"
-                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
-                  style={{
-                    background: "rgba(6, 182, 212, 0.3)",
-                  }}
-                  aria-label="Go to slide 13"
-                  data-slide="12"
-                />
-                <button
-                  type="button"
-                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
-                  style={{
-                    background: "rgba(6, 182, 212, 0.3)",
-                  }}
-                  aria-label="Go to slide 14"
-                  data-slide="13"
-                />
-                <button
-                  type="button"
-                  className="carousel-dot h-3 w-3 rounded-full transition-all duration-300"
-                  style={{
-                    background: "rgba(6, 182, 212, 0.3)",
-                  }}
-                  aria-label="Go to slide 15"
-                  data-slide="14"
-                />
+              <div
+                className="flex justify-center gap-3 mt-8"
+                onMouseEnter={() => setIsCarouselHovered(true)}
+                onMouseLeave={() => setIsCarouselHovered(false)}
+              >
+                {carouselSlides.map((_, slideIndex) => (
+                  <button
+                    key={slideIndex}
+                    type="button"
+                    className="carousel-dot h-3 rounded-full transition-all duration-300"
+                    style={{
+                      background:
+                        slideIndex === currentCarouselSlide
+                          ? "var(--color-accent)"
+                          : "rgba(6, 182, 212, 0.3)",
+                      width:
+                        slideIndex === currentCarouselSlide
+                          ? "2rem"
+                          : "0.75rem",
+                    }}
+                    aria-label={`Go to slide ${slideIndex + 1}`}
+                    data-slide={String(slideIndex)}
+                    onClick={() => goToCarouselSlide(slideIndex)}
+                  />
+                ))}
               </div>
             </FadeIn>
           </div>
@@ -1371,14 +1337,14 @@ export default function Home() {
           {/* Background Glows */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <div
-              className="absolute top-[20%] left-[-10%] w-[500px] h-[500px] rounded-full opacity-10 blur-[100px] animate-blob"
+              className={`absolute top-[20%] left-[-10%] w-[500px] h-[500px] rounded-full opacity-10 blur-[100px] animate-blob blob-gated ${isBlobSectionActive("testimonials") ? "blob-active" : ""}`}
               style={{
                 background:
                   "radial-gradient(circle, var(--color-accent) 0%, transparent 70%)",
               }}
             />
             <div
-              className="absolute bottom-[20%] right-[-10%] w-[500px] h-[500px] rounded-full opacity-10 blur-[100px] animate-blob animation-delay-2000"
+              className={`absolute bottom-[20%] right-[-10%] w-[500px] h-[500px] rounded-full opacity-10 blur-[100px] animate-blob animation-delay-2000 blob-gated ${isBlobSectionActive("testimonials") ? "blob-active" : ""}`}
               style={{
                 background:
                   "radial-gradient(circle, #8b5cf6 0%, transparent 70%)",
@@ -1754,7 +1720,7 @@ export default function Home() {
           {/* Background Glows */}
           <div className="absolute inset-0 pointer-events-none">
             <div
-              className="absolute top-[40%] left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full opacity-10 blur-[120px] animate-blob-slow"
+              className={`absolute top-[40%] left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full opacity-10 blur-[120px] animate-blob-slow blob-gated ${isBlobSectionActive("pricing") ? "blob-active" : ""}`}
               style={{
                 background:
                   "radial-gradient(circle, var(--color-accent) 0%, transparent 70%)",
@@ -2160,116 +2126,24 @@ export default function Home() {
 
 function ScriptHandler() {
   useEffect(() => {
-    // lightweight scroll variable for parallax
-    const setScrollVar = () => {
-      const y = window.scrollY || window.pageYOffset || 0;
-      document.documentElement.style.setProperty("--scroll-y", `${y}px`);
-    };
-    setScrollVar();
-    window.addEventListener("scroll", setScrollVar, { passive: true });
+    const track = document.querySelector(
+      ".carousel-track",
+    ) as HTMLElement | null;
 
-    const btn = document.querySelector<HTMLAnchorElement>(
-      ".install-buttons .cta-btn--primary",
-    );
-    if (btn && !btn.dataset.rippleInit) {
-      btn.dataset.rippleInit = "true";
-      btn.addEventListener("click", (e) => {
-        const rect = btn.getBoundingClientRect();
-        const x = (e as MouseEvent).clientX - rect.left;
-        const y = (e as MouseEvent).clientY - rect.top;
-        const ripple = document.createElement("span");
-        ripple.className = "ripple";
-        ripple.style.width = ripple.style.height = `${Math.max(
-          rect.width,
-          rect.height,
-        )}px`;
-        ripple.style.left = `${x}px`;
-        ripple.style.top = `${y}px`;
-        btn.appendChild(ripple);
-        ripple.addEventListener("animationend", () => ripple.remove());
-      });
-    }
+    const handleCarouselImageClick = (event: Event) => {
+      const target = event.target as HTMLElement;
+      const imageElement = target.closest("img") as HTMLImageElement | null;
+      if (!track || !imageElement || !track.contains(imageElement)) {
+        return;
+      }
 
-    // Carousel functionality
-    const track = document.querySelector(".carousel-track") as HTMLElement;
-    const dots = document.querySelectorAll(".carousel-dot");
-    const prevBtn = document.querySelector(".carousel-btn-prev");
-    const nextBtn = document.querySelector(".carousel-btn-next");
+      event.stopPropagation();
+      imageElement.style.cursor = "zoom-in";
 
-    if (track && dots.length > 0) {
-      let currentSlide = 0;
-      const totalSlides = dots.length;
-      let autoplayInterval: NodeJS.Timeout | null = null;
-
-      const updateCarousel = (index: number) => {
-        currentSlide = (index + totalSlides) % totalSlides;
-        track.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-        // Update dots
-        dots.forEach((dot, i) => {
-          const dotEl = dot as HTMLElement;
-          if (i === currentSlide) {
-            dotEl.style.background = "var(--color-accent)";
-            dotEl.style.width = "2rem";
-          } else {
-            dotEl.style.background = "rgba(6, 182, 212, 0.3)";
-            dotEl.style.width = "0.75rem";
-          }
-        });
-      };
-
-      const stopAutoplay = () => {
-        if (autoplayInterval) {
-          clearInterval(autoplayInterval);
-          autoplayInterval = null;
-        }
-      };
-
-      const startAutoplay = () => {
-        stopAutoplay(); // Stop any existing interval first
-        autoplayInterval = setInterval(() => {
-          updateCarousel(currentSlide + 1);
-        }, 5000);
-      };
-
-      // Next/Prev buttons
-      nextBtn?.addEventListener("click", () => {
-        updateCarousel(currentSlide + 1);
-        startAutoplay(); // Restart interval
-      });
-
-      prevBtn?.addEventListener("click", () => {
-        updateCarousel(currentSlide - 1);
-        startAutoplay(); // Restart interval
-      });
-
-      // Dot navigation
-      dots.forEach((dot) => {
-        dot.addEventListener("click", () => {
-          const slideIndex = parseInt(dot.getAttribute("data-slide") || "0");
-          updateCarousel(slideIndex);
-          startAutoplay(); // Restart interval
-        });
-      });
-
-      // Pause on hover
-      track.parentElement?.addEventListener("mouseenter", stopAutoplay);
-      track.parentElement?.addEventListener("mouseleave", startAutoplay);
-
-      // Image zoom functionality
-      const slides = document.querySelectorAll(".carousel-slide img");
-      slides.forEach((img) => {
-        const imgEl = img as HTMLImageElement;
-        imgEl.style.cursor = "zoom-in";
-
-        imgEl.addEventListener("click", (e) => {
-          e.stopPropagation();
-          stopAutoplay();
-
-          // Create modal overlay
-          const modal = document.createElement("div");
-          modal.className = "image-zoom-modal";
-          modal.style.cssText = `
+      // Create modal overlay
+      const modal = document.createElement("div");
+      modal.className = "image-zoom-modal";
+      modal.style.cssText = `
               position: fixed;
               top: 0;
               left: 0;
@@ -2285,10 +2159,10 @@ function ScriptHandler() {
               padding: 2rem;
             `;
 
-          // Create close button
-          const closeBtn = document.createElement("button");
-          closeBtn.innerHTML = "✕";
-          closeBtn.style.cssText = `
+      // Create close button
+      const closeBtn = document.createElement("button");
+      closeBtn.innerHTML = "✕";
+      closeBtn.style.cssText = `
               position: absolute;
               top: 1.5rem;
               right: 1.5rem;
@@ -2304,18 +2178,18 @@ function ScriptHandler() {
               transition: all 0.3s;
               z-index: 10000;
             `;
-          closeBtn.addEventListener("mouseenter", () => {
-            closeBtn.style.transform = "scale(1.1)";
-            closeBtn.style.background = "rgba(6, 182, 212, 0.3)";
-          });
-          closeBtn.addEventListener("mouseleave", () => {
-            closeBtn.style.transform = "scale(1)";
-            closeBtn.style.background = "rgba(6, 182, 212, 0.2)";
-          });
+      closeBtn.addEventListener("mouseenter", () => {
+        closeBtn.style.transform = "scale(1.1)";
+        closeBtn.style.background = "rgba(6, 182, 212, 0.3)";
+      });
+      closeBtn.addEventListener("mouseleave", () => {
+        closeBtn.style.transform = "scale(1)";
+        closeBtn.style.background = "rgba(6, 182, 212, 0.2)";
+      });
 
-          // Clone image
-          const zoomedImg = imgEl.cloneNode(true) as HTMLImageElement;
-          zoomedImg.style.cssText = `
+      // Clone image
+      const zoomedImg = imageElement.cloneNode(true) as HTMLImageElement;
+      zoomedImg.style.cssText = `
               max-width: 95%;
               max-height: 95%;
               object-fit: contain;
@@ -2324,9 +2198,9 @@ function ScriptHandler() {
               animation: zoomIn 0.3s ease-out;
             `;
 
-          // Add CSS animations
-          const style = document.createElement("style");
-          style.textContent = `
+      // Add CSS animations
+      const style = document.createElement("style");
+      style.textContent = `
               @keyframes fadeIn {
                 from { opacity: 0; }
                 to { opacity: 1; }
@@ -2342,48 +2216,48 @@ function ScriptHandler() {
                 }
               }
             `;
-          document.head.appendChild(style);
+      document.head.appendChild(style);
 
-          // Close modal function
-          const closeModal = () => {
-            modal.style.animation = "fadeIn 0.2s ease-in-out reverse";
-            setTimeout(() => {
-              document.body.removeChild(modal);
-              document.head.removeChild(style);
-              startAutoplay();
-            }, 200);
-          };
+      let escHandler: ((keyboardEvent: KeyboardEvent) => void) | null = null;
 
-          closeBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            closeModal();
-          });
+      // Close modal function
+      const closeModal = () => {
+        if (escHandler) {
+          document.removeEventListener("keydown", escHandler);
+          escHandler = null;
+        }
+        modal.style.animation = "fadeIn 0.2s ease-in-out reverse";
+        setTimeout(() => {
+          document.body.removeChild(modal);
+          document.head.removeChild(style);
+        }, 200);
+      };
 
-          modal.addEventListener("click", closeModal);
-
-          // ESC key to close
-          const escHandler = (e: KeyboardEvent) => {
-            if (e.key === "Escape") {
-              closeModal();
-              document.removeEventListener("keydown", escHandler);
-            }
-          };
-          document.addEventListener("keydown", escHandler);
-
-          modal.appendChild(closeBtn);
-          modal.appendChild(zoomedImg);
-          document.body.appendChild(modal);
-        });
+      closeBtn.addEventListener("click", (event) => {
+        event.stopPropagation();
+        closeModal();
       });
 
-      // Start autoplay
-      startAutoplay();
+      modal.addEventListener("click", closeModal);
 
-      // Cleanup
-      return () => {
-        stopAutoplay();
+      // ESC key to close
+      escHandler = (keyboardEvent: KeyboardEvent) => {
+        if (keyboardEvent.key === "Escape") {
+          closeModal();
+        }
       };
-    }
+      document.addEventListener("keydown", escHandler);
+
+      modal.appendChild(closeBtn);
+      modal.appendChild(zoomedImg);
+      document.body.appendChild(modal);
+    };
+
+    track?.addEventListener("click", handleCarouselImageClick);
+
+    return () => {
+      track?.removeEventListener("click", handleCarouselImageClick);
+    };
   }, []);
 
   return null;

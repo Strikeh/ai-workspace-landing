@@ -2296,6 +2296,19 @@ details[open].faq-card {
   animation: blob-spin 20s infinite linear;
 }
 
+@keyframes border-beam {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+.animate-border-beam {
+  animation: border-beam calc(var(--duration) * 1s) infinite linear;
+}
+
 .blob-gated {
   animation-play-state: paused;
 }

@@ -11,6 +11,7 @@ import CompleteFeatureMatrix from "@/components/CompleteFeatureMatrix";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import { HeroConnectionLines } from "@/components/HeroConnectionLines";
 import { Footer } from "@/components/Footer";
+import { BorderBeam } from "@/components/ui/border-beam";
 import {
   FadeIn,
   SlideUp,
@@ -726,6 +727,12 @@ export default function Home() {
 
                 <div className="animate-float">
                   <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-slate-900/50 backdrop-blur-xl transform transition-transform hover:scale-[1.01] duration-500">
+                    <BorderBeam
+                      size={250}
+                      duration={12}
+                      colorFrom="#06b6d4"
+                      colorTo="#3b82f6"
+                    />
                     {/* Video Header */}
                     <div className="flex items-center justify-between px-4 py-3 border-b border-white/10 bg-gradient-to-r from-slate-800 to-slate-900">
                       <div className="flex gap-2">

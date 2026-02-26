@@ -45,6 +45,11 @@ const categoryStyles: Record<
     border: "border-violet-500/30",
     text: "text-violet-400",
   },
+  "No-Code AI Builders": {
+    bg: "bg-teal-500/10",
+    border: "border-teal-500/30",
+    text: "text-teal-400",
+  },
 };
 
 const defaultCategoryStyle = {

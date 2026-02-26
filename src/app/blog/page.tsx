@@ -40,6 +40,11 @@ const categoryStyles: Record<
     border: "border-blue-500/30",
     text: "text-blue-400",
   },
+  "Personal AI": {
+    bg: "bg-violet-500/10",
+    border: "border-violet-500/30",
+    text: "text-violet-400",
+  },
 };
 
 const defaultCategoryStyle = {

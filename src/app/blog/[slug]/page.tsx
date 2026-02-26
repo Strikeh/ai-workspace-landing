@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.excerpt,
       type: "article",
       publishedTime: post.date,
-      images: post.image ? [post.image] : [],
+      images: post.ogImage ? [post.ogImage] : post.image ? [post.image] : [],
     },
   };
 }
@@ -51,7 +51,15 @@ export default async function BlogPost({ params }: Props) {
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
-    image: post.image ? [`https://getaiworkspace.com${post.image}`] : [],
+    image: post.ogImage
+      ? [post.ogImage]
+      : post.image
+        ? [
+            post.image.startsWith("http")
+              ? post.image
+              : `https://getaiworkspace.com${post.image}`,
+          ]
+        : [],
     datePublished: post.date,
     author: {
       "@type": "Organization",
@@ -141,7 +149,7 @@ export default async function BlogPost({ params }: Props) {
               >
                 <Image
                   src={post.image}
-                  alt={post.title}
+                  alt={post.imageAlt || post.title}
                   fill
                   className="object-cover"
                   priority
@@ -162,6 +170,7 @@ export default async function BlogPost({ params }: Props) {
             prose-ul:my-6 prose-li:my-2 prose-li:marker:text-cyan-500
             prose-code:text-cyan-300 prose-code:bg-slate-800/50 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
             prose-blockquote:border-l-4 prose-blockquote:border-cyan-500 prose-blockquote:bg-slate-800/30 prose-blockquote:p-6 prose-blockquote:rounded-r-lg prose-blockquote:not-italic prose-blockquote:text-slate-200
+            [&_figcaption]:mt-3 [&_figcaption]:text-sm [&_figcaption]:leading-relaxed [&_figcaption]:text-slate-400 [&_figcaption]:italic
             [&_img]:cursor-zoom-in [&_img]:transition-transform [&_img]:duration-200 hover:[&_img]:scale-[1.02]"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />

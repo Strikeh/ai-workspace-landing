@@ -35,6 +35,11 @@ const categoryStyles: Record<
     border: "border-pink-500/30",
     text: "text-pink-400",
   },
+  "Content Strategy": {
+    bg: "bg-blue-500/10",
+    border: "border-blue-500/30",
+    text: "text-blue-400",
+  },
 };
 
 const defaultCategoryStyle = {
@@ -60,7 +65,7 @@ export default function BlogIndex() {
         : blogPosts.filter((post) => post.category === activeFilter);
 
     return [...posts].sort(
-      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
     );
   }, [activeFilter]);
 
@@ -185,8 +190,8 @@ export default function BlogIndex() {
                               category === "Tutorial"
                                 ? "ring-emerald-500/50"
                                 : category === "All"
-                                ? "ring-white/20"
-                                : "ring-cyan-500/50"
+                                  ? "ring-white/20"
+                                  : "ring-cyan-500/50"
                             }`
                           : `bg-slate-800/50 border-white/10 text-slate-400 hover:bg-slate-800 hover:text-slate-300`
                       }

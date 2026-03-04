@@ -568,9 +568,7 @@ export default function Home() {
                       ))}
                     </div>
                     <span className="font-semibold text-yellow-200">4.5</span>
-                    <span className="text-slate-400">
-                      on Chrome Web Store
-                    </span>
+                    <span className="text-slate-400">on Chrome Web Store</span>
                     <span className="text-slate-500 text-xs">(34)</span>
                   </a>
                 </div>
@@ -1426,9 +1424,21 @@ export default function Home() {
                   ))}
                 </div>
                 <span className="font-semibold text-yellow-200">4.5 / 5</span>
-                <span className="text-slate-400">&middot; 34 ratings on the Chrome Web Store</span>
-                <svg className="w-4 h-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                <span className="text-slate-400">
+                  &middot; 34 ratings on the Chrome Web Store
+                </span>
+                <svg
+                  className="w-4 h-4 text-slate-500"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
                 </svg>
               </a>
             </div>
@@ -1500,8 +1510,18 @@ export default function Home() {
                             className="text-xs text-cyan-500 hover:text-cyan-400 transition-colors mt-0.5 inline-flex items-center gap-1"
                           >
                             Verified Chrome Web Store review
-                            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            <svg
+                              className="w-3 h-3"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                              />
                             </svg>
                           </a>
                         </div>

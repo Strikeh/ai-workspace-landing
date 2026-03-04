@@ -165,9 +165,7 @@ export default function CompetitorComparison() {
                 )}
                 <span
                   className={`text-sm ${
-                    row.highlight
-                      ? "text-white font-medium"
-                      : "text-slate-300"
+                    row.highlight ? "text-white font-medium" : "text-slate-300"
                   }`}
                 >
                   {row.feature}

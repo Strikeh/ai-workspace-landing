@@ -19,7 +19,7 @@ const siteConfig = {
   name: "AI Workspace",
   title: "ChatGPT Workspaces | Separate Context for Freelancers & Consultants",
   description:
-    "Create unlimited workspaces inside ChatGPT. Separate clients, projects, and personal chats with complete context isolation. Built for freelancers, consultants, and developers. Works with ChatGPT, Claude & Grok. Free to start. 4.9★ rating from 4,600+ users. Privacy-first, local-only storage.",
+    "Create unlimited workspaces inside ChatGPT. Separate clients, projects, and personal chats with complete context isolation. Built for freelancers, consultants, and developers. Works with ChatGPT, Claude & Grok. Free to start. 4.5★ rated Chrome extension. Privacy-first, local-only storage.",
   url: "https://getaiworkspace.com",
   ogImage: "https://getaiworkspace.com/og-image.png",
   keywords: [
@@ -149,7 +149,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* Additional SEO optimizations */}
-        <link rel="canonical" href={siteConfig.url} />
         <meta name="theme-color" content="#14b8a6" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
@@ -212,11 +211,11 @@ export default function RootLayout({
               ],
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "4.9",
+                ratingValue: "4.5",
                 bestRating: "5",
                 worstRating: "1",
-                ratingCount: "4689",
-                reviewCount: "1247",
+                ratingCount: "34",
+                reviewCount: "34",
               },
               description: siteConfig.description,
               screenshot:
@@ -412,21 +411,20 @@ export default function RootLayout({
               },
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "4.9",
-                reviewCount: "1247",
+                ratingValue: "4.5",
+                reviewCount: "34",
                 bestRating: "5",
                 worstRating: "1",
               },
               review: [
                 {
                   "@type": "Review",
-                  datePublished: "2025-12-18",
+                  datePublished: "2026-02-23",
                   reviewBody:
-                    "AI Workspace is exceptional! The prompt library and folder organization have completely transformed how I work with ChatGPT. Everything I need is instantly accessible.",
+                    "AI Workspace Pro is a powerful productivity extension that enhances the ChatGPT experience. With an intuitive sidebar and organized prompt manager, it helps users save, categorize, and quickly access prompts, boosting efficiency. The clean interface and smart workflow tools make repetitive tasks faster and smoother. Ideal for professionals and frequent users, it significantly improves productivity and overall AI interaction.",
                   author: {
                     "@type": "Person",
-                    name: "Sarah Mitchell",
-                    jobTitle: "Product Designer",
+                    name: "Lazar Antic",
                   },
                   reviewRating: {
                     "@type": "Rating",
@@ -436,13 +434,12 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Review",
-                  datePublished: "2025-12-05",
+                  datePublished: "2026-02-21",
                   reviewBody:
-                    "I love everything about AI Workspace. It really helps keep my ChatGPT conversations organized and makes me so much more efficient and effective.",
+                    "AI Workspace Pro is a solid productivity booster for anyone who uses ChatGPT regularly. The prompt manager makes it easy to organize and reuse prompts across different projects, and the sidebar workspace keeps everything accessible without leaving the page. I like how it structures conversations into folders so nothing gets lost. The trimming feature for long threads is particularly useful. A well-thought-out tool that genuinely improves the ChatGPT workflow.",
                   author: {
                     "@type": "Person",
-                    name: "David Chen",
-                    jobTitle: "Software Engineer",
+                    name: "Gimme Video",
                   },
                   reviewRating: {
                     "@type": "Rating",
@@ -452,13 +449,12 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Review",
-                  datePublished: "2025-11-22",
+                  datePublished: "2026-01-30",
                   reviewBody:
-                    "This extension is the BEST! The ability to search through all my previous conversations and reuse prompts saves me hours every week. Absolutely essential.",
+                    "This extension is a must-have for AI power users; it's polished, free for core features, and boosts productivity massively.",
                   author: {
                     "@type": "Person",
-                    name: "Emma Rodriguez",
-                    jobTitle: "Content Manager",
+                    name: "Fargin tech",
                   },
                   reviewRating: {
                     "@type": "Rating",
@@ -468,49 +464,16 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Review",
-                  datePublished: "2025-10-28",
+                  datePublished: "2026-02-23",
                   reviewBody:
-                    "AI Workspace has become my default tool for managing my ChatGPT workflow. The local storage gives me peace of mind, and the organization features are incredibly powerful.",
+                    "If you use ChatGPT, Gemini or Grok frequently this is a must-have. It helps you a lot with your prompts, workflow, organization and AI performance. When you learn it, it becomes essential for AI conversations. The pro plans are really worth it.",
                   author: {
                     "@type": "Person",
-                    name: "Marcus Johnson",
-                    jobTitle: "Data Analyst",
+                    name: "Deniz",
                   },
                   reviewRating: {
                     "@type": "Rating",
-                    ratingValue: "5",
-                    bestRating: "5",
-                  },
-                },
-                {
-                  "@type": "Review",
-                  datePublished: "2025-10-12",
-                  reviewBody:
-                    "Of all the extensions I've tried for ChatGPT, this is the only one I actually use daily. The folder system and prompt vault are game-changers for productivity.",
-                  author: {
-                    "@type": "Person",
-                    name: "Lisa Park",
-                    jobTitle: "Marketing Director",
-                  },
-                  reviewRating: {
-                    "@type": "Rating",
-                    ratingValue: "5",
-                    bestRating: "5",
-                  },
-                },
-                {
-                  "@type": "Review",
-                  datePublished: "2025-09-25",
-                  reviewBody:
-                    "Finally, a proper way to organize ChatGPT conversations! AI Workspace makes it easy to find past chats and reuse effective prompts. Pure genius!",
-                  author: {
-                    "@type": "Person",
-                    name: "James Wilson",
-                    jobTitle: "Freelance Writer",
-                  },
-                  reviewRating: {
-                    "@type": "Rating",
-                    ratingValue: "5",
+                    ratingValue: "4",
                     bestRating: "5",
                   },
                 },

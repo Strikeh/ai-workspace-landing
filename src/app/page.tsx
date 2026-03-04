@@ -8,6 +8,7 @@ import DemoModal from "@/components/DemoModal";
 import DemoHubButton from "@/components/DemoHubButton";
 import FeatureShowcase from "@/components/FeatureShowcase";
 import CompleteFeatureMatrix from "@/components/CompleteFeatureMatrix";
+import CompetitorComparison from "@/components/CompetitorComparison";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import { HeroConnectionLines } from "@/components/HeroConnectionLines";
 import { Footer } from "@/components/Footer";
@@ -74,58 +75,60 @@ function getBrowserInstallUrl() {
   }
 }
 
+const CWS_URL =
+  "https://chromewebstore.google.com/detail/ai-workspace-pro-chatgpt/mngeddjcngpcdakdhfcbaefeonmmeomg";
+const CWS_REVIEWS_URL = `${CWS_URL}/reviews`;
+
 const testimonials = [
   {
     quote:
-      "AI Workspace is exceptional! The prompt library and folder organization have completely transformed how I work with ChatGPT. Everything I need is instantly accessible.",
-    name: "Sarah Mitchell",
-    role: "Product Designer",
-    date: "Dec 18, 2025",
+      "AI Workspace Pro is a powerful productivity extension that enhances the ChatGPT experience. With an intuitive sidebar and organized prompt manager, it helps users save, categorize, and quickly access prompts, boosting efficiency. The clean interface and smart workflow tools make repetitive tasks faster and smoother. Ideal for professionals and frequent users, it significantly improves productivity and overall AI interaction.",
+    name: "Lazar Antic",
+    role: "",
+    date: "Feb 23, 2026",
     rating: 5,
     verified: true,
   },
   {
     quote:
-      "I love everything about AI Workspace. It really helps keep my ChatGPT conversations organized and makes me so much more efficient and effective.",
-    name: "David Chen",
-    role: "Software Engineer",
-    date: "Dec 5, 2025",
+      "AI Workspace Pro is a solid productivity booster for anyone who uses ChatGPT regularly. The prompt manager makes it easy to organize and reuse prompts across different projects, and the sidebar workspace keeps everything accessible without leaving the page. I like how it structures conversations into folders so nothing gets lost. The trimming feature for long threads is particularly useful. A well-thought-out tool that genuinely improves the ChatGPT workflow.",
+    name: "Gimme Video",
+    role: "",
+    date: "Feb 21, 2026",
     rating: 5,
     verified: true,
   },
   {
     quote:
-      "This extension is the BEST! The ability to search through all my previous conversations and reuse prompts saves me hours every week. Absolutely essential.",
-    name: "Emma Rodriguez",
-    role: "Content Manager",
-    date: "Nov 22, 2025",
-    rating: 5,
+      "If you use ChatGPT, Gemini or Grok frequently this is a must-have — it helps you a lot with your prompts, workflow, organization and AI performance. It might be hard to understand how to use the extension at first but when you learn it, it becomes essential for AI conversations. Also the pro plans are really worth it.",
+    name: "Deniz",
+    role: "",
+    date: "Feb 23, 2026",
+    rating: 4,
     verified: true,
   },
   {
     quote:
-      "AI Workspace has become my default tool for managing my ChatGPT workflow. The local storage gives me peace of mind, and the organization features are incredibly powerful.",
-    name: "Marcus Johnson",
-    role: "Data Analyst",
-    date: "Oct 28, 2025",
+      "This extension is a must-have for AI power users; it's polished, free for core features, and boosts productivity massively.",
+    name: "Fargin tech",
+    role: "",
+    date: "Jan 30, 2026",
     rating: 5,
     verified: true,
   },
   {
-    quote:
-      "Of all the extensions I've tried for ChatGPT, this is the only one I actually use daily. The folder system and prompt vault are game-changers for productivity.",
-    name: "Lisa Park",
-    role: "Marketing Director",
-    date: "Oct 12, 2025",
+    quote: "This should honestly be built into Chrome.",
+    name: "Pataxó Tupiniquim",
+    role: "",
+    date: "Jan 24, 2026",
     rating: 5,
     verified: true,
   },
   {
-    quote:
-      "Finally, a proper way to organize ChatGPT conversations! AI Workspace makes it easy to find past chats and reuse effective prompts. Pure genius!",
-    name: "James Wilson",
-    role: "Freelance Writer",
-    date: "Sep 25, 2025",
+    quote: "Really good balance of features vs. simplicity.",
+    name: "Siim Liimand",
+    role: "",
+    date: "Jan 24, 2026",
     rating: 5,
     verified: true,
   },
@@ -544,21 +547,32 @@ export default function Home() {
                     </span>
                   </div>
                   {/* Rating badge */}
-                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-yellow-500/30 bg-yellow-500/10">
+                  <a
+                    href={CWS_REVIEWS_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-yellow-500/30 bg-yellow-500/10 hover:bg-yellow-500/20 transition-colors"
+                    title="View all reviews on Chrome Web Store"
+                  >
                     <div className="flex text-yellow-500">
                       {[...Array(5)].map((_, i) => (
                         <svg
                           key={i}
-                          className="w-3.5 h-3.5 fill-current"
+                          className={`w-3.5 h-3.5 ${
+                            i < 4 ? "fill-current" : "fill-current opacity-60"
+                          }`}
                           viewBox="0 0 20 20"
                         >
                           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
                       ))}
                     </div>
-                    <span className="font-semibold text-yellow-200">5.0</span>
-                    <span className="text-slate-400">on Chrome Web Store</span>
-                  </div>
+                    <span className="font-semibold text-yellow-200">4.5</span>
+                    <span className="text-slate-400">
+                      on Chrome Web Store
+                    </span>
+                    <span className="text-slate-500 text-xs">(34)</span>
+                  </a>
                 </div>
 
                 {/* SEO-Optimized H1 Headline */}
@@ -581,7 +595,11 @@ export default function Home() {
                 <div className="space-y-4 max-w-2xl">
                   <p className="hero-subtitle text-xl leading-relaxed text-slate-300">
                     Switch between client projects, side hustles, and personal
-                    chats instantly.{" "}
+                    chats instantly with this{" "}
+                    <span className="text-white font-semibold">
+                      Chrome extension for ChatGPT
+                    </span>
+                    .{" "}
                     <span className="text-white font-semibold">
                       Each workspace keeps its own conversations organized
                     </span>{" "}
@@ -1151,6 +1169,8 @@ export default function Home() {
         {/* Complete Feature Matrix Section */}
         <CompleteFeatureMatrix />
 
+        <CompetitorComparison />
+
         {/* Product Showcase Carousel */}
         <section id="showcase" className="relative py-24 overflow-hidden">
           {/* Background decoration */}
@@ -1363,13 +1383,13 @@ export default function Home() {
             <div className="text-center max-w-3xl mx-auto mb-20">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-bold uppercase tracking-widest mb-6">
                 <SparklesIcon className="w-3 h-3" />
-                Community Love
+                Chrome Web Store Reviews
               </div>
               <h2
                 className="text-4xl md:text-5xl font-bold tracking-tight mb-6"
                 style={{ color: "var(--color-text)" }}
               >
-                Top-Rated ChatGPT Extension - Loved by{" "}
+                What Users Say on the{" "}
                 <span
                   style={{
                     background: "var(--premium-title-gradient)",
@@ -1378,14 +1398,39 @@ export default function Home() {
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  Thousands of Users
+                  Chrome Web Store
                 </span>
               </h2>
               <p className="text-xl leading-relaxed text-slate-400">
-                Join the community of professionals and power users who trust AI
-                Workspace to organize their ChatGPT conversations and boost
-                productivity.
+                Real reviews from verified users on the Chrome Web Store. Join
+                900+ professionals and power users who trust AI Workspace to
+                organize their ChatGPT conversations and boost productivity.
               </p>
+              <a
+                href={CWS_REVIEWS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded-full border border-yellow-500/30 bg-yellow-500/10 hover:bg-yellow-500/20 transition-colors text-sm"
+              >
+                <div className="flex text-yellow-500">
+                  {[...Array(5)].map((_, i) => (
+                    <svg
+                      key={i}
+                      className={`w-4 h-4 ${
+                        i < 4 ? "fill-current" : "fill-current opacity-60"
+                      }`}
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <span className="font-semibold text-yellow-200">4.5 / 5</span>
+                <span className="text-slate-400">&middot; 34 ratings on the Chrome Web Store</span>
+                <svg className="w-4 h-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
             </div>
 
             <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -1426,7 +1471,7 @@ export default function Home() {
                         <div className="h-10 w-10 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-cyan-500/20">
                           {testimonial.name.charAt(0)}
                         </div>
-                        <div>
+                        <div className="flex-1">
                           <div className="text-sm font-semibold text-white flex items-center gap-2">
                             {testimonial.name}
                             {testimonial.verified && (
@@ -1443,9 +1488,22 @@ export default function Home() {
                               </svg>
                             )}
                           </div>
-                          <div className="text-xs text-slate-500">
-                            {testimonial.role}
-                          </div>
+                          {testimonial.role && (
+                            <div className="text-xs text-slate-500">
+                              {testimonial.role}
+                            </div>
+                          )}
+                          <a
+                            href={CWS_REVIEWS_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs text-cyan-500 hover:text-cyan-400 transition-colors mt-0.5 inline-flex items-center gap-1"
+                          >
+                            Verified Chrome Web Store review
+                            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                          </a>
                         </div>
                       </div>
                     </div>

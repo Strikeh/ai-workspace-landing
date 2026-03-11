@@ -13,6 +13,185 @@
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "tangent-view-chatgpt-branching-graph",
+    title: "Tangent View: See How Your ChatGPT Conversations Actually Branch",
+    excerpt:
+      "Tangent View helps you visualize, inspect, and navigate branched ChatGPT conversations as a connected graph instead of a flat list of separate chats.",
+    date: "Mar 11, 2026",
+    readTime: "7 min read",
+    category: "Features",
+    image: "/images/blog/tangent-view-hero.png",
+    imageAlt:
+      "Tangent View showing a branching ChatGPT conversation graph inside AI Workspace",
+    ogImage: "/images/blog/tangent-view-hero.png",
+    content: `
+      <p class="text-xl leading-relaxed text-slate-300 mb-8">
+        ChatGPT conversations rarely stay linear. You try one prompt, edit an earlier message, regenerate a response, or branch into a new chat. A few hours later, you have multiple versions of the same idea spread across separate conversations, and the original flow is hard to reconstruct.
+      </p>
+
+      <p class="text-slate-300 mb-8">
+        <strong class="text-white">Tangent View</strong> solves exactly that problem. It turns your branching ChatGPT history into an interactive visual graph inside AI Workspace, so you can see where a detour started, follow every branch, inspect any node, and jump back to the exact moment a new idea began.
+      </p>
+
+      <div class="my-10 p-6 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-xl">
+        <h3 class="text-2xl font-bold text-white mb-4">Why Tangent View Matters</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-slate-900/50 p-5 rounded-lg border border-cyan-500/20">
+            <h4 class="text-cyan-400 font-bold mb-3 text-lg">Without a branch map</h4>
+            <ul class="text-slate-300 text-sm space-y-2 list-none pl-0">
+              <li class="flex items-start"><span class="mr-2 mt-1">•</span> <span>Branched chats look like unrelated conversations</span></li>
+              <li class="flex items-start"><span class="mr-2 mt-1">•</span> <span>You lose the moment a better idea split off</span></li>
+              <li class="flex items-start"><span class="mr-2 mt-1">•</span> <span>Comparing prompt variations becomes slow and manual</span></li>
+              <li class="flex items-start"><span class="mr-2 mt-1">•</span> <span>Useful abandoned branches stay buried</span></li>
+            </ul>
+          </div>
+          <div class="bg-slate-900/50 p-5 rounded-lg border border-emerald-500/20">
+            <h4 class="text-emerald-400 font-bold mb-3 text-lg">With Tangent View</h4>
+            <ul class="text-slate-300 text-sm space-y-2 list-none pl-0">
+              <li class="flex items-start"><span class="mr-2 mt-1">•</span> <span>See the full conversation tree in one place</span></li>
+              <li class="flex items-start"><span class="mr-2 mt-1">•</span> <span>Inspect paths before reopening the right chat</span></li>
+              <li class="flex items-start"><span class="mr-2 mt-1">•</span> <span>Compare alternate branches without losing context</span></li>
+              <li class="flex items-start"><span class="mr-2 mt-1">•</span> <span>Navigate back to the exact branching point instantly</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">What Tangent View Is</h2>
+      <p class="text-slate-300 mb-6">
+        Tangent View is a dedicated branching graph for ChatGPT conversations. It detects when a conversation splits, especially when you use <strong class="text-cyan-400">Branch in new chat</strong>, and visualizes those relationships as a connected tree.
+      </p>
+      <p class="text-slate-300 mb-8">
+        The original conversation becomes the root, and every alternate path becomes a visible tangent lane. Instead of treating each branched chat as an isolated tab, AI Workspace shows them as one structured exploration space.
+      </p>
+
+      <figure class="my-8">
+        <img src="/images/blog/tangent-view-graph-overview.png" alt="Tangent View graph overview with visible conversation branches" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+        <figcaption>A connected view of your conversation tree makes it much easier to understand where each branch started and how paths relate.</figcaption>
+      </figure>
+
+      <div class="bg-slate-800/40 border border-white/10 rounded-xl p-6 mb-10">
+        <h3 class="text-xl font-bold text-white mb-4">Questions it answers immediately</h3>
+        <ul class="space-y-3 text-slate-300 list-none pl-0">
+          <li class="flex items-start"><span class="mr-3 text-cyan-400">→</span><span>Where did this idea start?</span></li>
+          <li class="flex items-start"><span class="mr-3 text-cyan-400">→</span><span>Which prompt variation produced the best result?</span></li>
+          <li class="flex items-start"><span class="mr-3 text-cyan-400">→</span><span>What changed between this branch and the main path?</span></li>
+          <li class="flex items-start"><span class="mr-3 text-cyan-400">→</span><span>Which branch should I reopen to continue the right line of thinking?</span></li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Why This Matters for Real AI Work</h2>
+      <p class="text-slate-300 mb-6">
+        Branching is one of the most powerful ways to work with AI, but it is also one of the easiest ways to lose context. A small prompt tweak can send a conversation in a completely different direction. Without a map, those branches become hard to compare and even harder to reuse.
+      </p>
+      <p class="text-slate-300 mb-8">
+        Tangent View turns branching from a hidden side effect into a deliberate workflow. It keeps the full history of an idea visible, helps you revisit abandoned paths, and makes it easier to understand how a final result evolved over time.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">What You Can Do Inside Tangent View</h2>
+
+      <h3 class="text-xl font-bold text-cyan-400 mb-4">1. Visualize the full branching structure</h3>
+      <p class="text-slate-300 mb-6">
+        Tangent View renders your conversation as an interactive graph rather than a flat list. The main path stays readable while branches fan outward in a compact metro-style layout designed to remain stable and predictable as the tree grows.
+      </p>
+
+      <h3 class="text-xl font-bold text-cyan-400 mb-4">2. Open it directly from ChatGPT</h3>
+      <p class="text-slate-300 mb-6">
+        You can launch Tangent View from the button injected into the ChatGPT header, right next to the model selector. There is also a keyboard shortcut: <code class="bg-slate-800 px-2 py-1 rounded">Ctrl/Cmd + Shift + Y</code>.
+      </p>
+
+      <h3 class="text-xl font-bold text-cyan-400 mb-4">3. Hover for summaries, hold Shift for full content</h3>
+      <p class="text-slate-300 mb-6">
+        Every node can show a concise summary on hover so you can scan the tree quickly. When you want more detail, hold <strong class="text-white">Shift</strong> to reveal the full turn content. That makes the graph useful for both fast orientation and close inspection.
+      </p>
+
+      <figure class="my-8">
+        <img src="/images/blog/tangent-view-hover-preview.png" alt="Tangent View node hover preview showing summary and expanded content inspection" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+        <figcaption>Hover for a fast summary, then hold Shift when you want to inspect the full turn without leaving the graph.</figcaption>
+      </figure>
+
+      <h3 class="text-xl font-bold text-cyan-400 mb-4">4. Follow the exact path to any selected node</h3>
+      <p class="text-slate-300 mb-6">
+        Clicking a node opens a <strong class="text-white">Path</strong> panel that shows the full route from the root conversation to the selected branch. Each step is numbered, so you can understand not just where you are, but how you got there.
+      </p>
+
+      <h3 class="text-xl font-bold text-cyan-400 mb-4">5. Navigate, preview, or clean up from the node toolbar</h3>
+      <p class="text-slate-300 mb-6">
+        Selecting a node reveals a floating action toolbar with quick actions to navigate directly to that chat, preview the node content in a focused dialog, or delete the node and its subtree from the Tangent graph.
+      </p>
+
+      <h3 class="text-xl font-bold text-cyan-400 mb-4">6. Review full turn content without leaving the graph</h3>
+      <p class="text-slate-300 mb-6">
+        For deeper inspection, Tangent View includes a scrollable preview dialog that shows the full user and assistant content for a selected node, including markdown formatting. You can verify a branch before jumping away from the graph.
+      </p>
+
+      <h3 class="text-xl font-bold text-cyan-400 mb-4">7. Stay oriented with clear visual states</h3>
+      <p class="text-slate-300 mb-8">
+        A built-in legend and distinct node states help you quickly identify the root node, the active conversation, branch nodes, the selected node, and nodes with multiple outgoing branches. Even larger graphs stay readable at a glance.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-10">
+        <div class="bg-slate-800/30 border border-white/10 p-6 rounded-xl">
+          <h4 class="text-cyan-400 font-bold mt-0 mb-3">For writers and content teams</h4>
+          <p class="text-slate-400 text-sm m-0">Compare alternate hooks, structures, titles, and angles without losing track of which branch produced the strongest draft.</p>
+        </div>
+        <div class="bg-slate-800/30 border border-white/10 p-6 rounded-xl">
+          <h4 class="text-blue-400 font-bold mt-0 mb-3">For developers and technical users</h4>
+          <p class="text-slate-400 text-sm m-0">Evaluate multiple implementation paths, debugging strategies, and prompt variations while keeping the full reasoning chain visible.</p>
+        </div>
+        <div class="bg-slate-800/30 border border-white/10 p-6 rounded-xl">
+          <h4 class="text-emerald-400 font-bold mt-0 mb-3">For researchers and analysts</h4>
+          <p class="text-slate-400 text-sm m-0">Branch into competing hypotheses, return to earlier decision points, and preserve the context behind each line of inquiry.</p>
+        </div>
+        <div class="bg-slate-800/30 border border-white/10 p-6 rounded-xl">
+          <h4 class="text-amber-400 font-bold mt-0 mb-3">For prompt engineers and power users</h4>
+          <p class="text-slate-400 text-sm m-0">See how small prompt changes affect outcomes across branches, then jump back into the exact path you want to continue.</p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">What Makes It Different From a Normal Chat List</h2>
+      <p class="text-slate-300 mb-6">
+        A normal sidebar can tell you which chats exist. Tangent View tells you how they relate. Once conversations start branching, that relationship becomes more valuable than the chat list itself.
+      </p>
+      <p class="text-slate-300 mb-8">
+        Workspaces, favorites, tags, and folders help you manage conversations. Tangent View helps you understand the decision tree inside them. That difference is what makes it useful for serious iterative work.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Under the Hood</h2>
+      <p class="text-slate-300 mb-6">
+        Tangent View is not just drawing lines between random nodes. It is built to detect branch relationships across chats, persist them locally, and render them in a stable graph that survives reloads and browser restarts.
+      </p>
+      <ul class="space-y-3 text-slate-300 mb-8 list-disc pl-5">
+        <li>Automatic detection of cross-chat branches created via ChatGPT's branching flow</li>
+        <li>Local persistence in IndexedDB so the graph remains available across sessions</li>
+        <li>Stable metro-style layout with compact branch routing</li>
+        <li>Cached AI summaries with TTL to avoid redundant work</li>
+        <li>Pan and zoom support for larger graphs</li>
+        <li>Persisted light and dark theme preferences</li>
+        <li>Free-tier gating with clear upgrade messaging for heavy usage</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">How to Use Tangent View</h2>
+      <div class="bg-slate-800/50 p-6 rounded-xl border border-white/10 mb-10">
+        <ol class="space-y-3 text-slate-300 m-0 pl-5 list-decimal">
+          <li>Open a ChatGPT conversation that contains branches, or create one using <strong>Branch in new chat</strong>.</li>
+          <li>Click the <strong>Tangent View</strong> button in the header, or press <code class="bg-slate-800 px-2 py-1 rounded">Ctrl/Cmd + Shift + Y</code>.</li>
+          <li>Hover over nodes to scan summaries quickly.</li>
+          <li>Hold <strong>Shift</strong> when you want the full turn content.</li>
+          <li>Click a node to open the Path panel and focus that branch.</li>
+          <li>Use the node toolbar to navigate, preview, or clean up the graph.</li>
+        </ol>
+      </div>
+
+      <div class="bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-xl p-6 mt-12">
+        <h4 class="text-emerald-400 font-bold mt-0 mb-4">Branching finally becomes visible</h4>
+        <p class="text-slate-300 m-0">
+          If you use ChatGPT to think, iterate, and explore, Tangent View gives your conversation structure a clear visual shape so you can keep building from the exact branch that matters.
+        </p>
+      </div>
+    `,
+  },
+  {
     slug: "ai-workspace-vs-superpower-chatgpt-workspaces",
     title:
       "AI Workspace vs Superpower ChatGPT: Which Extension Is Right for You?",

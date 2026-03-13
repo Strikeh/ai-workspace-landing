@@ -133,6 +133,70 @@ export default function WelcomePage() {
           </p>
         </motion.div>
 
+        {/* NEW FEATURE HIGHLIGHT */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="mb-16 relative rounded-2xl overflow-hidden border border-emerald-500/30 bg-slate-900/50 backdrop-blur-xl shadow-2xl p-6 md:p-10"
+        >
+          {/* Subtle glow */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px] pointer-events-none" />
+
+          <div className="flex flex-col md:flex-row gap-8 items-center relative z-10">
+            <div className="flex-1 space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-widest">
+                <Sparkles className="w-3 h-3" />
+                New Feature
+              </div>
+              <h2 className="text-3xl font-bold text-white">
+                Meet <span className="text-emerald-400">Tangent View</span>
+              </h2>
+              <p className="text-slate-300 text-lg leading-relaxed">
+                Ever get lost in branching ChatGPT conversations? Tangent View
+                visualizes all your chat branches as a connected tree graph so
+                you can navigate, compare, and organize different paths
+                seamlessly.
+              </p>
+              <div className="pt-2 flex flex-wrap gap-4">
+                <div className="flex items-center gap-2 text-sm text-slate-400">
+                  <kbd className="px-1.5 py-0.5 rounded bg-slate-800 border border-white/10 font-mono text-xs text-slate-300">
+                    Cmd/Ctrl
+                  </kbd>
+                  <span>+</span>
+                  <kbd className="px-1.5 py-0.5 rounded bg-slate-800 border border-white/10 font-mono text-xs text-slate-300">
+                    Shift
+                  </kbd>
+                  <span>+</span>
+                  <kbd className="px-1.5 py-0.5 rounded bg-slate-800 border border-white/10 font-mono text-xs text-slate-300">
+                    Y
+                  </kbd>
+                  <span className="ml-1">to open in ChatGPT</span>
+                </div>
+              </div>
+              <div className="pt-4">
+                <Link
+                  href="/blog/tangent-view-chatgpt-branching-graph"
+                  className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold transition-colors"
+                >
+                  Learn how it works
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="w-full md:w-5/12 aspect-video rounded-xl overflow-hidden border border-white/10 relative shadow-inner">
+              <iframe
+                src="https://www.youtube.com/embed/4C-Pct2RMrc?autoplay=1&mute=1&loop=1&playlist=4C-Pct2RMrc&controls=0&modestbranding=1"
+                className="absolute inset-0 w-full h-full pointer-events-none"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </motion.div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
           {steps.map((step, index) => (
             <motion.div

@@ -28,6 +28,7 @@ import {
   MessageSquare,
   Sparkles,
   ExternalLink,
+  GitBranch,
 } from "lucide-react";
 
 const CheckIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -198,6 +199,15 @@ const featureData: Record<Tab, { features: Feature[] }> = {
   },
   advanced: {
     features: [
+      {
+        icon: GitBranch,
+        title: "Tangent View",
+        description:
+          "Visualize and navigate your branched ChatGPT conversations as a connected graph",
+        video: "https://www.youtube.com/embed/4C-Pct2RMrc",
+        link: "/blog/tangent-view-chatgpt-branching-graph",
+        isNew: true,
+      },
       {
         icon: ImageIcon,
         title: "Image Gallery",

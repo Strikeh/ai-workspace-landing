@@ -33,6 +33,19 @@ export const blogPosts: BlogPost[] = [
         <strong class="text-white">Tangent View</strong> solves exactly that problem. It turns your branching ChatGPT history into an interactive visual graph inside AI Workspace, so you can see where a detour started, follow every branch, inspect any node, and jump back to the exact moment a new idea began.
       </p>
 
+      <figure class="my-12">
+        <div class="relative w-full aspect-video rounded-xl overflow-hidden border border-white/10 shadow-2xl bg-slate-900">
+          <iframe 
+            src="https://www.youtube.com/embed/4C-Pct2RMrc?modestbranding=1&rel=0" 
+            title="Tangent View Demo"
+            class="absolute inset-0 w-full h-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <figcaption class="mt-4 text-center text-sm text-slate-400">See Tangent View in action</figcaption>
+      </figure>
+
       <div class="my-10 p-6 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-xl">
         <h3 class="text-2xl font-bold text-white mb-4">Why Tangent View Matters</h3>
         <div class="grid md:grid-cols-2 gap-6">

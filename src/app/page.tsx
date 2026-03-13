@@ -921,7 +921,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* NEW: Smart Conversation Outline Feature Highlight */}
+        {/* NEW: Tangent View Feature Highlight */}
         <section
           className="relative py-24 overflow-hidden border-t"
           style={{ borderColor: "var(--color-border)" }}
@@ -966,49 +966,47 @@ export default function Home() {
                       WebkitTextFillColor: "transparent",
                     }}
                   >
-                    AI Conversations
+                    Branched
                   </span>{" "}
-                  Again
+                  Conversations
                 </h2>
 
                 <p className="text-xl text-slate-400 leading-relaxed">
-                  Stop scrolling through endless messages. Our Smart
-                  Conversation Outline gives you a visual map of your entire
-                  chat — jump to any message with one click.
+                  Stop wrestling with unorganized tabs. Our new Tangent View gives you an interactive visual graph of your branching ChatGPT conversations, letting you navigate multiple threads effortlessly.
                 </p>
 
                 {/* Feature Grid */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   {[
                     {
-                      icon: "🗺️",
-                      title: "Visual Conversation Map",
-                      desc: "See every exchange at a glance",
+                      icon: "🌳",
+                      title: "Visual Conversation Tree",
+                      desc: "See how ideas diverge at a glance",
                     },
                     {
                       icon: "🎯",
-                      title: "One-Click Jump",
-                      desc: "Navigate to any message instantly",
+                      title: "Direct Jump",
+                      desc: "Click nodes to open that exact branch",
                     },
                     {
-                      icon: "📊",
-                      title: "Progress Tracking",
-                      desc: "Real-time scroll position indicator",
-                    },
-                    {
-                      icon: "🎨",
-                      title: "Smart Filtering",
-                      desc: "View only questions or answers",
+                      icon: "🔍",
+                      title: "Quick Peek",
+                      desc: "Hover to see message summaries",
                     },
                     {
                       icon: "⌨️",
-                      title: "Keyboard Shortcuts",
-                      desc: "Cmd/Ctrl + . to toggle panel",
+                      title: "Keyboard Quick Open",
+                      desc: "Ctrl/Cmd + Shift + Y anytime",
                     },
                     {
-                      icon: "🖱️",
-                      title: "Fully Draggable",
-                      desc: "Position it anywhere you want",
+                      icon: "清理",
+                      title: "Branch Cleanup",
+                      desc: "Prune irrelevant paths right inside the graph",
+                    },
+                    {
+                      icon: "🔗",
+                      title: "Path Tracking",
+                      desc: "Always know how you reached this reply",
                     },
                   ].map((feature, i) => (
                     <div
@@ -1031,9 +1029,9 @@ export default function Home() {
                 {/* Benefits */}
                 <div className="flex flex-wrap gap-3 pt-4">
                   {[
-                    "10x faster navigation",
-                    "Works on ChatGPT, Claude, Grok & Gemini",
-                    "Desktop optimized",
+                    "View complete structure",
+                    "Integrated in ChatGPT",
+                    "Saves you massive context-switching time",
                   ].map((benefit, i) => (
                     <span
                       key={i}
@@ -1043,11 +1041,21 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
+                
+                {/* CTA Link */}
+                <div className="pt-2">
+                  <Link href="/blog/tangent-view-chatgpt-branching-graph" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors">
+                    Read the complete launch post
+                    <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </Link>
+                </div>
               </FadeIn>
 
-              {/* Right: Visual Demo */}
+              {/* Right: Visual Demo (Video) */}
               <ScaleUp className="relative" delay={0.2}>
-                <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-slate-900/50 backdrop-blur-xl">
+                <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-slate-900/50 backdrop-blur-xl aspect-video group">
                   {/* Browser Header */}
                   <div className="flex items-center justify-between px-4 py-3 border-b border-white/10 bg-gradient-to-r from-slate-800 to-slate-900">
                     <div className="flex gap-2">
@@ -1064,83 +1072,14 @@ export default function Home() {
                   </div>
 
                   {/* Mock Outline Panel Visual */}
-                  <div className="p-6 space-y-4">
-                    {/* Progress Bar */}
-                    <div className="flex items-center gap-3 pb-4 border-b border-white/5">
-                      <div className="flex-1 h-1.5 bg-slate-800 rounded-full overflow-hidden">
-                        <div className="w-2/3 h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></div>
-                      </div>
-                      <span className="text-xs text-slate-500 font-mono">
-                        67%
-                      </span>
-                    </div>
-
-                    {/* Message List Preview */}
-                    <div className="space-y-2">
-                      {[
-                        {
-                          type: "user",
-                          text: "How do I optimize my React app?",
-                          active: false,
-                        },
-                        {
-                          type: "assistant",
-                          text: "Here are 5 key strategies for optimization...",
-                          active: false,
-                        },
-                        {
-                          type: "user",
-                          text: "Can you show me code examples?",
-                          active: false,
-                        },
-                        {
-                          type: "assistant",
-                          text: "Sure! Let me demonstrate with useMemo...",
-                          active: true,
-                        },
-                        {
-                          type: "user",
-                          text: "What about useCallback?",
-                          active: false,
-                        },
-                        {
-                          type: "assistant",
-                          text: "useCallback is perfect for...",
-                          active: false,
-                        },
-                      ].map((msg, i) => (
-                        <div
-                          key={i}
-                          className={`flex items-center gap-3 p-2 rounded-lg cursor-pointer transition-all ${
-                            msg.active
-                              ? "bg-cyan-500/20 border border-cyan-500/30"
-                              : "hover:bg-white/5 border border-transparent"
-                          }`}
-                        >
-                          <span className="text-sm">
-                            {msg.type === "user" ? "👤" : "🤖"}
-                          </span>
-                          <span
-                            className={`text-xs truncate ${msg.active ? "text-cyan-300" : "text-slate-400"}`}
-                          >
-                            {msg.text}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Filter Pills */}
-                    <div className="flex gap-2 pt-4 border-t border-white/5">
-                      <span className="px-2 py-1 rounded text-[10px] font-medium bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
-                        Both
-                      </span>
-                      <span className="px-2 py-1 rounded text-[10px] font-medium bg-white/5 text-slate-500">
-                        User Only
-                      </span>
-                      <span className="px-2 py-1 rounded text-[10px] font-medium bg-white/5 text-slate-500">
-                        AI Only
-                      </span>
-                    </div>
+                  <div className="relative w-full h-[calc(100%-48px)]">
+                    <iframe
+                      src="https://www.youtube.com/embed/4C-Pct2RMrc?autoplay=1&mute=1&loop=1&playlist=4C-Pct2RMrc&controls=0&modestbranding=1"
+                      className="absolute inset-0 w-full h-full pointer-events-none"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      loading="lazy"
+                    />
                   </div>
                 </div>
 
@@ -1148,15 +1087,16 @@ export default function Home() {
                 <div className="absolute -bottom-4 -right-4 px-4 py-2 rounded-xl bg-slate-800 border border-white/10 shadow-xl">
                   <div className="flex items-center gap-2">
                     <kbd className="px-2 py-1 rounded bg-slate-900 border border-white/10 text-xs text-slate-300 font-mono">
-                      ⌘
+                      ⌘/Ctrl
                     </kbd>
                     <span className="text-slate-500 text-xs">+</span>
                     <kbd className="px-2 py-1 rounded bg-slate-900 border border-white/10 text-xs text-slate-300 font-mono">
-                      .
+                      Shift
                     </kbd>
-                    <span className="text-slate-500 text-xs ml-1">
-                      to toggle
-                    </span>
+                    <span className="text-slate-500 text-xs">+</span>
+                    <kbd className="px-2 py-1 rounded bg-slate-900 border border-white/10 text-xs text-slate-300 font-mono">
+                      Y
+                    </kbd>
                   </div>
                 </div>
               </ScaleUp>

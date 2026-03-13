@@ -97,6 +97,7 @@ export default function CompleteFeatureMatrix() {
       borderColor: "hover:border-pink-500/30",
       blobColor: "bg-pink-500/10",
       features: [
+        "Tangent View ✨",
         "Image Gallery",
         "Notes System",
         "Export (JSON/TXT/MD/PDF)",

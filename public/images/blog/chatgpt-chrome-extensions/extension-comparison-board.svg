@@ -1,0 +1,38 @@
+﻿<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" rx="32" fill="#07111F"/>
+  <text x="100" y="110" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="42" font-weight="700">Placeholder Comparison Board</text>
+  <text x="100" y="155" fill="#94A3B8" font-family="Arial, sans-serif" font-size="22">Use this to visualize the main extension archetypes discussed in the article.</text>
+  <rect x="90" y="220" width="320" height="540" rx="28" fill="#0F172A" stroke="#06B6D4"/>
+  <rect x="440" y="220" width="320" height="540" rx="28" fill="#0F172A" stroke="#8B5CF6"/>
+  <rect x="790" y="220" width="320" height="540" rx="28" fill="#0F172A" stroke="#10B981"/>
+  <rect x="1140" y="220" width="320" height="540" rx="28" fill="#0F172A" stroke="#F59E0B"/>
+  <text x="130" y="280" fill="#67E8F9" font-family="Arial, sans-serif" font-size="28" font-weight="700">Workspace Organizer</text>
+  <text x="480" y="280" fill="#C4B5FD" font-family="Arial, sans-serif" font-size="28" font-weight="700">Power-User Toolkit</text>
+  <text x="830" y="280" fill="#6EE7B7" font-family="Arial, sans-serif" font-size="28" font-weight="700">Web Access Layer</text>
+  <text x="1180" y="280" fill="#FCD34D" font-family="Arial, sans-serif" font-size="28" font-weight="700">AI Copilot Suite</text>
+  <rect x="130" y="340" width="240" height="18" rx="9" fill="#083344"/>
+  <rect x="130" y="390" width="190" height="18" rx="9" fill="#155E75"/>
+  <rect x="130" y="440" width="220" height="18" rx="9" fill="#0E7490"/>
+  <rect x="130" y="490" width="170" height="18" rx="9" fill="#164E63"/>
+  <rect x="130" y="540" width="250" height="18" rx="9" fill="#0F766E"/>
+  <rect x="480" y="340" width="240" height="18" rx="9" fill="#4C1D95"/>
+  <rect x="480" y="390" width="210" height="18" rx="9" fill="#6D28D9"/>
+  <rect x="480" y="440" width="260" height="18" rx="9" fill="#7C3AED"/>
+  <rect x="480" y="490" width="230" height="18" rx="9" fill="#5B21B6"/>
+  <rect x="480" y="540" width="180" height="18" rx="9" fill="#6B21A8"/>
+  <rect x="830" y="340" width="250" height="18" rx="9" fill="#064E3B"/>
+  <rect x="830" y="390" width="210" height="18" rx="9" fill="#047857"/>
+  <rect x="830" y="440" width="200" height="18" rx="9" fill="#059669"/>
+  <rect x="830" y="490" width="260" height="18" rx="9" fill="#065F46"/>
+  <rect x="830" y="540" width="170" height="18" rx="9" fill="#10B981"/>
+  <rect x="1180" y="340" width="240" height="18" rx="9" fill="#78350F"/>
+  <rect x="1180" y="390" width="190" height="18" rx="9" fill="#B45309"/>
+  <rect x="1180" y="440" width="260" height="18" rx="9" fill="#D97706"/>
+  <rect x="1180" y="490" width="220" height="18" rx="9" fill="#92400E"/>
+  <rect x="1180" y="540" width="250" height="18" rx="9" fill="#F59E0B"/>
+  <text x="130" y="640" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="18">Folders, notes, prompts, context separation</text>
+  <text x="480" y="640" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="18">Exports, search, minimap, utilities</text>
+  <text x="830" y="640" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="18">Prompts + live search + fresher answers</text>
+  <text x="1180" y="640" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="18">Multi-model browser help and creation tools</text>
+  <text x="100" y="825" fill="#64748B" font-family="Arial, sans-serif" font-size="18">Replace with a branded editorial infographic if desired.</text>
+</svg>

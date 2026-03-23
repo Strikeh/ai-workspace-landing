@@ -1,0 +1,24 @@
+﻿<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" rx="32" fill="#07111F"/>
+  <rect x="110" y="120" width="1380" height="660" rx="28" fill="#0B1220" stroke="#1E293B"/>
+  <text x="150" y="190" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="40" font-weight="700">Placeholder Prompt Library Visual</text>
+  <text x="150" y="235" fill="#94A3B8" font-family="Arial, sans-serif" font-size="22">Best used for a close-up of reusable prompts, variables, tags, and a slash-command insert menu.</text>
+  <rect x="150" y="290" width="430" height="410" rx="26" fill="#0F172A" stroke="#334155"/>
+  <rect x="620" y="290" width="760" height="410" rx="26" fill="#0F172A" stroke="#06B6D4"/>
+  <text x="185" y="350" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="28" font-weight="700">Saved Prompts</text>
+  <rect x="185" y="395" width="360" height="76" rx="18" fill="#111827"/>
+  <rect x="185" y="490" width="360" height="76" rx="18" fill="#111827"/>
+  <rect x="185" y="585" width="360" height="76" rx="18" fill="#111827"/>
+  <text x="210" y="438" fill="#67E8F9" font-family="Arial, sans-serif" font-size="22" font-weight="700">Client proposal opener</text>
+  <text x="210" y="533" fill="#A5F3FC" font-family="Arial, sans-serif" font-size="22" font-weight="700">SEO brief with variables</text>
+  <text x="210" y="628" fill="#CFFAFE" font-family="Arial, sans-serif" font-size="22" font-weight="700">Follow-up email draft</text>
+  <text x="660" y="350" fill="#67E8F9" font-family="Arial, sans-serif" font-size="28" font-weight="700">Slash Command Insert</text>
+  <rect x="660" y="395" width="680" height="72" rx="20" fill="#020617" stroke="#155E75"/>
+  <text x="695" y="440" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="26">/ client proposal template</text>
+  <rect x="700" y="495" width="560" height="56" rx="18" fill="#082F49"/>
+  <rect x="700" y="569" width="500" height="56" rx="18" fill="#0F172A" stroke="#1D4ED8"/>
+  <rect x="700" y="643" width="610" height="56" rx="18" fill="#052E2B"/>
+  <text x="730" y="530" fill="#BAE6FD" font-family="Arial, sans-serif" font-size="22">{{client_name}} / {{deliverable}} / {{tone}}</text>
+  <text x="730" y="604" fill="#93C5FD" font-family="Arial, sans-serif" font-size="22">Favorite prompts and recent inserts</text>
+  <text x="730" y="678" fill="#86EFAC" font-family="Arial, sans-serif" font-size="22">Prompt chain step 2 ready</text>
+</svg>

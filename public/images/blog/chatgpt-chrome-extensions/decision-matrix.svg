@@ -1,0 +1,47 @@
+﻿<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" rx="32" fill="#040B16"/>
+  <text x="100" y="110" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="42" font-weight="700">Placeholder Decision Matrix</text>
+  <text x="100" y="155" fill="#94A3B8" font-family="Arial, sans-serif" font-size="22">Use this to compare extensions on the dimensions that matter most to buyers.</text>
+  <rect x="100" y="220" width="1400" height="560" rx="28" fill="#0B1220" stroke="#1E293B"/>
+  <path d="M430 300H1420" stroke="#334155" stroke-width="2"/>
+  <path d="M430 390H1420" stroke="#334155" stroke-width="2"/>
+  <path d="M430 480H1420" stroke="#334155" stroke-width="2"/>
+  <path d="M430 570H1420" stroke="#334155" stroke-width="2"/>
+  <path d="M430 660H1420" stroke="#334155" stroke-width="2"/>
+  <path d="M430 750H1420" stroke="#334155" stroke-width="2"/>
+  <path d="M430 220V780" stroke="#334155" stroke-width="2"/>
+  <path d="M680 220V780" stroke="#334155" stroke-width="2"/>
+  <path d="M930 220V780" stroke="#334155" stroke-width="2"/>
+  <path d="M1180 220V780" stroke="#334155" stroke-width="2"/>
+  <text x="150" y="285" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="28" font-weight="700">Criteria</text>
+  <text x="500" y="285" fill="#67E8F9" font-family="Arial, sans-serif" font-size="28" font-weight="700">AI Workspace</text>
+  <text x="740" y="285" fill="#C4B5FD" font-family="Arial, sans-serif" font-size="28" font-weight="700">Superpower</text>
+  <text x="1000" y="285" fill="#6EE7B7" font-family="Arial, sans-serif" font-size="28" font-weight="700">WebChatGPT</text>
+  <text x="1270" y="285" fill="#FCD34D" font-family="Arial, sans-serif" font-size="28" font-weight="700">Sider / Monica</text>
+  <text x="150" y="375" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="24">Prompt management</text>
+  <text x="150" y="465" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="24">Project separation</text>
+  <text x="150" y="555" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="24">Web access</text>
+  <text x="150" y="645" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="24">Privacy posture</text>
+  <text x="150" y="735" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="24">All-purpose breadth</text>
+  <circle cx="555" cy="366" r="20" fill="#06B6D4"/>
+  <circle cx="555" cy="456" r="20" fill="#06B6D4"/>
+  <circle cx="555" cy="546" r="14" fill="#334155"/>
+  <circle cx="555" cy="636" r="20" fill="#06B6D4"/>
+  <circle cx="555" cy="726" r="14" fill="#334155"/>
+  <circle cx="805" cy="366" r="20" fill="#8B5CF6"/>
+  <circle cx="805" cy="456" r="16" fill="#7C3AED"/>
+  <circle cx="805" cy="546" r="12" fill="#334155"/>
+  <circle cx="805" cy="636" r="12" fill="#334155"/>
+  <circle cx="805" cy="726" r="14" fill="#334155"/>
+  <circle cx="1055" cy="366" r="16" fill="#10B981"/>
+  <circle cx="1055" cy="456" r="12" fill="#334155"/>
+  <circle cx="1055" cy="546" r="20" fill="#10B981"/>
+  <circle cx="1055" cy="636" r="20" fill="#10B981"/>
+  <circle cx="1055" cy="726" r="12" fill="#334155"/>
+  <circle cx="1305" cy="366" r="16" fill="#F59E0B"/>
+  <circle cx="1305" cy="456" r="12" fill="#334155"/>
+  <circle cx="1305" cy="546" r="20" fill="#F59E0B"/>
+  <circle cx="1305" cy="636" r="12" fill="#334155"/>
+  <circle cx="1305" cy="726" r="20" fill="#F59E0B"/>
+  <text x="100" y="835" fill="#64748B" font-family="Arial, sans-serif" font-size="18">Replace with a fully branded scorecard, radar chart, or editorial matrix if needed.</text>
+</svg>

@@ -17,7 +17,8 @@ const geistMono = Geist_Mono({
 
 const siteConfig = {
   name: "AI Workspace",
-  title: "ChatGPT Workspaces | Separate Context for Freelancers & Consultants",
+  title:
+    "ChatGPT Workspaces Chrome Extension | Organize Chats, Prompts & Projects",
   description:
     "Create unlimited workspaces inside ChatGPT. Separate clients, projects, and personal chats with complete context isolation. Built for freelancers, consultants, and developers. Works with ChatGPT, Claude & Grok. Free to start. 4.5★ rated Chrome extension. Privacy-first, local-only storage.",
   url: "https://getaiworkspace.com",

@@ -1,0 +1,138 @@
+﻿# SEO Content Engine — Project Configuration
+# Auto-generated 2026-03-27. Edit anything here anytime — Claude Code reads this before every task.
+
+project:
+  name: "AI Workspace Pro"
+  tagline: "ChatGPT Workspaces – Everything ChatGPT Should Have Built In."
+  description: "Create unlimited workspaces inside ChatGPT. Separate clients, projects, and personal chats with complete context isolation. Built for freelancers, consultants, and developers. Works with ChatGPT, Claude & Grok."
+  website: "https://getaiworkspace.com"
+  target_audience:
+    primary: "freelancers, consultants, and developers who use ChatGPT daily"
+    secondary: "agencies, students, content creators, social media managers"
+    technical_level: "mixed"
+
+# Author — auto-detected from git config
+author:
+  name: "Christophe"
+  title: ""
+  bio: ""
+  website: "https://getaiworkspace.com"
+  social_links: {}
+
+# Trust signals — used for E-E-A-T in blogs
+trust_signals:
+  review_links:
+    g2: ""
+    trustpilot: ""
+    capterra: ""
+    product_hunt: ""
+    rightfeature: ""
+    canny: ""
+    chrome_web_store: "https://chromewebstore.google.com/detail/ai-workspace-pro-chatgpt/mngeddjcngpcdakdhfcbaefeonmmeomg/reviews"
+    other: []
+  testimonials:
+    - name: "Lazar Antic"
+      date: "2026-02-23"
+      rating: 5
+      quote: "Powerful productivity extension... intuitive sidebar... prompt manager... significantly improves productivity and overall AI interaction."
+    - name: "Gimme Video"
+      date: "2026-02-21"
+      rating: 5
+      quote: "Solid productivity booster... organizes prompts... trimming feature particularly useful."
+    - name: "Deniz"
+      date: "2026-02-23"
+      rating: 4
+      quote: "Must-have for AI power users... helps with prompts, workflow, organization... pro plans really worth it."
+    - name: "Fargin tech"
+      date: "2026-01-30"
+      rating: 5
+      quote: "Must-have for AI power users; polished, free for core features, boosts productivity massively."
+    - name: "Pataxó Tupiniquim"
+      date: "2026-01-24"
+      rating: 5
+      quote: "This should honestly be built into Chrome."
+    - name: "Siim Liimand"
+      date: "2026-01-24"
+      rating: 5
+      quote: "Really good balance of features vs. simplicity."
+  metrics:
+    - "4.5★ Chrome Web Store rating"
+    - "73% memory reduction with Smart Thread Trimming"
+    - "80% faster scrolling in long conversations"
+    - "Works with ChatGPT, Claude & Grok"
+    - "Tangent View — visual conversation branching graph"
+    - "AES-256 encrypted vaults"
+    - "100% local-first storage, zero telemetry"
+
+# CMS — auto-detected
+cms:
+  type: "nextjs"
+  blog_directory: "src/data/blog-posts.ts"
+  blog_format: "html-in-typescript-array"
+  docs_directory: ""
+  frontmatter_format: "typescript-object"
+  date_format: "MMM DD, YYYY"
+  slug_style: "kebab-case"
+  slug_max_words: 5
+  image_directory: "public/images/blog"
+  frontmatter_schema:
+    required:
+      - slug
+      - title
+      - excerpt
+      - date
+      - readTime
+      - category
+      - content
+    optional:
+      - image
+      - imageAlt
+      - ogImage
+
+competitors:
+  - name: "Superpower ChatGPT"
+    website: "https://superpowerchatgpt.com"
+    id: "comp_superpower_chatgpt"
+  - name: "Sider"
+    website: "https://sider.ai"
+    id: "comp_sider"
+  - name: "ChatGPT Toolbox"
+    website: "https://www.ai-toolbox.co/"
+    id: "comp_chatgpt_toolbox"
+
+seo:
+  primary_topics:
+    - "chatgpt workspaces"
+    - "chatgpt chrome extension"
+    - "AI productivity tools"
+    - "prompt management"
+  brand_terms:
+    - "AI Workspace Pro"
+    - "AI Workspace"
+    - "getaiworkspace"
+  avoid_terms: []
+  target_regions: ["Global"]
+  language: "en"
+
+content:
+  min_word_count: 1500
+  max_word_count: 4000
+  default_author: "Christophe"
+  tone: "professional-conversational"
+  include_faq: true
+  include_toc: true
+  cta_text: "Try AI Workspace Pro free"
+  cta_url: "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"
+  max_posts_per_month: 8
+  requires_human_review: true
+
+technical_seo:
+  meta_description_max_chars: 160
+  title_tag_max_chars: 60
+  image_alt_text_required: true
+  canonical_url_pattern: "https://getaiworkspace.com/blog/{slug}"
+
+integrations:
+  seo_tool: "none"
+  analytics: "vercel-analytics"
+  search_console: false

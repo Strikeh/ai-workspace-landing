@@ -1,0 +1,425 @@
+﻿last_updated: "2026-04-03"
+
+  - slug: "organize-chatgpt-conversations-2026"
+    title: "How to Organize Hundreds of ChatGPT Conversations (2026 Complete Guide)"
+    status: "human-review"
+    published_date: "2026-04-03"
+    cluster_id: "tc_chatgpt_workspaces"
+    content_type: "cluster"
+    word_count: 3000
+    category: "Tutorial"
+    primary_keyword: "organize chatgpt conversations"
+    hero_image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80&fit=crop"
+    target_features:
+      - feat_isolated_workspaces
+      - feat_unlimited_nested_folders
+      - feat_multi_tag_system
+      - feat_advanced_search
+      - feat_smart_filters
+      - feat_pin_important_chats
+      - feat_aes256_encryption
+    competitors_mentioned:
+      - ai-toolbox.co (inspired by, not mentioned in post)
+    internal_links:
+      - /blog/chatgpt-workspaces-complete-guide
+      - /blog/organize-500-plus-chatgpt-conversations
+      - /organization
+    has_eeat_signals: true
+    eeat_notes: "Testimonial from Lazar Antic (verbatim Chrome Web Store review), 73% memory reduction metric, personal experience callout on context contamination"
+    has_tl_dr: true
+    has_faq: true
+    has_svg_chart: true
+    information_gain_markers: 2
+    citation_capsules: 2
+    needs_update_reason: ""
+
+  - slug: "chatgpt-workspaces-complete-guide"
+    title: "ChatGPT Workspaces: Complete Guide to Organizing AI Conversations"
+    status: "human-review"
+    published_date: "2026-03-27"
+    cluster_id: "tc_chatgpt_workspaces"
+    content_type: "pillar"
+    word_count: 3000
+    category: "Tutorial"
+    primary_keyword: "chatgpt workspaces"
+    target_features:
+      - feat_isolated_workspaces
+      - feat_unlimited_nested_folders
+      - feat_multi_tag_system
+      - feat_advanced_search
+      - feat_aes256_encryption
+      - feat_tangent_view
+      - feat_reference_chats
+    competitors_mentioned: []
+    internal_links:
+      - /blog/getting-started-with-ai-workspace
+      - /blog/organize-500-plus-chatgpt-conversations
+      - /blog/tangent-view-chatgpt-branching-graph
+      - /blog/reference-chat-context-feature
+      - /freelancers
+      - /consultants
+      - /agencies
+      - /teams
+      - /organization
+    has_eeat_signals: true
+    eeat_notes: "Testimonial from Lazar Antic, 73% memory reduction metric, personal experience callout, zero-telemetry privacy claim"
+    has_tl_dr: true
+    has_faq: true
+    has_svg_chart: true
+    information_gain_markers: 3
+    citation_capsules: 6
+    needs_update_reason: ""
+
+blogs:
+  - slug: "best-chatgpt-chrome-extensions-2026"
+    title: "Best ChatGPT Chrome Extensions in 2026: Which One Fits Your Workflow?"
+    file_path: "src/data/blog-posts.ts"
+    status: "published"
+    published_date: "Mar 23, 2026"
+    last_updated: "Mar 23, 2026"
+    blog_type: "listicle"
+    content_type: "pillar"
+    cluster_id: "tc_chatgpt_extensions"
+    target_keywords:
+      - keyword: "best chatgpt chrome extensions 2026"
+        search_volume: 0
+        is_primary: true
+      - keyword: "chatgpt chrome extension"
+        search_volume: 0
+        is_primary: false
+    features_mentioned:
+      - feature_id: "feat_prompt_library"
+        context: "Prompt management and reusable prompt chains"
+      - feature_id: "feat_isolated_workspaces"
+        context: "Folders, workspaces, and project separation"
+      - feature_id: "feat_notes_system"
+        context: "Notes and multi-step prompt workflows"
+      - feature_id: "feat_multi_tag_system"
+        context: "Tags for organization"
+      - feature_id: "feat_text_highlighting"
+        context: "Text highlighting feature"
+      - feature_id: "feat_smart_conversation_outline"
+        context: "Smart conversation outline"
+      - feature_id: "feat_image_gallery"
+        context: "Image gallery"
+      - feature_id: "feat_aes256_encryption"
+        context: "Encrypted vaults"
+      - feature_id: "feat_thread_trimming"
+        context: "Thread trimming for performance"
+      - feature_id: "feat_prompt_chains"
+        context: "Prompt chains mentioned"
+      - feature_id: "feat_local_first_storage"
+        context: "Privacy-first positioning"
+    competitors_mentioned:
+      - competitor_id: "comp_superpower_chatgpt"
+      - competitor_id: "comp_sider"
+    internal_links_to:
+      - "/prompt-library"
+      - "/teams"
+      - "/agencies"
+      - "/consultants"
+      - "/organization"
+      - "/freelancers"
+    internal_links_from: []
+    word_count: 3200
+    has_eeat_signals: true
+    needs_update_reason: ""
+
+  - slug: "tangent-view-chatgpt-branching-graph"
+    title: "Tangent View: See How Your ChatGPT Conversations Actually Branch"
+    file_path: "src/data/blog-posts.ts"
+    status: "published"
+    published_date: "Mar 11, 2026"
+    last_updated: "Mar 11, 2026"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_chatgpt_workspaces"
+    target_keywords:
+      - keyword: "chatgpt conversation branches"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_tangent_view"
+        context: "Full feature deep dive — branching visualization, hover previews, path panel"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 1800
+    has_eeat_signals: false
+    needs_update_reason: "Missing internal links to pillar. No E-E-A-T signals."
+
+  - slug: "ai-workspace-vs-superpower-chatgpt-workspaces"
+    title: "AI Workspace vs Superpower ChatGPT: Which Extension Is Right for You?"
+    file_path: "src/data/blog-posts.ts"
+    status: "published"
+    published_date: "Feb 16, 2026"
+    last_updated: "Feb 16, 2026"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_chatgpt_extensions"
+    target_keywords:
+      - keyword: "ai workspace pro vs superpower chatgpt"
+        search_volume: 0
+        is_primary: true
+      - keyword: "superpower chatgpt alternative"
+        search_volume: 0
+        is_primary: false
+    features_mentioned:
+      - feature_id: "feat_isolated_workspaces"
+        context: "Unlimited workspaces vs Superpower's single space"
+      - feature_id: "feat_image_gallery"
+        context: "Image gallery feature"
+      - feature_id: "feat_text_highlighting"
+        context: "Text highlighting feature"
+      - feature_id: "feat_smart_conversation_outline"
+        context: "Smart outline feature"
+      - feature_id: "feat_aes256_encryption"
+        context: "Encrypted vaults"
+      - feature_id: "feat_thread_trimming"
+        context: "73% faster ChatGPT"
+      - feature_id: "feat_chatgpt_support"
+        context: "Multi-platform support"
+      - feature_id: "feat_claude_support"
+        context: "Claude support"
+      - feature_id: "feat_grok_support"
+        context: "Grok support"
+    competitors_mentioned:
+      - competitor_id: "comp_superpower_chatgpt"
+    internal_links_to: []
+    internal_links_from:
+      - "best-chatgpt-chrome-extensions-2026"
+    word_count: 2500
+    has_eeat_signals: true
+    needs_update_reason: "Missing link to pillar (best-chatgpt-chrome-extensions-2026)"
+
+  - slug: "smart-conversation-outline-navigate-ai-chats"
+    title: "Smart Conversation Outline: Navigate Long AI Chats Like a Pro"
+    file_path: "src/data/blog-posts.ts"
+    status: "published"
+    published_date: "Jan 31, 2026"
+    last_updated: "Jan 31, 2026"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_ai_productivity"
+    target_keywords:
+      - keyword: "chatgpt conversation outline"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_smart_conversation_outline"
+        context: "Full feature tutorial — visual map, one-click jump, filtering, keyboard shortcuts"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 1400
+    has_eeat_signals: false
+    needs_update_reason: "Missing internal links. No E-E-A-T signals."
+
+  - slug: "master-chatgpt-with-smart-highlights"
+    title: "Master Your ChatGPT Conversations with Smart Highlights"
+    file_path: "src/data/blog-posts.ts"
+    status: "published"
+    published_date: "Jan 14, 2026"
+    last_updated: "Jan 14, 2026"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_ai_productivity"
+    target_keywords:
+      - keyword: "chatgpt text highlighting extension"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_text_highlighting"
+        context: "Full feature tutorial — 7 colors, keyboard shortcuts, highlights manager"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 1600
+    has_eeat_signals: false
+    needs_update_reason: "Missing internal links. No E-E-A-T signals. Content is 70+ days old."
+
+  - slug: "reference-chat-context-feature"
+    title: "Reference Chats: Bring Context from Previous Conversations"
+    file_path: "src/data/blog-posts.ts"
+    status: "published"
+    published_date: "Jan 12, 2026"
+    last_updated: "Jan 12, 2026"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_chatgpt_workspaces"
+    target_keywords:
+      - keyword: "reference previous chatgpt conversations"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_reference_chats"
+        context: "Full feature tutorial — one-click reference, context menu, multi-conversation reasoning"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 1200
+    has_eeat_signals: false
+    needs_update_reason: "Missing internal links. No E-E-A-T signals. Content is 70+ days old."
+
+  - slug: "smart-thread-hiding-chatgpt-lag-fix"
+    title: "Smart Thread Hiding: The Secret to Lightning-Fast ChatGPT Responses"
+    file_path: "src/data/blog-posts.ts"
+    status: "published"
+    published_date: "Jan 05, 2026"
+    last_updated: "Jan 05, 2026"
+    blog_type: "how_to"
+    content_type: "cluster"
+    cluster_id: "tc_ai_productivity"
+    target_keywords:
+      - keyword: "chatgpt thread trimming"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_thread_trimming"
+        context: "Full feature deep dive — auto-hide, customizable count, 73% faster, toggle restore"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 1500
+    has_eeat_signals: true
+    needs_update_reason: "Missing internal links. Content is 80+ days old."
+
+  - slug: "chatgpt-image-gallery-complete-history-uploaded-generated-images"
+    title: "ChatGPT Image Gallery: Access Your Complete Image History"
+    file_path: "src/data/blog-posts.ts"
+    status: "published"
+    published_date: "Dec 31, 2024"
+    last_updated: "Dec 31, 2024"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_ai_productivity"
+    target_keywords:
+      - keyword: "chatgpt image gallery extension"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_image_gallery"
+        context: "Full feature tutorial — sync, preview, metadata, prompt retrieval"
+      - feature_id: "feat_bulk_image_download"
+        context: "Batch download with prompt text files"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 1800
+    has_eeat_signals: false
+    needs_update_reason: "Content is 450+ days old — needs freshness update. Missing internal links. No E-E-A-T signals."
+
+  - slug: "wall-street-ai-revolution-banks-plan-fewer-people"
+    title: "Wall Street's AI Revolution: Banks Plan for Fewer People"
+    file_path: "src/data/blog-posts.ts"
+    status: "published"
+    published_date: "Dec 22, 2025"
+    last_updated: "Dec 22, 2025"
+    blog_type: "thought_leadership"
+    content_type: "standalone"
+    cluster_id: ""
+    target_keywords:
+      - keyword: "wall street ai revolution"
+        search_volume: 0
+        is_primary: true
+    features_mentioned: []
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 2800
+    has_eeat_signals: true
+    needs_update_reason: "Standalone — not connected to any cluster. Content is 90+ days old."
+
+  - slug: "chatgpt-for-blogging-complete-guide"
+    title: "How to Use ChatGPT for Blogging: 9 Steps + Best Prompts"
+    file_path: "src/data/blog-posts.ts"
+    status: "published"
+    published_date: "Dec 07, 2025"
+    last_updated: "Dec 07, 2025"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_ai_productivity"
+    target_keywords:
+      - keyword: "chatgpt for blogging"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_prompt_library"
+        context: "Organize conversations into folders/workspaces"
+      - feature_id: "feat_quick_slash_access"
+        context: "Quick access with / menu"
+      - feature_id: "feat_template_variables"
+        context: "Variables like {{topic}} and {{keywords}}"
+      - feature_id: "feat_unlimited_nested_folders"
+        context: "Folder organization"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 3000
+    has_eeat_signals: false
+    needs_update_reason: "Content is 100+ days old — needs freshness update. Missing internal links. No E-E-A-T signals."
+
+  - slug: "getting-started-with-ai-workspace"
+    title: "Getting Started with AI Workspace: Complete Beginner's Guide"
+    file_path: "src/data/blog-posts.ts"
+    status: "published"
+    published_date: "Dec 06, 2025"
+    last_updated: "Dec 06, 2025"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_chatgpt_workspaces"
+    target_keywords:
+      - keyword: "ai workspace getting started"
+        search_volume: 0
+        is_primary: true
+    features_mentioned:
+      - feature_id: "feat_isolated_workspaces"
+        context: "Workspace creation and management"
+      - feature_id: "feat_unlimited_nested_folders"
+        context: "Folder structure"
+      - feature_id: "feat_prompt_library"
+        context: "Prompts tab"
+      - feature_id: "feat_image_gallery"
+        context: "Image gallery tab"
+      - feature_id: "feat_notes_system"
+        context: "Notes tab"
+      - feature_id: "feat_aes256_encryption"
+        context: "Workspace encryption with password"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 2400
+    has_eeat_signals: false
+    needs_update_reason: "Content is 110+ days old — needs freshness update. Missing internal links. No E-E-A-T signals."
+
+  - slug: "organize-500-plus-chatgpt-conversations"
+    title: "How to Organize 500+ ChatGPT Conversations Without Losing Context"
+    file_path: "src/data/blog-posts.ts"
+    status: "published"
+    published_date: "Dec 04, 2025"
+    last_updated: "Dec 04, 2025"
+    blog_type: "how_to"
+    content_type: "cluster"
+    cluster_id: "tc_chatgpt_workspaces"
+    target_keywords:
+      - keyword: "how to organize chatgpt conversations"
+        search_volume: 0
+        is_primary: true
+      - keyword: "organize ai conversations"
+        search_volume: 0
+        is_primary: false
+    features_mentioned:
+      - feature_id: "feat_unlimited_nested_folders"
+        context: "Centralized storage and folder organization"
+      - feature_id: "feat_advanced_search"
+        context: "Search across conversations"
+      - feature_id: "feat_multi_tag_system"
+        context: "Tagging system"
+      - feature_id: "feat_bulk_operations"
+        context: "Bulk management"
+    competitors_mentioned: []
+    internal_links_to: []
+    internal_links_from: []
+    word_count: 1600
+    has_eeat_signals: false
+    needs_update_reason: "Content is 110+ days old — needs freshness update. Missing internal links. No E-E-A-T signals."

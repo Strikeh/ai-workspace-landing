@@ -1,0 +1,171 @@
+﻿# Blog Structure Templates — Voice Variation by Type
+# Each type has its own voice, structure, and E-E-A-T injection points.
+
+blog_types:
+  comparison:
+    voice: "analytical, data-driven, fair but conclusive"
+    tone: "You're helping someone make a decision. Be specific with claims, always cite evidence, acknowledge competitor strengths first."
+    word_count: "2000-3000"
+    structure:
+      - section: "TL;DR / Quick Answer"
+        notes: "Answer the comparison immediately. Who should pick what."
+        eeat_inject: false
+      - section: "Overview of Both Tools"
+        notes: "Neutral introduction of each. what they do, who they're for."
+        eeat_inject: false
+      - section: "Feature-by-Feature Comparison"
+        notes: "Table or structured comparison. Data from competitors.yaml. Caveat unverified claims."
+        eeat_inject: true
+        eeat_type: "metric or testimonial"
+      - section: "Pricing Comparison"
+        notes: "If pricing data available. Otherwise skip or note as check competitor site."
+        eeat_inject: false
+      - section: "Who Should Choose What"
+        notes: "Specific recommendations by use case (freelancer, agency, student, etc.)"
+        eeat_inject: true
+        eeat_type: "experience or testimonial"
+      - section: "FAQ"
+        notes: "From People Also Ask data. 3-5 questions."
+        eeat_inject: false
+      - section: "Final Verdict"
+        notes: "Clear recommendation with soft CTA."
+        eeat_inject: true
+        eeat_type: "review link"
+
+  listicle:
+    voice: "helpful curator, organized, skimmable"
+    tone: "You're curating options for someone overwhelmed by choices. Lead each item with what it's BEST for, not just what it does."
+    word_count: "2500-4000"
+    structure:
+      - section: "TL;DR / Quick Picks"
+        notes: "Top 3 picks with one-line reasoning. Links to sections below."
+        eeat_inject: false
+      - section: "How We Evaluated"
+        notes: "Brief criteria section (2-3 sentences). Builds trust."
+        eeat_inject: true
+        eeat_type: "experience (how you tested)"
+      - section: "Tool 1-N (Detailed Reviews)"
+        notes: "Each tool: what it does, best for, pros, cons, pricing. Your product positioned naturally (not always #1)."
+        eeat_inject: true
+        eeat_type: "metric or testimonial per item"
+      - section: "Comparison Table"
+        notes: "Quick-reference table of all tools."
+        eeat_inject: false
+      - section: "FAQ"
+        notes: "3-5 PAA questions."
+        eeat_inject: false
+      - section: "Conclusion & Recommendation"
+        notes: "Soft CTA."
+        eeat_inject: false
+
+  tutorial:
+    voice: "patient teacher, step-by-step, uses 'I' and shares experience"
+    tone: "You've done this yourself. Share what worked, what didn't, and why. Use screenshots/images where helpful."
+    word_count: "1500-2500"
+    structure:
+      - section: "What You'll Learn"
+        notes: "Clear outcome statement. Set expectations."
+        eeat_inject: false
+      - section: "Prerequisites"
+        notes: "What they need before starting (extension installed, account, etc.)"
+        eeat_inject: false
+      - section: "Step-by-Step Instructions"
+        notes: "Numbered steps with screenshots. Each step: action + expected result."
+        eeat_inject: true
+        eeat_type: "experience (personal tips at key steps)"
+      - section: "Common Mistakes"
+        notes: "2-3 pitfalls you encountered."
+        eeat_inject: true
+        eeat_type: "experience"
+      - section: "FAQ"
+        notes: "2-3 questions from PAA."
+        eeat_inject: false
+      - section: "Next Steps"
+        notes: "What to do after completing the tutorial. Link to related content."
+        eeat_inject: false
+
+  how_to:
+    voice: "problem-solver, practical, concise"
+    tone: "Someone has a specific problem. Solve it quickly, then add depth. Lead with the answer."
+    word_count: "1200-2000"
+    structure:
+      - section: "Quick Answer"
+        notes: "Solve the problem in 2-3 sentences. This is the featured snippet target."
+        eeat_inject: false
+      - section: "Step-by-Step Solution"
+        notes: "Detailed walkthrough."
+        eeat_inject: true
+        eeat_type: "experience or metric"
+      - section: "Why This Works"
+        notes: "Brief explanation of the underlying reason."
+        eeat_inject: false
+      - section: "Alternative Approaches"
+        notes: "Other ways to solve the same problem."
+        eeat_inject: false
+      - section: "FAQ"
+        notes: "2-3 related questions."
+        eeat_inject: false
+
+  review:
+    voice: "honest reviewer, balanced, admits drawbacks"
+    tone: "You're giving an honest assessment. Lead with strengths, acknowledge weaknesses. Readers trust you because you're not a shill."
+    word_count: "2000-3000"
+    structure:
+      - section: "TL;DR / Rating"
+        notes: "Overall rating and one-sentence verdict."
+        eeat_inject: false
+      - section: "What Is [Product]"
+        notes: "Brief overview."
+        eeat_inject: false
+      - section: "Setup & First Impressions"
+        notes: "Installation experience."
+        eeat_inject: true
+        eeat_type: "experience (first-hand use)"
+      - section: "Features Deep Dive"
+        notes: "Testing key features. Include screenshots."
+        eeat_inject: true
+        eeat_type: "experience + metrics"
+      - section: "What I Liked"
+        notes: "Specific strengths with examples."
+        eeat_inject: true
+        eeat_type: "testimonial or experience"
+      - section: "What Could Be Better"
+        notes: "Honest criticism. Shows trustworthiness."
+        eeat_inject: true
+        eeat_type: "experience"
+      - section: "Pricing & Value"
+        notes: "Is it worth it? Compare to alternatives."
+        eeat_inject: false
+      - section: "FAQ"
+        notes: "3-5 questions."
+        eeat_inject: false
+      - section: "Final Verdict"
+        notes: "Clear recommendation with CTA."
+        eeat_inject: true
+        eeat_type: "review link"
+
+  thought_leadership:
+    voice: "opinionated, take-a-stand, provocative but backed by evidence"
+    tone: "You have a perspective most people don't. State it clearly, back it up, and don't hedge. This is content people share because it says something new."
+    word_count: "1500-2500"
+    structure:
+      - section: "Bold Claim / Thesis"
+        notes: "Open with your take. Make it specific and debatable."
+        eeat_inject: false
+      - section: "The Evidence"
+        notes: "Data, trends, or firsthand experience supporting your claim."
+        eeat_inject: true
+        eeat_type: "metric + experience"
+      - section: "Why Others Get It Wrong"
+        notes: "Address the conventional wisdom. Why is it incomplete?"
+        eeat_inject: false
+      - section: "What This Means Practically"
+        notes: "Actionable implications for the reader."
+        eeat_inject: true
+        eeat_type: "experience"
+      - section: "The Counterargument"
+        notes: "Acknowledge the strongest objection. Builds credibility."
+        eeat_inject: false
+      - section: "Conclusion"
+        notes: "Restate thesis. Soft CTA if relevant."
+        eeat_inject: false

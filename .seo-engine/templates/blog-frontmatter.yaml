@@ -1,0 +1,60 @@
+﻿# Blog Frontmatter Template — Next.js (TypeScript object in blog-posts.ts)
+# Auto-generated for AI Workspace Pro
+
+# This project stores blogs as BlogPost objects in src/data/blog-posts.ts
+# NOT as individual MDX/markdown files.
+
+schema:
+  type: "typescript-object-in-array"
+  file: "src/data/blog-posts.ts"
+  interface: |
+    interface BlogPost {
+      slug: string;          // kebab-case, ≤5 words
+      title: string;         // ≤60 chars, primary keyword included
+      excerpt: string;       // ≤160 chars, meta description
+      date: string;          // "MMM DD, YYYY" format (e.g., "Mar 27, 2026")
+      readTime: string;      // e.g., "8 min read"
+      category: string;      // Comparison | Features | Guides | Productivity | Tutorial | Finance AI
+      content: string;       // HTML string with Tailwind prose classes
+      image?: string;        // Hero image path (e.g., "/images/blog/slug/hero.jpg")
+      imageAlt?: string;     // Alt text for hero image
+      ogImage?: string;      // Open Graph image (falls back to image)
+    }
+
+rules:
+  title:
+    max_chars: 60
+    must_include_primary_keyword: true
+    position: "front-loaded preferred"
+  excerpt:
+    max_chars: 160
+    must_include_primary_keyword: true
+    is_meta_description: true
+  slug:
+    max_words: 5
+    style: "kebab-case"
+    must_include_keyword: true
+  date:
+    format: "MMM DD, YYYY"
+  category:
+    allowed:
+      - "Comparison"
+      - "Features"
+      - "Guides"
+      - "Productivity"
+      - "Tutorial"
+      - "Finance AI"
+
+example: |
+  {
+    slug: "chatgpt-workspace-guide",
+    title: "ChatGPT Workspaces: Complete Organization Guide",
+    excerpt: "Learn how to create ChatGPT workspaces that separate client projects, personal chats, and side hustles with complete context isolation.",
+    date: "Mar 27, 2026",
+    readTime: "10 min read",
+    category: "Guides",
+    image: "/images/blog/chatgpt-workspace-guide/hero.jpg",
+    imageAlt: "ChatGPT workspace organization dashboard",
+    ogImage: "/images/blog/chatgpt-workspace-guide/hero.jpg",
+    content: `<article class="prose prose-lg ...">...</article>`,
+  }

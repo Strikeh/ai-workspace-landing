@@ -1,0 +1,354 @@
+﻿last_updated: "2026-03-27"
+
+queue:
+  # --- HIGH PRIORITY: Pillar Pages ---
+  - id: "q_001"
+    title: "ChatGPT Workspaces: Complete Guide to Organizing AI Conversations"
+    blog_type: "tutorial"
+    content_type: "pillar"
+    cluster_id: "tc_chatgpt_workspaces"
+    target_keywords:
+      - "chatgpt workspaces"
+      - "chatgpt workspace extension"
+    target_features:
+      - "feat_isolated_workspaces"
+      - "feat_unlimited_nested_folders"
+      - "feat_multi_tag_system"
+      - "feat_advanced_search"
+      - "feat_aes256_encryption"
+      - "feat_tangent_view"
+      - "feat_reference_chats"
+    unique_angle: "Only guide that covers workspace ISOLATION as a concept — not just folders, but complete context separation for different clients/projects with encryption"
+    priority: "high"
+    priority_reason: "Pillar page for primary topic cluster. No existing pillar."
+    status: "human-review"
+    published_slug: "chatgpt-workspaces-complete-guide"
+    published_date: "2026-03-27"
+    estimated_word_count: 3000
+    eeat_plan: "Include testimonial from Lazar Antic, 73% memory reduction metric, personal experience setting up client workspaces"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: "Must link to all published cluster pages: getting-started, organize-500-plus, tangent-view, reference-chat"
+    depends_on: []
+    internal_link_targets:
+      - "getting-started-with-ai-workspace"
+      - "organize-500-plus-chatgpt-conversations"
+      - "tangent-view-chatgpt-branching-graph"
+      - "reference-chat-context-feature"
+
+  - id: "q_001b"
+    title: "How to Organize Hundreds of ChatGPT Conversations (2026 Complete Guide)"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_chatgpt_workspaces"
+    target_keywords:
+      - "organize chatgpt conversations"
+      - "how to organize chatgpt"
+      - "chatgpt conversation organization"
+    target_features:
+      - "feat_isolated_workspaces"
+      - "feat_unlimited_nested_folders"
+      - "feat_multi_tag_system"
+      - "feat_advanced_search"
+      - "feat_smart_filters"
+      - "feat_pin_important_chats"
+      - "feat_aes256_encryption"
+    unique_angle: "Workspace isolation vs folder labels — the structural argument. Inspired by competitor post but goes deeper with context isolation, multi-AI support, and AES-256 vaults."
+    priority: "high"
+    priority_reason: "High-volume keyword, competitor post ranks well. Direct comparison opportunity."
+    status: "human-review"
+    published_slug: "organize-chatgpt-conversations-2026"
+    published_date: "2026-04-03"
+    estimated_word_count: 3000
+    eeat_plan: "Lazar Antic testimonial, 73% memory reduction metric, personal experience callout on context contamination"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: "Written in response to ai-toolbox.co competitor post. Differentiator: workspace isolation angle, AES-256 vaults, Claude+Grok support."
+    depends_on: []
+    internal_link_targets:
+      - "chatgpt-workspaces-complete-guide"
+      - "organize-500-plus-chatgpt-conversations"
+      - "/organization"
+
+  - id: "q_002"
+    title: "Prompt Management: How to Organize Your AI Prompts for Maximum Reuse"
+    blog_type: "tutorial"
+    content_type: "pillar"
+    cluster_id: "tc_prompt_management"
+    target_keywords:
+      - "prompt management"
+      - "prompt management tool"
+    target_features:
+      - "feat_prompt_library"
+      - "feat_quick_slash_access"
+      - "feat_template_variables"
+      - "feat_prompt_chains"
+      - "feat_prompt_history"
+      - "feat_export_share_prompts"
+      - "feat_pin_favorite_prompts"
+    unique_angle: "Covers the full prompt lifecycle — creation, organization, templating with variables, chaining, and team sharing — not just a list of tips"
+    priority: "high"
+    priority_reason: "Pillar page for primary topic cluster. No existing pillar."
+    status: "planned"
+    estimated_word_count: 3000
+    eeat_plan: "Include metric about prompt reuse, testimonial from Gimme Video about prompt organization"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: "No existing cluster pages to link yet. Write cluster pages after this."
+    depends_on: []
+    internal_link_targets:
+      - "chatgpt-for-blogging-complete-guide"
+
+  - id: "q_003"
+    title: "AI Productivity Tools: Complete Guide to Working Smarter with ChatGPT"
+    blog_type: "tutorial"
+    content_type: "pillar"
+    cluster_id: "tc_ai_productivity"
+    target_keywords:
+      - "ai productivity tools"
+      - "chatgpt productivity extension"
+    target_features:
+      - "feat_thread_trimming"
+      - "feat_smart_conversation_outline"
+      - "feat_text_highlighting"
+      - "feat_audio_notifications"
+      - "feat_prompt_library"
+    unique_angle: "Productivity through conversation management — not just prompting tips, but the tools that make ChatGPT faster and more navigable"
+    priority: "high"
+    priority_reason: "Pillar page for primary topic cluster. No existing pillar."
+    status: "planned"
+    estimated_word_count: 3000
+    eeat_plan: "73% memory reduction metric, 80% faster scrolling, testimonial from Fargin tech"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: "5 published cluster pages to link to."
+    depends_on: []
+    internal_link_targets:
+      - "chatgpt-for-blogging-complete-guide"
+      - "smart-thread-hiding-chatgpt-lag-fix"
+      - "master-chatgpt-with-smart-highlights"
+      - "smart-conversation-outline-navigate-ai-chats"
+      - "chatgpt-image-gallery-complete-history-uploaded-generated-images"
+
+  # --- HIGH PRIORITY: Competitor Comparisons ---
+  - id: "q_004"
+    title: "AI Workspace Pro vs Sider: Privacy-First vs All-in-One"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_chatgpt_extensions"
+    target_keywords:
+      - "ai workspace pro vs sider"
+      - "sider alternative"
+    target_features:
+      - "feat_isolated_workspaces"
+      - "feat_local_first_storage"
+      - "feat_aes256_encryption"
+      - "feat_zero_tracking"
+    unique_angle: "Philosophy comparison — local-first privacy vs cloud-based all-in-one. Different tools for different privacy needs."
+    priority: "high"
+    priority_reason: "Main competitor comparison. Sider has 5M users — high search potential."
+    status: "planned"
+    estimated_word_count: 2500
+    eeat_plan: "Use zero-telemetry metric, AES-256 encryption as differentiator, testimonial about privacy"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: "Must use comparison-template.md structure."
+    depends_on: []
+    internal_link_targets:
+      - "best-chatgpt-chrome-extensions-2026"
+
+  - id: "q_005"
+    title: "AI Workspace Pro vs ChatGPT Toolbox: Feature Comparison"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_chatgpt_extensions"
+    target_keywords:
+      - "ai workspace pro vs chatgpt toolbox"
+    target_features:
+      - "feat_isolated_workspaces"
+      - "feat_prompt_library"
+    unique_angle: "Workspace-focused extension vs general toolbox approach — which philosophy serves your workflow better"
+    priority: "medium"
+    priority_reason: "Competitor comparison. Less established competitor."
+    status: "planned"
+    estimated_word_count: 2000
+    eeat_plan: "Feature matrix comparison, testimonial"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: "Need to verify ChatGPT Toolbox features first (competitors.yaml data is unverified)."
+    depends_on: []
+    internal_link_targets:
+      - "best-chatgpt-chrome-extensions-2026"
+
+  # --- MEDIUM PRIORITY: Cluster Pages ---
+  - id: "q_006"
+    title: "ChatGPT Prompt Library: Build and Organize Your Best Prompts"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_prompt_management"
+    target_keywords:
+      - "chatgpt prompt library"
+    target_features:
+      - "feat_prompt_library"
+      - "feat_quick_slash_access"
+      - "feat_pin_favorite_prompts"
+    unique_angle: "Step-by-step guide to building a prompt library from scratch — organizing scattered prompts into a reusable system"
+    priority: "medium"
+    priority_reason: "Cluster page supporting prompt management pillar."
+    status: "planned"
+    estimated_word_count: 2000
+    eeat_plan: "Personal experience building a library of 200+ prompts"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: ""
+    depends_on: ["q_002"]
+    internal_link_targets:
+      - "chatgpt-for-blogging-complete-guide"
+
+  - id: "q_007"
+    title: "ChatGPT for Freelancers: Organize Client Work with AI"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_ai_productivity"
+    target_keywords:
+      - "chatgpt for freelancers"
+    target_features:
+      - "feat_isolated_workspaces"
+      - "feat_aes256_encryption"
+      - "feat_prompt_library"
+    unique_angle: "Freelancer-specific workflows — from client onboarding to invoice drafting — with workspace separation preventing data bleed"
+    priority: "medium"
+    priority_reason: "Vertical targeting. Landing page exists but no blog."
+    status: "planned"
+    estimated_word_count: 2000
+    eeat_plan: "Freelancer testimonial or experience managing multiple client workspaces"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: "Link to /freelancers landing page."
+    depends_on: []
+    internal_link_targets:
+      - "getting-started-with-ai-workspace"
+
+  - id: "q_008"
+    title: "ChatGPT for Agencies: Scale AI Across Client Accounts"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_ai_productivity"
+    target_keywords:
+      - "chatgpt for agencies"
+    target_features:
+      - "feat_isolated_workspaces"
+      - "feat_aes256_encryption"
+      - "feat_prompt_library"
+      - "feat_template_variables"
+    unique_angle: "Agency operations perspective — managing 10+ clients without mixing brand voices, tone guides, or confidential data"
+    priority: "medium"
+    priority_reason: "Vertical targeting. Landing page exists but no blog."
+    status: "planned"
+    estimated_word_count: 2000
+    eeat_plan: "Agency workflow experience, NDA/encryption angle"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: "Link to /agencies landing page."
+    depends_on: []
+    internal_link_targets:
+      - "getting-started-with-ai-workspace"
+
+  - id: "q_009"
+    title: "ChatGPT Prompt Templates with Variables: Dynamic AI Workflows"
+    blog_type: "tutorial"
+    content_type: "cluster"
+    cluster_id: "tc_prompt_management"
+    target_keywords:
+      - "chatgpt prompt templates"
+    target_features:
+      - "feat_template_variables"
+      - "feat_prompt_library"
+    unique_angle: "Template variables as workflow automation — turning one static prompt into a reusable tool with {{}} syntax"
+    priority: "medium"
+    priority_reason: "Cluster page for prompt management. Unique feature tutorial."
+    status: "planned"
+    estimated_word_count: 1800
+    eeat_plan: "Example templates with real use cases"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: ""
+    depends_on: ["q_002"]
+    internal_link_targets:
+      - "chatgpt-for-blogging-complete-guide"
+
+  - id: "q_010"
+    title: "ChatGPT Context Separation for Client Work"
+    blog_type: "how_to"
+    content_type: "cluster"
+    cluster_id: "tc_chatgpt_workspaces"
+    target_keywords:
+      - "chatgpt context separation"
+    target_features:
+      - "feat_isolated_workspaces"
+      - "feat_aes256_encryption"
+    unique_angle: "Data privacy risk angle — why mixing client data in a single ChatGPT is a liability, and how to fix it"
+    priority: "medium"
+    priority_reason: "Cluster page addressing a real pain point for consultants/freelancers."
+    status: "planned"
+    estimated_word_count: 1500
+    eeat_plan: "Real scenario of mixing client data accidentally, AES-256 encryption metric"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: "Link to /consultants and /freelancers landing pages."
+    depends_on: ["q_001"]
+    internal_link_targets:
+      - "getting-started-with-ai-workspace"
+
+  # --- LOW PRIORITY: Supporting & Migration ---
+  - id: "q_011"
+    title: "Why Switch from Superpower ChatGPT to AI Workspace Pro"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_chatgpt_extensions"
+    target_keywords:
+      - "superpower chatgpt alternative"
+    target_features:
+      - "feat_isolated_workspaces"
+      - "feat_local_first_storage"
+      - "feat_thread_trimming"
+    unique_angle: "Migration guide — specifically for Superpower users who hit the single-workspace limitation"
+    priority: "low"
+    priority_reason: "Niche migration content. Existing comparison blog partially covers this."
+    status: "planned"
+    estimated_word_count: 1500
+    eeat_plan: "Side-by-side feature comparison table"
+    serp_analyzed: false
+    cannibalization_check: "conflict_with_ai-workspace-vs-superpower-chatgpt-workspaces"
+    notes: "Angle must be clearly different from existing vs Superpower blog (migration vs comparison)."
+    depends_on: []
+    internal_link_targets:
+      - "ai-workspace-vs-superpower-chatgpt-workspaces"
+      - "best-chatgpt-chrome-extensions-2026"
+
+  - id: "q_012"
+    title: "ChatGPT Productivity Extension: Speed Up Your AI Workflow"
+    blog_type: "listicle"
+    content_type: "cluster"
+    cluster_id: "tc_ai_productivity"
+    target_keywords:
+      - "chatgpt productivity extension"
+    target_features:
+      - "feat_thread_trimming"
+      - "feat_smart_conversation_outline"
+      - "feat_text_highlighting"
+      - "feat_audio_notifications"
+    unique_angle: "Performance stack — combining thread trimming + outline + highlights as an integrated productivity system"
+    priority: "low"
+    priority_reason: "Supporting content for productivity cluster."
+    status: "planned"
+    estimated_word_count: 1800
+    eeat_plan: "73% memory reduction metric, 80% faster scrolling stat"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: ""
+    depends_on: ["q_003"]
+    internal_link_targets:
+      - "smart-thread-hiding-chatgpt-lag-fix"
+      - "smart-conversation-outline-navigate-ai-chats"
+      - "master-chatgpt-with-smart-highlights"

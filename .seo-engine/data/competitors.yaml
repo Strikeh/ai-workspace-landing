@@ -1,0 +1,537 @@
+﻿last_updated: "2026-03-27"
+last_verified: "2026-03-27"
+
+competitors:
+  - id: "comp_superpower_chatgpt"
+    name: "Superpower ChatGPT"
+    website: "https://superpowerchatgpt.com"
+    category: "ChatGPT Chrome Extension"
+    pricing_model: "freemium"
+    strengths: "First mover in ChatGPT extensions, established user base (~100K users), folder organization, prompt library, cloud sync"
+    weaknesses: "Single workspace (no context isolation), cloud-based storage (privacy concern), no AES-256 encryption"
+    notes: "Primary direct competitor. Compared in blog: ai-workspace-vs-superpower-chatgpt-workspaces"
+
+  - id: "comp_sider"
+    name: "Sider"
+    website: "https://sider.ai"
+    category: "AI Sidebar / Multi-model Chrome Extension"
+    pricing_model: "freemium"
+    strengths: "Large user base (~5M users), multi-model sidebar, broad feature set"
+    weaknesses: "Generalist tool (not ChatGPT-workspace-focused), cloud dependent"
+    notes: "Mentioned in blog: best-chatgpt-chrome-extensions-2026"
+
+  - id: "comp_chatgpt_toolbox"
+    name: "ChatGPT Toolbox"
+    website: "https://www.ai-toolbox.co/"
+    category: "ChatGPT Chrome Extension"
+    pricing_model: "unknown"
+    strengths: ""
+    weaknesses: ""
+    notes: "Not yet verified. Added from user input."
+
+feature_matrix:
+  # --- Organization ---
+  - feature_id: "feat_unlimited_nested_folders"
+    our_project:
+      supported: true
+      details: "Unlimited nesting with drag-and-drop reordering"
+      tier: "free"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: true
+        details: "Folder organization available"
+        tier: "unknown"
+        confidence: "from_blog"
+        last_verified: "2026-03-23"
+      comp_sider:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+
+  - feature_id: "feat_isolated_workspaces"
+    our_project:
+      supported: true
+      details: "Unlimited separate workspaces with complete context isolation"
+      tier: "free"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: false
+        details: "Single workspace only, no context isolation"
+        tier: "n/a"
+        confidence: "from_blog"
+        last_verified: "2026-02-16"
+      comp_sider:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+
+  - feature_id: "feat_color_coded_categories"
+    our_project:
+      supported: true
+      details: "Color coding with custom folder icons"
+      tier: "free"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_sider:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+
+  - feature_id: "feat_multi_tag_system"
+    our_project:
+      supported: true
+      details: "Multiple custom-colored tags per conversation"
+      tier: "free"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_sider:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+
+  - feature_id: "feat_advanced_search"
+    our_project:
+      supported: true
+      details: "Full-text search across all workspaces and conversations"
+      tier: "free"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_sider:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+
+  # --- Performance ---
+  - feature_id: "feat_smart_conversation_outline"
+    our_project:
+      supported: true
+      details: "Interactive sidebar TOC with jump-to-message and filtering"
+      tier: "free"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_sider:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+
+  - feature_id: "feat_thread_trimming"
+    our_project:
+      supported: true
+      details: "Auto-hide old messages from DOM. 73% memory reduction, 80% faster scrolling."
+      tier: "free"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: false
+        details: "No thread trimming equivalent"
+        tier: "n/a"
+        confidence: "from_blog"
+        last_verified: "2026-02-16"
+      comp_sider:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+
+  - feature_id: "feat_text_highlighting"
+    our_project:
+      supported: true
+      details: "7 colors, persistent across reloads, notes on highlights, keyboard shortcuts"
+      tier: "free"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: false
+        details: "No text highlighting"
+        tier: "n/a"
+        confidence: "from_blog"
+        last_verified: "2026-02-16"
+      comp_sider:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+
+  # --- Prompt Management ---
+  - feature_id: "feat_prompt_library"
+    our_project:
+      supported: true
+      details: "200+ capacity, tags, folders, favorites, quick '/' access"
+      tier: "free"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: true
+        details: "Prompt library available"
+        tier: "unknown"
+        confidence: "from_blog"
+        last_verified: "2026-03-23"
+      comp_sider:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+
+  - feature_id: "feat_template_variables"
+    our_project:
+      supported: true
+      details: "Dynamic {{variable}} syntax, filled on insertion"
+      tier: "free"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_sider:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+
+  # --- Advanced Features ---
+  - feature_id: "feat_tangent_view"
+    our_project:
+      supported: true
+      details: "Interactive conversation branching graph with hover previews, path panel, filtering, keyboard shortcut Ctrl+Shift+Y"
+      tier: "free"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: false
+        details: "No conversation branching visualization"
+        tier: "n/a"
+        confidence: "from_blog"
+        last_verified: "2026-03-11"
+      comp_sider:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+
+  - feature_id: "feat_reference_chats"
+    our_project:
+      supported: true
+      details: "Reference previous conversations in new chat with one click (PRO feature)"
+      tier: "pro"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_sider:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+
+  - feature_id: "feat_image_gallery"
+    our_project:
+      supported: true
+      details: "Full history of uploads + DALL-E generations, original prompts, batch download, search, tagging"
+      tier: "free"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: true
+        details: "Image gallery available"
+        tier: "unknown"
+        confidence: "from_blog"
+        last_verified: "2026-03-23"
+      comp_sider:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+
+  - feature_id: "feat_multi_format_export"
+    our_project:
+      supported: true
+      details: "Export to JSON, TXT, Markdown, PDF"
+      tier: "free"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: true
+        details: "PDF/Markdown export available"
+        tier: "unknown"
+        confidence: "from_blog"
+        last_verified: "2026-03-23"
+      comp_sider:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+
+  # --- Privacy & Security ---
+  - feature_id: "feat_local_first_storage"
+    our_project:
+      supported: true
+      details: "100% local browser storage, no cloud sync"
+      tier: "free"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: false
+        details: "Uses cloud syncing"
+        tier: "n/a"
+        confidence: "from_blog"
+        last_verified: "2026-02-16"
+      comp_sider:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+
+  - feature_id: "feat_aes256_encryption"
+    our_project:
+      supported: true
+      details: "Optional AES-256 encrypted vaults for sensitive workspaces"
+      tier: "pro"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: false
+        details: "No encryption feature"
+        tier: "n/a"
+        confidence: "from_blog"
+        last_verified: "2026-02-16"
+      comp_sider:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+
+  - feature_id: "feat_zero_tracking"
+    our_project:
+      supported: true
+      details: "Zero telemetry, no data sent to servers"
+      tier: "free"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: false
+        details: "Cloud sync implies some data transmission"
+        tier: "n/a"
+        confidence: "from_blog"
+        last_verified: "2026-02-16"
+      comp_sider:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+
+  # --- Platform ---
+  - feature_id: "feat_chatgpt_support"
+    our_project:
+      supported: true
+      details: "Full feature support (primary platform)"
+      tier: "free"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: true
+        details: "ChatGPT focused"
+        tier: "free"
+        confidence: "from_blog"
+        last_verified: "2026-03-23"
+      comp_sider:
+        supported: true
+        details: "Multi-model sidebar including ChatGPT"
+        tier: "unknown"
+        confidence: "from_blog"
+        last_verified: "2026-03-23"
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+
+  - feature_id: "feat_claude_support"
+    our_project:
+      supported: true
+      details: "Feature support for Claude.ai"
+      tier: "free"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: true
+        details: "Some Claude support"
+        tier: "unknown"
+        confidence: "from_blog"
+        last_verified: "2026-03-23"
+      comp_sider:
+        supported: true
+        details: "Multi-model support"
+        tier: "unknown"
+        confidence: "from_blog"
+        last_verified: "2026-03-23"
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+
+  - feature_id: "feat_grok_support"
+    our_project:
+      supported: true
+      details: "Feature support for xAI's Grok"
+      tier: "free"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_sider:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""

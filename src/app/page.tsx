@@ -543,7 +543,7 @@ export default function Home() {
                   {/* Multi-platform badge - key differentiator */}
                   <div className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10">
                     <span className="text-purple-300 font-medium">
-                      Separate clients, projects & personal chats
+                      ChatGPT · Claude · Grok
                     </span>
                   </div>
                   {/* Rating badge */}
@@ -582,9 +582,11 @@ export default function Home() {
                   }}
                 >
                   <span className="block text-5xl sm:text-6xl lg:text-7xl">
-                    <span className="text-white">ChatGPT Workspaces – </span>
+                    <span className="text-white">
+                      ChatGPT Workspaces Chrome Extension –{" "}
+                    </span>
                     <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                      Separate Context. Stay Focused.
+                      Everything ChatGPT Should Have Built In.
                     </span>
                   </span>
                 </h1>
@@ -972,7 +974,10 @@ export default function Home() {
                 </h2>
 
                 <p className="text-xl text-slate-400 leading-relaxed">
-                  Stop wrestling with unorganized tabs. Our new Tangent View gives you an interactive visual graph of your branching ChatGPT conversations, letting you navigate multiple threads effortlessly.
+                  Stop wrestling with unorganized tabs. Our new Tangent View
+                  gives you an interactive visual graph of your branching
+                  ChatGPT conversations, letting you navigate multiple threads
+                  effortlessly.
                 </p>
 
                 {/* Feature Grid */}
@@ -1041,13 +1046,26 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
-                
+
                 {/* CTA Link */}
                 <div className="pt-2">
-                  <Link href="/blog/tangent-view-chatgpt-branching-graph" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors">
+                  <Link
+                    href="/blog/tangent-view-chatgpt-branching-graph"
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+                  >
                     Read the complete launch post
-                    <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    <svg
+                      className="ml-2 w-4 h-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      />
                     </svg>
                   </Link>
                 </div>

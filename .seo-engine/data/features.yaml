@@ -1,0 +1,587 @@
+﻿project: "AI Workspace Pro"
+last_updated: "2026-03-27"
+generated_from: "landing pages, component files, and blog posts (no dedicated docs directory)"
+
+categories:
+  - id: "cat_organization"
+    name: "Organization"
+    description: "Features for organizing, sorting, and managing AI conversations and workspaces"
+    subcategories:
+      - id: "sub_folders_structure"
+        name: "Folder & Workspace Structure"
+        features:
+          - id: "feat_unlimited_nested_folders"
+            name: "Unlimited Nested Folders with Drag & Drop"
+            description: "Create folder hierarchies matching your workflow with infinite nesting and drag-and-drop reordering."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Organization features"
+              - path: "src/app/organization/page.tsx"
+                section: "Nested folder structure"
+            blog_refs:
+              - slug: "getting-started-with-ai-workspace"
+              - slug: "organize-500-plus-chatgpt-conversations"
+              - slug: "chatgpt-for-blogging-complete-guide"
+            tags: ["organization", "folders", "drag-drop", "core"]
+            notes: ""
+          - id: "feat_isolated_workspaces"
+            name: "Multiple Isolated Workspaces"
+            description: "Create unlimited separate workspaces with complete context isolation between clients, projects, and personal chats."
+            status: "available"
+            doc_refs:
+              - path: "src/app/page.tsx"
+                section: "Hero / value proposition"
+              - path: "src/components/CompleteFeatureMatrix.tsx"
+                section: "Privacy & Security"
+            blog_refs:
+              - slug: "getting-started-with-ai-workspace"
+              - slug: "ai-workspace-vs-superpower-chatgpt-workspaces"
+              - slug: "best-chatgpt-chrome-extensions-2026"
+            tags: ["workspaces", "isolation", "core", "differentiator"]
+            notes: "Primary differentiator vs competitors"
+      - id: "sub_tagging_search"
+        name: "Tagging & Search"
+        features:
+          - id: "feat_color_coded_categories"
+            name: "Color-Coded Categories with Custom Icons"
+            description: "Visual organization with color coding and custom folder icons for instant recognition."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Organization features"
+            blog_refs: []
+            tags: ["organization", "visual", "customization"]
+            notes: ""
+          - id: "feat_multi_tag_system"
+            name: "Multi-Tag System with Custom Colors"
+            description: "Label conversations with multiple custom-colored tags for cross-cutting categorization."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Organization features"
+            blog_refs:
+              - slug: "organize-500-plus-chatgpt-conversations"
+              - slug: "best-chatgpt-chrome-extensions-2026"
+            tags: ["organization", "tags", "filtering"]
+            notes: ""
+          - id: "feat_advanced_search"
+            name: "Advanced Search Across All Conversations"
+            description: "Full-text search with powerful filtering capabilities across all workspaces and conversations."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Organization features"
+            blog_refs:
+              - slug: "organize-500-plus-chatgpt-conversations"
+            tags: ["organization", "search", "productivity"]
+            notes: ""
+          - id: "feat_smart_filters"
+            name: "Smart Filters"
+            description: "Filter conversations by date, tag, or folder to narrow results quickly."
+            status: "available"
+            doc_refs:
+              - path: "src/app/organization/page.tsx"
+                section: "Smart Filters"
+            blog_refs: []
+            tags: ["organization", "filtering"]
+            notes: ""
+      - id: "sub_bulk_management"
+        name: "Bulk Management"
+        features:
+          - id: "feat_pin_important_chats"
+            name: "Pin Important Chats to the Top"
+            description: "Keep most-used conversations accessible and pinned to the top of the list."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Organization features"
+            blog_refs: []
+            tags: ["organization", "quick-access"]
+            notes: ""
+          - id: "feat_bulk_operations"
+            name: "Bulk Operations (Delete, Archive, Categorize)"
+            description: "Manage hundreds of chats in seconds with batch actions for delete, archive, and categorize."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Organization features"
+            blog_refs:
+              - slug: "organize-500-plus-chatgpt-conversations"
+            tags: ["organization", "bulk", "productivity"]
+            notes: ""
+          - id: "feat_auto_delete"
+            name: "Auto-Delete Old Conversations"
+            description: "Automatically clean workspace of old or expired chats based on age rules."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Organization features"
+            blog_refs: []
+            tags: ["organization", "automation"]
+            notes: ""
+          - id: "feat_auto_organize_custom_gpts"
+            name: "Auto-Organize Custom GPT Conversations"
+            description: "Automatically sort Custom GPT chats into folders and link to active workspace."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Organization features"
+            blog_refs: []
+            tags: ["organization", "automation", "new"]
+            notes: "Marked as NEW feature"
+
+  - id: "cat_performance"
+    name: "Performance & Navigation"
+    description: "Features that improve ChatGPT speed, navigation, and responsiveness"
+    subcategories:
+      - id: "sub_navigation"
+        name: "Navigation"
+        features:
+          - id: "feat_smart_conversation_outline"
+            name: "Smart Conversation Outline"
+            description: "Navigate long conversations instantly with an interactive sidebar table-of-contents. Jump to any message with one click."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Performance features"
+            blog_refs:
+              - slug: "smart-conversation-outline-navigate-ai-chats"
+              - slug: "ai-workspace-vs-superpower-chatgpt-workspaces"
+              - slug: "best-chatgpt-chrome-extensions-2026"
+            tags: ["navigation", "productivity", "new"]
+            notes: "Marked as NEW feature"
+          - id: "feat_conversation_preview"
+            name: "Conversation Preview"
+            description: "Quick preview of any conversation without opening it fully."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Advanced features"
+            blog_refs: []
+            tags: ["navigation", "quick-access"]
+            notes: ""
+      - id: "sub_performance_optimization"
+        name: "Performance Optimization"
+        features:
+          - id: "feat_thread_trimming"
+            name: "Smart Thread Trimming"
+            description: "Auto-hide older messages from DOM (not deletion) for ~73% memory reduction and 80% faster scrolling in long conversations."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Performance features"
+              - path: "src/app/chatgpt-text-highlighter/page.tsx"
+                section: "Thread trimming"
+            blog_refs:
+              - slug: "smart-thread-hiding-chatgpt-lag-fix"
+              - slug: "ai-workspace-vs-superpower-chatgpt-workspaces"
+              - slug: "best-chatgpt-chrome-extensions-2026"
+            tags: ["performance", "speed", "differentiator"]
+            notes: "Key metric: 73% memory reduction, 80% faster scrolling"
+      - id: "sub_feedback"
+        name: "Feedback & Alerts"
+        features:
+          - id: "feat_text_highlighting"
+            name: "Text Highlighting with 7 Colors"
+            description: "Mark important conversation parts with 7 color options (yellow, green, blue, rose, purple, pink, orange). Persistent across reloads."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Performance features"
+              - path: "src/app/chatgpt-text-highlighter/page.tsx"
+                section: "Full page"
+            blog_refs:
+              - slug: "master-chatgpt-with-smart-highlights"
+              - slug: "ai-workspace-vs-superpower-chatgpt-workspaces"
+              - slug: "best-chatgpt-chrome-extensions-2026"
+            tags: ["highlighting", "annotation", "productivity"]
+            notes: "Keyboard shortcut: Ctrl/Cmd + Shift + H"
+          - id: "feat_audio_notifications"
+            name: "Audio Notifications for AI Responses"
+            description: "Get notified with a sound when AI responses are ready, so you can multitask."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Performance features"
+            blog_refs: []
+            tags: ["notifications", "multitasking"]
+            notes: ""
+
+  - id: "cat_prompt_management"
+    name: "Prompt Management"
+    description: "Features for creating, organizing, and reusing AI prompts"
+    subcategories:
+      - id: "sub_prompt_library"
+        name: "Prompt Library"
+        features:
+          - id: "feat_prompt_library"
+            name: "Prompt Library (200+ capacity)"
+            description: "Save unlimited prompts with full organization — tags, folders, and favorites."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Prompt features"
+              - path: "src/app/prompt-library/page.tsx"
+                section: "Full page"
+            blog_refs:
+              - slug: "chatgpt-for-blogging-complete-guide"
+              - slug: "getting-started-with-ai-workspace"
+              - slug: "best-chatgpt-chrome-extensions-2026"
+            tags: ["prompts", "library", "core"]
+            notes: ""
+          - id: "feat_quick_slash_access"
+            name: "Quick '/' Access for Instant Prompts"
+            description: "Type '/' in the chat input to instantly search and insert saved prompts."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Prompt features"
+              - path: "src/app/prompt-library/page.tsx"
+                section: "Quick access"
+            blog_refs:
+              - slug: "chatgpt-for-blogging-complete-guide"
+            tags: ["prompts", "quick-access", "productivity"]
+            notes: ""
+          - id: "feat_pin_favorite_prompts"
+            name: "Pin Favorite Prompts"
+            description: "Keep most-used prompts at the top of the library for instant access."
+            status: "available"
+            doc_refs:
+              - path: "src/app/prompt-library/page.tsx"
+                section: "Pin favorites"
+            blog_refs: []
+            tags: ["prompts", "quick-access"]
+            notes: ""
+      - id: "sub_prompt_advanced"
+        name: "Advanced Prompt Features"
+        features:
+          - id: "feat_template_variables"
+            name: "Templates with {{}} Variables"
+            description: "Use dynamic variables like {{topic}} and {{keywords}} in prompts that get filled on insertion."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Prompt features"
+              - path: "src/app/prompt-library/page.tsx"
+                section: "Variables"
+            blog_refs:
+              - slug: "chatgpt-for-blogging-complete-guide"
+            tags: ["prompts", "templates", "variables"]
+            notes: ""
+          - id: "feat_prompt_chains"
+            name: "Prompt Chains"
+            description: "Link prompts together for complex multi-step workflows."
+            status: "wip"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Prompt features"
+            blog_refs:
+              - slug: "best-chatgpt-chrome-extensions-2026"
+            tags: ["prompts", "workflows", "automation", "wip"]
+            notes: "Marked as WIP (Work In Progress)"
+          - id: "feat_prompt_history"
+            name: "Prompt History Tracking"
+            description: "Track all prompt usage and iterations over time."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Prompt features"
+            blog_refs: []
+            tags: ["prompts", "history", "tracking"]
+            notes: ""
+          - id: "feat_export_share_prompts"
+            name: "Export & Share Prompts (JSON/CSV)"
+            description: "Export prompt library to JSON or CSV for backup or team sharing."
+            status: "available"
+            doc_refs:
+              - path: "src/app/prompt-library/page.tsx"
+                section: "Export"
+            blog_refs: []
+            tags: ["prompts", "export", "sharing"]
+            notes: ""
+
+  - id: "cat_advanced"
+    name: "Advanced Features"
+    description: "Power-user features for deep AI conversation management"
+    subcategories:
+      - id: "sub_conversation_tools"
+        name: "Conversation Tools"
+        features:
+          - id: "feat_tangent_view"
+            name: "Tangent View (Conversation Branching Graph)"
+            description: "Visualize and navigate branched ChatGPT conversations as an interactive connected graph. See how conversations actually branch with hover previews and path tracing."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Advanced features"
+            blog_refs:
+              - slug: "tangent-view-chatgpt-branching-graph"
+            tags: ["visualization", "branching", "new", "differentiator"]
+            notes: "Marked as NEW. Keyboard shortcut: Ctrl/Cmd + Shift + Y. Uses IndexedDB for local persistence."
+          - id: "feat_reference_chats"
+            name: "Reference Chats (Cross-Conversation Context)"
+            description: "Reference previous conversations in a new chat with one click. Attaches entire conversation as text file context."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Advanced features"
+            blog_refs:
+              - slug: "reference-chat-context-feature"
+            tags: ["context", "cross-reference", "new", "pro"]
+            notes: "PRO feature only"
+      - id: "sub_media_management"
+        name: "Media Management"
+        features:
+          - id: "feat_image_gallery"
+            name: "Image Gallery (Complete History)"
+            description: "Browse all images from all conversations in one place. Retrieves both uploads AND DALL-E generations with original prompts."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Advanced features"
+            blog_refs:
+              - slug: "chatgpt-image-gallery-complete-history-uploaded-generated-images"
+              - slug: "getting-started-with-ai-workspace"
+              - slug: "ai-workspace-vs-superpower-chatgpt-workspaces"
+            tags: ["images", "gallery", "media"]
+            notes: ""
+          - id: "feat_bulk_image_download"
+            name: "Bulk Image Download"
+            description: "Download all images from conversations at once with prompt text files included."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Advanced features"
+            blog_refs:
+              - slug: "chatgpt-image-gallery-complete-history-uploaded-generated-images"
+            tags: ["images", "download", "bulk"]
+            notes: ""
+      - id: "sub_notes_export"
+        name: "Notes & Export"
+        features:
+          - id: "feat_notes_system"
+            name: "Notes System"
+            description: "Add notes to any conversation for personal annotations and context."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Advanced features"
+            blog_refs:
+              - slug: "getting-started-with-ai-workspace"
+              - slug: "best-chatgpt-chrome-extensions-2026"
+            tags: ["notes", "annotation"]
+            notes: ""
+          - id: "feat_multi_format_export"
+            name: "Export (JSON/TXT/MD/PDF)"
+            description: "Export conversations in multiple formats: JSON, plain text, Markdown, and PDF."
+            status: "available"
+            doc_refs:
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Advanced features"
+            blog_refs: []
+            tags: ["export", "formats"]
+            notes: ""
+
+  - id: "cat_customization"
+    name: "Customization"
+    description: "UI personalization and appearance settings"
+    subcategories:
+      - id: "sub_appearance"
+        name: "Appearance"
+        features:
+          - id: "feat_premium_themes"
+            name: "Premium Themes"
+            description: "Multiple color schemes and UI themes for personalizing the interface."
+            status: "available"
+            doc_refs:
+              - path: "src/components/CompleteFeatureMatrix.tsx"
+                section: "Customization"
+            blog_refs: []
+            tags: ["customization", "themes"]
+            notes: ""
+          - id: "feat_dark_mode"
+            name: "Dark Mode"
+            description: "Full dark mode support as default theme."
+            status: "available"
+            doc_refs:
+              - path: "src/components/CompleteFeatureMatrix.tsx"
+                section: "Customization"
+            blog_refs: []
+            tags: ["customization", "dark-mode"]
+            notes: ""
+          - id: "feat_custom_colors"
+            name: "Custom Colors"
+            description: "Customize interface colors and accents to match your preferences."
+            status: "available"
+            doc_refs:
+              - path: "src/components/CompleteFeatureMatrix.tsx"
+                section: "Customization"
+            blog_refs: []
+            tags: ["customization", "colors"]
+            notes: ""
+          - id: "feat_layout_adjustment"
+            name: "Layout Adjustment"
+            description: "Customize interface layout and sidebar positioning."
+            status: "available"
+            doc_refs:
+              - path: "src/components/CompleteFeatureMatrix.tsx"
+                section: "Customization"
+            blog_refs: []
+            tags: ["customization", "layout"]
+            notes: ""
+          - id: "feat_multi_language_ui"
+            name: "Multi-Language UI"
+            description: "Support for multiple languages in the interface."
+            status: "available"
+            doc_refs:
+              - path: "src/components/CompleteFeatureMatrix.tsx"
+                section: "Customization"
+            blog_refs: []
+            tags: ["customization", "i18n"]
+            notes: ""
+
+  - id: "cat_privacy_security"
+    name: "Privacy & Security"
+    description: "Data protection, encryption, and privacy features"
+    subcategories:
+      - id: "sub_data_protection"
+        name: "Data Protection"
+        features:
+          - id: "feat_local_first_storage"
+            name: "100% Local-First Storage"
+            description: "All data stored locally in the browser. No cloud sync, no external servers."
+            status: "available"
+            doc_refs:
+              - path: "src/components/CompleteFeatureMatrix.tsx"
+                section: "Privacy & Security"
+            blog_refs:
+              - slug: "best-chatgpt-chrome-extensions-2026"
+            tags: ["privacy", "local-storage", "differentiator"]
+            notes: "Key differentiator vs cloud-based competitors"
+          - id: "feat_aes256_encryption"
+            name: "AES-256 Encrypted Vaults"
+            description: "Optional encryption of workspaces with AES-256 standard for sensitive client data."
+            status: "available"
+            doc_refs:
+              - path: "src/components/CompleteFeatureMatrix.tsx"
+                section: "Privacy & Security"
+            blog_refs:
+              - slug: "getting-started-with-ai-workspace"
+              - slug: "ai-workspace-vs-superpower-chatgpt-workspaces"
+              - slug: "best-chatgpt-chrome-extensions-2026"
+            tags: ["privacy", "encryption", "security", "differentiator"]
+            notes: ""
+          - id: "feat_zero_tracking"
+            name: "Zero Tracking / No Telemetry"
+            description: "No data sent to external servers. Zero telemetry or usage tracking."
+            status: "available"
+            doc_refs:
+              - path: "src/components/CompleteFeatureMatrix.tsx"
+                section: "Privacy & Security"
+            blog_refs: []
+            tags: ["privacy", "no-tracking"]
+            notes: ""
+          - id: "feat_gdpr_compliant"
+            name: "GDPR Compliant"
+            description: "Full GDPR compliance for data storage and processing."
+            status: "available"
+            doc_refs:
+              - path: "src/components/CompleteFeatureMatrix.tsx"
+                section: "Privacy & Security"
+            blog_refs: []
+            tags: ["privacy", "compliance", "gdpr"]
+            notes: ""
+          - id: "feat_no_data_collection"
+            name: "No Data Collection"
+            description: "No personal data collected from users at any point."
+            status: "available"
+            doc_refs:
+              - path: "src/components/CompleteFeatureMatrix.tsx"
+                section: "Privacy & Security"
+            blog_refs: []
+            tags: ["privacy", "data-collection"]
+            notes: ""
+          - id: "feat_no_account_required"
+            name: "No Account Required"
+            description: "Use the extension without creating an account or logging in."
+            status: "available"
+            doc_refs:
+              - path: "src/app/organization/page.tsx"
+                section: "No account required"
+            blog_refs: []
+            tags: ["privacy", "frictionless", "onboarding"]
+            notes: ""
+
+  - id: "cat_platform"
+    name: "Platform Support"
+    description: "Multi-platform and multi-browser compatibility"
+    subcategories:
+      - id: "sub_ai_platforms"
+        name: "AI Platform Support"
+        features:
+          - id: "feat_chatgpt_support"
+            name: "ChatGPT Support"
+            description: "Full feature support for ChatGPT (primary platform)."
+            status: "available"
+            doc_refs:
+              - path: "src/app/page.tsx"
+                section: "Browser install buttons"
+            blog_refs: []
+            tags: ["platform", "chatgpt"]
+            notes: "Primary platform"
+          - id: "feat_claude_support"
+            name: "Claude.ai Support"
+            description: "Feature support for Anthropic's Claude.ai."
+            status: "available"
+            doc_refs:
+              - path: "src/app/page.tsx"
+                section: "Multi-platform"
+            blog_refs:
+              - slug: "ai-workspace-vs-superpower-chatgpt-workspaces"
+            tags: ["platform", "claude"]
+            notes: ""
+          - id: "feat_grok_support"
+            name: "Grok Support"
+            description: "Feature support for xAI's Grok."
+            status: "available"
+            doc_refs:
+              - path: "src/app/page.tsx"
+                section: "Multi-platform"
+            blog_refs:
+              - slug: "ai-workspace-vs-superpower-chatgpt-workspaces"
+            tags: ["platform", "grok"]
+            notes: ""
+      - id: "sub_browsers"
+        name: "Browser Support"
+        features:
+          - id: "feat_chrome_extension"
+            name: "Chrome Extension"
+            description: "Available on the Chrome Web Store for Chrome and Chromium-based browsers."
+            status: "available"
+            doc_refs:
+              - path: "src/app/page.tsx"
+                section: "browserInstallButtons"
+            blog_refs: []
+            tags: ["platform", "chrome", "browser"]
+            notes: "Primary distribution channel"
+          - id: "feat_edge_extension"
+            name: "Edge Extension"
+            description: "Available on the Microsoft Edge Add-ons store."
+            status: "available"
+            doc_refs:
+              - path: "src/app/page.tsx"
+                section: "browserInstallButtons"
+            blog_refs: []
+            tags: ["platform", "edge", "browser"]
+            notes: ""
+          - id: "feat_firefox_extension"
+            name: "Firefox Extension"
+            description: "Available on Firefox Add-ons."
+            status: "available"
+            doc_refs:
+              - path: "src/app/page.tsx"
+                section: "browserInstallButtons"
+            blog_refs: []
+            tags: ["platform", "firefox", "browser"]
+            notes: ""

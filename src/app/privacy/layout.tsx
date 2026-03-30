@@ -3,7 +3,7 @@
 export const metadata: Metadata = {
   title: "Privacy Policy | AI Workspace",
   description:
-    "AI Workspace privacy policy. All data stored locally — no tracking, no external servers, full transparency.",
+    "AI Workspace privacy policy covering local browser storage, optional account features, cloud sync, telemetry, billing, and trusted service providers.",
   alternates: {
     canonical: "https://getaiworkspace.com/privacy",
   },

@@ -13,15 +13,253 @@
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "chatgpt-custom-themes-amoled-dark-mode",
+    title:
+      "How to Customize ChatGPT's Look: Themes, AMOLED, and Typography Controls — For Free",
+    excerpt:
+      "The default ChatGPT UI is functional but one-size-fits-all. AI Workspace's free theming layer lets you change accent colors, fonts, chat width, and switch to AMOLED black mode — without touching a line of CSS.",
+    date: "Apr 8, 2026",
+    readTime: "7 min read",
+    category: "Features",
+    image:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=630&fit=crop&q=80",
+    imageAlt:
+      "Dark-themed code editor with colorful syntax highlighting — representing ChatGPT UI customization and theming",
+    ogImage:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=630&fit=crop&q=80",
+    content: `
+      <p class="text-xl leading-relaxed text-slate-300 mb-8">
+        ChatGPT's default interface is clean, neutral, and designed to get out of the way. That works well for first-time users. For people spending two or three hours a day in it, the one-size-fits-all design starts to feel like wearing someone else's glasses — technically functional, but never quite right.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        <a href="https://openai.com/index/chatgpt-usage-and-impact" target="_blank" rel="noopener noreferrer">ChatGPT reached 400 million weekly active users by February 2025</a>, a number that had doubled in just five months. A meaningful share of those users are not dabbling — they are writing, coding, researching, and managing client work inside ChatGPT every day. At that point, UI friction compounds. A chat column that feels too narrow on a widescreen monitor. A prompt box that forces you to scroll to see what you typed. White backgrounds at 11pm that leave your eyes burning. These are not minor gripes. They are daily friction that adds up.
+      </p>
+
+      <p class="text-slate-300 mb-8">
+        AI Workspace's new theming layer solves this with a full customization system built directly into the extension — no CSS skills required, no paid upgrade, no installation beyond the extension you already have.
+      </p>
+
+      <blockquote class="mb-10">
+        <strong class="text-white">TL;DR:</strong> AI Workspace's theming layer adds accent colors, font controls, chat width, prompt box size, Light/Dark/AMOLED modes, distraction-free mode, and a floating theme switcher to ChatGPT — all free. AMOLED mode renders backgrounds as true black, which on OLED screens can cut display power draw by up to 60% and significantly reduce eye strain during night sessions.
+      </blockquote>
+
+      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=630&fit=crop&q=80" alt="Dark-themed code editor with colorful syntax highlighting — representing ChatGPT UI customization and personalized theming" class="w-full rounded-2xl mb-10 object-cover" style="max-height: 480px;" />
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">What the Theming Layer Actually Does</h2>
+
+      <p class="text-slate-300 mb-4">
+        Every customization option is applied as a rendering layer on top of ChatGPT's existing interface. Nothing is injected into OpenAI's servers, nothing touches your conversations, and none of it requires a Plus subscription. The theming system works on the free ChatGPT tier and adjusts the visual presentation your browser renders locally.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        The controls split into five categories: mode switching, color and accent, typography, layout, and interface decluttering. Each one is independent — you can go full AMOLED with default typography, or keep standard dark mode but widen the chat column and increase the prompt box height. Mix and match until the interface fits how you actually work.
+      </p>
+
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-white/10">
+              <th class="text-left text-slate-400 py-3 pr-6 font-semibold">Category</th>
+              <th class="text-left text-slate-400 py-3 pr-6 font-semibold">Controls</th>
+              <th class="text-left text-cyan-400 py-3 font-semibold">Who benefits most</th>
+            </tr>
+          </thead>
+          <tbody class="text-slate-300">
+            <tr class="border-b border-white/5 align-top">
+              <td class="py-3 pr-6 text-white font-semibold">Mode switching</td>
+              <td class="py-3 pr-6">Light, Dark, AMOLED black</td>
+              <td class="py-3">Night-time users, OLED laptop/monitor owners</td>
+            </tr>
+            <tr class="border-b border-white/5 align-top">
+              <td class="py-3 pr-6 text-white font-semibold">Accent colors</td>
+              <td class="py-3 pr-6">Custom highlight and button color</td>
+              <td class="py-3">Anyone who wants a less sterile feel</td>
+            </tr>
+            <tr class="border-b border-white/5 align-top">
+              <td class="py-3 pr-6 text-white font-semibold">Typography</td>
+              <td class="py-3 pr-6">Font family, size, line height, spacing</td>
+              <td class="py-3">Long-form readers, dense technical chats</td>
+            </tr>
+            <tr class="border-b border-white/5 align-top">
+              <td class="py-3 pr-6 text-white font-semibold">Layout</td>
+              <td class="py-3 pr-6">Chat width, prompt box height</td>
+              <td class="py-3">Widescreen monitors, heavy typists</td>
+            </tr>
+            <tr class="align-top">
+              <td class="py-3 pr-6 text-white font-semibold">Distraction-free</td>
+              <td class="py-3 pr-6">Hides header, footer, upgrade chip</td>
+              <td class="py-3">Focus workers, deep research sessions</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="rounded-2xl border border-cyan-500/20 bg-cyan-500/10 p-6 mb-10">
+        <p class="text-slate-300 m-0">
+          <!-- [PERSONAL EXPERIENCE] --> The parts of the theming layer that get used most in practice are the ones that solve physical discomfort: a wider chat column because the default feels narrow on a 27-inch monitor, a taller prompt box because scrolling inside your own input breaks writing flow, and AMOLED mode at night because the difference in eye fatigue after a long session is immediately obvious.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Why AMOLED Mode Is More Than a Visual Preference</h2>
+
+      <p class="text-slate-300 mb-4">
+        Standard dark mode replaces white backgrounds with dark grey — typically around <code class="text-cyan-400 bg-slate-700/50 px-1 rounded">#1a1a1a</code> or <code class="text-cyan-400 bg-slate-700/50 px-1 rounded">#202123</code>. AMOLED mode goes further, pushing backgrounds to true black (<code class="text-cyan-400 bg-slate-700/50 px-1 rounded">#000000</code>). On OLED and AMOLED screens, that difference matters enormously — each pixel has its own backlight, and a black pixel literally turns off.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        <a href="https://android-developers.googleblog.com/2018/05/android-vitals-how-to-maximize-battery.html" target="_blank" rel="noopener noreferrer">Android engineering research from Google found that OLED screens drawing black content at full brightness consume up to 60% less battery compared to white backgrounds</a>. That same principle applies on OLED laptop displays and external monitors. A two-hour ChatGPT session in AMOLED mode versus the default white interface is a measurable difference on battery-dependent hardware.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        The secondary benefit is eye strain. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6530265/" target="_blank" rel="noopener noreferrer">A 2019 review published in BMJ Open Ophthalmology found that self-reported digital eye strain affects between 50% and 90% of computer workers</a>, with light emission intensity and contrast being key contributing factors at night. True black backgrounds reduce the volume of light emitted by the display during night sessions in a way that dark grey cannot — because grey pixels are still partially lit.
+      </p>
+
+      <p class="text-slate-300 mb-8">
+        The floating theme switcher makes this practical. You do not navigate into settings to switch modes. A small widget sits on screen and toggles between Light, Dark, and AMOLED with one click — so daylight sessions and late-night sessions each get the display profile that actually matches the environment.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Why Typography Controls Matter More Than They Sound</h2>
+
+      <p class="text-slate-300 mb-4">
+        Typography controls are the most underestimated part of the theming layer. At first glance, adjusting font size and line height sounds cosmetic. In practice, it changes how fatiguing a long reading session feels at a physiological level.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        <a href="https://www.tandfonline.com/doi/abs/10.1080/00140139.2018.1441813" target="_blank" rel="noopener noreferrer">Research published in Ergonomics found that line spacing of 1.5x to 1.8x the font size improves reading speed and comprehension compared to tightly spaced text</a>. ChatGPT's default response typography is functional, but it was not tuned for reading long technical explanations or dense code walkthroughs over the course of an hour. Being able to increase line height, adjust character spacing, and bump the base font size by 1–2pt changes the texture of extended reading sessions in a way most users notice immediately after the first adjustment.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        The font family control is useful for a different reason. Monospace fonts improve the readability of code-heavy responses. Certain humanist sans-serif fonts (softer letterforms, wider apertures) reduce cognitive friction during long text reads. Neither is universally better — which is exactly why the control exists.
+      </p>
+
+      <div class="rounded-2xl border border-white/10 bg-slate-800/30 p-6 mb-10">
+        <p class="text-cyan-400 font-semibold mb-3 text-sm uppercase tracking-wider">Typography settings worth adjusting first</p>
+        <ul class="space-y-2 text-slate-300 text-sm list-disc pl-5 m-0">
+          <li><strong class="text-white">Line height:</strong> Increase from default to 1.6–1.8x for long prose responses. Reduces re-reading on dense paragraphs.</li>
+          <li><strong class="text-white">Font size:</strong> +1pt if you work on a high-DPI display or find yourself leaning in. −1pt if you want more content visible without scrolling.</li>
+          <li><strong class="text-white">Letter spacing:</strong> Slight positive spacing (+0.01–0.02em) helps distinguish similar characters in technical content.</li>
+          <li><strong class="text-white">Font family:</strong> Monospace for code-heavy sessions; default serif or sans-serif for research and writing sessions.</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Layout Controls: Chat Width and Prompt Box Size</h2>
+
+      <p class="text-slate-300 mb-4">
+        ChatGPT's default chat column is constrained to roughly 650–700px wide — a reasonable default for reading on a laptop screen, but visibly narrow on a widescreen monitor where white sidebars stretch to fill the remaining space. The wider chat layout control expands the column to use more of the viewport, turning the interface into something that feels proportional on large displays rather than a narrow window floating in emptiness.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        <a href="https://www.nngroup.com/articles/optimal-line-length/" target="_blank" rel="noopener noreferrer">Nielsen Norman Group's research on optimal line length suggests 50–75 characters for comfortable reading</a>, which maps roughly to ChatGPT's default column on a 13-inch laptop. At 27 inches, the same default column produces 50 characters per line with large margins — visually uncomfortable. The wider layout stretches to 80–90 characters, which reads more naturally on large displays while staying within the comfortable upper range.
+      </p>
+
+      <p class="text-slate-300 mb-8">
+        The taller prompt box is less obvious but just as useful. ChatGPT's default input area is around 3–4 lines tall before scrolling begins. For complex prompts, multi-step instructions, or long context pastes, scrolling inside your own input breaks writing flow. A taller prompt box keeps the entire composition visible while you draft it — the same reason full-screen text editors replaced narrow browser input fields for writers.
+      </p>
+
+      <img src="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?cs=srgb&dl=pexels-designecologist-1714208.jpg&fm=jpg" alt="Minimalist dark desktop setup with wide monitor — representing wider chat layout and improved ChatGPT reading experience" class="w-full rounded-2xl mb-8 object-cover" style="max-height: 420px;" />
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Distraction-Free Mode: Hiding the UI Around the Conversation</h2>
+
+      <p class="text-slate-300 mb-4">
+        ChatGPT's interface includes persistent UI elements that are useful for navigation but generate visual noise during deep work sessions: the header bar, the footer, the sidebar, and the "Upgrade" chip that appears in the input area. Distraction-free mode hides these elements while the conversation is active, leaving only the exchange itself — your message, the response, and the input field.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        <a href="https://www.microsoft.com/en-us/worklab/work-trend-index/2025-the-year-the-frontier-firm-is-born" target="_blank" rel="noopener noreferrer">Microsoft's 2025 Work Trend Index found that 80% of the global workforce says they lack enough time or energy to do their work</a>, with constant interruptions listed as the primary drain. Removing visible navigation chrome does not solve strategic distractions, but it does eliminate low-level visual pulls — the peripheral awareness of tabs, buttons, and upgrade prompts that fragment attention during deep sessions.
+      </p>
+
+      <div class="rounded-2xl border border-emerald-500/20 bg-emerald-500/10 p-6 mb-10">
+        <p class="text-slate-300 m-0">
+          <!-- [UNIQUE INSIGHT] --> The upgrade chip deserves specific mention. It sits inside ChatGPT's prompt area for free-tier users and creates subtle cognitive friction during every session — a persistent reminder of limitations before you have even finished typing. Hiding it is one of the smallest changes in the theming layer and one of the most immediately noticeable.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Chat Bubbles and Spacing Refinements</h2>
+
+      <p class="text-slate-300 mb-4">
+        Beyond the headline controls, the theming layer includes a chat bubbles option that wraps messages in distinct visual containers rather than rendering them as floating text blocks. This is a stylistic preference for most users, but it has a practical benefit for skimming: the visual boundary between your messages and the model's responses becomes more distinct, which reduces the small re-orientation effort that happens when jumping back into the middle of a long thread.
+      </p>
+
+      <p class="text-slate-300 mb-8">
+        The smoother UI spacing control adjusts the padding and gap between interface elements. ChatGPT's default spacing is conservative for the component sizes it uses. Tightening it slightly fits more content on screen without reducing font size; opening it up gives a more airy layout that feels less dense during long reading sessions. Like all the other controls, neither setting is universally better — the right answer depends on your monitor size, resolution, and how many messages you typically have in view.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">How to Access the Theming Layer</h2>
+
+      <p class="text-slate-300 mb-4">
+        The theming controls are built into the AI Workspace extension — no separate download, no configuration file, no account required. Once the extension is installed, the floating theme switcher appears as an overlay icon on the ChatGPT interface. Clicking it opens the full theming panel.
+      </p>
+
+      <ol class="space-y-3 text-slate-300 list-decimal pl-6 mb-8">
+        <li>Install <a href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300">AI Workspace from the Chrome Web Store</a> (free)</li>
+        <li>Open ChatGPT in your browser</li>
+        <li>Click the floating theme switcher icon on the interface</li>
+        <li>Adjust mode, colors, typography, and layout controls</li>
+        <li>Settings persist across sessions — no need to re-configure on each visit</li>
+      </ol>
+
+      <p class="text-slate-300 mb-8">
+        All theme settings are stored locally in your browser. Nothing about your visual preferences leaves your device. The theming layer is read-only relative to ChatGPT's interface — it changes how the page renders in your browser, not the data or conversations underneath it. If you want a broader overview of everything else in the extension, the <a href="/blog/getting-started-with-ai-workspace" class="text-cyan-400 hover:text-cyan-300">getting started guide</a> covers the full feature set.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Frequently Asked Questions</h2>
+
+      <h3 class="text-lg font-bold text-cyan-400 mb-2">Does the theming layer require a ChatGPT Plus subscription?</h3>
+      <p class="text-slate-300 mb-6">No. The theming layer in AI Workspace works on ChatGPT's free tier. It operates as a rendering layer in your browser and does not interact with ChatGPT's subscription system. AMOLED mode, typography controls, layout adjustments, and distraction-free mode all work regardless of your ChatGPT plan.</p>
+
+      <h3 class="text-lg font-bold text-cyan-400 mb-2">What is the difference between AMOLED black and standard dark mode?</h3>
+      <p class="text-slate-300 mb-6">Standard dark mode replaces white backgrounds with dark grey, typically around #1a1a1a to #202123. AMOLED mode uses true black (#000000). On OLED and AMOLED screens, black pixels are fully off rather than dimly lit, which reduces battery drain and cuts the light output that causes eye fatigue during night sessions. Android engineering research from Google found up to 60% lower display power draw for true black versus white on OLED hardware.</p>
+
+      <h3 class="text-lg font-bold text-cyan-400 mb-2">Will my theme settings carry over when I next open ChatGPT?</h3>
+      <p class="text-slate-300 mb-6">Yes. Theme settings are saved locally in your browser and applied automatically each time you load ChatGPT. You do not need to re-configure them each session. The floating theme switcher stays accessible for quick changes if you want to adjust between light and AMOLED for day versus night use.</p>
+
+      <h3 class="text-lg font-bold text-cyan-400 mb-2">Does the theming layer work on Claude and Grok as well?</h3>
+      <p class="text-slate-300 mb-6">AI Workspace supports ChatGPT, Claude, and Grok. The workspace organization features work across all three. For the theming layer specifically, check the current extension release notes — theming feature availability may vary across platforms as the feature continues to roll out.</p>
+
+      <h3 class="text-lg font-bold text-cyan-400 mb-2">Does enabling distraction-free mode affect ChatGPT's functionality?</h3>
+      <p class="text-slate-300 mb-8">No. Distraction-free mode only hides visual elements — the header, footer, and upgrade chip — from your view. It does not remove any ChatGPT features or restrict what you can do. The hidden elements can be revealed again by toggling off distraction-free mode in the floating theme switcher at any time.</p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">A Better Default for Long Sessions</h2>
+
+      <p class="text-slate-300 mb-4">
+        The goal of the theming layer is not to make ChatGPT look flashy. It is to make it feel better to use every day — which is a different standard. Flashy gets noticed once. Comfortable compounds across hundreds of sessions.
+      </p>
+
+      <p class="text-slate-300 mb-2">Key takeaways:</p>
+      <ul class="list-disc pl-6 text-slate-300 mb-8 space-y-2">
+        <li>AMOLED mode delivers measurable battery savings on OLED hardware and reduces eye strain during night use compared to standard dark grey themes.</li>
+        <li>Typography controls — line height, font size, letter spacing — change the physical fatigue profile of long reading sessions more than most users expect before trying them.</li>
+        <li>Wider chat layout and a taller prompt box are the highest-impact layout changes for widescreen monitor users and anyone composing complex multi-step prompts.</li>
+        <li>Distraction-free mode removes the persistent visual signals that fragment attention during deep focus sessions.</li>
+        <li>All settings are free, stored locally, and require no ChatGPT subscription upgrade to use.</li>
+      </ul>
+
+      <p class="text-slate-300 mb-8">
+        If you spend significant time in ChatGPT, the <a href="/organization" class="text-cyan-400 hover:text-cyan-300">workspace organization features</a> and <a href="/prompt-library" class="text-cyan-400 hover:text-cyan-300">Prompt Library</a> compound visual comfort with structural efficiency. The theming layer is the fastest improvement to make today — a two-minute setup that pays back on every session from that point forward.
+      </p>
+
+      <div class="rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-blue-500/5 p-8 text-center mb-2">
+        <p class="text-white font-bold text-xl mb-2">ChatGPT that looks and feels like yours.</p>
+        <p class="text-slate-300 mb-6">AI Workspace adds AMOLED mode, custom accent colors, typography controls, wider layouts, and distraction-free mode to ChatGPT — completely free.</p>
+        <a href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-3 rounded-full transition-colors">
+          Add AI Workspace to Chrome — Free
+        </a>
+      </div>
+    `,
+  },
+  {
     slug: "paperclip-maximizer-ai-safety-2026",
-    title: "The Paperclip Maximizer Explained: Why This Thought Experiment Is More Relevant Than Ever in 2026",
+    title:
+      "The Paperclip Maximizer Explained: Why This Thought Experiment Is More Relevant Than Ever in 2026",
     excerpt:
       "Nick Bostrom's paperclip thought experiment is 20+ years old — but as AI agents autonomously execute multi-step tasks in 2026, the alignment problem it describes has become urgent. Here's what it means for how you use AI today.",
     date: "Apr 3, 2026",
     readTime: "9 min read",
     category: "AI Safety",
     image: "/images/blog/ai-thoughts.png",
-    imageAlt: "Abstract visualization of AI neural network and thought process with glowing nodes",
+    imageAlt:
+      "Abstract visualization of AI neural network and thought process with glowing nodes",
     ogImage: "/images/blog/ai-thoughts.png",
     content: `
       <p class="text-xl leading-relaxed text-slate-300 mb-8">
@@ -255,7 +493,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "chatgpt-for-freelancers-manage-multiple-clients",
-    title: "ChatGPT for Freelancers: How to Manage Multiple Clients Without Losing Context",
+    title:
+      "ChatGPT for Freelancers: How to Manage Multiple Clients Without Losing Context",
     excerpt:
       "Most freelancers hit a wall at client number three. This guide covers the workspace-per-client system, prompt library setup, and organized deliverable storage that turns ChatGPT into a scalable professional tool.",
     date: "Apr 2, 2026",

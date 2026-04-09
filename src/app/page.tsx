@@ -583,7 +583,7 @@ export default function Home() {
                 >
                   <span className="block text-5xl sm:text-6xl lg:text-7xl">
                     <span className="text-white">
-                      ChatGPT Workspaces Chrome Extension –{" "}
+                      #1 ChatGPT Chrome Extension –{" "}
                     </span>
                     <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                       Everything ChatGPT Should Have Built In.

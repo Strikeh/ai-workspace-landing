@@ -1,4 +1,37 @@
-﻿last_updated: "2026-04-03"
+﻿last_updated: "2026-06-06"
+
+  - slug: "chatgpt-prompt-library"
+    title: "ChatGPT Prompt Library: Build & Organize Your Best Prompts"
+    status: "human-review"
+    published_date: "2026-06-06"
+    cluster_id: "tc_prompt_management"
+    content_type: "cluster"
+    word_count: 1750
+    category: "Tutorial"
+    primary_keyword: "chatgpt prompt library"
+    hero_image: "/images/blog/chatgpt-prompt-library/hero.jpg"
+    target_features:
+      - feat_prompt_library
+      - feat_quick_slash_access
+      - feat_pin_favorite_prompts
+      - feat_template_variables
+      - feat_export_share_prompts
+    competitors_mentioned: []
+    internal_links:
+      - /prompt-library
+      - /blog/getting-started-with-ai-workspace
+      - /blog/chatgpt-for-blogging-complete-guide
+    external_links:
+      - https://www.microsoft.com/en-us/worklab/work-trend-index/2025-the-year-the-frontier-firm-is-born
+    has_eeat_signals: true
+    eeat_notes: "Testimonial from Gimme Video (verbatim Chrome Web Store review), personal experience building 200+ prompts, 4.5 CWS rating"
+    has_tl_dr: true
+    has_faq: true
+    has_svg_chart: false
+    information_gain_markers: 1
+    citation_capsules: 0
+    needs_update_reason: ""
+    notes: "Cluster page for tc_prompt_management. Pillar (q_002 'prompt management') not yet published — add pillar internal link once live. Images: 4 self-hosted Pexels photos (Pexels License)."
 
   - slug: "organize-chatgpt-conversations-2026"
     title: "How to Organize Hundreds of ChatGPT Conversations (2026 Complete Guide)"

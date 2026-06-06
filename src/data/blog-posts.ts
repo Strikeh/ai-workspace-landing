@@ -7302,4 +7302,173 @@ export const blogPosts: BlogPost[] = [
       </div>
     `,
   },
+  {
+    slug: "chatgpt-prompt-library",
+    title: "ChatGPT Prompt Library: Build & Organize Your Best Prompts",
+    excerpt:
+      "Build a ChatGPT prompt library from scratch. A step-by-step system to turn scattered prompts into reusable, instantly searchable templates you actually reuse.",
+    date: "Jun 6, 2026",
+    readTime: "10 min read",
+    category: "Tutorial",
+    image: "/images/blog/chatgpt-prompt-library/hero.jpg",
+    imageAlt:
+      "Organized desk and laptop representing a well-structured ChatGPT prompt library",
+    ogImage: "/images/blog/chatgpt-prompt-library/hero.jpg",
+    content: `
+      <p class="text-xl leading-relaxed text-slate-300 mb-8">
+        Most people who use ChatGPT every day are sitting on hundreds of good prompts they will never find again. They live in old chats, in a Notes app, in a Google Doc nobody opens, and in muscle memory. A <strong class="text-white">ChatGPT prompt library</strong> fixes that by turning your scattered, one-off prompts into a reusable, searchable system — so the prompt you perfected three weeks ago is one keystroke away today instead of being retyped from scratch.
+      </p>
+
+      <p class="text-slate-300 mb-8">
+        This is a build-from-scratch guide. Not a list of "100 prompts to copy," but the actual system: how to collect what you already have, group it so you can find it, turn your best prompts into reusable templates, and make retrieval instant. By the end you'll have a library that gets faster to use the more you add to it — the opposite of how a folder of saved chats behaves.
+      </p>
+
+      <blockquote class="mb-10">
+        <strong class="text-white">TL;DR:</strong> A ChatGPT prompt library is a single organized home for your reusable prompts — tagged, foldered, and instantly searchable. Build it in five steps: audit what you already use, group prompts by the job they do, convert winners into variable-driven templates, make retrieval one keystroke (slash access), then pin your top prompts and prune dead ones. AI Workspace Pro gives you a 200+ capacity prompt library with quick "/" insertion, pinned favorites, and {{variable}} templates — all stored locally with zero telemetry.
+      </blockquote>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">What Is a ChatGPT Prompt Library?</h2>
+
+      <p class="text-slate-300 mb-6">
+        A <strong class="text-white">ChatGPT prompt library</strong> is a dedicated, organized collection of your reusable prompts — separate from your chat history — that you can search, categorize, and insert on demand. The key word is <em>reusable</em>. A chat is a one-time conversation. A library entry is a tool you use again and again: your cold-email opener, your code-review checklist, your blog-outline generator, your "rewrite this in plain English" prompt.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        The difference matters because chat history and a prompt library solve different problems. Search-your-chats helps you find <em>what you once said</em>. A prompt library helps you reuse <em>what reliably works</em>. When those two get mixed together — your best prompts buried inside random conversations — every reuse becomes a treasure hunt.
+      </p>
+
+      <div class="rounded-2xl border border-cyan-500/20 bg-cyan-500/10 p-6 mb-8">
+        <p class="text-slate-300 m-0">
+          <!-- [PERSONAL EXPERIENCE] --> After building a library of 200+ prompts, the single biggest lesson was this: the prompts I reused most were almost never the "clever" ones. They were boring, specific, and repetitive — the exact things worth saving. The clever one-offs stayed one-offs. If a prompt earns its place by being used three times in a week, it belongs in the library. Everything else is noise.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Why Scattered Prompts Cost You More Than You Think</h2>
+
+      <p class="text-slate-300 mb-6">
+        The hidden tax isn't the 30 seconds it takes to retype a prompt. It's the context-switch and the quality drift. Microsoft's 2025 Work Trend Index found that <a href="https://www.microsoft.com/en-us/worklab/work-trend-index/2025-the-year-the-frontier-firm-is-born" target="_blank" rel="noopener noreferrer">48% of employees say work feels chaotic and fragmented</a> — and re-deriving a prompt you already perfected, from memory, several times a day, is exactly the kind of fragmentation that adds up.
+      </p>
+
+      <figure class="my-10">
+        <img src="/images/blog/chatgpt-prompt-library/scattered-prompts.jpg" alt="Scattered sticky notes representing disorganized ChatGPT prompts stored in many places" class="w-full rounded-xl border border-white/10 shadow-2xl" />
+        <figcaption>Prompts scattered across chats, notes apps, and docs are effectively lost — you can't reuse what you can't find.</figcaption>
+      </figure>
+
+      <p class="text-slate-300 mb-6">
+        There are three concrete costs to scattered prompts. First, <strong class="text-white">quality drift</strong>: retyping from memory means you lose the small refinements that made the prompt good — the constraint you added, the format you specified, the example you included. Second, <strong class="text-white">duplication</strong>: you and your teammates each rebuild the same prompt independently, five slightly different ways. Third, <strong class="text-white">abandonment</strong>: a prompt that takes effort to find simply doesn't get reused, so you default to lazy one-liners and worse output.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">How to Build a ChatGPT Prompt Library From Scratch</h2>
+
+      <p class="text-slate-300 mb-6">
+        You don't need to start with a perfect taxonomy. You need to start with the prompts you already use and impose just enough structure to make them findable. Here's the five-step build.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Step 1: Audit the prompts you already use</h3>
+      <p class="text-slate-300 mb-6">
+        Before you organize anything, collect. Spend 20 minutes scrolling your recent ChatGPT history and copy out every prompt you've used more than once or wish you could reuse. Don't filter yet — just gather. Most people are surprised to find they already have 30–50 prompts worth keeping. This raw pile is your starting inventory.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Step 2: Group by the job, not the topic</h3>
+      <p class="text-slate-300 mb-6">
+        The most common organizing mistake is grouping prompts by subject ("marketing," "coding," "email"). Subjects overlap and you end up guessing which folder a prompt lives in. Instead, group by the <strong class="text-white">job the prompt does</strong>: Summarize, Rewrite, Generate, Analyze, Extract, Brainstorm. Job-based groups are mutually exclusive and match how you actually think when you reach for a prompt ("I need to rewrite this," not "this is a marketing thing").
+      </p>
+
+      <div class="bg-slate-800/40 border border-white/10 rounded-xl p-6 mb-8 font-mono text-sm text-slate-300">
+        <p class="m-0 mb-1">📁 Summarize</p>
+        <p class="m-0 mb-1 pl-6">→ Meeting notes → action items</p>
+        <p class="m-0 mb-2 pl-6">→ Long article → 5 bullet TL;DR</p>
+        <p class="m-0 mb-1">📁 Rewrite</p>
+        <p class="m-0 mb-1 pl-6">→ Plain-English explainer</p>
+        <p class="m-0 mb-2 pl-6">→ Formal → casual tone shift</p>
+        <p class="m-0 mb-1">📁 Generate</p>
+        <p class="m-0 mb-1 pl-6">→ Blog outline from keyword</p>
+        <p class="m-0 pl-6">→ Cold email from a brief</p>
+      </div>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Step 3: Turn your winners into templates</h3>
+      <p class="text-slate-300 mb-6">
+        A static prompt is good. A template is better. Take your best prompts and replace the parts that change with variables — for example, <code>Write a {{tone}} cold email to a {{role}} about {{offer}}, max {{word_count}} words.</code> Now one library entry covers dozens of situations, and you fill the blanks on insertion instead of editing prose every time. With AI Workspace Pro's <a href="/prompt-library" class="text-cyan-400 hover:text-cyan-300">prompt library</a>, <code>{{variable}}</code> templates prompt you for each value as you insert them, so a single saved prompt becomes a reusable mini-tool.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Step 4: Make retrieval instant</h3>
+      <p class="text-slate-300 mb-6">
+        A library you have to open a separate window to use is a library you'll stop using. The whole point is speed. AI Workspace Pro lets you type <code>/</code> directly in the ChatGPT input to search and insert any saved prompt without leaving the chat — the same muscle memory as a slash command. Retrieval friction is what kills prompt reuse, so optimizing for one-keystroke access matters more than having a beautiful folder tree.
+      </p>
+
+      <figure class="my-10">
+        <img src="/images/blog/chatgpt-prompt-library/organized-library.jpg" alt="Neatly organized labeled folders representing a structured ChatGPT prompt library" class="w-full rounded-xl border border-white/10 shadow-2xl" />
+        <figcaption>A job-based folder structure plus instant search turns a pile of prompts into a tool you reach for without thinking.</figcaption>
+      </figure>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Step 5: Pin your top prompts and prune the rest</h3>
+      <p class="text-slate-300 mb-6">
+        A library follows the 80/20 rule: you'll use roughly 20% of your prompts 80% of the time. Pin those to the top so they're always one glance away — AI Workspace Pro supports pinning favorite prompts for exactly this. Then prune ruthlessly. Every quarter, archive prompts you haven't used. A library of 40 prompts you actually reach for beats a library of 400 you have to scroll past.
+      </p>
+
+      <blockquote class="mb-10">
+        <p class="text-slate-300 mb-2">"Solid productivity booster... organizes prompts... trimming feature particularly useful."</p>
+        <cite class="text-slate-400 text-sm">— Gimme Video, Chrome Web Store review, February 2026</cite>
+      </blockquote>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">A Prompt Library Structure That Scales</h2>
+
+      <p class="text-slate-300 mb-6">
+        Once you've got the basics working, a few structural habits keep the library useful as it grows past 100 entries. Use tags for cross-cutting context that doesn't fit the job-based folders — <code>#client-a</code>, <code>#draft</code>, <code>#tested</code> — so you can filter "all my Generate prompts tagged #tested" in one step. Keep a short, descriptive title on every prompt; "Blog outline from keyword" beats "outline v3 final." And export your library periodically as a backup.
+      </p>
+
+      <figure class="my-10">
+        <img src="/images/blog/chatgpt-prompt-library/focused-typing.jpg" alt="Person typing on a laptop keyboard, quickly inserting a saved prompt into ChatGPT" class="w-full rounded-xl border border-white/10 shadow-2xl" />
+        <figcaption>The payoff: the prompt you perfected last month is one keystroke away today, not retyped from memory.</figcaption>
+      </figure>
+
+      <p class="text-slate-300 mb-6">
+        If you collaborate, sharing matters too. AI Workspace Pro can export and share prompts as JSON or CSV, which means a team can standardize on one set of vetted prompts instead of everyone reinventing them. This is where a library stops being a personal convenience and becomes shared infrastructure — the same prompt produces consistent output across the whole team.
+      </p>
+
+      <p class="text-slate-300 mb-8">
+        A prompt library also pairs naturally with how you organize the rest of your AI workflow. If you're setting up your workspace for the first time, the <a href="/blog/getting-started-with-ai-workspace" class="text-cyan-400 hover:text-cyan-300">getting started guide</a> walks through the initial setup, and the <a href="/blog/chatgpt-for-blogging-complete-guide" class="text-cyan-400 hover:text-cyan-300">complete guide to ChatGPT for blogging</a> shows a real, end-to-end workflow built entirely on saved, reusable prompts.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Frequently Asked Questions</h2>
+
+      <div class="space-y-6 mb-10">
+        <div class="border border-white/10 rounded-xl p-6">
+          <h3 class="text-lg font-bold text-white mt-0 mb-3">Does ChatGPT have a built-in prompt library?</h3>
+          <p class="text-slate-300 m-0">ChatGPT has no dedicated prompt library — there's no native way to save, tag, and instantly reinsert reusable prompts. Most people improvise with a Notes app or a doc, which is exactly why prompts get scattered and lost. A Chrome extension like AI Workspace Pro adds a real prompt library directly inside the ChatGPT interface, with folders, tags, and quick "/" insertion.</p>
+        </div>
+
+        <div class="border border-white/10 rounded-xl p-6">
+          <h3 class="text-lg font-bold text-white mt-0 mb-3">How should I organize my ChatGPT prompts?</h3>
+          <p class="text-slate-300 m-0">Group prompts by the job they do — Summarize, Rewrite, Generate, Analyze, Extract — rather than by topic. Job-based folders don't overlap, so you always know where a prompt lives. Use tags for cross-cutting context (client, status, tested), pin your most-used prompts to the top, and archive anything you haven't touched in a quarter.</p>
+        </div>
+
+        <div class="border border-white/10 rounded-xl p-6">
+          <h3 class="text-lg font-bold text-white mt-0 mb-3">What makes a good reusable prompt?</h3>
+          <p class="text-slate-300 m-0">A good reusable prompt is specific about the task, the format of the output, and any constraints — and it uses variables for the parts that change. Instead of rewriting a prompt each time, a template like "Write a {{tone}} summary of {{text}} in {{format}}" lets you fill the blanks on insertion. The more boring and repetitive the task, the better a candidate it is for your library.</p>
+        </div>
+
+        <div class="border border-white/10 rounded-xl p-6">
+          <h3 class="text-lg font-bold text-white mt-0 mb-3">Can I share my prompt library with my team?</h3>
+          <p class="text-slate-300 m-0">Yes. AI Workspace Pro can export your prompt library to JSON or CSV, so a team can standardize on one vetted set of prompts instead of everyone building their own. Shared prompts mean consistent output across the team and far less duplicated effort rebuilding the same prompt in slightly different ways.</p>
+        </div>
+
+        <div class="border border-white/10 rounded-xl p-6">
+          <h3 class="text-lg font-bold text-white mt-0 mb-3">Is my prompt library private?</h3>
+          <p class="text-slate-300 m-0">With AI Workspace Pro, your prompt library is stored locally in your browser with zero telemetry — nothing is sent to external servers. The Chrome Web Store listing carries a 4.5★ rating, and the extension is built local-first specifically so professionals can store sensitive, client-related prompts without them leaving the device.</p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Start Small, Then Let It Compound</h2>
+
+      <p class="text-slate-300 mb-6">
+        You don't need a perfect library on day one. You need ten prompts you actually reuse, grouped by job, one keystroke away. Add to it whenever a prompt earns its place by being used a third time. Within a few weeks you'll have a library that quietly removes the most repetitive part of working with ChatGPT — and unlike a folder of old chats, it gets more valuable every time you add to it.
+      </p>
+
+      <div class="rounded-2xl border border-cyan-500/30 bg-cyan-500/10 p-6 mb-6">
+        <p class="text-slate-300 mb-4">Ready to turn your scattered prompts into a real library inside ChatGPT?</p>
+        <a href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-500 hover:bg-cyan-400 text-black font-bold py-3 px-6 rounded-xl transition-colors">Try AI Workspace Pro free →</a>
+      </div>
+    `,
+  },
 ];

@@ -228,6 +228,7 @@ categories:
               - slug: "chatgpt-for-blogging-complete-guide"
               - slug: "getting-started-with-ai-workspace"
               - slug: "best-chatgpt-chrome-extensions-2026"
+              - slug: "chatgpt-prompt-library"
             tags: ["prompts", "library", "core"]
             notes: ""
           - id: "feat_quick_slash_access"
@@ -241,6 +242,7 @@ categories:
                 section: "Quick access"
             blog_refs:
               - slug: "chatgpt-for-blogging-complete-guide"
+              - slug: "chatgpt-prompt-library"
             tags: ["prompts", "quick-access", "productivity"]
             notes: ""
           - id: "feat_pin_favorite_prompts"
@@ -250,7 +252,8 @@ categories:
             doc_refs:
               - path: "src/app/prompt-library/page.tsx"
                 section: "Pin favorites"
-            blog_refs: []
+            blog_refs:
+              - slug: "chatgpt-prompt-library"
             tags: ["prompts", "quick-access"]
             notes: ""
       - id: "sub_prompt_advanced"
@@ -267,6 +270,7 @@ categories:
                 section: "Variables"
             blog_refs:
               - slug: "chatgpt-for-blogging-complete-guide"
+              - slug: "chatgpt-prompt-library"
             tags: ["prompts", "templates", "variables"]
             notes: ""
           - id: "feat_prompt_chains"
@@ -297,7 +301,8 @@ categories:
             doc_refs:
               - path: "src/app/prompt-library/page.tsx"
                 section: "Export"
-            blog_refs: []
+            blog_refs:
+              - slug: "chatgpt-prompt-library"
             tags: ["prompts", "export", "sharing"]
             notes: ""
 

@@ -13,6 +13,104 @@
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "is-superpower-chatgpt-safe",
+    title:
+      "Is Superpower ChatGPT Safe? A Practical Guide to ChatGPT Extension Privacy",
+    excerpt:
+      "Wondering whether Superpower ChatGPT is safe to use? Here is how to evaluate any ChatGPT extension's privacy — what data it can access, where your conversations are stored, and why a local-first alternative keeps you in control.",
+    date: "Jun 7, 2026",
+    readTime: "7 min read",
+    category: "Privacy",
+    image: "/images/blog/ai-workspace-dashboard.png",
+    imageAlt:
+      "Evaluating the privacy and safety of ChatGPT browser extensions",
+    ogImage: "/images/blog/ai-workspace-dashboard.png",
+    content: `
+      <p class="text-xl leading-relaxed text-slate-300 mb-8">
+        If you rely on ChatGPT for client work, research, or anything sensitive, it is worth asking a simple question before installing any extension: <strong class="text-white">where does my data actually go?</strong> Superpower ChatGPT is one of the most popular ChatGPT extensions, and like any browser extension, what matters for safety is not its popularity but how it handles your conversations behind the scenes.
+      </p>
+
+      <p class="text-slate-300 mb-8">
+        This guide is not an accusation. It is a practical checklist for evaluating <em>any</em> ChatGPT extension — including ours — so you can make an informed choice instead of trusting a star rating.
+      </p>
+
+      <div class="my-10 p-6 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-xl">
+        <h3 class="text-2xl font-bold text-white mb-3">TL;DR</h3>
+        <p class="text-slate-300 m-0">
+          A ChatGPT extension is only as safe as its data handling. The two questions that matter most are: (1) does it send your conversations to its own servers, and (2) can you use it without an account? Cloud-synced extensions trade convenience for a copy of your data living somewhere you do not control. A <a href="/superpower-chatgpt-alternative" class="text-cyan-400 hover:text-cyan-300">local-first alternative like AI Workspace</a> keeps everything on your device, with optional AES-256 encryption and zero telemetry.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">What can a ChatGPT extension actually see?</h2>
+
+      <p class="text-slate-300 mb-6">
+        Any extension that enhances ChatGPT needs permission to read and modify the ChatGPT page. That is normal and necessary — it is how features like folders, prompt libraries, and highlights work. But that same access means the extension can, in principle, read the content of your conversations. The difference between a safe extension and a risky one is what it <em>does</em> with that access.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        There are two broad models:
+      </p>
+
+      <ul class="text-slate-300 mb-8 space-y-3 list-disc pl-6">
+        <li><strong class="text-white">Cloud-synced:</strong> your conversations, prompts, and settings are uploaded to the extension provider's servers so they can sync across devices. Convenient — but it means a second copy of your AI data exists outside your browser.</li>
+        <li><strong class="text-white">Local-first:</strong> everything is stored in your own browser using local storage. Nothing is uploaded, there is no account, and no third party holds a copy of your chats.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Is Superpower ChatGPT safe?</h2>
+
+      <p class="text-slate-300 mb-6">
+        Superpower ChatGPT is a long-standing, widely used extension, and millions of people use it without issue. The honest answer to "is it safe" is: <strong class="text-white">it depends on your threat model</strong>. For casual personal use, cloud sync is a reasonable convenience. For consultants, agencies, developers, and anyone handling client or confidential information, the calculus changes — because once your conversations leave your browser, you are trusting a third party's servers, retention policy, and security practices with that data.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        Before trusting any extension with sensitive chats, check these things yourself:
+      </p>
+
+      <ol class="text-slate-300 mb-8 space-y-3 list-decimal pl-6">
+        <li>Does it require an account or login? (An account usually implies server-side storage.)</li>
+        <li>Does its privacy policy mention syncing, uploading, or processing your conversation data?</li>
+        <li>Can you export and fully delete your data?</li>
+        <li>Is the data encrypted, and who holds the keys?</li>
+        <li>Does it send analytics or telemetry about how you use it?</li>
+      </ol>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">The local-first alternative: how AI Workspace handles this</h2>
+
+      <p class="text-slate-300 mb-6">
+        AI Workspace was built around a single principle: your AI conversations should never have to leave your device to be organized. Concretely, that means:
+      </p>
+
+      <ul class="text-slate-300 mb-8 space-y-3 list-disc pl-6">
+        <li><strong class="text-white">100% local storage</strong> — your chats, prompts, and notes live in your browser, not on our servers.</li>
+        <li><strong class="text-white">No account required</strong> — there is nothing to sign up for and no profile of you to leak.</li>
+        <li><strong class="text-white">Optional AES-256 encryption</strong> on your workspaces, with the keys staying on your device.</li>
+        <li><strong class="text-white">Zero telemetry</strong> — we do not phone home with usage data about your conversations.</li>
+      </ul>
+
+      <p class="text-slate-300 mb-6">
+        You still get the full feature set you would expect from a power-user extension — workspaces, folders, a prompt library, persistent highlights, thread trimming, an image gallery, notes, and exports across ChatGPT, Claude, and Grok. The privacy is the part you do not have to think about. For a side-by-side breakdown, see our <a href="/blog/ai-workspace-vs-superpower-chatgpt-workspaces" class="text-cyan-400 hover:text-cyan-300">AI Workspace vs Superpower ChatGPT comparison</a> or the dedicated <a href="/superpower-chatgpt-alternative" class="text-cyan-400 hover:text-cyan-300">Superpower ChatGPT alternative</a> page.
+      </p>
+
+      <div class="rounded-2xl border border-cyan-500/20 bg-cyan-500/10 p-6 mb-8">
+        <p class="text-slate-300 m-0">
+          Want the technical details on exactly what we store and never store? Our <a href="/privacy" class="text-cyan-400 hover:text-cyan-300">privacy policy</a> spells it out in plain language.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Bottom line</h2>
+
+      <p class="text-slate-300 mb-6">
+        "Safe" is not a yes-or-no badge — it is about whether an extension's data model matches what you are comfortable with. If you only use ChatGPT for low-stakes personal tasks, cloud sync may be perfectly fine. If your conversations include client work, code, strategy, or anything you would not want sitting on someone else's server, a local-first tool is the safer default. That is exactly the gap AI Workspace was built to fill.
+      </p>
+
+      <div class="my-10 p-6 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-xl text-center">
+        <h3 class="text-2xl font-bold text-white mb-3">Keep your ChatGPT data on your device</h3>
+        <p class="text-slate-300 mb-6">Install AI Workspace free — no account, no cloud sync, no telemetry.</p>
+        <a href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 text-base font-bold text-white no-underline">Add to Chrome - Free</a>
+      </div>
+    `,
+  },
+  {
     slug: "chatgpt-workspaces-complete-guide",
     title: "ChatGPT Workspaces: Complete Guide to Organizing AI Conversations",
     excerpt:

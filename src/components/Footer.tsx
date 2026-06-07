@@ -148,6 +148,30 @@ export function Footer() {
               <li>
                 <Link
                   className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  href="/chatgpt-themes"
+                >
+                  ChatGPT Themes (GPTheme)
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  href="/fix-chatgpt-lag"
+                >
+                  Fix ChatGPT Lag
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  href="/superpower-chatgpt-alternative"
+                >
+                  Superpower ChatGPT Alternative
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
                   href="/affiliate"
                 >
                   Affiliate Program

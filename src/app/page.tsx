@@ -1698,7 +1698,7 @@ export default function Home() {
                 },
                 {
                   q: "Can I install the extension on Microsoft Edge or Firefox?",
-                  a: "Currently, AI Workspace is optimized for Google Chrome. We are working on support for Microsoft Edge and Firefox, which will be available soon.",
+                  a: "Yes! AI Workspace is available on the Chrome Web Store, Microsoft Edge Add-ons, and Firefox Add-ons. It also works on Chromium-based browsers like Brave, Arc, and Opera.",
                 },
                 {
                   q: "Is my data stored securely?",

@@ -1,4 +1,23 @@
-﻿## 2026-06-06 00:00
+﻿## 2026-06-11 00:00
+**Action:** Competitor analysis of GPT Master (gptmaster.app) + major site expansion: features hub, 4 feature pages, guides section (10), compare section (3), FAQ page
+**Files:**
+- .seo-engine/data/competitors.yaml (added comp_gpt_master, fully verified 2026-06-11)
+- src/app/features/page.tsx (new features hub, links all 9 feature pages)
+- src/app/chatgpt-workspaces/page.tsx (new — primary "chatgpt workspaces" keyword, FAQPage schema)
+- src/app/chatgpt-conversation-branching/page.tsx (new — Tangent View, FAQPage schema)
+- src/app/chatgpt-image-gallery/page.tsx (new — FAQPage schema)
+- src/app/chatgpt-minimap/page.tsx (new — Smart Conversation Outline targeting "chatgpt minimap", FAQPage schema)
+- src/data/guides.ts + src/app/guides/page.tsx + src/app/guides/[slug]/page.tsx (new — 10 how-to guides, HowTo+FAQPage schema)
+- src/data/compare-pages.ts + src/app/compare/page.tsx + src/app/compare/[slug]/page.tsx (new — vs GPT Master, vs ChatGPT Projects, vs manual organization)
+- src/app/faq/page.tsx (new — 34 questions in 5 categories, FAQPage schema)
+- src/app/organization/layout.tsx + src/app/prompt-library/layout.tsx (new — pages previously had NO metadata)
+- src/components/Footer.tsx (restructured: Features/Resources/Solutions/Support columns)
+- src/app/sitemap.ts (added all new pages + previously missing /organization, /affiliate)
+- src/app/page.tsx (fixed stale FAQ answer: Edge/Firefox ARE supported)
+**Summary:** Cloned GPT Master's proven SEO architecture (keyword-first root URLs, Quick Answer boxes, comparison tables, persona use cases, standardized FAQs, freshness stamps) while exploiting their blind spots: multi-platform (Claude/Grok) keywords, "workspace" framing, export/backup topics, vs-GPT-Master comparison (nobody targets them), and FAQPage/HowTo JSON-LD (their schema unconfirmed). Guides deliberately product-tutorial format to avoid cannibalizing existing informational blogs.
+**Triggered by:** user (competitor analysis request)
+
+## 2026-06-06 00:00
 **Action:** Drafted blog "ChatGPT Prompt Library: Build & Organize Your Best Prompts" (q_006)
 **Files:**
 - src/data/blog-posts.ts (added BlogPost: slug "chatgpt-prompt-library", ~1750 words)

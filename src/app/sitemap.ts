@@ -1,5 +1,7 @@
-﻿import { MetadataRoute } from "next";
+import { MetadataRoute } from "next";
 import { blogPosts } from "@/data/blog-posts";
+import { guides } from "@/data/guides";
+import { comparePages } from "@/data/compare-pages";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://getaiworkspace.com";
@@ -12,6 +14,53 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const guideEntries: MetadataRoute.Sitemap = guides.map((guide) => ({
+    url: `${baseUrl}/guides/${guide.slug}`,
+    lastModified: currentDate,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  const compareEntries: MetadataRoute.Sitemap = comparePages.map((page) => ({
+    url: `${baseUrl}/compare/${page.slug}`,
+    lastModified: currentDate,
+    changeFrequency: "weekly",
+    priority: 0.9,
+  }));
+
+  const staticPages: { path: string; priority: number; freq: "daily" | "weekly" | "monthly" }[] = [
+    // Hubs
+    { path: "/features", priority: 0.9, freq: "weekly" },
+    { path: "/guides", priority: 0.9, freq: "weekly" },
+    { path: "/compare", priority: 0.9, freq: "weekly" },
+    { path: "/faq", priority: 0.8, freq: "weekly" },
+    { path: "/blog", priority: 0.9, freq: "weekly" },
+    // Feature pages
+    { path: "/chatgpt-workspaces", priority: 0.9, freq: "weekly" },
+    { path: "/organization", priority: 0.8, freq: "weekly" },
+    { path: "/prompt-library", priority: 0.8, freq: "weekly" },
+    { path: "/chatgpt-minimap", priority: 0.8, freq: "weekly" },
+    { path: "/chatgpt-conversation-branching", priority: 0.8, freq: "weekly" },
+    { path: "/chatgpt-image-gallery", priority: 0.8, freq: "weekly" },
+    { path: "/chatgpt-text-highlighter", priority: 0.8, freq: "weekly" },
+    { path: "/chatgpt-themes", priority: 0.8, freq: "weekly" },
+    { path: "/fix-chatgpt-lag", priority: 0.9, freq: "weekly" },
+    // Compare (standalone)
+    { path: "/superpower-chatgpt-alternative", priority: 0.9, freq: "weekly" },
+    // Solutions
+    { path: "/agencies", priority: 0.8, freq: "weekly" },
+    { path: "/students", priority: 0.8, freq: "weekly" },
+    { path: "/creators", priority: 0.8, freq: "weekly" },
+    { path: "/social-media-managers", priority: 0.8, freq: "weekly" },
+    { path: "/freelancers", priority: 0.8, freq: "weekly" },
+    { path: "/consultants", priority: 0.8, freq: "weekly" },
+    { path: "/teams", priority: 0.8, freq: "weekly" },
+    // Other
+    { path: "/affiliate", priority: 0.6, freq: "monthly" },
+    { path: "/privacy", priority: 0.5, freq: "monthly" },
+    { path: "/terms", priority: 0.5, freq: "monthly" },
+  ];
+
   return [
     {
       url: baseUrl,
@@ -19,99 +68,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 1.0,
     },
-    {
-      url: `${baseUrl}/blog`,
+    ...staticPages.map((page) => ({
+      url: `${baseUrl}${page.path}`,
       lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/privacy`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/terms`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.5,
-    },
-    // Landing Pages
-    {
-      url: `${baseUrl}/agencies`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/students`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/creators`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/social-media-managers`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/freelancers`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/consultants`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/teams`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    // Comparison / feature pages
-    {
-      url: `${baseUrl}/superpower-chatgpt-alternative`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/chatgpt-themes`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/fix-chatgpt-lag`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/chatgpt-text-highlighter`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/prompt-library`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    // Blog posts
+      changeFrequency: page.freq,
+      priority: page.priority,
+    })),
+    ...guideEntries,
+    ...compareEntries,
     ...blogEntries,
   ];
 }

@@ -12,7 +12,7 @@ export function Footer() {
       className="border-t py-20 section relative overflow-hidden bg-[#050505] border-white/10"
     >
       <FadeIn className="mx-auto max-w-6xl px-6 md:px-10 lg:px-16 relative z-10">
-        <div className="grid gap-8 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr]">
           <div className="space-y-6">
             <div className="flex items-center gap-3">
               <Image
@@ -102,55 +102,71 @@ export function Footer() {
           </div>
           <div>
             <h4 className="text-sm font-bold uppercase tracking-widest mb-6 text-cyan-500">
-              Product
+              Features
             </h4>
             <ul className="space-y-4 text-sm">
               <li>
                 <Link
                   className="text-slate-400 hover:text-cyan-400 transition-colors"
-                  href="/#features"
+                  href="/features"
                 >
-                  Features
+                  All Features
                 </Link>
               </li>
               <li>
                 <Link
                   className="text-slate-400 hover:text-cyan-400 transition-colors"
-                  href="/#showcase"
+                  href="/chatgpt-workspaces"
                 >
-                  Showcase
+                  ChatGPT Workspaces
                 </Link>
               </li>
               <li>
                 <Link
                   className="text-slate-400 hover:text-cyan-400 transition-colors"
-                  href="/#pricing"
+                  href="/organization"
                 >
-                  Pricing
+                  Folders &amp; Organization
                 </Link>
               </li>
               <li>
                 <Link
                   className="text-slate-400 hover:text-cyan-400 transition-colors"
-                  href="/#roadmap"
+                  href="/prompt-library"
                 >
-                  Roadmap
+                  Prompt Library
                 </Link>
               </li>
               <li>
                 <Link
                   className="text-slate-400 hover:text-cyan-400 transition-colors"
-                  href="/blog"
+                  href="/chatgpt-minimap"
                 >
-                  Blog
+                  Conversation Outline
                 </Link>
               </li>
               <li>
                 <Link
                   className="text-slate-400 hover:text-cyan-400 transition-colors"
-                  href="/chatgpt-themes"
+                  href="/chatgpt-conversation-branching"
                 >
-                  ChatGPT Themes (GPTheme)
+                  Tangent View
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  href="/chatgpt-image-gallery"
+                >
+                  Image Gallery
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  href="/chatgpt-text-highlighter"
+                >
+                  Text Highlighter
                 </Link>
               </li>
               <li>
@@ -164,9 +180,80 @@ export function Footer() {
               <li>
                 <Link
                   className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  href="/chatgpt-themes"
+                >
+                  ChatGPT Themes (GPTheme)
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-sm font-bold uppercase tracking-widest mb-6 text-cyan-500">
+              Resources
+            </h4>
+            <ul className="space-y-4 text-sm">
+              <li>
+                <Link
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  href="/guides"
+                >
+                  All Guides
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  href="/guides/how-to-organize-chatgpt-conversations"
+                >
+                  Organize ChatGPT Chats
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  href="/guides/how-to-save-prompts-in-chatgpt"
+                >
+                  Save ChatGPT Prompts
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  href="/guides/how-to-delete-multiple-chatgpt-conversations"
+                >
+                  Bulk Delete Chats
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  href="/compare"
+                >
+                  Compare Alternatives
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
                   href="/superpower-chatgpt-alternative"
                 >
-                  Superpower ChatGPT Alternative
+                  vs Superpower ChatGPT
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  href="/compare/gpt-master"
+                >
+                  vs GPT Master
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  href="/blog"
+                >
+                  Blog
                 </Link>
               </li>
               <li>
@@ -250,9 +337,25 @@ export function Footer() {
               <li>
                 <Link
                   className="text-slate-400 hover:text-cyan-400 transition-colors"
-                  href="/#faq"
+                  href="/faq"
                 >
                   FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  href="/#pricing"
+                >
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  href="/#roadmap"
+                >
+                  Roadmap
                 </Link>
               </li>
               <li>

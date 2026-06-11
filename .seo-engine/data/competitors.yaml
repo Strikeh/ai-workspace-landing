@@ -29,6 +29,15 @@ competitors:
     weaknesses: ""
     notes: "Not yet verified. Added from user input."
 
+  - id: "comp_gpt_master"
+    name: "GPT Master"
+    website: "https://gptmaster.app"
+    category: "ChatGPT Chrome Extension"
+    pricing_model: "freemium"
+    strengths: "4.8 stars Chrome Web Store, 4,000+ users, free no-signup install, focused/polished ChatGPT organizer. Features verified 2026-06-11: folders (nesting, color labels, drag-drop), bookmarks (star messages), timestamps, minimap, conversation notes, Side Chat (side questions in right panel), legacy dark mode, prompt library with // shortcut, prompt optimizer, bulk actions, local-first storage. Strong SEO: 11 root-level feature pages, 107 guides, 6 compare pages, 35-question FAQ, 7 persona resources, 10 language versions."
+    weaknesses: "ChatGPT-only (no Claude/Grok/Gemini), no isolated workspaces, no encryption, no image gallery, no text highlighting, no branching graph, no performance trimming, no export feature page, anonymous founder (E-E-A-T gap), Pro tier pricing not published, weak visuals (0-1 screenshots per page), no video content."
+    notes: "Verified 2026-06-11 via full site crawl (3 research agents). Compared on site at /compare/gpt-master. They compare against Superpower ChatGPT, ChatGPT Toolbox, folder extensions, ChatGPT Projects, ChatGPT Search, and manual organization — nobody compares against them yet (we now do)."
+
 feature_matrix:
   # --- Organization ---
   - feature_id: "feat_unlimited_nested_folders"

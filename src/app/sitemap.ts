@@ -40,6 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/organization", priority: 0.8, freq: "weekly" },
     { path: "/prompt-library", priority: 0.8, freq: "weekly" },
     { path: "/chatgpt-minimap", priority: 0.8, freq: "weekly" },
+    { path: "/chatgpt-side-chat", priority: 0.8, freq: "weekly" },
     { path: "/chatgpt-conversation-branching", priority: 0.8, freq: "weekly" },
     { path: "/chatgpt-image-gallery", priority: 0.8, freq: "weekly" },
     { path: "/chatgpt-text-highlighter", priority: 0.8, freq: "weekly" },

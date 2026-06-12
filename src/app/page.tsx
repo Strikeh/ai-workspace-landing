@@ -409,6 +409,9 @@ export default function Home() {
               >
                 Pricing
               </a>
+              <Link href="/guides" className="nav-link">
+                Guides
+              </Link>
               <Link href="/blog" className="nav-link">
                 Blog
               </Link>
@@ -480,6 +483,13 @@ export default function Home() {
             >
               Pricing
             </a>
+            <Link
+              href="/guides"
+              className="text-lg font-medium text-slate-300 hover:text-cyan-400 py-2 cursor-pointer"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Guides
+            </Link>
             <Link
               href="/blog"
               className="text-lg font-medium text-slate-300 hover:text-cyan-400 py-2 cursor-pointer"

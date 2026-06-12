@@ -335,6 +335,16 @@ categories:
               - slug: "reference-chat-context-feature"
             tags: ["context", "cross-reference", "new", "pro"]
             notes: "PRO feature only"
+          - id: "feat_side_chat"
+            name: "Side Chat (Ask About a Selection)"
+            description: "Select any passage in a ChatGPT answer and ask a follow-up in a side panel — keeps the selection's context, streams the answer in real time, renders markdown, and leaves the main conversation untouched."
+            status: "available"
+            doc_refs:
+              - path: "src/app/chatgpt-side-chat/page.tsx"
+                section: "Full page"
+            blog_refs: []
+            tags: ["side-chat", "context", "streaming", "new", "pro", "differentiator"]
+            notes: "PRO feature. ChatGPT-only for v1 (Claude/Grok on roadmap). Unlike other features, requires a backend round-trip to the AI model (selection + question sent to server; conversation content not stored/logged). Competitor GPT Master has a similar Side Chat — this closes that gap. Landing page: /chatgpt-side-chat."
       - id: "sub_media_management"
         name: "Media Management"
         features:

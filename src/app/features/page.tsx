@@ -13,6 +13,7 @@ import {
   GitBranch,
   Images,
   Map,
+  MessageSquare,
   StickyNote,
   Download,
   Search,
@@ -71,6 +72,14 @@ const mainFeatures = [
     title: "Smart Conversation Outline",
     description:
       "A minimap for your AI chats: jump to any message in long conversations with an interactive sidebar table of contents.",
+  },
+  {
+    href: "/chatgpt-side-chat",
+    icon: MessageSquare,
+    title: "Side Chat",
+    description:
+      "Select any passage and ask a follow-up in a side panel — with context, streamed answers, and your main thread left untouched.",
+    badge: "New",
   },
   {
     href: "/chatgpt-conversation-branching",

@@ -1,4 +1,15 @@
-﻿## 2026-06-11 00:00
+﻿## 2026-06-12 00:00
+**Action:** Added Side Chat feature page + sitewide wiring (new Pro feature shipped in the extension)
+**Files:**
+- src/app/chatgpt-side-chat/page.tsx (new — keyword-first "/chatgpt-side-chat", Quick Answer, comparison table, how-it-works, feature grid, honest data/privacy section, FAQPage+Breadcrumb JSON-LD, inline CSS mock of the panel as hero visual)
+- src/app/features/page.tsx (added Side Chat card, "New" badge, MessageSquare icon)
+- src/components/Footer.tsx (added Side Chat link to Features column)
+- src/app/sitemap.ts (added /chatgpt-side-chat)
+- .seo-engine/data/features.yaml (registered feat_side_chat under cat_advanced/sub_conversation_tools)
+**Summary:** Side Chat = select a passage in ChatGPT → ask a follow-up in a side panel (context-aware, streamed, markdown), main thread untouched. Pro feature, ChatGPT-only v1. Page is transparent that this is the one feature needing a backend round-trip (selection+question sent to server, content not stored) vs the otherwise local-first product. Closes the gap with competitor GPT Master's Side Chat. Build passes; route prerendered static.
+**Triggered by:** user
+
+## 2026-06-11 00:00
 **Action:** Competitor analysis of GPT Master (gptmaster.app) + major site expansion: features hub, 4 feature pages, guides section (10), compare section (3), FAQ page
 **Files:**
 - .seo-engine/data/competitors.yaml (added comp_gpt_master, fully verified 2026-06-11)

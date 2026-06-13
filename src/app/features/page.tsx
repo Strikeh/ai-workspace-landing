@@ -22,6 +22,8 @@ import {
   Bell,
   Lock,
   Sparkles,
+  Bookmark,
+  Lightbulb,
 } from "lucide-react";
 
 const installUrl =
@@ -79,6 +81,30 @@ const mainFeatures = [
     title: "Side Chat",
     description:
       "Select any passage and ask a follow-up in a side panel — with context, streamed answers, and your main thread left untouched.",
+    badge: "New",
+  },
+  {
+    href: "/chatgpt-message-notes",
+    icon: StickyNote,
+    title: "Message Notes",
+    description:
+      "Attach a note to any specific message and jump back to it from the Notes sidebar (Current Chat / All Notes).",
+    badge: "New",
+  },
+  {
+    href: "/chatgpt-bookmarks",
+    icon: Bookmark,
+    title: "Bookmarks",
+    description:
+      "Bookmark important messages with one click and jump straight back to them from the Bookmarks sidebar.",
+    badge: "New",
+  },
+  {
+    href: "/chatgpt-follow-up-suggestions",
+    icon: Lightbulb,
+    title: "Follow-up Suggestions",
+    description:
+      "Suggested next prompts under the latest reply — click to send. Heuristic (free) or AI-powered Enhanced (Pro).",
     badge: "New",
   },
   {

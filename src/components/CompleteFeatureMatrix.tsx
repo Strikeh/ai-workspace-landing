@@ -98,8 +98,10 @@ export default function CompleteFeatureMatrix() {
       blobColor: "bg-pink-500/10",
       features: [
         "Tangent View ✨",
+        "Message Notes ✨",
+        "Bookmarks ✨",
+        "Follow-up Suggestions ✨",
         "Image Gallery",
-        "Notes System",
         "Export (JSON/TXT/MD/PDF)",
         "Reference Chats",
         "Conversation Preview",

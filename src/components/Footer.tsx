@@ -156,6 +156,30 @@ export function Footer() {
               <li>
                 <Link
                   className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  href="/chatgpt-message-notes"
+                >
+                  Message Notes
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  href="/chatgpt-bookmarks"
+                >
+                  Bookmarks
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  href="/chatgpt-follow-up-suggestions"
+                >
+                  Follow-up Suggestions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
                   href="/chatgpt-conversation-branching"
                 >
                   Tangent View

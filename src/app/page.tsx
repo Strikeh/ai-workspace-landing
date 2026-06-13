@@ -1704,7 +1704,7 @@ export default function Home() {
                 },
                 {
                   q: "What's the difference between Free and Pro?",
-                  a: "Free includes limited prompts and notes, 1 vault, and no encryption. Pro ($9.99/month billed annually or $11.99/month billed monthly) offers unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, Smart Conversation Outline, unlimited folders & categories, pinned messages, and multi-platform support.",
+                  a: "Free includes limited prompts and notes, 1 vault, message notes & bookmarks, heuristic follow-up suggestions, and no encryption. Pro ($9.99/month billed annually or $11.99/month billed monthly) offers unlimited prompts, vaults, and notes, AI-powered (Enhanced) follow-up suggestions, encrypted storage, full Image Gallery, Smart Conversation Outline, unlimited folders & categories, pinned messages, and multi-platform support.",
                 },
                 {
                   q: "Can I install the extension on Microsoft Edge or Firefox?",
@@ -1846,7 +1846,8 @@ export default function Home() {
                   {[
                     "Limited prompts & folders",
                     "1 Custom Workspace",
-                    "Basic Notes Manager",
+                    "Message notes & bookmarks (limited)",
+                    "Heuristic follow-up suggestions",
                     "Highlight text in chats",
                     "Trim long chat threads",
                     "Export chats (PDF, Text, Markdown, JSON)",
@@ -1919,6 +1920,14 @@ export default function Home() {
                     },
                     {
                       text: "Auto-organize Custom GPT conversations into workspace folders",
+                      badge: "NEW",
+                    },
+                    {
+                      text: "AI Follow-up Suggestions — context-aware next prompts",
+                      badge: "NEW",
+                    },
+                    {
+                      text: "Message Notes & Bookmarks — save & jump back to any message",
                       badge: "NEW",
                     },
                     "Image Gallery - Search, View & Download All Images",

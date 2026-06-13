@@ -29,6 +29,8 @@ import {
   Sparkles,
   ExternalLink,
   GitBranch,
+  Bookmark,
+  Lightbulb,
 } from "lucide-react";
 
 const CheckIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -225,9 +227,27 @@ const featureData: Record<Tab, { features: Feature[] }> = {
       },
       {
         icon: FileText,
-        title: "Notes System",
-        description: "Add notes to any conversation",
-        image: "/images/carousel/BrandBird 2025-11-20 19.48.31.png",
+        title: "Message Notes",
+        description:
+          "Attach a note to any specific message — prompt or reply — and jump back to it from the Notes sidebar (Current Chat / All Notes)",
+        link: "/chatgpt-message-notes",
+        isNew: true,
+      },
+      {
+        icon: Bookmark,
+        title: "Bookmarks",
+        description:
+          "Bookmark important messages with one click and jump straight back to them from the Bookmarks sidebar",
+        link: "/chatgpt-bookmarks",
+        isNew: true,
+      },
+      {
+        icon: Lightbulb,
+        title: "Follow-up Suggestions",
+        description:
+          "Smart suggested next prompts under the latest reply — click to send instantly. Heuristic (free) or AI-powered Enhanced (Pro)",
+        link: "/chatgpt-follow-up-suggestions",
+        isNew: true,
       },
       {
         icon: Download,

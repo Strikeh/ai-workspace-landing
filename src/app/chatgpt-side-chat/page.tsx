@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
+import { DemoVideoLightbox } from "@/components/DemoVideoLightbox";
+import ImageLightbox from "@/components/ImageLightbox";
 import {
   ArrowRight,
   MessageSquare,
@@ -163,52 +165,47 @@ export default function SideChatPage() {
       {/* Hero */}
       <section className="relative pt-16 pb-20 lg:pt-24 overflow-hidden">
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-bold uppercase tracking-widest mb-8">
-                <MessageSquare className="w-3 h-3" />
-                New · Pro Feature
-              </div>
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-cyan-100 to-cyan-400">
-                Ask a side question without derailing your chat
-              </h1>
-              <p className="text-lg leading-8 text-slate-400 mb-8">
-                Select any passage in a ChatGPT answer and ask a follow-up in a
-                side panel — a definition, a fact-check, a simpler explanation.
-                You keep the context, your main conversation stays untouched.
-              </p>
-              <div className="flex flex-col sm:flex-row items-start gap-4 mb-4">
-                <a
-                  href={installUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-3 rounded-xl px-8 py-4 text-lg font-bold text-white transition-all hover:scale-105 shadow-lg shadow-cyan-500/25 bg-gradient-to-r from-cyan-500 to-blue-600"
-                >
-                  Add to Chrome – Free
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </div>
-              <p className="text-xs text-slate-500">
-                4.5★ on Chrome Web Store · Pro feature · Updated June 2026
-              </p>
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-bold uppercase tracking-widest mb-8">
+              <MessageSquare className="w-3 h-3" />
+              New · Pro Feature
             </div>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-cyan-100 to-cyan-400">
+              Ask a side question without derailing your chat
+            </h1>
+            <p className="text-lg leading-8 text-slate-400 mb-8 max-w-2xl mx-auto">
+              Select any passage in a ChatGPT answer and ask a follow-up in a
+              side panel — a definition, a fact-check, a simpler explanation.
+              You keep the context, your main conversation stays untouched.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
+              <a
+                href={installUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-3 rounded-xl px-8 py-4 text-lg font-bold text-white transition-all hover:scale-105 shadow-lg shadow-cyan-500/25 bg-gradient-to-r from-cyan-500 to-blue-600"
+              >
+                Add to Chrome – Free
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+            <p className="text-xs text-slate-500">
+              4.5★ on Chrome Web Store · Pro feature · Updated June 2026
+            </p>
+          </div>
 
-            {/* Hero visual — live demo video */}
+          {/* Hero visual — live demo video (click to expand) */}
+          <div className="relative mt-14 max-w-5xl mx-auto">
+            <div className="absolute -inset-4 bg-cyan-500/20 rounded-full blur-3xl opacity-20" />
             <div className="relative">
-              <div className="absolute -inset-4 bg-cyan-500/20 rounded-full blur-3xl opacity-20" />
-              <div className="relative rounded-2xl border border-white/10 bg-[#0B1120] shadow-2xl overflow-hidden">
-                <video
-                  src="/videos/demo-side-chat.mp4"
-                  poster="/videos/demo-side-chat-poster.jpg"
-                  preload="metadata"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  aria-label="Side Chat demo: select a passage in ChatGPT and ask a follow-up in the side panel"
-                  className="w-full h-auto block"
-                />
-              </div>
+              <DemoVideoLightbox
+                src="/videos/demo-side-chat.mp4"
+                poster="/videos/demo-side-chat-poster.jpg"
+                label="Side Chat demo: select a passage in ChatGPT and ask a follow-up in the side panel"
+              />
+              <p className="mt-3 text-center text-xs text-slate-500">
+                Click the video to expand
+              </p>
             </div>
           </div>
 
@@ -331,8 +328,52 @@ export default function SideChatPage() {
         </div>
       </section>
 
-      {/* Feature highlights */}
+      {/* Screenshots */}
       <section className="py-20 bg-slate-900/30">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-white mb-3 text-center">
+            See it in action
+          </h2>
+          <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
+            Highlight a passage, click the button, and your answer appears in
+            the panel — your main thread never moves. Click a screenshot to
+            enlarge it.
+          </p>
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            <figure className="m-0">
+              <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0B1120]">
+                <Image
+                  src="/images/demo-sidechat.png"
+                  alt="Selecting text in a ChatGPT answer shows the Side Chat button"
+                  width={2424}
+                  height={1948}
+                  className="w-full h-auto zoomable-image cursor-zoom-in"
+                />
+              </div>
+              <figcaption className="mt-3 text-center text-sm text-slate-500">
+                1. Select any passage → the Side Chat button appears
+              </figcaption>
+            </figure>
+            <figure className="m-0">
+              <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0B1120]">
+                <Image
+                  src="/images/demo-sidechat2.png"
+                  alt="The Side Chat panel answering a follow-up question about the selected passage"
+                  width={955}
+                  height={601}
+                  className="w-full h-auto zoomable-image cursor-zoom-in"
+                />
+              </div>
+              <figcaption className="mt-3 text-center text-sm text-slate-500">
+                2. Ask a follow-up → the answer streams in the side panel
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      {/* Feature highlights */}
+      <section className="py-20">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">
             Built to keep you in flow
@@ -511,6 +552,7 @@ export default function SideChatPage() {
       </section>
 
       <Footer />
+      <ImageLightbox />
     </main>
   );
 }

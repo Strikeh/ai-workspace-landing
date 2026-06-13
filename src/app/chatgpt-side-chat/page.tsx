@@ -11,7 +11,6 @@ import {
   Brain,
   EyeOff,
   Shield,
-  Send,
   CheckCircle2,
   XCircle,
 } from "lucide-react";
@@ -194,52 +193,21 @@ export default function SideChatPage() {
               </p>
             </div>
 
-            {/* Hero visual — inline mock of the Side Chat panel */}
+            {/* Hero visual — live demo video */}
             <div className="relative">
               <div className="absolute -inset-4 bg-cyan-500/20 rounded-full blur-3xl opacity-20" />
               <div className="relative rounded-2xl border border-white/10 bg-[#0B1120] shadow-2xl overflow-hidden">
-                {/* Panel header */}
-                <div className="flex items-center gap-3 p-4 border-b border-white/10 bg-slate-900/60">
-                  <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
-                    <MessageSquare className="w-4 h-4 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-sm font-bold text-white">Side Chat</div>
-                    <div className="text-[10px] text-slate-500">
-                      Ask without derailing your main chat
-                    </div>
-                  </div>
-                  <span className="text-[9px] font-bold tracking-widest text-cyan-400 border border-cyan-500/40 bg-cyan-500/10 rounded-full px-2 py-0.5">
-                    PRO
-                  </span>
-                </div>
-                {/* Panel body */}
-                <div className="p-4 space-y-3">
-                  <div className="border-l-2 border-cyan-400 bg-cyan-500/5 rounded-lg p-3 text-xs text-slate-400 leading-relaxed">
-                    “Compounding returns mean your interest earns interest over
-                    time, accelerating growth the longer you stay invested.”
-                  </div>
-                  <div className="flex justify-end">
-                    <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs rounded-2xl rounded-br-sm px-3 py-2 max-w-[80%]">
-                      Explain this like I&apos;m 12
-                    </div>
-                  </div>
-                  <div className="bg-slate-800/70 text-slate-200 text-xs rounded-2xl rounded-bl-sm px-3 py-2 max-w-[88%] leading-relaxed">
-                    Imagine a snowball rolling downhill. It picks up more snow,
-                    gets bigger, and then picks up even <strong>more</strong>{" "}
-                    because it&apos;s already big. Your money does the same —
-                    the longer it rolls, the faster it grows.
-                  </div>
-                </div>
-                {/* Panel input */}
-                <div className="p-3 border-t border-white/10 bg-slate-900/60 flex items-center gap-2">
-                  <div className="flex-1 text-[11px] text-slate-500 bg-slate-800/60 rounded-lg px-3 py-2 border border-white/5">
-                    Ask about the selection…
-                  </div>
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center">
-                    <Send className="w-4 h-4 text-white" />
-                  </div>
-                </div>
+                <video
+                  src="/videos/demo-side-chat.mp4"
+                  poster="/videos/demo-side-chat-poster.jpg"
+                  preload="metadata"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  aria-label="Side Chat demo: select a passage in ChatGPT and ask a follow-up in the side panel"
+                  className="w-full h-auto block"
+                />
               </div>
             </div>
           </div>

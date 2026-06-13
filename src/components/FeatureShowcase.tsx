@@ -200,6 +200,15 @@ const featureData: Record<Tab, { features: Feature[] }> = {
   advanced: {
     features: [
       {
+        icon: MessageSquare,
+        title: "Side Chat",
+        description:
+          "Highlight any passage in a ChatGPT answer and ask a follow-up in a side panel — keeps the context, streams the reply, and leaves your main conversation untouched",
+        video: "/videos/demo-side-chat.mp4",
+        link: "/chatgpt-side-chat",
+        isNew: true,
+      },
+      {
         icon: GitBranch,
         title: "Tangent View",
         description:

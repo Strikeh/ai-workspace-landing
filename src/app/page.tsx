@@ -741,6 +741,45 @@ export default function Home() {
                     <span>100% local storage</span>
                   </div>
                 </div>
+
+                {/* Community links */}
+                <div className="flex flex-wrap items-center gap-3 text-sm text-slate-500">
+                  <span className="text-slate-400">Communities:</span>
+                  <a
+                    href="https://www.reddit.com/r/getAIWorkspace/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-white/5 hover:bg-orange-500/10 border border-white/10 hover:border-orange-500/40 transition-all hover:scale-105"
+                    title="Join our Reddit community"
+                  >
+                    <svg
+                      className="w-4 h-4 text-orange-500"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z" />
+                    </svg>
+                    <span className="text-xs text-slate-300">Reddit</span>
+                  </a>
+                  <a
+                    href="https://discord.gg/adx5DTrQEp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-white/5 hover:bg-indigo-500/10 border border-white/10 hover:border-indigo-500/40 transition-all hover:scale-105"
+                    title="Join our Discord community"
+                  >
+                    <svg
+                      className="w-4 h-4 text-indigo-400"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z" />
+                    </svg>
+                    <span className="text-xs text-slate-300">Discord</span>
+                  </a>
+                </div>
               </SlideUp>
 
               {/* Hero Video Section - Floating Glass Card */}
@@ -2092,6 +2131,109 @@ export default function Home() {
           </ScaleUp>
         </section>
 
+        {/* Community Section - Reddit */}
+        <section
+          id="community"
+          className="relative border-t py-32 overflow-hidden"
+          style={{
+            borderColor: "var(--color-border)",
+            background: "var(--color-bg-secondary)",
+          }}
+        >
+          {/* Reddit-orange background glows */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full opacity-10 blur-[120px] bg-orange-500" />
+            <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full opacity-10 blur-[100px] bg-red-500" />
+          </div>
+
+          <div className="relative z-10 mx-auto max-w-5xl px-6 md:px-10 lg:px-16">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-xs font-bold uppercase tracking-widest mb-6">
+                <RedditIcon className="w-3.5 h-3.5" />
+                Community
+              </div>
+              <h2
+                className="text-4xl md:text-5xl font-bold tracking-tight mb-6"
+                style={{ color: "var(--color-text)" }}
+              >
+                Join the AI Workspace{" "}
+                <span
+                  style={{
+                    background:
+                      "linear-gradient(135deg, #ff8a3d 0%, #ff4500 100%)",
+                    WebkitBackgroundClip: "text",
+                    backgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  community on Reddit
+                </span>
+              </h2>
+              <p className="text-xl leading-relaxed text-slate-400">
+                Get feature announcements first, early access to betas, tips for
+                ChatGPT, Claude, Gemini &amp; Grok — and help shape the roadmap
+                with your feedback.
+              </p>
+            </div>
+
+            {/* Community card */}
+            <FadeIn className="relative max-w-3xl mx-auto">
+              <div className="rounded-3xl border border-orange-500/20 bg-slate-900/60 backdrop-blur-md p-8 md:p-10 shadow-[0_0_40px_-12px_rgba(255,69,0,0.25)]">
+                <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
+                  {/* Reddit avatar */}
+                  <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 shadow-lg shadow-orange-500/30 mx-auto md:mx-0">
+                    <RedditIcon className="h-9 w-9 text-white" />
+                  </div>
+
+                  <div className="flex-1 text-center md:text-left">
+                    <div className="text-2xl font-bold text-white">
+                      r/getAIWorkspace
+                    </div>
+                    <div className="text-sm text-slate-400 mb-4">
+                      The official AI Workspace community
+                    </div>
+                    <ul className="grid sm:grid-cols-2 gap-3 text-left">
+                      {[
+                        "Feature announcements & changelogs",
+                        "Early access to betas",
+                        "Workflow tips & tricks",
+                        "Request features & report bugs",
+                      ].map((item, i) => (
+                        <li
+                          key={i}
+                          className="flex items-center gap-2.5 text-sm text-slate-300"
+                        >
+                          <CheckIcon className="h-4 w-4 text-orange-400 flex-shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="mt-8 flex flex-col sm:flex-row items-center gap-4 border-t border-white/5 pt-8">
+                  <a
+                    href="https://www.reddit.com/r/getAIWorkspace/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-xl px-8 py-4 text-lg font-bold text-white transition-all hover:scale-[1.02] shadow-lg shadow-orange-500/25"
+                    style={{
+                      background:
+                        "linear-gradient(135deg, #ff5722 0%, #ff4500 100%)",
+                    }}
+                  >
+                    <RedditIcon className="h-6 w-6" />
+                    Join r/getAIWorkspace
+                  </a>
+                  <p className="text-sm text-slate-500 text-center sm:text-left">
+                    Free to join · New posts every week
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </section>
+
         {/* Contact Section */}
         <section
           id="contact"
@@ -2426,6 +2568,14 @@ function SparkIcon(props: SVGProps<SVGSVGElement>) {
       {...props}
     >
       <path d="M12 4l1.2 3.6L17 9l-3.8 1.4L12 14l-1.2-3.6L7 9l3.8-1.4z" />
+    </svg>
+  );
+}
+
+function RedditIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z" />
     </svg>
   );
 }

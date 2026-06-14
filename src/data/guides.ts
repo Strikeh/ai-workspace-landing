@@ -267,9 +267,9 @@ export const guides: Guide[] = [
     ],
     relatedFeature: { label: "Prompt Library", href: "/prompt-library" },
     relatedGuides: [
+      "how-to-optimize-chatgpt-prompts",
       "how-to-organize-chatgpt-conversations",
       "how-to-navigate-long-chatgpt-conversations",
-      "how-to-organize-claude-conversations",
     ],
   },
 
@@ -651,6 +651,70 @@ export const guides: Guide[] = [
       "how-to-organize-chatgpt-for-multiple-clients",
       "how-to-search-chatgpt-conversations",
       "how-to-delete-multiple-chatgpt-conversations",
+    ],
+  },
+
+  {
+    slug: "how-to-optimize-chatgpt-prompts",
+    title: "How to Write Better ChatGPT Prompts (Optimize Any Draft)",
+    description:
+      "Vague prompts get vague answers. Learn the four parts of a strong prompt, then optimize any draft in one click with AI Workspace Pro's Prompt Optimizer.",
+    category: "Prompts",
+    readTime: "5 min read",
+    updated: "June 14, 2026",
+    quickAnswer:
+      "A strong ChatGPT prompt names a role, gives context, states the format you want, and adds a constraint or two. You can apply that by hand, or click Optimize in the AI Workspace Pro composer to rewrite any draft into a clearer, more specific prompt — then compare original vs optimized side by side and use the better one.",
+    intro: `<p class="text-slate-300 mb-4">Most prompts are one short line: "write a blog post about productivity". ChatGPT answers exactly what you asked — generic in, generic out. The gap between a mediocre answer and a great one is almost never the model; it's how much the prompt actually told it to do.</p>
+<p class="text-slate-300 mb-4">There are two ways to close that gap: learn the pattern and apply it yourself, or let the Prompt Optimizer apply it for you. Here's both.</p>`,
+    nativeFirst: `<p class="text-slate-300 mb-4">A strong prompt usually has four parts. Add them by hand and most prompts improve immediately:</p>
+<ul class="text-slate-300 mb-4 space-y-2 list-disc pl-6">
+<li><strong class="text-white">Role.</strong> Tell ChatGPT who to be: "Act as a senior copywriter." It sets vocabulary, depth and tone.</li>
+<li><strong class="text-white">Context.</strong> Who's it for and why? "for remote knowledge workers struggling with afternoon focus."</li>
+<li><strong class="text-white">Format.</strong> Say what you want back: length, structure, sections, bullet points, a table.</li>
+<li><strong class="text-white">Constraints.</strong> Add the guardrails: tone, things to avoid, a word count, examples to include.</li>
+</ul>
+<p class="text-slate-300 mb-4">Doing this every time is the catch — it's real work, so in practice most prompts stay short. That's exactly the friction the Prompt Optimizer removes.</p>`,
+    steps: [
+      {
+        title: "Install AI Workspace Pro",
+        body: `<p class="text-slate-300 mb-4">Add <a href="${STORE_URL}" class="text-cyan-400 hover:text-cyan-300" target="_blank" rel="noopener noreferrer">AI Workspace Pro</a> on Chrome, Edge or Firefox. It holds a 4.5★ Chrome Web Store rating. Open chatgpt.com and you'll see an <strong class="text-white">Optimize</strong> button on the composer.</p>`,
+      },
+      {
+        title: "Type a rough draft and click Optimize",
+        body: `<p class="text-slate-300 mb-4">Don't overthink the first version — that's the point. Type your prompt the lazy way ("write a blog post about productivity") and click Optimize. Your draft opens in the optimizer, ready to improve.</p>`,
+      },
+      {
+        title: "Compare original vs optimized, then use it",
+        body: `<p class="text-slate-300 mb-4">The optimizer shows your original next to an AI-rewritten version that adds the role, context, format and constraints for you. Re-optimize for a different angle if you like, then click <strong class="text-white">Use this version</strong> to drop it into the composer. If your prompt was already sharp, it tells you so instead of changing it — and that doesn't count against your weekly limit. Full details on the <a href="/chatgpt-prompt-optimizer" class="text-cyan-400 hover:text-cyan-300">Prompt Optimizer feature page</a>.</p>`,
+      },
+      {
+        title: "Save the winners to your Prompt Library",
+        body: `<p class="text-slate-300 mb-4">When an optimized prompt works well, save it so you never rewrite it again. The optimizer preserves <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-cyan-300">{{variables}}</span>, so you can turn a great one-off into a reusable template. See <a href="/guides/how-to-save-prompts-in-chatgpt" class="text-cyan-400 hover:text-cyan-300">how to save prompts in ChatGPT</a> for the workflow.</p>`,
+      },
+    ],
+    faqs: [
+      {
+        q: "Is the Prompt Optimizer free?",
+        a: "AI Workspace ships a free, on-device quick-optimize for light touch-ups. The full Prompt Optimizer — a stronger AI model, side-by-side comparison and re-optimize — is a Pro feature with a generous weekly fair-use limit. 'Already clear' results never count against that limit.",
+      },
+      {
+        q: "Will it keep my variables and placeholders?",
+        a: "Yes. {{variables}}, [placeholders] and code blocks are preserved exactly, so optimized prompts still work as reusable Prompt Library templates.",
+      },
+      {
+        q: "Does optimizing change my answer's language?",
+        a: "No. Write in any language and the optimized prompt comes back in the same language, ready to send.",
+      },
+      {
+        q: "What's the fastest way to improve a prompt without the tool?",
+        a: "Add a role and a format. 'Act as a [role]. Give me [format: a 5-step list / a table / 200 words].' Those two additions alone fix most vague prompts — the optimizer just does it (plus context and constraints) automatically.",
+      },
+    ],
+    relatedFeature: { label: "Prompt Optimizer", href: "/chatgpt-prompt-optimizer" },
+    relatedGuides: [
+      "how-to-save-prompts-in-chatgpt",
+      "how-to-organize-chatgpt-conversations",
+      "how-to-search-chatgpt-conversations",
     ],
   },
 ];

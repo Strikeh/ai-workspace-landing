@@ -24,6 +24,7 @@ import {
   Sparkles,
   Bookmark,
   Lightbulb,
+  Wand2,
 } from "lucide-react";
 
 const installUrl =
@@ -67,6 +68,14 @@ const mainFeatures = [
     title: "Prompt Library",
     description:
       "Save prompts with tags and folders, insert them instantly with the / shortcut, and use {{variables}} for dynamic templates.",
+  },
+  {
+    href: "/chatgpt-prompt-optimizer",
+    icon: Wand2,
+    title: "Prompt Optimizer",
+    description:
+      "Rewrite any draft into a sharper, more effective prompt. Compare original vs optimized side by side, then use it. AI-powered (Pro).",
+    badge: "New",
   },
   {
     href: "/chatgpt-minimap",

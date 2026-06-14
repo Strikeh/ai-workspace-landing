@@ -27,18 +27,18 @@ export const comparePages: ComparePage[] = [
     description:
       "GPT Master (4.8★) vs AI Workspace Pro (4.5★) compared feature by feature: workspaces, prompts, Side Chat, encryption, and multi-platform support.",
     published: "June 11, 2026",
-    updated: "June 11, 2026",
-    verified: "June 11, 2026",
+    updated: "June 14, 2026",
+    verified: "June 14, 2026",
     quickAnswer:
-      "GPT Master is a polished, highly rated (4.8★) ChatGPT-only extension with two features we genuinely don't have: Side Chat and a prompt optimizer. AI Workspace Pro covers more ground — isolated workspaces, Claude and Grok support, AES-256 encrypted vaults, an image gallery, and highlighting. If you live entirely inside ChatGPT, GPT Master is a strong pick; if you work across platforms or clients, AI Workspace Pro fits better.",
-    intro: `<p class="text-slate-300 mb-4">Let's start with credit where it's due: <a href="https://gptmaster.app" class="text-cyan-400 hover:text-cyan-300">GPT Master</a> is one of the better ChatGPT extensions out there. It holds a <strong class="text-white">4.8★ rating on the Chrome Web Store</strong> with 4,000+ users (higher than our own 4.5★, and we're not going to pretend otherwise), it's free to install with no signup, and it ships a couple of genuinely clever features — Side Chat and a prompt optimizer — that AI Workspace Pro doesn't have.</p><p class="text-slate-300 mb-4">So why compare at all? Because the two tools solve different problems. GPT Master is a focused toolkit for making one ChatGPT account nicer to use. AI Workspace Pro is built around <a href="/chatgpt-workspaces" class="text-cyan-400 hover:text-cyan-300">isolated workspaces</a> that separate clients and projects, and it works across ChatGPT, Claude, and Grok. Everything below was verified by our team on gptmaster.app as of June 2026 — check their site for the latest.</p>`,
+      "GPT Master is a polished, highly rated (4.8★) ChatGPT-only extension. AI Workspace Pro now matches its two standout features — Side Chat and a Prompt Optimizer — and covers far more ground: isolated workspaces, Claude and Grok support, AES-256 encrypted vaults, an image gallery, and highlighting. If you live entirely inside ChatGPT, GPT Master is a strong, well-polished pick; if you work across platforms or clients, AI Workspace Pro fits better.",
+    intro: `<p class="text-slate-300 mb-4">Let's start with credit where it's due: <a href="https://gptmaster.app" class="text-cyan-400 hover:text-cyan-300">GPT Master</a> is one of the better ChatGPT extensions out there. It holds a <strong class="text-white">4.8★ rating on the Chrome Web Store</strong> with 4,000+ users (higher than our own 4.5★, and we're not going to pretend otherwise), it's free to install with no signup, and it pioneered a couple of genuinely clever features — Side Chat and a prompt optimizer — that AI Workspace Pro has since matched with its own versions.</p><p class="text-slate-300 mb-4">So why compare at all? Because the two tools solve different problems. GPT Master is a focused toolkit for making one ChatGPT account nicer to use. AI Workspace Pro is built around <a href="/chatgpt-workspaces" class="text-cyan-400 hover:text-cyan-300">isolated workspaces</a> that separate clients and projects, and it works across ChatGPT, Claude, and Grok. Everything below was verified by our team on gptmaster.app as of June 2026 — check their site for the latest.</p>`,
     tableRows: [
       { feature: "AI platforms", us: "ChatGPT, Claude & Grok", them: "ChatGPT only" },
       { feature: "Isolated workspaces", us: "Unlimited, full context isolation", them: "Not available" },
       { feature: "Folders", us: "Unlimited nesting, drag & drop, colors", them: "Nesting, color labels, drag & drop" },
       { feature: "Prompt library", us: "“/” quick access, {{variables}}, tags", them: "“//” shortcut, prompt optimizer" },
-      { feature: "Side Chat (side questions in a panel)", us: "Not available", them: "Yes" },
-      { feature: "Prompt optimizer", us: "Not available", them: "Yes — rewrites weak prompts" },
+      { feature: "Side Chat (side questions in a panel)", us: "Yes — ask in a side panel", them: "Yes" },
+      { feature: "Prompt optimizer", us: "Yes — rewrites drafts, side-by-side compare", them: "Yes — rewrites weak prompts" },
       { feature: "Text highlighting", us: "7 colors, persists across reloads", them: "Not available" },
       { feature: "Image gallery & bulk download", us: "Full history + batch download", them: "Not available" },
       { feature: "Conversation branching graph", us: "Tangent View (interactive graph)", them: "Minimap (thread overview/jump)" },
@@ -48,19 +48,23 @@ export const comparePages: ComparePage[] = [
     ],
     theirStrengths: [
       {
-        title: "Side Chat is genuinely useful — and we don't have it",
-        body: `<p class="text-slate-300 mb-4">GPT Master's <strong class="text-white">Side Chat</strong> lets you ask a quick side question in a right-hand panel without leaving or polluting your main thread. If you've ever derailed a long conversation with a one-off question, you know exactly why this matters. It's a smart piece of design, and as of June 2026 there's no equivalent in AI Workspace Pro.</p>`,
+        title: "A higher rating and a bigger user base",
+        body: `<p class="text-slate-300 mb-4">Credit where it's due: GPT Master holds a <strong class="text-white">4.8★ Chrome Web Store rating across 4,000+ users</strong>, higher than our 4.5★. It's free to install with no signup and a strong guide library makes onboarding easy. If social proof is how you pick an extension, it's the more established name.</p>`,
       },
       {
-        title: "The prompt optimizer rewrites weak prompts for you",
-        body: `<p class="text-slate-300 mb-4">Both tools have a prompt library, but GPT Master goes a step further with a <strong class="text-white">prompt optimizer</strong> that rewrites vague prompts into stronger ones before you send them. Our <a href="/prompt-library" class="text-cyan-400 hover:text-cyan-300">prompt library</a> focuses on saving and reusing prompts with {{variables}}; it won't improve a badly written one. Point to GPT Master here.</p>`,
+        title: "Deep ChatGPT-native polish",
+        body: `<p class="text-slate-300 mb-4">GPT Master does one platform — ChatGPT — and does it well. That focus shows in the polish: folders with color labels, message bookmarks, timestamps, a minimap for long threads, conversation notes, and bulk delete/archive all work exactly the way you'd expect. It feels native.</p>`,
       },
       {
-        title: "Tight focus, polish, and a 4.8★ rating",
-        body: `<p class="text-slate-300 mb-4">GPT Master does one platform — ChatGPT — and does it well. That focus shows in the polish: folders with color labels, message bookmarks, timestamps, a minimap for long threads, conversation notes, and bulk delete/archive all work the way you'd expect. Its <strong class="text-white">4.8★ Chrome Web Store rating</strong> across 4,000+ users is higher than our 4.5★, and a strong guide library makes onboarding easy.</p>`,
+        title: "It pioneered Side Chat and the prompt optimizer",
+        body: `<p class="text-slate-300 mb-4">Two of GPT Master's cleverest ideas — <strong class="text-white">Side Chat</strong> (ask a side question without derailing your thread) and a <strong class="text-white">prompt optimizer</strong> (rewrite a weak prompt before sending) — were ahead of the curve. AI Workspace Pro has since shipped its own <a href="/chatgpt-side-chat" class="text-cyan-400 hover:text-cyan-300">Side Chat</a> and <a href="/chatgpt-prompt-optimizer" class="text-cyan-400 hover:text-cyan-300">Prompt Optimizer</a>, so it's no longer a reason to switch — but GPT Master got there first, and that's worth acknowledging.</p>`,
       },
     ],
     ourStrengths: [
+      {
+        title: "We've matched GPT Master's signature features",
+        body: `<p class="text-slate-300 mb-4">The two features that used to set GPT Master apart are now in AI Workspace Pro too: <a href="/chatgpt-side-chat" class="text-cyan-400 hover:text-cyan-300">Side Chat</a> for asking a side question in a panel without touching your main thread, and a <a href="/chatgpt-prompt-optimizer" class="text-cyan-400 hover:text-cyan-300">Prompt Optimizer</a> that rewrites your draft and shows the original next to the optimized version before you send it. So the comparison is no longer "they have two things we don't" — it's everything below, on top of feature parity.</p>`,
+      },
       {
         title: "Isolated workspaces, not just folders",
         body: `<p class="text-slate-300 mb-4">Folders organize one account. <strong class="text-white">Workspaces isolate contexts</strong>. AI Workspace Pro lets you create unlimited separate workspaces — one per client, one per project, one personal — each with its own folders, tags, and prompts. GPT Master offers good folders with nesting and colors, but everything still lives in a single shared space. For freelancers and consultants juggling clients, that's the structural difference. See how it works on our <a href="/organization" class="text-cyan-400 hover:text-cyan-300">organization page</a>.</p>`,
@@ -85,9 +89,9 @@ export const comparePages: ComparePage[] = [
     verdict: {
       chooseThem: [
         "You only use ChatGPT and want a focused, polished toolkit",
-        "Side Chat (side questions without leaving the thread) would change how you work",
-        "You want a prompt optimizer that rewrites weak prompts automatically",
-        "You value the highest-rated option — 4.8★ vs our 4.5★",
+        "You value the highest-rated, most established option — 4.8★ vs our 4.5★",
+        "Its ChatGPT-native bookmarks, timestamps and minimap fit how you work",
+        "You don't need Claude/Grok support, workspaces or encrypted vaults",
       ],
       chooseUs: [
         "You work across ChatGPT, Claude, and Grok and want one system",
@@ -112,14 +116,14 @@ export const comparePages: ComparePage[] = [
       },
       {
         q: "Does AI Workspace Pro have Side Chat or a prompt optimizer like GPT Master?",
-        a: "No, honestly. Side Chat and the prompt optimizer are GPT Master features without an AI Workspace Pro equivalent as of June 2026. We offer different advanced tools instead: Tangent View branching graphs, 7-color highlighting, an image gallery, and Smart Thread Trimming.",
+        a: "Yes — both. As of June 2026 AI Workspace Pro includes Side Chat (select text and ask in a side panel, leaving your main thread untouched) and a Prompt Optimizer (rewrites your draft and shows the original next to the optimized version before you send it). On top of that we add Tangent View branching graphs, 7-color highlighting, an image gallery, and Smart Thread Trimming.",
       },
       {
         q: "Are GPT Master and AI Workspace Pro both private?",
         a: "Both take a local-first approach — GPT Master claims local browser storage, and AI Workspace Pro stores everything locally with zero telemetry. AI Workspace Pro additionally offers optional AES-256 encrypted vaults for workspaces containing sensitive client data.",
       },
     ],
-    bottomLine: `<p class="text-slate-300 mb-4">This one isn't a knockout either way. <strong class="text-white">GPT Master earns its 4.8★</strong> — if ChatGPT is your only AI tool and Side Chat or the prompt optimizer speaks to you, install it and you'll be happy. AI Workspace Pro makes sense the moment your work outgrows one account: multiple clients, multiple platforms, sensitive material, or threads long enough to need a 73% memory cut. Plenty of people could justify either. If our side of the table looks like your workflow, <a href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg" class="text-cyan-400 hover:text-cyan-300">try AI Workspace Pro free</a> — and if you're weighing other options too, our <a href="/superpower-chatgpt-alternative" class="text-cyan-400 hover:text-cyan-300">Superpower ChatGPT comparison</a> covers the other big name in this space.</p>`,
+    bottomLine: `<p class="text-slate-300 mb-4">This one isn't a knockout either way. <strong class="text-white">GPT Master earns its 4.8★</strong> — if ChatGPT is your only AI tool and you want the most polished, most established option, install it and you'll be happy. But the gap has narrowed: AI Workspace Pro now matches its Side Chat and Prompt Optimizer, and pulls ahead the moment your work outgrows one account — multiple clients, multiple platforms, sensitive material, or threads long enough to need a 73% memory cut. If our side of the table looks like your workflow, <a href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg" class="text-cyan-400 hover:text-cyan-300">try AI Workspace Pro free</a> — and if you're weighing other options too, our <a href="/superpower-chatgpt-alternative" class="text-cyan-400 hover:text-cyan-300">Superpower ChatGPT comparison</a> covers the other big name in this space.</p>`,
   },
 
   // ---------------------------------------------------------------

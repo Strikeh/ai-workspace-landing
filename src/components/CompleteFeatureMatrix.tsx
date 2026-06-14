@@ -67,6 +67,7 @@ export default function CompleteFeatureMatrix() {
       borderColor: "hover:border-green-500/30",
       blobColor: "bg-green-500/10",
       features: [
+        "Prompt Optimizer ✨",
         "Library (200+)",
         'Quick "/" Access',
         "Templates {{}}",
@@ -175,8 +176,15 @@ export default function CompleteFeatureMatrix() {
                       >
                         <CheckIcon className="h-3.5 w-3.5" />
                       </div>
-                      {feature === "Text Highlighting" ||
-                      feature === "Thread Trimming" ? (
+                      {feature === "Prompt Optimizer ✨" ? (
+                        <Link
+                          href="/chatgpt-prompt-optimizer"
+                          className={`hover:${category.color} hover:underline transition-colors`}
+                        >
+                          {feature}
+                        </Link>
+                      ) : feature === "Text Highlighting" ||
+                        feature === "Thread Trimming" ? (
                         <Link
                           href="/chatgpt-text-highlighter"
                           className={`hover:${category.color} hover:underline transition-colors`}

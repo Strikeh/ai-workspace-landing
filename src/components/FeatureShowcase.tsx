@@ -31,6 +31,7 @@ import {
   GitBranch,
   Bookmark,
   Lightbulb,
+  Wand2,
 } from "lucide-react";
 
 const CheckIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -162,6 +163,14 @@ const featureData: Record<Tab, { features: Feature[] }> = {
   },
   prompts: {
     features: [
+      {
+        icon: Wand2,
+        title: "Prompt Optimizer",
+        description:
+          "Rewrite any rough draft into a sharper, more effective prompt. Compare the original and optimized version side by side, then use it — without leaving the ChatGPT composer (Pro)",
+        link: "/chatgpt-prompt-optimizer",
+        isNew: true,
+      },
       {
         icon: Library,
         title: "Library (200+)",

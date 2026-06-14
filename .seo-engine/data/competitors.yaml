@@ -292,6 +292,32 @@ feature_matrix:
         confidence: "unverified"
         last_verified: ""
 
+  - feature_id: "feat_prompt_optimizer"
+    our_project:
+      supported: true
+      details: "One-click rewrite of weak drafts, side-by-side original vs optimized compare, preserves {{variables}}; free on-device quick-optimize + AI-powered Pro version"
+      tier: "freemium"
+    competitors:
+      comp_superpower_chatgpt:
+        supported: null
+        details: "Not listed among their features (prompt library yes, optimizer unconfirmed)"
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_sider:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+      comp_chatgpt_toolbox:
+        supported: null
+        details: ""
+        tier: "unknown"
+        confidence: "unverified"
+        last_verified: ""
+    # Note: GPT Master (comp_gpt_master) HAS a prompt optimizer (verified 2026-06-11); see /compare/gpt-master where both are marked supported.
+
   # --- Advanced Features ---
   - feature_id: "feat_tangent_view"
     our_project:

@@ -1,4 +1,16 @@
-﻿## 2026-06-12 00:00
+﻿## 2026-06-14 00:00
+**Action:** Wired the existing Prompt Optimizer feature page sitewide + registered it in the SEO engine
+**Files:**
+- src/app/page.tsx (added "Prompt Optimizer" to PRO pricing list with a 🔥 HOT badge)
+- src/components/FeatureShowcase.tsx (added Prompt Optimizer as first item in the "Prompts" tab, Wand2 icon, NEW badge, links to /chatgpt-prompt-optimizer)
+- src/components/CompleteFeatureMatrix.tsx (added "Prompt Optimizer ✨" to the PROMPTS category + link branch to /chatgpt-prompt-optimizer)
+- src/components/Footer.tsx (added Prompt Optimizer link to Features column)
+- .seo-engine/data/features.yaml (registered feat_prompt_optimizer under cat_prompt_management/sub_prompt_advanced)
+- .seo-engine/data/competitors.yaml (added feat_prompt_optimizer to feature_matrix; competitors unverified, GPT Master noted as having it)
+**Summary:** The /chatgpt-prompt-optimizer page (one-click rewrite of weak drafts, side-by-side compare, preserves {{variables}}, Pro AI + free quick-optimize; backend internally "superprompt") already existed and was in the features hub + /compare/gpt-master, but was missing from pricing, the homepage showcase/matrix, the footer, and the engine data. Filled all those gaps, kept the SEO-aligned "Prompt Optimizer" name. No new keyword/SERP research (no SERP data provided); blog_refs left empty. Sitemap already had no per-feature entry pattern needing this route. Did NOT add an unverified Superpower row to the homepage competitor table (rule #3).
+**Triggered by:** user
+
+## 2026-06-12 00:00
 **Action:** Added Side Chat feature page + sitewide wiring (new Pro feature shipped in the extension)
 **Files:**
 - src/app/chatgpt-side-chat/page.tsx (new — keyword-first "/chatgpt-side-chat", Quick Answer, comparison table, how-it-works, feature grid, honest data/privacy section, FAQPage+Breadcrumb JSON-LD, inline CSS mock of the panel as hero visual)

@@ -1954,6 +1954,10 @@ export default function Home() {
                     "Unlimited prompts, notes & vaults",
                     "Unlimited folders & prompt categories",
                     {
+                      text: "Prompt Optimizer — rewrite weak prompts into sharp ones",
+                      badge: "HOT",
+                    },
+                    {
                       text: "Smart Conversation Outline - Jump to any message instantly",
                       badge: "NEW",
                     },

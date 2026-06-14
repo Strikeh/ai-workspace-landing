@@ -259,6 +259,18 @@ categories:
       - id: "sub_prompt_advanced"
         name: "Advanced Prompt Features"
         features:
+          - id: "feat_prompt_optimizer"
+            name: "Prompt Optimizer"
+            description: "Rewrite a draft prompt into a clearer, more effective version. One click in the ChatGPT composer shows the original and optimized prompt side by side; preserves {{variables}}, placeholders and code blocks, and reports when a prompt is already good. AI-powered via backend (Pro); a free on-device quick-optimize also ships."
+            status: "available"
+            doc_refs:
+              - path: "src/app/chatgpt-prompt-optimizer/page.tsx"
+                section: "Full page"
+              - path: "src/components/FeatureShowcase.tsx"
+                section: "Prompt features"
+            blog_refs: []
+            tags: ["prompts", "ai", "optimizer", "prompt-engineering", "pro"]
+            notes: "Pro feature (AI rewrite via backend) with free on-device quick-optimize. Backend service internally named 'superprompt'. Page added 2026-06-14; registered 2026-06-14. Compared vs GPT Master at /compare/gpt-master."
           - id: "feat_template_variables"
             name: "Templates with {{}} Variables"
             description: "Use dynamic variables like {{topic}} and {{keywords}} in prompts that get filled on insertion."

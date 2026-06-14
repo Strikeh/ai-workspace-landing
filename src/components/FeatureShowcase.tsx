@@ -255,6 +255,7 @@ const featureData: Record<Tab, { features: Feature[] }> = {
         title: "Follow-up Suggestions",
         description:
           "Smart suggested next prompts under the latest reply — click to send instantly. Heuristic (free) or AI-powered Enhanced (Pro)",
+        video: "/videos/following-up-prompts.mp4",
         link: "/chatgpt-follow-up-suggestions",
         isNew: true,
       },

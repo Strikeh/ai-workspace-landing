@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
+import { DemoVideoLightbox } from "@/components/DemoVideoLightbox";
 import ImageLightbox from "@/components/ImageLightbox";
 import {
   ArrowRight,
@@ -166,14 +167,17 @@ export default function FollowUpSuggestionsPage() {
             </p>
           </div>
 
-          {/* Hero visual — placeholder (drop in a real screenshot later) */}
+          {/* Hero visual — live demo video (click to expand) */}
           <div className="relative mt-14 max-w-5xl mx-auto">
             <div className="absolute -inset-4 bg-cyan-500/20 rounded-full blur-3xl opacity-20" />
-            <div className="relative rounded-2xl border border-white/10 bg-slate-900/60 aspect-[16/9] flex flex-col items-center justify-center text-center p-8">
-              {/* TODO: replace with a real screenshot of the Follow-ups chips under a reply */}
-              <Lightbulb className="w-14 h-14 text-cyan-400/70 mb-4" />
-              <p className="text-slate-400 text-sm m-0">
-                Follow-up suggestion chips under the latest reply
+            <div className="relative">
+              <DemoVideoLightbox
+                src="/videos/following-up-prompts.mp4"
+                poster="/videos/following-up-prompts-poster.jpg"
+                label="Follow-up Suggestions demo: suggested next prompts appear under the latest ChatGPT reply — click one to send it instantly"
+              />
+              <p className="mt-3 text-center text-xs text-slate-500">
+                Click the video to expand
               </p>
             </div>
           </div>

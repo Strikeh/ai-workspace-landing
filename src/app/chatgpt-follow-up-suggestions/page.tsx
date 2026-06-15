@@ -225,9 +225,9 @@ export default function FollowUpSuggestionsPage() {
                 accent: false,
               },
               {
-                name: "Enhanced",
-                tag: "Pro",
-                body: "AI-powered, context-aware suggestions tailored to the exact reply you just received.",
+                name: "Smart",
+                tag: "5/week free",
+                body: "AI-powered, context-aware suggestions tailored to the exact reply you just received. 5 free every week — unlimited on Pro.",
                 accent: true,
               },
             ].map((mode) => (

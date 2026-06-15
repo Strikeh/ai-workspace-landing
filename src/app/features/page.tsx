@@ -113,7 +113,7 @@ const mainFeatures = [
     icon: Lightbulb,
     title: "Follow-up Suggestions",
     description:
-      "Suggested next prompts under the latest reply — click to send. Heuristic (free) or AI-powered Enhanced (Pro).",
+      "Suggested next prompts under the latest reply — click to send. Unlimited heuristic plus 5 Smart AI follow-ups/week free; unlimited AI on Pro.",
     badge: "New",
   },
   {

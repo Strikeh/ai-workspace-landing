@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title:
     "ChatGPT Follow-up Suggestions: Smarter Next Prompts | AI Workspace",
   description:
-    "Get suggested next prompts under every ChatGPT reply and click to send instantly. Heuristic suggestions free; AI-powered, context-aware Enhanced mode on Pro.",
+    "Get suggested next prompts under every ChatGPT reply and click to send instantly. Heuristic suggestions free, plus 5 Smart (AI-powered) follow-ups every week free; unlimited Smart suggestions on Pro.",
   keywords: [
     "ChatGPT follow-up suggestions",
     "ChatGPT next prompt ideas",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ChatGPT Follow-up Suggestions: Smarter Next Prompts",
     description:
-      "Suggested next prompts under every ChatGPT reply — click to send instantly. Heuristic free; AI-powered Enhanced on Pro.",
+      "Suggested next prompts under every ChatGPT reply — click to send instantly. Heuristic free plus 5 Smart AI follow-ups/week free; unlimited Smart on Pro.",
     url: pageUrl,
     siteName: "AI Workspace",
     locale: "en_US",
@@ -57,12 +57,12 @@ const faqs = [
     a: "Follow-up Suggestions show a short list of next prompts under the latest ChatGPT reply. Each one is a ready-to-send question or instruction — click it and it's dropped into the composer and submitted immediately, so you keep your momentum without thinking up what to ask next.",
   },
   {
-    q: "What's the difference between Heuristic and Enhanced?",
-    a: "Heuristic mode (free) offers a useful set of generic next steps generated instantly on your device. Enhanced mode (Pro) sends the latest reply's context to AI Workspace's servers and returns context-aware suggestions tailored to exactly what was just said — like the contextual follow-ups you'd write yourself.",
+    q: "What's the difference between Heuristic and Smart (Enhanced)?",
+    a: "Heuristic mode is free and unlimited — a useful set of generic next steps generated instantly on your device. Smart mode (called Enhanced on Pro) sends the latest reply's context to AI Workspace's servers and returns context-aware suggestions tailored to exactly what was just said — like the contextual follow-ups you'd write yourself. Free users get 5 Smart follow-ups every week to try it; Pro makes them unlimited.",
   },
   {
     q: "Can I turn it off?",
-    a: "Yes. In Settings → Display & Interface → Follow-up Suggestions you can choose Off, Heuristic, or Enhanced. The gear icon on the Follow-ups panel jumps you straight to that setting.",
+    a: "Yes. In Settings → Display & Interface → Follow-up Suggestions you can choose Off, Heuristic, or Smart. The gear icon on the Follow-ups panel jumps you straight to that setting.",
   },
   {
     q: "Does it send my conversation anywhere?",
@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     q: "Is it free?",
-    a: "Heuristic follow-up suggestions are free. Enhanced (AI-powered, context-aware) is a Pro feature, alongside unlimited prompts, vaults and notes, encrypted storage and more.",
+    a: "Yes. Heuristic follow-up suggestions are free and unlimited, and every free user also gets 5 Smart (AI-powered, context-aware) follow-ups each week. Pro unlocks unlimited Smart suggestions, alongside unlimited prompts, vaults and notes, encrypted storage and more.",
   },
   {
     q: "Which platforms are supported?",
@@ -149,7 +149,8 @@ export default function FollowUpSuggestionsPage() {
             <p className="text-lg leading-8 text-slate-400 mb-8 max-w-2xl mx-auto">
               Smart suggested next prompts appear under the latest reply. Click
               one and it's sent instantly. Choose fast on-device suggestions, or
-              AI-powered context-aware ones with Enhanced mode.
+              AI-powered context-aware ones with Smart mode — 5 free every week,
+              unlimited on Pro.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
               <a
@@ -163,7 +164,7 @@ export default function FollowUpSuggestionsPage() {
               </a>
             </div>
             <p className="text-xs text-slate-500">
-              4.5★ on Chrome Web Store · Heuristic free · Enhanced on Pro
+              4.5★ on Chrome Web Store · Heuristic free · 5 Smart AI/week free
             </p>
           </div>
 
@@ -191,8 +192,9 @@ export default function FollowUpSuggestionsPage() {
               Follow-up Suggestions is a feature in AI Workspace that shows
               ready-to-send next prompts under ChatGPT's latest reply. Click a
               suggestion to send it instantly. Heuristic mode is free and
-              on-device; Enhanced mode (Pro) uses AI to generate context-aware
-              suggestions tailored to what was just said.
+              on-device; Smart mode uses AI to generate context-aware
+              suggestions tailored to what was just said — 5 free every week,
+              unlimited on Pro.
             </p>
           </div>
         </div>

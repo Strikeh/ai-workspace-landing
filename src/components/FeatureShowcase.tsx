@@ -254,7 +254,7 @@ const featureData: Record<Tab, { features: Feature[] }> = {
         icon: Lightbulb,
         title: "Follow-up Suggestions",
         description:
-          "Smart suggested next prompts under the latest reply — click to send instantly. Heuristic (free) or AI-powered Enhanced (Pro)",
+          "Smart suggested next prompts under the latest reply — click to send instantly. Unlimited heuristic plus 5 Smart AI follow-ups/week free; unlimited AI on Pro",
         video: "/videos/following-up-prompts.mp4",
         link: "/chatgpt-follow-up-suggestions",
         isNew: true,

@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     q: "Does it send my conversation anywhere?",
-    a: "Heuristic mode is 100% local — nothing leaves your browser. Enhanced mode sends the latest reply's context securely to our servers to generate context-aware suggestions; we don't store or log your conversation content. Every organizing feature (folders, tags, notes, bookmarks) stays local regardless.",
+    a: "Heuristic mode is 100% local — nothing leaves your browser. Smart mode sends the latest reply's context securely to our servers to generate context-aware suggestions; we don't store or log your conversation content. Every organizing feature (folders, tags, notes, bookmarks) stays local regardless.",
   },
   {
     q: "Is it free?",
@@ -283,7 +283,7 @@ export default function FollowUpSuggestionsPage() {
               {
                 step: "3",
                 title: "Tune the mode",
-                body: "Use the gear to jump to Settings and switch between Off, Heuristic and Enhanced whenever you like.",
+                body: "Use the gear to jump to Settings and switch between Off, Heuristic and Smart whenever you like.",
               },
             ].map((item) => (
               <div
@@ -318,8 +318,8 @@ export default function FollowUpSuggestionsPage() {
               },
               {
                 icon: Brain,
-                title: "Context-aware (Enhanced)",
-                body: "Pro's Enhanced mode reads the latest reply and proposes follow-ups grounded in what was actually said.",
+                title: "Context-aware (Smart)",
+                body: "Smart mode reads the latest reply and proposes follow-ups grounded in what was actually said. 5 free every week, unlimited on Pro.",
               },
               {
                 icon: Zap,
@@ -328,7 +328,7 @@ export default function FollowUpSuggestionsPage() {
               },
               {
                 icon: SlidersHorizontal,
-                title: "Off / Heuristic / Enhanced",
+                title: "Off / Heuristic / Smart",
                 body: "Full control in Settings. The panel's gear deep-links you straight to the right setting.",
               },
               {
@@ -372,7 +372,7 @@ export default function FollowUpSuggestionsPage() {
               that friction adds up over a long session.
             </p>
             <p className="text-slate-300 text-lg leading-relaxed m-0">
-              With Enhanced follow-ups, the next prompts are already written for
+              With Smart follow-ups, the next prompts are already written for
               you, grounded in the reply you just read. Click the one you want
               and you're moving again. Pair it with{" "}
               <Link
@@ -396,7 +396,7 @@ export default function FollowUpSuggestionsPage() {
             Honest about your data
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto m-0">
-            Heuristic mode is 100% local — nothing leaves your browser. Enhanced
+            Heuristic mode is 100% local — nothing leaves your browser. Smart
             mode sends the latest reply's context securely to our servers to
             generate context-aware suggestions; we don't store or log your
             conversation content. Folders, tags, notes and bookmarks always stay
@@ -470,7 +470,7 @@ export default function FollowUpSuggestionsPage() {
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
           <p className="mt-6 text-sm text-slate-500">
-            Free to install · Heuristic free · Enhanced on Pro
+            Free to install · Heuristic free · 5 Smart AI/week free
           </p>
         </div>
       </section>

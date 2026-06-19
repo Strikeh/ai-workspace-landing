@@ -1980,7 +1980,6 @@ export default function Home() {
                     "Variable injection in prompts",
                     "Quick access menus",
                     "Search inside chats & prompts",
-                    "Multi-platform Support (ChatGPT, Claude, Grok)",
                     { text: "Advanced Thread Trimming", badge: "HOT" },
                     "Audio Notifications",
                     "Prompt History & Chaining",
@@ -2063,7 +2062,6 @@ export default function Home() {
                     "Everything in PRO",
                     "One payment, lifetime access",
                     "All future features included",
-                    "ChatGPT, Claude & Grok",
                     "No renewals, no expiry",
                     "Priority support",
                   ].map((feature, i) => (

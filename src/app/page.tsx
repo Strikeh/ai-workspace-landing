@@ -1867,7 +1867,7 @@ export default function Home() {
               </p>
             </div>
 
-            <StaggerContainer className="grid gap-8 lg:grid-cols-2 max-w-5xl mx-auto items-stretch">
+            <StaggerContainer className="grid gap-8 lg:grid-cols-3 max-w-6xl mx-auto items-stretch">
               {/* Free plan */}
               <StaggerItem className="relative p-8 rounded-3xl border border-white/5 bg-slate-900/40 backdrop-blur-sm hover:bg-slate-800/40 transition-all duration-300 flex flex-col h-full">
                 <div className="mb-8">
@@ -2031,6 +2031,68 @@ export default function Home() {
                 >
                   Upgrade to PRO
                 </a>
+              </StaggerItem>
+
+              {/* LIFETIME plan */}
+              <StaggerItem className="relative p-8 rounded-3xl border border-fuchsia-500/40 bg-slate-900/80 backdrop-blur-md shadow-[0_0_40px_-10px_rgba(217,70,239,0.3)] flex flex-col h-full hover:shadow-[0_0_60px_-10px_rgba(217,70,239,0.45)] transition-all duration-500">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-fuchsia-500 to-purple-600 text-xs font-bold text-white uppercase tracking-wider shadow-lg shadow-fuchsia-500/40 whitespace-nowrap">
+                  Best Value
+                </div>
+
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">Lifetime</h3>
+                  <p className="text-fuchsia-200/70 text-sm">
+                    Pay once. Yours forever.
+                  </p>
+                  <div className="mt-6 space-y-2">
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-2xl font-bold text-slate-500 line-through">
+                        $149
+                      </span>
+                      <span className="text-4xl font-bold text-white">$99</span>
+                      <span className="text-slate-500">once</span>
+                    </div>
+                    <p className="text-xs text-fuchsia-400">
+                      Launch price — no subscription, ever
+                    </p>
+                  </div>
+                </div>
+
+                <ul className="space-y-4 mb-8 flex-1">
+                  {[
+                    "Everything in PRO",
+                    "One payment, lifetime access",
+                    "All future features included",
+                    "ChatGPT, Claude & Grok",
+                    "No renewals, no expiry",
+                    "Priority support",
+                  ].map((feature, i) => (
+                    <li
+                      key={i}
+                      className="flex items-center gap-3 text-white text-sm"
+                    >
+                      <div className="h-5 w-5 rounded-full bg-fuchsia-500/20 flex items-center justify-center flex-shrink-0">
+                        <CheckIcon className="h-3 w-3 text-fuchsia-400" />
+                      </div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href={
+                    installUrl ||
+                    "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full py-4 rounded-xl bg-gradient-to-r from-fuchsia-500 to-purple-600 text-center font-bold text-white hover:shadow-lg hover:shadow-fuchsia-500/25 transition-all hover:scale-[1.02] mt-auto"
+                >
+                  Get Lifetime
+                </a>
+                <p className="mt-3 text-center text-xs text-slate-500">
+                  14-day money-back guarantee
+                </p>
               </StaggerItem>
             </StaggerContainer>
 

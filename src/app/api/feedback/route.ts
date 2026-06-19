@@ -1,20 +1,38 @@
 ﻿import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
+// Gmail account that sends (and receives) uninstall feedback. EMAIL_USER can
+// override it, but it defaults to the inbox below so a missing var can't leave
+// nodemailer with an empty username ("Missing credentials for PLAIN").
+const FEEDBACK_EMAIL = process.env.EMAIL_USER || "ai.workspace.extension@gmail.com";
+
 export async function POST(request: Request) {
   try {
+    const appPassword = process.env.EMAIL_APP_PASSWORD;
+    if (!appPassword) {
+      console.error(
+        'Feedback email not configured: EMAIL_APP_PASSWORD is missing. Set it (a Gmail App Password for ' +
+          FEEDBACK_EMAIL +
+          ') in the Vercel project environment variables.',
+      );
+      return NextResponse.json(
+        { error: "Email service is not configured" },
+        { status: 503 },
+      );
+    }
+
     const { reason, feedback } = await request.json();
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_APP_PASSWORD,
+        user: FEEDBACK_EMAIL,
+        pass: appPassword,
       },
     });
 
     const mailOptions = {
-      from: process.env.EMAIL_USER,
+      from: FEEDBACK_EMAIL,
       to: "ai.workspace.extension@gmail.com",
       subject: `New Uninstall Feedback: ${reason}`,
       html: `

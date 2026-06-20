@@ -57,6 +57,8 @@ interface Feature {
   description: string;
   video?: string;
   image?: string;
+  /** Media aspect ratio. Defaults to 16:9; set "4/3" for near-square clips. */
+  aspect?: "4/3";
   isWip?: boolean;
   isNew?: boolean;
   link?: string;
@@ -69,21 +71,24 @@ const featureData: Record<Tab, { features: Feature[] }> = {
         icon: Folder,
         title: "Unlimited nested folders with drag & drop",
         description: "Create a hierarchy that matches your workflow",
-        video: "/videos/organization-hero.mp4",
+        video: "/videos/folders_sidebar.mp4",
+        aspect: "4/3",
         link: "/organization",
       },
       {
         icon: Palette,
         title: "Color-coded categories with custom icons",
         description: "Visual organization at a glance",
-        image: "/images/carousel/BrandBird 2025-11-20 12.01.36.png",
+        video: "/videos/colorful_categories.mp4",
+        aspect: "4/3",
         link: "/organization",
       },
       {
         icon: Tag,
         title: "Multi-tag system with custom colors",
         description: "Tag conversations with multiple labels",
-        image: "/images/carousel/BrandBird 2025-11-20 12.01.58.png",
+        video: "/videos/tags.mp4",
+        aspect: "4/3",
         link: "/organization",
       },
       {
@@ -399,7 +404,11 @@ export default function FeatureShowcase() {
             </div>
 
             {/* Media Content */}
-            <div className="relative aspect-video bg-black/50 group/media">
+            <div
+              className={`relative ${
+                activeFeature.aspect === "4/3" ? "aspect-[4/3]" : "aspect-video"
+              } bg-black/50 group/media`}
+            >
               {activeFeature.video ? (
                 activeFeature.video.endsWith(".mp4") ? (
                   <video

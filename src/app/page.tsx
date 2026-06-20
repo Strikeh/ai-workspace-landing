@@ -11,6 +11,7 @@ import CompleteFeatureMatrix from "@/components/CompleteFeatureMatrix";
 import CompetitorComparison from "@/components/CompetitorComparison";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import { Footer } from "@/components/Footer";
+import { BorderBeam } from "@/components/ui/border-beam";
 import {
   FadeIn,
   SlideUp,
@@ -1115,6 +1116,21 @@ export default function Home() {
 
         {/* Product Showcase Carousel */}
         <section id="showcase" className="relative py-24 overflow-hidden">
+          {/* Ambient background video */}
+          <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <video
+              src="/videos/contact-ambient-bg.mp4"
+              poster="/videos/contact-ambient-bg-poster.jpg"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="none"
+              aria-hidden="true"
+              className="absolute inset-0 h-full w-full object-cover opacity-30"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-950/55 to-slate-950/90" />
+          </div>
           {/* Background decoration */}
           <div
             aria-hidden
@@ -1168,7 +1184,7 @@ export default function Home() {
             <FadeIn className="relative">
               {/* Main carousel viewport */}
               <div
-                className="overflow-hidden rounded-3xl"
+                className="relative overflow-hidden rounded-3xl"
                 style={{
                   border: "1px solid rgba(6, 182, 212, 0.2)",
                   boxShadow: "0 25px 50px rgba(6, 182, 212, 0.15)",
@@ -1176,6 +1192,12 @@ export default function Home() {
                 onMouseEnter={() => setIsCarouselHovered(true)}
                 onMouseLeave={() => setIsCarouselHovered(false)}
               >
+                <BorderBeam
+                  size={350}
+                  duration={14}
+                  colorFrom="#06b6d4"
+                  colorTo="#3b82f6"
+                />
                 <div
                   className="carousel-track flex transition-transform duration-700 ease-in-out"
                   style={{
@@ -1394,7 +1416,7 @@ export default function Home() {
                   className="group relative rounded-2xl bg-slate-900 p-[1px] overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/20"
                 >
                   {/* Rotating Border Effect */}
-                  <div className="absolute inset-[-100%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00000000_50%,#06b6d4_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-[-100%] animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00000000_50%,#06b6d4_100%)] opacity-30 group-hover:opacity-100 transition-opacity duration-300" />
 
                   {/* Card Content */}
                   <div className="relative h-full rounded-2xl bg-slate-900/90 backdrop-blur-xl p-8 border border-white/5 group-hover:border-transparent transition-colors">
@@ -1840,6 +1862,12 @@ export default function Home() {
 
               {/* PRO plan */}
               <StaggerItem className="relative p-8 rounded-3xl border border-cyan-500/50 bg-slate-900/80 backdrop-blur-md shadow-[0_0_40px_-10px_rgba(6,182,212,0.3)] flex flex-col h-full hover:shadow-[0_0_60px_-10px_rgba(6,182,212,0.4)] transition-all duration-500">
+                <BorderBeam
+                  size={300}
+                  duration={10}
+                  colorFrom="#06b6d4"
+                  colorTo="#3b82f6"
+                />
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-xs font-bold text-white uppercase tracking-wider shadow-lg shadow-cyan-500/40">
                   Most Popular
                 </div>

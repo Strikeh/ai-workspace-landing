@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import Link from "next/link";
+import { BorderBeam } from "./ui/border-beam";
 
 const CWS_URL =
   "https://chromewebstore.google.com/detail/ai-workspace-pro-chatgpt/mngeddjcngpcdakdhfcbaefeonmmeomg";
@@ -121,7 +122,13 @@ export default function CompetitorComparison() {
         </div>
 
         {/* Table */}
-        <div className="rounded-2xl border border-white/10 overflow-hidden shadow-2xl">
+        <div className="relative rounded-2xl border border-white/10 overflow-hidden shadow-2xl">
+          <BorderBeam
+            size={320}
+            duration={12}
+            colorFrom="#06b6d4"
+            colorTo="#10b981"
+          />
           {/* Column headers */}
           <div className="grid grid-cols-3 bg-slate-800/80 border-b border-white/10">
             <div className="py-4 px-6 text-sm font-semibold text-slate-400 uppercase tracking-wider">

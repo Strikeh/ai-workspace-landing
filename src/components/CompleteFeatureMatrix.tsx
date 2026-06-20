@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import Link from "next/link";
+import { BorderBeam } from "./ui/border-beam";
 import {
   FolderOpen,
   Zap,
@@ -125,6 +126,15 @@ export default function CompleteFeatureMatrix() {
     },
   ];
 
+  const beamColors = [
+    ["#fb923c", "#f59e0b"],
+    ["#06b6d4", "#3b82f6"],
+    ["#34d399", "#10b981"],
+    ["#a78bfa", "#c084fc"],
+    ["#f472b6", "#ec4899"],
+    ["#60a5fa", "#3b82f6"],
+  ];
+
   return (
     <section className="py-20 relative overflow-hidden bg-slate-900/50">
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16 relative z-10">
@@ -145,6 +155,13 @@ export default function CompleteFeatureMatrix() {
               key={index}
               className={`group relative h-full bg-slate-900/40 backdrop-blur-xl rounded-3xl p-8 border border-white/5 ${category.borderColor} transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 overflow-hidden`}
             >
+              <BorderBeam
+                size={250}
+                duration={12}
+                delay={index * 2}
+                colorFrom={beamColors[index][0]}
+                colorTo={beamColors[index][1]}
+              />
               {/* Decorative blob background */}
               <div
                 className={`absolute -top-24 -left-24 w-48 h-48 ${category.blobColor} rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}

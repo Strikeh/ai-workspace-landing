@@ -915,6 +915,22 @@ export default function Home() {
           className="relative py-24 overflow-hidden border-t"
           style={{ borderColor: "var(--color-border)" }}
         >
+          {/* Ambient node-graph background video */}
+          <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <video
+              src="/videos/tangent-nodes-bg.mp4"
+              poster="/videos/tangent-nodes-bg-poster.jpg"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="none"
+              aria-hidden="true"
+              className="absolute inset-0 h-full w-full object-cover opacity-40"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/55 to-slate-950/75" />
+          </div>
+
           {/* Background Effects */}
           <div className="absolute inset-0 pointer-events-none">
             <div

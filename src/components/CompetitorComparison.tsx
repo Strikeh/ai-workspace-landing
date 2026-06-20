@@ -214,6 +214,29 @@ export default function CompetitorComparison() {
             </p>
           </div>
         </div>
+
+        {/* Full comparison link */}
+        <div className="mt-10 flex justify-center">
+          <Link
+            href="/superpower-chatgpt-alternative"
+            className="inline-flex items-center gap-2 rounded-xl border border-cyan-500/30 bg-cyan-500/10 px-6 py-3 text-sm font-semibold text-cyan-300 transition-colors hover:bg-cyan-500/20"
+          >
+            Read the full Superpower ChatGPT alternative comparison
+            <svg
+              className="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </Link>
+        </div>
       </div>
     </section>
   );

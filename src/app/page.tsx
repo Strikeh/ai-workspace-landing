@@ -10,9 +10,7 @@ import FeatureShowcase from "@/components/FeatureShowcase";
 import CompleteFeatureMatrix from "@/components/CompleteFeatureMatrix";
 import CompetitorComparison from "@/components/CompetitorComparison";
 import WhyChooseSection from "@/components/WhyChooseSection";
-import { HeroConnectionLines } from "@/components/HeroConnectionLines";
 import { Footer } from "@/components/Footer";
-import { BorderBeam } from "@/components/ui/border-beam";
 import {
   FadeIn,
   SlideUp,
@@ -517,6 +515,21 @@ export default function Home() {
         >
           {/* Premium Background Effects */}
           <div className="absolute inset-0 z-0 overflow-hidden">
+            {/* Ambient hero background video */}
+            <video
+              src="/videos/hero-chaos-to-order.mp4"
+              poster="/videos/hero-chaos-to-order-poster.jpg"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              aria-hidden="true"
+              className="absolute inset-0 h-full w-full object-cover opacity-60"
+            />
+            {/* Legibility scrim — dark on the left (text) clearing toward the video on the right */}
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-950/25" />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-transparent to-slate-950/85" />
             {/* Grid Pattern */}
             <div className="absolute inset-0 bg-grid-pattern opacity-[0.15]" />
 
@@ -545,9 +558,8 @@ export default function Home() {
           </div>
 
           <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-16 px-6 pb-16 pt-20 md:px-10 lg:px-16">
-            <div className="relative flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
-              <HeroConnectionLines />
-              <SlideUp className="max-w-2xl space-y-6" delay={0.1}>
+            <div className="relative flex max-w-2xl flex-col gap-10">
+              <SlideUp className="w-full space-y-6" delay={0.1}>
                 {/* Social Proof Bar - First thing they see */}
                 <div className="flex flex-wrap items-center gap-3 text-sm">
                   {/* Multi-platform badge - key differentiator */}
@@ -602,37 +614,39 @@ export default function Home() {
                 {/* One-liner value prop */}
                 <div className="space-y-4 max-w-2xl">
                   <p className="hero-subtitle text-xl leading-relaxed text-slate-300">
-                    Switch between client projects, side hustles, and personal
-                    chats instantly with this{" "}
+                    The all-in-one{" "}
                     <span className="text-white font-semibold">
                       Chrome extension for ChatGPT
-                    </span>
-                    .{" "}
-                    <span className="text-white font-semibold">
-                      Each workspace keeps its own conversations organized
                     </span>{" "}
-                    with folders, tags, and a{" "}
+                    to{" "}
+                    <span className="text-white font-semibold">
+                      organize, structure, and export
+                    </span>{" "}
+                    everything you do with AI — folders, tags, full-text
+                    search, a{" "}
                     <a
                       href="#features"
                       className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-500/30 hover:decoration-cyan-400 transition-colors"
                     >
                       powerful prompt library
                     </a>
-                    .
+                    , highlights, an image gallery, and one-click exports.
+                    Workspaces keep every client and project cleanly separated.
                   </p>
 
                   <p className="text-lg font-medium text-cyan-400">
-                    Built for freelancers, consultants, and developers who
-                    juggle multiple contexts daily.
+                    Built for freelancers, consultants, creators, and
+                    developers who rely on AI every day.
                   </p>
 
                   {/* Feature List */}
                   <ul className="grid grid-cols-1 gap-y-3 pt-4">
                     {[
-                      "Create unlimited workspaces for different projects",
-                      "Switch context instantly – no mental clutter",
-                      "Organize each workspace with folders & tags",
-                      "Works across ChatGPT, Claude & Grok",
+                      "Organize chats into nested folders with tags & instant search",
+                      "Save, reuse & optimize your best prompts in one library",
+                      "Highlight key answers & navigate long chats instantly",
+                      "Export any conversation to Markdown, PDF, JSON or TXT",
+                      "Separate workspaces for every client, project & idea",
                     ].map((feature, i) => (
                       <li
                         key={i}
@@ -688,16 +702,19 @@ export default function Home() {
                   </div>
                   <DemoHubButton />
                 </div>
+              </SlideUp>
 
+              {/* Secondary hero details */}
+              <div className="w-full space-y-6">
                 {/* Feature highlights */}
                 <div className="text-sm text-slate-400 pt-2 leading-relaxed max-w-xl">
                   <span className="text-slate-300 font-medium">
-                    In every workspace:{" "}
+                    All in one extension:{" "}
                   </span>
                   Nested folders, smart tags, full‑text search, powerful prompt
-                  library, conversation highlights, image gallery, bulk actions,
-                  GPT store manager, encrypted vaults, and multiple export
-                  formats.
+                  library, highlights, image gallery, bulk actions, prompt
+                  optimizer, conversation outline, encrypted vaults, smart
+                  thread trimming, plus exports to Markdown, PDF, JSON and TXT.
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 pt-3">
@@ -780,87 +797,9 @@ export default function Home() {
                     <span className="text-xs text-slate-300">Discord</span>
                   </a>
                 </div>
-              </SlideUp>
+              </div>
 
-              {/* Hero Video Section - Floating Glass Card */}
-              <ScaleUp
-                className="relative w-full max-w-2xl lg:max-w-xl perspective-1000"
-                delay={0.3}
-              >
-                {/* Glow behind video */}
-                <div className="absolute inset-0 bg-cyan-500/20 blur-[60px] rounded-full transform translate-y-10"></div>
-
-                <div className="animate-float">
-                  <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-slate-900/50 backdrop-blur-xl transform transition-transform hover:scale-[1.01] duration-500">
-                    <BorderBeam
-                      size={250}
-                      duration={12}
-                      colorFrom="#06b6d4"
-                      colorTo="#3b82f6"
-                    />
-                    {/* Video Header */}
-                    <div className="flex items-center justify-between px-4 py-3 border-b border-white/10 bg-gradient-to-r from-slate-800 to-slate-900">
-                      <div className="flex gap-2">
-                        <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-                        <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                        <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
-                      </div>
-                      <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-black/20 border border-white/5">
-                        <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
-                        <span className="text-xs font-medium text-slate-300">
-                          Live Demo
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* YouTube Video Embed */}
-                    <div className="relative aspect-video bg-black">
-                      <iframe
-                        src="https://www.youtube.com/embed/pDZD1maOWBA?autoplay=0&controls=1&rel=0&vq=hd1080"
-                        title="AI Workspace Pro - Complete Overview"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="absolute inset-0 w-full h-full"
-                      />
-                    </div>
-
-                    {/* Video Footer */}
-                    <div className="px-6 py-4 bg-gradient-to-b from-slate-900/50 to-slate-900/80 backdrop-blur-md border-t border-white/5">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <h3 className="text-sm font-semibold text-white">
-                            Product Walkthrough
-                          </h3>
-                          <p className="text-xs text-slate-400">
-                            See how AI Workspace transforms your workflow
-                          </p>
-                        </div>
-                        <button className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors border border-white/5">
-                          <svg
-                            className="w-5 h-5 text-cyan-400"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-                            />
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </ScaleUp>
+              {/* Hero visual now lives in the section background video above */}
             </div>
           </div>
         </section>
@@ -904,7 +843,7 @@ export default function Home() {
                 className="text-4xl md:text-5xl font-bold tracking-tight"
                 style={{ color: "var(--color-text)" }}
               >
-                Organize Each Workspace with{" "}
+                Your Complete ChatGPT{" "}
                 <span
                   style={{
                     background: "var(--premium-title-gradient)",
@@ -913,14 +852,14 @@ export default function Home() {
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  Powerful Tools
+                  Toolkit
                 </span>
               </h2>
               <p
                 className="text-xl leading-relaxed max-w-2xl mx-auto"
                 style={{ color: "var(--color-text-secondary)" }}
               >
-                Every workspace comes with{" "}
+                The extension comes packed with{" "}
                 <span className="text-cyan-400 font-medium">
                   folders, tags, and smart search
                 </span>{" "}
@@ -1173,28 +1112,6 @@ export default function Home() {
         <CompleteFeatureMatrix />
 
         <CompetitorComparison />
-
-        <div className="flex justify-center -mt-8 mb-4">
-          <Link
-            href="/superpower-chatgpt-alternative"
-            className="inline-flex items-center gap-2 rounded-xl border border-cyan-500/30 bg-cyan-500/10 px-6 py-3 text-sm font-semibold text-cyan-300 transition-colors hover:bg-cyan-500/20"
-          >
-            Read the full Superpower ChatGPT alternative comparison
-            <svg
-              className="h-4 w-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
-          </Link>
-        </div>
 
         {/* Product Showcase Carousel */}
         <section id="showcase" className="relative py-24 overflow-hidden">
@@ -2111,8 +2028,24 @@ export default function Home() {
               "linear-gradient(to bottom, rgba(15, 23, 42, 1), rgba(15, 23, 42, 0.8))",
           }}
         >
+          {/* Ambient Background Video */}
+          <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <video
+              src="/videos/cta-organize-bg.mp4"
+              poster="/videos/cta-organize-bg-poster.jpg"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              aria-hidden="true"
+              className="absolute inset-0 h-full w-full object-cover opacity-50"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/45 to-slate-950/85" />
+          </div>
+
           {/* Purple/Pink Background Glows */}
-          <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 z-[1] pointer-events-none">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-fuchsia-500/10 rounded-full blur-[120px]" />
             <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-[100px]" />
             <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-pink-500/10 rounded-full blur-[100px]" />
@@ -2301,10 +2234,26 @@ export default function Home() {
         {/* Contact Section */}
         <section
           id="contact"
-          className="relative py-32 border-t"
+          className="relative overflow-hidden py-32 border-t"
           style={{ borderColor: "var(--color-border)" }}
         >
-          <FadeIn className="mx-auto max-w-4xl px-6 text-center">
+          {/* Ambient background video */}
+          <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <video
+              src="/videos/contact-ambient-bg.mp4"
+              poster="/videos/contact-ambient-bg-poster.jpg"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="none"
+              aria-hidden="true"
+              className="absolute inset-0 h-full w-full object-cover opacity-50"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/45 to-slate-950/85" />
+          </div>
+
+          <FadeIn className="relative z-10 mx-auto max-w-4xl px-6 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-bold uppercase tracking-widest mb-8">
               <span className="w-2 h-2 rounded-full bg-cyan-400" />
               Get in Touch

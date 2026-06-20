@@ -377,9 +377,9 @@ export default function FeatureShowcase() {
       </div>
 
       {/* Content */}
-      <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-start">
+      <div className="grid lg:grid-cols-5 gap-8 lg:gap-10 items-start">
         {/* Visual (Video or Image) - Mobile: Top, Desktop: Right/Sticky */}
-        <div className="relative lg:sticky lg:top-24 lg:order-last order-first">
+        <div className="relative lg:col-span-3 lg:sticky lg:top-24 lg:order-last order-first">
           {/* Glow Effect */}
           <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-[2rem] blur-2xl opacity-0 lg:opacity-100 transition-opacity duration-500" />
 
@@ -492,7 +492,7 @@ export default function FeatureShowcase() {
         </div>
 
         {/* Features List */}
-        <div className="space-y-8">
+        <div className="lg:col-span-2 space-y-8">
           <div className="space-y-2">
             <h3 className="text-3xl font-bold text-white tracking-tight">
               {tabs.find((t) => t.id === activeTab)?.label}

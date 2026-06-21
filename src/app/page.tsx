@@ -2075,15 +2075,21 @@ export default function Home() {
                     Pay once. Yours forever.
                   </p>
                   <div className="mt-6 space-y-2">
-                    <div className="flex items-baseline gap-2">
+                    <div className="flex items-baseline gap-2 flex-wrap">
                       <span className="text-2xl font-bold text-slate-500 line-through">
-                        $149
+                        $299
                       </span>
                       <span className="text-4xl font-bold text-white">$99</span>
                       <span className="text-slate-500">once</span>
+                      <span className="ml-1 inline-flex items-center px-2 py-0.5 rounded-full bg-fuchsia-500/20 border border-fuchsia-500/40 text-fuchsia-300 text-xs font-bold">
+                        Save 67%
+                      </span>
                     </div>
-                    <p className="text-xs text-fuchsia-400">
-                      Launch price — no subscription, ever
+                    <p className="text-xs font-semibold text-fuchsia-300">
+                      🔥 Limited-time launch deal — $200 off the regular $299
+                    </p>
+                    <p className="text-xs text-slate-500">
+                      One-time payment · no subscription, ever
                     </p>
                   </div>
                 </div>

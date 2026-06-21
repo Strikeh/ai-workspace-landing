@@ -1,8 +1,8 @@
 ﻿"use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, X } from "lucide-react";
 
 const USA_LOCATIONS = [
   "Austin, TX",
@@ -81,39 +81,68 @@ function getBrowserInstallUrl() {
   return "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg";
 }
 
+const STORAGE_KEY = "aiws-hide-sales-notifications";
+
 export const RecentSalesNotification = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [info, setInfo] = useState({ location: "", time: "" });
   const [installUrl, setInstallUrl] = useState(
     "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"
   );
+  const stoppedRef = useRef(false);
+  const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   useEffect(() => {
     setInstallUrl(getBrowserInstallUrl());
 
-    // Initial delay before first popup
-    const initialTimeout = setTimeout(() => {
-      triggerPopup();
-    }, 5000);
+    // Respect a user who chose to hide these notifications
+    if (
+      typeof window !== "undefined" &&
+      window.localStorage.getItem(STORAGE_KEY) === "true"
+    ) {
+      return;
+    }
 
-    return () => clearTimeout(initialTimeout);
+    const triggerPopup = () => {
+      if (stoppedRef.current) return;
+
+      setInfo({
+        location: getRandomLocation(),
+        time: getRandomTime(),
+      });
+      setIsVisible(true);
+
+      // Hide after ~6.5 seconds
+      const hideTimer = setTimeout(() => {
+        setIsVisible(false);
+        if (stoppedRef.current) return;
+
+        // Much less frequent than before (70-140s) so it feels realistic.
+        const nextDelay = Math.floor(Math.random() * 70000) + 70000;
+        timersRef.current.push(setTimeout(triggerPopup, nextDelay));
+      }, 6500);
+      timersRef.current.push(hideTimer);
+    };
+
+    // Initial delay before the first popup
+    timersRef.current.push(setTimeout(triggerPopup, 12000));
+
+    const timers = timersRef.current;
+    return () => {
+      timers.forEach(clearTimeout);
+    };
   }, []);
 
-  const triggerPopup = () => {
-    setInfo({
-      location: getRandomLocation(),
-      time: getRandomTime(),
-    });
-    setIsVisible(true);
-
-    // Hide after 6 seconds
-    setTimeout(() => {
-      setIsVisible(false);
-
-      // Schedule next popup (randomly between 10 and 25 seconds)
-      const nextDelay = Math.floor(Math.random() * 15000) + 10000;
-      setTimeout(triggerPopup, nextDelay);
-    }, 6000);
+  const hideForever = () => {
+    stoppedRef.current = true;
+    timersRef.current.forEach(clearTimeout);
+    timersRef.current = [];
+    setIsVisible(false);
+    try {
+      window.localStorage.setItem(STORAGE_KEY, "true");
+    } catch {
+      // ignore (storage may be unavailable)
+    }
   };
 
   return (
@@ -124,49 +153,66 @@ export const RecentSalesNotification = () => {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: -400, opacity: 0 }}
           transition={{ type: "spring", stiffness: 260, damping: 20 }}
-          className="fixed bottom-6 left-6 z-50 max-w-sm w-full md:w-auto cursor-pointer"
+          className="fixed bottom-6 left-6 z-50 max-w-sm w-full md:w-auto"
         >
-          <a
-            href={installUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white rounded-xl shadow-2xl p-4 flex items-center gap-4 border border-slate-100 hover:border-indigo-200 transition-colors"
-          >
-            {/* Map Icon or Avatar Placeholder */}
-            <div className="flex-shrink-0 w-12 h-12 bg-indigo-50 rounded-full flex items-center justify-center text-2xl">
-              🌍
-            </div>
+          <div className="relative">
+            <a
+              href={installUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white rounded-xl shadow-2xl p-4 flex items-center gap-4 border border-slate-100 hover:border-indigo-200 transition-colors cursor-pointer"
+            >
+              {/* Map Icon or Avatar Placeholder */}
+              <div className="flex-shrink-0 w-12 h-12 bg-indigo-50 rounded-full flex items-center justify-center text-2xl">
+                🌍
+              </div>
 
-            <div className="flex flex-col">
-              <p className="text-[15px] leading-tight text-slate-800">
-                Someone in{" "}
-                <span className="font-bold text-indigo-600">
-                  {info.location}
-                </span>
-                <br />
-                Subscribed to{" "}
-                <span className="font-semibold text-slate-900">Pro</span>
-              </p>
-
-              <div className="flex items-center gap-1.5 mt-1">
-                <span className="text-xs text-slate-500 font-medium">
-                  {info.time}
-                </span>
-                <span className="text-slate-300 text-[10px]">•</span>
-                <div className="flex items-center gap-1">
-                  <div className="bg-indigo-600 rounded-full p-[1px]">
-                    <CheckCircle2
-                      className="w-2.5 h-2.5 text-white"
-                      strokeWidth={3}
-                    />
-                  </div>
-                  <span className="text-xs font-bold text-indigo-600">
-                    Verified by stripe
+              <div className="flex flex-col">
+                <p className="text-[15px] leading-tight text-slate-800">
+                  Someone in{" "}
+                  <span className="font-bold text-indigo-600">
+                    {info.location}
                   </span>
+                  <br />
+                  Subscribed to{" "}
+                  <span className="font-semibold text-slate-900">Pro</span>
+                </p>
+
+                <div className="flex items-center gap-1.5 mt-1">
+                  <span className="text-xs text-slate-500 font-medium">
+                    {info.time}
+                  </span>
+                  <span className="text-slate-300 text-[10px]">•</span>
+                  <div className="flex items-center gap-1">
+                    <div className="bg-indigo-600 rounded-full p-[1px]">
+                      <CheckCircle2
+                        className="w-2.5 h-2.5 text-white"
+                        strokeWidth={3}
+                      />
+                    </div>
+                    <span className="text-xs font-bold text-indigo-600">
+                      Verified by stripe
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
+            </a>
+
+            {/* Dismiss — hides these notifications for good */}
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                hideForever();
+              }}
+              aria-label="Hide these notifications"
+              title="Hide these notifications"
+              className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-slate-800 text-white border border-white/20 shadow-md flex items-center justify-center hover:bg-slate-700 transition-colors cursor-pointer"
+            >
+              <X className="w-3.5 h-3.5" />
+            </button>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>

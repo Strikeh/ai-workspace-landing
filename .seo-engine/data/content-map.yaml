@@ -1,5 +1,46 @@
 ﻿last_updated: "2026-07-19"
 
+  - slug: "chatgpt-extension-pricing-comparison"
+    title: "ChatGPT Extension Pricing: We Did the Math (2026)"
+    status: "human-review"
+    published_date: "2026-07-19"
+    cluster_id: "tc_chatgpt_extensions"
+    content_type: "cluster"
+    word_count: 2100
+    category: "Comparison"
+    primary_keyword: "chatgpt extension pricing"
+    hero_image: "/images/blog/chatgpt-extension-pricing-comparison/hero.jpg"
+    target_features:
+      - feat_isolated_workspaces
+      - feat_aes256_encryption
+      - feat_thread_trimming
+      - feat_text_highlighting
+      - feat_multi_format_export
+      - feat_local_first_storage
+      - feat_chatgpt_support
+      - feat_claude_support
+      - feat_grok_support
+    competitors_mentioned:
+      - comp_superpower_chatgpt
+      - comp_chatgpt_toolbox
+    internal_links:
+      - /blog/best-chatgpt-chrome-extensions-2026
+      - /blog/ai-workspace-vs-superpower-chatgpt-workspaces
+      - /blog/chatgpt-workspaces-complete-guide
+      - /blog/smart-thread-hiding-chatgpt-lag-fix
+    external_links:
+      - https://spchatgpt.com/pricing/
+      - https://www.ai-toolbox.co/
+    has_eeat_signals: true
+    eeat_notes: "Fargin tech testimonial (verbatim CWS review) + review link + 4.5-star rating, 73%/80% performance metrics, first-hand price verification dated Jul 19 2026"
+    has_tl_dr: true
+    has_faq: true
+    has_svg_chart: true
+    information_gain_markers: 2
+    citation_capsules: 2
+    needs_update_reason: ""
+    notes: "3-way pricing comparison (us vs Superpower ChatGPT vs ChatGPT Toolbox). All prices + feature claims verified 2026-07-19 via official sites. Competitor strengths acknowledged first per tone guide. Links to pillar best-chatgpt-chrome-extensions-2026. Hero image AI-generated via Higgsfield. PRICES MUST BE RE-VERIFIED if competitors change plans — re-check quarterly."
+
   - slug: "chatgpt-work-agent-explained"
     title: "ChatGPT Work Is Here: What OpenAI's Agent Means for You"
     status: "human-review"
@@ -260,7 +301,7 @@ blogs:
       - "best-chatgpt-chrome-extensions-2026"
     word_count: 2500
     has_eeat_signals: true
-    needs_update_reason: "Missing link to pillar (best-chatgpt-chrome-extensions-2026)"
+    needs_update_reason: "Missing link to pillar (best-chatgpt-chrome-extensions-2026). OUTDATED FEATURE CLAIMS (verified 2026-07-19): Superpower now HAS text highlights, tree map (branching), reference chats, prompt variables, prompt optimizer — post claims they lack several of these. Their site moved to spchatgpt.com. Pricing now $15/mo / $120/yr."
 
   - slug: "smart-conversation-outline-navigate-ai-chats"
     title: "Smart Conversation Outline: Navigate Long AI Chats Like a Pro"

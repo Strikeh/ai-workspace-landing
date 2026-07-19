@@ -2,6 +2,9 @@
 chatgpt workspaces,0,0,0,informational,awareness,,,"feat_isolated_workspaces,feat_unlimited_nested_folders",,tc_chatgpt_workspaces,pillar,high,planned,2026-03-27,seed,Primary topic — pillar keyword
 chatgpt work,0,0,0,informational,awareness,,,"feat_isolated_workspaces,feat_thread_trimming,feat_prompt_library",chatgpt-work-agent-explained,,standalone,high,human-review,2026-07-19,news,News keyword — OpenAI ChatGPT Work agent launch July 9 2026
 chatgpt work agent,0,0,0,informational,awareness,,,"feat_isolated_workspaces,feat_thread_trimming",chatgpt-work-agent-explained,,standalone,medium,human-review,2026-07-19,news,Secondary news keyword for ChatGPT Work post
+chatgpt extension pricing,0,0,0,commercial_investigation,consideration,,,"feat_isolated_workspaces,feat_local_first_storage",chatgpt-extension-pricing-comparison,tc_chatgpt_extensions,cluster,high,human-review,2026-07-19,user,3-way pricing comparison post
+superpower chatgpt pricing,0,0,0,commercial_investigation,consideration,,,,chatgpt-extension-pricing-comparison,tc_chatgpt_extensions,cluster,medium,human-review,2026-07-19,user,Covered in pricing comparison FAQ
+chatgpt toolbox pricing,0,0,0,commercial_investigation,consideration,,,,chatgpt-extension-pricing-comparison,tc_chatgpt_extensions,cluster,medium,human-review,2026-07-19,user,Covered in pricing comparison FAQ
 chatgpt chrome extension,0,0,0,commercial_investigation,awareness,,,"feat_chrome_extension",best-chatgpt-chrome-extensions-2026,tc_chatgpt_extensions,pillar,high,published,2026-03-27,seed,Primary topic — existing blog covers this
 ai productivity tools,0,0,0,informational,awareness,,,,,tc_ai_productivity,pillar,high,planned,2026-03-27,seed,Primary topic — pillar keyword
 prompt management,0,0,0,informational,awareness,,,"feat_prompt_library,feat_template_variables,feat_prompt_chains",,tc_prompt_management,pillar,high,planned,2026-03-27,seed,Primary topic — pillar keyword

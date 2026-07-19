@@ -1,6 +1,40 @@
 ﻿last_updated: "2026-07-19"
 
 queue:
+  - id: "q_014"
+    title: "ChatGPT Extension Pricing: We Did the Math (2026)"
+    blog_type: "comparison"
+    content_type: "cluster"
+    cluster_id: "tc_chatgpt_extensions"
+    target_keywords:
+      - "chatgpt extension pricing"
+      - "superpower chatgpt pricing"
+      - "chatgpt toolbox pricing"
+    target_features:
+      - "feat_isolated_workspaces"
+      - "feat_aes256_encryption"
+      - "feat_thread_trimming"
+      - "feat_multi_format_export"
+      - "feat_local_first_storage"
+    unique_angle: "Total-cost-of-ownership math nobody else publishes — free-tier limits, monthly/annual/lifetime, and 3-year cost across all three tools, every number verified same-day against official pricing pages with sources linked"
+    priority: "high"
+    priority_reason: "User request. Price is our strongest verified differentiator ($99 all-platform lifetime vs $149/none)."
+    status: "human-review"
+    published_slug: "chatgpt-extension-pricing-comparison"
+    published_date: "2026-07-19"
+    estimated_word_count: 2100
+    actual_word_count: 2100
+    eeat_plan: "Fargin tech testimonial + CWS review link, 73%/80% metrics, first-hand same-day price verification"
+    serp_analyzed: false
+    cannibalization_check: "passed — existing vs-superpower post is feature comparison (Feb 2026), q_005 (vs Toolbox features) still open; this post is pricing-focused across both"
+    notes: "Drafted 2026-07-19 without SERP data (user opted to proceed). Prices verified via spchatgpt.com/pricing and ai-toolbox.co same day. Discovered outdated claims in Feb vs-superpower post -> flagged needs_update in content-map."
+    depends_on: []
+    internal_link_targets:
+      - "best-chatgpt-chrome-extensions-2026"
+      - "ai-workspace-vs-superpower-chatgpt-workspaces"
+      - "chatgpt-workspaces-complete-guide"
+      - "smart-thread-hiding-chatgpt-lag-fix"
+
   - id: "q_013"
     title: "ChatGPT Work Is Here: What OpenAI's Agent Means for You"
     blog_type: "thought_leadership"

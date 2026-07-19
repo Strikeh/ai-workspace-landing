@@ -13,6 +13,237 @@
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "chatgpt-extension-pricing-comparison",
+    title: "ChatGPT Extension Pricing: We Did the Math (2026)",
+    excerpt:
+      "ChatGPT extension pricing compared: Superpower ChatGPT vs ChatGPT Toolbox vs AI Workspace Pro — free tiers, monthly, annual and lifetime, with the 3-year math.",
+    date: "Jul 19, 2026",
+    readTime: "10 min read",
+    category: "Comparison",
+    image: "/images/blog/chatgpt-extension-pricing-comparison/hero.jpg",
+    imageAlt:
+      "Comparing the pricing of ChatGPT Chrome extensions — subscription price tags on a scale",
+    ogImage: "/images/blog/chatgpt-extension-pricing-comparison/hero.jpg",
+    content: `
+      <p class="text-xl leading-relaxed text-slate-300 mb-8">
+        ChatGPT extensions all look similar on a feature page. The prices are where they quietly diverge — by hundreds of dollars over a few years. I sat down on July 19, 2026 and pulled the current pricing straight from the official pages of <strong class="text-white">Superpower ChatGPT</strong>, <strong class="text-white">ChatGPT Toolbox</strong> (AI Toolbox), and our own <strong class="text-white">AI Workspace Pro</strong>. Here's the math, with sources, so you can check every number yourself.
+      </p>
+
+      <div class="my-8">
+        <img src="/images/blog/chatgpt-extension-pricing-comparison/hero.jpg" alt="Price tags of three ChatGPT extensions compared on a scale" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+      </div>
+
+      <div class="my-10 p-6 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-xl">
+        <h3 class="text-2xl font-bold text-white mb-3">TL;DR</h3>
+        <p class="text-slate-300 m-0">
+          On monthly billing, AI Workspace Pro ($9.99) and ChatGPT Toolbox ($9.99 <em>per platform</em>) undercut Superpower ChatGPT ($15). On annual billing, AI Workspace Pro is the cheapest at $7.99/month ($95.88/year) vs $120/year for Superpower and $119.88/year for one Toolbox platform. The gap explodes on lifetime: AI Workspace Pro's $99 lifetime covers ChatGPT, Claude, and Grok together — Toolbox charges $99 for a <em>single</em> platform or $149 for all, and Superpower offers no lifetime at all. Prices verified July 19, 2026.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">ChatGPT extension pricing at a glance</h2>
+
+      <p class="text-slate-300 mb-6">
+        All three tools are freemium Chrome extensions that add organization, prompts, and export tools on top of ChatGPT. Here's what the paid tiers cost today, straight from each pricing page:
+      </p>
+
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full text-sm text-left text-slate-300 border border-white/10 rounded-lg">
+          <thead class="text-white bg-slate-800/60">
+            <tr>
+              <th class="px-4 py-3"></th>
+              <th class="px-4 py-3">AI Workspace Pro</th>
+              <th class="px-4 py-3">Superpower ChatGPT</th>
+              <th class="px-4 py-3">ChatGPT Toolbox</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-semibold text-white">Monthly</td>
+              <td class="px-4 py-3">$9.99</td>
+              <td class="px-4 py-3">$15</td>
+              <td class="px-4 py-3">$9.99 <em>per platform</em></td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-semibold text-white">Annual (per month)</td>
+              <td class="px-4 py-3 text-cyan-400 font-semibold">$7.99 ($95.88/yr)</td>
+              <td class="px-4 py-3">$10 ($120/yr)</td>
+              <td class="px-4 py-3">$9.99/mo, no annual discount listed</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-semibold text-white">Lifetime</td>
+              <td class="px-4 py-3 text-cyan-400 font-semibold">$99 — all platforms (launch deal, reg. $299)</td>
+              <td class="px-4 py-3">Not offered</td>
+              <td class="px-4 py-3">$99 per platform / $149 all platforms</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-semibold text-white">Platforms covered</td>
+              <td class="px-4 py-3">ChatGPT, Claude, Grok — one price</td>
+              <td class="px-4 py-3">ChatGPT (Chrome & Firefox)</td>
+              <td class="px-4 py-3">ChatGPT, Gemini, Claude, Grok — priced per platform</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-slate-300 mb-6">
+        Sources: the official <a href="https://spchatgpt.com/pricing/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300">Superpower ChatGPT pricing page</a> and <a href="https://www.ai-toolbox.co/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300">ai-toolbox.co</a>, both checked July 19, 2026. Prices can change — always confirm on their pages.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">The 3-year math</h2>
+
+      <p class="text-slate-300 mb-6">
+        Subscriptions hide their real cost in the long run. If you use a ChatGPT extension daily — and power users do — here's what three years looks like on each tool's best non-monthly deal:
+      </p>
+
+      <div class="my-8 p-6 bg-slate-800/40 border border-white/10 rounded-xl">
+        <svg viewBox="0 0 640 240" role="img" aria-label="Bar chart comparing 3-year cost: AI Workspace Pro lifetime 99 dollars, ChatGPT Toolbox all-platform lifetime 149 dollars, AI Workspace Pro annual 288 dollars, ChatGPT Toolbox annual single platform 360 dollars, Superpower ChatGPT annual 360 dollars" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+          <text x="0" y="20" fill="#94a3b8" font-size="13">3-year cost of ownership (USD)</text>
+          <g font-size="12">
+            <text x="0" y="52" fill="#e2e8f0">AI Workspace Pro — Lifetime</text>
+            <rect x="230" y="40" width="88" height="16" rx="3" fill="#22d3ee"></rect>
+            <text x="326" y="53" fill="#22d3ee" font-weight="bold">$99</text>
+            <text x="0" y="90" fill="#e2e8f0">Toolbox — Lifetime (all)</text>
+            <rect x="230" y="78" width="132" height="16" rx="3" fill="#64748b"></rect>
+            <text x="370" y="91" fill="#94a3b8">$149</text>
+            <text x="0" y="128" fill="#e2e8f0">AI Workspace Pro — Annual</text>
+            <rect x="230" y="116" width="256" height="16" rx="3" fill="#0891b2"></rect>
+            <text x="494" y="129" fill="#94a3b8">$288</text>
+            <text x="0" y="166" fill="#e2e8f0">Toolbox — Annual (1 platform)</text>
+            <rect x="230" y="154" width="320" height="16" rx="3" fill="#475569"></rect>
+            <text x="558" y="167" fill="#94a3b8">$360</text>
+            <text x="0" y="204" fill="#e2e8f0">Superpower — Annual</text>
+            <rect x="230" y="192" width="320" height="16" rx="3" fill="#475569"></rect>
+            <text x="558" y="205" fill="#94a3b8">$360</text>
+          </g>
+          <text x="0" y="232" fill="#64748b" font-size="10">Source: official pricing pages, verified Jul 19, 2026. Annual = 3 × yearly price.</text>
+        </svg>
+      </div>
+
+      <p class="text-slate-300 mb-6">
+        Two things stand out. First, Superpower ChatGPT is the most expensive way to organize ChatGPT over any multi-year horizon, because it has no lifetime option — you keep paying $120 every year. Second, ChatGPT Toolbox's headline prices look identical to ours until you notice the per-platform asterisk: if you work across ChatGPT and Claude, their $99 lifetime becomes $198, or you take the $149 all-access tier. AI Workspace Pro's $99 lifetime covers every supported platform, full stop.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">What the free tiers actually give you</h2>
+
+      <p class="text-slate-300 mb-6">
+        Every freemium tool limits its free tier — including ours. The difference is where the limits bite:
+      </p>
+
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full text-sm text-left text-slate-300 border border-white/10 rounded-lg">
+          <thead class="text-white bg-slate-800/60">
+            <tr>
+              <th class="px-4 py-3">Free tier</th>
+              <th class="px-4 py-3">AI Workspace Pro</th>
+              <th class="px-4 py-3">Superpower ChatGPT</th>
+              <th class="px-4 py-3">ChatGPT Toolbox</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-semibold text-white">Folders</td>
+              <td class="px-4 py-3">Limited</td>
+              <td class="px-4 py-3">Up to 5</td>
+              <td class="px-4 py-3">Up to 2</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-semibold text-white">Saved prompts</td>
+              <td class="px-4 py-3">Limited, with chains & favorites</td>
+              <td class="px-4 py-3">Up to 5</td>
+              <td class="px-4 py-3">Up to 2</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-semibold text-white">Export formats</td>
+              <td class="px-4 py-3 text-cyan-400">PDF, Markdown, TXT, JSON</td>
+              <td class="px-4 py-3">Single-chat basics</td>
+              <td class="px-4 py-3">TXT only</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-semibold text-white">Text highlighting</td>
+              <td class="px-4 py-3">Included</td>
+              <td class="px-4 py-3">Included</td>
+              <td class="px-4 py-3">Bookmarks (up to 2)</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-semibold text-white">Performance (thread trimming)</td>
+              <td class="px-4 py-3 text-cyan-400">Included</td>
+              <td class="px-4 py-3">Not offered</td>
+              <td class="px-4 py-3">Not offered</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-slate-300 mb-6">
+        Worth mentioning: exports and <a href="/blog/smart-thread-hiding-chatgpt-lag-fix" class="text-cyan-400 hover:text-cyan-300">Smart Thread Trimming</a> are free in AI Workspace Pro because they solve the two complaints we hear most — "I can't get my conversations out" and "ChatGPT gets slow." Trimming cut memory use by 73% and made scrolling 80% faster in our long-conversation testing, and you don't pay for it.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Cheaper — but do you give up features?</h2>
+
+      <p class="text-slate-300 mb-6">
+        Fair question, because both competitors are genuinely good at what they do. Superpower ChatGPT is the veteran of this category with a deep toolset — folders, a prompt manager with variables, a tree map for branched conversations, highlights, notes, reference chats, an image gallery, and audio features like voice mode and an audio player that we don't offer. ChatGPT Toolbox covers four platforms including Gemini, ships a 10-language UI, and has an enterprise plan with an admin dashboard.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        So where does AI Workspace Pro justify costing less while claiming more? Four structural differences, based on their published feature lists as of July 19, 2026 (check <a href="https://spchatgpt.com/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300">spchatgpt.com</a> and <a href="https://www.ai-toolbox.co/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300">ai-toolbox.co</a> for the latest):
+      </p>
+
+      <ul class="text-slate-300 mb-8 space-y-3 list-disc pl-6">
+        <li><strong class="text-white">Isolated workspaces.</strong> Both competitors organize with folders inside one shared space. AI Workspace Pro gives each client or project its own workspace with complete context separation — the core idea in our <a href="/blog/chatgpt-workspaces-complete-guide" class="text-cyan-400 hover:text-cyan-300">ChatGPT workspaces guide</a>.</li>
+        <li><strong class="text-white">AES-256 encrypted vaults.</strong> Neither competitor lists workspace encryption. If your chats contain client data, that's not a nice-to-have.</li>
+        <li><strong class="text-white">Multi-AI at one price.</strong> ChatGPT, Claude, and Grok are covered by every AI Workspace Pro plan. Superpower is ChatGPT-only; Toolbox supports four platforms but bills them separately.</li>
+        <li><strong class="text-white">Performance tools.</strong> Thread trimming, a conversation outline, and Tangent View for branch visualization keep long conversations usable — the area both competitors leave untouched.</li>
+      </ul>
+
+      <blockquote class="border-l-4 border-cyan-500 pl-6 my-8 text-slate-300 italic">
+        "Must-have for AI power users; polished, free for core features, boosts productivity massively."
+        <footer class="text-slate-400 not-italic mt-2">— Fargin tech, <a href="https://chromewebstore.google.com/detail/ai-workspace-pro-chatgpt/mngeddjcngpcdakdhfcbaefeonmmeomg/reviews" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300">Chrome Web Store review</a> (4.5★ average)</footer>
+      </blockquote>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Who should choose what</h2>
+
+      <ul class="text-slate-300 mb-8 space-y-3 list-disc pl-6">
+        <li><strong class="text-white">Choose Superpower ChatGPT</strong> if you want audio features (voice mode, response audio player), a message queue, or Firefox support, and a $120/year subscription fits your budget. Our <a href="/blog/ai-workspace-vs-superpower-chatgpt-workspaces" class="text-cyan-400 hover:text-cyan-300">full Superpower ChatGPT comparison</a> goes deeper.</li>
+        <li><strong class="text-white">Choose ChatGPT Toolbox</strong> if Gemini is your daily driver — neither we nor Superpower cover it — or you need their enterprise seat management.</li>
+        <li><strong class="text-white">Choose AI Workspace Pro</strong> if you work across ChatGPT, Claude, or Grok, keep client work separated, care about local-first privacy, or simply want the lowest total cost — especially the $99 all-platform lifetime.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">FAQ</h2>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">How much does Superpower ChatGPT cost?</h3>
+      <p class="text-slate-300 mb-6">
+        As of July 19, 2026: $15/month billed monthly, or $120/year billed annually. There is no lifetime plan. The free tier includes up to 5 folders and 5 saved prompts.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">How much does ChatGPT Toolbox cost?</h3>
+      <p class="text-slate-300 mb-6">
+        As of July 19, 2026: $9.99/month per platform, a $99 single-platform lifetime, or a $149 all-platform lifetime covering ChatGPT, Gemini, Claude, and Grok. The free tier allows 2 folders, 2 saved prompts, and TXT-only exports.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Is the cheapest ChatGPT extension actually good enough?</h3>
+      <p class="text-slate-300 mb-6">
+        Price and depth aren't opposites here. AI Workspace Pro undercuts both competitors while being the only one of the three with isolated workspaces, AES-256 encrypted vaults, and performance trimming — though if you specifically need audio features or Gemini support, one of the others may fit better.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Do these prices change?</h3>
+      <p class="text-slate-300 mb-6">
+        Yes — all three products iterate on pricing. Every number in this post was verified on July 19, 2026 against the official pricing pages linked above; treat those pages as the source of truth.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Final verdict</h2>
+
+      <p class="text-slate-300 mb-6">
+        All three extensions are legitimate tools, and the "right" one depends on your platform mix and feature needs. But on pure economics the ranking is clear: AI Workspace Pro is the cheapest per month on annual billing, the only one with an all-platform lifetime under $100, and the only one where a three-year power user can cap their total spend at $99 — versus $360 for the competition's subscriptions. If you're comparing the broader field, our <a href="/blog/best-chatgpt-chrome-extensions-2026" class="text-cyan-400 hover:text-cyan-300">best ChatGPT Chrome extensions guide</a> covers the whole landscape.
+      </p>
+
+      <div class="my-10 p-6 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-xl text-center">
+        <h3 class="text-2xl font-bold text-white mb-3">Do the math yourself — start free</h3>
+        <p class="text-slate-300 mb-6">Workspaces, prompts, highlights, trimming, and exports across ChatGPT, Claude & Grok. Upgrade only if it earns it.</p>
+        <a href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 text-base font-bold text-white no-underline">Try AI Workspace Pro free</a>
+      </div>
+    `,
+  },
+  {
     slug: "chatgpt-work-agent-explained",
     title: "ChatGPT Work Is Here: What OpenAI's Agent Means for You",
     excerpt:

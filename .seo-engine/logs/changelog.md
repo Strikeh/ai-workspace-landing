@@ -1,4 +1,16 @@
-﻿## 2026-07-19 12:00
+﻿## 2026-07-19 14:00
+**Action:** Drafted 3-way pricing comparison blog "ChatGPT Extension Pricing: We Did the Math (2026)" (slug: chatgpt-extension-pricing-comparison) + fresh competitor verification
+**Files:**
+- src/data/blog-posts.ts (new post at top, status human-review, category Comparison, inline SVG 3-year-cost chart)
+- public/images/blog/chatgpt-extension-pricing-comparison/hero.jpg (Higgsfield-generated)
+- .seo-engine/data/competitors.yaml (MAJOR update: Superpower website moved to spchatgpt.com; full pricing verified $15/mo, $120/yr, no lifetime, free-tier limits; feature matrix corrected — SP now HAS highlights, tree map, reference chats, variables, optimizer (all verified 2026-07-19). ChatGPT Toolbox fully verified: $9.99/mo per platform, $99/platform or $149 all-access lifetime, tight free tier, 4 platforms incl. Gemini)
+- .seo-engine/data/content-map.yaml (registered post; flagged ai-workspace-vs-superpower-chatgpt-workspaces needs_update for outdated feature claims)
+- .seo-engine/data/content-queue.yaml (added q_014, human-review)
+- .seo-engine/data/seo-keywords.csv (added chatgpt extension pricing, superpower chatgpt pricing, chatgpt toolbox pricing)
+**Summary:** User-requested price-focused comparison. All prices verified same-day via spchatgpt.com/pricing and ai-toolbox.co. Key story: $7.99/mo annual (vs $10/$9.99-per-platform) and $99 all-platform lifetime (vs none/$149). Competitor strengths acknowledged first (SP audio/voice/queue/Firefox; Toolbox Gemini/enterprise/i18n). Discovered Feb comparison post has outdated "SP lacks X" claims — flagged for update, NOT silently fixed. No SERP data (user opted to proceed).
+**Triggered by:** user
+
+## 2026-07-19 12:00
 **Action:** Drafted news-driven thought leadership blog "ChatGPT Work Is Here: What OpenAI's Agent Means for You" (slug: chatgpt-work-agent-explained) + 2 AI-generated images
 **Files:**
 - src/data/blog-posts.ts (new post at top of array, status human-review, date Jul 19 2026, category Productivity)

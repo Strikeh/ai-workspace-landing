@@ -1,15 +1,22 @@
-﻿last_updated: "2026-03-27"
-last_verified: "2026-03-27"
+﻿last_updated: "2026-07-19"
+last_verified: "2026-07-19"
 
 competitors:
   - id: "comp_superpower_chatgpt"
     name: "Superpower ChatGPT"
-    website: "https://superpowerchatgpt.com"
+    website: "https://spchatgpt.com"
     category: "ChatGPT Chrome Extension"
     pricing_model: "freemium"
-    strengths: "First mover in ChatGPT extensions, established user base (~100K users), folder organization, prompt library, cloud sync"
-    weaknesses: "Single workspace (no context isolation), cloud-based storage (privacy concern), no AES-256 encryption"
-    notes: "Primary direct competitor. Compared in blog: ai-workspace-vs-superpower-chatgpt-workspaces"
+    pricing:
+      monthly: "$15/month"
+      annual: "$120/year ($10/month)"
+      lifetime: "not offered"
+      free_tier_limits: "5 folders, 5 prompt folders, 5 saved prompts, 2-step chains, 5 queued messages, tree map limited to 20 messages, 2 instruction profiles, single-chat export basics"
+      last_verified: "2026-07-19"
+      source: "https://spchatgpt.com/pricing/"
+    strengths: "First mover in ChatGPT extensions, established user base, deep toolset verified 2026-07-19 via homepage: folders/subfolders, bulk actions, prompt manager with variables + optimizer + history, message queue, instruction profiles, tree map (branch visualization), minimap, conversation notes, reference chats, text highlights with annotations, image gallery, voice mode, audio player/audio export, PDF/MD/JSON export, ad blocking, Firefox support"
+    weaknesses: "Single workspace (no context isolation), no AES-256 encryption listed, no thread trimming / performance tools listed, ChatGPT-only (chatgpt.com), no lifetime plan, most expensive monthly ($15)"
+    notes: "Primary direct competitor. Website moved to spchatgpt.com (was superpowerchatgpt.com). Compared in blogs: ai-workspace-vs-superpower-chatgpt-workspaces (Feb 2026 — feature claims partly outdated, needs update), is-superpower-chatgpt-safe, chatgpt-extension-pricing-comparison (Jul 2026, pricing verified)"
 
   - id: "comp_sider"
     name: "Sider"
@@ -23,11 +30,19 @@ competitors:
   - id: "comp_chatgpt_toolbox"
     name: "ChatGPT Toolbox"
     website: "https://www.ai-toolbox.co/"
-    category: "ChatGPT Chrome Extension"
-    pricing_model: "unknown"
-    strengths: ""
-    weaknesses: ""
-    notes: "Not yet verified. Added from user input."
+    category: "Multi-platform AI Chrome Extension (AI Toolbox)"
+    pricing_model: "freemium"
+    pricing:
+      monthly: "$9.99/month PER PLATFORM"
+      annual: "no annual discount listed"
+      lifetime: "$99 single platform / $149 all-access (all platforms incl. future)"
+      enterprise: "$10/seat/month billed annually, 5-seat minimum"
+      free_tier_limits: "2 folders, 2 bookmarks/pins, 2 saved prompts, 5 search results per query, TXT export only, smart tags limited to 50 conversations, 3 context mentions/day, 5-image media gallery"
+      last_verified: "2026-07-19"
+      source: "https://www.ai-toolbox.co/"
+    strengths: "Verified 2026-07-19 via homepage: supports 4 platforms (ChatGPT, Gemini, Claude, Grok — incl. Gemini which we lack), cross-device sync, 10-language UI with RTL, public prompt library, full-text search, smart tags, prompt chaining (up to 10 steps paid), bulk export TXT/MD/JSON/PDF (paid), audio downloads with 9 voices (paid), enterprise plan with admin dashboard, claims local-first + GDPR, 14-day money-back, ~35K users, 4.5/5 CWS"
+    weaknesses: "Per-platform pricing (each platform billed separately), very tight free tier (2 folders/2 prompts/TXT-only export), no isolated workspaces, no encryption listed, no thread trimming / performance tools listed"
+    notes: "Verified 2026-07-19 via site fetch. Compared in blog: chatgpt-extension-pricing-comparison. Their blog inspired organize-chatgpt-conversations-2026."
 
   - id: "comp_gpt_master"
     name: "GPT Master"
@@ -223,11 +238,11 @@ feature_matrix:
       tier: "free"
     competitors:
       comp_superpower_chatgpt:
-        supported: false
-        details: "No text highlighting"
-        tier: "n/a"
-        confidence: "from_blog"
-        last_verified: "2026-02-16"
+        supported: true
+        details: "Text highlights with color-coded annotations (listed on homepage; included on free tier per pricing page)"
+        tier: "free"
+        confidence: "verified"
+        last_verified: "2026-07-19"
       comp_sider:
         supported: null
         details: ""
@@ -274,11 +289,11 @@ feature_matrix:
       tier: "free"
     competitors:
       comp_superpower_chatgpt:
-        supported: null
-        details: ""
-        tier: "unknown"
-        confidence: "unverified"
-        last_verified: ""
+        supported: true
+        details: "Prompt variables for dynamic templates (listed on homepage; Pro-only per pricing page)"
+        tier: "pro"
+        confidence: "verified"
+        last_verified: "2026-07-19"
       comp_sider:
         supported: null
         details: ""
@@ -299,11 +314,11 @@ feature_matrix:
       tier: "freemium"
     competitors:
       comp_superpower_chatgpt:
-        supported: null
-        details: "Not listed among their features (prompt library yes, optimizer unconfirmed)"
-        tier: "unknown"
-        confidence: "unverified"
-        last_verified: ""
+        supported: true
+        details: "Prompt optimizer (listed on homepage; Pro-only per pricing page)"
+        tier: "pro"
+        confidence: "verified"
+        last_verified: "2026-07-19"
       comp_sider:
         supported: null
         details: ""
@@ -326,11 +341,11 @@ feature_matrix:
       tier: "free"
     competitors:
       comp_superpower_chatgpt:
-        supported: false
-        details: "No conversation branching visualization"
-        tier: "n/a"
-        confidence: "from_blog"
-        last_verified: "2026-03-11"
+        supported: true
+        details: "Tree map for branched conversations (listed on homepage; free tier limited to 20 messages, unlimited on Pro)"
+        tier: "freemium"
+        confidence: "verified"
+        last_verified: "2026-07-19"
       comp_sider:
         supported: null
         details: ""
@@ -351,11 +366,11 @@ feature_matrix:
       tier: "pro"
     competitors:
       comp_superpower_chatgpt:
-        supported: null
-        details: ""
-        tier: "unknown"
-        confidence: "unverified"
-        last_verified: ""
+        supported: true
+        details: "Reference chats — attach prior conversations as context (listed on homepage; Pro-only per pricing page)"
+        tier: "pro"
+        confidence: "verified"
+        last_verified: "2026-07-19"
       comp_sider:
         supported: null
         details: ""

@@ -38,6 +38,7 @@ categories:
               - slug: "getting-started-with-ai-workspace"
               - slug: "ai-workspace-vs-superpower-chatgpt-workspaces"
               - slug: "best-chatgpt-chrome-extensions-2026"
+              - slug: "chatgpt-work-agent-explained"
             tags: ["workspaces", "isolation", "core", "differentiator"]
             notes: "Primary differentiator vs competitors"
       - id: "sub_tagging_search"
@@ -177,6 +178,7 @@ categories:
               - slug: "smart-thread-hiding-chatgpt-lag-fix"
               - slug: "ai-workspace-vs-superpower-chatgpt-workspaces"
               - slug: "best-chatgpt-chrome-extensions-2026"
+              - slug: "chatgpt-work-agent-explained"
             tags: ["performance", "speed", "differentiator"]
             notes: "Key metric: 73% memory reduction, 80% faster scrolling"
       - id: "sub_feedback"
@@ -195,6 +197,7 @@ categories:
               - slug: "master-chatgpt-with-smart-highlights"
               - slug: "ai-workspace-vs-superpower-chatgpt-workspaces"
               - slug: "best-chatgpt-chrome-extensions-2026"
+              - slug: "chatgpt-work-agent-explained"
             tags: ["highlighting", "annotation", "productivity"]
             notes: "Keyboard shortcut: Ctrl/Cmd + Shift + H"
           - id: "feat_audio_notifications"
@@ -229,6 +232,7 @@ categories:
               - slug: "getting-started-with-ai-workspace"
               - slug: "best-chatgpt-chrome-extensions-2026"
               - slug: "chatgpt-prompt-library"
+              - slug: "chatgpt-work-agent-explained"
             tags: ["prompts", "library", "core"]
             notes: ""
           - id: "feat_quick_slash_access"
@@ -283,6 +287,7 @@ categories:
             blog_refs:
               - slug: "chatgpt-for-blogging-complete-guide"
               - slug: "chatgpt-prompt-library"
+              - slug: "chatgpt-work-agent-explained"
             tags: ["prompts", "templates", "variables"]
             notes: ""
           - id: "feat_prompt_chains"
@@ -397,6 +402,7 @@ categories:
             blog_refs:
               - slug: "getting-started-with-ai-workspace"
               - slug: "best-chatgpt-chrome-extensions-2026"
+              - slug: "chatgpt-work-agent-explained"
             tags: ["notes", "annotation"]
             notes: ""
           - id: "feat_multi_format_export"
@@ -484,6 +490,7 @@ categories:
                 section: "Privacy & Security"
             blog_refs:
               - slug: "best-chatgpt-chrome-extensions-2026"
+              - slug: "chatgpt-work-agent-explained"
             tags: ["privacy", "local-storage", "differentiator"]
             notes: "Key differentiator vs cloud-based competitors"
           - id: "feat_aes256_encryption"
@@ -497,6 +504,7 @@ categories:
               - slug: "getting-started-with-ai-workspace"
               - slug: "ai-workspace-vs-superpower-chatgpt-workspaces"
               - slug: "best-chatgpt-chrome-extensions-2026"
+              - slug: "chatgpt-work-agent-explained"
             tags: ["privacy", "encryption", "security", "differentiator"]
             notes: ""
           - id: "feat_zero_tracking"

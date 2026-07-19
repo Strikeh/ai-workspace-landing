@@ -1,4 +1,41 @@
-﻿last_updated: "2026-06-06"
+﻿last_updated: "2026-07-19"
+
+  - slug: "chatgpt-work-agent-explained"
+    title: "ChatGPT Work Is Here: What OpenAI's Agent Means for You"
+    status: "human-review"
+    published_date: "2026-07-19"
+    cluster_id: ""
+    content_type: "standalone"
+    word_count: 1750
+    category: "Productivity"
+    primary_keyword: "chatgpt work"
+    hero_image: "/images/blog/chatgpt-work-agent-explained/hero.jpg"
+    target_features:
+      - feat_isolated_workspaces
+      - feat_aes256_encryption
+      - feat_prompt_library
+      - feat_template_variables
+      - feat_thread_trimming
+      - feat_text_highlighting
+      - feat_notes_system
+      - feat_local_first_storage
+    competitors_mentioned: []
+    internal_links:
+      - /blog/chatgpt-workspaces-complete-guide
+      - /blog/organize-chatgpt-conversations-2026
+      - /blog/smart-thread-hiding-chatgpt-lag-fix
+    external_links:
+      - https://openai.com/index/introducing-workspace-agents-in-chatgpt/
+      - https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/07/09/openai-launches-chatgpt-work/
+    has_eeat_signals: true
+    eeat_notes: "Deniz testimonial (verbatim CWS review) + review link, 73% memory reduction + 80% faster scrolling metrics, personal experience on conversation volume growth"
+    has_tl_dr: true
+    has_faq: true
+    has_svg_chart: false
+    information_gain_markers: 1
+    citation_capsules: 0
+    needs_update_reason: ""
+    notes: "News-driven thought leadership (ChatGPT Work + GPT-5.6 launch, July 9 2026). Standalone like wall-street-ai-revolution. No SERP data (breaking-news topic, no PAA exists yet) — FAQ questions are editorial. Images: 2 AI-generated via Higgsfield (nano banana), self-hosted."
 
   - slug: "chatgpt-prompt-library"
     title: "ChatGPT Prompt Library: Build & Organize Your Best Prompts"

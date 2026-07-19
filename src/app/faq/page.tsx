@@ -39,7 +39,7 @@ const faqCategories: FaqCategory[] = [
       },
       {
         q: "Is AI Workspace free?",
-        a: "Yes. The core features are free forever: custom workspaces, basic prompt management, folders, and local history. Pro ($9.99/month billed annually, or $11.99/month billed monthly) adds unlimited prompts, vaults and notes, encrypted storage, the full Image Gallery, Smart Conversation Outline, unlimited folders and categories, pinned messages, and multi-platform support.",
+        a: "Yes. The core features are free forever: custom workspaces, basic prompt management, folders, and local history. Pro ($7.99/month billed annually, or $9.99/month billed monthly) adds unlimited prompts, vaults and notes, encrypted storage, the full Image Gallery, Smart Conversation Outline, unlimited folders and categories, pinned messages, and multi-platform support.",
       },
       {
         q: "Do I need a ChatGPT Plus subscription?",
@@ -171,7 +171,7 @@ const faqCategories: FaqCategory[] = [
     items: [
       {
         q: "What's the difference between Free and Pro?",
-        a: "Free includes limited prompts and notes, 1 vault, and no encryption. Pro ($9.99/month billed annually or $11.99/month billed monthly) offers unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, Smart Conversation Outline, unlimited folders & categories, pinned messages, and multi-platform support.",
+        a: "Free includes limited prompts and notes, 1 vault, and no encryption. Pro ($7.99/month billed annually or $9.99/month billed monthly) offers unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, Smart Conversation Outline, unlimited folders & categories, pinned messages, and multi-platform support.",
       },
       {
         q: "Can I cancel anytime?",

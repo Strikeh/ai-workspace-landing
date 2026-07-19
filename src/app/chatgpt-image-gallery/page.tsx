@@ -65,7 +65,7 @@ const faqs = [
   },
   {
     q: "Is the image gallery free?",
-    a: "The core gallery is included free. The full Image Gallery experience is part of Pro ($9.99/month billed annually), alongside unlimited prompts, notes, vaults, and encrypted storage.",
+    a: "The core gallery is included free. The full Image Gallery experience is part of Pro ($7.99/month billed annually), alongside unlimited prompts, notes, vaults, and encrypted storage.",
   },
 ];
 

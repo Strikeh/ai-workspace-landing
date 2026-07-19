@@ -70,7 +70,7 @@ export const guides: Guide[] = [
       },
       {
         q: "How many ChatGPT conversations can I organize for free?",
-        a: "AI Workspace Pro's core organization features — folders, workspaces, tags and pins — are free with no account required. Pro ($9.99/month billed annually) adds extras like encrypted vaults and unlimited prompts, but basic organization doesn't need it.",
+        a: "AI Workspace Pro's core organization features — folders, workspaces, tags and pins — are free with no account required. Pro ($7.99/month billed annually) adds extras like encrypted vaults and unlimited prompts, but basic organization doesn't need it.",
       },
       {
         q: "Does organizing conversations change anything in my ChatGPT account?",
@@ -254,7 +254,7 @@ export const guides: Guide[] = [
       },
       {
         q: "How many prompts can I save for free?",
-        a: "AI Workspace Pro's free tier includes the core prompt library with slash insertion, tags, folders and pinned favorites. Pro ($9.99/month billed annually, or $11.99 monthly) removes limits with unlimited prompts plus extras like encrypted vaults.",
+        a: "AI Workspace Pro's free tier includes the core prompt library with slash insertion, tags, folders and pinned favorites. Pro ($7.99/month billed annually, or $9.99 monthly) removes limits with unlimited prompts plus extras like encrypted vaults.",
       },
       {
         q: "Do saved prompts work on Claude and Grok too?",
@@ -436,7 +436,7 @@ export const guides: Guide[] = [
       },
       {
         title: "Encrypt sensitive client workspaces with AES-256 vaults",
-        body: `<p class="text-slate-300 mb-4">For clients under NDA or anyone whose data genuinely matters, turn the workspace into an encrypted vault. Vaults use <strong class="text-white">AES-256 encryption</strong> on the locally stored data, so organization data for that client is unreadable without the vault being unlocked — a meaningful line in a "how do you handle our information?" conversation. Encrypted vaults are part of Pro ($9.99/month billed annually); workspace isolation itself stays free. When an engagement ends, export the final conversations as PDFs for your records, then archive the workspace.</p>`,
+        body: `<p class="text-slate-300 mb-4">For clients under NDA or anyone whose data genuinely matters, turn the workspace into an encrypted vault. Vaults use <strong class="text-white">AES-256 encryption</strong> on the locally stored data, so organization data for that client is unreadable without the vault being unlocked — a meaningful line in a "how do you handle our information?" conversation. Encrypted vaults are part of Pro ($7.99/month billed annually); workspace isolation itself stays free. When an engagement ends, export the final conversations as PDFs for your records, then archive the workspace.</p>`,
       },
     ],
     faqs: [
@@ -454,7 +454,7 @@ export const guides: Guide[] = [
       },
       {
         q: "Is AES-256 encryption available on the free plan?",
-        a: "Encrypted vaults are a Pro feature ($9.99/month billed annually, $11.99 monthly). The free tier still includes isolated workspaces, folders and tags — and all data is local-first regardless of plan, with zero telemetry.",
+        a: "Encrypted vaults are a Pro feature ($7.99/month billed annually, $9.99 monthly). The free tier still includes isolated workspaces, folders and tags — and all data is local-first regardless of plan, with zero telemetry.",
       },
     ],
     relatedFeature: { label: "ChatGPT Workspaces", href: "/chatgpt-workspaces" },
@@ -558,7 +558,7 @@ export const guides: Guide[] = [
       },
       {
         title: "Enable AES-256 encrypted vaults for the data that matters most",
-        body: `<p class="text-slate-300 mb-4">For the highest-stakes workspaces, enable vault encryption. Vaults encrypt the locally stored data with <strong class="text-white">AES-256</strong>, so even someone with access to your machine can't read that workspace's contents without unlocking it. Freelancers handling NDA-covered work use this per client — the <a href="/freelancers" class="text-cyan-400 hover:text-cyan-300">freelancer setup</a> shows the pattern. Vaults are part of Pro ($9.99/month billed annually); the local-first architecture applies to every plan.</p>`,
+        body: `<p class="text-slate-300 mb-4">For the highest-stakes workspaces, enable vault encryption. Vaults encrypt the locally stored data with <strong class="text-white">AES-256</strong>, so even someone with access to your machine can't read that workspace's contents without unlocking it. Freelancers handling NDA-covered work use this per client — the <a href="/freelancers" class="text-cyan-400 hover:text-cyan-300">freelancer setup</a> shows the pattern. Vaults are part of Pro ($7.99/month billed annually); the local-first architecture applies to every plan.</p>`,
       },
       {
         title: "Adopt habits that close the remaining gaps",
@@ -638,7 +638,7 @@ export const guides: Guide[] = [
       },
       {
         q: "Are extension folders free?",
-        a: "AI Workspace Pro's folders, tags, pins and workspaces are free core features, with no account required. Pro ($9.99/month billed annually) adds extras like AES-256 encrypted vaults, unlimited prompts and the full Image Gallery.",
+        a: "AI Workspace Pro's folders, tags, pins and workspaces are free core features, with no account required. Pro ($7.99/month billed annually) adds extras like AES-256 encrypted vaults, unlimited prompts and the full Image Gallery.",
       },
       {
         q: "What happens to my folders if I uninstall the extension?",

@@ -1,6 +1,42 @@
-﻿last_updated: "2026-03-27"
+﻿last_updated: "2026-07-19"
 
 queue:
+  - id: "q_013"
+    title: "ChatGPT Work Is Here: What OpenAI's Agent Means for You"
+    blog_type: "thought_leadership"
+    content_type: "standalone"
+    cluster_id: ""
+    target_keywords:
+      - "chatgpt work"
+      - "chatgpt work agent"
+      - "gpt-5.6"
+    target_features:
+      - "feat_isolated_workspaces"
+      - "feat_prompt_library"
+      - "feat_template_variables"
+      - "feat_thread_trimming"
+      - "feat_text_highlighting"
+      - "feat_notes_system"
+      - "feat_local_first_storage"
+      - "feat_aes256_encryption"
+    unique_angle: "Agents make organization MORE important, not less — when ChatGPT works for hours unattended, the bottleneck shifts from writing prompts to managing and reviewing the flood of output. Nobody covers the organization angle of agent adoption."
+    priority: "high"
+    priority_reason: "News-driven (July 9, 2026 launch) — freshness window. User requested topical post."
+    status: "human-review"
+    published_slug: "chatgpt-work-agent-explained"
+    published_date: "2026-07-19"
+    estimated_word_count: 1800
+    actual_word_count: 1750
+    eeat_plan: "Deniz testimonial + CWS review link, 73%/80% performance metrics, personal experience"
+    serp_analyzed: false
+    cannibalization_check: "passed"
+    notes: "Drafted 2026-07-19 without SERP data (breaking-news topic ~10 days old, no established SERP/PAA). Facts verified via OpenAI announcement, Bloomberg/BNN, releasebot.io release notes."
+    depends_on: []
+    internal_link_targets:
+      - "chatgpt-workspaces-complete-guide"
+      - "organize-chatgpt-conversations-2026"
+      - "smart-thread-hiding-chatgpt-lag-fix"
+
   # --- HIGH PRIORITY: Pillar Pages ---
   - id: "q_001"
     title: "ChatGPT Workspaces: Complete Guide to Organizing AI Conversations"

@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     q: "Is the minimap free?",
-    a: "AI Workspace is free to install and the core features are free forever. The full Smart Conversation Outline is part of the Pro plan ($9.99/month billed annually), together with unlimited prompts, notes, vaults, and encrypted storage.",
+    a: "AI Workspace is free to install and the core features are free forever. The full Smart Conversation Outline is part of the Pro plan ($7.99/month billed annually), together with unlimited prompts, notes, vaults, and encrypted storage.",
   },
 ];
 

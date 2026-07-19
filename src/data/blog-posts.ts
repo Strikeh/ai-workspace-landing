@@ -13,6 +13,166 @@
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "chatgpt-work-agent-explained",
+    title: "ChatGPT Work Is Here: What OpenAI's Agent Means for You",
+    excerpt:
+      "OpenAI launched ChatGPT Work on July 9, 2026 — an agent that works for hours and ships finished documents. Here's what it means for how you organize ChatGPT.",
+    date: "Jul 19, 2026",
+    readTime: "9 min read",
+    category: "Productivity",
+    image: "/images/blog/chatgpt-work-agent-explained/hero.jpg",
+    imageAlt:
+      "Illustration of the ChatGPT Work agent completing documents and spreadsheets autonomously while a professional reviews the results",
+    ogImage: "/images/blog/chatgpt-work-agent-explained/hero.jpg",
+    content: `
+      <p class="text-xl leading-relaxed text-slate-300 mb-8">
+        On July 9, 2026, OpenAI shipped the biggest change to ChatGPT since ChatGPT itself: <strong class="text-white">ChatGPT Work</strong>, an agent that takes an outcome, breaks it into steps, and keeps working for hours — across your apps and files — until it hands you a finished spreadsheet, deck, document, or even a working web app. Here's my take after a week of watching this unfold: the hard part of using ChatGPT just moved. It's no longer writing good prompts. It's managing the flood of output.
+      </p>
+
+      <div class="my-8">
+        <img src="/images/blog/chatgpt-work-agent-explained/hero.jpg" alt="ChatGPT Work agent completing documents and spreadsheets autonomously" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+      </div>
+
+      <div class="my-10 p-6 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-xl">
+        <h3 class="text-2xl font-bold text-white mb-3">TL;DR</h3>
+        <p class="text-slate-300 m-0">
+          <strong class="text-white">ChatGPT Work</strong> launched July 9, 2026 for Pro, Enterprise, and Edu users (Plus and Business followed days later). Powered by the new GPT-5.6 model, it runs multi-hour tasks, connects to your apps, and delivers finished files instead of chat replies. The catch: agents multiply your conversations and output dramatically — so the people who benefit most will be the ones with a system for organizing, reviewing, and reusing what ChatGPT produces.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">What actually launched in July 2026</h2>
+
+      <p class="text-slate-300 mb-6">
+        The announcement bundled several changes into a single week. If you stepped away from the news for a few days, here's the short version:
+      </p>
+
+      <ul class="text-slate-300 mb-8 space-y-3 list-disc pl-6">
+        <li><strong class="text-white">ChatGPT Work (July 9):</strong> an agent that gathers context from your connected apps and files, plans the job, and works independently — for hours if needed. Output is finished material: sheets, slides, docs, reports, and shareable web apps. It rolled out first to Pro, Enterprise, and Edu, then Plus and Business. <a href="https://openai.com/index/introducing-workspace-agents-in-chatgpt/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300">OpenAI's announcement</a> frames it as moving ChatGPT "beyond answering questions to getting real work done."</li>
+        <li><strong class="text-white">GPT-5.6:</strong> the model behind it, released the same day after a staggered rollout, in three variants — Sol (most capable), Luna (fastest), and Terra (the everyday balance).</li>
+        <li><strong class="text-white">Plan mode and Scheduled Tasks:</strong> the agent proposes a step-by-step plan you approve first, and recurring jobs can run on a schedule — even while you're away from your computer.</li>
+        <li><strong class="text-white">A redesigned desktop app (July 16):</strong> a clearer split between Chat and Work, unified Recents, and Projects built in.</li>
+        <li><strong class="text-white">Metered usage:</strong> Work isn't flat-rate. Longer, more complex tasks consume more credits, and OpenAI hasn't published per-task prices yet.</li>
+      </ul>
+
+      <p class="text-slate-300 mb-6">
+        The business press framing was all about workplace automation — <a href="https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/07/09/openai-launches-chatgpt-work/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300">Bloomberg called it</a> OpenAI's deepest push yet into workplace AI tools. That's true, but it misses what changes for the individual power user.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">The real shift: from writing prompts to managing output</h2>
+
+      <p class="text-slate-300 mb-6">
+        Think about what "works for hours" actually means for your ChatGPT account. A single request now produces a long agent transcript, multiple generated files, and often several follow-up conversations to refine the result. Schedule a few recurring tasks and the volume compounds weekly — whether you're at your desk or not.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        I've organized my own ChatGPT sidebar since the days when 50 conversations felt like a lot. The pattern I keep seeing: every jump in model capability multiplies conversation volume. Agents are the biggest multiplier yet, because for the first time ChatGPT generates work <em>while you're not there</em>.
+      </p>
+
+      <div class="my-8">
+        <img src="/images/blog/chatgpt-work-agent-explained/output-overload.jpg" alt="A laptop screen overflowing with AI-generated documents being sorted into organized folders" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+      </div>
+
+      <p class="text-slate-300 mb-6">
+        Three practical consequences follow:
+      </p>
+
+      <ul class="text-slate-300 mb-8 space-y-3 list-disc pl-6">
+        <li><strong class="text-white">Review becomes the bottleneck.</strong> When the agent drafts the deliverable, your job shifts to checking it. Metered pricing makes this concrete: every sloppy, unreviewed run costs real credits.</li>
+        <li><strong class="text-white">Context quality decides output quality.</strong> An agent that pulls context from your files and history amplifies whatever it finds — including the wrong client's data if your conversations are one undifferentiated pile.</li>
+        <li><strong class="text-white">Long transcripts get heavy.</strong> Multi-hour agent sessions produce exactly the kind of enormous threads that make the ChatGPT tab crawl.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Why "agents make organization obsolete" gets it backwards</h2>
+
+      <p class="text-slate-300 mb-6">
+        The conventional take says organizing chats is busywork the AI will soon handle for you — just search, or let the agent find its own context. I think that's exactly backwards, for one reason: <strong class="text-white">agents don't just consume your context, they act on it.</strong>
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        A chatbot given messy context gives you a mediocre answer you can shrug off. An agent given messy context spends hours (and credits) building the wrong deliverable — or worse, mixes information between clients in something you then share. The more autonomy you delegate, the more the boundaries around each project matter. That's a structural argument, not a tidiness preference: separation, not search, is what keeps an agent inside its lane.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">How to set up ChatGPT Work like a power user</h2>
+
+      <p class="text-slate-300 mb-6">
+        Whether you use OpenAI's built-in Projects or a browser extension on top of ChatGPT, the playbook is the same. This is how I'd set it up today:
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">1. Isolate contexts before you delegate</h3>
+
+      <p class="text-slate-300 mb-6">
+        Give every client and project a hard boundary, so agent runs — and their output — never bleed into each other. This is the core idea behind <a href="/blog/chatgpt-workspaces-complete-guide" class="text-cyan-400 hover:text-cyan-300">ChatGPT workspaces</a>: complete context isolation instead of a single shared history. In AI Workspace Pro, each workspace has its own conversations, prompts, and notes, and sensitive client workspaces can be locked with AES-256 encryption.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">2. Turn your best requests into a reusable library</h3>
+
+      <p class="text-slate-300 mb-6">
+        With agents, a well-specified outcome ("weekly competitor report: these five sources, this format, flag anything about pricing") is worth far more than a clever one-off prompt — you'll run it every week. Store these specs in a prompt library with template variables so <code>{{client}}</code> and <code>{{week}}</code> swap in cleanly instead of living in your head.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">3. Keep long agent threads from killing your browser</h3>
+
+      <p class="text-slate-300 mb-6">
+        Multi-hour transcripts make ChatGPT's tab sluggish fast. <a href="/blog/smart-thread-hiding-chatgpt-lag-fix" class="text-cyan-400 hover:text-cyan-300">Smart Thread Trimming</a> hides older messages from the DOM while keeping them a click away — in our testing that cut memory use by 73% and made scrolling 80% faster in long conversations. Agent-era threads are precisely where that matters.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">4. Build a review habit, not a review pile</h3>
+
+      <p class="text-slate-300 mb-6">
+        When output arrives faster than you can read it, "I'll check it later" becomes a graveyard. Highlight the claims you've verified, attach notes with follow-ups, and tag runs that need a second look. If you're staring at hundreds of accumulated conversations already, start with our guide to <a href="/blog/organize-chatgpt-conversations-2026" class="text-cyan-400 hover:text-cyan-300">organizing hundreds of ChatGPT conversations</a> — the same system scales to agent output.
+      </p>
+
+      <blockquote class="border-l-4 border-cyan-500 pl-6 my-8 text-slate-300 italic">
+        "Must-have for AI power users... helps with prompts, workflow, organization."
+        <footer class="text-slate-400 not-italic mt-2">— Deniz, <a href="https://chromewebstore.google.com/detail/ai-workspace-pro-chatgpt/mngeddjcngpcdakdhfcbaefeonmmeomg/reviews" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300">Chrome Web Store review</a></footer>
+      </blockquote>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">The counterargument: won't OpenAI just build all this in?</h2>
+
+      <p class="text-slate-300 mb-6">
+        Fair challenge. The July updates also brought unified search across chats, projects, and documents, plus Projects in the desktop app. OpenAI is clearly investing in organization, and for light users that may be enough.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        But two gaps remain. First, OpenAI's tools only organize ChatGPT — if you also run Claude or Grok, your work is still scattered across sidebars. Second, everything lives on OpenAI's servers under one account, with no hard isolation between clients and no local, encrypted option for confidential work. Worth mentioning: those are the two things a local-first extension is structurally better placed to solve, which is why AI Workspace Pro stores everything on your device with zero telemetry.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">FAQ</h2>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">What is ChatGPT Work?</h3>
+      <p class="text-slate-300 mb-6">
+        ChatGPT Work is an agent inside ChatGPT, launched July 9, 2026, that executes complex tasks autonomously. It gathers context from connected apps and files, plans the job, works for hours if needed, and delivers finished documents, spreadsheets, presentations, and web apps instead of chat replies.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Which plans get ChatGPT Work?</h3>
+      <p class="text-slate-300 mb-6">
+        It rolled out to Pro, Enterprise, and Edu on launch day, with Plus and Business following over the next few days. Usage is metered by task complexity rather than flat-rate, so heavier agent runs consume more credits.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Is GPT-5.6 different from ChatGPT Work?</h3>
+      <p class="text-slate-300 mb-6">
+        Yes. GPT-5.6 is the model — released in Sol, Luna, and Terra variants — while ChatGPT Work is the agent product built on top of it. Regular chat also benefits from GPT-5.6.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Do I still need to organize my ChatGPT conversations if agents do the work?</h3>
+      <p class="text-slate-300 mb-6">
+        More than ever. Agents multiply conversations and files, act on whatever context they can reach, and produce output that needs review. Clear separation per client or project is what keeps autonomous runs accurate — and keeps you in control of what ships.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Bottom line</h2>
+
+      <p class="text-slate-300 mb-6">
+        ChatGPT Work is genuinely a new chapter: ChatGPT stopped being a chat window next to your work and started being a coworker that ships deliverables. The winners of this shift won't be the people with the cleverest prompts — they'll be the people whose AI workspace is structured enough to delegate safely and review fast. Set up your system now, before the agent output pile does it for you.
+      </p>
+
+      <div class="my-10 p-6 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-xl text-center">
+        <h3 class="text-2xl font-bold text-white mb-3">Get organized before the agent era buries you</h3>
+        <p class="text-slate-300 mb-6">Workspaces, prompt library, thread trimming, and highlights — local-first, across ChatGPT, Claude & Grok.</p>
+        <a href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 text-base font-bold text-white no-underline">Try AI Workspace Pro free</a>
+      </div>
+    `,
+  },
+  {
     slug: "is-superpower-chatgpt-safe",
     title:
       "Is Superpower ChatGPT Safe? A Practical Guide to ChatGPT Extension Privacy",

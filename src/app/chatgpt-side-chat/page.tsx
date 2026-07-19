@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     q: "Is Side Chat free?",
-    a: "Side Chat is a Pro feature ($9.99/month billed annually). Pro also includes unlimited prompts, vaults and notes, encrypted storage, the full Image Gallery, and the Smart Conversation Outline. The core organization features of AI Workspace remain free forever.",
+    a: "Side Chat is a Pro feature ($7.99/month billed annually). Pro also includes unlimited prompts, vaults and notes, encrypted storage, the full Image Gallery, and the Smart Conversation Outline. The core organization features of AI Workspace remain free forever.",
   },
   {
     q: "Which platforms support Side Chat?",

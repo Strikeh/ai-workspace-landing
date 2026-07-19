@@ -196,18 +196,18 @@ export default function RootLayout({
                 {
                   "@type": "Offer",
                   name: "Pro Plan",
-                  price: "9.99",
+                  price: "7.99",
                   priceCurrency: "USD",
                   priceSpecification: {
                     "@type": "UnitPriceSpecification",
-                    price: "9.99",
+                    price: "7.99",
                     priceCurrency: "USD",
                     billingDuration: "P1Y",
                     billingIncrement: 1,
                   },
                   availability: "https://schema.org/InStock",
                   description:
-                    "Annual billing: $9.99/month or Monthly billing: $11.99/month with unlimited prompts, encrypted storage, and premium features",
+                    "Annual billing: $7.99/month or Monthly billing: $9.99/month with unlimited prompts, encrypted storage, and premium features",
                 },
               ],
               aggregateRating: {
@@ -305,7 +305,7 @@ export default function RootLayout({
                   name: "What's the difference between Free and Pro?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Free includes limited prompts and notes, 1 vault, and no encryption. Pro ($9.99/month billed annually or $11.99/month billed monthly) offers unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, unlimited folders & categories, pinned messages, and multi-platform support.",
+                    text: "Free includes limited prompts and notes, 1 vault, and no encryption. Pro ($7.99/month billed annually or $9.99/month billed monthly) offers unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, unlimited folders & categories, pinned messages, and multi-platform support.",
                   },
                 },
                 {
@@ -406,7 +406,7 @@ export default function RootLayout({
               offers: {
                 "@type": "AggregateOffer",
                 lowPrice: "0",
-                highPrice: "9.99",
+                highPrice: "7.99",
                 priceCurrency: "USD",
                 availability: "https://schema.org/InStock",
               },

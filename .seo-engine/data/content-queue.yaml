@@ -1,4 +1,4 @@
-﻿last_updated: "2026-07-19"
+﻿last_updated: "2026-08-16"
 
 queue:
   - id: "q_014"
@@ -156,18 +156,24 @@ queue:
       - "feat_prompt_history"
       - "feat_export_share_prompts"
       - "feat_pin_favorite_prompts"
-    unique_angle: "Covers the full prompt lifecycle — creation, organization, templating with variables, chaining, and team sharing — not just a list of tips"
+    unique_angle: "The five-stage prompt lifecycle (capture, structure, templatize, retrieve, maintain) with retrieval named as the stage where libraries actually die — plus the full typed-variable syntax documented from the live UI, which no competing guide covers"
     priority: "high"
     priority_reason: "Pillar page for primary topic cluster. No existing pillar."
-    status: "planned"
+    status: "human-review"
+    published_slug: "prompt-management-guide"
+    published_date: "2026-08-16"
     estimated_word_count: 3000
-    eeat_plan: "Include metric about prompt reuse, testimonial from Gimme Video about prompt organization"
+    actual_word_count: 2815
+    eeat_plan: "Gimme Video testimonial + CWS review link + 4.5-star rating, first-hand experience with a 200+ prompt library"
     serp_analyzed: false
-    cannibalization_check: "passed"
-    notes: "No existing cluster pages to link yet. Write cluster pages after this."
+    cannibalization_check: "CONFLICT — legacy post how-do-i-organize-chatgpt-prompts-guide (Jan 18 2026) is titled 'The Complete Guide to Prompt Management' and is not registered in content-map. Proceeded because that post is a 7-min product walkthrough while this is the full lifecycle pillar; recommended fix is to retitle the legacy post to its question keyword ('how do i organize chatgpt prompts') and point it at this pillar."
+    notes: "Drafted 2026-08-16 without SERP data (user opted to proceed). Cluster page chatgpt-prompt-library was already live and now links up to this pillar. Body screenshots reused from public/images/blog/prompt-management/; hero AI-generated via Higgsfield. Typed variables and Prompt Chains were verified against live UI screenshots — features.yaml understates both (see features.yaml notes)."
     depends_on: []
     internal_link_targets:
+      - "chatgpt-prompt-library"
       - "chatgpt-for-blogging-complete-guide"
+      - "chatgpt-workspaces-complete-guide"
+      - "getting-started-with-ai-workspace"
 
   - id: "q_003"
     title: "AI Productivity Tools: Complete Guide to Working Smarter with ChatGPT"
@@ -273,9 +279,10 @@ queue:
     eeat_plan: "Personal experience building a library of 200+ prompts"
     serp_analyzed: false
     cannibalization_check: "passed"
-    notes: "Drafted 2026-06-06 without SERP data (user opted to proceed). Pillar q_002 not yet published — add pillar internal link once live."
+    notes: "Drafted 2026-06-06 without SERP data (user opted to proceed). Pillar link added 2026-08-16 when q_002 (prompt-management-guide) went live."
     depends_on: ["q_002"]
     internal_link_targets:
+      - "prompt-management-guide"
       - "chatgpt-for-blogging-complete-guide"
 
   - id: "q_007"

@@ -1,4 +1,22 @@
-﻿## 2026-07-19 14:00
+﻿## 2026-08-16 06:40
+**Action:** Drafted pillar page "Prompt Management: Complete Guide to Reusable Prompts" (slug: prompt-management-guide) for cluster tc_prompt_management (q_002)
+**Files:**
+- src/data/blog-posts.ts (new post at top, status human-review, category Guides, 2815 words, inline SVG lifecycle diagram, 6 images)
+- src/data/blog-posts.ts (chatgpt-prompt-library: added the pending pillar link in the intro — its content-map note asked for this once the pillar went live)
+- public/images/blog/prompt-management-guide/hero.jpg (Higgsfield nano_banana_pro, 16:9, resized 1200x675, 91KB)
+- .seo-engine/data/content-map.yaml (registered post; recorded cannibalization conflict)
+- .seo-engine/data/content-queue.yaml (q_002 -> human-review with published slug/date; q_006 note updated)
+- .seo-engine/data/topic-clusters.yaml (tc_prompt_management pillar now human-review + blog_slug; corrected chatgpt-prompt-library cluster page from "planned" to "human-review" — it was already live)
+- .seo-engine/data/seo-keywords.csv ("prompt management" mapped to the pillar)
+- .seo-engine/data/features.yaml (blog_refs added to 8 prompt features; feat_template_variables description rewritten with the full typed-variable syntax; feat_prompt_chains flagged as possibly-stale WIP status; feat_prompt_history note about the Recent prompts auto-capture surface)
+**Summary:** Pillar covering all mandatory sections (definition, why it matters, five stages/types, step-by-step, best practices, common mistakes, tools, FAQ). Unique angle: the five-stage lifecycle — capture, structure, templatize, retrieve, maintain — with retrieval named as the stage where libraries actually die. Main information gain: the complete typed-variable syntax table (dropdown, slider, date, checkbox, regex validation, conditional :if(), repeaters, file upload), documented from the live UI, which features.yaml had reduced to plain {{topic}} placeholders. Body uses 5 existing real product screenshots from public/images/blog/prompt-management/ rather than stock. E-E-A-T: Gimme Video testimonial + CWS review link + 4.5-star rating + first-hand 200+ prompt library experience. Competitor strengths led with, both flagged as last-check claims. No SERP data (user opted to proceed).
+**⚠️ Open items for human review:**
+1. CANNIBALIZATION — legacy post how-do-i-organize-chatgpt-prompts-guide (Jan 18 2026) is titled "How Do I Organize ChatGPT Prompts? The Complete Guide to Prompt Management" and is NOT registered in content-map. It now competes with this pillar on the pillar keyword. Recommended: retitle it to its question keyword only, trim the excerpt, and link it up to the pillar. NOT changed — needs approval.
+2. feat_prompt_chains is "wip" in features.yaml but ships a full builder UI in the screenshots. Confirm and flip to "available".
+3. The prompt manager UI shows a Gemini platform button; config.yaml and all marketing say ChatGPT, Claude & Grok only. Gemini was deliberately NOT claimed in this post. Resolve which is correct.
+**Triggered by:** user
+
+## 2026-07-19 14:00
 **Action:** Drafted 3-way pricing comparison blog "ChatGPT Extension Pricing: We Did the Math (2026)" (slug: chatgpt-extension-pricing-comparison) + fresh competitor verification
 **Files:**
 - src/data/blog-posts.ts (new post at top, status human-review, category Comparison, inline SVG 3-year-cost chart)

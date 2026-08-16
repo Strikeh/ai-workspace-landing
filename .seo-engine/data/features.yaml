@@ -233,6 +233,7 @@ categories:
               - slug: "best-chatgpt-chrome-extensions-2026"
               - slug: "chatgpt-prompt-library"
               - slug: "chatgpt-work-agent-explained"
+              - slug: "prompt-management-guide"
             tags: ["prompts", "library", "core"]
             notes: ""
           - id: "feat_quick_slash_access"
@@ -247,6 +248,7 @@ categories:
             blog_refs:
               - slug: "chatgpt-for-blogging-complete-guide"
               - slug: "chatgpt-prompt-library"
+              - slug: "prompt-management-guide"
             tags: ["prompts", "quick-access", "productivity"]
             notes: ""
           - id: "feat_pin_favorite_prompts"
@@ -258,8 +260,9 @@ categories:
                 section: "Pin favorites"
             blog_refs:
               - slug: "chatgpt-prompt-library"
+              - slug: "prompt-management-guide"
             tags: ["prompts", "quick-access"]
-            notes: ""
+            notes: "UI also exposes a separate Favorite and Pinned toggle on each prompt (verified from live UI screenshot 2026-08-16)."
       - id: "sub_prompt_advanced"
         name: "Advanced Prompt Features"
         features:
@@ -272,12 +275,13 @@ categories:
                 section: "Full page"
               - path: "src/components/FeatureShowcase.tsx"
                 section: "Prompt features"
-            blog_refs: []
+            blog_refs:
+              - slug: "prompt-management-guide"
             tags: ["prompts", "ai", "optimizer", "prompt-engineering", "pro"]
             notes: "Pro feature (AI rewrite via backend) with free on-device quick-optimize. Backend service internally named 'superprompt'. Page added 2026-06-14; registered 2026-06-14. Compared vs GPT Master at /compare/gpt-master."
           - id: "feat_template_variables"
             name: "Templates with {{}} Variables"
-            description: "Use dynamic variables like {{topic}} and {{keywords}} in prompts that get filled on insertion."
+            description: "Use dynamic variables like {{topic}} and {{keywords}} in prompts that get filled on insertion. Variables are TYPED, not just placeholders: dropdown with default, checkbox, slider(min, max), date picker, text with default value, optional fields ({{name?}}), explicitly required ({{name*}}), regex-validated input, placeholder/tooltip text (::), conditional display (:if(...)), repeaters ({{items[]:{a, b}}}), and file upload ({{cv:file}}). Insertion renders a small form rather than a plain text prompt."
             status: "available"
             doc_refs:
               - path: "src/components/FeatureShowcase.tsx"
@@ -288,8 +292,9 @@ categories:
               - slug: "chatgpt-for-blogging-complete-guide"
               - slug: "chatgpt-prompt-library"
               - slug: "chatgpt-work-agent-explained"
+              - slug: "prompt-management-guide"
             tags: ["prompts", "templates", "variables"]
-            notes: ""
+            notes: "Typed-variable syntax documented 2026-08-16 from the live 'Examples of variables & types' panel (public/images/blog/prompt-management/variable-input.png). Prior description only covered plain {{topic}} placeholders and understated the feature. Full syntax table published in prompt-management-guide."
           - id: "feat_prompt_chains"
             name: "Prompt Chains"
             description: "Link prompts together for complex multi-step workflows."
@@ -299,8 +304,9 @@ categories:
                 section: "Prompt features"
             blog_refs:
               - slug: "best-chatgpt-chrome-extensions-2026"
+              - slug: "prompt-management-guide"
             tags: ["prompts", "workflows", "automation", "wip"]
-            notes: "Marked as WIP (Work In Progress)"
+            notes: "Marked as WIP (Work In Progress). ⚠️ STATUS MAY BE STALE: the live 'Create new prompt' dialog ships a Single Prompt / Prompt Chain type toggle with Add Step, reordering, and 'Steps run sequentially' (public/images/blog/prompt-management/chained-prompt-builder.png, already published in how-do-i-organize-chatgpt-prompts-guide since Jan 2026). prompt-management-guide describes it as shipping — confirm and flip status to 'available' if correct."
           - id: "feat_prompt_history"
             name: "Prompt History Tracking"
             description: "Track all prompt usage and iterations over time."
@@ -308,9 +314,10 @@ categories:
             doc_refs:
               - path: "src/components/FeatureShowcase.tsx"
                 section: "Prompt features"
-            blog_refs: []
+            blog_refs:
+              - slug: "prompt-management-guide"
             tags: ["prompts", "history", "tracking"]
-            notes: ""
+            notes: "Related surface: a 'Recent prompts' list auto-collects prompts you send so they can be saved into the library in one action (verified from live UI screenshot 2026-08-16). Consider registering that as its own feature."
           - id: "feat_export_share_prompts"
             name: "Export & Share Prompts (JSON/CSV)"
             description: "Export prompt library to JSON or CSV for backup or team sharing."
@@ -320,6 +327,7 @@ categories:
                 section: "Export"
             blog_refs:
               - slug: "chatgpt-prompt-library"
+              - slug: "prompt-management-guide"
             tags: ["prompts", "export", "sharing"]
             notes: ""
 

@@ -1,4 +1,4 @@
-﻿last_updated: "2026-03-27"
+﻿last_updated: "2026-08-16"
 
 clusters:
   - cluster_id: "tc_chatgpt_workspaces"
@@ -177,20 +177,20 @@ clusters:
     description: "How to organize, create, and manage AI prompts for consistent quality and reuse"
 
     pillar:
-      title: "Prompt Management: How to Organize Your AI Prompts for Maximum Reuse"
+      title: "Prompt Management: Complete Guide to Reusable Prompts"
       target_keyword: "prompt management"
       slug: "prompt-management-guide"
-      status: "planned"
-      blog_slug: ""
-      notes: "SERP data needed before finalizing structure. High priority."
+      status: "human-review"
+      blog_slug: "prompt-management-guide"
+      notes: "Published 2026-08-16 without SERP data (user opted to proceed). Covers all mandatory pillar sections: definition, why it matters, the five stages (types), step-by-step, best practices, common mistakes, tools, FAQ. Add links to new cluster pages as they go live."
 
     cluster_pages:
       - title: "ChatGPT Prompt Library: Build and Organize Your Best Prompts"
         target_keyword: "chatgpt prompt library"
         slug: "chatgpt-prompt-library"
         angle: "Building a personal prompt library — from scattered prompts to organized system"
-        status: "planned"
-        blog_slug: ""
+        status: "human-review"
+        blog_slug: "chatgpt-prompt-library"
       - title: "ChatGPT Prompt Templates with Variables: Dynamic AI Workflows"
         target_keyword: "chatgpt prompt templates"
         slug: "chatgpt-prompt-templates"

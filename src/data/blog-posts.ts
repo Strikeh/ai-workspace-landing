@@ -13,6 +13,389 @@
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "prompt-management-guide",
+    title: "Prompt Management: Complete Guide to Reusable Prompts",
+    excerpt:
+      "Prompt management explained: the five-stage system that turns scattered ChatGPT prompts into a library you actually reuse — with templates and variables.",
+    date: "Aug 16, 2026",
+    readTime: "12 min read",
+    category: "Guides",
+    image: "/images/blog/prompt-management-guide/hero.jpg",
+    imageAlt:
+      "Prompt management concept — scattered prompt cards reorganizing into a structured library grid",
+    ogImage: "/images/blog/prompt-management-guide/hero.jpg",
+    content: `
+      <p class="text-xl leading-relaxed text-slate-300 mb-8">
+        <strong class="text-white">Prompt management</strong> is the practice of treating your best prompts as reusable assets instead of throwaway messages — capturing them, structuring them, turning them into templates, retrieving them in one keystroke, and pruning the ones that stopped working. Most people stop after "save it somewhere" and then wonder why their prompt collection never gets used. After building a library of 200+ prompts across ChatGPT, Claude, and Grok, I can tell you the failure is almost never storage. It's retrieval.
+      </p>
+
+      <div class="my-8">
+        <img src="/images/blog/prompt-management-guide/hero.jpg" alt="Prompt management concept — scattered prompt cards reorganizing into a structured library grid" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+      </div>
+
+      <div class="my-10 p-6 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-xl">
+        <h3 class="text-2xl font-bold text-white mb-3">TL;DR</h3>
+        <p class="text-slate-300 m-0">
+          Prompt management has five stages: <strong class="text-white">capture, structure, templatize, retrieve, maintain</strong>. A system that only does the first two dies quietly — you save prompts and never find them again. What keeps a library alive is retrieval that costs one keystroke and templates that ask you for the missing details instead of making you edit raw text. This guide covers all five stages, the typed-variable syntax that turns a static prompt into a small form, prompt chains for multi-step work, and the five mistakes that kill most libraries in month two.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">What is prompt management?</h2>
+
+      <p class="text-slate-300 mb-6">
+        Prompt management is the operational layer around your prompts: how they get saved, organized, parameterized, found, and retired. It answers a different question than prompt engineering does. Prompt engineering asks "how do I word this well?" Prompt management asks "what happens to that wording after it works?"
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        That distinction matters more than it sounds. Both <a href="https://platform.openai.com/docs/guides/prompt-engineering" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300">OpenAI</a> and <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300">Anthropic</a> publish long, genuinely useful prompt engineering guides. Neither tells you what to do with the prompt an hour later, when you need it again and it's buried on message 340 of a conversation you can't remember the name of. That gap is the whole subject of this page.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        A complete prompt management system has five moving parts:
+      </p>
+
+      <ul class="text-slate-300 mb-8 space-y-3 list-disc pl-6">
+        <li><strong class="text-white">Capture</strong> — getting a prompt out of a chat and into storage before you forget it existed.</li>
+        <li><strong class="text-white">Structure</strong> — folders, tags, and favorites so the collection has a shape.</li>
+        <li><strong class="text-white">Templatize</strong> — replacing the parts that change with variables, so one prompt serves fifty jobs.</li>
+        <li><strong class="text-white">Retrieve</strong> — getting the right prompt back into the composer without breaking your train of thought.</li>
+        <li><strong class="text-white">Maintain</strong> — tracking what you actually use, pruning what you don't, and backing the whole thing up.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Why prompt management matters more than it did a year ago</h2>
+
+      <p class="text-slate-300 mb-6">
+        Three things changed. The first is volume: people who use AI daily now run the same twenty-odd tasks over and over — summarize this call, rewrite this in our tone, extract action items, draft the client update. Rewriting the instructions each time is a small tax paid dozens of times a week.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        The second is consistency. When you retype a prompt from memory, you get a slightly different prompt, and therefore a slightly different output. That variance is invisible until you're comparing two client deliverables that should have read the same way and don't.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        The third is agents. When a model works unattended for an hour, the prompt stops being a message and becomes a specification — and a vague spec now costs you an hour of wrong output instead of ten seconds. We wrote about that shift in <a href="/blog/chatgpt-work-agent-explained" class="text-cyan-400 hover:text-cyan-300">what OpenAI's agent means for how you work</a>. Short version: the better your prompts run without you, the more it matters that the good ones are findable.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">The five stages of prompt management</h2>
+
+      <p class="text-slate-300 mb-6">
+        Here's the lifecycle as a whole. It runs in order, and it loops — what you learn in maintenance changes what you bother capturing next.
+      </p>
+
+      <div class="my-8 p-6 bg-slate-800/40 border border-white/10 rounded-xl">
+        <svg viewBox="0 0 720 200" role="img" aria-label="Diagram of the five stages of prompt management: capture, structure, templatize, retrieve, maintain, arranged left to right with retrieve highlighted as the stage where most prompt libraries fail, and a dashed loop from maintain back to capture" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+          <text x="0" y="18" fill="#94a3b8" font-size="13">The prompt management lifecycle</text>
+          <g>
+            <rect x="0" y="45" width="130" height="56" rx="8" fill="#1e293b" stroke="#334155"></rect>
+            <text x="65" y="68" fill="#94a3b8" font-size="10" text-anchor="middle">STAGE 1</text>
+            <text x="65" y="88" fill="#e2e8f0" font-size="15" font-weight="bold" text-anchor="middle">Capture</text>
+            <rect x="145" y="45" width="130" height="56" rx="8" fill="#1e293b" stroke="#334155"></rect>
+            <text x="210" y="68" fill="#94a3b8" font-size="10" text-anchor="middle">STAGE 2</text>
+            <text x="210" y="88" fill="#e2e8f0" font-size="15" font-weight="bold" text-anchor="middle">Structure</text>
+            <rect x="290" y="45" width="130" height="56" rx="8" fill="#1e293b" stroke="#334155"></rect>
+            <text x="355" y="68" fill="#94a3b8" font-size="10" text-anchor="middle">STAGE 3</text>
+            <text x="355" y="88" fill="#e2e8f0" font-size="15" font-weight="bold" text-anchor="middle">Templatize</text>
+            <rect x="435" y="45" width="130" height="56" rx="8" fill="#164e63" stroke="#22d3ee" stroke-width="2"></rect>
+            <text x="500" y="68" fill="#67e8f9" font-size="10" text-anchor="middle">STAGE 4</text>
+            <text x="500" y="88" fill="#22d3ee" font-size="15" font-weight="bold" text-anchor="middle">Retrieve</text>
+            <rect x="580" y="45" width="130" height="56" rx="8" fill="#1e293b" stroke="#334155"></rect>
+            <text x="645" y="68" fill="#94a3b8" font-size="10" text-anchor="middle">STAGE 5</text>
+            <text x="645" y="88" fill="#e2e8f0" font-size="15" font-weight="bold" text-anchor="middle">Maintain</text>
+          </g>
+          <g fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M131 73 h8 M139 69 l5 4 l-5 4"></path>
+            <path d="M276 73 h8 M284 69 l5 4 l-5 4"></path>
+            <path d="M421 73 h8 M429 69 l5 4 l-5 4"></path>
+            <path d="M566 73 h8 M574 69 l5 4 l-5 4"></path>
+          </g>
+          <path d="M500 103 v13" fill="none" stroke="#22d3ee" stroke-width="1.5"></path>
+          <text x="500" y="132" fill="#22d3ee" font-size="12" text-anchor="middle">Most prompt libraries die here</text>
+          <path d="M645 103 v52 H65 v-46" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="4 4"></path>
+          <path d="M61 113 l4 -6 l4 6" fill="none" stroke="#475569" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <text x="355" y="174" fill="#64748b" font-size="11" text-anchor="middle">What you learn in maintenance changes what you capture next</text>
+          <text x="0" y="196" fill="#64748b" font-size="10">Framework used throughout this guide.</text>
+        </svg>
+      </div>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Stage 1: Capture</h3>
+
+      <p class="text-slate-300 mb-6">
+        The best prompt you ever wrote was almost certainly typed in a hurry, worked beautifully, and was never saved. Capture is the stage that fixes that, and it fails for a boring reason: at the moment a prompt works, you're busy reading the answer, not filing paperwork.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        So the capture step has to be nearly free. In AI Workspace Pro, prompts you send are picked up automatically into a <strong class="text-white">Recent prompts</strong> list — mine sits at 47 — and saving one into the library is a single action rather than a copy, a tab switch, and a paste. The trick isn't discipline. It's removing the tab switch.
+      </p>
+
+      <div class="my-8">
+        <img src="/images/blog/prompt-management/recent-prompts-capture.png" alt="Recent prompts panel detecting a new ChatGPT prompt with save and discard options" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+        <p class="text-sm text-slate-500 mt-2 text-center">Capture works when it costs one click, not one workflow.</p>
+      </div>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Stage 2: Structure</h3>
+
+      <p class="text-slate-300 mb-6">
+        Structure is where most guides start and where most people over-engineer. The rule that has held up for me: <strong class="text-white">group by the job the prompt does, not the topic it's about</strong>. Summarize, Rewrite, Generate, Analyze, Extract. Job-based folders don't overlap, so you never have to decide whether a prompt belongs in "Marketing" or "Client A".
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        Topic then lives in tags, which can stack — a prompt can be tagged <em>client-a</em> and <em>tested</em> at once without living in two places. Favorites and pinning handle the top of the pyramid: the four or five prompts you run daily should never require a search. Our <a href="/blog/chatgpt-prompt-library" class="text-cyan-400 hover:text-cyan-300">guide to building a prompt library from scratch</a> walks through this stage step by step if you're starting from a pile of notes.
+      </p>
+
+      <div class="my-8">
+        <img src="/images/blog/prompt-management/hero-ui-vault.png" alt="Prompt management window with categories sidebar, recent prompts, tags and search" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+        <p class="text-sm text-slate-500 mt-2 text-center">Categories on the left, tags on the cards, search across everything.</p>
+      </div>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Stage 3: Templatize</h3>
+
+      <p class="text-slate-300 mb-6">
+        A saved prompt is a snapshot. A template is a tool. The difference is that a template names the parts that change — the topic, the audience, the tone, the word count — so you fill in the blanks instead of hunting through a paragraph for the three words you need to swap. This is the stage that turns twelve near-identical prompts into one. It gets its own section below, because the syntax goes further than most people expect.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Stage 4: Retrieve</h3>
+
+      <p class="text-slate-300 mb-6">
+        Here's the stage that decides whether any of this survives. If getting a prompt back means opening another tab, scrolling a document, and pasting, you will do it for about two weeks. Then you'll type the prompt from memory again, badly, and your library becomes an archive of things you used to do.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        Retrieval has to happen inside the composer. Typing <strong class="text-white">/</strong> in the chat input opens a searchable list of your saved prompts and inserts the one you pick — no tab switch, no clipboard. That single keystroke is, in my experience, the difference between a library that compounds and one that quietly rots.
+      </p>
+
+      <div class="my-8">
+        <img src="/images/blog/prompt-management/search-filters.png" alt="Searching and filtering saved prompts by tag and sort order" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+        <p class="text-sm text-slate-500 mt-2 text-center">Full-text search plus tag filters, for when you remember the content but not the name.</p>
+      </div>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Stage 5: Maintain</h3>
+
+      <p class="text-slate-300 mb-6">
+        Prompts decay. Models change, your projects change, and a prompt tuned for last year's writing style produces something slightly off today. Maintenance means three habits: check prompt history to see what you actually reach for, archive anything untouched for a quarter, and export the library to JSON or CSV so a browser reset never costs you a year of work.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        That last one matters more than it seems. A prompt library that lives only in one browser profile is one wiped extension away from gone.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">How to set up prompt management step by step</h2>
+
+      <p class="text-slate-300 mb-6">
+        Concretely, this is the sequence I'd run for someone starting today. It takes about half an hour and you can do it inside ChatGPT without touching another app.
+      </p>
+
+      <ul class="text-slate-300 mb-8 space-y-3 list-disc pl-6">
+        <li><strong class="text-white">1. Harvest what already works.</strong> Go through your recent prompts and save only the ones you have sent more than once. Ten real prompts beat a hundred aspirational ones.</li>
+        <li><strong class="text-white">2. Create five job-based folders.</strong> Summarize, Rewrite, Generate, Analyze, Extract. Resist adding a sixth on day one.</li>
+        <li><strong class="text-white">3. Tag for context.</strong> Client, project, and status tags such as <em>tested</em> or <em>draft</em>. Tags are cheap; folders are expensive.</li>
+        <li><strong class="text-white">4. Turn your top five into templates.</strong> Find the words you retype every time and make them variables. Details in the next section.</li>
+        <li><strong class="text-white">5. Pin the daily drivers.</strong> Whatever you run every morning goes to the top of the list, favorited.</li>
+        <li><strong class="text-white">6. Export once you're happy.</strong> JSON or CSV, stored wherever your other backups live.</li>
+      </ul>
+
+      <p class="text-slate-300 mb-6">
+        If you're setting this up for the first time, our <a href="/blog/getting-started-with-ai-workspace" class="text-cyan-400 hover:text-cyan-300">beginner's walkthrough</a> covers the install and first-run steps, and the <a href="/prompt-library" class="text-cyan-400 hover:text-cyan-300">prompt library feature page</a> shows the full interface.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Prompt templates: from a placeholder to a small form</h2>
+
+      <p class="text-slate-300 mb-6">
+        Most tools that support prompt templates support exactly one thing: a placeholder like <em>{{topic}}</em> that you replace on insertion. That's useful, and it's also where nearly every guide on the subject stops.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        It goes considerably further than that. Variables can be <strong class="text-white">typed</strong> — meaning the prompt doesn't just ask for a value, it asks for the right kind of value, with the right control. When you insert the prompt, you get a small form instead of a text box:
+      </p>
+
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full text-sm text-left text-slate-300 border border-white/10 rounded-lg">
+          <thead class="text-white bg-slate-800/60">
+            <tr>
+              <th class="px-4 py-3">Syntax</th>
+              <th class="px-4 py-3">What you get on insertion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-mono text-cyan-400">{{name}}</td>
+              <td class="px-4 py-3">A required text field — the default behavior</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-mono text-cyan-400">{{extra_info?}}</td>
+              <td class="px-4 py-3">An optional field (the <em>?</em> makes it skippable)</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-mono text-cyan-400">{{language:dropdown(Dutch, English, French, default=English)}}</td>
+              <td class="px-4 py-3">A dropdown with a preselected value</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-mono text-cyan-400">{{amount:slider(1, 10)}}</td>
+              <td class="px-4 py-3">A slider — good for length, tone strength, number of ideas</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-mono text-cyan-400">{{date:date}}</td>
+              <td class="px-4 py-3">A date picker instead of a typed date string</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-mono text-cyan-400">{{show_result:checkbox}}</td>
+              <td class="px-4 py-3">A checkbox for on/off instructions</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-mono text-cyan-400">{{motivation*::Briefly describe your motivation}}</td>
+              <td class="px-4 py-3">A required field with placeholder text to guide you</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-mono text-cyan-400">{{email?:input:/regex/:Enter a valid email}}</td>
+              <td class="px-4 py-3">An input validated against a pattern before it's accepted</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-mono text-cyan-400">{{extra?:if(language=English)::...}}</td>
+              <td class="px-4 py-3">A field that only appears when another answer calls for it</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-mono text-cyan-400">{{experiences[]:{company, position, duration}}}</td>
+              <td class="px-4 py-3">A repeater — add as many entries as you need</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-mono text-cyan-400">{{cv:file}}</td>
+              <td class="px-4 py-3">A file upload attached as part of the prompt</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="my-8">
+        <img src="/images/blog/prompt-management/variable-input.png" alt="Prompt template variable types including dropdown, checkbox, slider, date picker, regex validation and repeaters" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+        <p class="text-sm text-slate-500 mt-2 text-center">The built-in reference for variable types, shown while you write the template.</p>
+      </div>
+
+      <p class="text-slate-300 mb-6">
+        Why bother with types at all? Because a plain text placeholder still lets you make mistakes — a typo'd language, a date in the wrong format, an empty field you meant to fill. A dropdown can't be misspelled. A conditional field can't be answered when it doesn't apply. The template stops being a fill-in-the-blank exercise and starts behaving like a small internal tool, which is exactly what you want when you hand it to a colleague.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        Quick aside: if your draft prompt is messy to begin with, no amount of variables will save it. The <a href="/chatgpt-prompt-optimizer" class="text-cyan-400 hover:text-cyan-300">prompt optimizer</a> rewrites a draft into a clearer version and shows the original and the rewrite side by side — and it leaves your <em>{{variables}}</em>, placeholders, and code blocks intact, which matters once your templates get elaborate. It'll also tell you when a prompt is already fine, which I appreciate more than I expected to.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Prompt chains: when one prompt isn't the unit of work</h2>
+
+      <p class="text-slate-300 mb-6">
+        Some jobs are never one prompt. Writing an article is research, then outline, then draft, then edit. Handling a support ticket is classify, then draft a reply, then summarize for the log. You can run those as four separate saved prompts and paste between them, or you can save the whole sequence as one.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        That's what a <strong class="text-white">prompt chain</strong> is: a saved prompt whose type is a sequence of steps rather than a single message. You add steps, order them, and when you run the prompt the steps execute in order. The unit you save stops being a message and becomes a small workflow.
+      </p>
+
+      <div class="my-8">
+        <img src="/images/blog/prompt-management/chained-prompt-builder.png" alt="Prompt chain builder showing single prompt versus prompt chain with sequential steps" class="w-full rounded-lg border border-white/10 shadow-2xl" />
+        <p class="text-sm text-slate-500 mt-2 text-center">Single prompt or chain — chosen when you create the prompt, not bolted on afterwards.</p>
+      </div>
+
+      <p class="text-slate-300 mb-6">
+        Worth mentioning: chains reward restraint. A three-step chain you run weekly is worth ten times a nine-step chain you built once to prove it could be done.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Prompt management best practices</h2>
+
+      <ul class="text-slate-300 mb-8 space-y-3 list-disc pl-6">
+        <li><strong class="text-white">Name prompts by outcome, not by content.</strong> "Client update email" beats "Prompt 4 (good one)". You'll search for what you wanted, not what you wrote.</li>
+        <li><strong class="text-white">Save it the second it works.</strong> The window between "that's a great answer" and "what did I type?" is about ninety seconds.</li>
+        <li><strong class="text-white">Variables for what changes, plain text for what doesn't.</strong> Turning every noun into a variable makes a form nobody wants to fill in.</li>
+        <li><strong class="text-white">Keep one folder per job, not per client.</strong> Clients come and go; the jobs stay the same.</li>
+        <li><strong class="text-white">Mark what's tested.</strong> A <em>tested</em> tag separates prompts you've verified from prompts you saved hopefully.</li>
+        <li><strong class="text-white">Review quarterly, prune ruthlessly.</strong> A library of 40 prompts you use beats 300 you scroll past.</li>
+        <li><strong class="text-white">Export before you need to.</strong> Backups are only ever configured too late.</li>
+      </ul>
+
+      <blockquote class="border-l-4 border-cyan-500 pl-6 my-8 text-slate-300 italic">
+        "Solid productivity booster... organizes prompts... trimming feature particularly useful."
+        <footer class="text-slate-400 not-italic mt-2">— Gimme Video, <a href="https://chromewebstore.google.com/detail/ai-workspace-pro-chatgpt/mngeddjcngpcdakdhfcbaefeonmmeomg/reviews" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300">Chrome Web Store review</a> (4.5★ average)</footer>
+      </blockquote>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Common prompt management mistakes</h2>
+
+      <ul class="text-slate-300 mb-8 space-y-3 list-disc pl-6">
+        <li><strong class="text-white">Building the taxonomy first.</strong> People design fourteen nested folders before saving a single prompt, then abandon the scheme in week two. Save ten prompts, then let the structure follow what you actually have.</li>
+        <li><strong class="text-white">Storing prompts outside the tool you prompt in.</strong> A Notion page full of prompts is a museum. Every retrieval costs a context switch, and context switches are what kill the habit.</li>
+        <li><strong class="text-white">Saving outputs instead of inputs.</strong> The answer was good because the prompt was good. Save the prompt.</li>
+        <li><strong class="text-white">Hoarding.</strong> A prompt you have never rerun isn't an asset, it's clutter with sentimental value.</li>
+        <li><strong class="text-white">Treating it as a solo problem.</strong> If two people on a team write the same task prompt differently, you get two different house styles. Shared, exported prompts are the cheapest style guide there is.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">What to look for in a prompt management tool</h2>
+
+      <p class="text-slate-300 mb-6">
+        There are good options in this category, and they solve overlapping problems differently. <a href="https://spchatgpt.com/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300">Superpower ChatGPT</a> is the veteran, with a deep toolset and a prompt manager that supports variables. <a href="https://www.ai-toolbox.co/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300">ChatGPT Toolbox</a> covers more AI platforms than we do, Gemini included, and ships an enterprise tier. Both are worth a look — based on our last check of their published feature lists, so confirm the current details on their own sites.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        Whichever you land on, these are the criteria that actually predict whether you'll still be using it in six months:
+      </p>
+
+      <ul class="text-slate-300 mb-8 space-y-3 list-disc pl-6">
+        <li><strong class="text-white">Retrieval inside the composer.</strong> If inserting a prompt needs a second window, the tool loses to your memory.</li>
+        <li><strong class="text-white">Real templating.</strong> Not just placeholders — typed fields, defaults, and optional values.</li>
+        <li><strong class="text-white">Automatic capture.</strong> Manual saving is a habit; automatic capture is a system.</li>
+        <li><strong class="text-white">Export you control.</strong> JSON or CSV, on demand, without a support ticket.</li>
+        <li><strong class="text-white">Local-first storage.</strong> Prompts contain client names, strategy, and unreleased work. AI Workspace Pro keeps them on your machine with no telemetry, and encrypted vaults for the sensitive ones.</li>
+        <li><strong class="text-white">Cross-platform coverage.</strong> A prompt written for ChatGPT usually works in Claude and Grok too; your library shouldn't be trapped in one of them.</li>
+      </ul>
+
+      <p class="text-slate-300 mb-6">
+        For a wider view of the category, see our <a href="/blog/best-chatgpt-chrome-extensions-2026" class="text-cyan-400 hover:text-cyan-300">rundown of the best ChatGPT Chrome extensions</a>, and if budget is the deciding factor, we published the <a href="/blog/chatgpt-extension-pricing-comparison" class="text-cyan-400 hover:text-cyan-300">three-year cost math for all three tools</a>.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Frequently asked questions</h2>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">What is prompt management?</h3>
+      <p class="text-slate-300 mb-6">
+        Prompt management is the practice of capturing, organizing, templating, retrieving, and maintaining the prompts you reuse. It's the operational layer that sits around prompt writing — storage, structure, variables, fast insertion, and pruning — so a prompt that worked once keeps working without being rewritten from memory.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">How is prompt management different from prompt engineering?</h3>
+      <p class="text-slate-300 mb-6">
+        Prompt engineering is about writing a single prompt well: phrasing, structure, examples, constraints. Prompt management is about everything that happens to that prompt afterwards. You can be excellent at the first and still lose an hour a week to the second.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Does ChatGPT have built-in prompt management?</h3>
+      <p class="text-slate-300 mb-6">
+        Not in any complete sense. There's no native way to save a prompt with tags, turn it into a template with variables, and reinsert it with a keystroke. Most people improvise with a notes app or a doc, which is exactly how prompts end up scattered. A Chrome extension adds the missing layer directly inside the ChatGPT interface.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">How many prompts should I keep?</h3>
+      <p class="text-slate-300 mb-6">
+        Fewer than you think. Most people's real working set is 20 to 40 prompts; the rest is archive. I keep a couple of hundred saved, but the ones that get used weekly would fit on a single screen — which is why pinning and favorites matter more than capacity.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Can I share a prompt library with my team?</h3>
+      <p class="text-slate-300 mb-6">
+        Yes — export the library to JSON or CSV and your colleagues import the same file. It's a practical way to standardize output quality across a team, since everyone is then working from identical instructions rather than their own remembered version.
+      </p>
+
+      <h3 class="text-xl font-bold text-white mt-8 mb-4">Are my saved prompts private?</h3>
+      <p class="text-slate-300 mb-6">
+        In AI Workspace Pro they're stored locally on your device with no telemetry, and sensitive ones can live in an AES-256 encrypted vault. That matters more than it sounds: prompts routinely contain client names, internal strategy, and unpublished work.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6">Where to go from here</h2>
+
+      <p class="text-slate-300 mb-6">
+        If you take one thing from this page, make it stage four. Capture and structure feel productive, which is why people spend their weekend on folder schemes. But the library only earns its keep at the moment you need a prompt and it's already in the box, one keystroke away.
+      </p>
+
+      <p class="text-slate-300 mb-6">
+        Next steps, depending on where you are: <a href="/blog/chatgpt-prompt-library" class="text-cyan-400 hover:text-cyan-300">build your first prompt library</a> if you're starting from scratch, see <a href="/blog/chatgpt-for-blogging-complete-guide" class="text-cyan-400 hover:text-cyan-300">prompts in a real end-to-end workflow</a> if you want worked examples, or read the <a href="/blog/chatgpt-workspaces-complete-guide" class="text-cyan-400 hover:text-cyan-300">guide to ChatGPT workspaces</a> if your conversations need the same treatment your prompts just got.
+      </p>
+
+      <div class="my-10 p-6 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-xl text-center">
+        <h3 class="text-2xl font-bold text-white mb-3">Put your prompts where you use them</h3>
+        <p class="text-slate-300 mb-6">Prompt library, typed templates, chains, and one-keystroke insertion — inside ChatGPT, Claude, and Grok. Free to start.</p>
+        <a href="https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 text-base font-bold text-white no-underline">Try AI Workspace Pro free</a>
+      </div>
+    `,
+  },
+  {
     slug: "chatgpt-extension-pricing-comparison",
     title: "ChatGPT Extension Pricing: We Did the Math (2026)",
     excerpt:
@@ -7809,7 +8192,7 @@ export const blogPosts: BlogPost[] = [
       </p>
 
       <p class="text-slate-300 mb-8">
-        This is a build-from-scratch guide. Not a list of "100 prompts to copy," but the actual system: how to collect what you already have, group it so you can find it, turn your best prompts into reusable templates, and make retrieval instant. By the end you'll have a library that gets faster to use the more you add to it — the opposite of how a folder of saved chats behaves.
+        This is a build-from-scratch guide. Not a list of "100 prompts to copy," but the actual system: how to collect what you already have, group it so you can find it, turn your best prompts into reusable templates, and make retrieval instant. By the end you'll have a library that gets faster to use the more you add to it — the opposite of how a folder of saved chats behaves. For the wider picture of how a library fits into capture, templating, retrieval and upkeep, start with our <a href="/blog/prompt-management-guide" class="text-cyan-400 hover:text-cyan-300">complete guide to prompt management</a>.
       </p>
 
       <blockquote class="mb-10">

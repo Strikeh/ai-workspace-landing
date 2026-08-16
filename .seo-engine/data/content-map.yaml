@@ -1,4 +1,51 @@
-﻿last_updated: "2026-07-19"
+﻿last_updated: "2026-08-16"
+
+  - slug: "prompt-management-guide"
+    title: "Prompt Management: Complete Guide to Reusable Prompts"
+    status: "human-review"
+    published_date: "2026-08-16"
+    cluster_id: "tc_prompt_management"
+    content_type: "pillar"
+    word_count: 2815
+    category: "Guides"
+    primary_keyword: "prompt management"
+    hero_image: "/images/blog/prompt-management-guide/hero.jpg"
+    target_features:
+      - feat_prompt_library
+      - feat_quick_slash_access
+      - feat_pin_favorite_prompts
+      - feat_template_variables
+      - feat_prompt_chains
+      - feat_prompt_history
+      - feat_export_share_prompts
+      - feat_prompt_optimizer
+      - feat_local_first_storage
+      - feat_aes256_encryption
+    competitors_mentioned:
+      - comp_superpower_chatgpt
+      - comp_chatgpt_toolbox
+    internal_links:
+      - /blog/chatgpt-prompt-library
+      - /blog/chatgpt-workspaces-complete-guide
+      - /blog/chatgpt-for-blogging-complete-guide
+      - /blog/getting-started-with-ai-workspace
+      - /blog/chatgpt-work-agent-explained
+      - /blog/best-chatgpt-chrome-extensions-2026
+      - /blog/chatgpt-extension-pricing-comparison
+      - /prompt-library
+      - /chatgpt-prompt-optimizer
+    external_links:
+      - https://platform.openai.com/docs/guides/prompt-engineering
+      - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview
+    has_eeat_signals: true
+    eeat_notes: "Gimme Video testimonial (verbatim CWS review) + review link + 4.5-star rating, first-hand experience with a 200+ prompt library and 47 auto-captured recent prompts"
+    has_tl_dr: true
+    has_faq: true
+    has_svg_chart: true
+    information_gain_markers: 2
+    citation_capsules: 2
+    needs_update_reason: ""
+    notes: "Pillar page for tc_prompt_management (q_002). Unique angle: the five-stage lifecycle (capture/structure/templatize/retrieve/maintain) with retrieval named as the failure point. Primary information gain: the full typed-variable syntax table (dropdown, slider, date, checkbox, regex validation, conditional :if(), repeaters, file upload) documented from the live UI — features.yaml only described plain {{topic}} placeholders. Body screenshots reused from public/images/blog/prompt-management/; hero AI-generated via Higgsfield. Drafted without SERP data (user opted to proceed). CANNIBALIZATION: legacy post how-do-i-organize-chatgpt-prompts-guide (Jan 18 2026) is titled 'The Complete Guide to Prompt Management' and is NOT registered in this map — recommend retitling it to its question keyword so it stops competing on 'prompt management'."
 
   - slug: "chatgpt-extension-pricing-comparison"
     title: "ChatGPT Extension Pricing: We Did the Math (2026)"

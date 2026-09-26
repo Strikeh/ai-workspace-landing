@@ -2114,11 +2114,10 @@ export default function Home() {
                   ))}
                 </ul>
 
+                {/* Direct Stripe Payment Link: the backend links the purchase
+                    to the account with the same email (or pre-creates it). */}
                 <a
-                  href={
-                    installUrl ||
-                    "https://chromewebstore.google.com/detail/aiworkspace-pro/mngeddjcngpcdakdhfcbaefeonmmeomg"
-                  }
+                  href="https://buy.stripe.com/fZu14ocTh6Pt13v7zAew800"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full py-4 rounded-xl bg-gradient-to-r from-fuchsia-500 to-purple-600 text-center font-bold text-white hover:shadow-lg hover:shadow-fuchsia-500/25 transition-all hover:scale-[1.02] mt-auto"
@@ -2127,6 +2126,9 @@ export default function Home() {
                 </a>
                 <p className="mt-3 text-center text-xs text-slate-500">
                   14-day money-back guarantee
+                </p>
+                <p className="mt-1 text-center text-xs text-slate-500">
+                  Pay with the email you&apos;ll sign in to the extension with.
                 </p>
               </StaggerItem>
             </StaggerContainer>

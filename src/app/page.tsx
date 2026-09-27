@@ -6,6 +6,7 @@ import type { SVGProps } from "react";
 import { useEffect, useState } from "react";
 import DemoModal from "@/components/DemoModal";
 import DemoHubButton from "@/components/DemoHubButton";
+import HeroMotion from "@/components/HeroMotion";
 import FeatureShowcase from "@/components/FeatureShowcase";
 import CompleteFeatureMatrix from "@/components/CompleteFeatureMatrix";
 import CompetitorComparison from "@/components/CompetitorComparison";
@@ -527,7 +528,7 @@ export default function Home() {
               playsInline
               preload="metadata"
               aria-hidden="true"
-              className="absolute inset-0 h-full w-full object-cover opacity-60"
+              className="absolute inset-0 h-full w-full object-cover opacity-60 xl:opacity-20"
             />
             {/* Legibility scrim — dark on the left (text) clearing toward the video on the right */}
             <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-950/25" />
@@ -559,8 +560,8 @@ export default function Home() {
             />
           </div>
 
-          <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-16 px-6 pb-16 pt-20 md:px-10 lg:px-16">
-            <div className="relative flex max-w-2xl flex-col gap-10">
+          <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-16 px-6 pb-16 pt-20 md:px-10 lg:px-16 xl:flex-row xl:items-start xl:gap-10">
+            <div className="relative flex max-w-2xl flex-col gap-10 xl:flex-shrink-0">
               <SlideUp className="w-full space-y-6" delay={0.1}>
                 {/* Social Proof Bar - First thing they see */}
                 <div className="flex flex-wrap items-center gap-3 text-sm">
@@ -706,6 +707,11 @@ export default function Home() {
                 </div>
               </SlideUp>
 
+              {/* Compact animated product story for phones & tablets */}
+              <div className="mx-auto w-full max-w-[420px] xl:hidden">
+                <HeroMotion compact />
+              </div>
+
               {/* Secondary hero details */}
               <div className="w-full space-y-6">
                 {/* Feature highlights */}
@@ -801,7 +807,11 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Hero visual now lives in the section background video above */}
+            </div>
+
+            {/* Animated product story: chaos → organize → reuse → export */}
+            <div className="hidden xl:block xl:min-w-0 xl:flex-1 xl:sticky xl:top-28 xl:pt-10">
+              <HeroMotion />
             </div>
           </div>
         </section>

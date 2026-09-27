@@ -2383,3 +2383,36 @@ details[open].faq-card {
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
+
+/* Hero motion graphic (HeroMotion.tsx) */
+.hm-grid {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.07) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, #000 30%, transparent 80%);
+}
+
+.hm-float {
+  animation: hm-float 6s ease-in-out infinite;
+}
+
+@keyframes hm-float {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(4px, -9px, 0); }
+}
+
+.hm-caret {
+  animation: hm-caret 1s steps(1) infinite;
+}
+
+@keyframes hm-caret {
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hm-float,
+  .hm-caret {
+    animation: none;
+  }
+}

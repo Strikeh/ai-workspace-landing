@@ -342,7 +342,7 @@ export default function FreelancersPage() {
           <h2 className="text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <FaqItem question="Is AI Workspace free for freelancers?" answer="Yes, the core features are completely free. Folders, workspaces, saved prompts, and instant search are all included at no cost." />
-            <FaqItem question="How many client workspaces can I create?" answer="The free plan includes multiple workspaces. A Pro plan gives you unlimited workspaces for freelancers managing many clients simultaneously." />
+            <FaqItem question="How many client workspaces can I create?" answer="The free plan includes up to 3 workspaces. A Pro plan gives you unlimited workspaces for freelancers managing many clients simultaneously." />
             <FaqItem question="Can I import my existing ChatGPT chats?" answer="Yes, you can organize your existing chats into folders and workspaces. The search also indexes all your past conversations, not just new ones." />
             <FaqItem question="Is my client data private?" answer="Completely. All data is stored locally in your browser. Nothing is sent to our servers. Your client files, prompts, and chats never leave your machine." />
             <FaqItem question="Does it work with Claude or other AI tools?" answer="Currently AI Workspace is optimized for ChatGPT. Support for Claude, Gemini, and other models is on our roadmap." />

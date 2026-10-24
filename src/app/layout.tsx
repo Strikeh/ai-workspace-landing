@@ -20,7 +20,7 @@ const siteConfig = {
   title:
     "ChatGPT Workspaces Chrome Extension | Organize Chats, Prompts & Projects",
   description:
-    "Create unlimited workspaces inside ChatGPT. Separate clients, projects, and personal chats with complete context isolation. Built for freelancers, consultants, and developers. Works with ChatGPT, Claude & Grok. Free to start. 4.5★ rated Chrome extension. Privacy-first, local-only storage.",
+    "Create separate workspaces inside ChatGPT (3 free, unlimited with Pro). Separate clients, projects, and personal chats with complete context isolation. Built for freelancers, consultants, and developers. Works with ChatGPT, Claude & Grok. Free to start. 4.5★ rated Chrome extension. Privacy-first, local-only storage.",
   url: "https://getaiworkspace.com",
   ogImage: "https://getaiworkspace.com/og-image.png",
   keywords: [
@@ -297,7 +297,7 @@ export default function RootLayout({
                   name: "Can I use AI Workspace extension for free?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes! The core features are free forever. You get access to custom workspaces, basic prompt management, and local history without paying a dime.",
+                    text: "Yes! The core features are free forever. You get up to 3 custom workspaces, basic prompt management (up to 5 saved prompts), and local history without paying a dime.",
                   },
                 },
                 {
@@ -305,7 +305,7 @@ export default function RootLayout({
                   name: "What's the difference between Free and Pro?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Free includes limited prompts and notes, 1 vault, and no encryption. Pro ($7.99/month billed annually or $9.99/month billed monthly) offers unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, unlimited folders & categories, pinned messages, and multi-platform support.",
+                    text: "Free includes up to 3 workspaces, limited prompts and notes, and no encryption. Pro ($7.99/month billed annually or $9.99/month billed monthly) offers unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, unlimited folders & categories, pinned messages, and multi-platform support.",
                   },
                 },
                 {

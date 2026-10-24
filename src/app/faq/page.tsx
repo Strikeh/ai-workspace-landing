@@ -39,7 +39,7 @@ const faqCategories: FaqCategory[] = [
       },
       {
         q: "Is AI Workspace free?",
-        a: "Yes. The core features are free forever: custom workspaces, basic prompt management, folders, and local history. Pro ($7.99/month billed annually, or $9.99/month billed monthly) adds unlimited prompts, vaults and notes, encrypted storage, the full Image Gallery, Smart Conversation Outline, unlimited folders and categories, pinned messages, and multi-platform support.",
+        a: "Yes. The core features are free forever: up to 3 custom workspaces, basic prompt management (up to 5 saved prompts), folders, and local history. Pro ($7.99/month billed annually, or $9.99/month billed monthly) adds unlimited prompts, vaults and notes, encrypted storage, the full Image Gallery, Smart Conversation Outline, unlimited folders and categories, pinned messages, and multi-platform support.",
       },
       {
         q: "Do I need a ChatGPT Plus subscription?",
@@ -125,7 +125,7 @@ const faqCategories: FaqCategory[] = [
       },
       {
         q: "What is an encrypted vault?",
-        a: "A vault protects a workspace with AES-256 encryption — the same standard used by password managers. It's built for consultants, agencies, and anyone handling sensitive client data. Free includes 1 vault; Pro includes unlimited vaults.",
+        a: "A vault protects a workspace with AES-256 encryption — the same standard used by password managers. It's built for consultants, agencies, and anyone handling sensitive client data. Encryption is a Pro feature: the free plan includes up to 3 regular (unencrypted) workspaces, Pro adds unlimited encrypted vaults.",
       },
       {
         q: "Can the extension read my conversations?",
@@ -171,7 +171,7 @@ const faqCategories: FaqCategory[] = [
     items: [
       {
         q: "What's the difference between Free and Pro?",
-        a: "Free includes limited prompts and notes, 1 vault, and no encryption. Pro ($7.99/month billed annually or $9.99/month billed monthly) offers unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, Smart Conversation Outline, unlimited folders & categories, pinned messages, and multi-platform support.",
+        a: "Free includes up to 3 workspaces, limited prompts and notes, and no encryption. Pro ($7.99/month billed annually or $9.99/month billed monthly) offers unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, Smart Conversation Outline, unlimited folders & categories, pinned messages, and multi-platform support.",
       },
       {
         q: "Can I cancel anytime?",

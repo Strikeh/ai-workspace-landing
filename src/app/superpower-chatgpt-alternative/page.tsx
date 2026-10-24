@@ -76,7 +76,7 @@ const whatYouGet = [
     icon: FolderTree,
     title: "Workspaces & folders",
     description:
-      "Create unlimited workspaces with full context isolation and organize chats into nested folders. A gentle nudge even helps you sort uncategorized chats.",
+      "Create workspaces with full context isolation (3 free, unlimited with Pro) and organize chats into nested folders. A gentle nudge even helps you sort uncategorized chats.",
   },
   {
     icon: Wand2,

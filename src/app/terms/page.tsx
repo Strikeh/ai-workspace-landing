@@ -172,7 +172,7 @@ export default function TermsPage() {
             </h3>
             <p style={{ color: "var(--color-text)" }}>
               The free version provides limited access to core features
-              including basic prompt storage, one vault, and standard
+              including basic prompt storage, up to three workspaces, and standard
               functionality.
             </p>
 

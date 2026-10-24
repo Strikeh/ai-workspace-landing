@@ -587,7 +587,7 @@ export default function StudentsPage() {
           <div className="space-y-4">
             <FaqItem
               question="Is AI Workspace free for students?"
-              answer="Yes! The core features \u2014 folders, workspaces, saved prompts, and instant search \u2014 are all free to use. A Pro plan exists for power users who need unlimited everything."
+              answer="Yes! The core features \u2014 folders, up to 3 workspaces, saved prompts, and instant search \u2014 are all free to use. A Pro plan exists for power users who need unlimited everything."
             />
             <FaqItem
               question="Does it work with the free version of ChatGPT?"

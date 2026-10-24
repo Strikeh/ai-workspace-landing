@@ -4,7 +4,7 @@
 project:
   name: "AI Workspace Pro"
   tagline: "ChatGPT Workspaces – Everything ChatGPT Should Have Built In."
-  description: "Create unlimited workspaces inside ChatGPT. Separate clients, projects, and personal chats with complete context isolation. Built for freelancers, consultants, and developers. Works with ChatGPT, Claude & Grok."
+  description: "Create separate workspaces inside ChatGPT (3 free, unlimited with Pro). Separate clients, projects, and personal chats with complete context isolation. Built for freelancers, consultants, and developers. Works with ChatGPT, Claude & Grok."
   website: "https://getaiworkspace.com"
   target_audience:
     primary: "freelancers, consultants, and developers who use ChatGPT daily"

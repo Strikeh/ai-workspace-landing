@@ -592,7 +592,7 @@ export default function AgenciesPage() {
           <div className="space-y-4">
             <FaqItem
               question="Is AI Workspace free for agencies?"
-              answer="Yes, the core features are free. You get workspaces, folders, saved prompts, and instant search at no cost. A Pro plan unlocks unlimited workspaces and advanced features for larger teams."
+              answer="Yes, the core features are free. You get up to 3 workspaces, folders, saved prompts, and instant search at no cost. A Pro plan unlocks unlimited workspaces and advanced features for larger teams."
             />
             <FaqItem
               question="How does it prevent context bleed between clients?"

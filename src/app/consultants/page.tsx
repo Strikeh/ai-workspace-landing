@@ -341,7 +341,7 @@ export default function ConsultantsPage() {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
           <div className="space-y-4">
-            <FaqItem question="Is AI Workspace free for consultants?" answer="Yes, core features are free. Workspaces, folders, framework prompt libraries, and instant search are included. A Pro plan gives you unlimited workspaces for multi-engagement practices." />
+            <FaqItem question="Is AI Workspace free for consultants?" answer="Yes, core features are free. Up to 3 workspaces, folders, framework prompt libraries, and instant search are included. A Pro plan gives you unlimited workspaces for multi-engagement practices." />
             <FaqItem question="How is client data kept confidential?" answer="Everything is stored locally in your browser. Nothing is sent to our servers. You can also password-protect individual workspaces for the most sensitive client engagements." />
             <FaqItem question="Can I build a library of my own frameworks?" answer="Yes. Save any prompt as a reusable template. Build your complete methodology as named prompts — SWOT, stakeholder maps, retrospectives — and deploy them with one click per engagement." />
             <FaqItem question="Is this suitable for solo practitioners vs firms?" answer="Both. Solo consultants use it to keep their entire practice organized. Firms have each team member set up their own client workspaces with shared prompt libraries on the roadmap." />

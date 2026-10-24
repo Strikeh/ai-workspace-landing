@@ -64,7 +64,7 @@ PERFORMANCE & QUALITY
 Built with React 19 and TypeScript for lightning-fast performance. Polished UI with smooth animations and attention to detail across every feature.
 
 FREE & PRO
-All core features are free forever. Upgrade to Pro for unlimited prompts, folders, notes, and priority support. Or stay free—the choice is yours.
+All core features are free forever, including up to 3 workspaces. Upgrade to Pro for unlimited workspaces, prompts, folders, notes, and priority support. Or stay free—the choice is yours.
 
 GET SUPPORT
 • Watch tutorials: https://www.youtube.com/@ai-workspace-pro

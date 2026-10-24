@@ -1125,7 +1125,7 @@ export const blogPosts: BlogPost[] = [
       <div class="space-y-6 mb-10">
         <div class="border border-white/10 rounded-xl p-6">
           <h3 class="text-lg font-bold text-white mt-0 mb-3">How many workspaces can I create in AI Workspace Pro?</h3>
-          <p class="text-slate-300 m-0">AI Workspace Pro supports unlimited workspaces — no cap on clients, projects, or personal contexts. Each workspace has its own folder structure, prompt library, notes, tags, and AES-256 encrypted vault. The free plan covers core functionality for getting started, with the pro plan unlocking unlimited workspaces and advanced features.</p>
+          <p class="text-slate-300 m-0">AI Workspace Pro supports unlimited workspaces — no cap on clients, projects, or personal contexts. Each workspace has its own folder structure, prompt library, notes, tags, and AES-256 encrypted vault. The free plan includes up to 3 workspaces for getting started, with the pro plan unlocking unlimited workspaces and advanced features.</p>
         </div>
 
         <div class="border border-white/10 rounded-xl p-6">

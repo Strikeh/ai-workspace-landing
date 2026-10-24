@@ -1770,7 +1770,7 @@ export default function Home() {
               {[
                 {
                   q: "Can I use AI Workspace extension for free?",
-                  a: "Yes! The core features are free forever. You get access to custom workspaces, basic prompt management, and local history without paying a dime.",
+                  a: "Yes! The core features are free forever. You get up to 3 custom workspaces, basic prompt management (up to 5 saved prompts), and local history without paying a dime.",
                 },
                 {
                   q: "What is the Smart Conversation Outline feature?",
@@ -1778,7 +1778,7 @@ export default function Home() {
                 },
                 {
                   q: "What's the difference between Free and Pro?",
-                  a: "Free includes limited prompts and notes, 1 vault, message notes & bookmarks, unlimited heuristic follow-up suggestions plus 5 Smart (AI-powered) follow-ups every week, and no encryption. Pro ($7.99/month billed annually or $9.99/month billed monthly) offers unlimited prompts, vaults, and notes, unlimited Smart (AI) follow-up suggestions, encrypted storage, full Image Gallery, Smart Conversation Outline, unlimited folders & categories, pinned messages, and multi-platform support.",
+                  a: "Free includes up to 3 workspaces, limited prompts and notes, message notes & bookmarks, unlimited heuristic follow-up suggestions plus 5 Smart (AI-powered) follow-ups every week, and no encryption. Pro ($7.99/month billed annually or $9.99/month billed monthly) offers unlimited prompts, vaults, and notes, unlimited Smart (AI) follow-up suggestions, encrypted storage, full Image Gallery, Smart Conversation Outline, unlimited folders & categories, pinned messages, and multi-platform support.",
                 },
                 {
                   q: "Can I install the extension on Microsoft Edge or Firefox?",
@@ -1919,7 +1919,7 @@ export default function Home() {
                 <ul className="space-y-4 mb-8 flex-1">
                   {[
                     "Limited prompts & folders",
-                    "1 Custom Workspace",
+                    "Up to 3 Custom Workspaces",
                     "Message notes & bookmarks (limited)",
                     "Heuristic + 5 Smart AI follow-ups/week",
                     "Highlight text in chats",

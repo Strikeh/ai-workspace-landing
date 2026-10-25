@@ -67,7 +67,7 @@ const faqs = [
   },
   {
     q: "Are ChatGPT workspaces free?",
-    a: "Yes — workspaces are part of the free core features: the free plan includes up to 3 workspaces. Pro ($7.99/month billed annually) adds unlimited workspaces, encryption, and unlimited prompts and notes.",
+    a: "Yes — workspaces are part of the free core features: the free plan includes up to 3 workspaces. Pro ($4.92/month billed annually) adds unlimited workspaces, encryption, and unlimited prompts and notes.",
   },
   {
     q: "Do workspaces work on Claude and Grok too?",

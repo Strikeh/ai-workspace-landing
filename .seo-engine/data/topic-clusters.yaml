@@ -69,6 +69,12 @@ clusters:
       notes: "Existing blog serves as pillar. May need update to formalize pillar structure."
 
     cluster_pages:
+      - title: "ChatGPT Extension Comparison: AI Workspace vs Everyone"
+        target_keyword: "chatgpt extension comparison"
+        slug: "ai-workspace-vs-everyone"
+        angle: "Openly biased founder verdict, 7 rounds, every claim source-checked; concedes Gemini to AI Toolbox"
+        status: "human-review"
+        blog_slug: "ai-workspace-vs-everyone"
       - title: "AI Workspace vs Superpower ChatGPT: Which Extension Is Right for You?"
         target_keyword: "ai workspace pro vs superpower chatgpt"
         slug: "ai-workspace-vs-superpower-chatgpt-workspaces"

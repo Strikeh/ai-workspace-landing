@@ -1,4 +1,67 @@
-﻿last_updated: "2026-08-16"
+﻿last_updated: "2026-10-25"
+blogs:
+
+  - slug: "ai-workspace-vs-everyone"
+    title: "ChatGPT Extension Comparison: AI Workspace vs Everyone"
+    status: "human-review"
+    published_date: "2026-10-25"
+    cluster_id: "tc_chatgpt_extensions"
+    content_type: "cluster"
+    word_count: 2510
+    category: "Comparison"
+    primary_keyword: "chatgpt extension comparison"
+    hero_image: "/images/blog/ai-workspace-vs-everyone/hero.jpg"
+    target_features:
+      - feat_multi_format_export
+      - feat_prompt_library
+      - feat_quick_slash_access
+      - feat_template_variables
+      - feat_prompt_chains
+      - feat_prompt_optimizer
+      - feat_prompt_history
+      - feat_isolated_workspaces
+      - feat_unlimited_nested_folders
+      - feat_aes256_encryption
+      - feat_local_first_storage
+      - feat_zero_tracking
+      - feat_thread_trimming
+      - feat_smart_conversation_outline
+      - feat_tangent_view
+      - feat_chatgpt_support
+      - feat_claude_support
+      - feat_grok_support
+    competitors_mentioned:
+      - comp_superpower_chatgpt
+      - comp_chatgpt_toolbox
+      - comp_gpt_master
+      - comp_sider
+    internal_links:
+      - /blog/best-chatgpt-chrome-extensions-2026
+      - /blog/chatgpt-extension-pricing-comparison
+      - /blog/ai-workspace-vs-superpower-chatgpt-workspaces
+      - /blog/prompt-management-guide
+      - /blog/chatgpt-workspaces-complete-guide
+      - /blog/why-local-privacy-matters-for-ai
+      - /blog/smart-thread-hiding-chatgpt-lag-fix
+      - /blog/tangent-view-chatgpt-branching-graph
+      - /chatgpt-prompt-optimizer
+      - /compare/gpt-master
+    external_links:
+      - https://katex.org
+      - https://commonmark.org
+      - https://spchatgpt.com
+      - https://www.ai-toolbox.co/
+      - https://gptmaster.app
+      - https://sider.ai
+    has_eeat_signals: true
+    eeat_notes: "Founder byline + explicit bias disclosure, Lazar Antic + Pataxo Tupiniquim testimonials (verbatim CWS), CWS review link, 4.5-star rating, 73%/80% trimming metrics, export/prompt claims verified against extension source v0.1.165"
+    has_tl_dr: true
+    has_faq: true
+    has_svg_chart: false
+    information_gain_markers: 3
+    citation_capsules: 2
+    needs_update_reason: ""
+    notes: "User-requested deliberately over-the-top 'vs everyone' piece (7 boxing-style rounds: export, prompts, organization, privacy, performance, platforms, price; we concede platforms to AI Toolbox for Gemini). Unique angle: openly biased founder verdict, but every competitor claim re-verified 2026-10-25 on their official sites and every own claim checked against extension source. Includes an honest 'where competitors win' section. 4 images AI-generated via Higgsfield (gpt_image_2_5). Pillar best-chatgpt-chrome-extensions-2026 now links here. No SERP data (written on direct user request). Sider facts UNVERIFIED (site returned 403) - caveated in post. RE-VERIFY PRICES quarterly."
 
   - slug: "prompt-management-guide"
     title: "Prompt Management: Complete Guide to Reusable Prompts"
@@ -56,6 +119,7 @@
     word_count: 2100
     category: "Comparison"
     primary_keyword: "chatgpt extension pricing"
+    last_updated: "2026-10-25"
     hero_image: "/images/blog/chatgpt-extension-pricing-comparison/hero.jpg"
     target_features:
       - feat_isolated_workspaces
@@ -86,7 +150,7 @@
     information_gain_markers: 2
     citation_capsules: 2
     needs_update_reason: ""
-    notes: "3-way pricing comparison (us vs Superpower ChatGPT vs ChatGPT Toolbox). All prices + feature claims verified 2026-07-19 via official sites. Competitor strengths acknowledged first per tone guide. Links to pillar best-chatgpt-chrome-extensions-2026. Hero image AI-generated via Higgsfield. PRICES MUST BE RE-VERIFIED if competitors change plans — re-check quarterly."
+    notes: "UPDATED 2026-10-25: Toolbox now $59/yr per module + $199 all-access lifetime (was $149); 3-year SVG chart redrawn (adds Toolbox annual 1 vs 3 platforms); concedes Toolbox $59/yr is cheapest for ChatGPT-only subscribers; free-tier table corrected from extension source (export is Pro, 5 prompts, 5 highlights, 2-step chains, 3 workspaces); removed Firefox as a Superpower-only reason (we ship Firefox too); added visible update note. 3-way pricing comparison (us vs Superpower ChatGPT vs ChatGPT Toolbox). All prices + feature claims originally verified 2026-07-19 via official sites. Competitor strengths acknowledged first per tone guide. Links to pillar best-chatgpt-chrome-extensions-2026. Hero image AI-generated via Higgsfield. PRICES MUST BE RE-VERIFIED if competitors change plans — re-check quarterly."
 
   - slug: "chatgpt-work-agent-explained"
     title: "ChatGPT Work Is Here: What OpenAI's Agent Means for You"
@@ -228,7 +292,6 @@
     citation_capsules: 6
     needs_update_reason: ""
 
-blogs:
   - slug: "best-chatgpt-chrome-extensions-2026"
     title: "Best ChatGPT Chrome Extensions in 2026: Which One Fits Your Workflow?"
     file_path: "src/data/blog-posts.ts"

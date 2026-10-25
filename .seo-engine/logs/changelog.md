@@ -1,4 +1,40 @@
-﻿## 2026-08-16 06:40
+﻿## 2026-10-25 21:50
+**Action:** AI Workspace Pro price change — $59/year ($4.92/mo) and $6.99/month (were $95.88/year and $9.99/month); lifetime stays $99
+**Files:**
+- src/app/page.tsx (pricing card), src/app/layout.tsx (Offer/AggregateOffer JSON-LD: 59, P1Y), src/app/faq/page.tsx, src/app/terms/page.tsx, src/app/chatgpt-{image-gallery,minimap,side-chat,workspaces}/page.tsx, src/data/guides.ts (6 FAQ answers)
+- src/data/blog-posts.ts (ai-workspace-vs-everyone: TL;DR, price table, Round 7, FAQ; chatgpt-extension-pricing-comparison: update note, TL;DR, table, 3-year chart, analysis, FAQ, verdict, Toolbox bullet)
+- Extension repo (SuperPrompt, uncommitted): UpgradeModal.tsx, UpgradeFlowDialog.tsx, i18nEn.ts, i18nResources.ts (EN/NL/FR price labels, save 30%)
+- Stripe live (Getaiworkspace): new prices price_1UUXMwIYZFlvqSfwhRFvj3Ic ($59/yr, prod_TlaDqVuNI5sWdg) and price_1UUXN0IYZFlvqSfw21D2Ltm2 ($6.99/mo, prod_TlaCJbxoCjf1Be). Old prices left active for existing subscribers.
+- Railway superprompt-api: STRIPE_PRICE_ID + STRIPE_PRICE_ID_ANNUAL -> new annual, STRIPE_PRICE_ID_MONTHLY -> new monthly (rollback: annual price_1TutCxIYZFlvqSfwYnD1I4Wv, monthly price_1TutCqIYZFlvqSfwBe796DiU)
+**Summary:** Matches AI Toolbox's $59/year single-platform price while covering ChatGPT, Claude and Grok. Both comparison posts now claim cheapest monthly/annual/lifetime. Side effect: referral reward (= one month of the monthly price) drops to $6.99.
+**Triggered by:** user
+
+## 2026-10-25 21:15
+**Action:** Updated "ChatGPT Extension Pricing: We Did the Math (2026)" (chatgpt-extension-pricing-comparison) with re-verified prices and corrected free-tier claims
+**Files:**
+- src/data/blog-posts.ts (pricing post: intro + visible "Updated October 25, 2026" note, TL;DR, price table, sources date, 3-year SVG chart redrawn, analysis paragraph, free-tier table, free-tier paragraph, competitor strengths, "who should choose", FAQ x4, final verdict, CTA copy)
+- .seo-engine/data/content-map.yaml (last_updated + notes on the pricing post)
+**Summary:** Closes open item 2 from the previous entry. AI Toolbox: $59/yr per module and $199 all-access lifetime (was "no annual" and $149). Post now concedes Toolbox $59/yr is the cheapest ChatGPT-only subscription while keeping the multi-platform/lifetime advantage. Free-tier table corrected against extension source v0.1.165 (export is Pro-only; 5 prompts; 5 highlights; 2-step chains; up to 3 workspaces). Removed "Firefox support" as a reason to pick Superpower (AI Workspace ships on Firefox). Kept original publish date; update shown in-post.
+**Triggered by:** user
+
+## 2026-10-25 20:30
+**Action:** Drafted cluster blog "ChatGPT Extension Comparison: AI Workspace vs Everyone" (slug: ai-workspace-vs-everyone) for tc_chatgpt_extensions
+**Files:**
+- src/data/blog-posts.ts (new post at top, status human-review, category Comparison, ~2510 words; pillar best-chatgpt-chrome-extensions-2026 now links to its cluster pages incl. this one)
+- public/images/blog/ai-workspace-vs-everyone/ (hero, scoreboard, export, prompt-manager — Higgsfield gpt_image_2_5, 1600px JPG)
+- .seo-engine/data/content-map.yaml (registered post; FIXED pre-existing invalid YAML — the `blogs:` key sat below the Aug/Jul entries, moved it to line 2)
+- .seo-engine/data/features.yaml (blog_refs on 7 features)
+- .seo-engine/data/seo-keywords.csv (3 keywords mapped)
+- .seo-engine/data/topic-clusters.yaml (cluster page added)
+- .seo-engine/data/competitors.yaml (re-verified 2026-10-25: AI Toolbox all-access lifetime now $199 not $149, new $59/yr per-module annual + Teams plan; Superpower/GPT Master notes refreshed; Sider unverified — 403)
+**Summary:** User-requested, deliberately over-the-top "vs everyone" piece in 7 rounds (export, prompts, organization, privacy, performance, platforms, price) against Superpower ChatGPT, AI Toolbox, GPT Master and Sider; concedes the platform round to AI Toolbox (Gemini) and has an honest "where competitors win" section. Competitor facts re-verified on official sites; our export/prompt claims verified against extension source v0.1.165. No SERP data (direct user request).
+**⚠️ Open items for human review:**
+1. EXTENSION BUG — ExportChatsDialog.tsx ("Export All"/date range): PDF option falls through to plain text and saves as .txt (generateConversationPdf imported but never called). The post deliberately does not claim PDF for that dialog.
+2. STALE CLAIM — chatgpt-extension-pricing-comparison says free tier exports PDF/MD/TXT/JSON, but the code gates all export dialogs behind Pro (canExport=false on Free). Also its Toolbox lifetime ($149) and "no annual" are now outdated ($199, $59/yr).
+3. Direct jsPDF export strips non-Latin-1 characters (CJK, Cyrillic, Greek, Arabic, emoji). Post steers those users to the print view.
+**Triggered by:** user
+
+## 2026-08-16 06:40
 **Action:** Drafted pillar page "Prompt Management: Complete Guide to Reusable Prompts" (slug: prompt-management-guide) for cluster tc_prompt_management (q_002)
 **Files:**
 - src/data/blog-posts.ts (new post at top, status human-review, category Guides, 2815 words, inline SVG lifecycle diagram, 6 images)

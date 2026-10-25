@@ -1,5 +1,5 @@
-﻿last_updated: "2026-07-19"
-last_verified: "2026-07-19"
+﻿last_updated: "2026-10-25"
+last_verified: "2026-10-25"
 
 competitors:
   - id: "comp_superpower_chatgpt"
@@ -16,7 +16,7 @@ competitors:
       source: "https://spchatgpt.com/pricing/"
     strengths: "First mover in ChatGPT extensions, established user base, deep toolset verified 2026-07-19 via homepage: folders/subfolders, bulk actions, prompt manager with variables + optimizer + history, message queue, instruction profiles, tree map (branch visualization), minimap, conversation notes, reference chats, text highlights with annotations, image gallery, voice mode, audio player/audio export, PDF/MD/JSON export, ad blocking, Firefox support"
     weaknesses: "Single workspace (no context isolation), no AES-256 encryption listed, no thread trimming / performance tools listed, ChatGPT-only (chatgpt.com), no lifetime plan, most expensive monthly ($15)"
-    notes: "Primary direct competitor. Website moved to spchatgpt.com (was superpowerchatgpt.com). Compared in blogs: ai-workspace-vs-superpower-chatgpt-workspaces (Feb 2026 — feature claims partly outdated, needs update), is-superpower-chatgpt-safe, chatgpt-extension-pricing-comparison (Jul 2026, pricing verified)"
+    notes: "Re-verified 2026-10-25: pricing unchanged; export PDF/MD/JSON/Text (Pro: all chats, folders, selected messages; free single-chat basics); variables/optimizer/prompt import-export Pro-only; free chains 2 steps; claims local-first; new: ad blocker, prompt queue, Showcase marketplace; claims 400K+ users. Primary direct competitor. Website moved to spchatgpt.com (was superpowerchatgpt.com). Compared in blogs: ai-workspace-vs-superpower-chatgpt-workspaces (Feb 2026 — feature claims partly outdated, needs update), is-superpower-chatgpt-safe, chatgpt-extension-pricing-comparison (Jul 2026, pricing verified)"
 
   - id: "comp_sider"
     name: "Sider"
@@ -25,7 +25,7 @@ competitors:
     pricing_model: "freemium"
     strengths: "Large user base (~5M users), multi-model sidebar, broad feature set"
     weaknesses: "Generalist tool (not ChatGPT-workspace-focused), cloud dependent"
-    notes: "Mentioned in blog: best-chatgpt-chrome-extensions-2026"
+    notes: "Mentioned in blogs: best-chatgpt-chrome-extensions-2026, ai-workspace-vs-everyone. 2026-10-25: sider.ai returned 403 to automated fetch; search snippets suggest plans restructured to Lite/Pro/Max fixed monthly credits (UNVERIFIED)."
 
   - id: "comp_chatgpt_toolbox"
     name: "ChatGPT Toolbox"
@@ -34,15 +34,16 @@ competitors:
     pricing_model: "freemium"
     pricing:
       monthly: "$9.99/month PER PLATFORM"
-      annual: "no annual discount listed"
-      lifetime: "$99 single platform / $149 all-access (all platforms incl. future)"
+      annual: "$59/year PER MODULE (new, seen 2026-10-25)"
+      lifetime: "$99 single module / $199 all-access (struck from $396; was $149 in July) - verified 2026-10-25"
+      teams: "$15/seat/mo or $12/seat billed annually, 2-seat minimum (new 2026-10-25)"
       enterprise: "$10/seat/month billed annually, 5-seat minimum"
       free_tier_limits: "2 folders, 2 bookmarks/pins, 2 saved prompts, 5 search results per query, TXT export only, smart tags limited to 50 conversations, 3 context mentions/day, 5-image media gallery"
       last_verified: "2026-07-19"
       source: "https://www.ai-toolbox.co/"
     strengths: "Verified 2026-07-19 via homepage: supports 4 platforms (ChatGPT, Gemini, Claude, Grok — incl. Gemini which we lack), cross-device sync, 10-language UI with RTL, public prompt library, full-text search, smart tags, prompt chaining (up to 10 steps paid), bulk export TXT/MD/JSON/PDF (paid), audio downloads with 9 voices (paid), enterprise plan with admin dashboard, claims local-first + GDPR, 14-day money-back, ~35K users, 4.5/5 CWS"
     weaknesses: "Per-platform pricing (each platform billed separately), very tight free tier (2 folders/2 prompts/TXT-only export), no isolated workspaces, no encryption listed, no thread trimming / performance tools listed"
-    notes: "Verified 2026-07-19 via site fetch. Compared in blog: chatgpt-extension-pricing-comparison. Their blog inspired organize-chatgpt-conversations-2026."
+    notes: "Rebranded to AI Toolbox (v3.0). Re-verified 2026-10-25: paid export = MD (with YAML frontmatter for Obsidian)/JSON/PDF + bulk ZIP; free = unlimited single-chat TXT; // prompt insert, plain {{placeholder}} vars, .. chains up to 10 steps ChatGPT / 25 others, @@ context mentions, no optimizer listed; folders/prompts/tags sync to cloud encrypted at rest (option to keep prompts on device); Chromium only. Verified 2026-07-19 via site fetch. Compared in blog: chatgpt-extension-pricing-comparison. Their blog inspired organize-chatgpt-conversations-2026."
 
   - id: "comp_gpt_master"
     name: "GPT Master"
@@ -51,7 +52,7 @@ competitors:
     pricing_model: "freemium"
     strengths: "4.8 stars Chrome Web Store, 4,000+ users, free no-signup install, focused/polished ChatGPT organizer. Features verified 2026-06-11: folders (nesting, color labels, drag-drop), bookmarks (star messages), timestamps, minimap, conversation notes, Side Chat (side questions in right panel), legacy dark mode, prompt library with // shortcut, prompt optimizer, bulk actions, local-first storage. Strong SEO: 11 root-level feature pages, 107 guides, 6 compare pages, 35-question FAQ, 7 persona resources, 10 language versions."
     weaknesses: "ChatGPT-only (no Claude/Grok/Gemini), no isolated workspaces, no encryption, no image gallery, no text highlighting, no branching graph, no performance trimming, no export feature page, anonymous founder (E-E-A-T gap), Pro tier pricing not published, weak visuals (0-1 screenshots per page), no video content."
-    notes: "Verified 2026-06-11 via full site crawl (3 research agents). Compared on site at /compare/gpt-master. They compare against Superpower ChatGPT, ChatGPT Toolbox, folder extensions, ChatGPT Projects, ChatGPT Search, and manual organization — nobody compares against them yet (we now do)."
+    notes: "Re-verified 2026-10-25: still no pricing published; export page lists single-chat PDF/HTML/MD but FAQ says it focuses on organizing rather than exporting; // prompt insert, prompts not in folders, no chains; 14 UI languages; 16,000+ users, 4.8 stars (310 reviews). Verified 2026-06-11 via full site crawl (3 research agents). Compared on site at /compare/gpt-master. They compare against Superpower ChatGPT, ChatGPT Toolbox, folder extensions, ChatGPT Projects, ChatGPT Search, and manual organization — nobody compares against them yet (we now do)."
 
 feature_matrix:
   # --- Organization ---

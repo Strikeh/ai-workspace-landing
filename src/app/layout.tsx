@@ -196,18 +196,18 @@ export default function RootLayout({
                 {
                   "@type": "Offer",
                   name: "Pro Plan",
-                  price: "7.99",
+                  price: "59",
                   priceCurrency: "USD",
                   priceSpecification: {
                     "@type": "UnitPriceSpecification",
-                    price: "7.99",
+                    price: "59",
                     priceCurrency: "USD",
                     billingDuration: "P1Y",
                     billingIncrement: 1,
                   },
                   availability: "https://schema.org/InStock",
                   description:
-                    "Annual billing: $7.99/month or Monthly billing: $9.99/month with unlimited prompts, encrypted storage, and premium features",
+                    "Annual billing: $59/year ($4.92/month) or Monthly billing: $6.99/month with unlimited prompts, encrypted storage, and premium features",
                 },
               ],
               aggregateRating: {
@@ -305,7 +305,7 @@ export default function RootLayout({
                   name: "What's the difference between Free and Pro?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Free includes up to 3 workspaces, limited prompts and notes, and no encryption. Pro ($7.99/month billed annually or $9.99/month billed monthly) offers unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, unlimited folders & categories, pinned messages, and multi-platform support.",
+                    text: "Free includes up to 3 workspaces, limited prompts and notes, and no encryption. Pro ($4.92/month billed annually ($59/year) or $6.99/month billed monthly) offers unlimited prompts, vaults, and notes, encrypted storage, full Image Gallery, unlimited folders & categories, pinned messages, and multi-platform support.",
                   },
                 },
                 {
@@ -406,7 +406,7 @@ export default function RootLayout({
               offers: {
                 "@type": "AggregateOffer",
                 lowPrice: "0",
-                highPrice: "7.99",
+                highPrice: "59",
                 priceCurrency: "USD",
                 availability: "https://schema.org/InStock",
               },

@@ -183,8 +183,8 @@ export default function TermsPage() {
               4.2 Pro Version
             </h3>
             <p className="mb-3" style={{ color: "var(--color-text)" }}>
-              The Pro version ($7.99/month billed annually or $9.99/month
-              billed monthly) includes:
+              The Pro version ($4.92/month billed annually, i.e. $59/year, or
+              $6.99/month billed monthly) includes:
             </p>
             <ul
               className="list-disc list-inside space-y-2"

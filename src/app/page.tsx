@@ -1778,7 +1778,7 @@ export default function Home() {
                 },
                 {
                   q: "What's the difference between Free and Pro?",
-                  a: "Free includes up to 3 workspaces, limited prompts and notes, message notes & bookmarks, unlimited heuristic follow-up suggestions plus 5 Smart (AI-powered) follow-ups every week, and no encryption. Pro ($7.99/month billed annually or $9.99/month billed monthly) offers unlimited prompts, vaults, and notes, unlimited Smart (AI) follow-up suggestions, encrypted storage, full Image Gallery, Smart Conversation Outline, unlimited folders & categories, pinned messages, and multi-platform support.",
+                  a: "Free includes up to 3 workspaces, limited prompts and notes, message notes & bookmarks, unlimited heuristic follow-up suggestions plus 5 Smart (AI-powered) follow-ups every week, and no encryption. Pro ($4.92/month billed annually ($59/year) or $6.99/month billed monthly) offers unlimited prompts, vaults, and notes, unlimited Smart (AI) follow-up suggestions, encrypted storage, full Image Gallery, Smart Conversation Outline, unlimited folders & categories, pinned messages, and multi-platform support.",
                 },
                 {
                   q: "Can I install the extension on Microsoft Edge or Firefox?",
@@ -1976,16 +1976,16 @@ export default function Home() {
                   <div className="mt-6 space-y-2">
                     <div className="flex items-baseline gap-2">
                       <span className="text-2xl font-bold text-slate-500 line-through">
-                        $9.99
+                        $6.99
                       </span>
                       <span className="text-4xl font-bold text-white">
-                        $7.99
+                        $4.92
                       </span>
                       <span className="text-slate-500">/month</span>
                     </div>
-                    <p className="text-xs text-cyan-400">billed annually</p>
+                    <p className="text-xs text-cyan-400">billed annually ($59/year)</p>
                     <p className="text-sm text-slate-400 mt-2">
-                      or $9.99/month (billed monthly)
+                      or $6.99/month (billed monthly)
                     </p>
                   </div>
                 </div>

@@ -1,5 +1,5 @@
 ﻿project: "AI Workspace Pro"
-last_updated: "2026-03-27"
+last_updated: "2026-10-25"
 generated_from: "landing pages, component files, and blog posts (no dedicated docs directory)"
 
 categories:
@@ -35,6 +35,7 @@ categories:
               - path: "src/components/CompleteFeatureMatrix.tsx"
                 section: "Privacy & Security"
             blog_refs:
+              - slug: "ai-workspace-vs-everyone"
               - slug: "getting-started-with-ai-workspace"
               - slug: "ai-workspace-vs-superpower-chatgpt-workspaces"
               - slug: "best-chatgpt-chrome-extensions-2026"
@@ -175,6 +176,7 @@ categories:
               - path: "src/app/chatgpt-text-highlighter/page.tsx"
                 section: "Thread trimming"
             blog_refs:
+              - slug: "ai-workspace-vs-everyone"
               - slug: "smart-thread-hiding-chatgpt-lag-fix"
               - slug: "ai-workspace-vs-superpower-chatgpt-workspaces"
               - slug: "best-chatgpt-chrome-extensions-2026"
@@ -228,6 +230,7 @@ categories:
               - path: "src/app/prompt-library/page.tsx"
                 section: "Full page"
             blog_refs:
+              - slug: "ai-workspace-vs-everyone"
               - slug: "chatgpt-for-blogging-complete-guide"
               - slug: "getting-started-with-ai-workspace"
               - slug: "best-chatgpt-chrome-extensions-2026"
@@ -276,6 +279,7 @@ categories:
               - path: "src/components/FeatureShowcase.tsx"
                 section: "Prompt features"
             blog_refs:
+              - slug: "ai-workspace-vs-everyone"
               - slug: "prompt-management-guide"
             tags: ["prompts", "ai", "optimizer", "prompt-engineering", "pro"]
             notes: "Pro feature (AI rewrite via backend) with free on-device quick-optimize. Backend service internally named 'superprompt'. Page added 2026-06-14; registered 2026-06-14. Compared vs GPT Master at /compare/gpt-master."
@@ -289,6 +293,7 @@ categories:
               - path: "src/app/prompt-library/page.tsx"
                 section: "Variables"
             blog_refs:
+              - slug: "ai-workspace-vs-everyone"
               - slug: "chatgpt-for-blogging-complete-guide"
               - slug: "chatgpt-prompt-library"
               - slug: "chatgpt-work-agent-explained"
@@ -420,7 +425,8 @@ categories:
             doc_refs:
               - path: "src/components/FeatureShowcase.tsx"
                 section: "Advanced features"
-            blog_refs: []
+            blog_refs:
+              - slug: "ai-workspace-vs-everyone"
             tags: ["export", "formats"]
             notes: ""
 
@@ -509,6 +515,7 @@ categories:
               - path: "src/components/CompleteFeatureMatrix.tsx"
                 section: "Privacy & Security"
             blog_refs:
+              - slug: "ai-workspace-vs-everyone"
               - slug: "getting-started-with-ai-workspace"
               - slug: "ai-workspace-vs-superpower-chatgpt-workspaces"
               - slug: "best-chatgpt-chrome-extensions-2026"

@@ -92,6 +92,14 @@ const featureData: Record<Tab, { features: Feature[] }> = {
         link: "/organization",
       },
       {
+        icon: Sparkles,
+        title: "AI Tags: auto-tag your chat history",
+        description:
+          "AI proposes tags from your chat titles; review them, then apply to hundreds of chats in one click",
+        link: "/chatgpt-ai-tags",
+        isNew: true,
+      },
+      {
         icon: Search,
         title: "Advanced search across all conversations",
         description: "Find any chat instantly with powerful filters",

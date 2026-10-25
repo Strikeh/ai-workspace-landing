@@ -63,6 +63,14 @@ const mainFeatures = [
       "Unlimited nested folders with drag & drop, color-coded categories, multi-tag system, pins, and bulk operations.",
   },
   {
+    href: "/chatgpt-ai-tags",
+    icon: Sparkles,
+    title: "AI Tags",
+    description:
+      "Auto-tag your whole chat history by title. AI proposes tags, you review them, then apply them to hundreds of chats at once.",
+    badge: "New",
+  },
+  {
     href: "/prompt-library",
     icon: Library,
     title: "Prompt Library",

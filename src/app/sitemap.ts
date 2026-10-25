@@ -38,6 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Feature pages
     { path: "/chatgpt-workspaces", priority: 0.9, freq: "weekly" },
     { path: "/organization", priority: 0.8, freq: "weekly" },
+    { path: "/chatgpt-ai-tags", priority: 0.8, freq: "weekly" },
     { path: "/prompt-library", priority: 0.8, freq: "weekly" },
     { path: "/chatgpt-prompt-optimizer", priority: 0.8, freq: "weekly" },
     { path: "/chatgpt-minimap", priority: 0.8, freq: "weekly" },

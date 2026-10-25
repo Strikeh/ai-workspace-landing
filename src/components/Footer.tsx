@@ -164,6 +164,14 @@ export function Footer() {
               <li>
                 <Link
                   className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  href="/chatgpt-ai-tags"
+                >
+                  AI Tags
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
                   href="/chatgpt-minimap"
                 >
                   Conversation Outline
